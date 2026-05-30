@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://derkaemmerer.de/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://derkaemmerer.de/haushalt</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/ausgaben</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/praxis</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/recht</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/analyse</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://derkaemmerer.de/daten</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/haushalt/kassenkredite-als-normalzustand</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/haushalt/haushaltssperre-2026-stadte</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen/gewerbesteuer-benchmark-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen/foerdermittel-radar-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen/bodenfonds-erbpacht-kommunen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen/forderungsmanagement-kommunen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/einnahmen/infrastruktur-ppp-kommunen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/ausgaben/traeger-tagessatz-kindeswohl</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/ausgaben/personal-krankheitsquote</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/sozialkosten-explosion-ursachen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/hze-steuerung-was-kommunen-koennen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/asylkosten-kommunen-realitaet</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/wohnungslosigkeit-praevention-steuerung</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/grundsicherung-alter-kommunale-zeitbombe</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/sozialkosten/sozialkosten-steuerungsarchitektur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/praxis/mannheim-steuerung-2013</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/recht/direktvergabe-uvgo-2026</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/analyse/sparpolitik-ohne-steuerungsidee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/analyse/kaemmerei-mächtigstes-amt</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://derkaemmerer.de/impressum</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://derkaemmerer.de/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

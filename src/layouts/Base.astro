@@ -2,8 +2,14 @@
 export interface Props {
   title: string;
   description?: string;
+  canonical?: string;
 }
-const { title, description = 'Das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten.' } = Astro.props;
+const {
+  title,
+  description = 'Das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten. Analysen, Maßnahmen und Best Practice für kommunale Haushalte.',
+  canonical,
+} = Astro.props;
+const url = canonical || `https://derkaemmerer.de${Astro.url.pathname}`;
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -12,6 +18,21 @@ const { title, description = 'Das unabhängige Briefing für Kämmerer, Oberbür
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} — Der Kämmerer</title>
 <meta name="description" content={description}>
+<link rel="canonical" href={url}>
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Der Kämmerer">
+<meta property="og:title" content={`${title} — Der Kämmerer`}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={url}>
+<meta property="og:locale" content="de_DE">
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content={`${title} — Der Kämmerer`}>
+<meta name="twitter:description" content={description}>
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
