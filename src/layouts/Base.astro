@@ -1,4 +1,6 @@
 ---
+import Analytics from '@vercel/analytics/astro';
+
 export interface Props {
   title: string;
   description?: string;
@@ -91,6 +93,9 @@ const fullTitle = `${title} — Der Kämmerer`;
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml">
+
+<!-- Vercel Analytics -->
+<Analytics />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -121,6 +126,5 @@ const fullTitle = `${title} — Der Kämmerer`;
 </head>
 <body>
   <slot />
-  <script defer src="https://cdn.vercel-insights.com/v1/script.js" data-endpoint="/_vercel/insights"></script>
 </body>
 </html>
