@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+const ein = await getCollection('einnahmen');
+const allIds = ein.map(e => e.id);
+---
+<html><body>
+<h1>Einnahmen: {ein.length}</h1>
+<ul>{allIds.map(id => <li>{id}</li>)}</ul>
+</body></html>

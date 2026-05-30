@@ -15,7 +15,8 @@ export async function getStaticPaths() {
   ];
 }
 
-const { ressort, label, sub, color } = Astro.props;
+const { label, sub, color } = Astro.props;
+const { ressort } = Astro.params;
 
 const allHaushalt  = await getCollection('haushalt');
 const allEinnahmen = await getCollection('einnahmen');
