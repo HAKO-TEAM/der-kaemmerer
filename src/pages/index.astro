@@ -120,31 +120,40 @@ const catLabel: Record<string,string> = {
 <!-- Hauptinhalt -->
 <main class="main-inner">
 
-  <!-- Alle neuesten Artikel -->
-  {alle.length > 0 && (
-  <div>
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px;padding-bottom:6px;border-bottom:3px solid #1a2744;">
-      <span style="font-size:16px;font-weight:800;color:#1a2744;">Aktuelle Beiträge</span>
-      <span style="flex:1;height:1px;background:#e2e8f0;"></span>
-      <span style="font-size:9px;font-weight:600;color:#6b7280;letter-spacing:.08em;text-transform:uppercase;">{alle.length} Artikel</span>
-    </div>
-    <div class="art-grid">
-      {alle.slice(0,6).map(a => (
-      <div>
-        <span style={`font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${catColor[a.collection]};display:block;margin-bottom:6px;`}>
-          {catLabel[a.collection]}
-        </span>
-        {a.data.tag === 'neu' && <span style="display:inline-block;background:#fef2f2;color:#c2410c;border:1px solid #fed7aa;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:6px;">Neu</span>}
-        <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}`}>
-          <h3 style="font-size:15px;font-weight:700;line-height:1.3;color:#1a2744;margin-bottom:6px;letter-spacing:-.01em;">{a.data.title}</h3>
+  <!-- Ressort-Sektionen -->
+  {[
+    {key:'sozialkosten', artikel:sozialkosten},
+    {key:'haushalt',     artikel:haushalt},
+    {key:'einnahmen',    artikel:einnahmen},
+    {key:'ausgaben',     artikel:ausgaben},
+    {key:'analyse',      artikel:analyse},
+    {key:'praxis',       artikel:praxis},
+    {key:'recht',        artikel:recht},
+  ].map(({key, artikel}) => {
+    const sorted = [...artikel].sort((a,b) => new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime());
+    return (
+    <div style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:8px;border-bottom:3px solid #1a2744;">
+        <span style={`font-size:13px;font-weight:800;color:#1a2744;`}>{catLabel[key]}</span>
+        <span style="flex:1;height:1px;background:#e2e8f0;"></span>
+        <a href={`/${key}`} style={`font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:${catColor[key]};`}>
+          Alle {sorted.length} Artikel →
         </a>
-        <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:6px;">{a.data.beschreibung}</p>
-        <span style="font-size:10px;color:#6b7280;">{a.data.autor} · {a.data.minuten} Min.</span>
       </div>
-      ))}
+      <div class="art-grid">
+        {sorted.slice(0,3).map(a => (
+        <div style="background:#fff;border:1px solid #e2e8f0;border-top:3px solid #e2e8f0;border-radius:4px;padding:18px;transition:box-shadow .15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.boxShadow=''">
+          <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}`}>
+            <h3 style={`font-size:14px;font-weight:700;line-height:1.35;color:#1a2744;margin-bottom:8px;letter-spacing:-.01em;border-top:3px solid ${catColor[key]};padding-top:10px;margin-top:-3px;`}>{a.data.title}</h3>
+          </a>
+          <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:10px;">{a.data.beschreibung}</p>
+          <span style="font-size:10px;color:#9ca3af;">{a.data.datum} · {a.data.minuten} Min.</span>
+        </div>
+        ))}
+      </div>
     </div>
-  </div>
-  )}
+    );
+  })}
 
   <!-- Newsletter -->
   <div id="newsletter" style="background:#fff;border:1px solid #e2e8f0;padding:32px;margin-bottom:0;">
