@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Über Der Kämmerer"
+  description="Der Kämmerer ist das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten. Betrieben von der HAKO Beteiligungsgesellschaft mbH, Dresden."
+>
+<Header />
+
+<style>
+  .hero { background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%); padding:52px 0; }
+  .hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+  .hero h1 { font-size:32px; font-weight:800; color:#fff; margin-bottom:10px; letter-spacing:-.02em; }
+  .hero p { font-size:14px; color:#93c5fd; line-height:1.7; }
+  .main { max-width:780px; margin:0 auto; padding:44px 32px 64px; }
+  .section { margin-bottom:44px; }
+  .section h2 { font-size:18px; font-weight:800; color:#1a2744; border-bottom:2.5px solid #3b82f6; padding-bottom:8px; margin-bottom:16px; letter-spacing:-.01em; }
+  .section p { font-size:14px; color:#374151; line-height:1.78; margin-bottom:12px; }
+  .section p:last-child { margin-bottom:0; }
+  .section strong { color:#1a2744; font-weight:700; }
+  .prinzip-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:4px; }
+  .prinzip { background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:6px; padding:16px; }
+  .prinzip-icon { font-size:22px; margin-bottom:8px; }
+  .prinzip-title { font-size:12px; font-weight:800; color:#1a2744; margin-bottom:4px; }
+  .prinzip-text { font-size:12px; color:#6b7280; line-height:1.55; }
+  .team-card { display:flex; gap:20px; background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:6px; padding:20px; margin-bottom:12px; }
+  .team-avatar { width:52px; height:52px; border-radius:50%; background:#1a2744; display:flex; align-items:center; justify-content:center; color:#93c5fd; font-size:18px; font-weight:800; flex-shrink:0; }
+  .team-name { font-size:14px; font-weight:700; color:#1a2744; margin-bottom:2px; }
+  .team-role { font-size:11px; color:#3b82f6; font-weight:600; letter-spacing:.05em; text-transform:uppercase; margin-bottom:6px; }
+  .team-bio { font-size:12px; color:#6b7280; line-height:1.6; }
+  .cta-box { background:#1a2744; border-radius:6px; padding:28px; text-align:center; }
+  .cta-box h3 { font-size:18px; font-weight:800; color:#fff; margin-bottom:8px; }
+  .cta-box p { font-size:13px; color:#93c5fd; margin-bottom:16px; line-height:1.6; }
+  .cta-btn { display:inline-block; background:#3b82f6; color:#fff; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:10px 22px; border-radius:3px; }
+  .cta-btn:hover { background:#0f3460; }
+  @media(max-width:768px) {
+    .hero-inner,.main { padding-left:16px; padding-right:16px; }
+    .hero h1 { font-size:24px; }
+    .prinzip-grid { grid-template-columns:1fr; }
+    .team-card { flex-direction:column; }
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Über Der Kämmerer</h1>
+    <p>Das unabhängige Briefing für kommunale Entscheider — Kämmerer, Oberbürgermeister, Sozialdezernenten und Verwaltungsvorstände.</p>
+  </div>
+</div>
+
+<main class="main">
+
+  <div class="section">
+    <h2>Warum dieses Portal</h2>
+    <p>Die kommunalen Haushalte in Deutschland stehen unter strukturellem Druck. Sozialausgaben steigen, Investitionsstaus wachsen, Kassenkredite werden zur Normalität. Gleichzeitig fehlt vielen Entscheidern das, was für eine fundierte Steuerung nötig wäre: <strong>präzise Analysen, konkrete Maßnahmen, ehrliche Einordnung.</strong></p>
+    <p><strong>Der Kämmerer</strong> schließt diese Lücke. Wir schreiben für Menschen, die täglich Verantwortung für Milliardenhaushalte tragen — nicht für Akademiker, nicht für Lobbyisten, nicht für Berater, die sich selbst empfehlen wollen.</p>
+    <p>Jeder Beitrag beantwortet eine einfache Frage: <em>Was kann ein Kämmerer oder Sozialdezernent mit dieser Information morgen früh konkret anfangen?</em></p>
+  </div>
+
+  <div class="section">
+    <h2>Unsere Prinzipien</h2>
+    <div class="prinzip-grid">
+      <div class="prinzip">
+        <div class="prinzip-icon">🎯</div>
+        <div class="prinzip-title">Operativ statt theoretisch</div>
+        <div class="prinzip-text">Kein akademischer Aufsatz. Kein politisches Manifest. Nur was in der Praxis funktioniert.</div>
+      </div>
+      <div class="prinzip">
+        <div class="prinzip-icon">🔒</div>
+        <div class="prinzip-title">Unabhängig</div>
+        <div class="prinzip-text">Keine versteckte Werbung, keine Produktempfehlungen ohne Transparenz. Was wir schreiben, glauben wir.</div>
+      </div>
+      <div class="prinzip">
+        <div class="prinzip-icon">📊</div>
+        <div class="prinzip-title">Datenbasiert</div>
+        <div class="prinzip-text">Zahlen, Quellen, Benchmarks. Behauptungen ohne Belege sind bei uns keine Analyse.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Herausgeber</h2>
+    <div class="team-card">
+      <div class="team-avatar">MK</div>
+      <div>
+        <div class="team-name">Michael G. Kosel</div>
+        <div class="team-role">Geschäftsführer · HAKO Beteiligungsgesellschaft mbH</div>
+        <div class="team-bio">Michael G. Kosel ist Unternehmer und Berater mit Schwerpunkt kommunale Transformation, öffentliche Haushalte und datengestützte Steuerung. Er ist Mitgründer der HAKO Beteiligungsgesellschaft mbH sowie Aufsichtsratsvorsitzender der DerArztPlus AG. Der Kämmerer entstand aus der Erfahrung, dass kommunale Entscheider hochwertige, unabhängige Analysen ohne Lobbyhintergrund brauchen.</div>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">PH</div>
+      <div>
+        <div class="team-name">Pierre Haustein</div>
+        <div class="team-role">Geschäftsführer · HAKO Beteiligungsgesellschaft mbH</div>
+        <div class="team-bio">Pierre Haustein verantwortet Strategie und operative Entwicklung der HAKO-Gruppe. Er bringt Erfahrung aus strukturierten Finanzierungen, öffentlicher Infrastruktur und digitalen Plattformprojekten mit.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>HAKO Beteiligungsgesellschaft mbH</h2>
+    <p>Der Kämmerer ist ein Angebot der <strong>HAKO Beteiligungsgesellschaft mbH</strong> mit Sitz in Dresden. HAKO entwickelt Lösungen für kommunale Steuerung, öffentliche Finanzen und datengestützte Entscheidungsunterstützung — darunter die KI-gestützte HzE-Steuerungsplattform ASCEND.</p>
+    <p>
+      Hertha-Lindner-Str. 10–12 · D-01067 Dresden<br>
+      Handelsregister: Amtsgericht Dresden HRB 29317<br>
+      E-Mail: <a href="mailto:redaktion@derkaemmerer.de" style="color:#3b82f6;">redaktion@derkaemmerer.de</a>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Gastbeiträge & Hinweise</h2>
+    <p>Wir freuen uns über <strong>Gastbeiträge</strong> von Praktikern: Kämmerer, Jugendamtsleitungen, Sozialdezernenten, kommunale Berater. Was funktioniert hat — und was nicht. Konkrete Erfahrungen aus der Praxis sind willkommen.</p>
+    <p>Ebenso nehmen wir <strong>Hinweise auf relevante Entwicklungen</strong> entgegen: Haushaltssperren, aktuelle Urteile, neue Förderprogramme, Benchmark-Daten. Keine Pressemitteilungen, keine Eigenwerbung.</p>
+  </div>
+
+  <div class="cta-box">
+    <h3>Wöchentlich informiert bleiben</h3>
+    <p>Jeden Montag: die wichtigsten Entwicklungen für kommunale Entscheider.<br>Kostenlos, direkt ins Postfach.</p>
+    <a href="/#newsletter" class="cta-btn">Jetzt abonnieren</a>
+  </div>
+
+</main>
+<Footer />
+</Base>
