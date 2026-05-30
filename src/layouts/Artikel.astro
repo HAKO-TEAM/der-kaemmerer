@@ -105,6 +105,24 @@ const ressortLabels: Record<string,string> = {
     <article>
       <slot />
     </article>
+    <!-- ASCEND CTA — prominent für Sozialkosten, subtil für alle anderen -->
+    {ressort === 'sozialkosten' ? (
+      <div style="background:#1a2744;border-radius:8px;padding:32px;margin:40px 0;color:#fff;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:10px;">HAKO · KI-Plattform</div>
+        <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">HzE-Kosten systematisch steuern — nicht nur beobachten</h3>
+        <p style="font-size:13px;color:#93c5fd;line-height:1.7;margin-bottom:20px;">ASCEND gibt Kämmereien und Jugendämtern die Steuerungshoheit zurück: Hochrisiko-Früherkennung, Träger-Benchmarking, Steuerungscockpit. Ohne Systemwechsel. ROI 10–14×.</p>
+        <a href="/ascend" style="display:inline-block;background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:11px 22px;border-radius:3px;">Demo-Termin anfragen →</a>
+      </div>
+    ) : (
+      <div style="border:1px solid #e2e8f0;border-left:3px solid #3b82f6;border-radius:4px;padding:16px 20px;margin:40px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:10px;font-weight:700;color:#3b82f6;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">HAKO ASCEND</div>
+          <div style="font-size:13px;font-weight:600;color:#1a2744;">KI-gestützte HzE-Steuerung für kommunale Entscheider</div>
+        </div>
+        <a href="/ascend" style="display:inline-block;background:#1a2744;color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:9px 16px;border-radius:3px;white-space:nowrap;">Mehr erfahren →</a>
+      </div>
+    )}
+
     <div class="art-footer">
       © 2026 Der Kämmerer · HAKO Beteiligungsgesellschaft mbH ·
       <a href="/">Zur Startseite</a>
