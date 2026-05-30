@@ -1,21 +1,24 @@
 ---
 const nav = [
-  { href: '/haushalt',  label: 'Haushalt & Finanzen' },
-  { href: '/einnahmen', label: 'Einnahmen erschließen' },
-  { href: '/ausgaben',  label: 'Ausgaben steuern' },
-  { href: '/praxis',    label: 'Best Practice' },
-  { href: '/daten',     label: 'Daten & Rankings' },
-  { href: '/recht',     label: 'Recht & Vergabe' },
+  { href: '/haushalt',     label: 'Haushalt & Finanzen' },
+  { href: '/einnahmen',    label: 'Einnahmen erschließen' },
+  { href: '/ausgaben',     label: 'Ausgaben steuern' },
+  { href: '/praxis',       label: 'Best Practice' },
+  { href: '/daten',        label: 'Daten & Rankings' },
+  { href: '/recht',        label: 'Recht & Vergabe' },
   { href: '/analyse',      label: 'Analyse' },
   { href: '/sozialkosten', label: 'Sozialkosten' },
 ];
 const currentPath = Astro.url.pathname;
 ---
 <style>
+  /* ── Topbar ── */
   .topbar{background:#1a2744;color:#93c5fd;font-size:11px;font-weight:500;letter-spacing:.06em;padding:7px 0;text-align:center}
   .topbar a{color:#fff;font-weight:600}
   .topbar span{color:#374151;margin:0 10px}
-  header{background:#fff;border-bottom:1px solid #e2e8f0}
+
+  /* ── Header ── */
+  header{background:#fff;border-bottom:1px solid #e2e8f0;position:relative}
   .header-inner{max-width:1200px;margin:0 auto;padding:0 32px}
   .masthead{display:flex;justify-content:space-between;align-items:center;padding:18px 0 14px;border-bottom:3px solid #1a2744}
   .logo{font-size:30px;font-weight:800;color:#1a2744;letter-spacing:-.03em;line-height:1}
@@ -23,22 +26,63 @@ const currentPath = Astro.url.pathname;
   .tagline{font-size:10px;font-weight:600;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
   .masthead-right{display:flex;align-items:center;gap:16px}
   .pill{background:#eff6ff;border:1px solid #93c5fd;border-radius:4px;padding:4px 10px;font-size:10px;font-weight:700;color:#1a2744;letter-spacing:.06em;text-transform:uppercase}
-  .btn{background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:3px}
+  .btn{background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:background .15s}
   .btn:hover{background:#0f3460}
-  nav{display:flex;overflow-x:auto;gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  nav::-webkit-scrollbar{display:none}
+
+  /* ── Desktop Nav ── */
+  nav{display:flex;gap:0}
   nav a{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#374151;padding:9px 13px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
   nav a:hover,nav a.active{color:#3b82f6;border-color:#3b82f6}
+
+  /* ── Hamburger Button (nur Mobile) ── */
+  .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;padding:6px;background:none;border:none;cursor:pointer;border-radius:4px;transition:background .15s}
+  .burger:hover{background:#f1f5f9}
+  .burger span{display:block;height:2px;background:#1a2744;border-radius:2px;transition:transform .25s,opacity .25s}
+
+  /* Burger → X Animation */
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ── Mobile Menu Overlay ── */
+  .mobile-menu{
+    display:none;
+    position:absolute;top:100%;left:0;right:0;
+    background:#fff;border-bottom:3px solid #1a2744;
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+    z-index:100;
+    padding:8px 0 16px;
+  }
+  .mobile-menu.open{display:block}
+  .mobile-menu a{
+    display:block;padding:12px 20px;
+    font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+    color:#374151;border-left:3px solid transparent;
+    transition:color .15s,border-color .15s,background .15s;
+  }
+  .mobile-menu a:hover,
+  .mobile-menu a.active{color:#3b82f6;border-left-color:#3b82f6;background:#f8fafc}
+  .mobile-menu .m-divider{height:1px;background:#e2e8f0;margin:8px 20px}
+  .mobile-menu .m-btn{
+    display:block;margin:12px 20px 0;
+    background:#3b82f6;color:#fff;text-align:center;
+    font-size:11px;font-weight:700;letter-spacing:.07em;
+    padding:11px;border-radius:3px;border-left:none!important;
+  }
+  .mobile-menu .m-btn:hover{background:#0f3460;border-left-color:transparent!important}
+
+  /* ── Responsive ── */
   @media(max-width:768px){
     .topbar{font-size:10px;padding:6px 12px}
     .topbar span{margin:0 6px}
     .header-inner{padding:0 16px}
-    .masthead{padding:14px 0 10px}
+    .masthead{padding:12px 0 10px;border-bottom:none}
     .logo{font-size:22px}
     .tagline{display:none}
     .pill{display:none}
-    .btn{font-size:10px;padding:7px 11px}
-    nav a{font-size:10px;padding:8px 10px 6px;letter-spacing:.04em}
+    .btn{display:none}          /* Abonnieren-Button → im Mobile-Menu */
+    nav{display:none}           /* Desktop-Nav ausblenden */
+    .burger{display:flex}       /* Hamburger einblenden */
   }
   @media(max-width:480px){
     .topbar .topbar-extra{display:none}
@@ -50,9 +94,10 @@ const currentPath = Astro.url.pathname;
   Ausgabe 01 · Juni 2026
   <span>·</span>
   <a href="/#newsletter">Kostenlos abonnieren</a>
-  <span>·</span>
-  Ein Angebot der HAKO Beteiligungsgesellschaft mbH · Dresden
+  <span class="topbar-extra">·</span>
+  <span class="topbar-extra">Ein Angebot der HAKO Beteiligungsgesellschaft mbH · Dresden</span>
 </div>
+
 <header>
   <div class="header-inner">
     <div class="masthead">
@@ -63,12 +108,57 @@ const currentPath = Astro.url.pathname;
       <div class="masthead-right">
         <span class="pill">Juni 2026</span>
         <a href="/#newsletter" class="btn">Abonnieren</a>
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
+
+    <!-- Desktop Nav -->
     <nav>
       {nav.map(n => (
         <a href={n.href} class={currentPath.startsWith(n.href) ? 'active' : ''}>{n.label}</a>
       ))}
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      {nav.map(n => (
+        <a href={n.href} class={currentPath.startsWith(n.href) ? 'active' : ''}>{n.label}</a>
+      ))}
+      <div class="m-divider"></div>
+      <a href="/#newsletter" class="m-btn">Newsletter abonnieren</a>
+    </div>
   </div>
 </header>
+
+<script>
+  const burger = document.getElementById('burger');
+  const menu   = document.getElementById('mobileMenu');
+
+  burger?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  });
+
+  // Schließen beim Klick auf einen Link
+  menu?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      burger?.classList.remove('open');
+      burger?.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Schließen beim Klick außerhalb
+  document.addEventListener('click', (e) => {
+    if (!burger?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+      menu?.classList.remove('open');
+      burger?.classList.remove('open');
+      burger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
