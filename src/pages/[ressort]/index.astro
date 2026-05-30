@@ -69,18 +69,28 @@ function getSlug(entry: any) {
   {entries.length === 0 ? (
     <p style="color:#6b7280;font-size:14px;">Bald verfügbar — erste Artikel in Vorbereitung.</p>
   ) : (
-    <div class="res-grid">
-      {entries.map((a: any) => (
-        <div style="border-top:2.5px solid #1a2744;padding-top:12px;">
-          {a.data.tag && <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:6px;">{a.data.tag}</span>}
-          <a href={`/${ressort}/${getSlug(a)}`}>
-            <h2 style="font-size:16px;font-weight:700;line-height:1.3;color:#1a2744;margin-bottom:7px;letter-spacing:-.01em;">{a.data.title}</h2>
-          </a>
-          <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:8px;">{a.data.beschreibung}</p>
-          <span style="font-size:10px;color:#6b7280;">{a.data.autor} · {a.data.datum} · {a.data.minuten} Min.</span>
-        </div>
-      ))}
-    </div>
+    <>
+      <div style="font-size:12px;color:#6b7280;margin-bottom:20px;">{entries.length} Artikel in diesem Ressort</div>
+      <div class="res-grid">
+        {entries.map((a: any) => (
+          <div style={`background:#fff;border:1px solid #e2e8f0;border-top:3px solid ${color};border-radius:4px;padding:18px;`}>
+            {a.data.tag && (
+              <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:10px;">
+                {a.data.tag}
+              </span>
+            )}
+            <a href={`/${ressort}/${getSlug(a)}`}>
+              <h2 style="font-size:15px;font-weight:700;line-height:1.35;color:#1a2744;margin-bottom:8px;letter-spacing:-.01em;">{a.data.title}</h2>
+            </a>
+            <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:12px;">{a.data.beschreibung}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:10px;color:#9ca3af;">{a.data.datum} · {a.data.minuten} Min.</span>
+              <a href={`/${ressort}/${getSlug(a)}`} style={`font-size:10px;font-weight:700;color:${color};letter-spacing:.05em;`}>Lesen →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   )}
 </main>
 <Footer />
