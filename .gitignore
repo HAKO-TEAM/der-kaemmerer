@@ -1,6 +1,6 @@
 node_modules/
 .astro/
+dist/
 .env
-_backup/
 _backup/
 .vercel
