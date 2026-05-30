@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { name, funktion, kommune, email } = req.body;
+  const { name, funktion, kommune, email, telefon } = req.body;
   if (!name || !email || !kommune) return res.status(400).json({ error: 'Pflichtfelder fehlen' });
 
   const KEY = process.env.BREVO_API_KEY;
@@ -14,6 +14,7 @@ Name:      ${name}
 Funktion:  ${funktion || '—'}
 Kommune:   ${kommune}
 E-Mail:    ${email}
+Telefon:   ${telefon || '—'}
 
 Quelle: derkaemmerer.de/ascend
   `.trim();
