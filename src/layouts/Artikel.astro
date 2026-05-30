@@ -17,63 +17,107 @@ const { title, beschreibung, ressort, datum, minuten, autor, tag } = Astro.props
 const ressortLabels: Record<string,string> = {
   haushalt:'Haushalt & Finanzen', einnahmen:'Einnahmen erschließen',
   ausgaben:'Ausgaben steuern', praxis:'Best Practice',
-  recht:'Recht & Vergabe', analyse:'Analyse & Meinung'
-};
-const ressortColors: Record<string,string> = {
-  haushalt:'#c2410c', einnahmen:'#3b82f6', ausgaben:'#1e40af',
-  praxis:'#92400e', recht:'#6b21a8', analyse:'#374151'
+  recht:'Recht & Vergabe', analyse:'Analyse & Meinung',
+  sozialkosten:'Sozialkosten'
 };
 ---
 <Base title={title} description={beschreibung}>
   <Header />
-  <div style="background:var(--navy);padding:36px 0;">
-    <div style="max-width:780px;margin:0 auto;padding:0 32px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6ee7b7;margin-bottom:10px;">
-        <a href={`/${ressort}`} style="color:#6ee7b7;">← {ressortLabels[ressort]}</a>
+
+  <style>
+    /* Hero */
+    .art-hero { background:var(--navy); padding:36px 0; }
+    .art-hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+    .art-back { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#6ee7b7; margin-bottom:10px; display:block; }
+    .art-back a { color:#6ee7b7; }
+    .art-tag { display:inline-block; background:var(--blue); color:#fff; font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:2px 8px; border-radius:2px; margin-bottom:10px; }
+    .art-h1 { font-size:28px; font-weight:800; color:#fff; line-height:1.2; letter-spacing:-.02em; margin-bottom:12px; }
+    .art-desc { font-size:14px; color:var(--blue-lt); line-height:1.6; margin-bottom:14px; }
+    .art-meta { font-size:10px; color:#475569; letter-spacing:.04em; }
+
+    /* Main */
+    .art-main { max-width:780px; margin:40px auto; padding:0 32px 60px; }
+
+    /* Article content */
+    article { font-size:15px; line-height:1.75; color:var(--mid); }
+    article h2 { font-size:20px; font-weight:800; color:var(--navy); margin:32px 0 12px; letter-spacing:-.01em; }
+    article h3 { font-size:16px; font-weight:700; color:var(--navy); margin:24px 0 8px; }
+    article p { margin-bottom:16px; }
+    article ul, article ol { margin:0 0 16px 20px; }
+    article li { margin-bottom:6px; }
+    article strong { color:var(--navy); font-weight:700; }
+    article blockquote { border-left:3px solid var(--blue); padding:12px 16px; margin:20px 0; background:var(--blue-bg); border-radius:0 4px 4px 0; font-style:italic; color:var(--mid); }
+    article blockquote p { margin:0; }
+    article .infobox  { background:var(--blue-bg); border:1.5px solid var(--blue-lt); border-radius:6px; padding:16px 18px; margin:20px 0; }
+    article .warnbox  { background:#fff7ed; border:1.5px solid var(--amber-lt); border-radius:6px; padding:16px 18px; margin:20px 0; }
+    article .greenbox { background:#f0fdf4; border:1.5px solid var(--green-lt); border-radius:6px; padding:16px 18px; margin:20px 0; }
+    article .box-title { font-size:10px; font-weight:700; color:var(--navy); letter-spacing:.06em; text-transform:uppercase; margin-bottom:6px; }
+    article hr { border:none; border-top:1px solid var(--rule); margin:32px 0; }
+
+    /* Tabellen — scrollbar auf Mobile */
+    .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0; }
+    article table { width:100%; border-collapse:collapse; font-size:13px; min-width:400px; }
+    article th { background:var(--navy); color:#fff; padding:8px 12px; text-align:left; font-weight:600; font-size:11px; letter-spacing:.04em; }
+    article td { padding:8px 12px; border-bottom:1px solid var(--rule); }
+    article tr:nth-child(even) td { background:var(--bg); }
+
+    .art-footer { border-top:1px solid var(--rule); margin-top:40px; padding-top:20px; font-size:11px; color:var(--lt); }
+    .art-footer a { color:var(--blue); }
+
+    /* ── Tablet ── */
+    @media(max-width:1024px) {
+      .art-hero-inner, .art-main { padding-left:24px; padding-right:24px; }
+    }
+    /* ── Mobile ── */
+    @media(max-width:768px) {
+      .art-hero { padding:24px 0; }
+      .art-hero-inner { padding:0 16px; }
+      .art-h1 { font-size:22px; }
+      .art-desc { font-size:13px; }
+      .art-main { padding:24px 16px 40px; margin-top:24px; }
+      article { font-size:14px; line-height:1.7; }
+      article h2 { font-size:18px; margin:24px 0 10px; }
+      article h3 { font-size:15px; margin:20px 0 6px; }
+      article .infobox, article .warnbox, article .greenbox { padding:12px 14px; }
+      article table { font-size:12px; }
+      article th, article td { padding:7px 10px; }
+    }
+  </style>
+
+  <div class="art-hero">
+    <div class="art-hero-inner">
+      <div class="art-back">
+        <a href={`/${ressort}`}>← {ressortLabels[ressort]}</a>
       </div>
-      {tag && <span style={`display:inline-block;background:var(--blue);color:#fff;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-bottom:10px;`}>{tag}</span>}
-      <h1 style="font-size:28px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-.02em;margin-bottom:12px;">{title}</h1>
-      <p style="font-size:14px;color:var(--blue-lt);line-height:1.6;margin-bottom:14px;">{beschreibung}</p>
-      <div style="font-size:10px;color:#475569;letter-spacing:.04em;">
+      {tag && <span class="art-tag">{tag}</span>}
+      <h1 class="art-h1">{title}</h1>
+      <p class="art-desc">{beschreibung}</p>
+      <div class="art-meta">
         {autor} &nbsp;·&nbsp; {datum} &nbsp;·&nbsp; {minuten} Minuten Lesezeit
       </div>
     </div>
   </div>
 
-  <main style="max-width:780px;margin:40px auto;padding:0 32px 60px;">
-    <article style="font-size:15px;line-height:1.75;color:var(--mid);">
-      <style>
-        article h2{font-size:20px;font-weight:800;color:var(--navy);margin:32px 0 12px;letter-spacing:-.01em}
-        article h3{font-size:16px;font-weight:700;color:var(--navy);margin:24px 0 8px}
-        article p{margin-bottom:16px}
-        article ul,article ol{margin:0 0 16px 20px}
-        article li{margin-bottom:6px}
-        article strong{color:var(--navy);font-weight:700}
-        article blockquote{border-left:3px solid var(--blue);padding:12px 16px;margin:20px 0;background:var(--blue-bg);border-radius:0 4px 4px 0;font-style:italic;color:var(--mid)}
-        article blockquote p{margin:0}
-        article .infobox{background:var(--blue-bg);border:1.5px solid var(--blue-lt);border-radius:6px;padding:16px 18px;margin:20px 0}
-        article .warnbox{background:#fff7ed;border:1.5px solid var(--amber-lt);border-radius:6px;padding:16px 18px;margin:20px 0}
-        article .greenbox{background:#f0fdf4;border:1.5px solid var(--green-lt);border-radius:6px;padding:16px 18px;margin:20px 0}
-        article .box-title{font-size:10px;font-weight:700;color:var(--navy);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
-        article hr{border:none;border-top:1px solid var(--rule);margin:32px 0}
-        article table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
-        article th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.04em}
-        article td{padding:8px 12px;border-bottom:1px solid var(--rule)}
-        article tr:nth-child(even) td{background:var(--bg)}
-      </style>
+  <main class="art-main">
+    <article>
       <slot />
     </article>
-    <div style="border-top:1px solid var(--rule);margin-top:40px;padding-top:20px;font-size:11px;color:var(--lt);">
-      © 2026 Der Kämmerer · HAKO Beteiligungsgesellschaft mbH · <a href="/" style="color:var(--blue);">Zur Startseite</a>
+    <div class="art-footer">
+      © 2026 Der Kämmerer · HAKO Beteiligungsgesellschaft mbH ·
+      <a href="/">Zur Startseite</a>
     </div>
   </main>
+
   <Footer />
 </Base>
-<style>
-  @media(max-width:768px){
-    .hero-art{padding:24px 16px!important}
-    .hero-art h1{font-size:22px!important}
-    main{padding:24px 16px 40px!important}
-    article h2{font-size:18px!important}
+<script>
+// Tabellen auf Mobile scrollbar machen
+document.querySelectorAll('article table').forEach(t => {
+  if (!t.parentElement?.classList.contains('table-wrap')) {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-wrap';
+    t.parentNode?.insertBefore(wrap, t);
+    wrap.appendChild(t);
   }
-</style>
+});
+</script>
