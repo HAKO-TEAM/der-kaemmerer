@@ -3,6 +3,6 @@
   "buildCommand": "",
   "installCommand": "",
   "functions": {
-    "api/*.js": { "runtime": "nodejs20.x" }
+    "api/subscribe.js": { "memory": 128, "maxDuration": 10 }
   }
 }
