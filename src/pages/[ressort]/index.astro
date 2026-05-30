@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params:{ressort:'haushalt'},  props:{label:'Haushalt & Finanzen',   sub:'Strukturelle Analyse kommunaler Haushalte',          color:'#c2410c'} },
+    { params:{ressort:'einnahmen'}, props:{label:'Einnahmen erschließen', sub:'Konkrete Maßnahmen zur Einnahmenoptimierung',         color:'#3b82f6'} },
+    { params:{ressort:'ausgaben'},  props:{label:'Ausgaben steuern',      sub:'Ohne Pflichtleistungen zu kürzen',                   color:'#1e40af'} },
+    { params:{ressort:'praxis'},    props:{label:'Best Practice',         sub:'Was funktioniert hat — Fallstudien und Modelle',     color:'#92400e'} },
+    { params:{ressort:'recht'},     props:{label:'Recht & Vergabe',       sub:'Aktuelle Rechtsprechung und Vergabepraxis',          color:'#6b21a8'} },
+    { params:{ressort:'analyse'},   props:{label:'Analyse & Meinung',     sub:'Einordnung und Kommentar',                          color:'#374151'} },
+  ];
+}
+
+const { ressort, label, sub, color } = Astro.props;
+
+const allHaushalt  = await getCollection('haushalt');
+const allEinnahmen = await getCollection('einnahmen');
+const allAusgaben  = await getCollection('ausgaben');
+const allPraxis    = await getCollection('praxis');
+const allRecht     = await getCollection('recht');
+const allAnalyse   = await getCollection('analyse');
+
+const map: Record<string, any[]> = {
+  haushalt:  allHaushalt,
+  einnahmen: allEinnahmen,
+  ausgaben:  allAusgaben,
+  praxis:    allPraxis,
+  recht:     allRecht,
+  analyse:   allAnalyse,
+};
+
+const entries = (map[ressort] || []).sort((a: any, b: any) =>
+  new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime()
+);
+
+function getSlug(entry: any) {
+  return (entry.id as string).split('/').pop()!.replace('.md','');
+}
+---
+<Base title={label}>
+<Header />
+<div style={`background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:40px 0;`}>
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
+    <div style={`font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${color};margin-bottom:10px;`}>Ressort</div>
+    <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.02em;">{label}</h1>
+    <p style="font-size:13px;color:#93c5fd;">{sub}</p>
+  </div>
+</div>
+<main style="max-width:1200px;margin:0 auto;padding:36px 32px;">
+  {entries.length === 0 ? (
+    <p style="color:#6b7280;font-size:14px;">Bald verfügbar — erste Artikel in Vorbereitung.</p>
+  ) : (
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      {entries.map((a: any) => (
+        <div style="border-top:2.5px solid #1a2744;padding-top:12px;">
+          {a.data.tag && <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:6px;">{a.data.tag}</span>}
+          <a href={`/${ressort}/${getSlug(a)}`}>
+            <h2 style="font-size:16px;font-weight:700;line-height:1.3;color:#1a2744;margin-bottom:7px;letter-spacing:-.01em;">{a.data.title}</h2>
+          </a>
+          <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:8px;">{a.data.beschreibung}</p>
+          <span style="font-size:10px;color:#6b7280;">{a.data.autor} · {a.data.datum} · {a.data.minuten} Min.</span>
+        </div>
+      ))}
+    </div>
+  )}
+</main>
+<Footer />
+</Base>

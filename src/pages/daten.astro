@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Daten & Rankings">
+<Header />
+<div style="background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:40px 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
+    <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0e7490;margin-bottom:10px;">Ressort</div>
+    <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.02em;">Daten & Rankings</h1>
+    <p style="font-size:13px;color:#93c5fd;">Aktuelle Kennzahlen · Benchmarks · Haushaltsampel</p>
+  </div>
+</div>
+<main style="max-width:1200px;margin:0 auto;padding:36px 32px;">
+
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:6px;border-bottom:3px solid #1a2744;">
+    <span style="font-size:16px;font-weight:800;color:#1a2744;">Kommunale Haushaltskennzahlen 2026</span>
+    <span style="flex:1;height:1px;background:#e2e8f0;"></span>
+    <span style="font-size:9px;color:#6b7280;">Quellen: Statistisches Bundesamt · KfW · Bertelsmann Stiftung</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px;">
+    {[
+      {val:'166 Mrd. €', label:'Kommunaler Investitionsstau', src:'KfW-Kommunalpanel 2025', color:'#c2410c'},
+      {val:'70 %',       label:'Kommunen strukturell im Defizit', src:'KGSt / BMF 2026', color:'#c2410c'},
+      {val:'44 Mrd. €',  label:'Kassenkreditbestand gesamt', src:'Statistisches Bundesamt 2024', color:'#c2410c'},
+      {val:'+44 %',      label:'HzE-Kostensteigerung seit 2013', src:'Ø deutsche Großstädte', color:'#1e40af'},
+      {val:'28,4 Mrd. €',label:'Asyl- & Integrationskosten 2025', src:'Bund / Länder / Kommunen', color:'#92400e'},
+      {val:'3,5 %',      label:'Ø Zinssatz Kassenkredite 2025', src:'Deutsche Bundesbank', color:'#6b21a8'},
+      {val:'25.000 €',   label:'Direktvergabe-Schwelle Lieferungen', src:'UVgO', color:'#065f46'},
+      {val:'221.000 €',  label:'EU-Schwellenwert Dienstleistungen', src:'EU-Vergaberecht 2026', color:'#065f46'},
+    ].map(k => (
+      <div style={`background:#fff;border:1.5px solid #e2e8f0;border-top:3px solid ${k.color};border-radius:6px;padding:16px;`}>
+        <div style={`font-size:22px;font-weight:800;color:${k.color};line-height:1;margin-bottom:6px;`}>{k.val}</div>
+        <div style="font-size:11px;font-weight:600;color:#1a2744;margin-bottom:4px;line-height:1.4;">{k.label}</div>
+        <div style="font-size:9px;color:#9ca3af;">{k.src}</div>
+      </div>
+    ))}
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:6px;border-bottom:3px solid #1a2744;">
+    <span style="font-size:16px;font-weight:800;color:#1a2744;">Gewerbesteuer-Hebesätze 2025 — Auswahl</span>
+    <span style="flex:1;height:1px;background:#e2e8f0;"></span>
+  </div>
+
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;margin-bottom:40px;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:#1a2744;color:#fff;">
+          <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;">Stadt</th>
+          <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;">Bundesland</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Hebesatz 2025</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Ø Region</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Differenz</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ['Dortmund','NRW','520 %','480 %','+40','#065f46'],
+          ['Duisburg','NRW','520 %','480 %','+40','#065f46'],
+          ['Essen','NRW','480 %','480 %','0','#374151'],
+          ['Köln','NRW','475 %','480 %','−5','#374151'],
+          ['Hamburg','Hamburg','470 %','480 %','−10','#92400e'],
+          ['München','Bayern','490 %','510 %','−20','#c2410c'],
+          ['Düsseldorf','NRW','440 %','480 %','−40','#c2410c'],
+          ['Mannheim','BW','420 %','450 %','−30','#c2410c'],
+        ].map(([stadt,bl,hs,avg,diff,dc],i) => (
+          <tr style={`border-bottom:1px solid #f1f5f9;${i%2===1?'background:#f8fafc;':''}`}>
+            <td style="padding:9px 14px;font-weight:600;color:#1a2744;">{stadt}</td>
+            <td style="padding:9px 14px;color:#6b7280;">{bl}</td>
+            <td style="padding:9px 14px;text-align:right;font-weight:700;">{hs}</td>
+            <td style="padding:9px 14px;text-align:right;color:#6b7280;">{avg}</td>
+            <td style={`padding:9px 14px;text-align:right;font-weight:700;color:${dc};`}>{diff}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:11px;color:#9ca3af;margin-top:-32px;margin-bottom:40px;">Quellen: Gemeindefinanzbericht 2025 · Destatis · eigene Recherche. Regionaler Durchschnitt = vergleichbare Städte nach Einwohnerzahl und Wirtschaftsstruktur.</p>
+
+</main>
+<Footer />
+</Base>
