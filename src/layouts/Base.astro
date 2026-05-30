@@ -3,34 +3,92 @@ export interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  datum?: string;
+  autor?: string;
 }
 const {
   title,
   description = 'Das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten. Analysen, Maßnahmen und Best Practice für kommunale Haushalte.',
   canonical,
+  ogType = 'website',
+  ogImage = 'https://derkaemmerer.de/og-default.svg',
+  datum,
+  autor = 'Redaktion Der Kämmerer',
 } = Astro.props;
 const url = canonical || `https://derkaemmerer.de${Astro.url.pathname}`;
+const fullTitle = `${title} — Der Kämmerer`;
 ---
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — Der Kämmerer</title>
+<title>{fullTitle}</title>
 <meta name="description" content={description}>
 <link rel="canonical" href={url}>
 <meta name="robots" content="index, follow">
+<meta name="author" content={autor}>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+
 <!-- Open Graph -->
-<meta property="og:type" content="website">
+<meta property="og:type" content={ogType}>
 <meta property="og:site_name" content="Der Kämmerer">
-<meta property="og:title" content={`${title} — Der Kämmerer`}>
+<meta property="og:title" content={fullTitle}>
 <meta property="og:description" content={description}>
 <meta property="og:url" content={url}>
 <meta property="og:locale" content="de_DE">
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{ogType === 'article' && datum && <meta property="article:published_time" content={datum}>}
+{ogType === 'article' && <meta property="article:author" content={autor}>}
+{ogType === 'article' && <meta property="article:publisher" content="https://derkaemmerer.de">}
+
 <!-- Twitter/X -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content={`${title} — Der Kämmerer`}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={fullTitle}>
 <meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+
+<!-- JSON-LD -->
+{ogType === 'article' ? (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "url": url,
+    "datePublished": datum,
+    "author": { "@type": "Organization", "name": "HAKO Beteiligungsgesellschaft mbH", "url": "https://derkaemmerer.de" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Der Kämmerer",
+      "url": "https://derkaemmerer.de",
+      "logo": { "@type": "ImageObject", "url": "https://derkaemmerer.de/favicon.svg" }
+    },
+    "image": ogImage,
+    "inLanguage": "de-DE"
+  })} />
+) : (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Der Kämmerer",
+    "url": "https://derkaemmerer.de",
+    "description": description,
+    "publisher": {
+      "@type": "Organization",
+      "name": "HAKO Beteiligungsgesellschaft mbH",
+      "url": "https://www.hako.team"
+    }
+  })} />
+)}
+
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
