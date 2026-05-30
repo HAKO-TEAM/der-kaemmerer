@@ -5,7 +5,7 @@ ressort: ausgaben
 datum: "2026-06-22"
 minuten: 8
 autor: Redaktion
-tag: konsolidierung
+tag: analyse
 featured: false
 ---
 

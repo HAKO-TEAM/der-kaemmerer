@@ -5,7 +5,7 @@ ressort: haushalt
 datum: "2026-06-16"
 minuten: 8
 autor: Redaktion
-tag: konsolidierung
+tag: analyse
 featured: false
 ---
 

@@ -5,7 +5,7 @@ ressort: recht
 datum: "2026-06-14"
 minuten: 9
 autor: Redaktion
-tag: haftung
+tag: analyse
 featured: false
 ---
 

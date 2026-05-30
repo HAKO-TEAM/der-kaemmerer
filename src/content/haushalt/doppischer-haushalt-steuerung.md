@@ -5,7 +5,7 @@ ressort: haushalt
 datum: "2026-06-09"
 minuten: 10
 autor: Redaktion
-tag: steuerung
+tag: analyse
 featured: false
 ---
 

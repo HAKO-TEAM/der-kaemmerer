@@ -5,7 +5,7 @@ ressort: recht
 datum: "2026-06-08"
 minuten: 10
 autor: Redaktion
-tag: vergabe
+tag: analyse
 featured: false
 ---
 

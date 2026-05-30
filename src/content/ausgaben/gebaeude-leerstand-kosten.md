@@ -5,7 +5,7 @@ ressort: ausgaben
 datum: "2026-06-18"
 minuten: 9
 autor: Redaktion
-tag: infrastruktur
+tag: analyse
 featured: false
 ---
 

@@ -5,7 +5,7 @@ ressort: praxis
 datum: "2026-06-12"
 minuten: 8
 autor: Redaktion
-tag: einnahmen
+tag: analyse
 featured: false
 ---
 

@@ -5,7 +5,7 @@ ressort: praxis
 datum: "2026-06-10"
 minuten: 9
 autor: Redaktion
-tag: steuerung
+tag: analyse
 featured: false
 ---
 

@@ -5,7 +5,7 @@ ressort: analyse
 datum: "2026-06-11"
 minuten: 11
 autor: Redaktion
-tag: digital
+tag: analyse
 featured: false
 ---
 

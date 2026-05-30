@@ -5,7 +5,7 @@ ressort: ausgaben
 datum: "2026-06-20"
 minuten: 8
 autor: Redaktion
-tag: digital
+tag: analyse
 featured: false
 ---
 

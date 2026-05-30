@@ -5,7 +5,7 @@ ressort: analyse
 datum: "2026-06-17"
 minuten: 12
 autor: Redaktion
-tag: demografie
+tag: analyse
 featured: false
 ---
 
