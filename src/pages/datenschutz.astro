@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Datenschutzerklärung">
+<Header />
+<div style="background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:36px 0;">
+  <div style="max-width:780px;margin:0 auto;padding:0 32px;">
+    <h1 style="font-size:24px;font-weight:800;color:#fff;letter-spacing:-.02em;">Datenschutzerklärung</h1>
+    <p style="font-size:12px;color:#93c5fd;margin-top:6px;">Gemäß DSGVO und BDSG</p>
+  </div>
+</div>
+<main style="max-width:780px;margin:40px auto;padding:0 32px 60px;">
+  <style>
+    .ds h2 { font-size:13px;font-weight:700;color:#1a2744;letter-spacing:.06em;text-transform:uppercase;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid #e2e8f0; }
+    .ds p, .ds li { font-size:14px;color:#374151;line-height:1.75;margin-bottom:10px; }
+    .ds ul { margin:0 0 12px 20px; }
+    .ds a { color:#3b82f6; }
+    .ds strong { color:#1a2744; }
+  </style>
+  <div class="ds">
+
+    <h2>1. Verantwortliche Stelle</h2>
+    <p><strong>HAKO Beteiligungsgesellschaft mbH</strong><br>
+    Hertha-Lindner-Str. 10–12 · D-01067 Dresden<br>
+    E-Mail: <a href="mailto:datenschutz@hako.team">datenschutz@hako.team</a><br>
+    Telefon: 0800 1480 450 100</p>
+
+    <h2>2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+    <p>Beim Besuch dieser Website werden automatisch technische Zugriffsdaten erfasst, die Ihr Browser übermittelt. Dazu gehören:</p>
+    <ul>
+      <li>IP-Adresse (anonymisiert)</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Aufgerufene Seite</li>
+      <li>Browsertyp und -version</li>
+      <li>Betriebssystem</li>
+    </ul>
+    <p>Diese Daten werden ausschließlich zur technischen Bereitstellung der Website verwendet und nach 7 Tagen gelöscht. Eine Zusammenführung mit anderen Daten findet nicht statt.</p>
+
+    <h2>3. Newsletter</h2>
+    <p>Wenn Sie unseren Newsletter abonnieren, verarbeiten wir Ihre E-Mail-Adresse auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die Einwilligung kann jederzeit durch Klick auf den Abmeldelink im Newsletter widerrufen werden.</p>
+    <p>Ihre E-Mail-Adresse wird ausschließlich für den Versand des Kommunalreport-Briefings verwendet und nicht an Dritte weitergegeben.</p>
+
+    <h2>4. Hosting</h2>
+    <p>Diese Website wird gehostet bei <strong>Vercel Inc.</strong>, 340 Pine Street, Suite 701, San Francisco, CA 94104, USA. Bei jedem Seitenaufruf werden Serverlogdaten erhoben. Vercel ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank">vercel.com/legal/privacy-policy</a></p>
+
+    <h2>5. Keine Cookies, kein Tracking</h2>
+    <p>Wir verwenden auf dieser Website <strong>keine Cookies</strong>, <strong>kein Google Analytics</strong> und keine sonstigen Tracking-Tools. Es werden keine Nutzerprofile erstellt.</p>
+
+    <h2>6. Ihre Rechte</h2>
+    <p>Sie haben jederzeit das Recht auf:</p>
+    <ul>
+      <li><strong>Auskunft</strong> über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+      <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</li>
+      <li><strong>Löschung</strong> Ihrer Daten (Art. 17 DSGVO)</li>
+      <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18 DSGVO)</li>
+      <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+      <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    </ul>
+    <p>Zur Ausübung Ihrer Rechte wenden Sie sich an: <a href="mailto:datenschutz@hako.team">datenschutz@hako.team</a></p>
+
+    <h2>7. Beschwerderecht</h2>
+    <p>Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren. Für die HAKO Beteiligungsgesellschaft mbH ist dies der <strong>Sächsische Datenschutzbeauftragte</strong>:<br>
+    <a href="https://www.saechsdsb.de" target="_blank">www.saechsdsb.de</a></p>
+
+    <h2>8. Aktualität</h2>
+    <p>Diese Datenschutzerklärung hat den Stand Juni 2026. Wir behalten uns vor, sie bei Bedarf anzupassen.</p>
+
+  </div>
+</main>
+<Footer />
+</Base>
