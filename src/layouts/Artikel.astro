@@ -84,6 +84,9 @@ const ressortLabels: Record<string,string> = {
     }
   </style>
 
+  <!-- Lesezeit-Fortschrittsbalken -->
+  <div id="progress-bar" style="position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#3b82f6,#6ee7b7);z-index:9999;transition:width .1s linear;"></div>
+
   <div class="art-hero">
     <div class="art-hero-inner">
       <div class="art-back">
@@ -111,6 +114,28 @@ const ressortLabels: Record<string,string> = {
   <Footer />
 </Base>
 <script>
+// Lesezeit-Fortschrittsbalken
+const bar = document.getElementById('progress-bar');
+function updateProgress() {
+  const article = document.querySelector('article');
+  if (!bar || !article) return;
+  const articleTop  = article.getBoundingClientRect().top + window.scrollY;
+  const articleBottom = articleTop + article.offsetHeight;
+  const scrolled = window.scrollY + window.innerHeight;
+  const total    = articleBottom - articleTop;
+  const progress = Math.min(Math.max((scrolled - articleTop) / total, 0), 1);
+  bar.style.width = (progress * 100) + '%';
+  // Bei 100 %: nach kurzer Zeit ausblenden
+  if (progress >= 1) {
+    setTimeout(() => { bar.style.opacity = '0'; bar.style.transition = 'opacity .6s'; }, 800);
+  } else {
+    bar.style.opacity = '1';
+    bar.style.transition = 'width .1s linear';
+  }
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
 // Tabellen auf Mobile scrollbar machen
 document.querySelectorAll('article table').forEach(t => {
   if (!t.parentElement?.classList.contains('table-wrap')) {
