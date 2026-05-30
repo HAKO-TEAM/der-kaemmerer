@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Artikel from '../../layouts/Artikel.astro';
 
 export async function getStaticPaths() {
-  const ressorts = ['haushalt','einnahmen','ausgaben','praxis','recht','analyse'] as const;
+  const ressorts = ['haushalt','einnahmen','ausgaben','praxis','recht','analyse','sozialkosten'] as const;
   const paths = [];
   for (const ressort of ressorts) {
     const entries = await getCollection(ressort);

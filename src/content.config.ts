@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders';
 const artikelSchema = z.object({
   title:        z.string(),
   beschreibung: z.string(),
-  ressort:      z.enum(['haushalt','einnahmen','ausgaben','praxis','recht','analyse']),
+  ressort:      z.enum(['haushalt','einnahmen','ausgaben','praxis','recht','analyse','sozialkosten']),
   datum:        z.string(),
   minuten:      z.number(),
   autor:        z.string().default('Redaktion'),
@@ -18,10 +18,11 @@ const mkCol = (pattern) => defineCollection({
 });
 
 export const collections = {
-  haushalt:  mkCol('haushalt/*.md'),
-  einnahmen: mkCol('einnahmen/*.md'),
-  ausgaben:  mkCol('ausgaben/*.md'),
-  praxis:    mkCol('praxis/*.md'),
-  recht:     mkCol('recht/*.md'),
-  analyse:   mkCol('analyse/*.md'),
+  haushalt:     mkCol('haushalt/*.md'),
+  einnahmen:    mkCol('einnahmen/*.md'),
+  ausgaben:     mkCol('ausgaben/*.md'),
+  praxis:       mkCol('praxis/*.md'),
+  recht:        mkCol('recht/*.md'),
+  analyse:      mkCol('analyse/*.md'),
+  sozialkosten: mkCol('sozialkosten/*.md'),
 };

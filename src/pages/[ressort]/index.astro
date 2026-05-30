@@ -11,7 +11,8 @@ export async function getStaticPaths() {
     { params:{ressort:'ausgaben'},  props:{label:'Ausgaben steuern',      sub:'Ohne Pflichtleistungen zu kürzen',                   color:'#1e40af'} },
     { params:{ressort:'praxis'},    props:{label:'Best Practice',         sub:'Was funktioniert hat — Fallstudien und Modelle',     color:'#92400e'} },
     { params:{ressort:'recht'},     props:{label:'Recht & Vergabe',       sub:'Aktuelle Rechtsprechung und Vergabepraxis',          color:'#6b21a8'} },
-    { params:{ressort:'analyse'},   props:{label:'Analyse & Meinung',     sub:'Einordnung und Kommentar',                          color:'#374151'} },
+    { params:{ressort:'analyse'},      props:{label:'Analyse & Meinung',     sub:'Einordnung und Kommentar',                                  color:'#374151'} },
+    { params:{ressort:'sozialkosten'}, props:{label:'Sozialkosten',          sub:'HzE · Grundsicherung · Asyl · Wohnungslosigkeit — der größte Haushaltshebel', color:'#be123c'} },
   ];
 }
 
@@ -23,15 +24,17 @@ const allEinnahmen = await getCollection('einnahmen');
 const allAusgaben  = await getCollection('ausgaben');
 const allPraxis    = await getCollection('praxis');
 const allRecht     = await getCollection('recht');
-const allAnalyse   = await getCollection('analyse');
+const allAnalyse      = await getCollection('analyse');
+const allSozialkosten = await getCollection('sozialkosten');
 
 const map: Record<string, any[]> = {
-  haushalt:  allHaushalt,
-  einnahmen: allEinnahmen,
-  ausgaben:  allAusgaben,
-  praxis:    allPraxis,
-  recht:     allRecht,
-  analyse:   allAnalyse,
+  haushalt:     allHaushalt,
+  einnahmen:    allEinnahmen,
+  ausgaben:     allAusgaben,
+  praxis:       allPraxis,
+  recht:        allRecht,
+  analyse:      allAnalyse,
+  sozialkosten: allSozialkosten,
 };
 
 const entries = (map[ressort] || []).sort((a: any, b: any) =>
