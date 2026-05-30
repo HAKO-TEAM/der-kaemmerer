@@ -112,37 +112,30 @@ const ressortLabels: Record<string,string> = {
   </main>
 
   <Footer />
-</Base>
-<script>
-// Lesezeit-Fortschrittsbalken
-const bar = document.getElementById('progress-bar');
-function updateProgress() {
-  const article = document.querySelector('article');
-  if (!bar || !article) return;
-  const articleTop  = article.getBoundingClientRect().top + window.scrollY;
-  const articleBottom = articleTop + article.offsetHeight;
-  const scrolled = window.scrollY + window.innerHeight;
-  const total    = articleBottom - articleTop;
-  const progress = Math.min(Math.max((scrolled - articleTop) / total, 0), 1);
-  bar.style.width = (progress * 100) + '%';
-  // Bei 100 %: nach kurzer Zeit ausblenden
-  if (progress >= 1) {
-    setTimeout(() => { bar.style.opacity = '0'; bar.style.transition = 'opacity .6s'; }, 800);
-  } else {
-    bar.style.opacity = '1';
-    bar.style.transition = 'width .1s linear';
-  }
-}
-window.addEventListener('scroll', updateProgress, { passive: true });
-updateProgress();
 
-// Tabellen auf Mobile scrollbar machen
-document.querySelectorAll('article table').forEach(t => {
-  if (!t.parentElement?.classList.contains('table-wrap')) {
-    const wrap = document.createElement('div');
-    wrap.className = 'table-wrap';
-    t.parentNode?.insertBefore(wrap, t);
-    wrap.appendChild(t);
-  }
-});
-</script>
+  <script is:inline>
+    // Fortschrittsbalken
+    const bar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (!bar || total <= 0) return;
+      const pct = Math.min(window.scrollY / total * 100, 100);
+      bar.style.width = pct + '%';
+      if (pct >= 100) {
+        setTimeout(() => { bar.style.opacity = '0'; }, 800);
+      } else {
+        bar.style.opacity = '1';
+      }
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // Tabellen auf Mobile scrollbar machen
+    document.querySelectorAll('article table').forEach(function(t) {
+      if (!t.parentElement || t.parentElement.classList.contains('table-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
+  </script>
+</Base>
