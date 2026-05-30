@@ -162,7 +162,7 @@ const catLabel: Record<string,string> = {
     <div id="nl-success" style="display:none;font-size:13px;color:#065f46;font-weight:600;padding:9px 0;">
       ✓ Anmeldung erfolgreich! Sie erhalten das nächste Briefing direkt ins Postfach.
     </div>
-    <script>
+    <script is:inline>
     async function handleSubscribe(e) {
       e.preventDefault();
       const email = document.getElementById('nl-email').value;
@@ -180,7 +180,6 @@ const catLabel: Record<string,string> = {
           document.getElementById('nl-success').style.display = 'block';
         } else { throw new Error(); }
       } catch {
-        // Fallback: direkt zeigen
         document.getElementById('nl-form').style.display = 'none';
         document.getElementById('nl-success').style.display = 'block';
       }
