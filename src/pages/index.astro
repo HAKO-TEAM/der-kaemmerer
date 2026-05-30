@@ -54,6 +54,7 @@ const catLabel: Record<string,string> = {
     .nl-form{width:100%}
     .nl-form input{flex:1;min-width:0}
     .main-inner{padding:24px 16px}
+    .hero-h1-mobile{font-size:22px!important;line-height:1.2!important}
   }
 </style>
 <!-- Hero -->
@@ -64,7 +65,7 @@ const catLabel: Record<string,string> = {
       <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:12px;">
         Leitartikel · {featured.data.datum}
       </div>
-      <h1 style="font-size:30px;font-weight:800;line-height:1.15;color:#fff;margin-bottom:12px;letter-spacing:-.02em;">
+      <h1 style="font-size:30px;font-weight:800;line-height:1.15;color:#fff;margin-bottom:12px;letter-spacing:-.02em;" class="hero-h1-mobile">
         {featured.data.title}
       </h1>
       <p style="font-size:14px;color:#93c5fd;line-height:1.7;margin-bottom:14px;">{featured.data.beschreibung}</p>
@@ -95,7 +96,7 @@ const catLabel: Record<string,string> = {
 
 <!-- KPI-Band -->
 <div style="background:#1a2744;padding:26px 0;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
+  <div class="main-inner" style="padding-top:0;padding-bottom:0;">
     <div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3b82f6;margin-bottom:14px;">
       Kommunale Haushaltslage Deutschland 2026 · Quellen: Statistisches Bundesamt · KfW · Bertelsmann Stiftung
     </div>
@@ -117,7 +118,7 @@ const catLabel: Record<string,string> = {
 </div>
 
 <!-- Hauptinhalt -->
-<main style="max-width:1200px;margin:0 auto;padding:36px 32px;">
+<main class="main-inner">
 
   <!-- Alle neuesten Artikel -->
   {alle.length > 0 && (

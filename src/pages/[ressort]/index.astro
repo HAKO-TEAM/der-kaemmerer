@@ -59,17 +59,17 @@ function getSlug(entry: any) {
   }
 </style>
 <div style={`background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:40px 0;`}>
-  <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
+  <div class="res-hero-inner">
     <div style={`font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${color};margin-bottom:10px;`}>Ressort</div>
     <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.02em;">{label}</h1>
     <p style="font-size:13px;color:#93c5fd;">{sub}</p>
   </div>
 </div>
-<main style="max-width:1200px;margin:0 auto;padding:36px 32px;">
+<main class="res-main">
   {entries.length === 0 ? (
     <p style="color:#6b7280;font-size:14px;">Bald verfügbar — erste Artikel in Vorbereitung.</p>
   ) : (
-    <div class="res-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="res-grid">
       {entries.map((a: any) => (
         <div style="border-top:2.5px solid #1a2744;padding-top:12px;">
           {a.data.tag && <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:6px;">{a.data.tag}</span>}
