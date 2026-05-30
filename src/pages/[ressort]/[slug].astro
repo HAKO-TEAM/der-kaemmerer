@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import Artikel from '../../layouts/Artikel.astro';
+
+export async function getStaticPaths() {
+  const ressorts = ['haushalt','einnahmen','ausgaben','praxis','recht','analyse'] as const;
+  const paths = [];
+  for (const ressort of ressorts) {
+    const entries = await getCollection(ressort);
+    for (const entry of entries) {
+      const slug = (entry.id as string).split('/').pop()!.replace('.md','');
+      paths.push({ params: { ressort, slug }, props: { entry, ressort } });
+    }
+  }
+  return paths;
+}
+
+const { entry, ressort } = Astro.props;
+const { Content } = await render(entry);
+---
+<Artikel
+  title={entry.data.title}
+  beschreibung={entry.data.beschreibung}
+  ressort={ressort}
+  datum={entry.data.datum}
+  minuten={entry.data.minuten}
+  autor={entry.data.autor}
+  tag={entry.data.tag}
+>
+  <Content />
+</Artikel>

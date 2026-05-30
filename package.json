@@ -1,0 +1,15 @@
+{
+  "name": "der-kaemmerer",
+  "version": "1.0.0",
+  "description": "Der Kämmerer – Das unabhängige Briefing für kommunale Entscheider",
+  "scripts": {
+    "dev":     "astro dev",
+    "build":   "astro build",
+    "preview": "astro preview"
+  },
+  "type": "module",
+  "dependencies": {
+    "@astrojs/mdx": "^6.0.1",
+    "astro": "^6.4.2"
+  }
+}

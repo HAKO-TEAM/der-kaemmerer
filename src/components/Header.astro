@@ -1,0 +1,57 @@
+---
+const nav = [
+  { href: '/haushalt',  label: 'Haushalt & Finanzen' },
+  { href: '/einnahmen', label: 'Einnahmen erschließen' },
+  { href: '/ausgaben',  label: 'Ausgaben steuern' },
+  { href: '/praxis',    label: 'Best Practice' },
+  { href: '/daten',     label: 'Daten & Rankings' },
+  { href: '/recht',     label: 'Recht & Vergabe' },
+  { href: '/analyse',   label: 'Analyse' },
+];
+const currentPath = Astro.url.pathname;
+---
+<style>
+  .topbar{background:#1a2744;color:#93c5fd;font-size:11px;font-weight:500;letter-spacing:.06em;padding:7px 0;text-align:center}
+  .topbar a{color:#fff;font-weight:600}
+  .topbar span{color:#374151;margin:0 10px}
+  header{background:#fff;border-bottom:1px solid #e2e8f0}
+  .header-inner{max-width:1200px;margin:0 auto;padding:0 32px}
+  .masthead{display:flex;justify-content:space-between;align-items:center;padding:18px 0 14px;border-bottom:3px solid #1a2744}
+  .logo{font-size:30px;font-weight:800;color:#1a2744;letter-spacing:-.03em;line-height:1}
+  .logo .a{color:#3b82f6}
+  .tagline{font-size:10px;font-weight:600;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+  .masthead-right{display:flex;align-items:center;gap:16px}
+  .pill{background:#eff6ff;border:1px solid #93c5fd;border-radius:4px;padding:4px 10px;font-size:10px;font-weight:700;color:#1a2744;letter-spacing:.06em;text-transform:uppercase}
+  .btn{background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:3px}
+  .btn:hover{background:#0f3460}
+  nav{display:flex;overflow-x:auto;gap:0}
+  nav a{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#374151;padding:9px 13px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
+  nav a:hover,nav a.active{color:#3b82f6;border-color:#3b82f6}
+</style>
+
+<div class="topbar">
+  Ausgabe 01 · Juni 2026
+  <span>·</span>
+  <a href="/#newsletter">Kostenlos abonnieren</a>
+  <span>·</span>
+  Ein Angebot der HAKO Beteiligungsgesellschaft mbH · Dresden
+</div>
+<header>
+  <div class="header-inner">
+    <div class="masthead">
+      <div>
+        <a href="/" class="logo">Der <span class="a">Kämmerer</span></a>
+        <div class="tagline">Das unabhängige Briefing für kommunale Entscheider</div>
+      </div>
+      <div class="masthead-right">
+        <span class="pill">Juni 2026</span>
+        <a href="/#newsletter" class="btn">Abonnieren</a>
+      </div>
+    </div>
+    <nav>
+      {nav.map(n => (
+        <a href={n.href} class={currentPath.startsWith(n.href) ? 'active' : ''}>{n.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

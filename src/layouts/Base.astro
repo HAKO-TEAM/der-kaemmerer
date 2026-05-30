@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten.' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title} — Der Kämmerer</title>
+<meta name="description" content={description}>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#1a2744; --navy2:#0f3460; --navy3:#1a3a5c;
+    --blue:#3b82f6; --blue-lt:#93c5fd; --blue-bg:#eff6ff;
+    --amber:#c2410c; --amber-lt:#fed7aa;
+    --green:#065f46; --green-lt:#6ee7b7;
+    --purple:#6b21a8; --gold:#92400e;
+    --ink:#1a1a2e; --mid:#374151; --lt:#6b7280;
+    --rule:#e2e8f0; --bg:#f8fafc; --white:#fff;
+    --font:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{font-size:15px;scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+  <slot />
+</body>
+</html>
