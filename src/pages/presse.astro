@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const mitteilungen = [
+  {
+    datum: '2026-06-30',
+    titel: 'Neues Fachportal für kommunale Entscheider: „Der Kämmerer" liefert unabhängige Haushaltsanalysen — kostenlos',
+    teaser: 'Kämmereien, Sozialdezernenten und Oberbürgermeister erhalten mit derkaemmerer.de ein neues, werbefreies Briefing zu kommunalen Finanzen, Sozialkosten und Haushaltssteuerung.',
+    slug: 'launch-derkaemmerer-2026',
+  },
+];
+---
+<Base
+  title="Presse"
+  description="Pressemitteilungen und Medienkontakt der HAKO Beteiligungsgesellschaft mbH — Herausgeber von derkaemmerer.de und ASCEND."
+>
+<Header />
+
+<style>
+  .hero { background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%); padding:52px 0; }
+  .hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+  .hero h1 { font-size:32px; font-weight:800; color:#fff; margin-bottom:10px; letter-spacing:-.02em; }
+  .hero p { font-size:14px; color:#93c5fd; line-height:1.7; }
+  .main { max-width:780px; margin:0 auto; padding:44px 32px 64px; }
+
+  /* Kontakt-Box */
+  .kontakt-box { background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:6px; padding:24px; margin-bottom:48px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .kontakt-box h3 { font-size:13px; font-weight:800; color:#1a2744; margin-bottom:10px; }
+  .kontakt-box p { font-size:13px; color:#374151; line-height:1.7; }
+  .kontakt-box a { color:#3b82f6; }
+
+  /* PM-Liste */
+  .pm-label { font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#6b7280; margin-bottom:20px; }
+  .pm-card { background:#fff; border:1px solid #e2e8f0; border-left:3px solid #3b82f6; border-radius:4px; padding:24px; margin-bottom:16px; }
+  .pm-datum { font-size:10px; color:#9ca3af; margin-bottom:8px; }
+  .pm-titel { font-size:17px; font-weight:800; color:#1a2744; line-height:1.3; margin-bottom:10px; letter-spacing:-.01em; }
+  .pm-teaser { font-size:13px; color:#374151; line-height:1.65; margin-bottom:14px; }
+  .pm-link { font-size:11px; font-weight:700; color:#3b82f6; letter-spacing:.05em; text-transform:uppercase; }
+
+  @media(max-width:768px) {
+    .hero-inner, .main { padding-left:16px; padding-right:16px; }
+    .hero h1 { font-size:24px; }
+    .kontakt-box { grid-template-columns:1fr; gap:16px; }
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0e7490;margin-bottom:10px;">HAKO · Der Kämmerer</div>
+    <h1>Presse</h1>
+    <p>Pressemitteilungen, Medienkontakt und Hintergrundinformationen für Redaktionen.</p>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- Medienkontakt -->
+  <div class="kontakt-box">
+    <div>
+      <h3>Pressekontakt</h3>
+      <p>
+        <strong>Michael G. Kosel</strong><br>
+        Geschäftsführer<br>
+        HAKO Beteiligungsgesellschaft mbH<br>
+        <a href="mailto:redaktion@derkaemmerer.de">redaktion@derkaemmerer.de</a>
+      </p>
+    </div>
+    <div>
+      <h3>Über uns</h3>
+      <p>
+        <strong>derkaemmerer.de</strong> ist das unabhängige Briefing für Kämmerer, Oberbürgermeister und Finanzdezernenten — ein Angebot der HAKO Beteiligungsgesellschaft mbH, Dresden.<br><br>
+        HRB 29317 · Amtsgericht Dresden
+      </p>
+    </div>
+  </div>
+
+  <!-- Pressemitteilungen -->
+  <div class="pm-label">Pressemitteilungen</div>
+
+  {mitteilungen.map(pm => (
+    <div class="pm-card">
+      <div class="pm-datum">{pm.datum}</div>
+      <div class="pm-titel">{pm.titel}</div>
+      <div class="pm-teaser">{pm.teaser}</div>
+      <a href={`/presse/${pm.slug}`} class="pm-link">Vollständige Pressemitteilung lesen →</a>
+    </div>
+  ))}
+
+</main>
+<Footer />
+</Base>
