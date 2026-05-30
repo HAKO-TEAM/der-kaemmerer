@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 <Base title="Daten & Rankings">
 <Header />
 
-<style>
+<style is:global>
   .daten-hero {
     background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%);
     padding: 40px 0;
@@ -141,9 +141,6 @@ import Footer from '../components/Footer.astro';
   .daten-table tbody tr:nth-child(even) { background: #f8fafc; }
   .td-stadt { font-weight: 600; color: #1a2744; }
   .td-bl { color: #6b7280; }
-  @media (max-width: 600px) {
-    .col-bl { display: none; }
-  }
   .td-hs { font-weight: 700; }
   .td-avg { color: #6b7280; }
   .td-diff { font-weight: 700; }
@@ -182,6 +179,10 @@ import Footer from '../components/Footer.astro';
 
   /* ── Mobil (≤ 600px): 2 Spalten, kleinere Darstellung ── */
   @media (max-width: 600px) {
+    /* Tabelle: nur Stadt, Hebesatz, Differenz zeigen */
+    .col-bl, .col-avg { display: none; }
+    .daten-table { min-width: 0; width: 100%; font-size: 12px; }
+    .daten-table th, .daten-table td { padding: 8px 10px; }
     .daten-hero {
       padding: 24px 0;
     }
@@ -306,7 +307,7 @@ import Footer from '../components/Footer.astro';
           <th>Stadt</th>
           <th class="col-bl">Bundesland</th>
           <th>Hebesatz 2025</th>
-          <th>Ø Region</th>
+          <th class="col-avg">Ø Region</th>
           <th>Differenz</th>
         </tr>
       </thead>
@@ -325,7 +326,7 @@ import Footer from '../components/Footer.astro';
             <td class="td-stadt">{stadt}</td>
             <td class="td-bl col-bl">{bl}</td>
             <td class="td-hs">{hs}</td>
-            <td class="td-avg">{avg}</td>
+            <td class="td-avg col-avg">{avg}</td>
             <td class="td-diff" style={`color:${dc};`}>{diff}</td>
           </tr>
         ))}
