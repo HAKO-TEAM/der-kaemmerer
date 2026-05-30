@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const ausgaben = [
+  {
+    nr: '01',
+    datum: 'Juni 2026',
+    titel: 'Kommunale Haushalte unter Druck',
+    themen: [
+      'Kassenkredite als Normalzustand — was das für Kämmerer bedeutet',
+      'HzE-Kostensteigerung +44 %: Ursachen und Steuerungsansätze',
+      'Direktvergabe nach UVgO: was Kommunen wirklich dürfen',
+      'Mannheim 2013: Lehren aus dem erfolgreichsten Steuerungsmodell',
+    ],
+    highlight: 'Erstausgabe',
+  },
+];
+---
+<Base
+  title="Newsletter-Archiv"
+  description="Alle Ausgaben des Kämmerer-Briefings — das wöchentliche Briefing für kommunale Entscheider, Kämmerer und Finanzdezernenten."
+>
+<Header />
+
+<style>
+  .hero { background: linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%); padding:52px 0; }
+  .hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+  .hero h1 { font-size:32px; font-weight:800; color:#fff; margin-bottom:10px; letter-spacing:-.02em; }
+  .hero p { font-size:14px; color:#93c5fd; line-height:1.7; }
+
+  .main { max-width:780px; margin:0 auto; padding:44px 32px 64px; }
+
+  /* Anmelde-Box */
+  .nl-box { background:#1a2744; border-radius:6px; padding:28px 32px; margin-bottom:48px; display:flex; align-items:center; gap:32px; }
+  .nl-box-text h2 { font-size:18px; font-weight:800; color:#fff; margin-bottom:4px; }
+  .nl-box-text p { font-size:13px; color:#93c5fd; line-height:1.6; }
+  .nl-form { display:flex; gap:8px; flex-shrink:0; }
+  .nl-form input { padding:9px 14px; font-size:12px; border:1px solid #1e3a5f; border-radius:3px; background:#0f3460; color:#fff; outline:none; width:220px; }
+  .nl-form input::placeholder { color:#475569; }
+  .nl-form input:focus { border-color:#3b82f6; }
+  .nl-form button { padding:9px 16px; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:#3b82f6; color:#fff; border:none; border-radius:3px; cursor:pointer; white-space:nowrap; }
+  .nl-form button:hover { background:#0f3460; }
+  .nl-success { display:none; font-size:13px; color:#6ee7b7; font-weight:600; }
+
+  /* Archiv */
+  .archiv-label { font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#6b7280; margin-bottom:20px; }
+  .ausgabe { background:#fff; border:1px solid #e2e8f0; border-radius:6px; padding:24px; margin-bottom:16px; }
+  .ausgabe-header { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:16px; }
+  .ausgabe-nr { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#9ca3af; }
+  .ausgabe-titel { font-size:18px; font-weight:800; color:#1a2744; margin:4px 0 2px; letter-spacing:-.01em; }
+  .ausgabe-datum { font-size:11px; color:#6b7280; }
+  .ausgabe-badge { background:#eff6ff; border:1px solid #93c5fd; color:#1e40af; font-size:9px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:3px 8px; border-radius:2px; white-space:nowrap; flex-shrink:0; }
+  .ausgabe-themen { list-style:none; padding:0; margin:0; border-top:1px solid #f1f5f9; padding-top:14px; }
+  .ausgabe-themen li { font-size:13px; color:#374151; padding:5px 0; border-bottom:1px solid #f8fafc; display:flex; align-items:baseline; gap:8px; }
+  .ausgabe-themen li::before { content:'→'; color:#3b82f6; font-size:10px; font-weight:700; flex-shrink:0; }
+
+  /* Kommt-bald */
+  .coming-soon { background:#f8fafc; border:1.5px dashed #e2e8f0; border-radius:6px; padding:24px; text-align:center; color:#9ca3af; font-size:13px; }
+
+  @media(max-width:768px) {
+    .hero-inner, .main { padding-left:16px; padding-right:16px; }
+    .hero h1 { font-size:24px; }
+    .nl-box { flex-direction:column; gap:16px; padding:20px; }
+    .nl-form { width:100%; }
+    .nl-form input { flex:1; min-width:0; width:auto; }
+    .ausgabe-header { flex-direction:column; gap:8px; }
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0e7490;margin-bottom:10px;">Briefing</div>
+    <h1>Newsletter-Archiv</h1>
+    <p>Alle Ausgaben des Kämmerer-Briefings — jeden Montag für kommunale Entscheider.</p>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- Anmelde-Box -->
+  <div class="nl-box">
+    <div class="nl-box-text">
+      <h2>Jetzt abonnieren</h2>
+      <p>Jeden Montag: Analysen, Maßnahmen, Benchmark-Daten.<br>Kostenlos, direkt ins Postfach.</p>
+    </div>
+    <div>
+      <form class="nl-form" id="nl-form">
+        <input type="email" id="nl-email" placeholder="Dienstliche E-Mail" required />
+        <button type="submit">Abonnieren</button>
+      </form>
+      <div class="nl-success" id="nl-success">✓ Erfolgreich angemeldet!</div>
+    </div>
+  </div>
+
+  <!-- Archiv -->
+  <div class="archiv-label">Bisherige Ausgaben — {ausgaben.length} Ausgabe{ausgaben.length !== 1 ? 'n' : ''}</div>
+
+  {ausgaben.map(a => (
+    <div class="ausgabe">
+      <div class="ausgabe-header">
+        <div>
+          <div class="ausgabe-nr">Ausgabe {a.nr}</div>
+          <div class="ausgabe-titel">{a.titel}</div>
+          <div class="ausgabe-datum">{a.datum}</div>
+        </div>
+        {a.highlight && <span class="ausgabe-badge">{a.highlight}</span>}
+      </div>
+      <ul class="ausgabe-themen">
+        {a.themen.map(t => <li>{t}</li>)}
+      </ul>
+    </div>
+  ))}
+
+  <div class="coming-soon">
+    Ausgabe 02 erscheint im Juli 2026 — <a href="#nl-form" style="color:#3b82f6;font-weight:600;">jetzt abonnieren</a> und keine Ausgabe verpassen.
+  </div>
+
+</main>
+<Footer />
+
+<script is:inline>
+  const form = document.getElementById('nl-form');
+  form && form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('nl-email').value;
+    const btn = form.querySelector('button');
+    btn.textContent = '...'; btn.disabled = true;
+    try {
+      await fetch('/api/subscribe', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({email})
+      });
+    } catch(err) {}
+    form.style.display = 'none';
+    document.getElementById('nl-success').style.display = 'block';
+  });
+</script>
+</Base>
