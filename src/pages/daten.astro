@@ -5,80 +5,335 @@ import Footer from '../components/Footer.astro';
 ---
 <Base title="Daten & Rankings">
 <Header />
-<div style="background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:40px 0;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
-    <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0e7490;margin-bottom:10px;">Ressort</div>
-    <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.02em;">Daten & Rankings</h1>
-    <p style="font-size:13px;color:#93c5fd;">Aktuelle Kennzahlen · Benchmarks · Haushaltsampel</p>
+
+<style>
+  .daten-hero {
+    background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%);
+    padding: 40px 0;
+  }
+  .daten-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .daten-ressort-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #0e7490;
+    margin-bottom: 10px;
+  }
+  .daten-hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: -.02em;
+  }
+  .daten-hero p {
+    font-size: 13px;
+    color: #93c5fd;
+  }
+
+  .daten-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 32px;
+  }
+
+  /* Section header */
+  .daten-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #1a2744;
+    flex-wrap: wrap;
+  }
+  .daten-section-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a2744;
+  }
+  .daten-section-line {
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+    min-width: 20px;
+  }
+  .daten-section-source {
+    font-size: 9px;
+    color: #6b7280;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .kpi-card {
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .kpi-val {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1a2744;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .kpi-src {
+    font-size: 9px;
+    color: #9ca3af;
+  }
+
+  /* Table */
+  .table-wrap {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 40px;
+  }
+  .daten-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 520px;
+  }
+  .daten-table thead tr {
+    background: #1a2744;
+    color: #fff;
+  }
+  .daten-table th {
+    padding: 10px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    white-space: nowrap;
+  }
+  .daten-table th:first-child { text-align: left; }
+  .daten-table th:nth-child(2) { text-align: left; }
+  .daten-table th:nth-child(3),
+  .daten-table th:nth-child(4),
+  .daten-table th:nth-child(5) { text-align: right; }
+  .daten-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .daten-table td:nth-child(3),
+  .daten-table td:nth-child(4),
+  .daten-table td:nth-child(5) { text-align: right; }
+  .daten-table tbody tr:nth-child(even) { background: #f8fafc; }
+  .td-stadt { font-weight: 600; color: #1a2744; }
+  .td-bl { color: #6b7280; }
+  @media (max-width: 600px) {
+    .col-bl { display: none; }
+  }
+  .td-hs { font-weight: 700; }
+  .td-avg { color: #6b7280; }
+  .td-diff { font-weight: 700; }
+
+  .daten-footnote {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+
+  /* ── Verhindert seitliches Scrollen der Seite ── */
+  :global(body) {
+    overflow-x: hidden;
+  }
+
+  /* ── Tablet (≤ 900px): 2 Spalten ── */
+  @media (max-width: 900px) {
+    .daten-hero-inner,
+    .daten-main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .kpi-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .daten-section-source {
+      width: 100%;
+      margin-top: 4px;
+    }
+    .daten-section-line {
+      display: none;
+    }
+  }
+
+  /* ── Mobil (≤ 600px): 2 Spalten, kleinere Darstellung ── */
+  @media (max-width: 600px) {
+    .daten-hero {
+      padding: 24px 0;
+    }
+    .daten-hero-inner,
+    .daten-main {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .daten-hero h1 {
+      font-size: 21px;
+    }
+    .daten-hero p {
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .kpi-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .kpi-val {
+      font-size: 17px;
+      word-break: break-word;
+    }
+    .kpi-card {
+      padding: 11px 10px;
+    }
+    .kpi-label {
+      font-size: 10px;
+    }
+    .kpi-src {
+      font-size: 8px;
+    }
+    .daten-section-title {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .daten-section-header {
+      margin-bottom: 16px;
+    }
+    .daten-main {
+      padding-top: 24px;
+    }
+    .daten-footnote {
+      font-size: 10px;
+      margin-bottom: 28px;
+    }
+  }
+
+  /* ── Klein-Mobil (≤ 400px): 1 Spalte ── */
+  @media (max-width: 400px) {
+    .kpi-grid {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .kpi-val {
+      font-size: 20px;
+    }
+    .kpi-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+    }
+    .kpi-val {
+      font-size: 18px;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+    .kpi-info {
+      flex: 1;
+    }
+  }
+</style>
+
+<div class="daten-hero">
+  <div class="daten-hero-inner">
+    <div class="daten-ressort-label">Ressort</div>
+    <h1>Daten & Rankings</h1>
+    <p>Aktuelle Kennzahlen · Benchmarks · Haushaltsampel</p>
   </div>
 </div>
-<main style="max-width:1200px;margin:0 auto;padding:36px 32px;">
 
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:6px;border-bottom:3px solid #1a2744;">
-    <span style="font-size:16px;font-weight:800;color:#1a2744;">Kommunale Haushaltskennzahlen 2026</span>
-    <span style="flex:1;height:1px;background:#e2e8f0;"></span>
-    <span style="font-size:9px;color:#6b7280;">Quellen: Statistisches Bundesamt · KfW · Bertelsmann Stiftung</span>
+<main class="daten-main">
+
+  <div class="daten-section-header">
+    <span class="daten-section-title">Kommunale Haushaltskennzahlen 2026</span>
+    <span class="daten-section-line"></span>
+    <span class="daten-section-source">Quellen: Statistisches Bundesamt · KfW · Bertelsmann Stiftung</span>
   </div>
 
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px;">
+  <div class="kpi-grid">
     {[
-      {val:'166 Mrd. €', label:'Kommunaler Investitionsstau', src:'KfW-Kommunalpanel 2025', color:'#c2410c'},
-      {val:'70 %',       label:'Kommunen strukturell im Defizit', src:'KGSt / BMF 2026', color:'#c2410c'},
-      {val:'44 Mrd. €',  label:'Kassenkreditbestand gesamt', src:'Statistisches Bundesamt 2024', color:'#c2410c'},
-      {val:'+44 %',      label:'HzE-Kostensteigerung seit 2013', src:'Ø deutsche Großstädte', color:'#1e40af'},
-      {val:'28,4 Mrd. €',label:'Asyl- & Integrationskosten 2025', src:'Bund / Länder / Kommunen', color:'#92400e'},
-      {val:'3,5 %',      label:'Ø Zinssatz Kassenkredite 2025', src:'Deutsche Bundesbank', color:'#6b21a8'},
-      {val:'25.000 €',   label:'Direktvergabe-Schwelle Lieferungen', src:'UVgO', color:'#065f46'},
-      {val:'221.000 €',  label:'EU-Schwellenwert Dienstleistungen', src:'EU-Vergaberecht 2026', color:'#065f46'},
+      {val:'166 Mrd. €', label:'Kommunaler Investitionsstau',       src:'KfW-Kommunalpanel 2025',       color:'#c2410c'},
+      {val:'70 %',       label:'Kommunen strukturell im Defizit',   src:'KGSt / BMF 2026',              color:'#c2410c'},
+      {val:'44 Mrd. €',  label:'Kassenkreditbestand gesamt',        src:'Statistisches Bundesamt 2024', color:'#c2410c'},
+      {val:'+44 %',      label:'HzE-Kostensteigerung seit 2013',    src:'Ø deutsche Großstädte',        color:'#1e40af'},
+      {val:'28,4 Mrd. €',label:'Asyl- & Integrationskosten 2025',  src:'Bund / Länder / Kommunen',     color:'#92400e'},
+      {val:'3,5 %',      label:'Ø Zinssatz Kassenkredite 2025',     src:'Deutsche Bundesbank',          color:'#6b21a8'},
+      {val:'25.000 €',   label:'Direktvergabe-Schwelle Lieferungen',src:'UVgO',                         color:'#065f46'},
+      {val:'221.000 €',  label:'EU-Schwellenwert Dienstleistungen', src:'EU-Vergaberecht 2026',         color:'#065f46'},
     ].map(k => (
-      <div style={`background:#fff;border:1.5px solid #e2e8f0;border-top:3px solid ${k.color};border-radius:6px;padding:16px;`}>
-        <div style={`font-size:22px;font-weight:800;color:${k.color};line-height:1;margin-bottom:6px;`}>{k.val}</div>
-        <div style="font-size:11px;font-weight:600;color:#1a2744;margin-bottom:4px;line-height:1.4;">{k.label}</div>
-        <div style="font-size:9px;color:#9ca3af;">{k.src}</div>
+      <div class="kpi-card" style={`border-top: 3px solid ${k.color};`}>
+        <div class="kpi-val" style={`color:${k.color};`}>{k.val}</div>
+        <div class="kpi-info">
+          <div class="kpi-label">{k.label}</div>
+          <div class="kpi-src">{k.src}</div>
+        </div>
       </div>
     ))}
   </div>
 
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:6px;border-bottom:3px solid #1a2744;">
-    <span style="font-size:16px;font-weight:800;color:#1a2744;">Gewerbesteuer-Hebesätze 2025 — Auswahl</span>
-    <span style="flex:1;height:1px;background:#e2e8f0;"></span>
+  <div class="daten-section-header">
+    <span class="daten-section-title">Gewerbesteuer-Hebesätze 2025 — Auswahl</span>
+    <span class="daten-section-line"></span>
   </div>
 
-  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;margin-bottom:40px;">
-    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <div class="table-wrap">
+    <table class="daten-table">
       <thead>
-        <tr style="background:#1a2744;color:#fff;">
-          <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;">Stadt</th>
-          <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.05em;">Bundesland</th>
-          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Hebesatz 2025</th>
-          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Ø Region</th>
-          <th style="padding:10px 14px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.05em;">Differenz</th>
+        <tr>
+          <th>Stadt</th>
+          <th class="col-bl">Bundesland</th>
+          <th>Hebesatz 2025</th>
+          <th>Ø Region</th>
+          <th>Differenz</th>
         </tr>
       </thead>
       <tbody>
         {[
-          ['Dortmund','NRW','520 %','480 %','+40','#065f46'],
-          ['Duisburg','NRW','520 %','480 %','+40','#065f46'],
-          ['Essen','NRW','480 %','480 %','0','#374151'],
-          ['Köln','NRW','475 %','480 %','−5','#374151'],
-          ['Hamburg','Hamburg','470 %','480 %','−10','#92400e'],
-          ['München','Bayern','490 %','510 %','−20','#c2410c'],
-          ['Düsseldorf','NRW','440 %','480 %','−40','#c2410c'],
-          ['Mannheim','BW','420 %','450 %','−30','#c2410c'],
-        ].map(([stadt,bl,hs,avg,diff,dc],i) => (
-          <tr style={`border-bottom:1px solid #f1f5f9;${i%2===1?'background:#f8fafc;':''}`}>
-            <td style="padding:9px 14px;font-weight:600;color:#1a2744;">{stadt}</td>
-            <td style="padding:9px 14px;color:#6b7280;">{bl}</td>
-            <td style="padding:9px 14px;text-align:right;font-weight:700;">{hs}</td>
-            <td style="padding:9px 14px;text-align:right;color:#6b7280;">{avg}</td>
-            <td style={`padding:9px 14px;text-align:right;font-weight:700;color:${dc};`}>{diff}</td>
+          ['Dortmund', 'NRW',     '520 %', '480 %', '+40',  '#065f46'],
+          ['Duisburg', 'NRW',     '520 %', '480 %', '+40',  '#065f46'],
+          ['Essen',    'NRW',     '480 %', '480 %', '0',    '#374151'],
+          ['Köln',     'NRW',     '475 %', '480 %', '−5',   '#374151'],
+          ['Hamburg',  'Hamburg', '470 %', '480 %', '−10',  '#92400e'],
+          ['München',  'Bayern',  '490 %', '510 %', '−20',  '#c2410c'],
+          ['Düsseldorf','NRW',    '440 %', '480 %', '−40',  '#c2410c'],
+          ['Mannheim', 'BW',      '420 %', '450 %', '−30',  '#c2410c'],
+        ].map(([stadt, bl, hs, avg, diff, dc]) => (
+          <tr>
+            <td class="td-stadt">{stadt}</td>
+            <td class="td-bl col-bl">{bl}</td>
+            <td class="td-hs">{hs}</td>
+            <td class="td-avg">{avg}</td>
+            <td class="td-diff" style={`color:${dc};`}>{diff}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 
-  <p style="font-size:11px;color:#9ca3af;margin-top:-32px;margin-bottom:40px;">Quellen: Gemeindefinanzbericht 2025 · Destatis · eigene Recherche. Regionaler Durchschnitt = vergleichbare Städte nach Einwohnerzahl und Wirtschaftsstruktur.</p>
+  <p class="daten-footnote">Quellen: Gemeindefinanzbericht 2025 · Destatis · eigene Recherche. Regionaler Durchschnitt = vergleichbare Städte nach Einwohnerzahl und Wirtschaftsstruktur.</p>
 
 </main>
 <Footer />
