@@ -47,6 +47,17 @@ function getSlug(entry: any) {
 ---
 <Base title={label}>
 <Header />
+<style>
+  .res-hero-inner{max-width:1200px;margin:0 auto;padding:0 32px}
+  .res-main{max-width:1200px;margin:0 auto;padding:36px 32px}
+  .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:1024px){.res-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:768px){
+    .res-hero-inner,.res-main{padding:0 16px}
+    .res-main{padding-top:24px}
+    .res-grid{grid-template-columns:1fr}
+  }
+</style>
 <div style={`background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:40px 0;`}>
   <div style="max-width:1200px;margin:0 auto;padding:0 32px;">
     <div style={`font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${color};margin-bottom:10px;`}>Ressort</div>
@@ -58,7 +69,7 @@ function getSlug(entry: any) {
   {entries.length === 0 ? (
     <p style="color:#6b7280;font-size:14px;">Bald verfügbar — erste Artikel in Vorbereitung.</p>
   ) : (
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="res-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
       {entries.map((a: any) => (
         <div style="border-top:2.5px solid #1a2744;padding-top:12px;">
           {a.data.tag && <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:6px;">{a.data.tag}</span>}

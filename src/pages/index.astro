@@ -29,10 +29,36 @@ const catLabel: Record<string,string> = {
 ---
 <Base title="Der Kämmerer – Das Briefing für kommunale Entscheider">
 <Header />
-
+<style>
+  .hero-grid{display:grid;grid-template-columns:1fr 320px;gap:44px;max-width:1200px;margin:0 auto;padding:0 32px}
+  .kpi-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .kpi-band-item{padding:0 20px 0 0;margin:0 20px 0 0}
+  .kpi-band-item:last-child{border-right:none}
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+  .nl-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1200px;margin:0 auto;padding:0 32px}
+  .nl-form{display:flex;gap:8px}
+  .main-inner{max-width:1200px;margin:0 auto;padding:36px 32px}
+  @media(max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;gap:24px;padding:0 20px}
+    .hero-sidebar{border-left:none;border-top:1px solid #1e3a5f;padding-left:0;padding-top:20px}
+    .kpi-band-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .kpi-band-item{padding:0;margin:0;border-right:none!important}
+    .art-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:768px){
+    .hero-grid{padding:0 16px}
+    .hero-sidebar{display:none}
+    .kpi-band-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .art-grid{grid-template-columns:1fr}
+    .nl-inner{flex-direction:column;align-items:flex-start;padding:0 16px}
+    .nl-form{width:100%}
+    .nl-form input{flex:1;min-width:0}
+    .main-inner{padding:24px 16px}
+  }
+</style>
 <!-- Hero -->
 <section style="background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%);padding:48px 0;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 320px;gap:44px;">
+  <div class="hero-grid">
     {featured && (
     <div>
       <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:12px;">
@@ -48,7 +74,7 @@ const catLabel: Record<string,string> = {
       </a>
     </div>
     )}
-    <div style="border-left:1px solid #1e3a5f;padding-left:28px;">
+    <div class="hero-sidebar" style="border-left:1px solid #1e3a5f;padding-left:28px;">
       <div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1e3a5f;">
         Neueste Artikel
       </div>
@@ -73,14 +99,14 @@ const catLabel: Record<string,string> = {
     <div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3b82f6;margin-bottom:14px;">
       Kommunale Haushaltslage Deutschland 2026 · Quellen: Statistisches Bundesamt · KfW · Bertelsmann Stiftung
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+    <div class="kpi-band-grid">
       {[
         {val:'166 Mrd.',desc:'Kommunaler Investitionsstau',src:'KfW-Kommunalpanel 2025'},
         {val:'70 %',desc:'Kommunen strukturell im Defizit',src:'KGSt / BMF 2026'},
         {val:'+44 %',desc:'HzE-Kostensteigerung seit 2013',src:'Ø deutsche Großstädte'},
         {val:'28,4 Mrd.',desc:'Asyl- und Integrationskosten 2025',src:'Bund / Länder / Kommunen'},
       ].map((k,i) => (
-      <div style={`padding:0 20px 0 0;margin:0 20px 0 0;${i<3?'border-right:1px solid #1e3a5f;':''}`}>
+      <div class="kpi-band-item" style={i<3?'border-right:1px solid #1e3a5f;':''}>
         <div style="font-size:26px;font-weight:800;color:#fff;line-height:1;margin-bottom:4px;">{k.val}</div>
         <div style="font-size:11px;color:#93c5fd;font-weight:500;line-height:1.4;">{k.desc}</div>
         <div style="font-size:9px;color:#374151;margin-top:2px;">{k.src}</div>
@@ -101,7 +127,7 @@ const catLabel: Record<string,string> = {
       <span style="flex:1;height:1px;background:#e2e8f0;"></span>
       <span style="font-size:9px;font-weight:600;color:#6b7280;letter-spacing:.08em;text-transform:uppercase;">{alle.length} Artikel</span>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;">
+    <div class="art-grid">
       {alle.slice(0,6).map(a => (
       <div>
         <span style={`font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${catColor[a.collection]};display:block;margin-bottom:6px;`}>
@@ -120,8 +146,8 @@ const catLabel: Record<string,string> = {
   )}
 
   <!-- Newsletter -->
-  <div id="newsletter" style="background:#fff;border:1px solid #e2e8f0;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:0;">
-    <div>
+  <div id="newsletter" style="background:#fff;border:1px solid #e2e8f0;padding:32px;margin-bottom:0;">
+    <div class="nl-inner">
       <h3 style="font-size:18px;font-weight:800;color:#1a2744;margin-bottom:4px;">Das wöchentliche Briefing</h3>
       <p style="font-size:12px;color:#374151;">Jeden Montag: die wichtigsten Entwicklungen für kommunale Entscheider. Kostenlos.</p>
     </div>

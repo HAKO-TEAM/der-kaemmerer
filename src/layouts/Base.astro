@@ -30,6 +30,14 @@ const { title, description = 'Das unabhängige Briefing für Kämmerer, Oberbür
   body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
   a{text-decoration:none;color:inherit}
   img{max-width:100%;height:auto}
+  /* ── Globale Responsive Utilities ── */
+  @media(max-width:768px){
+    .hide-mobile{display:none!important}
+    .px-page{padding-left:16px!important;padding-right:16px!important}
+  }
+  @media(min-width:769px) and (max-width:1024px){
+    .hide-tablet{display:none!important}
+  }
 </style>
 </head>
 <body>

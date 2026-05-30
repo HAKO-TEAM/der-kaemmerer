@@ -13,7 +13,14 @@
   .fb{border-top:1px solid #1e3a5f;padding-top:16px;display:flex;justify-content:space-between}
   .fl2{font-size:10px;color:#374151}
   .fl2 a{color:#374151}
-  @media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}
+  @media(max-width:1024px){.fg{grid-template-columns:1fr 1fr}}
+  @media(max-width:768px){
+    .fi{padding:0 16px}
+    .fg{grid-template-columns:1fr;gap:24px}
+    .fl{font-size:18px}
+    .fb{flex-direction:column;gap:8px}
+    footer{padding:32px 0 16px}
+  }
 </style>
 <footer>
   <div class="fi">
