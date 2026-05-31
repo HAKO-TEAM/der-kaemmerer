@@ -8,6 +8,7 @@ const nav = [
   { href: '/recht',        label: 'Recht & Vergabe' },
   { href: '/analyse',      label: 'Analyse' },
   { href: '/sozialkosten', label: 'Sozialkosten' },
+  { href: '/stellenanzeigen', label: 'Stellenanzeigen' },
 ];
 const currentPath = Astro.url.pathname;
 ---
@@ -31,7 +32,7 @@ const currentPath = Astro.url.pathname;
 
   /* ── Desktop Nav ── */
   nav{display:flex;gap:0}
-  nav a{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#374151;padding:9px 13px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
+  nav a{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#374151;padding:9px 10px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
   nav a:hover,nav a.active{color:#3b82f6;border-color:#3b82f6}
 
   /* ── Hamburger Button (nur Mobile) ── */

@@ -1,0 +1,761 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Stellenanzeigen"
+  description="Erreichen Sie Kämmerer, Landräte und kommunale Führungskräfte gezielt – mit einer Stellenanzeige auf derkaemmerer.de."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dk-navy:  #1a2744;
+  --dk-navy2: #0f3460;
+  --dk-cream: #f8fafc;
+  --dk-warm:  #f1f5f9;
+  --dk-ink:   #1a1a2e;
+  --dk-muted: #374151;
+  --dk-light: #9ca3af;
+  --dk-border:#e2e8f0;
+  --dk-blue:  #3b82f6;
+  --dk-blue2: #2563eb;
+  --dk-white: #ffffff;
+}
+
+/* ─────────────────── LAYOUT ─────────────────── */
+.sk-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ─────────────────── HERO ─────────────────── */
+.sk-hero {
+  background: var(--dk-navy);
+  padding: 80px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.sk-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 75% 0%,   rgba(59,130,246,.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 25% 100%, rgba(59,130,246,.07) 0%, transparent 50%);
+}
+.sk-hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.sk-hero-inner {
+  position: relative; z-index: 1;
+  text-align: center;
+  padding-bottom: 64px;
+}
+.sk-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: #93c5fd; font-weight: 600; margin-bottom: 28px;
+}
+.sk-eyebrow::before, .sk-eyebrow::after {
+  content: ''; width: 36px; height: 1px;
+  background: #93c5fd; opacity: .45;
+}
+.sk-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 700; color: #fff;
+  line-height: 1.08; letter-spacing: -.5px;
+  margin-bottom: 20px;
+}
+.sk-hero h1 em { font-style: italic; color: #93c5fd; }
+.sk-hero-sub {
+  font-size: 17px; color: rgba(255,255,255,.62);
+  max-width: 540px; margin: 0 auto 48px;
+  line-height: 1.75; font-weight: 300;
+}
+.sk-hero-stats {
+  display: flex; justify-content: center; gap: 0;
+  padding: 36px 0 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  flex-wrap: wrap;
+}
+.sk-stat {
+  padding: 0 40px 36px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.sk-stat:last-child { border-right: none; }
+.sk-stat .num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px; color: #93c5fd;
+  font-weight: 700; line-height: 1;
+  display: block; margin-bottom: 6px;
+}
+.sk-stat .lbl {
+  font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,.38);
+}
+
+/* ─────────────────── INTRO ─────────────────── */
+.sk-intro {
+  padding: 72px 0 48px;
+  text-align: center;
+  background: var(--dk-white);
+}
+.sk-section-label {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--dk-blue); font-weight: 700; margin-bottom: 10px;
+}
+.sk-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px; font-weight: 600;
+  color: var(--dk-navy); margin-bottom: 32px;
+  line-height: 1.25;
+}
+.sk-intro h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px; font-weight: 700;
+  color: var(--dk-navy); margin-bottom: 16px;
+  line-height: 1.2;
+}
+.sk-intro p {
+  font-size: 16px; color: var(--dk-muted);
+  max-width: 620px; margin: 0 auto;
+  line-height: 1.85;
+}
+
+/* ─────────────────── PAKETE ─────────────────── */
+.sk-pakete { padding: 0 0 80px; background: var(--dk-white); }
+
+.sk-pakete-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sk-paket {
+  background: var(--dk-white);
+  border: 1.5px solid var(--dk-border);
+  border-radius: 6px;
+  padding: 40px 32px 36px;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+  display: flex; flex-direction: column;
+}
+.sk-paket:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(26,39,68,.12);
+  border-color: #bfdbfe;
+}
+.sk-paket.featured {
+  background: var(--dk-navy);
+  border-color: var(--dk-navy);
+}
+.sk-paket.featured:hover { border-color: #3b82f6; }
+
+.sk-paket-badge {
+  position: absolute; top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--dk-blue); color: #fff;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 5px 18px; border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(59,130,246,.35);
+}
+.sk-paket-name {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--dk-light); margin-bottom: 10px; font-weight: 700;
+}
+.sk-paket.featured .sk-paket-name { color: rgba(255,255,255,.45); }
+
+.sk-paket-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--dk-navy); margin-bottom: 4px; line-height: 1.2;
+}
+.sk-paket.featured .sk-paket-title { color: var(--dk-white); }
+
+.sk-paket-price {
+  display: flex; align-items: baseline; gap: 4px;
+  margin: 22px 0 6px;
+}
+.sk-paket-price .amount {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px; font-weight: 700;
+  color: var(--dk-navy); line-height: 1;
+}
+.sk-paket.featured .sk-paket-price .amount { color: #93c5fd; }
+.sk-paket-price .currency {
+  font-size: 22px; color: var(--dk-light);
+  align-self: flex-start; margin-top: 10px;
+}
+.sk-paket.featured .sk-paket-price .currency { color: rgba(255,255,255,.45); }
+
+.sk-paket-duration {
+  font-size: 12px; color: var(--dk-muted);
+  margin-bottom: 24px; padding-bottom: 24px;
+  border-bottom: 1px solid var(--dk-border);
+}
+.sk-paket.featured .sk-paket-duration {
+  color: rgba(255,255,255,.38);
+  border-bottom-color: rgba(255,255,255,.1);
+}
+
+.sk-paket-features {
+  list-style: none; margin-bottom: 32px; flex: 1;
+}
+.sk-paket-features li {
+  font-size: 13.5px; color: var(--dk-muted);
+  padding: 9px 0; display: flex; align-items: flex-start;
+  gap: 10px; line-height: 1.5;
+  border-bottom: 1px solid rgba(226,232,240,.6);
+}
+.sk-paket-features li:last-child { border-bottom: none; }
+.sk-paket.featured .sk-paket-features li {
+  color: rgba(255,255,255,.72);
+  border-bottom-color: rgba(255,255,255,.07);
+}
+.sk-paket-features li::before {
+  content: '✓'; color: var(--dk-blue);
+  font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  font-size: 13px;
+}
+.sk-paket.featured .sk-paket-features li::before { color: #93c5fd; }
+.sk-paket-features li.extra::before { content: '★'; }
+
+.sk-paket-cta {
+  display: flex; align-items: center; justify-content: center;
+  padding: 15px 24px;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--dk-navy); color: var(--dk-navy);
+  background: transparent; cursor: pointer;
+  border-radius: 4px; transition: all .2s;
+  margin-top: auto; width: 100%; box-sizing: border-box;
+}
+.sk-paket-cta:hover { background: var(--dk-navy); color: #fff; }
+.sk-paket.featured .sk-paket-cta {
+  background: var(--dk-blue); border-color: var(--dk-blue); color: #fff;
+}
+.sk-paket.featured .sk-paket-cta:hover {
+  background: var(--dk-blue2); border-color: var(--dk-blue2);
+}
+
+/* ─────────────────── VORSCHAU ─────────────────── */
+.sk-beispiel {
+  padding: 80px 0;
+  background: var(--dk-warm);
+}
+.sk-anzeige-preview {
+  background: var(--dk-white);
+  border: 1.5px solid var(--dk-border);
+  border-radius: 8px; overflow: hidden;
+  max-width: 760px;
+  box-shadow: 0 8px 32px rgba(26,39,68,.07);
+}
+.sk-anzeige-header {
+  background: var(--dk-navy); padding: 24px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+}
+.sk-anzeige-logo-area { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.sk-anzeige-logo-box {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: var(--dk-blue); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px; font-weight: 700; color: #fff;
+}
+.sk-anzeige-org { min-width: 0; }
+.sk-anzeige-org .name { color: #fff; font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sk-anzeige-org .type { font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: 1px; text-transform: uppercase; }
+.sk-anzeige-tag {
+  background: var(--dk-blue); color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; padding: 5px 14px; border-radius: 3px;
+  white-space: nowrap; flex-shrink: 0;
+}
+.sk-anzeige-body { padding: 32px; }
+.sk-anzeige-jobtitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--dk-navy); margin-bottom: 12px; line-height: 1.2;
+}
+.sk-anzeige-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.sk-anzeige-meta-item {
+  font-size: 12px; color: var(--dk-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.sk-anzeige-meta-item .dot {
+  width: 6px; height: 6px;
+  background: var(--dk-blue); border-radius: 50%; flex-shrink: 0;
+}
+.sk-anzeige-desc {
+  font-size: 13.5px; color: var(--dk-muted);
+  line-height: 1.8; margin-bottom: 20px;
+}
+.sk-anzeige-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.sk-pill {
+  background: var(--dk-warm); border: 1px solid var(--dk-border);
+  color: var(--dk-muted); font-size: 11px;
+  padding: 5px 13px; border-radius: 20px; font-weight: 500;
+}
+.sk-anzeige-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 20px; border-top: 1px solid var(--dk-border);
+  flex-wrap: wrap; gap: 12px;
+}
+.sk-anzeige-apply {
+  background: var(--dk-navy); color: #fff;
+  padding: 10px 24px; font-size: 12px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer; border: none; border-radius: 4px;
+}
+.sk-anzeige-deadline { font-size: 11px; color: var(--dk-light); }
+
+/* ─────────────────── REICHWEITE ─────────────────── */
+.sk-reichweite { padding: 80px 0; background: var(--dk-white); }
+.sk-reichweite-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px; background: var(--dk-border);
+  border: 1.5px solid var(--dk-border);
+  border-radius: 6px; overflow: hidden;
+  margin-bottom: 0;
+}
+.sk-rw-card {
+  background: var(--dk-white); padding: 32px 24px; text-align: center;
+}
+.sk-rw-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px; font-weight: 700;
+  color: var(--dk-navy); line-height: 1; margin-bottom: 8px;
+}
+.sk-rw-label {
+  font-size: 11px; color: var(--dk-muted);
+  line-height: 1.5; text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* ─────────────────── ADDONS ─────────────────── */
+.sk-addons { padding: 0 0 80px; background: var(--dk-white); }
+.sk-addon-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.sk-addon-table {
+  width: 100%; border-collapse: collapse; font-size: 13.5px;
+  min-width: 560px;
+}
+.sk-addon-table thead tr { background: var(--dk-navy); color: #fff; }
+.sk-addon-table thead th {
+  padding: 14px 20px; text-align: left;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+}
+.sk-addon-table tbody tr { border-bottom: 1px solid var(--dk-border); transition: background .15s; }
+.sk-addon-table tbody tr:hover { background: var(--dk-warm); }
+.sk-addon-table tbody tr:last-child { border-bottom: none; }
+.sk-addon-table td { padding: 15px 20px; vertical-align: middle; color: var(--dk-muted); }
+.sk-addon-table td:last-child { font-weight: 700; color: var(--dk-navy); text-align: right; white-space: nowrap; }
+.sk-addon-table td:first-child { font-weight: 600; color: var(--dk-navy); white-space: nowrap; }
+
+/* ─────────────────── FAQ ─────────────────── */
+.sk-faq { background: var(--dk-navy); padding: 80px 0; }
+.sk-faq-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px 48px; margin-top: 40px;
+}
+.sk-faq-item h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px; color: #93c5fd;
+  margin-bottom: 10px; font-weight: 600; line-height: 1.3;
+}
+.sk-faq-item p { font-size: 13.5px; color: rgba(255,255,255,.6); line-height: 1.75; }
+
+/* ─────────────────── CTA ─────────────────── */
+.sk-cta-final {
+  padding: 88px 0; text-align: center;
+  background: #eff6ff;
+  border-top: 3px solid var(--dk-blue);
+}
+.sk-cta-final h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px; font-weight: 700;
+  color: var(--dk-navy); margin-bottom: 16px; line-height: 1.15;
+}
+.sk-cta-final > .sk-container > p {
+  font-size: 16px; color: var(--dk-muted);
+  margin-bottom: 36px; max-width: 500px;
+  margin-left: auto; margin-right: auto; line-height: 1.75;
+}
+.sk-cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.sk-btn-primary {
+  background: var(--dk-navy); color: #fff;
+  padding: 17px 40px; font-size: 13px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; display: inline-block;
+  border: 2px solid var(--dk-navy); border-radius: 4px;
+  transition: background .2s, border-color .2s;
+}
+.sk-btn-primary:hover { background: var(--dk-navy2); border-color: var(--dk-navy2); }
+.sk-btn-secondary {
+  background: transparent; color: var(--dk-navy);
+  padding: 17px 40px; font-size: 13px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; display: inline-block;
+  border: 2px solid var(--dk-navy); border-radius: 4px;
+  transition: all .2s;
+}
+.sk-btn-secondary:hover { background: var(--dk-navy); color: #fff; }
+
+/* ─────────────────── ANIMATION ─────────────────── */
+@keyframes skFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.sk-paket { animation: skFadeUp .5s ease both; }
+.sk-paket:nth-child(1) { animation-delay: .1s; }
+.sk-paket:nth-child(2) { animation-delay: .2s; }
+.sk-paket:nth-child(3) { animation-delay: .3s; }
+
+/* ─────────────────── TABLET (≤ 900px) ─────────────────── */
+@media (max-width: 900px) {
+  .sk-container { padding: 0 32px; }
+
+  /* Hero */
+  .sk-hero { padding: 60px 0 0; }
+  .sk-stat { padding: 0 28px 32px; }
+
+  /* Pakete → 2 Spalten, Exklusiv zentriert */
+  .sk-pakete-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .sk-paket:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px; margin: 0 auto; width: 100%;
+  }
+
+  /* Reichweite → 2x2 */
+  .sk-reichweite-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* FAQ → 1 Spalte */
+  .sk-faq-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  /* Vorschau */
+  .sk-anzeige-body { padding: 24px; }
+}
+
+/* ─────────────────── MOBILE (≤ 600px) ─────────────────── */
+@media (max-width: 600px) {
+  .sk-container { padding: 0 20px; }
+
+  /* Hero */
+  .sk-hero { padding: 48px 0 0; }
+  .sk-hero h1 { letter-spacing: 0; }
+  .sk-hero-sub { font-size: 15px; margin-bottom: 36px; }
+  .sk-hero-stats { gap: 0; }
+  .sk-stat {
+    flex: 0 0 50%; padding: 20px 0 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    text-align: center;
+  }
+  .sk-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.07); }
+  .sk-stat:nth-last-child(-n+2) { border-bottom: none; }
+  .sk-stat .num { font-size: 28px; }
+
+  /* Intro */
+  .sk-intro { padding: 48px 0 32px; }
+  .sk-intro h2 { font-size: 26px; }
+  .sk-intro p { font-size: 14px; }
+
+  /* Pakete → 1 Spalte */
+  .sk-pakete { padding: 0 0 56px; }
+  .sk-pakete-grid { grid-template-columns: 1fr; gap: 20px; }
+  .sk-paket:last-child { grid-column: auto; max-width: none; }
+  .sk-paket { padding: 32px 24px 28px; }
+  .sk-paket-price .amount { font-size: 44px; }
+
+  /* Vorschau */
+  .sk-beispiel { padding: 56px 0; }
+  .sk-anzeige-header { padding: 18px 20px; flex-wrap: wrap; gap: 12px; }
+  .sk-anzeige-body { padding: 20px; }
+  .sk-anzeige-jobtitle { font-size: 20px; }
+  .sk-anzeige-meta { gap: 10px; }
+  .sk-anzeige-meta-item { font-size: 11px; }
+  .sk-anzeige-footer { flex-direction: column; align-items: flex-start; }
+
+  /* Reichweite */
+  .sk-reichweite { padding: 56px 0; }
+  .sk-reichweite-grid { grid-template-columns: repeat(2, 1fr); }
+  .sk-rw-num { font-size: 30px; }
+
+  /* Addons */
+  .sk-addons { padding: 0 0 56px; }
+  .sk-section-title { font-size: 24px; }
+
+  /* FAQ */
+  .sk-faq { padding: 56px 0; }
+  .sk-faq-item h4 { font-size: 16px; }
+
+  /* CTA */
+  .sk-cta-final { padding: 60px 0; }
+  .sk-cta-final h2 { font-size: 28px; }
+  .sk-btn-primary, .sk-btn-secondary { width: 100%; text-align: center; padding: 16px 24px; }
+  .sk-cta-buttons { flex-direction: column; }
+}
+</style>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="sk-hero">
+  <div class="sk-hero-grid"></div>
+  <div class="sk-container">
+    <div class="sk-hero-inner">
+      <div class="sk-eyebrow">Mediadaten 2026</div>
+      <h1>Stellenanzeigen für<br><em>kommunale Entscheider</em></h1>
+      <p class="sk-hero-sub">derkaemmerer.de erreicht Kämmerer, Landräte und Jugendamtsleitungen in ganz Deutschland – dort wo Ihre Stelle hingehört.</p>
+      <div class="sk-hero-stats">
+        <div class="sk-stat"><span class="num">294</span><span class="lbl">Landkreise</span></div>
+        <div class="sk-stat"><span class="num">11.000+</span><span class="lbl">Kommunen DE</span></div>
+        <div class="sk-stat"><span class="num">~8.500</span><span class="lbl">Kämmerer & Finanzfachkräfte</span></div>
+        <div class="sk-stat"><span class="num">Ø 14</span><span class="lbl">Tage bis Bewerbung</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ INTRO ══════════════ -->
+<div class="sk-intro">
+  <div class="sk-container">
+    <div class="sk-section-label">Warum derkaemmerer.de</div>
+    <h2>Die Fachplattform für kommunale Finanzen</h2>
+    <p>Kommunale Fachkräfte sind keine normalen Bewerber – sie lesen Fachmedien, nicht allgemeine Jobbörsen. Mit einer Anzeige auf derkaemmerer.de erreichen Sie gezielt Kämmerer, Haushaltsfachkräfte und kommunale Führungskräfte in der aktiven Jobsuche.</p>
+  </div>
+</div>
+
+<!-- ══════════════ PAKETE ══════════════ -->
+<div class="sk-pakete">
+  <div class="sk-container">
+    <div class="sk-pakete-grid">
+
+      <!-- BASIS -->
+      <div class="sk-paket">
+        <div class="sk-paket-name">Basis</div>
+        <div class="sk-paket-title">Standardanzeige</div>
+        <div class="sk-paket-price"><span class="currency">€</span><span class="amount">290</span></div>
+        <div class="sk-paket-duration">30 Tage Laufzeit · einmalig</div>
+        <ul class="sk-paket-features">
+          <li>Vollständige Stellenanzeige mit Beschreibung</li>
+          <li>Logo Ihrer Behörde / Organisation</li>
+          <li>Direktlink zur Bewerbung</li>
+          <li>Mobile-optimierte Darstellung</li>
+          <li>Suchmaschinen-Indexierung (Google)</li>
+          <li>Kategorie: Finanzen / Kämmerei / Jugendamt</li>
+        </ul>
+        <a href="mailto:anzeigen@derkaemmerer.de?subject=Basis-Paket Stellenanzeige" class="sk-paket-cta">Jetzt buchen</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="sk-paket featured">
+        <div class="sk-paket-badge">Empfohlen</div>
+        <div class="sk-paket-name">Premium</div>
+        <div class="sk-paket-title">Premiumanzeige</div>
+        <div class="sk-paket-price"><span class="currency">€</span><span class="amount">490</span></div>
+        <div class="sk-paket-duration">45 Tage Laufzeit · einmalig</div>
+        <ul class="sk-paket-features">
+          <li>Alles aus Basis-Paket</li>
+          <li>Hervorgehobene Platzierung (Top der Kategorie)</li>
+          <li>Farblich abgesetztes Layout</li>
+          <li>1× Erwähnung im wöchentlichen Newsletter</li>
+          <li>Social-Media-Post auf LinkedIn (2.500+ Follower)</li>
+          <li class="extra">Statistik-Dashboard: Klicks, Impressionen</li>
+          <li class="extra">Verlängerungsoption zum halben Preis</li>
+        </ul>
+        <a href="mailto:anzeigen@derkaemmerer.de?subject=Premium-Paket Stellenanzeige" class="sk-paket-cta">Jetzt buchen</a>
+      </div>
+
+      <!-- EXKLUSIV -->
+      <div class="sk-paket">
+        <div class="sk-paket-name">Exklusiv</div>
+        <div class="sk-paket-title">Kampagnenpaket</div>
+        <div class="sk-paket-price"><span class="currency">€</span><span class="amount">990</span></div>
+        <div class="sk-paket-duration">60 Tage · inkl. redaktioneller Begleitung</div>
+        <ul class="sk-paket-features">
+          <li>Alles aus Premium-Paket</li>
+          <li>Redaktioneller Arbeitgeber-Beitrag (500 Wörter)</li>
+          <li>Startseiten-Banner (7 Tage)</li>
+          <li>3× Newsletter-Erwähnung</li>
+          <li>3× LinkedIn-Post</li>
+          <li class="extra">Persönliche Beratung zur Anzeigengestaltung</li>
+          <li class="extra">Bewerbermanagement-Support auf Anfrage</li>
+        </ul>
+        <a href="mailto:anzeigen@derkaemmerer.de?subject=Kampagnenpaket Stellenanzeige" class="sk-paket-cta">Jetzt buchen</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ VORSCHAU ══════════════ -->
+<div class="sk-beispiel">
+  <div class="sk-container">
+    <div class="sk-section-label">Vorschau</div>
+    <div class="sk-section-title">So sieht Ihre Anzeige aus</div>
+    <div class="sk-anzeige-preview">
+      <div class="sk-anzeige-header">
+        <div class="sk-anzeige-logo-area">
+          <div class="sk-anzeige-logo-box">LK</div>
+          <div class="sk-anzeige-org">
+            <div class="name">Landkreis Musterstadt</div>
+            <div class="type">Kämmerei · Baden-Württemberg</div>
+          </div>
+        </div>
+        <div class="sk-anzeige-tag">Premium</div>
+      </div>
+      <div class="sk-anzeige-body">
+        <div class="sk-anzeige-jobtitle">Leiter/in Kämmerei (m/w/d)</div>
+        <div class="sk-anzeige-meta">
+          <div class="sk-anzeige-meta-item"><span class="dot"></span>Musterstadt, BW</div>
+          <div class="sk-anzeige-meta-item"><span class="dot"></span>Vollzeit · EG 14 TVöD</div>
+          <div class="sk-anzeige-meta-item"><span class="dot"></span>Ab sofort</div>
+          <div class="sk-anzeige-meta-item"><span class="dot"></span>Unbefristet</div>
+        </div>
+        <div class="sk-anzeige-desc">
+          Der Landkreis Musterstadt (142.000 Einwohner) sucht zum nächstmöglichen Zeitpunkt eine erfahrene Führungskraft für die Leitung der Kämmerei mit einem Haushaltsvolumen von 210 Mio. Euro. Sie verantworten die strategische Haushaltsplanung, das kommunale Finanzmanagement und die Steuerung der Jahresabschlüsse nach GemO BW.
+        </div>
+        <div class="sk-anzeige-pills">
+          <span class="sk-pill">Haushaltsrecht BW</span>
+          <span class="sk-pill">Doppik</span>
+          <span class="sk-pill">Führungserfahrung</span>
+          <span class="sk-pill">TVöD</span>
+          <span class="sk-pill">HzE-Kostensteuerung</span>
+        </div>
+        <div class="sk-anzeige-footer">
+          <button class="sk-anzeige-apply">Jetzt bewerben →</button>
+          <div class="sk-anzeige-deadline">Bewerbungsschluss: 30. Juni 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ REICHWEITE ══════════════ -->
+<div class="sk-reichweite">
+  <div class="sk-container">
+    <div class="sk-section-label">Ihre Reichweite</div>
+    <div class="sk-section-title">Wer liest derkaemmerer.de?</div>
+    <div class="sk-reichweite-grid">
+      <div class="sk-rw-card"><div class="sk-rw-num">62 %</div><div class="sk-rw-label">Kämmerer &amp; Haushaltsfachkräfte</div></div>
+      <div class="sk-rw-card"><div class="sk-rw-num">18 %</div><div class="sk-rw-label">Jugendamt &amp; Sozialverwaltung</div></div>
+      <div class="sk-rw-card"><div class="sk-rw-num">12 %</div><div class="sk-rw-label">Landräte &amp; Bürgermeister</div></div>
+      <div class="sk-rw-card"><div class="sk-rw-num">8 %</div><div class="sk-rw-label">Kommunale Berater &amp; Dienstleister</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ADDONS ══════════════ -->
+<div class="sk-addons">
+  <div class="sk-container">
+    <div class="sk-section-label">Zusatzleistungen</div>
+    <div class="sk-section-title">Optionale Erweiterungen</div>
+    <div class="sk-addon-wrap">
+      <table class="sk-addon-table">
+        <thead>
+          <tr><th>Leistung</th><th>Beschreibung</th><th>Preis</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Newsletter Solo-Mailing</td>
+            <td>Dedizierte E-Mail an alle Newsletter-Abonnenten nur für Ihre Stelle</td>
+            <td>390 €</td>
+          </tr>
+          <tr>
+            <td>LinkedIn Sponsored Post</td>
+            <td>Bezahlter Post auf dem derkaemmerer.de LinkedIn-Profil, 7 Tage</td>
+            <td>250 €</td>
+          </tr>
+          <tr>
+            <td>Anzeigenverlängerung</td>
+            <td>Laufzeitverlängerung um weitere 30 Tage</td>
+            <td>99 €</td>
+          </tr>
+          <tr>
+            <td>Arbeitgeber-Porträt</td>
+            <td>Redaktioneller Beitrag über Ihre Behörde / Organisation (800 Wörter)</td>
+            <td>450 €</td>
+          </tr>
+          <tr>
+            <td>Mehrfach-Kontingent 5er</td>
+            <td>5 Basis-Anzeigen im Jahres-Kontingent – flexibel abrufbar</td>
+            <td>990 € <small style="color:#9ca3af;font-weight:400">(statt 1.450 €)</small></td>
+          </tr>
+          <tr>
+            <td>Rahmenvertrag Jahrespaket</td>
+            <td>Unbegrenzte Basis-Anzeigen für 12 Monate, 1× Exklusiv inklusive</td>
+            <td>1.990 €/Jahr</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<div class="sk-faq">
+  <div class="sk-container">
+    <div class="sk-section-label" style="color:#93c5fd">Häufige Fragen</div>
+    <div class="sk-section-title" style="color:#fff">Alles was Sie wissen müssen</div>
+    <div class="sk-faq-grid">
+      <div class="sk-faq-item">
+        <h4>Wie schnell wird meine Anzeige geschaltet?</h4>
+        <p>Nach Eingang der Anzeige und Zahlung schalten wir innerhalb von 24 Stunden (Werktage). Auf Wunsch auch am selben Tag.</p>
+      </div>
+      <div class="sk-faq-item">
+        <h4>Welche Stellen passen auf derkaemmerer.de?</h4>
+        <p>Alle kommunalen und öffentlich-rechtlichen Stellen – insbesondere Kämmerei, Finanzen, Jugendamt, Sozialverwaltung, Haushalt und kommunale Führungspositionen.</p>
+      </div>
+      <div class="sk-faq-item">
+        <h4>Wie liefere ich meine Anzeige?</h4>
+        <p>Per E-Mail an anzeigen@derkaemmerer.de – einfach Stellenbeschreibung, Logo und Kontaktdaten schicken. Wir gestalten die Anzeige für Sie.</p>
+      </div>
+      <div class="sk-faq-item">
+        <h4>Kann ich die Anzeige nachträglich ändern?</h4>
+        <p>Ja, bis zu 2 Änderungen sind kostenfrei. Weitere Anpassungen werden pauschal mit 29 € berechnet.</p>
+      </div>
+      <div class="sk-faq-item">
+        <h4>Gibt es Rabatte für gemeinnützige Träger?</h4>
+        <p>Ja – gemeinnützige Organisationen, Wohlfahrtsverbände und kleine Kommunen unter 20.000 Einwohnern erhalten 20 % Rabatt auf alle Pakete.</p>
+      </div>
+      <div class="sk-faq-item">
+        <h4>Wie wird abgerechnet?</h4>
+        <p>Rechnung nach Schaltung, zahlbar innerhalb von 14 Tagen. SEPA-Lastschrift und Überweisung möglich. Für Jahrespakete auch Ratenzahlung.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CTA ══════════════ -->
+<div class="sk-cta-final">
+  <div class="sk-container">
+    <div class="sk-section-label">Jetzt starten</div>
+    <h2>Ihre Stelle. Ihre Zielgruppe.</h2>
+    <p>Schreiben Sie uns – wir beraten Sie kostenlos zur richtigen Anzeigenstrategie für Ihre kommunale Stelle.</p>
+    <div class="sk-cta-buttons">
+      <a href="mailto:anzeigen@derkaemmerer.de?subject=Anfrage Stellenanzeige" class="sk-btn-primary">Anzeige buchen</a>
+      <a href="mailto:anzeigen@derkaemmerer.de?subject=Beratung Stellenanzeige" class="sk-btn-secondary">Kostenlose Beratung</a>
+    </div>
+    <p style="margin-top:28px;font-size:12px;color:#6b7280">
+      Kontakt: anzeigen@derkaemmerer.de · Antwort innerhalb von 4 Stunden (Werktage)
+    </p>
+  </div>
+</div>
+
+<Footer />
+</Base>
