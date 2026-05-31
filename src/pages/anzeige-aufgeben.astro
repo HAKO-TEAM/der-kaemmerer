@@ -718,6 +718,9 @@ function selectPaket(value: string, card: HTMLElement) {
   document.querySelectorAll('.f-paket-card').forEach(c => c.classList.remove('selected'));
   card.classList.add('selected');
   selectedPaket = value;
+  // Radio-Input explizit setzen (nötig bei programmatischer Auswahl)
+  const radio = card.querySelector<HTMLInputElement>('input[type="radio"]');
+  if (radio) radio.checked = true;
   updateSummary();
 }
 
