@@ -1,0 +1,804 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// ── Formspree: Konto anlegen auf formspree.io, neue Form erstellen,
+//    dann die Form-ID hier eintragen (z.B. "xpzgkrqw")
+const FORMSPREE_ID = 'xpzgkrqw'; // ← HIER ersetzen
+---
+<Base
+  title="Stellenanzeige aufgeben"
+  description="Geben Sie Ihre kommunale Stellenanzeige direkt online auf – einfach, schnell, zielgerichtet."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --f-navy:  #1a2744;
+  --f-navy2: #0f3460;
+  --f-blue:  #3b82f6;
+  --f-blue2: #2563eb;
+  --f-warm:  #f1f5f9;
+  --f-border:#e2e8f0;
+  --f-muted: #374151;
+  --f-light: #6b7280;
+  --f-white: #ffffff;
+  --f-green: #065f46;
+  --f-green-lt: #d1fae5;
+  --f-red:   #dc2626;
+  --f-red-lt:#fee2e2;
+}
+
+.f-container { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+
+/* ── HERO ── */
+.f-hero {
+  background: linear-gradient(135deg, var(--f-navy) 0%, var(--f-navy2) 100%);
+  padding: 56px 0 48px;
+}
+.f-hero-label {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: #93c5fd; font-weight: 700; margin-bottom: 10px;
+}
+.f-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; margin-bottom: 12px;
+}
+.f-hero p { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 560px; }
+
+/* ── FORTSCHRITTSLEISTE ── */
+.f-progress {
+  background: var(--f-white);
+  border-bottom: 1px solid var(--f-border);
+  padding: 20px 0;
+  position: sticky; top: 0; z-index: 50;
+}
+.f-steps {
+  display: flex; align-items: center; gap: 0;
+  counter-reset: step;
+}
+.f-step {
+  display: flex; align-items: center; gap: 8px;
+  flex: 1; font-size: 11px; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--f-light);
+}
+.f-step.active { color: var(--f-blue); }
+.f-step.done   { color: var(--f-green); }
+.f-step-num {
+  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  background: var(--f-border); color: var(--f-light);
+}
+.f-step.active .f-step-num { background: var(--f-blue); color: #fff; }
+.f-step.done   .f-step-num { background: var(--f-green); color: #fff; }
+.f-step-line {
+  flex: 1; height: 2px; background: var(--f-border); margin: 0 8px;
+}
+.f-step.done + .f-step-line { background: var(--f-green); }
+
+/* ── HAUPTBEREICH ── */
+.f-main { padding: 48px 0 80px; background: var(--f-warm); }
+
+/* ── ABSCHNITTE ── */
+.f-section {
+  background: var(--f-white);
+  border: 1px solid var(--f-border);
+  border-radius: 8px; padding: 36px 40px;
+  margin-bottom: 24px;
+}
+.f-section-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 28px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--f-border);
+}
+.f-section-icon {
+  width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+  background: #eff6ff; display: flex; align-items: center;
+  justify-content: center; font-size: 18px;
+}
+.f-section-head h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px; font-weight: 700; color: var(--f-navy);
+  margin-bottom: 2px;
+}
+.f-section-head p { font-size: 13px; color: var(--f-light); }
+
+/* ── GRID ── */
+.f-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.f-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.f-col-full { grid-column: 1 / -1; }
+
+/* ── FELDER ── */
+.f-field { display: flex; flex-direction: column; gap: 6px; }
+.f-label {
+  font-size: 12px; font-weight: 700; color: var(--f-navy);
+  letter-spacing: .03em;
+}
+.f-label .req { color: var(--f-red); margin-left: 2px; }
+.f-label .hint { font-weight: 400; color: var(--f-light); font-size: 11px; margin-left: 6px; }
+
+.f-input, .f-select, .f-textarea {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--f-border);
+  border-radius: 5px; font-size: 14px;
+  color: var(--f-navy); background: var(--f-white);
+  transition: border-color .15s, box-shadow .15s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.f-input:focus, .f-select:focus, .f-textarea:focus {
+  outline: none;
+  border-color: var(--f-blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+.f-textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+.f-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%236b7280'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.f-char-count { font-size: 11px; color: var(--f-light); text-align: right; }
+
+/* ── PAKET-KARTEN ── */
+.f-paket-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.f-paket-card {
+  position: relative; border: 2px solid var(--f-border);
+  border-radius: 8px; padding: 20px; cursor: pointer;
+  transition: border-color .15s, box-shadow .15s;
+}
+.f-paket-card:hover { border-color: var(--f-blue); }
+.f-paket-card.selected {
+  border-color: var(--f-blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+  background: #eff6ff;
+}
+.f-paket-card input[type="radio"] { display: none; }
+.f-paket-name { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--f-light); margin-bottom: 4px; }
+.f-paket-title { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--f-navy); margin-bottom: 4px; }
+.f-paket-price { font-size: 24px; font-weight: 700; color: var(--f-navy); }
+.f-paket-price small { font-size: 13px; color: var(--f-light); font-weight: 400; }
+.f-paket-badge {
+  position: absolute; top: -10px; right: 12px;
+  background: var(--f-blue); color: #fff;
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
+}
+.f-paket-days { font-size: 11px; color: var(--f-light); margin-top: 4px; }
+.f-paket-check {
+  position: absolute; top: 12px; left: 12px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--f-blue); display: none;
+  align-items: center; justify-content: center;
+  color: #fff; font-size: 11px;
+}
+.f-paket-card.selected .f-paket-check { display: flex; }
+
+/* ── ADDONS ── */
+.f-addon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.f-addon {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 16px; border: 1.5px solid var(--f-border);
+  border-radius: 6px; cursor: pointer;
+  transition: border-color .15s;
+}
+.f-addon:hover { border-color: var(--f-blue); }
+.f-addon input[type="checkbox"] {
+  width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0;
+  accent-color: var(--f-blue); cursor: pointer;
+}
+.f-addon-name { font-size: 13px; font-weight: 600; color: var(--f-navy); }
+.f-addon-price { font-size: 12px; color: var(--f-blue); font-weight: 700; }
+.f-addon-desc { font-size: 11px; color: var(--f-light); margin-top: 2px; line-height: 1.4; }
+
+/* ── UPLOAD ── */
+.f-upload-area {
+  border: 2px dashed var(--f-border); border-radius: 8px;
+  padding: 32px; text-align: center; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.f-upload-area:hover { border-color: var(--f-blue); background: #eff6ff; }
+.f-upload-icon { font-size: 28px; margin-bottom: 8px; }
+.f-upload-text { font-size: 13px; color: var(--f-muted); }
+.f-upload-text strong { color: var(--f-blue); }
+.f-upload-hint { font-size: 11px; color: var(--f-light); margin-top: 4px; }
+.f-upload-area input { display: none; }
+
+/* ── ZUSAMMENFASSUNG ── */
+.f-summary {
+  background: #f0fdf4; border: 1.5px solid #bbf7d0;
+  border-radius: 8px; padding: 20px 24px; margin-bottom: 24px;
+}
+.f-summary-title { font-size: 13px; font-weight: 700; color: var(--f-green); margin-bottom: 12px; }
+.f-summary-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--f-muted); padding: 4px 0; }
+.f-summary-row.total { font-weight: 700; font-size: 15px; color: var(--f-navy); border-top: 1px solid #bbf7d0; padding-top: 10px; margin-top: 6px; }
+
+/* ── SUBMIT BUTTON ── */
+.f-submit-wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.f-submit {
+  background: var(--f-navy); color: #fff;
+  padding: 16px 48px; font-size: 13px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: none; border-radius: 5px; cursor: pointer;
+  transition: background .2s; display: flex; align-items: center; gap: 10px;
+}
+.f-submit:hover { background: var(--f-navy2); }
+.f-submit:disabled { opacity: .5; cursor: not-allowed; }
+.f-submit-note { font-size: 12px; color: var(--f-light); max-width: 340px; line-height: 1.6; }
+
+/* ── ERFOLG / FEHLER ── */
+.f-success {
+  background: var(--f-green-lt); border: 1.5px solid #6ee7b7;
+  border-radius: 8px; padding: 32px; text-align: center; display: none;
+}
+.f-success.visible { display: block; }
+.f-success h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--f-green); margin-bottom: 10px; }
+.f-success p { font-size: 14px; color: #065f46; line-height: 1.7; }
+.f-error-msg {
+  background: var(--f-red-lt); border: 1px solid #fca5a5;
+  border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--f-red);
+  display: none; margin-bottom: 16px;
+}
+.f-error-msg.visible { display: block; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .f-container { padding: 0 20px; }
+  .f-section { padding: 24px 20px; }
+  .f-grid, .f-grid-3, .f-paket-grid, .f-addon-grid { grid-template-columns: 1fr; }
+  .f-steps { gap: 0; }
+  .f-step span:not(.f-step-num) { display: none; }
+  .f-submit-wrap { flex-direction: column; align-items: stretch; }
+  .f-submit { justify-content: center; }
+}
+</style>
+
+<!-- HERO -->
+<div class="f-hero">
+  <div class="f-container">
+    <div class="f-hero-label">Buchungsportal</div>
+    <h1>Stellenanzeige aufgeben</h1>
+    <p>Füllen Sie das Formular aus — wir schalten Ihre Anzeige innerhalb von 24 Stunden (Werktage).</p>
+  </div>
+</div>
+
+<!-- FORTSCHRITT -->
+<div class="f-progress" id="progressBar">
+  <div class="f-container">
+    <div class="f-steps">
+      <div class="f-step active" id="step1">
+        <span class="f-step-num">1</span>
+        <span>Paket</span>
+      </div>
+      <div class="f-step-line"></div>
+      <div class="f-step" id="step2">
+        <span class="f-step-num">2</span>
+        <span>Stelle</span>
+      </div>
+      <div class="f-step-line"></div>
+      <div class="f-step" id="step3">
+        <span class="f-step-num">3</span>
+        <span>Anzeigentext</span>
+      </div>
+      <div class="f-step-line"></div>
+      <div class="f-step" id="step4">
+        <span class="f-step-num">4</span>
+        <span>Kontakt &amp; Abschluss</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULAR -->
+<div class="f-main">
+  <div class="f-container">
+
+    <div class="f-success" id="successMsg">
+      <div style="font-size:48px;margin-bottom:16px">✓</div>
+      <h3>Vielen Dank für Ihre Buchung!</h3>
+      <p>Wir haben Ihre Anzeige erhalten und melden uns innerhalb von 4 Stunden (Werktage) zur Bestätigung.<br>Ihre Anzeige wird nach Zahlungseingang innerhalb von 24 Stunden geschaltet.</p>
+      <a href="/stellenanzeigen" style="display:inline-block;margin-top:24px;padding:12px 32px;background:#1a2744;color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;">Zurück zur Übersicht</a>
+    </div>
+
+    <div class="f-error-msg" id="errorMsg">
+      Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an anzeigen@derkaemmerer.de.
+    </div>
+
+    <form id="anzeigenForm" action={`https://formspree.io/f/${FORMSPREE_ID}`} method="POST" enctype="multipart/form-data">
+
+      <!-- ══ 1. PAKET ══ -->
+      <div class="f-section" id="sectionPaket">
+        <div class="f-section-head">
+          <div class="f-section-icon">📦</div>
+          <div>
+            <h2>Paket wählen</h2>
+            <p>Wählen Sie Ihr gewünschtes Anzeigenpaket</p>
+          </div>
+        </div>
+
+        <div class="f-paket-grid">
+          <label class="f-paket-card" id="card-basis" onclick="selectPaket('Basis – 290 €', this)">
+            <input type="radio" name="paket" value="Basis – 290 €" required>
+            <div class="f-paket-check">✓</div>
+            <div class="f-paket-name">Basis</div>
+            <div class="f-paket-title">Standardanzeige</div>
+            <div class="f-paket-price">290 € <small>zzgl. MwSt.</small></div>
+            <div class="f-paket-days">30 Tage Laufzeit</div>
+          </label>
+
+          <label class="f-paket-card" id="card-premium" onclick="selectPaket('Premium – 490 €', this)">
+            <input type="radio" name="paket" value="Premium – 490 €">
+            <div class="f-paket-badge">Empfohlen</div>
+            <div class="f-paket-check">✓</div>
+            <div class="f-paket-name">Premium</div>
+            <div class="f-paket-title">Premiumanzeige</div>
+            <div class="f-paket-price">490 € <small>zzgl. MwSt.</small></div>
+            <div class="f-paket-days">45 Tage · inkl. Newsletter &amp; LinkedIn</div>
+          </label>
+
+          <label class="f-paket-card" id="card-exklusiv" onclick="selectPaket('Exklusiv – 990 €', this)">
+            <input type="radio" name="paket" value="Exklusiv – 990 €">
+            <div class="f-paket-check">✓</div>
+            <div class="f-paket-name">Exklusiv</div>
+            <div class="f-paket-title">Kampagnenpaket</div>
+            <div class="f-paket-price">990 € <small>zzgl. MwSt.</small></div>
+            <div class="f-paket-days">60 Tage · inkl. redakt. Begleitung</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- ══ 2. STELLENINFORMATIONEN ══ -->
+      <div class="f-section" id="sectionStelle">
+        <div class="f-section-head">
+          <div class="f-section-icon">🏛️</div>
+          <div>
+            <h2>Stelleninformationen</h2>
+            <p>Diese Daten erscheinen in der veröffentlichten Anzeige</p>
+          </div>
+        </div>
+
+        <div class="f-grid" style="margin-bottom:20px">
+          <div class="f-field f-col-full">
+            <label class="f-label" for="stellentitel">Stellentitel <span class="req">*</span></label>
+            <input class="f-input" id="stellentitel" name="stellentitel" type="text"
+              placeholder="z.B. Leiter/in Kämmerei (m/w/d)" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="behoerde">Behörde / Organisation <span class="req">*</span></label>
+            <input class="f-input" id="behoerde" name="behoerde" type="text"
+              placeholder="z.B. Landkreis Musterstadt" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="orgtyp">Organisationstyp <span class="req">*</span></label>
+            <select class="f-select" id="orgtyp" name="orgtyp" required>
+              <option value="">Bitte wählen …</option>
+              <option>Landkreis</option>
+              <option>Kreisfreie Stadt</option>
+              <option>Große Kreisstadt</option>
+              <option>Stadt / Gemeinde</option>
+              <option>Amt / Verbandsgemeinde</option>
+              <option>Zweckverband</option>
+              <option>Wohlfahrtsverband</option>
+              <option>Sonstiger öffentlicher Träger</option>
+            </select>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="ort">Dienstort <span class="req">*</span></label>
+            <input class="f-input" id="ort" name="ort" type="text" placeholder="z.B. Musterstadt" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="bundesland">Bundesland <span class="req">*</span></label>
+            <select class="f-select" id="bundesland" name="bundesland" required>
+              <option value="">Bitte wählen …</option>
+              <option>Baden-Württemberg</option>
+              <option>Bayern</option>
+              <option>Berlin</option>
+              <option>Brandenburg</option>
+              <option>Bremen</option>
+              <option>Hamburg</option>
+              <option>Hessen</option>
+              <option>Mecklenburg-Vorpommern</option>
+              <option>Niedersachsen</option>
+              <option>Nordrhein-Westfalen</option>
+              <option>Rheinland-Pfalz</option>
+              <option>Saarland</option>
+              <option>Sachsen</option>
+              <option>Sachsen-Anhalt</option>
+              <option>Schleswig-Holstein</option>
+              <option>Thüringen</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="f-grid">
+          <div class="f-field">
+            <label class="f-label" for="beschaeftigung">Beschäftigungsumfang <span class="req">*</span></label>
+            <select class="f-select" id="beschaeftigung" name="beschaeftigung" required>
+              <option value="">Bitte wählen …</option>
+              <option>Vollzeit</option>
+              <option>Teilzeit</option>
+              <option>Vollzeit oder Teilzeit</option>
+            </select>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="entgelt">Entgeltgruppe / Besoldung <span class="req">*</span></label>
+            <input class="f-input" id="entgelt" name="entgelt" type="text"
+              placeholder="z.B. EG 14 TVöD / A 15 BBesO" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="befristung">Befristung</label>
+            <select class="f-select" id="befristung" name="befristung">
+              <option value="">Bitte wählen …</option>
+              <option>Unbefristet</option>
+              <option>Befristet (Dauer im Anzeigentext angeben)</option>
+              <option>Zunächst befristet, Übernahme möglich</option>
+            </select>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="startdatum">Stellenantritt</label>
+            <input class="f-input" id="startdatum" name="startdatum" type="text"
+              placeholder="z.B. 01.09.2026 oder zum nächstmöglichen Zeitpunkt">
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="bewerbungsschluss">Bewerbungsschluss <span class="req">*</span></label>
+            <input class="f-input" id="bewerbungsschluss" name="bewerbungsschluss" type="date" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="bewerbungslink">Bewerbungslink oder -E-Mail <span class="req">*</span>
+              <span class="hint">URL oder E-Mail-Adresse</span>
+            </label>
+            <input class="f-input" id="bewerbungslink" name="bewerbungslink" type="text"
+              placeholder="https://bewerbung.beispiel.de oder jobs@landkreis.de" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 3. ANZEIGENTEXT ══ -->
+      <div class="f-section" id="sectionText">
+        <div class="f-section-head">
+          <div class="f-section-icon">✍️</div>
+          <div>
+            <h2>Anzeigentext</h2>
+            <p>Beschreiben Sie die Stelle — wir kümmern uns um die Formatierung</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div class="f-field">
+            <label class="f-label" for="kurzbeschreibung">
+              Kurzbeschreibung der Stelle <span class="req">*</span>
+              <span class="hint">erscheint als Vorschautext (max. 400 Zeichen)</span>
+            </label>
+            <textarea class="f-textarea" id="kurzbeschreibung" name="kurzbeschreibung"
+              maxlength="400" rows="3" required
+              placeholder="Der Landkreis Musterstadt sucht zum nächstmöglichen Zeitpunkt …"
+              oninput="updateCount(this,'count-kurz')"></textarea>
+            <div class="f-char-count"><span id="count-kurz">0</span> / 400</div>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="aufgaben">
+              Aufgaben &amp; Verantwortlichkeiten <span class="req">*</span>
+            </label>
+            <textarea class="f-textarea" id="aufgaben" name="aufgaben" rows="6" required
+              placeholder="• Strategische Haushaltsplanung und -steuerung&#10;• Erstellung des Jahresabschlusses&#10;• Führung des Kämmerei-Teams (12 Mitarbeiter/innen)&#10;…"></textarea>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="anforderungen">
+              Anforderungsprofil <span class="req">*</span>
+            </label>
+            <textarea class="f-textarea" id="anforderungen" name="anforderungen" rows="6" required
+              placeholder="• Abgeschlossenes Studium der Verwaltungswissenschaften oder Betriebswirtschaft&#10;• Mehrjährige Erfahrung in der kommunalen Finanzverwaltung&#10;• Kenntnisse im Haushaltsrecht …"></textarea>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="wirbieten">Wir bieten <span class="hint">optional</span></label>
+            <textarea class="f-textarea" id="wirbieten" name="wirbieten" rows="4"
+              placeholder="• Flexible Arbeitszeiten&#10;• Homeoffice-Option&#10;• Betriebliche Altersvorsorge&#10;…"></textarea>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="schlagwoerter">
+              Schlagwörter / Fachbegriffe
+              <span class="hint">kommagetrennt, erscheinen als Tags</span>
+            </label>
+            <input class="f-input" id="schlagwoerter" name="schlagwoerter" type="text"
+              placeholder="z.B. Doppik, TVöD, Haushaltsrecht NRW, Führungserfahrung">
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ LOGO ══ -->
+      <div class="f-section">
+        <div class="f-section-head">
+          <div class="f-section-icon">🖼️</div>
+          <div>
+            <h2>Logo Ihrer Organisation</h2>
+            <p>PNG oder SVG, mindestens 200 × 200 px — optional, kann auch nachgereicht werden</p>
+          </div>
+        </div>
+
+        <label class="f-upload-area" id="uploadArea">
+          <input type="file" name="logo" accept="image/png,image/svg+xml,image/jpeg"
+            onchange="handleFileUpload(this)">
+          <div class="f-upload-icon" id="uploadIcon">📎</div>
+          <div class="f-upload-text" id="uploadText">
+            <strong>Datei auswählen</strong> oder hier hineinziehen
+          </div>
+          <div class="f-upload-hint">PNG, SVG oder JPG · max. 5 MB</div>
+        </label>
+      </div>
+
+      <!-- ══ 4. KONTAKT & ADDONS ══ -->
+      <div class="f-section" id="sectionKontakt">
+        <div class="f-section-head">
+          <div class="f-section-icon">👤</div>
+          <div>
+            <h2>Ihr Kontakt (intern)</h2>
+            <p>Für Rückfragen zur Anzeige — wird nicht veröffentlicht</p>
+          </div>
+        </div>
+
+        <div class="f-grid">
+          <div class="f-field">
+            <label class="f-label" for="kontaktname">Ihr Name <span class="req">*</span></label>
+            <input class="f-input" id="kontaktname" name="kontaktname" type="text"
+              placeholder="Vor- und Nachname" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="kontaktemail">Ihre E-Mail <span class="req">*</span></label>
+            <input class="f-input" id="kontaktemail" name="kontaktemail" type="email"
+              placeholder="name@landkreis.de" required>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="kontakttel">Telefon <span class="hint">optional</span></label>
+            <input class="f-input" id="kontakttel" name="kontakttel" type="tel"
+              placeholder="+49 30 123456">
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="rechnungsadresse">Rechnungsadresse <span class="hint">falls abweichend</span></label>
+            <input class="f-input" id="rechnungsadresse" name="rechnungsadresse" type="text"
+              placeholder="Behördenname, Straße, PLZ Ort">
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ ADD-ONS ══ -->
+      <div class="f-section">
+        <div class="f-section-head">
+          <div class="f-section-icon">⭐</div>
+          <div>
+            <h2>Zusatzleistungen</h2>
+            <p>Optionale Erweiterungen — werden zur Rechnung addiert</p>
+          </div>
+        </div>
+
+        <div class="f-addon-grid">
+          <label class="f-addon">
+            <input type="checkbox" name="addon_newsletter" value="Newsletter Solo-Mailing +390 €"
+              onchange="updateSummary()">
+            <div>
+              <div class="f-addon-name">Newsletter Solo-Mailing</div>
+              <div class="f-addon-price">+ 390 €</div>
+              <div class="f-addon-desc">Dedizierte E-Mail an alle Abonnenten nur für Ihre Stelle</div>
+            </div>
+          </label>
+          <label class="f-addon">
+            <input type="checkbox" name="addon_linkedin" value="LinkedIn Sponsored Post +250 €"
+              onchange="updateSummary()">
+            <div>
+              <div class="f-addon-name">LinkedIn Sponsored Post</div>
+              <div class="f-addon-price">+ 250 €</div>
+              <div class="f-addon-desc">Bezahlter Post auf dem derkaemmerer.de-Profil, 7 Tage</div>
+            </div>
+          </label>
+          <label class="f-addon">
+            <input type="checkbox" name="addon_portraet" value="Arbeitgeber-Porträt +450 €"
+              onchange="updateSummary()">
+            <div>
+              <div class="f-addon-name">Arbeitgeber-Porträt</div>
+              <div class="f-addon-price">+ 450 €</div>
+              <div class="f-addon-desc">Redaktioneller Beitrag über Ihre Behörde (800 Wörter)</div>
+            </div>
+          </label>
+          <label class="f-addon">
+            <input type="checkbox" name="addon_beratung" value="Persönliche Beratung +0 €"
+              onchange="updateSummary()">
+            <div>
+              <div class="f-addon-name">Persönliche Beratung</div>
+              <div class="f-addon-price">kostenlos</div>
+              <div class="f-addon-desc">Rückruf zur Anzeigengestaltung gewünscht</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- ══ ANMERKUNGEN ══ -->
+      <div class="f-section">
+        <div class="f-section-head">
+          <div class="f-section-icon">💬</div>
+          <div>
+            <h2>Anmerkungen</h2>
+            <p>Besondere Wünsche oder Hinweise an die Redaktion</p>
+          </div>
+        </div>
+        <div class="f-field">
+          <textarea class="f-textarea" name="anmerkungen" rows="3"
+            placeholder="z.B. gewünschtes Veröffentlichungsdatum, besondere Formatierungswünsche …"></textarea>
+        </div>
+      </div>
+
+      <!-- ══ ZUSAMMENFASSUNG & ABSENDEN ══ -->
+      <div class="f-summary" id="summary">
+        <div class="f-summary-title">📋 Ihre Buchungsübersicht</div>
+        <div class="f-summary-row"><span>Paket</span><span id="sum-paket">— noch nicht gewählt</span></div>
+        <div class="f-summary-row" id="sum-addon-row" style="display:none"><span>Zusatzleistungen</span><span id="sum-addons">—</span></div>
+        <div class="f-summary-row total"><span>Gesamtbetrag (netto)</span><span id="sum-total">—</span></div>
+        <div style="font-size:11px;color:#065f46;margin-top:8px">zzgl. gesetzlicher Mehrwertsteuer · Rechnung nach Schaltung · Zahlung innerhalb 14 Tagen</div>
+      </div>
+
+      <!-- Hidden Spam-Schutz -->
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="Neue Stellenanzeige – derkaemmerer.de">
+      <input type="hidden" name="_replyto" id="replyToField" value="">
+
+      <div class="f-submit-wrap">
+        <button type="submit" class="f-submit" id="submitBtn">
+          <span>Anzeige verbindlich buchen</span>
+          <span>→</span>
+        </button>
+        <p class="f-submit-note">
+          Mit dem Absenden bestätigen Sie die Buchung. Sie erhalten innerhalb von 4 Stunden eine Bestätigung. Die Rechnung folgt nach Schaltung.
+        </p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<Footer />
+</Base>
+
+<script>
+// URL-Parameter: Paket vorauswählen
+const params = new URLSearchParams(window.location.search);
+const paketParam = params.get('paket');
+if (paketParam) {
+  const map: Record<string, string> = { basis: 'card-basis', premium: 'card-premium', exklusiv: 'card-exklusiv' };
+  const cardId = map[paketParam.toLowerCase()];
+  if (cardId) {
+    const card = document.getElementById(cardId) as HTMLElement;
+    const values: Record<string, string> = { basis: 'Basis – 290 €', premium: 'Premium – 490 €', exklusiv: 'Exklusiv – 990 €' };
+    if (card) { selectPaket(values[paketParam.toLowerCase()], card); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  }
+}
+
+// Paket-Auswahl
+const paketPreise: Record<string, number> = {
+  'Basis – 290 €': 290,
+  'Premium – 490 €': 490,
+  'Exklusiv – 990 €': 990,
+};
+let selectedPaket = '';
+
+function selectPaket(value: string, card: HTMLElement) {
+  document.querySelectorAll('.f-paket-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  selectedPaket = value;
+  updateSummary();
+}
+
+// Zeichenzähler
+function updateCount(el: HTMLTextAreaElement, countId: string) {
+  const counter = document.getElementById(countId);
+  if (counter) counter.textContent = String(el.value.length);
+}
+
+// Zusammenfassung
+function updateSummary() {
+  const sumPaket = document.getElementById('sum-paket');
+  const sumTotal = document.getElementById('sum-total');
+  const sumAddons = document.getElementById('sum-addons');
+  const sumAddonRow = document.getElementById('sum-addon-row');
+
+  let base = paketPreise[selectedPaket] || 0;
+  let addonTotal = 0;
+  const addonLabels: string[] = [];
+
+  const addonMap: Record<string, number> = {
+    'addon_newsletter': 390,
+    'addon_linkedin':   250,
+    'addon_portraet':   450,
+  };
+
+  Object.entries(addonMap).forEach(([name, price]) => {
+    const el = document.querySelector(`input[name="${name}"]`) as HTMLInputElement;
+    if (el?.checked) { addonTotal += price; addonLabels.push(`+${price} €`); }
+  });
+
+  if (sumPaket) sumPaket.textContent = selectedPaket || '— noch nicht gewählt';
+  if (sumAddonRow) sumAddonRow.style.display = addonLabels.length ? 'flex' : 'none';
+  if (sumAddons) sumAddons.textContent = addonLabels.join(', ') || '—';
+
+  const total = base + addonTotal;
+  if (sumTotal) sumTotal.textContent = total > 0 ? `${total.toLocaleString('de-DE')} €` : '—';
+}
+
+// Logo-Upload Feedback
+function handleFileUpload(input: HTMLInputElement) {
+  const icon = document.getElementById('uploadIcon');
+  const text = document.getElementById('uploadText');
+  if (input.files && input.files[0] && icon && text) {
+    icon.textContent = '✅';
+    text.innerHTML = `<strong>${input.files[0].name}</strong>`;
+  }
+}
+
+// Reply-To synchronisieren
+document.getElementById('kontaktemail')?.addEventListener('input', (e) => {
+  const field = document.getElementById('replyToField') as HTMLInputElement;
+  if (field) field.value = (e.target as HTMLInputElement).value;
+});
+
+// Formular-Submit
+document.getElementById('anzeigenForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target as HTMLFormElement;
+  const btn = document.getElementById('submitBtn') as HTMLButtonElement;
+  btn.disabled = true;
+  btn.querySelector('span')!.textContent = 'Wird gesendet …';
+
+  try {
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST', body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('successMsg')!.classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    const errEl = document.getElementById('errorMsg')!;
+    errEl.classList.add('visible');
+    btn.disabled = false;
+    btn.querySelector('span')!.textContent = 'Anzeige verbindlich buchen';
+  }
+});
+
+// Scroll-Fortschritt
+const sections = ['sectionPaket','sectionStelle','sectionText','sectionKontakt'];
+const steps    = ['step1','step2','step3','step4'];
+window.addEventListener('scroll', () => {
+  let current = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 200) current = i;
+  });
+  steps.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('active','done');
+    if (i < current)      el.classList.add('done');
+    else if (i === current) el.classList.add('active');
+  });
+});
+</script>
