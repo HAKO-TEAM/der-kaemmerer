@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Buchung eingegangen"
+  description="Vielen Dank für Ihre Buchung – wir melden uns innerhalb von 4 Stunden."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+.dk-hero {
+  background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.dk-container { max-width: 680px; margin: 0 auto; padding: 0 32px; }
+.dk-check {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: #d1fae5; margin: 0 auto 28px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px;
+}
+.dk-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; margin-bottom: 16px;
+}
+.dk-hero p { font-size: 16px; color: rgba(255,255,255,.65); line-height: 1.75; }
+
+.dk-steps {
+  background: #fff;
+  padding: 64px 0 80px;
+}
+.dk-steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; background: #e2e8f0;
+  border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;
+  margin: 40px 0;
+}
+.dk-step-card {
+  background: #fff; padding: 28px 24px; text-align: center;
+}
+.dk-step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #1a2744; color: #fff;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+}
+.dk-step-title { font-size: 13px; font-weight: 700; color: #1a2744; margin-bottom: 6px; }
+.dk-step-text { font-size: 12px; color: #6b7280; line-height: 1.6; }
+
+.dk-info {
+  background: #eff6ff; border: 1.5px solid #bfdbfe;
+  border-radius: 8px; padding: 20px 24px; margin-bottom: 32px;
+  font-size: 13px; color: #1e40af; line-height: 1.7;
+}
+.dk-info strong { color: #1a2744; }
+
+.dk-actions {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+.dk-btn-primary {
+  background: #1a2744; color: #fff;
+  padding: 14px 36px; font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; border-radius: 4px; display: inline-block;
+  transition: background .2s;
+}
+.dk-btn-primary:hover { background: #0f3460; }
+.dk-btn-secondary {
+  background: transparent; color: #1a2744;
+  padding: 14px 36px; font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; border-radius: 4px; display: inline-block;
+  border: 2px solid #1a2744; transition: all .2s;
+}
+.dk-btn-secondary:hover { background: #1a2744; color: #fff; }
+
+@media (max-width: 600px) {
+  .dk-steps-grid { grid-template-columns: 1fr; }
+  .dk-actions { flex-direction: column; }
+  .dk-btn-primary, .dk-btn-secondary { text-align: center; }
+}
+</style>
+
+<div class="dk-hero">
+  <div class="dk-container">
+    <div class="dk-check">✓</div>
+    <h1>Buchung eingegangen –<br>vielen Dank!</h1>
+    <p>Wir haben Ihre Stellenanzeige erhalten und melden uns<br>innerhalb von <strong style="color:#fff">4 Stunden</strong> (Werktage) zur Bestätigung.</p>
+  </div>
+</div>
+
+<div class="dk-steps">
+  <div class="dk-container">
+    <div style="text-align:center;margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#3b82f6">Nächste Schritte</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#1a2744;text-align:center;margin-bottom:0">Was jetzt passiert</h2>
+
+    <div class="dk-steps-grid">
+      <div class="dk-step-card">
+        <div class="dk-step-num">1</div>
+        <div class="dk-step-title">Bestätigung per E-Mail</div>
+        <div class="dk-step-text">Sie erhalten innerhalb von 4 Stunden eine Bestätigungs-E-Mail mit allen Details Ihrer Buchung.</div>
+      </div>
+      <div class="dk-step-card">
+        <div class="dk-step-num">2</div>
+        <div class="dk-step-title">Logo & Rückfragen</div>
+        <div class="dk-step-text">Falls noch kein Logo angegeben: Senden Sie es per E-Mail an <strong>anzeigen@derkaemmerer.de</strong></div>
+      </div>
+      <div class="dk-step-card">
+        <div class="dk-step-num">3</div>
+        <div class="dk-step-title">Schaltung innerhalb 24 h</div>
+        <div class="dk-step-text">Nach Zahlungseingang erscheint Ihre Anzeige innerhalb von 24 Stunden (Werktage) live auf derkaemmerer.de.</div>
+      </div>
+    </div>
+
+    <div class="dk-info">
+      <strong>Kontakt bei Fragen:</strong><br>
+      anzeigen@derkaemmerer.de · Antwort innerhalb von 4 Stunden (Werktage)<br>
+      Die Rechnung erhalten Sie nach Schaltung, zahlbar innerhalb von 14 Tagen.
+    </div>
+
+    <div class="dk-actions">
+      <a href="/stellenanzeigen" class="dk-btn-primary">Zurück zu den Paketen</a>
+      <a href="/" class="dk-btn-secondary">Zur Startseite</a>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>
