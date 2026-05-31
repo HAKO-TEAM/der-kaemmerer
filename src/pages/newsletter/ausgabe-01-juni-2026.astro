@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Base
+  title="Newsletter Ausgabe 01 · Juni 2026 — Haushaltssperren 2026"
+  description="Der Kämmerer, Ausgabe 01, Juni 2026: Haushaltssperren als neuer Normalzustand, HzE +44 %, Haushaltssicherungskonzept, Vergaberecht."
+  ogType="article"
+  datum="2026-06-30"
+>
+<Header />
+
+<style>
+  .hero { background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%); padding:40px 0; }
+  .hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+  .hero-back { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#6ee7b7; margin-bottom:12px; display:block; }
+  .hero-label { font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#64748b; margin-bottom:8px; }
+  .hero h1 { font-size:24px; font-weight:800; color:#fff; line-height:1.25; letter-spacing:-.02em; margin-bottom:10px; }
+  .hero-meta { font-size:11px; color:#64748b; }
+
+  .main { max-width:780px; margin:0 auto; padding:44px 32px 64px; }
+
+  /* KPI Band */
+  .kpi-band { background:#1a2744; border-radius:6px; padding:20px 24px; margin-bottom:32px; display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+  .kpi-item { text-align:center; padding:0 8px; border-right:1px solid #1e3a5f; }
+  .kpi-item:last-child { border-right:none; }
+  .kpi-val { font-size:20px; font-weight:800; color:#fff; line-height:1; }
+  .kpi-label { font-size:9px; color:#64748b; margin-top:4px; line-height:1.3; }
+
+  /* Artikel */
+  .nl-section { margin-bottom:36px; }
+  .nl-ressort { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px; }
+  .nl-section h2 { font-size:18px; font-weight:800; color:#1a2744; line-height:1.3; margin-bottom:10px; letter-spacing:-.01em; }
+  .nl-section p { font-size:14px; color:#374151; line-height:1.78; margin-bottom:12px; }
+  .nl-quote { background:#fff7ed; border-left:3px solid #c2410c; padding:12px 16px; margin:16px 0; border-radius:0 4px 4px 0; font-size:13px; color:#c2410c; font-style:italic; line-height:1.65; }
+  .nl-link { font-size:11px; font-weight:700; color:#3b82f6; letter-spacing:.04em; text-decoration:none; }
+  .nl-divider { border:none; border-top:1px solid #e2e8f0; margin:32px 0; }
+
+  /* Daten Rubrik */
+  .daten-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:20px 24px; margin-bottom:32px; }
+  .daten-box h3 { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#374151; margin-bottom:14px; }
+  .daten-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .daten-col h4 { font-size:11px; font-weight:700; color:#1a2744; margin-bottom:6px; }
+  .daten-col p { font-size:11px; color:#374151; line-height:1.65; margin:0; }
+
+  /* ASCEND CTA */
+  .ascend-box { background:#1a2744; border-radius:6px; padding:28px 32px; margin-bottom:32px; }
+  .ascend-box h3 { font-size:18px; font-weight:800; color:#fff; margin-bottom:8px; }
+  .ascend-box p { font-size:13px; color:#93c5fd; line-height:1.7; margin-bottom:16px; }
+  .ascend-btn { display:inline-block; background:#3b82f6; color:#fff; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:10px 20px; border-radius:3px; text-decoration:none; }
+  .ascend-btn:hover { background:#0f3460; }
+
+  /* Navigation */
+  .nl-nav { display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-top:1px solid #e2e8f0; margin-top:8px; }
+  .nl-nav a { font-size:11px; font-weight:700; color:#3b82f6; text-decoration:none; letter-spacing:.04em; }
+
+  @media(max-width:768px) {
+    .hero-inner, .main { padding-left:16px; padding-right:16px; }
+    .hero h1 { font-size:20px; }
+    .kpi-band { grid-template-columns:repeat(2,1fr); gap:12px; }
+    .kpi-item { border-right:none; border-bottom:1px solid #1e3a5f; padding-bottom:12px; }
+    .kpi-item:nth-child(2n) { border-bottom:none; }
+    .daten-grid { grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="/newsletter" class="hero-back">← Newsletter-Archiv</a>
+    <div class="hero-label">Ausgabe 01 · Juni 2026 · Erstausgabe</div>
+    <h1>Haushaltssperren 2026: Warum immer mehr Kommunen die Kontrolle verlieren</h1>
+    <div class="hero-meta">Der Kämmerer · Erschienen: 30. Juni 2026 · 4 Beiträge</div>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- KPI Band -->
+  <div class="kpi-band">
+    <div class="kpi-item">
+      <div class="kpi-val">166 Mrd.</div>
+      <div class="kpi-label">Kommunaler<br>Investitionsstau</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">70 %</div>
+      <div class="kpi-label">Kommunen<br>strukturell im Defizit</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">+44 %</div>
+      <div class="kpi-label">HzE-Kosten<br>seit 2013</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">3,5 %</div>
+      <div class="kpi-label">Ø Zinssatz<br>Kassenkredite 2025</div>
+    </div>
+  </div>
+
+  <!-- Artikel 1 -->
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#c2410c;">Haushalt &amp; Finanzen · Leitartikel</div>
+    <h2>Die Haushaltssperre als neuer Normalzustand — und was das für kommunale Führung bedeutet</h2>
+    <p>In den 1990er Jahren war die Haushaltssperre ein Ausnahmeinstrument. Sie signalisierte: Etwas ist schiefgelaufen. Heute ist sie in vielen deutschen Kommunen ein reguläres Steuerungsinstrument — eingesetzt, um Ausgaben zu bremsen, die der Rat bereits beschlossen hat.</p>
+    <div class="nl-quote">„Wir müssen uns mehr denn je fokussieren." — Dr. Frank Mentrup, OB Karlsruhe, zur 60-Millionen-Haushaltssperre 2026</div>
+    <p>Das strukturelle Problem: Haushaltssperren treffen immer dieselben Posten. Investitionen werden verschoben. Freiwillige Leistungen gestrichen. Personal eingefroren. Was nicht getroffen wird: die Pflichtleistungen — also genau die Ausgaben, die am schnellsten wachsen. Hilfen zur Erziehung, Eingliederungshilfe, Grundsicherung. Sie wachsen unabhängig von der Haushaltssperre weiter.</p>
+    <a href="/haushalt/haushaltssperre-2026-stadte" class="nl-link">Vollständige Analyse lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <!-- Artikel 2 -->
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#1e40af;">Sozialkosten · Analyse</div>
+    <h2>HzE +44 %: Warum Kommunen die Steuerungshoheit verloren haben — und wie sie sie zurückgewinnen</h2>
+    <p>Hilfen zur Erziehung sind in 13 Jahren um 44 Prozent teurer geworden. Nicht weil mehr Kinder Hilfe brauchen. Sondern weil der Träger entscheidet — und die Kommune zahlt. Wie das Mannheimer Modell 2013 zeigt, dass Steuerung möglich ist. Und warum der Erfolg nicht anhielt.</p>
+    <a href="/sozialkosten/hze-steuerung-was-kommunen-koennen" class="nl-link">Analyse lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <!-- Artikel 3 -->
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#065f46;">Haushalt · Praxis</div>
+    <h2>Haushaltssicherungskonzept: Was wirklich funktioniert — und was nur Zeit kostet</h2>
+    <p>Viele Kommunen erstellen HSK auf Druck der Kommunalaufsicht — und scheitern an der Umsetzung. Was ein wirksames Konzept von einem papierbasierten unterscheidet: Verantwortliche, Fristen, Quartalsmonitoring — und der politische Konsens, der alles erst möglich macht.</p>
+    <a href="/haushalt/haushaltssicherungskonzept-praxis" class="nl-link">Praxisbericht lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <!-- Artikel 4 -->
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#6b21a8;">Recht &amp; Vergabe</div>
+    <h2>Unterschwellige Vergabe 2026: Was Kommunen wirklich dürfen — und was nicht</h2>
+    <p>Direktauftrag, Verhandlungsvergabe, öffentliche Ausschreibung: Der Unterschwellenbereich ist fehlerträchtig. Stückelung, fehlende Dokumentation, falsche Schwellenberechnung — die häufigsten Beanstandungen bei kommunalen Prüfungen und wie man sie vermeidet.</p>
+    <a href="/recht/direktvergabe-uvgo-2026" class="nl-link">Rechtsbeitrag lesen →</a>
+  </div>
+
+  <!-- Daten & Rankings -->
+  <div class="daten-box">
+    <h3>Daten &amp; Rankings · Ausgabe 01</h3>
+    <div class="daten-grid">
+      <div class="daten-col">
+        <h4>Gewerbesteuer-Hebesätze 2025</h4>
+        <p>Dortmund: 520 % · Duisburg: 520 %<br>München: 490 % · Essen: 480 %<br>Düsseldorf: 440 % · Mannheim: 420 %</p>
+      </div>
+      <div class="daten-col">
+        <h4>Kassenkredite 2024</h4>
+        <p>Gesamt Deutschland: 44 Mrd. €<br>NRW-Anteil: ~60 % aller Kassenkredite<br>Ø Zinssatz 2025: 3,5 % p.a.</p>
+      </div>
+    </div>
+    <div style="margin-top:14px;">
+      <a href="/daten" class="nl-link">Alle Daten &amp; Rankings →</a>
+    </div>
+  </div>
+
+  <!-- ASCEND CTA -->
+  <div class="ascend-box">
+    <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:8px;">HAKO · KI-Plattform</div>
+    <h3>HzE-Kosten aktiv steuern — ohne Leistungskürzung</h3>
+    <p>ASCEND ist die KI-gestützte Steuerungsplattform für Hilfen zur Erziehung. Sie analysiert auf META-Ebene, identifiziert Hochrisikofälle frühzeitig und liefert monatliche Steuerungsimpulse für Kämmerei und Dezernatsleitung — ohne Systemwechsel, ohne IT-Integration.</p>
+    <a href="/ascend" class="ascend-btn">Demo-Termin anfragen →</a>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nl-nav">
+    <a href="/newsletter">← Alle Ausgaben</a>
+    <span style="font-size:11px;color:#9ca3af;">Ausgabe 01 · Juni 2026</span>
+  </div>
+
+</main>
+<Footer />
+</Base>

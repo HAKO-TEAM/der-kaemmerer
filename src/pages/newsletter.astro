@@ -6,15 +6,16 @@ import Footer from '../components/Footer.astro';
 const ausgaben = [
   {
     nr: '01',
-    datum: 'Juni 2026',
-    titel: 'Kommunale Haushalte unter Druck',
+    datum: '30. Juni 2026',
+    titel: 'Haushaltssperren 2026: Warum immer mehr Kommunen die Kontrolle verlieren',
     themen: [
-      'Kassenkredite als Normalzustand — was das für Kämmerer bedeutet',
-      'HzE-Kostensteigerung +44 %: Ursachen und Steuerungsansätze',
-      'Direktvergabe nach UVgO: was Kommunen wirklich dürfen',
-      'Mannheim 2013: Lehren aus dem erfolgreichsten Steuerungsmodell',
+      'Die Haushaltssperre als neuer Normalzustand — was das für kommunale Führung bedeutet',
+      'HzE +44 %: Warum Kommunen die Steuerungshoheit verloren haben',
+      'Haushaltssicherungskonzept: Was wirklich funktioniert — und was nur Zeit kostet',
+      'Unterschwellige Vergabe 2026: Was Kommunen wirklich dürfen — und was nicht',
     ],
     highlight: 'Erstausgabe',
+    slug: 'ausgabe-01-juni-2026',
   },
 ];
 ---
@@ -110,6 +111,13 @@ const ausgaben = [
       <ul class="ausgabe-themen">
         {a.themen.map(t => <li>{t}</li>)}
       </ul>
+      {a.slug && (
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid #f1f5f9;">
+          <a href={`/newsletter/${a.slug}`} style="font-size:11px;font-weight:700;color:#3b82f6;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;">
+            Ausgabe online lesen →
+          </a>
+        </div>
+      )}
     </div>
   ))}
 
