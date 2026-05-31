@@ -306,7 +306,7 @@ const FORMSPREE_ID = 'mdajrkjk';
       Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an anzeigen@derkaemmerer.de.
     </div>
 
-    <form id="anzeigenForm" action={`https://formspree.io/f/${FORMSPREE_ID}`} method="POST" enctype="multipart/form-data">
+    <form id="anzeigenForm" action={`https://formspree.io/f/${FORMSPREE_ID}`} method="POST">
 
       <!-- ══ 1. PAKET ══ -->
       <div class="f-section" id="sectionPaket">
@@ -319,7 +319,7 @@ const FORMSPREE_ID = 'mdajrkjk';
         </div>
 
         <div class="f-paket-grid">
-          <label class="f-paket-card" id="card-basis" onclick="selectPaket('Basis – 290 €', this)">
+          <label class="f-paket-card" id="card-basis" data-paket="Basis – 290 €">
             <input type="radio" name="paket" value="Basis – 290 €" required>
             <div class="f-paket-check">✓</div>
             <div class="f-paket-name">Basis</div>
@@ -328,7 +328,7 @@ const FORMSPREE_ID = 'mdajrkjk';
             <div class="f-paket-days">30 Tage Laufzeit</div>
           </label>
 
-          <label class="f-paket-card" id="card-premium" onclick="selectPaket('Premium – 490 €', this)">
+          <label class="f-paket-card" id="card-premium" data-paket="Premium – 490 €">
             <input type="radio" name="paket" value="Premium – 490 €">
             <div class="f-paket-badge">Empfohlen</div>
             <div class="f-paket-check">✓</div>
@@ -338,7 +338,7 @@ const FORMSPREE_ID = 'mdajrkjk';
             <div class="f-paket-days">45 Tage · inkl. Newsletter &amp; LinkedIn</div>
           </label>
 
-          <label class="f-paket-card" id="card-exklusiv" onclick="selectPaket('Exklusiv – 990 €', this)">
+          <label class="f-paket-card" id="card-exklusiv" data-paket="Exklusiv – 990 €">
             <input type="radio" name="paket" value="Exklusiv – 990 €">
             <div class="f-paket-check">✓</div>
             <div class="f-paket-name">Exklusiv</div>
@@ -526,19 +526,19 @@ const FORMSPREE_ID = 'mdajrkjk';
           <div class="f-section-icon">🖼️</div>
           <div>
             <h2>Logo Ihrer Organisation</h2>
-            <p>PNG oder SVG, mindestens 200 × 200 px — optional, kann auch nachgereicht werden</p>
+            <p>Senden Sie das Logo per E-Mail nach der Buchung — oder geben Sie hier einen Download-Link an</p>
           </div>
         </div>
-
-        <label class="f-upload-area" id="uploadArea">
-          <input type="file" name="logo" accept="image/png,image/svg+xml,image/jpeg"
-            onchange="handleFileUpload(this)">
-          <div class="f-upload-icon" id="uploadIcon">📎</div>
-          <div class="f-upload-text" id="uploadText">
-            <strong>Datei auswählen</strong> oder hier hineinziehen
+        <div class="f-grid">
+          <div class="f-field f-col-full">
+            <label class="f-label" for="logo_link">Logo-Link <span class="hint">optional — z.B. WeTransfer, Dropbox, Webseite</span></label>
+            <input class="f-input" id="logo_link" name="logo_link" type="text"
+              placeholder="https://… oder leer lassen und Logo per E-Mail nachsenden an anzeigen@derkaemmerer.de">
           </div>
-          <div class="f-upload-hint">PNG, SVG oder JPG · max. 5 MB</div>
-        </label>
+        </div>
+        <p style="font-size:12px;color:#6b7280;margin-top:12px;padding:10px 14px;background:#f8fafc;border-radius:5px;border:1px solid #e2e8f0">
+          📎 Sie können das Logo auch direkt nach der Buchung per E-Mail an <strong>anzeigen@derkaemmerer.de</strong> senden (PNG, SVG oder JPG, mind. 200×200 px).
+        </p>
       </div>
 
       <!-- ══ 4. KONTAKT & ADDONS ══ -->
@@ -591,7 +591,7 @@ const FORMSPREE_ID = 'mdajrkjk';
         <div class="f-addon-grid">
           <label class="f-addon">
             <input type="checkbox" name="addon_newsletter" value="Newsletter Solo-Mailing +390 €"
-              onchange="updateSummary()">
+              class="addon-check">
             <div>
               <div class="f-addon-name">Newsletter Solo-Mailing</div>
               <div class="f-addon-price">+ 390 €</div>
@@ -600,7 +600,7 @@ const FORMSPREE_ID = 'mdajrkjk';
           </label>
           <label class="f-addon">
             <input type="checkbox" name="addon_linkedin" value="LinkedIn Sponsored Post +250 €"
-              onchange="updateSummary()">
+              class="addon-check">
             <div>
               <div class="f-addon-name">LinkedIn Sponsored Post</div>
               <div class="f-addon-price">+ 250 €</div>
@@ -609,7 +609,7 @@ const FORMSPREE_ID = 'mdajrkjk';
           </label>
           <label class="f-addon">
             <input type="checkbox" name="addon_portraet" value="Arbeitgeber-Porträt +450 €"
-              onchange="updateSummary()">
+              class="addon-check">
             <div>
               <div class="f-addon-name">Arbeitgeber-Porträt</div>
               <div class="f-addon-price">+ 450 €</div>
@@ -618,7 +618,7 @@ const FORMSPREE_ID = 'mdajrkjk';
           </label>
           <label class="f-addon">
             <input type="checkbox" name="addon_beratung" value="Persönliche Beratung +0 €"
-              onchange="updateSummary()">
+              class="addon-check">
             <div>
               <div class="f-addon-name">Persönliche Beratung</div>
               <div class="f-addon-price">kostenlos</div>
@@ -675,27 +675,44 @@ const FORMSPREE_ID = 'mdajrkjk';
 </Base>
 
 <script>
-// URL-Parameter: Paket vorauswählen
-const params = new URLSearchParams(window.location.search);
-const paketParam = params.get('paket');
-if (paketParam) {
-  const map: Record<string, string> = { basis: 'card-basis', premium: 'card-premium', exklusiv: 'card-exklusiv' };
-  const cardId = map[paketParam.toLowerCase()];
-  if (cardId) {
-    const card = document.getElementById(cardId) as HTMLElement;
-    const values: Record<string, string> = { basis: 'Basis – 290 €', premium: 'Premium – 490 €', exklusiv: 'Exklusiv – 990 €' };
-    if (card) { selectPaket(values[paketParam.toLowerCase()], card); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-  }
-}
-
-// Paket-Auswahl
+// ── Preise ──────────────────────────────────────────────
 const paketPreise: Record<string, number> = {
   'Basis – 290 €': 290,
   'Premium – 490 €': 490,
   'Exklusiv – 990 €': 990,
 };
+const addonPreise: Record<string, number> = {
+  addon_newsletter: 390,
+  addon_linkedin:   250,
+  addon_portraet:   450,
+};
 let selectedPaket = '';
 
+// ── Zusammenfassung aktualisieren ───────────────────────
+function updateSummary() {
+  const sumPaket    = document.getElementById('sum-paket');
+  const sumTotal    = document.getElementById('sum-total');
+  const sumAddons   = document.getElementById('sum-addons');
+  const sumAddonRow = document.getElementById('sum-addon-row') as HTMLElement;
+
+  const base = paketPreise[selectedPaket] || 0;
+  let addonTotal = 0;
+  const addonLabels: string[] = [];
+
+  Object.entries(addonPreise).forEach(([name, price]) => {
+    const el = document.querySelector<HTMLInputElement>(`input[name="${name}"]`);
+    if (el?.checked) { addonTotal += price; addonLabels.push(`+${price} €`); }
+  });
+
+  if (sumPaket)    sumPaket.textContent    = selectedPaket || '— noch nicht gewählt';
+  if (sumAddonRow) sumAddonRow.style.display = addonLabels.length ? 'flex' : 'none';
+  if (sumAddons)   sumAddons.textContent   = addonLabels.join(', ') || '—';
+
+  const total = base + addonTotal;
+  if (sumTotal) sumTotal.textContent = total > 0 ? `${total.toLocaleString('de-DE')} €` : '—';
+}
+
+// ── Paket auswählen ─────────────────────────────────────
 function selectPaket(value: string, card: HTMLElement) {
   document.querySelectorAll('.f-paket-card').forEach(c => c.classList.remove('selected'));
   card.classList.add('selected');
@@ -703,88 +720,76 @@ function selectPaket(value: string, card: HTMLElement) {
   updateSummary();
 }
 
-// Zeichenzähler
-function updateCount(el: HTMLTextAreaElement, countId: string) {
-  const counter = document.getElementById(countId);
-  if (counter) counter.textContent = String(el.value.length);
-}
-
-// Zusammenfassung
-function updateSummary() {
-  const sumPaket = document.getElementById('sum-paket');
-  const sumTotal = document.getElementById('sum-total');
-  const sumAddons = document.getElementById('sum-addons');
-  const sumAddonRow = document.getElementById('sum-addon-row');
-
-  let base = paketPreise[selectedPaket] || 0;
-  let addonTotal = 0;
-  const addonLabels: string[] = [];
-
-  const addonMap: Record<string, number> = {
-    'addon_newsletter': 390,
-    'addon_linkedin':   250,
-    'addon_portraet':   450,
-  };
-
-  Object.entries(addonMap).forEach(([name, price]) => {
-    const el = document.querySelector(`input[name="${name}"]`) as HTMLInputElement;
-    if (el?.checked) { addonTotal += price; addonLabels.push(`+${price} €`); }
+// ── Event-Listener: Paketkarten ─────────────────────────
+document.querySelectorAll<HTMLElement>('.f-paket-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const value = card.dataset.paket || '';
+    if (value) selectPaket(value, card);
   });
+});
 
-  if (sumPaket) sumPaket.textContent = selectedPaket || '— noch nicht gewählt';
-  if (sumAddonRow) sumAddonRow.style.display = addonLabels.length ? 'flex' : 'none';
-  if (sumAddons) sumAddons.textContent = addonLabels.join(', ') || '—';
+// ── Event-Listener: Add-on Checkboxen ───────────────────
+document.querySelectorAll<HTMLInputElement>('.addon-check').forEach(cb => {
+  cb.addEventListener('change', updateSummary);
+});
 
-  const total = base + addonTotal;
-  if (sumTotal) sumTotal.textContent = total > 0 ? `${total.toLocaleString('de-DE')} €` : '—';
-}
+// ── Zeichenzähler ────────────────────────────────────────
+document.getElementById('kurzbeschreibung')?.addEventListener('input', (e) => {
+  const counter = document.getElementById('count-kurz');
+  if (counter) counter.textContent = String((e.target as HTMLTextAreaElement).value.length);
+});
 
-// Logo-Upload Feedback
-function handleFileUpload(input: HTMLInputElement) {
-  const icon = document.getElementById('uploadIcon');
-  const text = document.getElementById('uploadText');
-  if (input.files && input.files[0] && icon && text) {
-    icon.textContent = '✅';
-    text.innerHTML = `<strong>${input.files[0].name}</strong>`;
-  }
-}
-
-// Reply-To synchronisieren
+// ── Reply-To synchronisieren ────────────────────────────
 document.getElementById('kontaktemail')?.addEventListener('input', (e) => {
   const field = document.getElementById('replyToField') as HTMLInputElement;
   if (field) field.value = (e.target as HTMLInputElement).value;
 });
 
-// Formular-Submit
+// ── URL-Parameter: Paket vorauswählen ───────────────────
+const paketParam = new URLSearchParams(window.location.search).get('paket');
+if (paketParam) {
+  const map: Record<string, [string, string]> = {
+    basis:    ['card-basis',    'Basis – 290 €'],
+    premium:  ['card-premium',  'Premium – 490 €'],
+    exklusiv: ['card-exklusiv', 'Exklusiv – 990 €'],
+  };
+  const entry = map[paketParam.toLowerCase()];
+  if (entry) {
+    const card = document.getElementById(entry[0]);
+    if (card) selectPaket(entry[1], card);
+  }
+}
+
+// ── Formular absenden ───────────────────────────────────
 document.getElementById('anzeigenForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form = e.target as HTMLFormElement;
-  const btn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const form  = e.target as HTMLFormElement;
+  const btn   = document.getElementById('submitBtn') as HTMLButtonElement;
+  const spans = btn.querySelectorAll('span');
   btn.disabled = true;
-  btn.querySelector('span')!.textContent = 'Wird gesendet …';
+  spans[0].textContent = 'Wird gesendet …';
 
   try {
-    const data = new FormData(form);
     const res = await fetch(form.action, {
-      method: 'POST', body: data,
-      headers: { 'Accept': 'application/json' }
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' },
     });
     if (res.ok) {
       form.style.display = 'none';
       document.getElementById('successMsg')!.classList.add('visible');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      throw new Error('Server error');
+      throw new Error();
     }
   } catch {
-    const errEl = document.getElementById('errorMsg')!;
-    errEl.classList.add('visible');
+    document.getElementById('errorMsg')!.classList.add('visible');
     btn.disabled = false;
-    btn.querySelector('span')!.textContent = 'Anzeige verbindlich buchen';
+    spans[0].textContent = 'Anzeige verbindlich buchen';
   }
 });
 
-// Scroll-Fortschritt
+// ── Fortschrittsleiste ──────────────────────────────────
 const sections = ['sectionPaket','sectionStelle','sectionText','sectionKontakt'];
 const steps    = ['step1','step2','step3','step4'];
 window.addEventListener('scroll', () => {
@@ -796,9 +801,9 @@ window.addEventListener('scroll', () => {
   steps.forEach((id, i) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.classList.remove('active','done');
-    if (i < current)      el.classList.add('done');
+    el.classList.remove('active', 'done');
+    if (i < current)       el.classList.add('done');
     else if (i === current) el.classList.add('active');
   });
-});
+}, { passive: true });
 </script>
