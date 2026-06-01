@@ -1,8 +1,4 @@
 {
-  "outputDirectory": "dist",
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "functions": {
-    "api/subscribe.js": { "memory": 128, "maxDuration": 10 }
-  }
+  "installCommand": "npm install"
 }
