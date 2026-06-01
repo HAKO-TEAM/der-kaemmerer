@@ -677,6 +677,9 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 </Base>
 
 <script>
+// Fehlermeldung beim Laden immer zurücksetzen
+document.getElementById('errorMsg')?.classList.remove('visible');
+
 // ── Preise ──────────────────────────────────────────────
 const paketPreise: Record<string, number> = {
   'Basis – 290 €': 290,
