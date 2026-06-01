@@ -764,21 +764,44 @@ if (paketParam) {
   }
 }
 
-// ── Formular absenden: Ladeindikator beim Submit ────────
-document.getElementById('anzeigenForm')?.addEventListener('submit', (e) => {
+// ── Formular absenden via fetch → eigene Danke-Seite ───
+document.getElementById('anzeigenForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
   const form = e.target as HTMLFormElement;
+
   // Pflichtfeld: Paket gewählt?
   if (!selectedPaket) {
-    e.preventDefault();
-    document.getElementById('sectionPaket')?.scrollIntoView({ behavior: 'smooth' });
-    document.getElementById('sectionPaket')!.style.outline = '2px solid #dc2626';
-    setTimeout(() => { document.getElementById('sectionPaket')!.style.outline = ''; }, 3000);
+    const sec = document.getElementById('sectionPaket');
+    sec?.scrollIntoView({ behavior: 'smooth' });
+    if (sec) { sec.style.outline = '2px solid #dc2626'; setTimeout(() => { sec.style.outline = ''; }, 3000); }
     return;
   }
+
   const btn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const span = btn.querySelector('span') as HTMLSpanElement;
   btn.disabled = true;
-  btn.querySelector('span')!.textContent = 'Wird gesendet …';
-  // Normales Form-Submit → Formspree leitet zu _next weiter
+  span.textContent = 'Wird gesendet …';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      // Weiterleitung auf unsere eigene Danke-Seite
+      window.location.href = '/buchung-danke';
+    } else {
+      const data = await res.json().catch(() => ({}));
+      throw new Error((data as any).error || 'Server-Fehler');
+    }
+  } catch (err) {
+    const errEl = document.getElementById('errorMsg');
+    if (errEl) errEl.classList.add('visible');
+    btn.disabled = false;
+    span.textContent = 'Anzeige verbindlich buchen';
+  }
 });
 
 // ── Fortschrittsleiste ──────────────────────────────────
