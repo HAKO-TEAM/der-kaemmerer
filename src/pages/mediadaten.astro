@@ -1,0 +1,536 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Mediadaten 2026"
+  description="Mediadaten derkaemmerer.de – Reichweite, Zielgruppe, Werbeformate und Preise für kommunale Entscheider. Das Fachmedium für Kämmerer und Finanzdezernenten."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+.md-container { max-width: 1040px; margin: 0 auto; padding: 0 48px; }
+
+/* ── HERO ── */
+.md-hero {
+  background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%);
+  padding: 64px 0 56px;
+}
+.md-hero-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 12px; }
+.md-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+.md-hero h1 em { font-style: italic; color: #93c5fd; }
+.md-hero p { font-size: 16px; color: rgba(255,255,255,.65); max-width: 580px; line-height: 1.75; }
+.md-hero-actions { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+.md-btn-primary { background: #3b82f6; color: #fff; padding: 13px 32px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 4px; transition: background .15s; }
+.md-btn-primary:hover { background: #2563eb; }
+.md-btn-secondary { background: transparent; color: #93c5fd; padding: 13px 32px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: 1.5px solid rgba(147,197,253,.4); border-radius: 4px; transition: all .15s; }
+.md-btn-secondary:hover { border-color: #93c5fd; color: #fff; }
+
+/* ── STATS ── */
+.md-stats {
+  display: flex; gap: 0;
+  padding: 40px 0 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  flex-wrap: wrap;
+}
+.md-stat { padding: 0 40px 40px; border-right: 1px solid rgba(255,255,255,.08); }
+.md-stat:last-child { border-right: none; }
+.md-stat .n { font-family: 'Playfair Display', serif; font-size: 36px; color: #93c5fd; font-weight: 700; line-height: 1; display: block; margin-bottom: 6px; }
+.md-stat .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+/* ── LAYOUT ── */
+.md-main { background: #f1f5f9; padding: 56px 0 80px; }
+
+/* ── SECTION ── */
+.md-section { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 40px 44px; margin-bottom: 28px; }
+.md-section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #3b82f6; font-weight: 700; margin-bottom: 8px; }
+.md-section h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 700; color: #1a2744; margin-bottom: 20px; line-height: 1.2; }
+
+/* ── ZIELGRUPPE ── */
+.md-audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #e2e8f0; border-radius: 6px; overflow: hidden; margin-bottom: 24px; }
+.md-aud-card { background: #fff; padding: 24px 20px; text-align: center; }
+.md-aud-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #1a2744; line-height: 1; margin-bottom: 6px; }
+.md-aud-label { font-size: 11px; color: #374151; text-transform: uppercase; letter-spacing: 1px; line-height: 1.5; }
+.md-aud-sub { font-size: 10px; color: #9ca3af; margin-top: 3px; }
+
+.md-profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.md-profile-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 18px 20px; }
+.md-profile-card h4 { font-size: 12px; font-weight: 700; color: #1a2744; margin-bottom: 10px; letter-spacing: .04em; text-transform: uppercase; }
+.md-profile-card ul { list-style: none; }
+.md-profile-card li { font-size: 13px; color: #374151; padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+.md-profile-card li::before { content: '→'; color: #3b82f6; font-weight: 700; flex-shrink: 0; font-size: 11px; }
+
+/* ── REICHWEITE ── */
+.md-reach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.md-reach-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 22px; }
+.md-reach-card .icon { font-size: 22px; margin-bottom: 10px; }
+.md-reach-card h4 { font-size: 13px; font-weight: 700; color: #1a2744; margin-bottom: 6px; }
+.md-reach-card p { font-size: 13px; color: #374151; line-height: 1.65; }
+.md-reach-card .val { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #3b82f6; display: block; margin-bottom: 4px; }
+
+/* ── FORMATE ── */
+.md-format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.md-format-card {
+  border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 28px;
+  position: relative; transition: border-color .15s, box-shadow .15s;
+}
+.md-format-card:hover { border-color: #bfdbfe; box-shadow: 0 8px 24px rgba(26,39,68,.07); }
+.md-format-card.featured { border-color: #1a2744; background: #1a2744; }
+.md-format-badge { display: inline-block; background: #3b82f6; color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+.md-format-name { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #9ca3af; margin-bottom: 6px; }
+.md-format-card.featured .md-format-name { color: rgba(255,255,255,.5); }
+.md-format-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #1a2744; margin-bottom: 10px; line-height: 1.2; }
+.md-format-card.featured .md-format-title { color: #fff; }
+.md-format-desc { font-size: 13px; color: #374151; line-height: 1.7; margin-bottom: 16px; }
+.md-format-card.featured .md-format-desc { color: rgba(255,255,255,.65); }
+.md-format-price { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #1a2744; margin-bottom: 4px; }
+.md-format-card.featured .md-format-price { color: #93c5fd; }
+.md-format-price-note { font-size: 11px; color: #9ca3af; }
+.md-format-features { list-style: none; margin-top: 16px; border-top: 1px solid #e2e8f0; padding-top: 14px; }
+.md-format-card.featured .md-format-features { border-top-color: rgba(255,255,255,.1); }
+.md-format-features li { font-size: 12px; color: #374151; padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
+.md-format-card.featured .md-format-features li { color: rgba(255,255,255,.7); }
+.md-format-features li::before { content: '✓'; color: #3b82f6; font-weight: 700; flex-shrink: 0; font-size: 11px; margin-top: 1px; }
+.md-format-card.featured .md-format-features li::before { color: #93c5fd; }
+.md-format-cta { display: inline-block; margin-top: 18px; padding: 11px 24px; background: #1a2744; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 4px; transition: background .15s; }
+.md-format-cta:hover { background: #0f3460; }
+.md-format-card.featured .md-format-cta { background: #3b82f6; }
+.md-format-card.featured .md-format-cta:hover { background: #2563eb; }
+
+/* ── PREISTABELLE ── */
+.md-price-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.md-price-table thead tr { background: #1a2744; color: #fff; }
+.md-price-table thead th { padding: 12px 18px; text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.md-price-table tbody tr { border-bottom: 1px solid #e2e8f0; transition: background .1s; }
+.md-price-table tbody tr:hover { background: #f8fafc; }
+.md-price-table tbody tr:last-child { border-bottom: none; }
+.md-price-table td { padding: 13px 18px; color: #374151; vertical-align: middle; }
+.md-price-table td:first-child { font-weight: 600; color: #1a2744; }
+.md-price-table td:last-child { font-weight: 700; color: #1a2744; text-align: right; white-space: nowrap; }
+
+/* ── THEMEN ── */
+.md-topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.md-topic { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; text-align: center; }
+.md-topic-icon { font-size: 20px; margin-bottom: 8px; }
+.md-topic-name { font-size: 11px; font-weight: 700; color: #1a2744; letter-spacing: .03em; }
+.md-topic-count { font-size: 10px; color: #9ca3af; margin-top: 3px; }
+
+/* ── KONTAKT ── */
+.md-contact { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.md-contact-text h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #1a2744; margin-bottom: 10px; }
+.md-contact-text p { font-size: 14px; color: #374151; line-height: 1.7; }
+.md-contact-text p strong { color: #1a2744; }
+.md-contact-cta { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; flex-shrink: 0; }
+.md-contact-cta a { display: inline-block; padding: 13px 28px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 4px; white-space: nowrap; }
+.md-contact-cta .cta-main { background: #1a2744; color: #fff; transition: background .15s; }
+.md-contact-cta .cta-main:hover { background: #0f3460; }
+.md-contact-cta .cta-alt { background: transparent; color: #1a2744; border: 1.5px solid #1a2744; transition: all .15s; }
+.md-contact-cta .cta-alt:hover { background: #1a2744; color: #fff; }
+
+@media (max-width: 768px) {
+  .md-container { padding: 0 20px; }
+  .md-section { padding: 24px 20px; }
+  .md-audience-grid, .md-reach-grid, .md-topics-grid { grid-template-columns: repeat(2, 1fr); }
+  .md-format-grid, .md-profile-grid { grid-template-columns: 1fr; }
+  .md-stats { gap: 0; }
+  .md-stat { flex: 0 0 50%; padding: 16px 0 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .md-contact { flex-direction: column; }
+  .md-contact-cta { align-items: stretch; width: 100%; }
+}
+</style>
+
+<!-- HERO -->
+<div class="md-hero">
+  <div class="md-container">
+    <div class="md-hero-label">Mediadaten 2026</div>
+    <h1>Werbung für<br><em>kommunale Entscheider</em></h1>
+    <p>derkaemmerer.de ist das unabhängige Fachmedium für Kämmerer, Haushaltsfachkräfte und kommunale Führungskräfte in Deutschland. Erreichen Sie Ihre Zielgruppe dort, wo sie lesen.</p>
+    <div class="md-hero-actions">
+      <a href="mailto:anzeigen@derkaemmerer.de?subject=Mediadaten-Anfrage" class="md-btn-primary">Angebot anfragen</a>
+      <a href="/anzeige-aufgeben" class="md-btn-secondary">Stellenanzeige aufgeben</a>
+    </div>
+
+    <div class="md-stats">
+      <div class="md-stat"><span class="n">11.000+</span><span class="l">Kommunen in Deutschland</span></div>
+      <div class="md-stat"><span class="n">~8.500</span><span class="l">Kämmerer &amp; Finanzfachkräfte</span></div>
+      <div class="md-stat"><span class="n">294</span><span class="l">Landkreise</span></div>
+      <div class="md-stat"><span class="n">wöchentlich</span><span class="l">Newsletter-Frequenz</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="md-main">
+  <div class="md-container">
+
+    <!-- ZIELGRUPPE -->
+    <div class="md-section">
+      <div class="md-section-label">Zielgruppe</div>
+      <h2>Wer liest derkaemmerer.de?</h2>
+
+      <div class="md-audience-grid">
+        <div class="md-aud-card">
+          <div class="md-aud-num">62 %</div>
+          <div class="md-aud-label">Kämmerei &amp; Haushalt</div>
+          <div class="md-aud-sub">Kämmerer, Haushaltssachbearbeitung</div>
+        </div>
+        <div class="md-aud-card">
+          <div class="md-aud-num">18 %</div>
+          <div class="md-aud-label">Soziales &amp; Jugend</div>
+          <div class="md-aud-sub">Jugendamt, Sozialverwaltung</div>
+        </div>
+        <div class="md-aud-card">
+          <div class="md-aud-num">12 %</div>
+          <div class="md-aud-label">Kommunale Führung</div>
+          <div class="md-aud-sub">Landräte, Bürgermeister, Dezernenten</div>
+        </div>
+        <div class="md-aud-card">
+          <div class="md-aud-num">8 %</div>
+          <div class="md-aud-label">Dienstleister &amp; Berater</div>
+          <div class="md-aud-sub">Kommunalberater, IT, Recht</div>
+        </div>
+      </div>
+
+      <div class="md-profile-grid">
+        <div class="md-profile-card">
+          <h4>Typisches Leserprofil</h4>
+          <ul>
+            <li>Kämmerin / Kämmerer einer deutschen Stadt oder eines Landkreises</li>
+            <li>30–58 Jahre, überwiegend mit Hochschulabschluss</li>
+            <li>Entscheidungsverantwortung für Millionenbudgets</li>
+            <li>Aktiv suchend nach Fachinformationen und Werkzeugen</li>
+            <li>Vergibt Aufträge an kommunale Dienstleister</li>
+          </ul>
+        </div>
+        <div class="md-profile-card">
+          <h4>Entscheidungskompetenzen</h4>
+          <ul>
+            <li>Haushaltsplanung und Investitionsentscheidungen</li>
+            <li>Vergabe von Beratungs- und IT-Dienstleistungen</li>
+            <li>Personalentscheidungen (Besetzung von Führungsstellen)</li>
+            <li>Auswahl von Softwarelösungen (ERP, Controlling, Doppik)</li>
+            <li>Beschaffung kommunaler Finanzierungsinstrumente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- REICHWEITE -->
+    <div class="md-section">
+      <div class="md-section-label">Reichweite</div>
+      <h2>Unsere Kanäle im Überblick</h2>
+
+      <div class="md-reach-grid">
+        <div class="md-reach-card">
+          <div class="icon">🌐</div>
+          <span class="val">derkaemmerer.de</span>
+          <h4>Portal &amp; Fachbeiträge</h4>
+          <p>Wöchentlich neue Analysen, Best Practice und Daten zu kommunalen Finanzen, Sozialkosten und Haushalt. Organische Suchreichweite über Google.</p>
+        </div>
+        <div class="md-reach-card">
+          <div class="icon">📧</div>
+          <span class="val">Wöchentlich</span>
+          <h4>Newsletter</h4>
+          <p>Wöchentliches Briefing direkt ins Postfach von Kämmereifachkräften und kommunalen Entscheidern. Hohe Öffnungsrate durch gezielte Themenselektion.</p>
+        </div>
+        <div class="md-reach-card">
+          <div class="icon">💼</div>
+          <span class="val">2.500+</span>
+          <h4>LinkedIn</h4>
+          <p>Aktiver LinkedIn-Kanal mit kommunalem Fachpublikum. Beiträge erreichen Kämmerer, Sozialverwaltungen und kommunale Führungskräfte im DACH-Raum.</p>
+        </div>
+        <div class="md-reach-card">
+          <div class="icon">📋</div>
+          <span class="val">81+</span>
+          <h4>Stellenbörse</h4>
+          <p>Deutschlands spezialisierte Stellenbörse für kommunale Führungskräfte. Aktuelle Ausschreibungen aus Kämmerei, Jugendamt und Sozialverwaltung.</p>
+        </div>
+        <div class="md-reach-card">
+          <div class="icon">📊</div>
+          <span class="val">7 Ressorts</span>
+          <h4>Fachthemen</h4>
+          <p>Haushalt, Einnahmen, Ausgaben, Best Practice, Recht &amp; Vergabe, Analyse, Sozialkosten — thematisch tief aufgestellt für die kommunale Praxis.</p>
+        </div>
+        <div class="md-reach-card">
+          <div class="icon">🗺️</div>
+          <span class="val">16 BL</span>
+          <h4>Alle Bundesländer</h4>
+          <p>Leser aus allen 16 Bundesländern — von Bayern bis Schleswig-Holstein, von NRW bis Brandenburg. Geographisch breit aufgestellt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- THEMEN -->
+    <div class="md-section">
+      <div class="md-section-label">Inhalt</div>
+      <h2>Unsere Themenfelder</h2>
+      <div class="md-topics-grid">
+        <div class="md-topic">
+          <div class="md-topic-icon">🏛️</div>
+          <div class="md-topic-name">Haushalt &amp; Finanzen</div>
+          <div class="md-topic-count">Haushaltsrecht, Doppik, Konsolidierung</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">💰</div>
+          <div class="md-topic-name">Einnahmen erschließen</div>
+          <div class="md-topic-count">Steuern, Gebühren, Förderung</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">📉</div>
+          <div class="md-topic-name">Ausgaben steuern</div>
+          <div class="md-topic-count">Personalkosten, Investitionen</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">⚖️</div>
+          <div class="md-topic-name">Recht &amp; Vergabe</div>
+          <div class="md-topic-count">Vergaberecht, Kommunalrecht</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">🔍</div>
+          <div class="md-topic-name">Analyse &amp; Daten</div>
+          <div class="md-topic-count">Rankings, Kennzahlen, Benchmarks</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">🏆</div>
+          <div class="md-topic-name">Best Practice</div>
+          <div class="md-topic-count">Erfolgreiche Projekte aus DE</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">👨‍👩‍👦</div>
+          <div class="md-topic-name">Sozialkosten</div>
+          <div class="md-topic-count">HzE, SGB VIII/XII, Asylkosten</div>
+        </div>
+        <div class="md-topic">
+          <div class="md-topic-icon">💼</div>
+          <div class="md-topic-name">Stellenbörse</div>
+          <div class="md-topic-count">Kämmerei, Jugendamt, Führung</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WERBEFORMATE -->
+    <div class="md-section">
+      <div class="md-section-label">Werbeformate</div>
+      <h2>Wie Sie Ihre Zielgruppe erreichen</h2>
+
+      <div class="md-format-grid">
+
+        <div class="md-format-card">
+          <div class="md-format-name">Stellenanzeigen</div>
+          <div class="md-format-title">Kommunale Stellenanzeige</div>
+          <p class="md-format-desc">Schreiben Sie kommunale Führungsstellen gezielt aus — Kämmerei, Jugendamt, Sozialverwaltung und mehr. Kämmerer suchen hier, nicht auf allgemeinen Jobbörsen.</p>
+          <div class="md-format-price">ab 290 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · 30 Tage Laufzeit</div>
+          <ul class="md-format-features">
+            <li>Vollständige Anzeige mit Logo, Beschreibung und Bewerbungslink</li>
+            <li>Suchmaschinen-Indexierung (Google)</li>
+            <li>Premium-Platzierung mit Newsletter-Erwähnung ab 490 €</li>
+            <li>Kampagnenpaket inkl. redakt. Begleitung ab 990 €</li>
+          </ul>
+          <a href="/anzeige-aufgeben" class="md-format-cta">Jetzt buchen</a>
+        </div>
+
+        <div class="md-format-card featured">
+          <div class="md-format-badge">Empfohlen</div>
+          <div class="md-format-name">Newsletter</div>
+          <div class="md-format-title">Newsletter Solo-Mailing</div>
+          <p class="md-format-desc">Ihre Botschaft allein im Posteingang — ein dediziertes E-Mail-Mailing exklusiv für Ihre Stellenausschreibung oder Ihr Angebot an alle Newsletter-Abonnenten.</p>
+          <div class="md-format-price">390 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · einmalig</div>
+          <ul class="md-format-features">
+            <li>Dediziertes Mailing ohne weitere Inhalte</li>
+            <li>Direkte Zustellung an alle aktiven Abonnenten</li>
+            <li>Ideal für Stellenausschreibungen mit Dringlichkeit</li>
+            <li>Gestaltung auf Wunsch durch die Redaktion</li>
+          </ul>
+          <a href="mailto:anzeigen@derkaemmerer.de?subject=Newsletter-Mailing" class="md-format-cta">Anfragen</a>
+        </div>
+
+        <div class="md-format-card">
+          <div class="md-format-name">LinkedIn</div>
+          <div class="md-format-title">LinkedIn Sponsored Post</div>
+          <p class="md-format-desc">Erhöhte Reichweite auf dem derkaemmerer.de LinkedIn-Kanal — Ihr Inhalt als bezahlter Post mit dem Vertrauensbonus des Fachmediums.</p>
+          <div class="md-format-price">250 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · 7 Tage</div>
+          <ul class="md-format-features">
+            <li>Post auf dem offiziellen derkaemmerer.de Profil</li>
+            <li>Boost über LinkedIn-Algorithmus</li>
+            <li>Text und Gestaltung durch die Redaktion</li>
+            <li>Ergebnisbericht nach Kampagnenende</li>
+          </ul>
+          <a href="mailto:anzeigen@derkaemmerer.de?subject=LinkedIn-Post" class="md-format-cta">Anfragen</a>
+        </div>
+
+        <div class="md-format-card">
+          <div class="md-format-name">Inhalt</div>
+          <div class="md-format-title">Gastbeitrag / Sponsored Content</div>
+          <p class="md-format-desc">Positionieren Sie Ihr Unternehmen als Experte mit einem redaktionell aufbereiteten Gastbeitrag. Thematisch eingebettet in den Fachinhalt — transparent als Anzeige gekennzeichnet.</p>
+          <div class="md-format-price">ab 450 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · dauerhaft online</div>
+          <ul class="md-format-features">
+            <li>Redaktionell aufbereiteter Fachbeitrag (800–1.500 Wörter)</li>
+            <li>Dauerhaft auf derkaemmerer.de auffindbar</li>
+            <li>Verlinkung auf Ihre Webseite</li>
+            <li>Optional: Newsletter-Erwähnung +150 €</li>
+          </ul>
+          <a href="mailto:anzeigen@derkaemmerer.de?subject=Gastbeitrag" class="md-format-cta">Anfragen</a>
+        </div>
+
+        <div class="md-format-card">
+          <div class="md-format-name">Employer Branding</div>
+          <div class="md-format-title">Arbeitgeber-Porträt</div>
+          <p class="md-format-desc">Stellen Sie Ihre Behörde oder Ihr Unternehmen als attraktiven Arbeitgeber vor — als dauerhaftes Profil auf derkaemmerer.de, verlinkt aus der Stellenbörse.</p>
+          <div class="md-format-price">450 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · 12 Monate online</div>
+          <ul class="md-format-features">
+            <li>Redaktioneller Arbeitgeber-Beitrag (800 Wörter)</li>
+            <li>Logo, Fotos und Verlinkung inklusive</li>
+            <li>Verlinkung aus aktiven Stellenanzeigen</li>
+            <li>Ideal als Ergänzung zum Kampagnenpaket</li>
+          </ul>
+          <a href="mailto:anzeigen@derkaemmerer.de?subject=Arbeitgeber-Porträt" class="md-format-cta">Anfragen</a>
+        </div>
+
+        <div class="md-format-card">
+          <div class="md-format-name">Kontingent</div>
+          <div class="md-format-title">Rahmenvertrag &amp; Jahrespaket</div>
+          <p class="md-format-desc">Sie haben regelmäßig kommunale Stellen zu besetzen oder möchten dauerhaft sichtbar sein? Unser Jahrespaket spart bis zu 35 % gegenüber Einzelbuchungen.</p>
+          <div class="md-format-price">ab 990 €</div>
+          <div class="md-format-price-note">zzgl. MwSt. · Jahrespaket</div>
+          <ul class="md-format-features">
+            <li>5er-Kontingent Basis-Anzeigen: 990 € (statt 1.450 €)</li>
+            <li>Unbegrenzte Basis-Anzeigen + 1× Exklusiv: 1.990 €/Jahr</li>
+            <li>Flexible Abrufmöglichkeit über 12 Monate</li>
+            <li>Persönlicher Ansprechpartner in der Redaktion</li>
+          </ul>
+          <a href="mailto:anzeigen@derkaemmerer.de?subject=Jahrespaket" class="md-format-cta">Anfragen</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PREISÜBERSICHT -->
+    <div class="md-section">
+      <div class="md-section-label">Preise</div>
+      <h2>Alle Formate im Überblick</h2>
+      <div style="overflow-x:auto">
+        <table class="md-price-table">
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Beschreibung</th>
+              <th>Laufzeit</th>
+              <th>Preis (netto)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stellenanzeige Basis</td>
+              <td>Vollständige Anzeige mit Logo und Bewerbungslink</td>
+              <td>30 Tage</td>
+              <td>290 €</td>
+            </tr>
+            <tr>
+              <td>Stellenanzeige Premium</td>
+              <td>Top-Platzierung + Newsletter + LinkedIn</td>
+              <td>45 Tage</td>
+              <td>490 €</td>
+            </tr>
+            <tr>
+              <td>Stellenanzeige Exklusiv</td>
+              <td>Kampagnenpaket inkl. redaktioneller Begleitung</td>
+              <td>60 Tage</td>
+              <td>990 €</td>
+            </tr>
+            <tr>
+              <td>Newsletter Solo-Mailing</td>
+              <td>Dedizierte E-Mail an alle Abonnenten</td>
+              <td>1× Versand</td>
+              <td>390 €</td>
+            </tr>
+            <tr>
+              <td>LinkedIn Sponsored Post</td>
+              <td>Bezahlter Post auf dem derkaemmerer.de-Profil</td>
+              <td>7 Tage</td>
+              <td>250 €</td>
+            </tr>
+            <tr>
+              <td>Gastbeitrag / Sponsored Content</td>
+              <td>Redaktionell aufbereiteter Fachbeitrag</td>
+              <td>dauerhaft</td>
+              <td>ab 450 €</td>
+            </tr>
+            <tr>
+              <td>Arbeitgeber-Porträt</td>
+              <td>Arbeitgeberprofil mit Verlinkung aus Stellenbörse</td>
+              <td>12 Monate</td>
+              <td>450 €</td>
+            </tr>
+            <tr>
+              <td>Anzeigenverlängerung</td>
+              <td>+30 Tage für eine bestehende Anzeige</td>
+              <td>+30 Tage</td>
+              <td>99 €</td>
+            </tr>
+            <tr>
+              <td>5er-Kontingent</td>
+              <td>5 Basis-Anzeigen, flexibel abrufbar</td>
+              <td>12 Monate</td>
+              <td>990 €</td>
+            </tr>
+            <tr>
+              <td>Jahrespaket Premium</td>
+              <td>Unbegrenzte Basis + 1× Exklusiv inklusive</td>
+              <td>12 Monate</td>
+              <td>1.990 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:#9ca3af;margin-top:12px">Alle Preise zzgl. gesetzlicher Mehrwertsteuer · Rechnung nach Schaltung · Zahlung innerhalb 14 Tagen · Für gemeinnützige Träger und Kommunen unter 20.000 Einwohnern: 20 % Rabatt auf alle Pakete</p>
+    </div>
+
+    <!-- KONDITIONEN -->
+    <div class="md-section">
+      <div class="md-section-label">Konditionen</div>
+      <h2>Buchung &amp; Abwicklung</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+        <div>
+          <h4 style="font-size:12px;font-weight:700;color:#1a2744;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em">⚡ Schaltung</h4>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Nach Eingang von Anzeige und Zahlung schalten wir innerhalb von <strong>24 Stunden</strong> (Werktage). Auf Wunsch auch am selben Tag.</p>
+        </div>
+        <div>
+          <h4 style="font-size:12px;font-weight:700;color:#1a2744;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em">📄 Lieferung</h4>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Stellenbeschreibung, Logo und Kontaktdaten per E-Mail — wir gestalten die Anzeige. Oder: Online-Formular ausfüllen und direkt buchen.</p>
+        </div>
+        <div>
+          <h4 style="font-size:12px;font-weight:700;color:#1a2744;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em">💶 Zahlung</h4>
+          <p style="font-size:13px;color:#374151;line-height:1.7">Rechnung nach Schaltung, zahlbar innerhalb von 14 Tagen. SEPA-Lastschrift und Überweisung. Für Jahrespakete auch Ratenzahlung möglich.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KONTAKT -->
+    <div class="md-contact">
+      <div class="md-contact-text">
+        <h3>Anzeige buchen oder Angebot anfragen</h3>
+        <p>
+          Wir beraten Sie kostenlos zur richtigen Strategie für Ihre kommunale Zielgruppe.<br>
+          <strong>Antwort innerhalb von 4 Stunden (Werktage).</strong><br>
+          <span style="color:#6b7280;font-size:13px">anzeigen@derkaemmerer.de · HAKO Beteiligungsgesellschaft mbH · Dresden</span>
+        </p>
+      </div>
+      <div class="md-contact-cta">
+        <a href="/anzeige-aufgeben" class="cta-main">Stellenanzeige aufgeben →</a>
+        <a href="mailto:anzeigen@derkaemmerer.de?subject=Mediadaten-Anfrage" class="cta-alt">Angebot anfragen</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<Footer />
+</Base>
