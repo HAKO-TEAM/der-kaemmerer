@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-06-05"
 bewerbungslink: "pmo@hako.team"
 schlagwoerter: ["Kommunalverwaltung", "TVöD"]
 paket: "Exklusiv"
-aktiv: false
+aktiv: true
 datum: "2026-06-01"
 featured: true
 ---
