@@ -163,19 +163,13 @@ const jobs = rawJobs.map(job => {
   <div class="st-container">
     <div class="st-filter-inner">
       <span class="st-filter-label">Filtern:</span>
-      <select id="filterBundesland" onchange="filterJobs()">
+      <select id="filterBundesland">
         <option value="">Alle Bundesländer</option>
         {[...new Set(jobs.map(j => j.data.bundesland))].sort().map(bl => (
           <option value={bl}>{bl}</option>
         ))}
       </select>
-      <select id="filterPaket" onchange="filterJobs()">
-        <option value="">Alle Pakete</option>
-        <option value="Exklusiv">Exklusiv</option>
-        <option value="Premium">Premium</option>
-        <option value="Basis">Basis</option>
-      </select>
-      <select id="filterOrgtyp" onchange="filterJobs()">
+      <select id="filterOrgtyp">
         <option value="">Alle Organisationstypen</option>
         {[...new Set(jobs.map(j => j.data.orgtyp))].sort().map(t => (
           <option value={t}>{t}</option>
@@ -258,18 +252,21 @@ const jobs = rawJobs.map(job => {
 <script>
 function filterJobs() {
   const bl = (document.getElementById('filterBundesland') as HTMLSelectElement).value;
-  const pk = (document.getElementById('filterPaket') as HTMLSelectElement).value;
   const ot = (document.getElementById('filterOrgtyp') as HTMLSelectElement).value;
   let count = 0;
-  document.querySelectorAll<HTMLElement>('#jobList .st-card').forEach(card => {
+  const cards = document.querySelectorAll('#jobList .st-card') as NodeListOf<HTMLElement>;
+  cards.forEach(card => {
     const show =
       (!bl || card.dataset.bundesland === bl) &&
-      (!pk || card.dataset.paket === pk) &&
       (!ot || card.dataset.orgtyp === ot);
     card.style.display = show ? 'block' : 'none';
     if (show) count++;
   });
   const el = document.getElementById('jobCount');
-  if (el) el.textContent = `${count} ${count === 1 ? 'Stelle' : 'Stellen'} gefunden`;
+  if (el) el.textContent = count + ' ' + (count === 1 ? 'Stelle' : 'Stellen') + ' gefunden';
 }
+
+// Event-Listener statt inline onchange (Astro Modulscope)
+document.getElementById('filterBundesland')?.addEventListener('change', filterJobs);
+document.getElementById('filterOrgtyp')?.addEventListener('change', filterJobs);
 </script>
