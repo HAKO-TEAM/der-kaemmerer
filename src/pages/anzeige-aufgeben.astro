@@ -310,31 +310,102 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
     <form id="anzeigenForm" action="/api/booking" method="POST">
 
       <!-- ══ 1. PAKET ══ -->
-      <div class="f-section" id="sectionPaket">
-        <div class="f-section-head">
-          <div class="f-section-icon">📦</div>
-          <div>
-            <h2>Paket wählen</h2>
-            <p>Wählen Sie Ihr gewünschtes Anzeigenpaket</p>
+      <div class="f-section" id="sectionPaket" style="padding:0;background:transparent;border:none;box-shadow:none">
+
+        <input type="hidden" name="paket" value="KommunalFlat – 249 €/Monat" id="paketInput">
+
+        <!-- KommunalFlat Hero-Card -->
+        <div style="background:linear-gradient(135deg,#0f172a 0%,#1a2744 60%,#1e3a5f 100%);border-radius:8px;overflow:hidden;position:relative">
+
+          <!-- Hintergrund-Gitter -->
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none"></div>
+
+          <!-- Blauer Akzentstreifen oben -->
+          <div style="height:4px;background:linear-gradient(90deg,#2563eb,#60a5fa,#2563eb);background-size:200%;animation:shimmer 3s linear infinite"></div>
+
+          <div style="padding:40px 40px 36px;position:relative;z-index:1">
+
+            <!-- Badge -->
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.25);border:1px solid rgba(37,99,235,0.5);padding:5px 14px;border-radius:20px;margin-bottom:28px">
+              <span style="width:6px;height:6px;background:#60a5fa;border-radius:50%;display:inline-block"></span>
+              <span style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#93c5fd">Das einzige Angebot — KommunalFlat</span>
+            </div>
+
+            <!-- Preis + Features Grid -->
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start">
+
+              <!-- Preis-Block -->
+              <div style="text-align:center;min-width:160px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px">Monatspreis</div>
+                <div style="display:flex;align-items:flex-start;justify-content:center;gap:2px;line-height:1">
+                  <span style="font-size:20px;color:rgba(255,255,255,0.5);font-weight:300;margin-top:10px">€</span>
+                  <span style="font-family:'Playfair Display',serif;font-size:80px;font-weight:700;color:#fff;letter-spacing:-2px">249</span>
+                </div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:4px">zzgl. MwSt.</div>
+                <div style="margin-top:16px;padding:10px 16px;background:rgba(37,99,235,0.2);border:1px solid rgba(37,99,235,0.4);border-radius:4px">
+                  <div style="font-size:10px;color:#93c5fd;font-weight:600;letter-spacing:1px">UNLIMITIERT</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px">Keine Stückpreise</div>
+                </div>
+              </div>
+
+              <!-- Features -->
+              <div>
+                <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.2">Unlimitierte Stellenanzeigen.<br><em style="color:#93c5fd;font-style:italic">Alles inklusive.</em></div>
+                <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:24px">12-Monatsvertrag · Direktauftrag unter Ausschreibungsschwelle</div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Unlimitierte Stellenanzeigen – alle Ämter</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">„Deine Stadt als Arbeitgeber" – Dossier inklusive</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Newsletter-Erwähnung bei jeder neuen Stelle</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">LinkedIn-Post für jede neue Ausschreibung</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Professionelle Gestaltung in 24 Stunden</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px">
+                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Monatlich kündbar nach dem 12. Monat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trennlinie + Fußzeile -->
+            <div style="border-top:1px solid rgba(255,255,255,0.08);margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+              <div style="display:flex;gap:24px;flex-wrap:wrap">
+                <span style="font-size:11px;color:rgba(255,255,255,0.3)">📋 12-Monatsvertrag</span>
+                <span style="font-size:11px;color:rgba(255,255,255,0.3)">⚡ Direktauftrag</span>
+                <span style="font-size:11px;color:rgba(255,255,255,0.3)">✉️ Kündigung per E-Mail</span>
+              </div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.25)">Jahresgesamtbetrag: 2.988 € zzgl. MwSt.</div>
+            </div>
           </div>
         </div>
 
-        <div class="f-paket-grid" style="grid-template-columns:1fr">
-          <label class="f-paket-card selected" id="card-kommunalflat" data-paket="KommunalFlat – 249 €/Monat">
-            <input type="radio" name="paket" value="KommunalFlat – 249 €/Monat" required checked>
-            <div class="f-paket-badge">Empfohlen</div>
-            <div class="f-paket-check">✓</div>
-            <div class="f-paket-name">KommunalFlat</div>
-            <div class="f-paket-title">Unlimitierte Stellenanzeigen</div>
-            <div class="f-paket-price">249 € <small>/ Monat zzgl. MwSt.</small></div>
-            <div class="f-paket-days">12-Monatsvertrag · Unlimitiert · Stadt-Dossier inklusive · Newsletter &amp; LinkedIn</div>
-          </label>
-        </div>
-
         <p style="font-size:12px;color:#6b7280;margin-top:12px;line-height:1.6">
-          Nach Absenden erhalten Sie innerhalb von 1 Werktag den Vertrag per E-Mail.
-          Kein Kreistagsbeschluss erforderlich – Direktauftrag unter Ausschreibungsschwelle.
+          Nach Absenden Ihrer Anfrage erhalten Sie innerhalb von 1 Werktag den Vertrag per E-Mail.
         </p>
+
+        <style>
+          @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
+          @media(max-width:640px){
+            #sectionPaket [style*="grid-template-columns:auto 1fr"]{grid-template-columns:1fr!important;gap:24px!important}
+            #sectionPaket [style*="font-size:80px"]{font-size:60px!important}
+            #sectionPaket [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+          }
+        </style>
       </div>
 
       <!-- ══ 2. STELLENINFORMATIONEN ══ -->
@@ -667,6 +738,9 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 // Fehlermeldung beim Laden immer zurücksetzen
 document.getElementById('errorMsg')?.classList.remove('visible');
 
+// ── KommunalFlat: Paket fix vorbelegt ───────────
+// (kein Radio mehr nötig — hidden input)
+
 // ── Preise ──────────────────────────────────────────────
 const paketPreise: Record<string, number> = {
   'Basis – 290 €': 290,
@@ -678,7 +752,7 @@ const addonPreise: Record<string, number> = {
   addon_linkedin:   250,
   addon_portraet:   450,
 };
-let selectedPaket = '';
+let selectedPaket = 'KommunalFlat – 249 €/Monat';
 
 // ── Zusammenfassung aktualisieren ───────────────────────
 function updateSummary() {
