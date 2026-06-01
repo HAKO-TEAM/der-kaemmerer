@@ -14,7 +14,7 @@ schlagwoerter: ["Kommunalverwaltung", "TVöD"]
 paket: "Exklusiv"
 aktiv: false
 datum: "2026-06-01"
-featured: false
+featured: true
 ---
 
 asdf
