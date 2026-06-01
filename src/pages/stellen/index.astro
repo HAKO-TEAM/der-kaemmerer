@@ -22,7 +22,7 @@ function deadlineText(tage: number, schluss: string) {
 const rawJobs = (await getCollection('jobs'))
   .filter(j => j.data.aktiv && new Date(j.data.bewerbungsschluss) >= heute)
   .sort((a, b) => {
-    const rank: Record<string, number> = { Exklusiv: 0, Premium: 1, Basis: 2 };
+    const rank: Record<string, number> = { KommunalFlat: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
     const r = rank[a.data.paket] - rank[b.data.paket];
     return r !== 0 ? r : new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime();
   });
@@ -187,7 +187,7 @@ const jobs = rawJobs.map(job => {
     <div class="st-cta">
       <div>
         <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b82f6;margin-bottom:6px">Für Arbeitgeber</p>
-        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie qualifizierte Fachkräfte und Führungspersönlichkeiten im kommunalen Umfeld — ab 290 € für 30 Tage.</p>
+        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie qualifizierte Fachkräfte und Führungspersönlichkeiten im kommunalen Umfeld — KommunalFlat ab 249 € / Monat, unlimitiert.</p>
       </div>
       <a href="/anzeige-aufgeben" class="st-cta-btn">Jetzt Anzeige aufgeben →</a>
     </div>
@@ -240,7 +240,7 @@ const jobs = rawJobs.map(job => {
 
     <!-- CTA für Arbeitgeber – unten -->
     <div class="st-cta">
-      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Schalten Sie jetzt Ihre kommunale Stellenanzeige — ab 290 € für 30 Tage, innerhalb von 24 Stunden live.</p>
+      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Schalten Sie jetzt Ihre kommunale Stellenanzeige — KommunalFlat ab 249 € / Monat – unlimitiert, innerhalb von 24 Stunden live.</p>
       <a href="/anzeige-aufgeben" class="st-cta-btn">Anzeige aufgeben →</a>
     </div>
   </div>
