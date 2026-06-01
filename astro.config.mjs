@@ -7,5 +7,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   site: 'https://derkaemmerer.de',
   output: 'static',
+  security: { checkOrigin: false },
   adapter: vercel(),
 });

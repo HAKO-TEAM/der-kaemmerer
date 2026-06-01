@@ -67,17 +67,25 @@ async function createGitHubFile(slug: string, content: string, env: Record<strin
   const path    = `src/content/jobs/${slug}.md`;
   const encoded = Buffer.from(content, 'utf8').toString('base64');
 
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const headers = {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+
+  // SHA holen falls Datei bereits existiert
+  const existing = await fetch(url, { headers });
+  const sha = existing.ok ? (await existing.json()).sha : undefined;
+
+  const res = await fetch(url, {
     method: 'PUT',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      'X-GitHub-Api-Version': '2022-11-28',
-    },
+    headers,
     body: JSON.stringify({
       message: `Draft job: ${slug}`,
       content: encoded,
       branch: 'main',
+      ...(sha ? { sha } : {}),
     }),
   });
 
