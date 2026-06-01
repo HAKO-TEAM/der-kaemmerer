@@ -1,0 +1,42 @@
+---
+title: "Referatsleitung Steuern und Abgaben (m/w/d)"
+organisation: "Stadt Jena"
+orgtyp: "Kreisfreie Stadt"
+ort: "Jena"
+bundesland: "Thüringen"
+entgelt: "EG 12 TVöD"
+beschaeftigung: "Vollzeit"
+befristung: "Unbefristet"
+startdatum: "zum nächstmöglichen Zeitpunkt"
+bewerbungsschluss: "2026-10-31"
+bewerbungslink: "https://www.jena.de/karriere"
+schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
+paket: "Basis"
+aktiv: true
+datum: "2026-06-07"
+featured: false
+---
+
+Die **Stadt Jena** sucht zum nächstmöglichen Zeitpunkt eine qualifizierte Führungskraft für die Position Referatsleitung Steuern und Abgaben (m/w/d).
+
+## Ihre Aufgaben
+
+- Leitung des zuständigen Amts bzw. Fachbereichs
+- Verantwortung für Haushaltsplanung, -ausführung und Jahresabschluss
+- Führung und Entwicklung des Teams
+- Beratung von Rat/Stadtverordnetenversammlung und Verwaltungsführung
+- Strategische Weiterentwicklung des Aufgabenbereichs
+
+## Ihr Profil
+
+- Abgeschlossenes Hochschulstudium in einem einschlägigen Fachgebiet
+- Mehrjährige Berufserfahrung in der kommunalen Verwaltung
+- Fundierte Kenntnisse im einschlägigen Fachrecht
+- Führungserfahrung und Teamkompetenz
+
+## Wir bieten
+
+- EG 12 TVöD
+- Flexible Arbeitszeiten und Möglichkeit zum Homeoffice
+- Betriebliche Altersvorsorge und Weiterbildungsmöglichkeiten
+- Sicherer Arbeitsplatz im öffentlichen Dienst
