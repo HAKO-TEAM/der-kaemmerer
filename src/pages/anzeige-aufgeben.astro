@@ -5,7 +5,8 @@ import Footer from '../components/Footer.astro';
 
 // ── Formspree: Konto anlegen auf formspree.io, neue Form erstellen,
 //    dann die Form-ID hier eintragen (z.B. "xpzgkrqw")
-const FORMSPREE_ID = 'mdajrkjk';
+// Formspree nicht mehr nötig – eigene API-Route übernimmt alles
+const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 ---
 <Base
   title="Stellenanzeige aufgeben"
@@ -306,7 +307,7 @@ const FORMSPREE_ID = 'mdajrkjk';
       Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an anzeigen@derkaemmerer.de.
     </div>
 
-    <form id="anzeigenForm" action={`https://formspree.io/f/${FORMSPREE_ID}`} method="POST">
+    <form id="anzeigenForm" action="/api/booking" method="POST">
 
       <!-- ══ 1. PAKET ══ -->
       <div class="f-section" id="sectionPaket">
