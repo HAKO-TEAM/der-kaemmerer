@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-11-15"
-bewerbungslink: "https://www.erfurt.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Thüringen"
 schlagwoerter: ["ThürKO", "Doppik Thüringen", "Haushaltsplanung", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

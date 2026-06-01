@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 7 Jahre"
 startdatum: "01.06.2027"
 bewerbungsschluss: "2027-01-31"
-bewerbungslink: "https://www.dresden.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

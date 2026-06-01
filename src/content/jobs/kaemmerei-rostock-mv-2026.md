@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.rostock.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Mecklenburg-Vorpommern"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

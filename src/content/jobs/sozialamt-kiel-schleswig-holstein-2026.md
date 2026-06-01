@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.kiel.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Schleswig-Holstein"
 schlagwoerter: ["SGB XII", "SGB II", "Sozialhilfe", "Wohngeld", "Führungserfahrung", "Schleswig-Holstein"]
 paket: "Premium"
 aktiv: true

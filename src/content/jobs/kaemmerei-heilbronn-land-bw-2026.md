@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.landkreis-heilbronn.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Baden-Württemberg"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD", "Landkreis"]
 paket: "Basis"
 aktiv: true

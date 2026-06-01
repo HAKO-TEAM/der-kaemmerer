@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.oberhausen.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Verwaltung&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["NKF", "Jahresabschluss", "Doppik NRW", "SAP", "Konsolidierung", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-12"
-bewerbungslink: "https://www.zfm-bonn.de/jobboerse"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Führungserfahrung", "Sozialverwaltung", "HzE-Steuerung", "TVöD"]
 paket: "Premium"
 aktiv: true

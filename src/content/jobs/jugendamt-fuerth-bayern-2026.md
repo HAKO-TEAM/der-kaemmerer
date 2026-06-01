@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.fuerth.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Bayern"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "Bayern", "Kleeblattstadt", "TVöD"]
 paket: "Basis"
 aktiv: true

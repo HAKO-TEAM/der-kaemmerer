@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 6 Jahre"
 startdatum: "01.01.2028"
 bewerbungsschluss: "2027-03-31"
-bewerbungslink: "https://www.landshut.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Bayern"
 schlagwoerter: ["BayGO", "Doppik Bayern", "Beteiligungsmanagement", "Wahlbeamter", "Niederbayern", "B2"]
 paket: "Exklusiv"
 aktiv: true

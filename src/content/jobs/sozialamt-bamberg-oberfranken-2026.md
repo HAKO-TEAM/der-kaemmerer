@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.stadt.bamberg.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Bayern"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

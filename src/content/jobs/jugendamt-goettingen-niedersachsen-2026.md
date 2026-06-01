@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.landkreisgoettingen.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Niedersachsen"
 schlagwoerter: ["SGB VIII", "Jugendhilfeplanung", "HzE-Steuerung", "Kinderschutz", "Niedersachsen", "TVöD"]
 paket: "Basis"
 aktiv: true

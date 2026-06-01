@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.frankfurt-oder.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Brandenburg"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "HzE", "Brandenburg", "TVöD"]
 paket: "Basis"
 aktiv: true

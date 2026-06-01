@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.mainz.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Verwaltung&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["Wohngeld", "SGB XII", "Sozialhilfe", "Mietrecht", "TVöD", "Rheinland-Pfalz"]
 paket: "Basis"
 aktiv: true

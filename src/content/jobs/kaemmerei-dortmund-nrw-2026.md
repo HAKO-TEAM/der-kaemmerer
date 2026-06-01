@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.01.2028"
 bewerbungsschluss: "2027-06-30"
-bewerbungslink: "https://www.dortmund.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

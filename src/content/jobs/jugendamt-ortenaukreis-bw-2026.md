@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.03.2027"
 bewerbungsschluss: "2026-12-31"
-bewerbungslink: "https://www.ortenaukreis.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Baden-Württemberg"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD", "Landkreis"]
 paket: "Basis"
 aktiv: true

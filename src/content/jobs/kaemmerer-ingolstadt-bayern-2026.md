@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 6 Jahre"
 startdatum: "01.05.2027"
 bewerbungsschluss: "2026-12-31"
-bewerbungslink: "https://www.ingolstadt.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Bayern"
 schlagwoerter: ["BayGO", "Doppik Bayern", "Beteiligungsmanagement", "Wahlbeamter", "B2", "Audi"]
 paket: "Exklusiv"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.suhl.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Thüringen"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD", "Landkreis"]
 paket: "Basis"
 aktiv: true

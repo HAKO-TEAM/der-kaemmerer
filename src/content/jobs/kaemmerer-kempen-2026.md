@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 8 Jahre"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-28"
-bewerbungslink: "https://www.kempen.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["Kommunalfinanzen", "Haushaltsrecht NRW", "Führungserfahrung", "Doppik", "TVöD", "Wahlbeamter"]
 paket: "Premium"
 aktiv: true

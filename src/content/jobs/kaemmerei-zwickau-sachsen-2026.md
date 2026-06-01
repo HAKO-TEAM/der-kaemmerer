@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.landkreis-zwickau.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen"
 schlagwoerter: ["Doppik Sachsen", "SächsLKrO", "Jahresabschluss", "Führungserfahrung", "TVöD", "Controlling"]
 paket: "Basis"
 aktiv: true

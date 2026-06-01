@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.hannover.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Niedersachsen"
 schlagwoerter: ["Controlling", "NKomVG", "SAP", "Steuerungsberichte", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

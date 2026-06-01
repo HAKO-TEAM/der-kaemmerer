@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
-bewerbungslink: "https://www.amt-biesenthal-barnim.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Brandenburg"
 schlagwoerter: ["Haushaltsrecht Brandenburg", "KVBbg", "Doppik", "Kameralistik", "TVöD"]
 paket: "Basis"
 aktiv: true

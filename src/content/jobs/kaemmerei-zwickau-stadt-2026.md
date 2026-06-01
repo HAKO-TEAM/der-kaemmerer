@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.zwickau.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen"
 schlagwoerter: ["SächsGemO", "Doppik Sachsen", "Haushaltsrecht", "Führungserfahrung", "Robert-Schumann-Stadt", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.07.2027"
 bewerbungsschluss: "2026-12-15"
-bewerbungslink: "https://www.wolfsburg.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Niedersachsen"
 schlagwoerter: ["NBesO", "NKomVG", "Haushaltsrecht Nds.", "Beteiligungsmanagement", "B3", "VW"]
 paket: "Exklusiv"
 aktiv: true

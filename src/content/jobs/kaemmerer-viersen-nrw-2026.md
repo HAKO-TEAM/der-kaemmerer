@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.10.2026"
 bewerbungsschluss: "2026-08-15"
-bewerbungslink: "https://www.kreis-viersen.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["NKF", "Doppik NRW", "Jahresabschluss", "Führungserfahrung", "A15", "Kreis"]
 paket: "Premium"
 aktiv: true

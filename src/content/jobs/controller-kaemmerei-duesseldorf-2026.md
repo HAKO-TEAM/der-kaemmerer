@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.duesseldorf.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["Controlling", "SAP", "Doppik NRW", "Haushaltsüberwachung", "TVöD", "NKF"]
 paket: "Basis"
 aktiv: true

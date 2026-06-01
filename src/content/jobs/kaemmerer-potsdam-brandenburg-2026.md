@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 8 Jahre"
 startdatum: "01.06.2027"
 bewerbungsschluss: "2026-12-31"
-bewerbungslink: "https://www.potsdam.de/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Brandenburg"
 schlagwoerter: ["KVBbg", "Doppik", "Beteiligungsmanagement", "Wahlbeamter", "B4", "UNESCO"]
 paket: "Exklusiv"
 aktiv: true

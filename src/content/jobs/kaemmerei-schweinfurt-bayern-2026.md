@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.schweinfurt.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Bayern"
 schlagwoerter: ["Haushaltsrecht Bayern", "BayGO", "Doppik", "Jahresabschluss", "A14", "Unterfranken"]
 paket: "Basis"
 aktiv: true

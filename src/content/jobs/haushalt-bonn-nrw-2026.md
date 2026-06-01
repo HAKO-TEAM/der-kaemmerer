@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.bonn.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["NKF", "Doppik NRW", "Haushaltsplanung", "SAP", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-01"
-bewerbungslink: "https://www.stralsund.de/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Mecklenburg-Vorpommern"
 schlagwoerter: ["Doppik M-V", "KV M-V", "Jahresabschluss", "Führungserfahrung", "TVöD", "Ostsee"]
 paket: "Basis"
 aktiv: true

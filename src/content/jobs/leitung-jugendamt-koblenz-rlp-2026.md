@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.04.2027"
 bewerbungsschluss: "2026-12-01"
-bewerbungslink: "https://www.koblenz.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "Rheinland-Pfalz", "HzE", "TVöD"]
 paket: "Basis"
 aktiv: true

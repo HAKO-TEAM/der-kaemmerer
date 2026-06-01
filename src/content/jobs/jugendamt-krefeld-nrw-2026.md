@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.10.2027"
 bewerbungsschluss: "2027-01-15"
-bewerbungslink: "https://www.krefeld.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "Seidenstadt", "NRW", "A15"]
 paket: "Premium"
 aktiv: true

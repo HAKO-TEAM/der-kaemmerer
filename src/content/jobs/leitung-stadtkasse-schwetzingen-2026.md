@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.09.2026"
 bewerbungsschluss: "2026-07-15"
-bewerbungslink: "https://www.schwetzingen.de/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Baden-Württemberg"
 schlagwoerter: ["Stadtkasse", "Kassenführung", "GemO BW", "Doppik", "TVöD", "INFOMA"]
 paket: "Basis"
 aktiv: true

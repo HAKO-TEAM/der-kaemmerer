@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.schleswig.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Schleswig-Holstein"
 schlagwoerter: ["Haushaltsrecht SH", "GOKH SH", "Doppik", "Jahresabschluss", "Fjordstadt", "TVöD"]
 paket: "Basis"
 aktiv: true

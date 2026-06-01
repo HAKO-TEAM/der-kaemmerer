@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.augsburg.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Bayern"
 schlagwoerter: ["Controlling", "BayGO", "Doppik Bayern", "SAP", "Berichtswesen", "TVöD"]
 paket: "Basis"
 aktiv: true

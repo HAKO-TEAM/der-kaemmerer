@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.06.2027"
 bewerbungsschluss: "2027-01-31"
-bewerbungslink: "https://www.wiesbaden.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Hessen"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
-bewerbungslink: "https://www.landkreishildesheim.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Niedersachsen"
 schlagwoerter: ["SGB VIII", "Jugendhilfeplanung", "HzE-Steuerung", "Kinderschutz", "TVöD", "Niedersachsen"]
 paket: "Premium"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.pforzheim.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Baden-Württemberg"
 schlagwoerter: ["GemO BW", "Doppik BW", "Jahresabschluss", "Goldstadt", "Führungserfahrung", "A15"]
 paket: "Premium"
 aktiv: true

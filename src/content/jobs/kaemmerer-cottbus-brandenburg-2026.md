@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.04.2027"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.cottbus.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Brandenburg"
 schlagwoerter: ["KVBbg", "Doppik", "Strukturwandel", "Führungserfahrung", "TVöD", "Lausitz"]
 paket: "Exklusiv"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.03.2027"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.magdeburg.de/Start/B%C3%BCrger-Stadt/Verwaltung-Service/Stellenausschreibungen"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen-Anhalt"
 schlagwoerter: ["Haushaltsrecht LSA", "KVG LSA", "Doppik", "Wahlbeamter", "Führungserfahrung", "B3"]
 paket: "Exklusiv"
 aktiv: true

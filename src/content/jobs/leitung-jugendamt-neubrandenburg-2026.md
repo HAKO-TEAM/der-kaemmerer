@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.02.2027"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.lk-mecklenburgische-seenplatte.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Mecklenburg-Vorpommern"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "HzE-Steuerung", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.07.2026"
 bewerbungsschluss: "2026-07-10"
-bewerbungslink: "https://www.delitzsch.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen"
 schlagwoerter: ["Doppik Sachsen", "SächsGemO", "Jahresabschluss", "Führungserfahrung", "TVöD", "Controlling"]
 paket: "Premium"
 aktiv: true

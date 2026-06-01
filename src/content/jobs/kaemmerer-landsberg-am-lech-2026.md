@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.lra-ll.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Bayern"
 schlagwoerter: ["Haushaltsrecht Bayern", "BayLKrO", "Doppik", "Jahresabschluss", "Führungserfahrung", "A14"]
 paket: "Premium"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.04.2027"
 bewerbungsschluss: "2026-12-31"
-bewerbungslink: "https://www.kreis-bergstrasse.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Hessen"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD", "Landkreis"]
 paket: "Basis"
 aktiv: true

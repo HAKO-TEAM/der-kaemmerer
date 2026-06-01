@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.mainz.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "RLP", "Führungserfahrung", "A15"]
 paket: "Premium"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.07.2027"
 bewerbungsschluss: "2026-12-31"
-bewerbungslink: "https://www.jena.de/de/verwaltung/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Thüringen"
 schlagwoerter: ["ThürKO", "Doppik Thüringen", "Jahresabschluss", "Führungserfahrung", "TVöD", "Universitätsstadt"]
 paket: "Basis"
 aktiv: true

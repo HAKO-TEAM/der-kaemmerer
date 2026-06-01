@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.02.2027"
 bewerbungsschluss: "2026-11-15"
-bewerbungslink: "https://www.greifswald.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Mecklenburg-Vorpommern"
 schlagwoerter: ["Doppik M-V", "KV M-V", "Jahresabschluss", "Universitätsstadt", "TVöD"]
 paket: "Basis"
 aktiv: true

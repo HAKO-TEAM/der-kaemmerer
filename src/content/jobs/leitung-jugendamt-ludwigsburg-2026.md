@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.landkreis-ludwigsburg.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Baden-Württemberg"
 schlagwoerter: ["SGB VIII", "SGB XII", "Jugendhilfe", "Eingliederungshilfe", "Führungserfahrung", "TVöD"]
 paket: "Premium"
 aktiv: true

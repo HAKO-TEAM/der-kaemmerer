@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 5 Jahre"
 startdatum: "01.11.2026"
 bewerbungsschluss: "2026-08-15"
-bewerbungslink: "https://www.hameln.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Niedersachsen"
 schlagwoerter: ["NBesO", "Kommunalverfassung Niedersachsen", "NKomVG", "Wahlbeamter", "Haushaltsrecht Nds."]
 paket: "Exklusiv"
 aktiv: true

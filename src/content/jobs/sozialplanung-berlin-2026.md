@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-11-15"
-bewerbungslink: "https://www.berlin.de/ba-spandau/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Berlin"
 schlagwoerter: ["Sozialplanung", "SGB XII", "Berliner Verwaltung", "TV-L", "Bezirksamt", "Führungserfahrung"]
 paket: "Basis"
 aktiv: true

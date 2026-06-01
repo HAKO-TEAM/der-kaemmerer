@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.flensburg.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Schleswig-Holstein"
 schlagwoerter: ["GOKH SH", "Doppik SH", "Jahresabschluss", "Führungserfahrung", "Fördestadt", "TVöD"]
 paket: "Basis"
 aktiv: true

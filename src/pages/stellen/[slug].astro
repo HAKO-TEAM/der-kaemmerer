@@ -134,15 +134,29 @@ const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'N
 
         <!-- Bewerben -->
         <div class="sj-apply-box">
-          <div class="sj-apply-label">Jetzt bewerben</div>
-          <div class={deadlineClass}>
-            Bewerbungsschluss:<br>
-            <strong>{formatDatum(d.bewerbungsschluss)}</strong>
-          </div>
-          <div class={daysClass}>{daysText}</div>
-          <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
-            Jetzt bewerben →
-          </a>
+          {d.bewerbungslink.includes('trefferliste') ? (
+            <>
+              <div class="sj-apply-label">Ähnliche Stellen</div>
+              <p style="font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:16px">
+                Aktuelle Ausschreibungen für diese Position finden Sie auf dem offiziellen Karriereportal des öffentlichen Dienstes.
+              </p>
+              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
+                Auf interamt.de suchen →
+              </a>
+            </>
+          ) : (
+            <>
+              <div class="sj-apply-label">Jetzt bewerben</div>
+              <div class={deadlineClass}>
+                Bewerbungsschluss:<br>
+                <strong>{formatDatum(d.bewerbungsschluss)}</strong>
+              </div>
+              <div class={daysClass}>{daysText}</div>
+              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
+                Jetzt bewerben →
+              </a>
+            </>
+          )}
         </div>
 
         <!-- Details -->

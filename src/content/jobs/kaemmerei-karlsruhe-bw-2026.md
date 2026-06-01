@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 8 Jahre"
 startdatum: "01.07.2027"
 bewerbungsschluss: "2027-02-28"
-bewerbungslink: "https://www.karlsruhe.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Verwaltung&Bundesland=Baden-Württemberg"
 schlagwoerter: ["Kommunalfinanzen", "Doppik", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

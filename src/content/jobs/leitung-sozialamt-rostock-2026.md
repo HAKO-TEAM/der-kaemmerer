@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
-bewerbungslink: "https://www.rostock.de/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Mecklenburg-Vorpommern"
 schlagwoerter: ["SGB XII", "SGB II", "Sozialhilfe", "Wohngeld", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

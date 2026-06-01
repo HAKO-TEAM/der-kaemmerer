@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.paderborn.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["SGB XII", "SGB II", "Eingliederungshilfe", "Führungserfahrung", "NRW", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle"
 startdatum: "01.09.2027"
 bewerbungsschluss: "2027-01-31"
-bewerbungslink: "https://www.oldenburg.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Niedersachsen"
 schlagwoerter: ["NKomVG", "Haushaltsrecht Nds.", "Beteiligungsmanagement", "Wahlbeamter", "B3", "Niedersachsen"]
 paket: "Exklusiv"
 aktiv: true

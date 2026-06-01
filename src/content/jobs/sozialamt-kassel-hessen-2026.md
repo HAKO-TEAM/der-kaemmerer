@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.06.2027"
 bewerbungsschluss: "2027-01-31"
-bewerbungslink: "https://www.kassel.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Hessen"
 schlagwoerter: ["SGB XII", "Eingliederungshilfe", "SGB IX", "Sozialhilfe", "Führungserfahrung", "Hessen"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.01.2027"
 bewerbungsschluss: "2026-08-31"
-bewerbungslink: "https://www.moers.de/de/rathaus/stellenangebote/"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["SGB VIII", "Jugendhilfeplanung", "HzE-Steuerung", "Kinderschutz", "Führungserfahrung", "TVöD"]
 paket: "Premium"
 aktiv: true

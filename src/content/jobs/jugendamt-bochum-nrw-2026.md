@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-30"
-bewerbungslink: "https://www.bochum.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Sozialamt&Bundesland=Nordrhein-Westfalen"
 schlagwoerter: ["SGB VIII", "ASD", "Kinderschutz", "Jugendhilfe", "NRW", "TVöD"]
 paket: "Basis"
 aktiv: true

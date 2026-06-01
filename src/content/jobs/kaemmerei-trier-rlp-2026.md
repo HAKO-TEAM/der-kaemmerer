@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.02.2027"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.trier.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["GemO RLP", "Doppik RLP", "Jahresabschluss", "UNESCO", "Römerstadt", "A15"]
 paket: "Premium"
 aktiv: true

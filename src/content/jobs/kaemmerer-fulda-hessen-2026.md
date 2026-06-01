@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.04.2027"
 bewerbungsschluss: "2026-10-31"
-bewerbungslink: "https://www.fulda.de/leben-in-fulda/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Hessen"
 schlagwoerter: ["Haushaltsrecht Hessen", "HGO", "Doppik", "Jahresabschluss", "Führungserfahrung", "A15"]
 paket: "Premium"
 aktiv: true

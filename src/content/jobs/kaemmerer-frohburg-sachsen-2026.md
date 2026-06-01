@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-20"
-bewerbungslink: "https://www.frohburg.de/stellenangebote"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Sachsen"
 schlagwoerter: ["Doppik Sachsen", "SächsGemO", "Haushaltskonsolidierung", "Jahresabschluss", "Liquiditätsmanagement", "TVöD"]
 paket: "Basis"
 aktiv: true

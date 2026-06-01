@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-09-15"
-bewerbungslink: "https://www.kreis-reutlingen.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Baden-Württemberg"
 schlagwoerter: ["GemO BW", "Doppik BW", "Haushaltsrecht", "INFOMA", "TVöD", "Kreisfinanzen"]
 paket: "Basis"
 aktiv: true

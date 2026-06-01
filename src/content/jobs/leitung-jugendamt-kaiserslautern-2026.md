@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.03.2027"
 bewerbungsschluss: "2026-11-30"
-bewerbungslink: "https://www.kaiserslautern.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=Jugendamt&Bundesland=Rheinland-Pfalz"
 schlagwoerter: ["SGB VIII", "Jugendhilfe", "Kinderschutz", "RLP", "HzE", "TVöD"]
 paket: "Basis"
 aktiv: true

@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-10-15"
-bewerbungslink: "https://www.gotha.de"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Thüringen"
 schlagwoerter: ["ThürKO", "Doppik Thüringen", "Jahresabschluss", "Führungserfahrung", "TVöD"]
 paket: "Basis"
 aktiv: true

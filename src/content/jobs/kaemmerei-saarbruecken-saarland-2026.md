@@ -9,7 +9,7 @@ beschaeftigung: "Vollzeit"
 befristung: "Wahlbeamtenstelle · 8 Jahre"
 startdatum: "01.09.2027"
 bewerbungsschluss: "2027-01-15"
-bewerbungslink: "https://www.saarbruecken.de/karriere"
+bewerbungslink: "https://interamt.de/koop/app/trefferliste?0=&Bezeichnung=K%C3%A4mmerer&Bundesland=Saarland"
 schlagwoerter: ["SaarKomm", "Doppik Saarland", "Beteiligungsmanagement", "Wahlbeamter", "B3", "Saar"]
 paket: "Exklusiv"
 aktiv: true
