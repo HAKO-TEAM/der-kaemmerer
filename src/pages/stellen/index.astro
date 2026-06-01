@@ -188,6 +188,16 @@ const jobs = rawJobs.map(job => {
 <!-- LISTE -->
 <div class="st-main">
   <div class="st-container">
+
+    <!-- CTA für Arbeitgeber – oben -->
+    <div class="st-cta">
+      <div>
+        <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b82f6;margin-bottom:6px">Für Arbeitgeber</p>
+        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie ~8.500 Kämmerer und kommunale Führungskräfte gezielt — ab 290 € für 30 Tage.</p>
+      </div>
+      <a href="/anzeige-aufgeben" class="st-cta-btn">Jetzt Anzeige aufgeben →</a>
+    </div>
+
     <div class="st-count" id="jobCount">{jobs.length} {jobs.length === 1 ? 'Stelle' : 'Stellen'} gefunden</div>
 
     <div id="jobList">
@@ -234,10 +244,10 @@ const jobs = rawJobs.map(job => {
       )}
     </div>
 
-    <!-- CTA für Arbeitgeber -->
+    <!-- CTA für Arbeitgeber – unten -->
     <div class="st-cta">
-      <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie Kämmerer, Haushaltsfachkräfte und kommunale Führungskräfte gezielt — ab 290 € für 30 Tage.</p>
-      <a href="/stellenanzeigen" class="st-cta-btn">Anzeige schalten →</a>
+      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Schalten Sie jetzt Ihre kommunale Stellenanzeige — ab 290 € für 30 Tage, innerhalb von 24 Stunden live.</p>
+      <a href="/anzeige-aufgeben" class="st-cta-btn">Anzeige aufgeben →</a>
     </div>
   </div>
 </div>
