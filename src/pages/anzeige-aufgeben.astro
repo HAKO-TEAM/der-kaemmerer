@@ -319,35 +319,22 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
           </div>
         </div>
 
-        <div class="f-paket-grid">
-          <label class="f-paket-card" id="card-basis" data-paket="Basis – 290 €">
-            <input type="radio" name="paket" value="Basis – 290 €" required>
-            <div class="f-paket-check">✓</div>
-            <div class="f-paket-name">Basis</div>
-            <div class="f-paket-title">Standardanzeige</div>
-            <div class="f-paket-price">290 € <small>zzgl. MwSt.</small></div>
-            <div class="f-paket-days">30 Tage Laufzeit</div>
-          </label>
-
-          <label class="f-paket-card" id="card-premium" data-paket="Premium – 490 €">
-            <input type="radio" name="paket" value="Premium – 490 €">
+        <div class="f-paket-grid" style="grid-template-columns:1fr">
+          <label class="f-paket-card selected" id="card-kommunalflat" data-paket="KommunalFlat – 249 €/Monat">
+            <input type="radio" name="paket" value="KommunalFlat – 249 €/Monat" required checked>
             <div class="f-paket-badge">Empfohlen</div>
             <div class="f-paket-check">✓</div>
-            <div class="f-paket-name">Premium</div>
-            <div class="f-paket-title">Premiumanzeige</div>
-            <div class="f-paket-price">490 € <small>zzgl. MwSt.</small></div>
-            <div class="f-paket-days">45 Tage · inkl. Newsletter &amp; LinkedIn</div>
-          </label>
-
-          <label class="f-paket-card" id="card-exklusiv" data-paket="Exklusiv – 990 €">
-            <input type="radio" name="paket" value="Exklusiv – 990 €">
-            <div class="f-paket-check">✓</div>
-            <div class="f-paket-name">Exklusiv</div>
-            <div class="f-paket-title">Kampagnenpaket</div>
-            <div class="f-paket-price">990 € <small>zzgl. MwSt.</small></div>
-            <div class="f-paket-days">60 Tage · inkl. redakt. Begleitung</div>
+            <div class="f-paket-name">KommunalFlat</div>
+            <div class="f-paket-title">Unlimitierte Stellenanzeigen</div>
+            <div class="f-paket-price">249 € <small>/ Monat zzgl. MwSt.</small></div>
+            <div class="f-paket-days">12-Monatsvertrag · Unlimitiert · Stadt-Dossier inklusive · Newsletter &amp; LinkedIn</div>
           </label>
         </div>
+
+        <p style="font-size:12px;color:#6b7280;margin-top:12px;line-height:1.6">
+          Nach Absenden erhalten Sie innerhalb von 1 Werktag den Vertrag per E-Mail.
+          Kein Kreistagsbeschluss erforderlich – Direktauftrag unter Ausschreibungsschwelle.
+        </p>
       </div>
 
       <!-- ══ 2. STELLENINFORMATIONEN ══ -->
