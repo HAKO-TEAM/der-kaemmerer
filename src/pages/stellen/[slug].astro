@@ -1,0 +1,193 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const jobs = await getCollection('jobs');
+  return jobs.map(job => ({ params: { slug: job.id }, props: { job } }));
+}
+
+const { job } = Astro.props;
+const { Content } = await render(job);
+const d = job.data;
+
+function formatDatum(s: string) {
+  return new Date(s).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+}
+const tage = Math.ceil((new Date(d.bewerbungsschluss).getTime() - Date.now()) / 86400000);
+const paketLower = d.paket.toLowerCase();
+const badgeClass = 'sj-badge ' + paketLower;
+const deadlineClass = 'sj-deadline' + (tage <= 7 ? ' urgent' : '');
+const daysClass = 'sj-days' + (tage <= 7 ? ' urgent' : '');
+const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'Noch ' + tage + ' Tage';
+---
+<Base
+  title={`${d.title} – ${d.organisation}`}
+  description={`${d.organisation} sucht ${d.title} in ${d.ort}, ${d.bundesland}. ${d.entgelt} · Bewerbungsschluss ${formatDatum(d.bewerbungsschluss)}.`}
+  ogType="article"
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+.sj-container { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+
+/* HERO */
+.sj-hero {
+  background: #1a2744; padding: 48px 0 40px;
+  border-bottom: 3px solid #3b82f6;
+}
+.sj-back { font-size: 11px; font-weight: 700; color: #93c5fd; text-decoration: none; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; opacity: .7; transition: opacity .15s; }
+.sj-back:hover { opacity: 1; }
+.sj-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+.sj-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.sj-badge.exklusiv { background: rgba(255,255,255,.15); color: #93c5fd; }
+.sj-org { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.55); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+.sj-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 3.5vw, 38px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+.sj-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+.sj-meta-item { font-size: 13px; color: rgba(255,255,255,.6); display: flex; align-items: center; gap: 6px; }
+.sj-meta-item::before { content: ''; width: 5px; height: 5px; background: #3b82f6; border-radius: 50%; flex-shrink: 0; }
+
+/* LAYOUT */
+.sj-layout { display: grid; grid-template-columns: 1fr 300px; gap: 32px; padding: 40px 0 80px; background: #f1f5f9; }
+
+/* CONTENT */
+.sj-content { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 36px 40px; }
+
+/* SIDEBAR */
+.sj-sidebar { position: sticky; top: 24px; align-self: start; display: flex; flex-direction: column; gap: 16px; }
+
+.sj-apply-box {
+  background: #fff; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 24px;
+  border-top: 3px solid #3b82f6;
+}
+.sj-apply-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #3b82f6; margin-bottom: 14px; }
+.sj-deadline { font-size: 13px; color: #374151; margin-bottom: 6px; }
+.sj-deadline strong { color: #1a2744; }
+.sj-deadline.urgent strong { color: #dc2626; }
+.sj-days { font-size: 12px; color: #6b7280; margin-bottom: 20px; }
+.sj-days.urgent { color: #dc2626; font-weight: 700; }
+.sj-apply-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; padding: 14px; background: #1a2744; color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; border-radius: 5px; transition: background .15s;
+}
+.sj-apply-btn:hover { background: #0f3460; }
+
+.sj-details-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 24px; }
+.sj-details-title { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #6b7280; margin-bottom: 14px; }
+.sj-detail-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; font-size: 12px; padding: 7px 0; border-bottom: 1px solid #f1f5f9; }
+.sj-detail-row:last-child { border-bottom: none; }
+.sj-detail-row .key { color: #6b7280; font-weight: 600; flex-shrink: 0; }
+.sj-detail-row .val { color: #1a2744; font-weight: 500; text-align: right; }
+
+.sj-tags-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 24px; }
+.sj-tags-title { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #6b7280; margin-bottom: 12px; }
+.sj-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sj-tag { background: #f1f5f9; border: 1px solid #e2e8f0; color: #374151; font-size: 11px; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+
+.sj-schalten-box { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 16px 20px; }
+.sj-schalten-box p { font-size: 12px; color: #374151; line-height: 1.6; margin-bottom: 10px; }
+.sj-schalten-link { font-size: 11px; font-weight: 700; color: #1d4ed8; text-decoration: none; letter-spacing: .05em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .sj-container { padding: 0 20px; }
+  .sj-layout { grid-template-columns: 1fr; padding: 24px 0 60px; }
+  .sj-sidebar { position: static; }
+  .sj-content { padding: 24px 20px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="sj-hero">
+  <div class="sj-container">
+    <a href="/stellen" class="sj-back">← Alle Stellen</a>
+    {paketLower !== 'basis' && <div class={badgeClass}>{d.paket}</div>}
+    <div class="sj-org">{d.organisation} · {d.orgtyp}</div>
+    <div class="sj-title">{d.title}</div>
+    <div class="sj-meta">
+      <span class="sj-meta-item">{d.ort}, {d.bundesland}</span>
+      <span class="sj-meta-item">{d.beschaeftigung}</span>
+      <span class="sj-meta-item">{d.entgelt}</span>
+      <span class="sj-meta-item">{d.befristung}</span>
+      {d.startdatum && <span class="sj-meta-item">Start: {d.startdatum}</span>}
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT + SIDEBAR -->
+<div style="background:#f1f5f9">
+  <div class="sj-container">
+    <div class="sj-layout">
+
+      <!-- Anzeigentext -->
+      <div class="sj-content">
+        <Content />
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sj-sidebar">
+
+        <!-- Bewerben -->
+        <div class="sj-apply-box">
+          <div class="sj-apply-label">Jetzt bewerben</div>
+          <div class={deadlineClass}>
+            Bewerbungsschluss:<br>
+            <strong>{formatDatum(d.bewerbungsschluss)}</strong>
+          </div>
+          <div class={daysClass}>{daysText}</div>
+          <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
+            Jetzt bewerben →
+          </a>
+        </div>
+
+        <!-- Details -->
+        <div class="sj-details-box">
+          <div class="sj-details-title">Stellendetails</div>
+          <div class="sj-detail-row"><span class="key">Arbeitgeber</span><span class="val">{d.organisation}</span></div>
+          <div class="sj-detail-row"><span class="key">Typ</span><span class="val">{d.orgtyp}</span></div>
+          <div class="sj-detail-row"><span class="key">Ort</span><span class="val">{d.ort}, {d.bundesland}</span></div>
+          <div class="sj-detail-row"><span class="key">Umfang</span><span class="val">{d.beschaeftigung}</span></div>
+          <div class="sj-detail-row"><span class="key">Vergütung</span><span class="val">{d.entgelt}</span></div>
+          <div class="sj-detail-row"><span class="key">Befristung</span><span class="val">{d.befristung}</span></div>
+          {d.startdatum && <div class="sj-detail-row"><span class="key">Start</span><span class="val">{d.startdatum}</span></div>}
+          <div class="sj-detail-row"><span class="key">Online seit</span><span class="val">{formatDatum(d.datum)}</span></div>
+        </div>
+
+        <!-- Tags -->
+        {d.schlagwoerter && d.schlagwoerter.length > 0 && (
+          <div class="sj-tags-box">
+            <div class="sj-tags-title">Schlagwörter</div>
+            <div class="sj-tags">
+              {d.schlagwoerter.map(tag => <span class="sj-tag">{tag}</span>)}
+            </div>
+          </div>
+        )}
+
+        <!-- Anzeige schalten -->
+        <div class="sj-schalten-box">
+          <p>Sie möchten selbst eine Stelle ausschreiben?</p>
+          <a href="/stellenanzeigen" class="sj-schalten-link">Anzeige schalten →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>
+
+<style is:global>
+.sj-content h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #1a2744; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
+.sj-content h2:first-child { margin-top: 0; }
+.sj-content ul { padding-left: 0; list-style: none; margin: 0 0 16px; }
+.sj-content ul li { font-size: 14px; color: #374151; padding: 5px 0 5px 20px; position: relative; line-height: 1.6; border-bottom: 1px solid #f1f5f9; }
+.sj-content ul li::before { content: "\2713"; position: absolute; left: 0; color: #3b82f6; font-weight: 700; font-size: 12px; }
+.sj-content p { font-size: 15px; color: #374151; line-height: 1.8; margin-bottom: 16px; }
+.sj-content strong { color: #1a2744; }
+</style>

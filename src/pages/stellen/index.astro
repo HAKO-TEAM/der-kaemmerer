@@ -1,0 +1,265 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const heute = new Date();
+
+function tageDiff(schluss: string) {
+  return Math.ceil((new Date(schluss).getTime() - heute.getTime()) / 86400000);
+}
+function formatDatum(d: string) {
+  return new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+function deadlineText(tage: number, schluss: string) {
+  if (tage <= 0) return 'Heute!';
+  if (tage === 1) return 'Noch 1 Tag';
+  if (tage < 8) return 'Noch ' + tage + ' Tage';
+  return 'bis ' + formatDatum(schluss);
+}
+
+const rawJobs = (await getCollection('jobs'))
+  .filter(j => j.data.aktiv && new Date(j.data.bewerbungsschluss) >= heute)
+  .sort((a, b) => {
+    const rank: Record<string, number> = { Exklusiv: 0, Premium: 1, Basis: 2 };
+    const r = rank[a.data.paket] - rank[b.data.paket];
+    return r !== 0 ? r : new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime();
+  });
+
+// Alle berechneten Werte in der Frontmatter vorbereiten (kein <> im Template)
+const jobs = rawJobs.map(job => {
+  const tage = tageDiff(job.data.bewerbungsschluss);
+  const pk = job.data.paket.toLowerCase();
+  return {
+    ...job,
+    tage,
+    cardClass:    'st-card' + (pk !== 'basis' ? ' ' + pk : ''),
+    badgeClass:   'st-card-badge ' + pk,
+    deadlineClass:'st-card-deadline' + (tage < 8 ? ' urgent' : ''),
+    deadlineTxt:  deadlineText(tage, job.data.bewerbungsschluss),
+    paketLower:   pk,
+  };
+});
+---
+<Base
+  title="Stellenbörse"
+  description="Kommunale Stellen für Kämmerer, Jugendamtsleitungen und Führungskräfte in der kommunalen Finanzverwaltung — aktuell auf derkaemmerer.de."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+.st-container { max-width: 1000px; margin: 0 auto; padding: 0 48px; }
+
+/* HERO */
+.st-hero { background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%); padding: 56px 0; }
+.st-hero-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 10px; }
+.st-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+.st-hero p { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 560px; }
+.st-hero-stats { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+.st-hero-stat .n { font-size: 28px; font-weight: 700; color: #93c5fd; font-family: 'Playfair Display', serif; display: block; }
+.st-hero-stat .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+/* FILTER */
+.st-filter { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 16px 0; position: sticky; top: 0; z-index: 40; }
+.st-filter-inner { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.st-filter select { padding: 8px 28px 8px 12px; border: 1.5px solid #e2e8f0; border-radius: 5px; font-size: 13px; color: #374151; background: #f8fafc; cursor: pointer; font-family: inherit; }
+.st-filter select:focus { outline: none; border-color: #3b82f6; }
+.st-filter-label { font-size: 12px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; }
+
+/* MAIN */
+.st-main { padding: 48px 0 80px; background: #f1f5f9; }
+.st-count { font-size: 12px; color: #6b7280; margin-bottom: 24px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+/* JOB CARD */
+.st-card {
+  background: #fff; border: 1.5px solid #e2e8f0; border-radius: 8px;
+  margin-bottom: 16px; overflow: hidden;
+  transition: transform .15s, box-shadow .15s;
+  display: block; text-decoration: none; color: inherit;
+}
+.st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(26,39,68,.1); border-color: #bfdbfe; }
+.st-card.premium { border-left: 4px solid #3b82f6; }
+.st-card.exklusiv { border-left: 4px solid #1a2744; background: linear-gradient(to right, #f8faff 0%, #fff 60%); }
+
+.st-card-inner { padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+
+.st-card-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+.st-card-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.st-card-badge.exklusiv { background: #1a2744; color: #93c5fd; }
+
+.st-card-org { font-size: 12px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+.st-card-title { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #1a2744; line-height: 1.25; margin-bottom: 12px; }
+.st-card-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.st-card-meta-item { font-size: 12px; color: #374151; display: flex; align-items: center; gap: 5px; }
+.st-card-meta-item::before { content: ''; width: 5px; height: 5px; background: #3b82f6; border-radius: 50%; flex-shrink: 0; }
+
+.st-card-right { text-align: right; flex-shrink: 0; }
+.st-card-deadline { font-size: 11px; color: #6b7280; margin-bottom: 8px; white-space: nowrap; }
+.st-card-deadline.urgent { color: #dc2626; font-weight: 700; }
+.st-card-btn {
+  display: inline-block; padding: 10px 20px;
+  background: #1a2744; color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  border-radius: 4px; text-decoration: none; white-space: nowrap;
+  transition: background .15s;
+}
+.st-card-btn:hover { background: #0f3460; }
+
+/* TAGS */
+.st-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.st-tag { background: #f1f5f9; border: 1px solid #e2e8f0; color: #374151; font-size: 10px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+
+/* LEER */
+.st-empty { text-align: center; padding: 64px 0; color: #6b7280; }
+.st-empty h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: #1a2744; margin-bottom: 10px; }
+
+/* CTA */
+.st-cta { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 32px; }
+.st-cta p { font-size: 14px; color: #374151; line-height: 1.6; max-width: 500px; }
+.st-cta p strong { color: #1a2744; }
+.st-cta-btn { background: #1a2744; color: #fff; padding: 13px 28px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 4px; white-space: nowrap; transition: background .15s; }
+.st-cta-btn:hover { background: #0f3460; }
+
+@media (max-width: 768px) {
+  .st-container { padding: 0 20px; }
+  .st-card-inner { grid-template-columns: 1fr; }
+  .st-card-right { text-align: left; }
+  .st-filter-inner { gap: 8px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="st-hero">
+  <div class="st-container">
+    <div class="st-hero-label">derkaemmerer.de · Stellenbörse</div>
+    <h1>Kommunale Stellen –<br>für Fachkräfte die lesen.</h1>
+    <p>Aktuelle Stellen in Kämmerei, Jugendamt und kommunaler Führung — gezielt für Fachkräfte im öffentlichen Dienst.</p>
+    <div class="st-hero-stats">
+      <div class="st-hero-stat">
+        <span class="n">{jobs.length}</span>
+        <span class="l">aktive Anzeigen</span>
+      </div>
+      <div class="st-hero-stat">
+        <span class="n">~8.500</span>
+        <span class="l">Kämmerer DE</span>
+      </div>
+      <div class="st-hero-stat">
+        <span class="n">Ø 14</span>
+        <span class="l">Tage bis Bewerbung</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="st-filter">
+  <div class="st-container">
+    <div class="st-filter-inner">
+      <span class="st-filter-label">Filtern:</span>
+      <select id="filterBundesland" onchange="filterJobs()">
+        <option value="">Alle Bundesländer</option>
+        {[...new Set(jobs.map(j => j.data.bundesland))].sort().map(bl => (
+          <option value={bl}>{bl}</option>
+        ))}
+      </select>
+      <select id="filterPaket" onchange="filterJobs()">
+        <option value="">Alle Pakete</option>
+        <option value="Exklusiv">Exklusiv</option>
+        <option value="Premium">Premium</option>
+        <option value="Basis">Basis</option>
+      </select>
+      <select id="filterOrgtyp" onchange="filterJobs()">
+        <option value="">Alle Organisationstypen</option>
+        {[...new Set(jobs.map(j => j.data.orgtyp))].sort().map(t => (
+          <option value={t}>{t}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- LISTE -->
+<div class="st-main">
+  <div class="st-container">
+    <div class="st-count" id="jobCount">{jobs.length} {jobs.length === 1 ? 'Stelle' : 'Stellen'} gefunden</div>
+
+    <div id="jobList">
+      {jobs.length === 0 ? (
+        <div class="st-empty">
+          <div style="font-size:40px;margin-bottom:16px">📋</div>
+          <h3>Aktuell keine offenen Stellen</h3>
+          <p>Neue Anzeigen erscheinen sobald sie geschaltet werden.</p>
+        </div>
+      ) : jobs.map(job => (
+          <a class={job.cardClass}
+             href={'/stellen/' + job.id}
+             data-bundesland={job.data.bundesland}
+             data-paket={job.data.paket}
+             data-orgtyp={job.data.orgtyp}>
+            <div class="st-card-inner">
+              <div>
+                {job.paketLower !== 'basis' && (
+                  <div class={job.badgeClass}>{job.data.paket}</div>
+                )}
+                <div class="st-card-org">{job.data.organisation} · {job.data.orgtyp}</div>
+                <div class="st-card-title">{job.data.title}</div>
+                <div class="st-card-meta">
+                  <span class="st-card-meta-item">{job.data.ort}, {job.data.bundesland}</span>
+                  <span class="st-card-meta-item">{job.data.beschaeftigung}</span>
+                  <span class="st-card-meta-item">{job.data.entgelt}</span>
+                  <span class="st-card-meta-item">{job.data.befristung}</span>
+                </div>
+                {job.data.schlagwoerter && (
+                  <div class="st-tags">
+                    {job.data.schlagwoerter.slice(0, 4).map(tag => (
+                      <span class="st-tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div class="st-card-right">
+                <div class={job.deadlineClass}>{job.deadlineTxt}</div>
+                <span class="st-card-btn">Zur Stelle →</span>
+              </div>
+            </div>
+          </a>
+        )
+      )}
+    </div>
+
+    <!-- CTA für Arbeitgeber -->
+    <div class="st-cta">
+      <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie Kämmerer, Haushaltsfachkräfte und kommunale Führungskräfte gezielt — ab 290 € für 30 Tage.</p>
+      <a href="/stellenanzeigen" class="st-cta-btn">Anzeige schalten →</a>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>
+
+<script>
+function filterJobs() {
+  const bl = (document.getElementById('filterBundesland') as HTMLSelectElement).value;
+  const pk = (document.getElementById('filterPaket') as HTMLSelectElement).value;
+  const ot = (document.getElementById('filterOrgtyp') as HTMLSelectElement).value;
+  let count = 0;
+  document.querySelectorAll<HTMLElement>('#jobList .st-card').forEach(card => {
+    const show =
+      (!bl || card.dataset.bundesland === bl) &&
+      (!pk || card.dataset.paket === pk) &&
+      (!ot || card.dataset.orgtyp === ot);
+    card.style.display = show ? 'block' : 'none';
+    if (show) count++;
+  });
+  const el = document.getElementById('jobCount');
+  if (el) el.textContent = `${count} ${count === 1 ? 'Stelle' : 'Stellen'} gefunden`;
+}
+</script>
