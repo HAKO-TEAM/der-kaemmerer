@@ -667,11 +667,11 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
             </div>
           </label>
           <label class="f-addon">
-            <input type="checkbox" name="addon_portraet" value="Arbeitgeber-Porträt +450 €"
+            <input type="checkbox" name="addon_portraet" value="Arbeitgeber-Porträt (inklusive)"
               class="addon-check">
             <div>
               <div class="f-addon-name">Arbeitgeber-Porträt</div>
-              <div class="f-addon-price">+ 450 €</div>
+              <div class="f-addon-price">inklusive</div>
               <div class="f-addon-desc">Redaktioneller Beitrag über Ihre Behörde (800 Wörter)</div>
             </div>
           </label>
@@ -748,7 +748,7 @@ const paketPreise: Record<string, number> = {
 const addonPreise: Record<string, number> = {
   addon_newsletter: 390,
   addon_linkedin:   250,
-  addon_portraet:   450,
+  addon_portraet:   0,
 };
 let selectedPaket = 'KommunalFlat – 249 €/Monat';
 
@@ -811,6 +811,9 @@ document.getElementById('kontaktemail')?.addEventListener('input', (e) => {
   const field = document.getElementById('replyToField') as HTMLInputElement;
   if (field) field.value = (e.target as HTMLInputElement).value;
 });
+
+// ── Zusammenfassung sofort beim Laden anzeigen ──────────
+updateSummary();
 
 // ── URL-Parameter: Paket vorauswählen ───────────────────
 const paketParam = new URLSearchParams(window.location.search).get('paket');
