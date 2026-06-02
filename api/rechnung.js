@@ -142,9 +142,10 @@ function buildPDF(data, invoiceId) {
 
     // Logo links
     doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(18);
-    txt(doc, 'Der Kämmerer', ML, 22);
-    doc.font('Helvetica').fontSize(8).fillColor('#94a3b8');
-    txt(doc, 'Das unabhängige Briefing für kommunale Entscheider', ML, 46);
+    txt(doc, 'Der Kämmerer', ML, 18);
+    doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
+    txt(doc, 'HAKO Beteiligungsgesellschaft mbH', ML, 40);
+    txt(doc, 'Das unabhängige Briefing für kommunale Entscheider', ML, 52);
 
     // "RECHNUNG" rechts — genug Breite damit kein Umbruch
     doc.font('Helvetica-Bold').fontSize(18).fillColor(BLUE);
@@ -161,7 +162,7 @@ function buildPDF(data, invoiceId) {
 
     // ── ABSENDER (winzig über Adresse) ────────────────────────────────────────
     doc.font('Helvetica').fontSize(6.5).fillColor(GRAY);
-    txt(doc, `HAKO GmbH  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}`, ML, 88);
+    txt(doc, `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, 01067 Dresden  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}`, ML, 88);
 
     // ── RECHNUNGSADRESSE ──────────────────────────────────────────────────────
     doc.font('Helvetica-Bold').fontSize(10).fillColor(NAVY);
@@ -270,12 +271,12 @@ function buildPDF(data, invoiceId) {
     doc.rect(0, fY, PW, 38).fill(NAVY);
     doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
     txt(doc,
-      `HAKO GmbH  |  derkaemmerer.de  |  anzeigen@derkaemmerer.de  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}  |  Gem. §14 UStG`,
+      `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, 01067 Dresden  |  HRB 29317, AG Dresden`,
       ML, fY + 8, { width: CW, align: 'center' }
     );
     txt(doc,
-      `Gemäß §14 UStG ausgestellte Rechnung`,
-      ML, fY + 22, { width: CW, align: 'center' }
+      `derkaemmerer.de  |  anzeigen@derkaemmerer.de  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}  |  Gem. §14 UStG`,
+      ML, fY + 20, { width: CW, align: 'center' }
     );
 
     // Sicherstellen: nur 1 Seite
@@ -293,7 +294,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
   const frist    = new Date(); frist.setDate(frist.getDate() + parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
 
   await resend.emails.send({
-    from:    'Der Kämmerer – Rechnungsstelle <anzeigen@derkaemmerer.de>',
+    from:    'HAKO Beteiligungsgesellschaft mbH <anzeigen@derkaemmerer.de>',
     to:      [data.email],
     cc:      ['anzeigen@derkaemmerer.de'],
     subject: `Ihre Rechnung ${invoiceId} – KommunalFlat derkaemmerer.de`,
