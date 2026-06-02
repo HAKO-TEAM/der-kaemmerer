@@ -371,20 +371,32 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    // Tally sendet entweder body direkt oder als { data: { fields: [...] } }
-    const body  = req.body;
+    const body    = req.body;
     const isTally = body?.eventType || body?.data?.fields;
+
+    // Payload für Debugging loggen
+    console.log('RECHNUNG_PAYLOAD:', JSON.stringify(body).slice(0, 2000));
 
     let data;
     if (isTally) {
       data = parseTally(body);
+      console.log('PARSED_DATA:', JSON.stringify(data));
     } else {
-      // Direktaufruf (Test)
       data = body;
     }
 
     if (!data.organisation || !data.email) {
-      return res.status(400).json({ error: 'organisation und rechnungs-email sind Pflichtfelder' });
+      // Fallback: Benachrichtigung an uns mit Rohdaten senden
+      console.error('PARSE_FEHLER: organisation oder email fehlt', JSON.stringify({ organisation: data.organisation, email: data.email }));
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: 'HAKO Beteiligungsgesellschaft mbH <anzeigen@derkaemmerer.de>',
+        to: ['anzeigen@derkaemmerer.de'],
+        subject: 'ACHTUNG: KommunalFlat-Buchung konnte nicht verarbeitet werden',
+        html: `<p>Buchung eingegangen aber Pflichtfelder fehlen. Rohdaten:</p><pre>${JSON.stringify(body, null, 2).slice(0, 5000)}</pre>`,
+      }).catch(e => console.error('Fallback-Mail-Fehler:', e));
+      // 200 zurückgeben damit Tally nicht wiederholt versucht
+      return res.status(200).json({ ok: false, error: 'Felder konnten nicht geparst werden — manuelle Prüfung erforderlich' });
     }
 
     const { id, records, sha, path } = await nextInvoiceNumber();
