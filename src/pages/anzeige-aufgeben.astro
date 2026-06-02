@@ -630,9 +630,32 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
           </div>
 
           <div class="f-field">
-            <label class="f-label" for="rechnungsadresse">Rechnungsadresse <span class="hint">falls abweichend</span></label>
+            <label class="f-label" for="rechnungsemail">Rechnungs-E-Mail <span class="hint">falls abweichend</span></label>
+            <input class="f-input" id="rechnungsemail" name="rechnungsemail" type="email"
+              placeholder="rechnung@behoerde.de">
+          </div>
+        </div>
+
+        <div class="f-grid">
+          <div class="f-field" style="grid-column:1/-1">
+            <label class="f-label" for="rechnungsadresse">Rechnungs-Straße + Hausnummer <span class="req">*</span></label>
             <input class="f-input" id="rechnungsadresse" name="rechnungsadresse" type="text"
-              placeholder="Behördenname, Straße, PLZ Ort">
+              placeholder="Musterstraße 1" required>
+          </div>
+          <div class="f-field">
+            <label class="f-label" for="rechnungsplz">PLZ <span class="req">*</span></label>
+            <input class="f-input" id="rechnungsplz" name="rechnungsplz" type="text"
+              placeholder="12345" required maxlength="5">
+          </div>
+          <div class="f-field">
+            <label class="f-label" for="rechnungsort">Ort <span class="req">*</span></label>
+            <input class="f-input" id="rechnungsort" name="rechnungsort" type="text"
+              placeholder="Musterstadt" required>
+          </div>
+          <div class="f-field">
+            <label class="f-label" for="leitwegid">Leitweg-ID <span class="hint">optional, für XRechnung</span></label>
+            <input class="f-input" id="leitwegid" name="leitwegid" type="text"
+              placeholder="991-12345-67">
           </div>
         </div>
       </div>
