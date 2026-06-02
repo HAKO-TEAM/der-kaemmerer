@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+// Alle Dossier-JSON-Dateien laden
+const dataDir = join(process.cwd(), 'src/data/arbeitgeber');
+const files = readdirSync(dataDir).filter(f => f.endsWith('.json'));
+const staedte = files.map(f => JSON.parse(readFileSync(join(dataDir, f), 'utf-8')));
+---
+<Base
+  title="Kommunale Arbeitgeber – Dossier-Übersicht"
+  description="Entdecken Sie kommunale Arbeitgeber mit Persönlichkeit: Dossiers, Kennzahlen und offene Stellen – exklusiv auf derkaemmerer.de."
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+.ag-hero {
+  background: #172840; padding: 56px 0 48px;
+  border-bottom: 3px solid #2563eb;
+}
+.ag-container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.ag-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #60a5fa; margin-bottom: 14px; }
+.ag-hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 16px; }
+.ag-hero-sub { font-size: 16px; color: rgba(255,255,255,.6); max-width: 580px; line-height: 1.7; }
+
+.ag-body { background: #f1f5f9; padding: 56px 0 80px; }
+.ag-section-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #6b7280; margin-bottom: 28px; }
+
+.ag-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+
+.ag-card {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  overflow: hidden; text-decoration: none; display: flex; flex-direction: column;
+  transition: box-shadow .2s, transform .15s;
+}
+.ag-card:hover { box-shadow: 0 8px 32px rgba(23,40,64,.12); transform: translateY(-2px); }
+.ag-card-top { background: #172840; padding: 24px 24px 20px; border-bottom: 2px solid #2563eb; }
+.ag-card-bundesland { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; }
+.ag-card-name { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 6px; }
+.ag-card-claim { font-size: 12px; color: rgba(255,255,255,.5); font-style: italic; }
+.ag-card-body { padding: 20px 24px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.ag-card-desc { font-size: 13px; color: #4b5563; line-height: 1.65; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ag-card-kpis { display: flex; gap: 16px; flex-wrap: wrap; }
+.ag-card-kpi { font-size: 12px; color: #374151; display: flex; align-items: center; gap: 5px; }
+.ag-card-kpi strong { color: #172840; font-weight: 700; }
+.ag-card-footer { padding: 0 24px 20px; display: flex; align-items: center; justify-content: space-between; }
+.ag-card-link { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2563eb; }
+.ag-card-partner { font-size: 10px; color: #9ca3af; font-weight: 600; }
+
+.ag-kommunalflat-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8;
+  font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 14px;
+}
+
+.ag-cta { background: #172840; margin-top: 56px; border-radius: 12px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.ag-cta-text h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: #fff; margin-bottom: 8px; }
+.ag-cta-text p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.6; max-width: 480px; }
+.ag-cta-btn { display: inline-flex; align-items: center; padding: 14px 28px; background: #2563eb; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; border-radius: 6px; white-space: nowrap; transition: background .15s; }
+.ag-cta-btn:hover { background: #1d4ed8; }
+
+@media (max-width: 768px) {
+  .ag-container { padding: 0 20px; }
+  .ag-grid { grid-template-columns: 1fr; }
+  .ag-cta { padding: 28px 24px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="ag-hero">
+  <div class="ag-container">
+    <div class="ag-eyebrow">Arbeitgeber-Dossiers</div>
+    <h1 class="ag-hero-title">Kommunale Arbeitgeber<br>mit Persönlichkeit</h1>
+    <p class="ag-hero-sub">Keine anonymen Anzeigen. Jede Partnerstadt präsentiert sich mit Kennzahlen, Benefits und echten Einblicken — damit Führungskräfte eine fundierte Entscheidung treffen können.</p>
+  </div>
+</div>
+
+<!-- KARTEN -->
+<div class="ag-body">
+  <div class="ag-container">
+    <div class="ag-section-label">Partnerstädte ({staedte.length} Dossiers verfügbar)</div>
+    <div class="ag-grid">
+      {staedte.map(stadt => (
+        <a href={`/arbeitgeber/${stadt.slug}`} class="ag-card">
+          <div class="ag-card-top">
+            {stadt.kommunalflat && <div class="ag-kommunalflat-badge">★ KommunalFlat-Partner</div>}
+            <div class="ag-card-bundesland">{stadt.bundesland}</div>
+            <div class="ag-card-name">{stadt.name}</div>
+            <div class="ag-card-claim">{stadt.claim}</div>
+          </div>
+          <div class="ag-card-body">
+            <p class="ag-card-desc">{stadt.beschreibung}</p>
+            <div class="ag-card-kpis">
+              <span class="ag-card-kpi"><strong>{stadt.einwohner.toLocaleString('de-DE')}</strong> Einw.</span>
+              <span class="ag-card-kpi"><strong>{stadt.haushalt}</strong> Haushalt</span>
+              <span class="ag-card-kpi"><strong>{stadt.beamteUndBeschaeftigte}</strong> Beschäftigte</span>
+            </div>
+          </div>
+          <div class="ag-card-footer">
+            <span class="ag-card-link">Zum Dossier →</span>
+            <span class="ag-card-partner">Partner seit {stadt.partner_seit}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- KommunalFlat CTA -->
+    <div class="ag-cta">
+      <div class="ag-cta-text">
+        <h3>Ihre Stadt noch nicht dabei?</h3>
+        <p>Mit KommunalFlat schalten Sie unbegrenzt Stellenanzeigen, erhalten ein vollständiges Arbeitgeber-Dossier und erreichen über 4.200 kommunale Entscheider im Newsletter.</p>
+      </div>
+      <a href="/anzeige-aufgeben?paket=kommunalflat" class="ag-cta-btn">KommunalFlat anfragen →</a>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>

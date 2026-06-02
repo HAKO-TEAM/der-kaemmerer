@@ -1,0 +1,304 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const dataDir = join(process.cwd(), 'src/data/arbeitgeber');
+  const files = readdirSync(dataDir).filter(f => f.endsWith('.json'));
+  return files.map(f => {
+    const data = JSON.parse(readFileSync(join(dataDir, f), 'utf-8'));
+    return { params: { stadt: data.slug }, props: { data } };
+  });
+}
+
+const { data: d } = Astro.props;
+
+// Passende Jobs für diese Stadt laden
+const heute = new Date();
+const alleJobs = await getCollection('jobs');
+const stadtJobs = alleJobs
+  .filter(j =>
+    j.data.aktiv &&
+    new Date(j.data.bewerbungsschluss) >= heute &&
+    j.data.ort.toLowerCase().includes(d.slug.toLowerCase())
+  )
+  .sort((a, b) => {
+    const rank: Record<string, number> = { KommunalFlat: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
+    return rank[a.data.paket] - rank[b.data.paket];
+  });
+
+function formatDatum(s: string) {
+  return new Date(s).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+}
+---
+<Base
+  title={`${d.name} als Arbeitgeber – Dossier`}
+  description={`${d.name}: ${d.beschreibung.slice(0, 150)}...`}
+>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+.dos-container { max-width: 1060px; margin: 0 auto; padding: 0 48px; }
+
+/* HERO */
+.dos-hero { background: #172840; padding: 56px 0 48px; border-bottom: 3px solid #2563eb; }
+.dos-back { font-size: 11px; font-weight: 700; color: #93c5fd; text-decoration: none; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 24px; opacity: .7; transition: opacity .15s; }
+.dos-back:hover { opacity: 1; }
+.dos-kf-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(37,99,235,.25); border: 1px solid rgba(96,165,250,.4); color: #93c5fd; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.dos-hero-bundesland { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 8px; }
+.dos-hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(26px, 4vw, 42px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 10px; }
+.dos-hero-claim { font-size: 16px; color: rgba(255,255,255,.55); font-style: italic; margin-bottom: 28px; }
+.dos-hero-kpis { display: flex; gap: 32px; flex-wrap: wrap; }
+.dos-kpi { display: flex; flex-direction: column; gap: 4px; }
+.dos-kpi-wert { font-size: 24px; font-weight: 700; color: #fff; line-height: 1; }
+.dos-kpi-label { font-size: 11px; color: rgba(255,255,255,.45); font-weight: 600; }
+
+/* LAYOUT */
+.dos-body { background: #f1f5f9; padding: 48px 0 80px; }
+.dos-layout { display: grid; grid-template-columns: 1fr 300px; gap: 28px; }
+
+/* CONTENT COLUMN */
+.dos-section { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 32px 36px; margin-bottom: 24px; }
+.dos-section-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #6b7280; margin-bottom: 20px; }
+.dos-section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #172840; margin-bottom: 14px; }
+.dos-desc { font-size: 15px; color: #374151; line-height: 1.8; }
+
+/* BENEFITS */
+.dos-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.dos-benefit { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 18px; }
+.dos-benefit-title { font-size: 13px; font-weight: 700; color: #172840; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+.dos-benefit-title::before { content: '✓'; color: #2563eb; font-weight: 700; }
+.dos-benefit-desc { font-size: 12px; color: #6b7280; line-height: 1.6; }
+
+/* TESTIMONIALS */
+.dos-testimonials { display: flex; flex-direction: column; gap: 16px; }
+.dos-testimonial { border-left: 3px solid #2563eb; padding: 16px 20px; background: #f0f7ff; border-radius: 0 8px 8px 0; }
+.dos-testimonial-zitat { font-size: 14px; color: #1e3a5f; line-height: 1.7; font-style: italic; margin-bottom: 10px; }
+.dos-testimonial-zitat::before { content: '„'; color: #2563eb; font-size: 20px; font-style: normal; line-height: 0; vertical-align: -4px; margin-right: 2px; }
+.dos-testimonial-name { font-size: 11px; font-weight: 700; color: #374151; text-transform: uppercase; letter-spacing: .04em; }
+.dos-testimonial-seit { font-size: 11px; color: #9ca3af; }
+
+/* JOBS */
+.dos-jobs { display: flex; flex-direction: column; gap: 12px; }
+.dos-job-card { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; transition: border-color .15s, background .15s; }
+.dos-job-card:hover { border-color: #2563eb; background: #eff6ff; }
+.dos-job-badge { flex-shrink: 0; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-top: 2px; }
+.dos-job-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.dos-job-badge.exklusiv { background: #172840; color: #93c5fd; }
+.dos-job-badge.basis    { background: #f1f5f9; color: #6b7280; }
+.dos-job-badge.kommunalflat { background: #dbeafe; color: #1d4ed8; }
+.dos-job-title { font-size: 13px; font-weight: 700; color: #172840; margin-bottom: 4px; line-height: 1.4; }
+.dos-job-meta { font-size: 11px; color: #6b7280; }
+.dos-no-jobs { font-size: 14px; color: #6b7280; text-align: center; padding: 24px 0; }
+
+/* SIDEBAR */
+.dos-sidebar { position: sticky; top: 24px; align-self: start; display: flex; flex-direction: column; gap: 16px; }
+.dos-sidebar-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 24px; }
+.dos-sidebar-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #6b7280; margin-bottom: 14px; }
+.dos-contact-row { font-size: 13px; color: #374151; padding: 7px 0; border-bottom: 1px solid #f1f5f9; display: flex; flex-direction: column; gap: 2px; }
+.dos-contact-row:last-child { border-bottom: none; }
+.dos-contact-key { font-size: 10px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: .04em; }
+.dos-contact-val { font-weight: 600; color: #172840; word-break: break-all; }
+.dos-contact-val a { color: #2563eb; text-decoration: none; }
+.dos-contact-val a:hover { text-decoration: underline; }
+.dos-apply-btn { display: flex; align-items: center; justify-content: center; margin-top: 14px; padding: 13px 16px; background: #2563eb; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 6px; transition: background .15s; }
+.dos-apply-btn:hover { background: #1d4ed8; }
+
+/* KommunalFlat CTA Box */
+.dos-kf-box { background: #172840; border-radius: 10px; padding: 24px; }
+.dos-kf-box-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #60a5fa; margin-bottom: 10px; }
+.dos-kf-box-title { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+.dos-kf-box-text { font-size: 12px; color: rgba(255,255,255,.6); line-height: 1.65; margin-bottom: 16px; }
+.dos-kf-box-btn { display: flex; align-items: center; justify-content: center; padding: 12px 16px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 6px; transition: background .15s; }
+.dos-kf-box-btn:hover { background: #1d4ed8; }
+
+/* FULL-WIDTH CTA */
+.dos-bottom-cta { background: #172840; border-radius: 12px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-top: 32px; }
+.dos-bottom-cta h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: #fff; margin-bottom: 8px; }
+.dos-bottom-cta p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.6; max-width: 460px; }
+.dos-bottom-btn { display: inline-flex; align-items: center; padding: 14px 28px; background: #2563eb; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; border-radius: 6px; white-space: nowrap; transition: background .15s; }
+.dos-bottom-btn:hover { background: #1d4ed8; }
+
+@media (max-width: 900px) {
+  .dos-container { padding: 0 20px; }
+  .dos-layout { grid-template-columns: 1fr; }
+  .dos-sidebar { position: static; }
+  .dos-benefits { grid-template-columns: 1fr; }
+  .dos-bottom-cta { padding: 28px 24px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="dos-hero">
+  <div class="dos-container">
+    <a href="/arbeitgeber" class="dos-back">← Alle Arbeitgeber</a>
+    {d.kommunalflat && <div class="dos-kf-badge">★ KommunalFlat-Partner</div>}
+    <div class="dos-hero-bundesland">{d.bundesland}</div>
+    <h1 class="dos-hero-title">{d.name}</h1>
+    <p class="dos-hero-claim">„{d.claim}"</p>
+    <div class="dos-hero-kpis">
+      {d.kennzahlen.map((k: any) => (
+        <div class="dos-kpi">
+          <span class="dos-kpi-wert">{k.wert}</span>
+          <span class="dos-kpi-label">{k.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="dos-body">
+  <div class="dos-container">
+    <div class="dos-layout">
+
+      <!-- Hauptinhalt -->
+      <div>
+
+        <!-- Über die Stadt -->
+        <div class="dos-section">
+          <div class="dos-section-label">Der Arbeitgeber</div>
+          <h2 class="dos-section-title">Warum {d.name}?</h2>
+          <p class="dos-desc">{d.beschreibung}</p>
+        </div>
+
+        <!-- Benefits -->
+        <div class="dos-section">
+          <div class="dos-section-label">Was Sie erwartet</div>
+          <h2 class="dos-section-title">Benefits & Konditionen</h2>
+          <div class="dos-benefits">
+            {d.benefits.map((b: any) => (
+              <div class="dos-benefit">
+                <div class="dos-benefit-title">{b.titel}</div>
+                <div class="dos-benefit-desc">{b.beschreibung}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        {d.testimonials && d.testimonials.length > 0 && (
+          <div class="dos-section">
+            <div class="dos-section-label">Stimmen aus der Verwaltung</div>
+            <h2 class="dos-section-title">Was Kollegen sagen</h2>
+            <div class="dos-testimonials">
+              {d.testimonials.map((t: any) => (
+                <div class="dos-testimonial">
+                  <p class="dos-testimonial-zitat">{t.zitat}"</p>
+                  <div>
+                    <span class="dos-testimonial-name">{t.name}</span>
+                    <span class="dos-testimonial-seit"> · {t.amtsseit}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Aktuelle Stellen -->
+        <div class="dos-section">
+          <div class="dos-section-label">Jetzt bewerben</div>
+          <h2 class="dos-section-title">Offene Stellen in {d.name}</h2>
+          {stadtJobs.length > 0 ? (
+            <div class="dos-jobs">
+              {stadtJobs.map(job => (
+                <a href={`/stellen/${job.id}`} class="dos-job-card">
+                  <span class={`dos-job-badge ${job.data.paket.toLowerCase()}`}>{job.data.paket}</span>
+                  <div>
+                    <div class="dos-job-title">{job.data.title}</div>
+                    <div class="dos-job-meta">{job.data.entgelt} · Bewerbungsschluss {formatDatum(job.data.bewerbungsschluss)}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <p class="dos-no-jobs">Aktuell keine offenen Stellen — schauen Sie bald wieder vorbei.</p>
+          )}
+        </div>
+
+        <!-- KommunalFlat Bottom CTA -->
+        <div class="dos-bottom-cta">
+          <div>
+            <h3>Unbegrenzt Stellen schalten mit KommunalFlat</h3>
+            <p>{d.name} ist KommunalFlat-Partner. Das bedeutet: alle Stellenanzeigen werden hier und im Newsletter der über 4.200 kommunalen Entscheider sichtbar.</p>
+          </div>
+          <a href="/anzeige-aufgeben?paket=kommunalflat" class="dos-bottom-btn">KommunalFlat anfragen →</a>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="dos-sidebar">
+
+        <!-- Kontakt -->
+        <div class="dos-sidebar-box">
+          <div class="dos-sidebar-label">Kontakt Personal</div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Ansprechperson</span>
+            <span class="dos-contact-val">{d.kontakt.personal}</span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Telefon</span>
+            <span class="dos-contact-val"><a href={`tel:${d.kontakt.telefon.replace(/\s/g, '')}`}>{d.kontakt.telefon}</a></span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">E-Mail</span>
+            <span class="dos-contact-val"><a href={`mailto:${d.kontakt.email}`}>{d.kontakt.email}</a></span>
+          </div>
+          <a href={d.kontakt.bewerbungsportal} target="_blank" rel="noopener" class="dos-apply-btn">
+            Zum Karriereportal →
+          </a>
+        </div>
+
+        <!-- Stadtdaten -->
+        <div class="dos-sidebar-box">
+          <div class="dos-sidebar-label">Auf einen Blick</div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Bundesland</span>
+            <span class="dos-contact-val">{d.bundesland}</span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Einwohner</span>
+            <span class="dos-contact-val">{d.einwohner.toLocaleString('de-DE')}</span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Haushalt</span>
+            <span class="dos-contact-val">{d.haushalt}</span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Beschäftigte</span>
+            <span class="dos-contact-val">{d.beamteUndBeschaeftigte}</span>
+          </div>
+          <div class="dos-contact-row">
+            <span class="dos-contact-key">Bürgermeister/in</span>
+            <span class="dos-contact-val">{d.buergermeister}</span>
+          </div>
+          {d.gruendungsjahr && (
+            <div class="dos-contact-row">
+              <span class="dos-contact-key">Gegründet</span>
+              <span class="dos-contact-val">{d.gruendungsjahr}</span>
+            </div>
+          )}
+        </div>
+
+        <!-- KommunalFlat Box -->
+        <div class="dos-kf-box">
+          <div class="dos-kf-box-label">KommunalFlat</div>
+          <div class="dos-kf-box-title">Ihre Stadt im Dossier?</div>
+          <p class="dos-kf-box-text">Kommunen mit KommunalFlat erhalten ein vollständiges Dossier, unbegrenzte Stellenanzeigen und Newsletter-Reichweite zu 4.200+ Entscheidern.</p>
+          <a href="/anzeige-aufgeben?paket=kommunalflat" class="dos-kf-box-btn">Jetzt informieren →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>

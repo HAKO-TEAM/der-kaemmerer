@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 
 export async function getStaticPaths() {
   const jobs = await getCollection('jobs');
@@ -22,6 +24,11 @@ const badgeClass = 'sj-badge ' + paketLower;
 const deadlineClass = 'sj-deadline' + (tage <= 7 ? ' urgent' : '');
 const daysClass = 'sj-days' + (tage <= 7 ? ' urgent' : '');
 const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'Noch ' + tage + ' Tage';
+
+// Arbeitgeber-Dossier für diese Stadt prüfen
+const stadtSlug = d.ort.toLowerCase().replace(/\s+/g, '-').replace(/[äöüß]/g, c => ({'ä':'ae','ö':'oe','ü':'ue','ß':'ss'}[c] || c));
+const dossierPath = join(process.cwd(), `src/data/arbeitgeber/${stadtSlug}.json`);
+const dossier = existsSync(dossierPath) ? JSON.parse(readFileSync(dossierPath, 'utf-8')) : null;
 ---
 <Base
   title={`${d.title} – ${d.organisation}`}
@@ -101,6 +108,19 @@ const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'N
 .sj-schalten-box p { font-size: 12px; color: #374151; line-height: 1.6; margin-bottom: 10px; }
 .sj-schalten-link { font-size: 11px; font-weight: 700; color: #1d4ed8; text-decoration: none; letter-spacing: .05em; text-transform: uppercase; }
 /* ── Upgrade Box ── */
+/* ── Dossier-Box ── */
+.sj-dossier-box {
+  background: #172840; border-radius: 8px; padding: 20px 20px;
+}
+.sj-dossier-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; }
+.sj-dossier-title { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 6px; }
+.sj-dossier-sub { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.6; margin-bottom: 14px; }
+.sj-dossier-kpis { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.sj-dossier-kpi { font-size: 12px; color: rgba(255,255,255,.7); display: flex; justify-content: space-between; }
+.sj-dossier-kpi strong { color: #fff; }
+.sj-dossier-btn { display: flex; align-items: center; justify-content: center; padding: 11px 14px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 6px; transition: background .15s; }
+.sj-dossier-btn:hover { background: #1d4ed8; }
+
 .sj-upgrade-box {
   background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
   padding: 18px 20px; border-left: 4px solid #3b82f6;
@@ -201,6 +221,21 @@ const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'N
             <div class="sj-tags">
               {d.schlagwoerter.map(tag => <span class="sj-tag">{tag}</span>)}
             </div>
+          </div>
+        )}
+
+        <!-- Arbeitgeber-Dossier Link -->
+        {dossier && (
+          <div class="sj-dossier-box">
+            <div class="sj-dossier-label">Arbeitgeber-Dossier</div>
+            <div class="sj-dossier-title">{dossier.name}</div>
+            <p class="sj-dossier-sub">Kennzahlen, Benefits und Einblicke in diesen kommunalen Arbeitgeber.</p>
+            <div class="sj-dossier-kpis">
+              <div class="sj-dossier-kpi"><span>Einwohner</span><strong>{dossier.einwohner.toLocaleString('de-DE')}</strong></div>
+              <div class="sj-dossier-kpi"><span>Haushalt</span><strong>{dossier.haushalt}</strong></div>
+              <div class="sj-dossier-kpi"><span>Beschäftigte</span><strong>{dossier.beamteUndBeschaeftigte}</strong></div>
+            </div>
+            <a href={`/arbeitgeber/${dossier.slug}`} class="sj-dossier-btn">Dossier ansehen →</a>
           </div>
         )}
 

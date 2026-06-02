@@ -1,0 +1,48 @@
+{
+  "slug": "buxtehude",
+  "name": "Hansestadt Buxtehude",
+  "bundesland": "Niedersachsen",
+  "einwohner": 42000,
+  "haushalt": "195 Mio. €",
+  "beamteUndBeschaeftigte": 580,
+  "gruendungsjahr": 1285,
+  "buergermeister": "Katja Oldenburg-Schmidt",
+  "claim": "Stark verwurzelt. Offen für Neues.",
+  "beschreibung": "Die Hansestadt Buxtehude liegt im Herzen des Alten Landes — Niedersachsens fruchtbarster Region — und zählt zu den attraktivsten Arbeitgebern im Hamburger Umland. Mit direkter S-Bahn-Anbindung an Hamburg (30 Min.), einem lebendigen Stadtbild und einer stabilen Finanzsituation bietet Buxtehude Führungskräften aus der öffentlichen Verwaltung optimale Bedingungen.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "42.000", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "195 Mio. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "580", "icon": "🏛️" },
+    { "label": "Hamburg-Entfernung", "wert": "30 Min.", "icon": "🚆" }
+  ],
+  "benefits": [
+    { "titel": "TVöD-Vergütung", "beschreibung": "Leistungsgerechte Bezahlung nach Tarifvertrag öffentlicher Dienst mit regelmäßigen Tariferhöhungen." },
+    { "titel": "Flexible Arbeitszeit", "beschreibung": "Gleitzeit, Teilzeitmodelle und mobiles Arbeiten je nach Stelle bis zu 60 % möglich." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "Zusatzversorgung über die VBL — die Betriebsrente für den öffentlichen Dienst." },
+    { "titel": "Weiterbildung", "beschreibung": "Jährliches Fortbildungsbudget, Führungskräfteentwicklung und bezahlte Freistellung für Qualifizierungen." },
+    { "titel": "Jobticket", "beschreibung": "Vergünstigtes HVV-Deutschlandticket für den öffentlichen Nahverkehr inkl. Hamburg." },
+    { "titel": "Gesundheitsmanagement", "beschreibung": "Betriebssport, Ergonomie-Beratung, Kooperation mit regionalen Fitnessstudios." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Was mich überzeugt hat: kurze Entscheidungswege und ein Bürgermeisterbüro, das Projekte wirklich vorantreibt.",
+      "name": "Abteilungsleiter Stadtentwicklung",
+      "amtsseit": "seit 2023"
+    },
+    {
+      "zitat": "Die Kombination aus großstädtischer Erreichbarkeit und echter Lebensqualität in Buxtehude ist für meine Familie perfekt.",
+      "name": "Fachbereichsleitung Finanzen",
+      "amtsseit": "seit 2021"
+    }
+  ],
+  "kontakt": {
+    "personal": "Frau Müller-Hoffmann",
+    "email": "personal@stadt.buxtehude.de",
+    "telefon": "04161 501-1220",
+    "bewerbungsportal": "https://www.buxtehude.de/karriere"
+  },
+  "logo": "/arbeitgeber/buxtehude/logo.svg",
+  "bild": "/arbeitgeber/buxtehude/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}
