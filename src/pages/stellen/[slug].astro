@@ -224,21 +224,6 @@ const dossier = existsSync(dossierPath) ? JSON.parse(readFileSync(dossierPath, '
           </div>
         )}
 
-        <!-- Arbeitgeber-Dossier Link -->
-        {dossier && (
-          <div class="sj-dossier-box">
-            <div class="sj-dossier-label">Arbeitgeber-Dossier</div>
-            <div class="sj-dossier-title">{dossier.name}</div>
-            <p class="sj-dossier-sub">Kennzahlen, Benefits und Einblicke in diesen kommunalen Arbeitgeber.</p>
-            <div class="sj-dossier-kpis">
-              <div class="sj-dossier-kpi"><span>Einwohner</span><strong>{dossier.einwohner.toLocaleString('de-DE')}</strong></div>
-              <div class="sj-dossier-kpi"><span>Haushalt</span><strong>{dossier.haushalt}</strong></div>
-              <div class="sj-dossier-kpi"><span>Beschäftigte</span><strong>{dossier.beamteUndBeschaeftigte}</strong></div>
-            </div>
-            <a href={`/arbeitgeber/${dossier.slug}`} class="sj-dossier-btn">Dossier ansehen →</a>
-          </div>
-        )}
-
         <!-- Upgrade CTA -->
         <div class="sj-upgrade-box">
           <div class="sj-upgrade-label">Sind Sie der Arbeitgeber?</div>
