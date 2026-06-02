@@ -392,6 +392,26 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
   });
 }
 
+// ─── Exportierte Funktion für direkten Aufruf aus booking.js ─────────────────
+
+export async function createInvoice(data) {
+  if (!data.organisation || !data.email) {
+    throw new Error(`Pflichtfelder fehlen: organisation="${data.organisation}" email="${data.email}"`);
+  }
+  const { id, records, sha, path } = await nextInvoiceNumber();
+  const pdf = await buildPDF(data, id);
+  await sendInvoiceEmail(data, id, pdf);
+  await saveInvoiceRecord(path, sha, records, {
+    id,
+    year: new Date().getFullYear(),
+    date: new Date().toISOString().split('T')[0],
+    organisation: data.organisation,
+    email: data.email,
+    betrag: 296.31,
+  });
+  return id;
+}
+
 // ─── Webhook Handler ─────────────────────────────────────────────────────────
 
 export default async function handler(req, res) {
@@ -417,7 +437,7 @@ export default async function handler(req, res) {
       console.error('PARSE_FEHLER: organisation oder email fehlt', JSON.stringify({ organisation: data.organisation, email: data.email }));
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
-        from: 'HAKO Beteiligungsgesellschaft mbH <anzeigen@derkaemmerer.de>',
+        from: 'Der Kämmerer <anzeigen@derkaemmerer.de>',
         to: ['anzeigen@derkaemmerer.de'],
         subject: 'ACHTUNG: KommunalFlat-Buchung konnte nicht verarbeitet werden',
         html: `<p>Buchung eingegangen aber Pflichtfelder fehlen. Rohdaten:</p><pre>${JSON.stringify(body, null, 2).slice(0, 5000)}</pre>`,

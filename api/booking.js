@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { createInvoice } from './rechnung.js';
 
 function makeSlug(title, org) {
   const clean = s => s
@@ -141,31 +142,22 @@ export default async function handler(req, res) {
     await createGitHubFile(slug, content);
     if (process.env.RESEND_API_KEY) await sendEmail(d, slug);
 
-    // Rechnung erstellen und an Kunden senden
-    if (process.env.RESEND_API_KEY) {
-      try {
-        const origin = req.headers.origin || req.headers.host
-          ? `https://${req.headers.host}`
-          : 'https://derkaemmerer.de';
-        await fetch(`${origin}/api/rechnung`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            organisation:    d.behoerde,
-            abteilung:       d.abteilung || '',
-            ansprechpartner: d.kontaktname,
-            strasse:         d.rechnungsadresse || '',
-            plz:             d.rechnungsplz || '',
-            ort:             d.rechnungsort || d.ort || '',
-            email:           d.rechnungsemail || d.kontaktemail,
-            telefon:         d.kontakttel || '',
-            leitwegId:       d.leitwegid || '',
-            stellentitel:    d.stellentitel,
-          }),
-        });
-      } catch (e) {
-        console.error('Rechnung-Fehler:', e);
-      }
+    // Rechnung direkt erstellen und an Kunden senden
+    try {
+      await createInvoice({
+        organisation:    d.behoerde,
+        abteilung:       d.abteilung || '',
+        ansprechpartner: d.kontaktname,
+        strasse:         d.rechnungsadresse || '',
+        plz:             d.rechnungsplz || '',
+        ort:             d.rechnungsort || d.ort || '',
+        email:           d.rechnungsemail || d.kontaktemail,
+        telefon:         d.kontakttel || '',
+        leitwegId:       d.leitwegid || '',
+        stellentitel:    d.stellentitel,
+      });
+    } catch (e) {
+      console.error('Rechnung-Fehler:', e.message);
     }
 
     return res.status(200).json({ ok: true, slug });
