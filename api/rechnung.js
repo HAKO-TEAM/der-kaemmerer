@@ -17,28 +17,55 @@ const LABEL_MAP = {
   stellentitel:    ['stellentitel', 'stelle', 'erster stellentitel', 'gewünschter erster stellentitel (optional)'],
 };
 
+function getValue(f) {
+  if (!f) return '';
+  const v = f.value;
+  if (v == null) return '';
+  if (typeof v === 'string') return v;
+  if (typeof v === 'number') return String(v);
+  if (Array.isArray(v)) return v.map(i => (typeof i === 'object' ? i.text ?? i.label ?? i.value ?? '' : i)).join(', ');
+  if (typeof v === 'object') return v.text ?? v.label ?? v.value ?? v.number ?? String(v);
+  return String(v);
+}
+
 function parseTally(body) {
-  const fields = body?.data?.fields ?? [];
+  // Tally kann Felder unter data.fields oder direkt unter fields liefern
+  const fields = body?.data?.fields ?? body?.fields ?? [];
+
   const get = (internalKey) => {
     const aliases = LABEL_MAP[internalKey] ?? [internalKey];
     const f = fields.find(f => {
       const key   = (f.key   ?? '').toLowerCase().trim();
       const label = (f.label ?? '').toLowerCase().trim();
-      return aliases.some(a => key === a || label === a || label.startsWith(a));
+      return aliases.some(a =>
+        key === a ||
+        key.includes(a) ||
+        label === a ||
+        label.startsWith(a) ||
+        label.includes(a)
+      );
     });
-    if (!f) return '';
-    if (Array.isArray(f.value)) return f.value.join(', ');
-    return f.value ?? '';
+    return getValue(f);
   };
+
+  // Fallback: E-Mail anhand des Typs finden falls Label-Match scheitert
+  const findByType = (type) => {
+    const f = fields.find(f => (f.type ?? '').toUpperCase().includes(type.toUpperCase()));
+    return getValue(f);
+  };
+
+  const organisation = get('organisation');
+  const email        = get('email') || findByType('EMAIL');
+
   return {
-    organisation:    get('organisation'),
+    organisation,
     abteilung:       get('abteilung'),
     ansprechpartner: get('ansprechpartner'),
     strasse:         get('strasse'),
     plz:             get('plz'),
     ort:             get('ort'),
-    email:           get('email'),
-    telefon:         get('telefon'),
+    email,
+    telefon:         get('telefon') || findByType('PHONE'),
     leitwegId:       get('leitwegId'),
     stellentitel:    get('stellentitel'),
   };
