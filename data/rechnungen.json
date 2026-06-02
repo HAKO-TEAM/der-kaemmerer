@@ -150,5 +150,13 @@
     "organisation": "Underground",
     "email": "m.kosel@nurovia.de",
     "betrag": 296.31
+  },
+  {
+    "id": "DK-2026-0020",
+    "year": 2026,
+    "date": "2026-06-02",
+    "organisation": "Chaos Abteilung",
+    "email": "m.kosel@nurovia.de",
+    "betrag": 296.31
   }
 ]
