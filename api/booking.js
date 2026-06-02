@@ -73,7 +73,7 @@ async function sendEmail(d, slug) {
 
   // 1. Interne Benachrichtigung an DerKämmerer
   await resend.emails.send({
-    from: 'Buchungssystem <noreply@derkaemmerer.de>',
+    from: 'Der Kämmerer <anzeigen@derkaemmerer.de>',
     to: 'anzeigen@derkaemmerer.de',
     subject: `Neue Anzeigenbuchung: ${d.stellentitel} – ${d.behoerde}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
