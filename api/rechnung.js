@@ -260,13 +260,14 @@ function buildPDF(data, invoiceId) {
 
     // Skonto (volle Breite, hellblau, klar sichtbar)
     const skY = gY + 30;
-    doc.rect(ML, skY, CW, 34).fill('#dbeafe');
-    doc.moveTo(ML, skY).lineTo(ML, skY + 34).strokeColor(BLUE).lineWidth(3).stroke();
+    const skLabelW = CW - 120;  // Label-Breite lässt 120pt für Betrag rechts
+    doc.rect(ML, skY, CW, 36).fill('#dbeafe');
+    doc.moveTo(ML, skY).lineTo(ML, skY + 36).strokeColor(BLUE).lineWidth(3).stroke();
     doc.font('Helvetica-Bold').fontSize(9).fillColor(BLUE);
-    txt(doc, `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)} (${skontoTage} Werktage):`, ML+10, skY+6);
-    txt(doc, eur(skontoBetrag), ML, skY+6, { width: CW - 12, align: 'right' });
+    txt(doc, `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}:`, ML+10, skY+6, { width: skLabelW });
+    txt(doc, eur(skontoBetrag), ML + 10 + skLabelW, skY+6, { width: 110, align: 'right' });
     doc.font('Helvetica').fontSize(8).fillColor('#1d4ed8');
-    txt(doc, `Abzug ${eur(skontoAbzug)} vom Gesamtbetrag — danach zahlbar netto ${tage} Tage bis ${formatDate(frist)}`, ML+10, skY+20);
+    txt(doc, `Abzug ${eur(skontoAbzug)} bei Zahlung innerhalb von ${skontoTage} Werktagen. Danach netto ${tage} Tage bis ${formatDate(frist)}.`, ML+10, skY+22, { width: CW - 20 });
 
     // ── BANKVERBINDUNG ────────────────────────────────────────────────────────
     const bY = skY + 46;
@@ -285,10 +286,10 @@ function buildPDF(data, invoiceId) {
     doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
     doc.text(
       `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
-      `Danach faellig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
-      `Bitte ueberweisen Sie unter Angabe des Verwendungszwecks. ` +
-      `12-Monatsvertrag, erstmalig kuendbar zum Ablauf des 12. Monats, ` +
-      `danach monatlich zum Monatsende mit 1 Monat Kuendigungsfrist.`,
+      `Danach fallig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
+      `Bitte uberweisen Sie unter Angabe des Verwendungszwecks. ` +
+      `12-Monatsvertrag, erstmalig kundbar zum Ablauf des 12. Monats, ` +
+      `danach monatlich zum Monatsende mit 1 Monat Kundigungsfrist.`,
       ML, vY + 12, { width: CW, lineBreak: true }
     );
 
