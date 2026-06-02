@@ -269,7 +269,7 @@ function buildPDF(data, invoiceId) {
     txt(doc, `(Abzug ${eur(skontoAbzug)} bei Zahlung innerhalb von ${skontoTage} Werktagen)`, sLX, skY+17, { width: w3+w4 });
 
     // ── BANKVERBINDUNG ────────────────────────────────────────────────────────
-    const bY = gY + 36;
+    const bY = skY + 40;  // nach Skonto-Box (skY + 28 Höhe + 12 Abstand)
     doc.rect(ML, bY, CW, 66).fill(LIGHT);
     doc.font('Helvetica-Bold').fontSize(8.5).fillColor(NAVY);
     txt(doc, 'Bankverbindung', ML+12, bY+10);
