@@ -3,28 +3,44 @@ import { Resend } from 'resend';
 
 // ─── Tally Payload parsen ────────────────────────────────────────────────────
 
+// Label-Aliases: welche deutschen Labels matchen auf welchen internen Key
+const LABEL_MAP = {
+  organisation:    ['organisation', 'behörde', 'organisation / behörde', 'organisation/behörde'],
+  abteilung:       ['abteilung'],
+  ansprechpartner: ['ansprechpartner', 'kontakt', 'name'],
+  strasse:         ['strasse', 'straße', 'straße + hausnummer', 'strasse + hausnummer', 'adresse'],
+  plz:             ['plz', 'postleitzahl'],
+  ort:             ['ort', 'stadt'],
+  email:           ['rechnungs-email', 'rechnungsemail', 'e-mail', 'email', 'e-mail für rechnungsversand'],
+  telefon:         ['telefon', 'telefonnummer', 'tel'],
+  leitwegId:       ['leitweg-id', 'leitwegid', 'leitweg id', 'leitweg-id (optional, für xrechnung)'],
+  stellentitel:    ['stellentitel', 'stelle', 'erster stellentitel', 'gewünschter erster stellentitel (optional)'],
+};
+
 function parseTally(body) {
   const fields = body?.data?.fields ?? [];
-  const get = (key) => {
-    const f = fields.find(f =>
-      f.key?.toLowerCase() === key.toLowerCase() ||
-      f.label?.toLowerCase().replace(/\s+/g, '-') === key.toLowerCase()
-    );
+  const get = (internalKey) => {
+    const aliases = LABEL_MAP[internalKey] ?? [internalKey];
+    const f = fields.find(f => {
+      const key   = (f.key   ?? '').toLowerCase().trim();
+      const label = (f.label ?? '').toLowerCase().trim();
+      return aliases.some(a => key === a || label === a || label.startsWith(a));
+    });
     if (!f) return '';
     if (Array.isArray(f.value)) return f.value.join(', ');
     return f.value ?? '';
   };
   return {
-    organisation:   get('organisation'),
-    abteilung:      get('abteilung'),
+    organisation:    get('organisation'),
+    abteilung:       get('abteilung'),
     ansprechpartner: get('ansprechpartner'),
-    strasse:        get('strasse'),
-    plz:            get('plz'),
-    ort:            get('ort'),
-    email:          get('rechnungs-email'),
-    telefon:        get('telefon'),
-    leitwegId:      get('leitweg-id'),
-    stellentitel:   get('stellentitel'),
+    strasse:         get('strasse'),
+    plz:             get('plz'),
+    ort:             get('ort'),
+    email:           get('email'),
+    telefon:         get('telefon'),
+    leitwegId:       get('leitwegId'),
+    stellentitel:    get('stellentitel'),
   };
 }
 
@@ -74,10 +90,22 @@ async function saveInvoiceRecord(path, sha, records, entry) {
 
 // ─── PDF generieren ──────────────────────────────────────────────────────────
 
-const NAVY = '#172840';
-const BLUE = '#2563eb';
-const GRAY = '#6b7280';
+const NAVY  = '#172840';
+const BLUE  = '#2563eb';
+const GRAY  = '#6b7280';
 const LIGHT = '#f8fafc';
+
+// A4: 595.28 x 841.89 pt
+const PW = 595.28;
+const PH = 841.89;
+const ML = 50;  // margin left
+const MR = 50;  // margin right
+const CW = PW - ML - MR; // content width = 495.28
+
+function eur(amount) {
+  // Formatiert als "249,00 EUR" — vermeidet €-Encoding-Probleme in Standard-Fonts
+  return amount.toFixed(2).replace('.', ',') + ' EUR';
+}
 
 function formatDate(d = new Date()) {
   return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -87,131 +115,171 @@ function addDays(d, n) {
   const r = new Date(d); r.setDate(r.getDate() + n); return r;
 }
 
+function txt(doc, text, x, y, opts = {}) {
+  // Wrapper für absolut positionierten Text ohne automatischen Zeilenvorschub
+  doc.text(text, x, y, { lineBreak: false, ...opts });
+}
+
 function buildPDF(data, invoiceId) {
   return new Promise((resolve, reject) => {
-    const doc    = new PDFDocument({ size: 'A4', margin: 50 });
+    const doc = new PDFDocument({
+      size: 'A4',
+      margin: 0,
+      autoFirstPage: true,
+      bufferPages: true,
+    });
     const chunks = [];
     doc.on('data', c => chunks.push(c));
     doc.on('end',  () => resolve(Buffer.concat(chunks)));
     doc.on('error', reject);
 
-    const W     = 595.28;
     const heute = new Date();
     const frist = addDays(heute, parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
+    const tage  = process.env.ZAHLUNGSZIEL_TAGE ?? '14';
 
-    // Header-Band
-    doc.rect(0, 0, W, 80).fill(NAVY);
-    doc.fillColor('#ffffff').fontSize(20).font('Helvetica-Bold')
-       .text('Der Kämmerer', 50, 28);
-    doc.fontSize(9).font('Helvetica')
-       .text('Das unabhängige Briefing für kommunale Entscheider', 50, 52);
-    doc.fillColor(BLUE).fontSize(20).font('Helvetica-Bold')
-       .text('RECHNUNG', W - 160, 28, { align: 'right', width: 110 });
+    // ── HEADER ────────────────────────────────────────────────────────────────
+    doc.rect(0, 0, PW, 72).fill(NAVY);
 
-    // Rechnungsinfos oben rechts
-    doc.fillColor(NAVY).fontSize(9).font('Helvetica')
-       .text(`Rechnungsnummer: ${invoiceId}`, 350, 100, { align: 'right', width: 195 })
-       .text(`Rechnungsdatum: ${formatDate(heute)}`, 350, 114, { align: 'right', width: 195 })
-       .text(`Leistungsdatum: ${formatDate(heute)}`, 350, 128, { align: 'right', width: 195 })
-       .text(`Zahlungsziel: ${formatDate(frist)}`, 350, 142, { align: 'right', width: 195 });
+    // Logo links
+    doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(18);
+    txt(doc, 'Der Kämmerer', ML, 22);
+    doc.font('Helvetica').fontSize(8).fillColor('#94a3b8');
+    txt(doc, 'Das unabhängige Briefing für kommunale Entscheider', ML, 46);
 
-    // Absender (klein über Empfänger)
-    doc.fillColor(GRAY).fontSize(7)
-       .text('HAKO GmbH · Steuernr.: ' + (process.env.FIRMA_STEUERNR ?? ''), 50, 100);
+    // "RECHNUNG" rechts — genug Breite damit kein Umbruch
+    doc.font('Helvetica-Bold').fontSize(18).fillColor(BLUE);
+    txt(doc, 'RECHNUNG', ML, 22, { align: 'right', width: CW, lineBreak: false });
 
-    // Rechnungsadresse
-    doc.fillColor(NAVY).fontSize(10).font('Helvetica-Bold')
-       .text(data.organisation, 50, 118);
-    doc.font('Helvetica').fillColor('#374151')
-       .text(data.abteilung || '', 50, 132)
-       .text(data.ansprechpartner || '', 50, 146)
-       .text(data.strasse, 50, 160)
-       .text(`${data.plz} ${data.ort}`, 50, 174);
+    // ── RECHNUNGSINFOS (rechts) ───────────────────────────────────────────────
+    const infoX = 340;
+    const infoW = PW - infoX - MR;
+    doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
+    txt(doc, `Rechnungsnr.: ${invoiceId}`,         infoX, 90,  { width: infoW, align: 'right' });
+    txt(doc, `Datum: ${formatDate(heute)}`,         infoX, 103, { width: infoW, align: 'right' });
+    txt(doc, `Leistungsdatum: ${formatDate(heute)}`,infoX, 116, { width: infoW, align: 'right' });
+    txt(doc, `Zahlungsziel: ${formatDate(frist)}`,  infoX, 129, { width: infoW, align: 'right' });
 
-    if (data.leitwegId) {
-      doc.fillColor(GRAY).fontSize(8)
-         .text(`Leitweg-ID: ${data.leitwegId}`, 50, 192);
+    // ── ABSENDER (winzig über Adresse) ────────────────────────────────────────
+    doc.font('Helvetica').fontSize(6.5).fillColor(GRAY);
+    txt(doc, `HAKO GmbH  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}`, ML, 88);
+
+    // ── RECHNUNGSADRESSE ──────────────────────────────────────────────────────
+    doc.font('Helvetica-Bold').fontSize(10).fillColor(NAVY);
+    txt(doc, data.organisation, ML, 100);
+
+    doc.font('Helvetica').fontSize(9).fillColor('#374151');
+    let addrY = 114;
+    if (data.abteilung)      { txt(doc, data.abteilung,      ML, addrY); addrY += 13; }
+    if (data.ansprechpartner){ txt(doc, data.ansprechpartner,ML, addrY); addrY += 13; }
+    txt(doc, data.strasse,             ML, addrY); addrY += 13;
+    txt(doc, `${data.plz} ${data.ort}`,ML, addrY); addrY += 13;
+    if (data.leitwegId && data.leitwegId !== '-') {
+      doc.fontSize(7.5).fillColor(GRAY);
+      txt(doc, `Leitweg-ID: ${data.leitwegId}`, ML, addrY);
     }
 
-    // Trennlinie
-    const lineY = 215;
-    doc.moveTo(50, lineY).lineTo(W - 50, lineY).strokeColor(BLUE).lineWidth(1.5).stroke();
+    // ── TRENNLINIE ────────────────────────────────────────────────────────────
+    const lineY = 200;
+    doc.moveTo(ML, lineY).lineTo(PW - MR, lineY).strokeColor(BLUE).lineWidth(1.5).stroke();
 
-    // Betreff
-    doc.fillColor(NAVY).fontSize(13).font('Helvetica-Bold')
-       .text('Rechnung KommunalFlat – Stellenbörse', 50, lineY + 15);
-    doc.fillColor(GRAY).fontSize(9).font('Helvetica')
-       .text(`Flatrate-Abonnement · 12-Monatsvertrag`, 50, lineY + 32);
+    // ── BETREFF ───────────────────────────────────────────────────────────────
+    doc.font('Helvetica-Bold').fontSize(12).fillColor(NAVY);
+    txt(doc, 'Rechnung KommunalFlat – Stellenboerse derkaemmerer.de', ML, lineY + 14);
+    doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
+    txt(doc, 'Flatrate-Abonnement  |  12-Monatsvertrag', ML, lineY + 30);
 
-    // Positionstabelle
-    const tableY = lineY + 55;
-    doc.rect(50, tableY, W - 100, 22).fill(NAVY);
-    doc.fillColor('#ffffff').fontSize(8.5).font('Helvetica-Bold')
-       .text('Pos.', 58, tableY + 6)
-       .text('Leistungsbeschreibung', 90, tableY + 6)
-       .text('Menge', 370, tableY + 6, { width: 60, align: 'right' })
-       .text('Einzelpreis', 435, tableY + 6, { width: 60, align: 'right' })
-       .text('Betrag', 500, tableY + 6, { width: 45, align: 'right' });
+    // ── TABELLE ───────────────────────────────────────────────────────────────
+    const tY  = lineY + 50;
+    const tH  = 20;
+    // Spalten: Pos | Beschreibung | Menge | Einzelpreis | Betrag
+    const c0 = ML,      w0 = 28;
+    const c1 = c0+w0,   w1 = 240;
+    const c2 = c1+w1,   w2 = 65;
+    const c3 = c2+w2,   w3 = 75;
+    const c4 = c3+w3,   w4 = PW - MR - (c3+w3);
 
-    const rowY = tableY + 30;
-    doc.rect(50, rowY - 6, W - 100, 40).fill(LIGHT);
-    doc.fillColor(NAVY).fontSize(9).font('Helvetica-Bold')
-       .text('1', 58, rowY)
-       .text('KommunalFlat – Stellenbörse derkaemmerer.de', 90, rowY);
-    doc.font('Helvetica').fillColor(GRAY).fontSize(8)
-       .text('Unlimitierte Stellenanzeigen · Stadt-Dossier · Newsletter + LinkedIn', 90, rowY + 13);
-    doc.fillColor(NAVY).fontSize(9)
-       .text('1 Monat', 370, rowY + 4, { width: 60, align: 'right' })
-       .text('249,00 €', 435, rowY + 4, { width: 60, align: 'right' })
-       .text('249,00 €', 500, rowY + 4, { width: 45, align: 'right' });
+    // Header-Zeile
+    doc.rect(ML, tY, CW, tH).fill(NAVY);
+    doc.font('Helvetica-Bold').fontSize(8).fillColor('#ffffff');
+    txt(doc, 'Pos.',             c0+4, tY+6);
+    txt(doc, 'Leistung',         c1,   tY+6);
+    txt(doc, 'Menge',            c2,   tY+6, { width: w2, align: 'right' });
+    txt(doc, 'Einzelpreis',      c3,   tY+6, { width: w3, align: 'right' });
+    txt(doc, 'Betrag',           c4,   tY+6, { width: w4, align: 'right' });
 
-    // Summenblock
-    const sumY = rowY + 60;
-    doc.moveTo(W - 220, sumY).lineTo(W - 50, sumY).strokeColor('#e5e7eb').lineWidth(0.5).stroke();
+    // Daten-Zeile
+    const rY = tY + tH + 6;
+    doc.rect(ML, rY - 4, CW, 42).fill(LIGHT);
+    doc.font('Helvetica-Bold').fontSize(9).fillColor(NAVY);
+    txt(doc, '1', c0+4, rY);
+    txt(doc, 'KommunalFlat – Stellenboerse derkaemmerer.de', c1, rY, { width: w1 });
+    doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
+    txt(doc, 'Unlimitierte Stellenanzeigen  |  Stadt-Dossier  |  Newsletter + LinkedIn', c1, rY+13, { width: w1 });
 
-    const sumRow = (label, value, bold = false, color = NAVY) => {
-      const y = sumY + (sumRow._n++ * 17);
-      doc.fillColor(GRAY).fontSize(9).font('Helvetica').text(label, W - 220, y, { width: 130, align: 'right' });
-      doc.fillColor(color).font(bold ? 'Helvetica-Bold' : 'Helvetica').fontSize(bold ? 10 : 9)
-         .text(value, W - 85, y, { width: 35, align: 'right' });
-    };
-    sumRow._n = 0;
-    sumRow('Nettobetrag:', '249,00 €');
-    sumRow('Umsatzsteuer 19 %:', '47,31 €');
+    doc.font('Helvetica').fontSize(9).fillColor(NAVY);
+    txt(doc, '1 Monat',        c2, rY+4, { width: w2, align: 'right' });
+    txt(doc, eur(249),         c3, rY+4, { width: w3, align: 'right' });
+    txt(doc, eur(249),         c4, rY+4, { width: w4, align: 'right' });
 
-    const totalY = sumY + 2 * 17 + 6;
-    doc.rect(W - 225, totalY, 175, 22).fill(NAVY);
-    doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(10)
-       .text('Gesamtbetrag:', W - 220, totalY + 5, { width: 130, align: 'right' })
-       .text('296,31 €', W - 85, totalY + 5, { width: 35, align: 'right' });
+    // ── SUMMENBLOCK ───────────────────────────────────────────────────────────
+    const sY  = rY + 56;
+    const sLX = c3;   // Summen-Label ab Einzelpreis-Spalte
+    const sVX = c4;   // Summen-Wert in Betrag-Spalte
 
-    // Zahlungshinweis
-    const payY = totalY + 45;
-    doc.rect(50, payY, W - 100, 70).fill(LIGHT);
-    doc.fillColor(NAVY).font('Helvetica-Bold').fontSize(9).text('Bankverbindung', 65, payY + 10);
-    doc.fillColor('#374151').font('Helvetica').fontSize(8.5)
-       .text(`IBAN: ${process.env.FIRMA_IBAN ?? ''}`, 65, payY + 24)
-       .text(`BIC: ${process.env.FIRMA_BIC ?? ''}  ·  ${process.env.FIRMA_BANK ?? ''}`, 65, payY + 38)
-       .text(`Verwendungszweck: ${invoiceId} · ${data.organisation}`, 65, payY + 52);
+    doc.moveTo(sLX, sY).lineTo(PW - MR, sY).strokeColor('#d1d5db').lineWidth(0.5).stroke();
 
-    // Vertragsbedingungen
-    const condY = payY + 90;
-    doc.fillColor(NAVY).font('Helvetica-Bold').fontSize(8.5).text('Vertragsbedingungen', 50, condY);
-    doc.fillColor(GRAY).font('Helvetica').fontSize(7.5)
-       .text(
-         '12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats. ' +
-         'Danach monatlich kündbar zum Monatsende mit 1 Monat Kündigungsfrist. ' +
-         'Bitte überweisen Sie den Betrag innerhalb von ' +
-         (process.env.ZAHLUNGSZIEL_TAGE ?? '14') + ' Tagen unter Angabe des Verwendungszwecks.',
-         50, condY + 14, { width: W - 100 }
-       );
+    doc.font('Helvetica').fontSize(9).fillColor(GRAY);
+    txt(doc, 'Nettobetrag:',       sLX, sY+6,  { width: w3, align: 'right' });
+    txt(doc, 'MwSt. 19 %:',        sLX, sY+20, { width: w3, align: 'right' });
+    doc.fillColor(NAVY);
+    txt(doc, eur(249),             sVX, sY+6,  { width: w4, align: 'right' });
+    txt(doc, eur(47.31),           sVX, sY+20, { width: w4, align: 'right' });
 
-    // Footer
-    doc.rect(0, 790, W, 52).fill(NAVY);
-    doc.fillColor('#9ca3af').fontSize(7).font('Helvetica')
-       .text('HAKO GmbH  ·  derkaemmerer.de  ·  anzeigen@derkaemmerer.de', 50, 800, { align: 'center', width: W - 100 })
-       .text(`Steuernummer: ${process.env.FIRMA_STEUERNR ?? ''}  ·  Gemäß §14 UStG`, 50, 812, { align: 'center', width: W - 100 });
+    // Gesamt-Box
+    const gY = sY + 38;
+    doc.rect(sLX - 4, gY, PW - MR - sLX + 4, 22).fill(NAVY);
+    doc.font('Helvetica-Bold').fontSize(10).fillColor('#ffffff');
+    txt(doc, 'Gesamtbetrag:', sLX, gY+5, { width: w3, align: 'right' });
+    txt(doc, eur(296.31),     sVX, gY+5, { width: w4, align: 'right' });
 
+    // ── BANKVERBINDUNG ────────────────────────────────────────────────────────
+    const bY = gY + 36;
+    doc.rect(ML, bY, CW, 66).fill(LIGHT);
+    doc.font('Helvetica-Bold').fontSize(8.5).fillColor(NAVY);
+    txt(doc, 'Bankverbindung', ML+12, bY+10);
+    doc.font('Helvetica').fontSize(8.5).fillColor('#374151');
+    txt(doc, `IBAN: ${process.env.FIRMA_IBAN ?? '(wird nachgereicht)'}`,   ML+12, bY+24);
+    txt(doc, `BIC:  ${process.env.FIRMA_BIC  ?? ''}   ${process.env.FIRMA_BANK ?? ''}`, ML+12, bY+38);
+    txt(doc, `Verwendungszweck: ${invoiceId}  |  ${data.organisation}`,    ML+12, bY+52);
+
+    // ── VERTRAGSBEDINGUNGEN ───────────────────────────────────────────────────
+    const vY = bY + 82;
+    doc.font('Helvetica-Bold').fontSize(8).fillColor(NAVY);
+    txt(doc, 'Vertragsbedingungen', ML, vY);
+    doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
+    doc.text(
+      `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats. ` +
+      `Danach monatlich kündbar zum Monatsende mit 1 Monat Kündigungsfrist. ` +
+      `Bitte ueberweisen Sie den Betrag innerhalb von ${tage} Tagen ` +
+      `unter Angabe des Verwendungszwecks.`,
+      ML, vY + 12, { width: CW, lineBreak: true }
+    );
+
+    // ── FOOTER (absolut auf Seite 1 — KEIN doc.text davor der umbricht) ───────
+    const fY = PH - 38;
+    doc.rect(0, fY, PW, 38).fill(NAVY);
+    doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
+    txt(doc,
+      `HAKO GmbH  |  derkaemmerer.de  |  anzeigen@derkaemmerer.de  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}  |  Gem. §14 UStG`,
+      ML, fY + 8, { width: CW, align: 'center' }
+    );
+    txt(doc,
+      `Gemäß §14 UStG ausgestellte Rechnung`,
+      ML, fY + 22, { width: CW, align: 'center' }
+    );
+
+    // Sicherstellen: nur 1 Seite
+    doc.flushPages();
     doc.end();
   });
 }
