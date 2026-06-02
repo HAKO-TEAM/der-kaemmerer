@@ -276,7 +276,7 @@ function formatDatum(s: string) {
             <span class="dos-contact-val">{d.beamteUndBeschaeftigte}</span>
           </div>
           <div class="dos-contact-row">
-            <span class="dos-contact-key">Bürgermeister/in</span>
+            <span class="dos-contact-key">{d.buergermeistertitel || 'Bürgermeister/in'}</span>
             <span class="dos-contact-val">{d.buergermeister}</span>
           </div>
           {d.gruendungsjahr && (
