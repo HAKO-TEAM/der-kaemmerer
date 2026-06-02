@@ -271,8 +271,8 @@ function buildPDF(data, invoiceId) {
     doc.rect(0, fY, PW, 38).fill(NAVY);
     doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
     txt(doc,
-      `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, 01067 Dresden  |  HRB 29317, AG Dresden`,
-      ML, fY + 8, { width: CW, align: 'center' }
+      `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, D-01067 Dresden  |  HRB 29317, AG Dresden  |  GF: Pierre Haustein & Michael G. Kosel`,
+      ML, fY + 7, { width: CW, align: 'center' }
     );
     txt(doc,
       `derkaemmerer.de  |  anzeigen@derkaemmerer.de  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}  |  Gem. §14 UStG`,
