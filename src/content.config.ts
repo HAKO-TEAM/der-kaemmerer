@@ -38,7 +38,7 @@ export const collections = {
       bewerbungsschluss: z.string(),
       bewerbungslink:    z.string(),
       schlagwoerter:     z.array(z.string()).optional(),
-      paket:             z.enum(['Basis', 'Premium', 'Exklusiv']).default('Basis'),
+      paket:             z.enum(['Basis', 'Premium', 'Exklusiv', 'KommunalFlat']).default('Basis'),
       aktiv:             z.boolean().default(true),
       datum:             z.string(),
       featured:          z.boolean().default(false),
