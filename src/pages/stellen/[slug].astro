@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import JobPostingSchema from '../../components/JobPostingSchema.astro';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -35,6 +36,20 @@ const dossier = existsSync(dossierPath) ? JSON.parse(readFileSync(dossierPath, '
   description={`${d.organisation} sucht ${d.title} in ${d.ort}, ${d.bundesland}. ${d.entgelt} · Bewerbungsschluss ${formatDatum(d.bewerbungsschluss)}.`}
   ogType="article"
 >
+<JobPostingSchema
+  title={d.title}
+  description={`${d.organisation} sucht ${d.title} in ${d.ort}, ${d.bundesland}. ${d.entgelt}. Beschäftigung: ${d.beschaeftigung}. Befristung: ${d.befristung}.`}
+  datePosted={d.datum}
+  validThrough={d.bewerbungsschluss}
+  employerName={d.organisation}
+  jobLocation={d.ort}
+  jobRegion={d.bundesland}
+  employmentType={d.beschaeftigung === 'Teilzeit' ? 'PART_TIME' : 'FULL_TIME'}
+  entgelt={d.entgelt}
+  applicationUrl={d.bewerbungslink}
+  identifier={job.id}
+/>
+
 <Header />
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">

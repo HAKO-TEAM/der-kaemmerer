@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  datePosted: string;
+  validThrough: string;
+  employerName: string;
+  jobLocation: string;
+  jobRegion?: string;
+  employmentType?: string;
+  entgelt?: string;
+  applicationUrl?: string;
+  identifier?: string;
+}
+
+const {
+  title,
+  description,
+  datePosted,
+  validThrough,
+  employerName,
+  jobLocation,
+  jobRegion = 'Deutschland',
+  employmentType = 'FULL_TIME',
+  entgelt,
+  applicationUrl,
+  identifier,
+} = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title,
+  description,
+  datePosted,
+  validThrough,
+  employmentType,
+  directApply: true,
+  hiringOrganization: {
+    '@type': 'Organization',
+    name: employerName,
+  },
+  jobLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: jobLocation,
+      addressRegion: jobRegion,
+      addressCountry: 'DE',
+    },
+  },
+  ...(entgelt && {
+    jobBenefits: entgelt,
+  }),
+  ...(applicationUrl && !applicationUrl.includes('trefferliste') && {
+    applicationContact: {
+      '@type': 'ContactPoint',
+      url: applicationUrl,
+    },
+  }),
+  ...(identifier && {
+    identifier: {
+      '@type': 'PropertyValue',
+      name: employerName,
+      value: identifier,
+    },
+  }),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
