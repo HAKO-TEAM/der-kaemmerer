@@ -128,24 +128,14 @@ const jobs = rawJobs.map(job => {
 .st-empty { text-align: center; padding: 64px 0; color: #6b7280; }
 .st-empty h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: #1a2744; margin-bottom: 10px; }
 
-/* DOSSIER STRIP */
-.st-dossier { background: #172840; padding: 28px 0; border-bottom: 3px solid #2563eb; }
-.st-dossier-inner { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.st-dossier-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #60a5fa; white-space: nowrap; flex-shrink: 0; }
-.st-dossier-cards { display: flex; gap: 12px; flex: 1; flex-wrap: wrap; }
-.st-dossier-card {
-  display: flex; align-items: center; gap: 10px;
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
-  border-radius: 6px; padding: 10px 14px; text-decoration: none;
-  transition: background .15s, border-color .15s;
-  flex-shrink: 0;
-}
-.st-dossier-card:hover { background: rgba(37,99,235,.3); border-color: #2563eb; }
-.st-dossier-card-name { font-size: 13px; font-weight: 700; color: #fff; line-height: 1.2; }
-.st-dossier-card-meta { font-size: 11px; color: rgba(255,255,255,.45); }
-.st-dossier-card-badge { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; background: rgba(96,165,250,.15); border: 1px solid rgba(96,165,250,.3); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
-.st-dossier-all { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #60a5fa; text-decoration: none; white-space: nowrap; flex-shrink: 0; border-left: 1px solid rgba(255,255,255,.12); padding-left: 24px; }
-.st-dossier-all:hover { color: #fff; }
+/* DOSSIER TEASER */
+.st-dossier { background: #172840; border-bottom: 2px solid #2563eb; padding: 12px 0; }
+.st-dossier-inner { display: flex; align-items: center; gap: 12px; }
+.st-dossier-badge { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: rgba(37,99,235,.3); border: 1px solid rgba(96,165,250,.4); color: #93c5fd; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.st-dossier-text { font-size: 13px; color: rgba(255,255,255,.65); flex: 1; }
+.st-dossier-text strong { color: #fff; }
+.st-dossier-link { font-size: 12px; font-weight: 700; color: #60a5fa; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: color .15s; }
+.st-dossier-link:hover { color: #fff; }
 
 /* CTA */
 .st-cta { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 32px; }
@@ -185,24 +175,14 @@ const jobs = rawJobs.map(job => {
   </div>
 </div>
 
-<!-- DOSSIER STRIP -->
+<!-- DOSSIER TEASER -->
 {dossiers.length > 0 && (
   <div class="st-dossier">
     <div class="st-container">
       <div class="st-dossier-inner">
-        <span class="st-dossier-label">Partnerstädte</span>
-        <div class="st-dossier-cards">
-          {dossiers.map(d => (
-            <a href={`/arbeitgeber/${d.slug}`} class="st-dossier-card">
-              <div>
-                <div class="st-dossier-card-name">{d.name}</div>
-                <div class="st-dossier-card-meta">{d.einwohner.toLocaleString('de-DE')} Einw. · {d.bundesland}</div>
-              </div>
-              <span class="st-dossier-card-badge">Dossier</span>
-            </a>
-          ))}
-        </div>
-        <a href="/arbeitgeber" class="st-dossier-all">Alle ansehen →</a>
+        <span class="st-dossier-badge">Arbeitgeber-Dossiers</span>
+        <p class="st-dossier-text"><strong>{dossiers.length} Partnerstädte</strong> stellen sich vor — mit Kennzahlen, Benefits und offenen Stellen.</p>
+        <a href="/arbeitgeber" class="st-dossier-link">Arbeitgeber kennenlernen →</a>
       </div>
     </div>
   </div>
