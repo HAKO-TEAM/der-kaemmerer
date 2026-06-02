@@ -705,10 +705,10 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
       <!-- ══ ZUSAMMENFASSUNG & ABSENDEN ══ -->
       <div class="f-summary" id="summary">
         <div class="f-summary-title">📋 Ihre Buchungsübersicht</div>
-        <div class="f-summary-row"><span>Paket</span><span id="sum-paket">— noch nicht gewählt</span></div>
-        <div class="f-summary-row" id="sum-addon-row" style="display:none"><span>Zusatzleistungen</span><span id="sum-addons">—</span></div>
-        <div class="f-summary-row total"><span>Gesamtbetrag (netto)</span><span id="sum-total">—</span></div>
-        <div style="font-size:11px;color:#065f46;margin-top:8px">zzgl. gesetzlicher Mehrwertsteuer · Rechnung nach Schaltung · Zahlung innerhalb 14 Tagen</div>
+        <div class="f-summary-row"><span>Paket</span><span id="sum-paket">KommunalFlat – 249 €/Monat</span></div>
+        <div class="f-summary-row" id="sum-addon-row" style="display:none"><span>Zusatzleistungen (einmalig)</span><span id="sum-addons">—</span></div>
+        <div class="f-summary-row total"><span>Monatlicher Grundbetrag (netto)</span><span id="sum-total">249 €/Monat</span></div>
+        <div style="font-size:11px;color:#065f46;margin-top:8px">zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel</div>
       </div>
 
       <!-- Formspree Steuerung -->
@@ -739,7 +739,8 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 document.getElementById('errorMsg')?.classList.remove('visible');
 
 // ── KommunalFlat: Paket fix vorbelegt ───────────
-// (kein Radio mehr nötig — hidden input)
+// Zusammenfassung sofort initialisieren
+document.addEventListener('DOMContentLoaded', () => updateSummary());
 
 // ── Preise ──────────────────────────────────────────────
 const paketPreise: Record<string, number> = {
@@ -773,7 +774,7 @@ function updateSummary() {
   if (sumAddons)   sumAddons.textContent   = addonLabels.join(', ') || '—';
 
   const total = base + addonTotal;
-  if (sumTotal) sumTotal.textContent = total > 0 ? `${total.toLocaleString('de-DE')} €` : '—';
+  if (sumTotal) sumTotal.textContent = `${base.toLocaleString('de-DE')} €/Monat${addonTotal > 0 ? ` + ${addonTotal.toLocaleString('de-DE')} € einmalig` : ''}`;
 }
 
 // ── Paket auswählen ─────────────────────────────────────
