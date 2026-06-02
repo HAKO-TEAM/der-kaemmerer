@@ -118,5 +118,13 @@
     "organisation": "Stadtverwaltung Test",
     "email": "anzeigen@derkaemmerer.de",
     "betrag": 296.31
+  },
+  {
+    "id": "DK-2026-0016",
+    "year": 2026,
+    "date": "2026-06-02",
+    "organisation": "Stadtverwaltung Dresden",
+    "email": "anzeigen@derkaemmerer.de",
+    "betrag": 296.31
   }
 ]
