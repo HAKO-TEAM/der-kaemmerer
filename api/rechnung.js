@@ -103,8 +103,18 @@ const MR = 50;  // margin right
 const CW = PW - ML - MR; // content width = 495.28
 
 function eur(amount) {
-  // Formatiert als "249,00 EUR" — vermeidet €-Encoding-Probleme in Standard-Fonts
   return amount.toFixed(2).replace('.', ',') + ' EUR';
+}
+
+function addWorkdays(date, days) {
+  const d = new Date(date);
+  let added = 0;
+  while (added < days) {
+    d.setDate(d.getDate() + 1);
+    const dow = d.getDay();
+    if (dow !== 0 && dow !== 6) added++;
+  }
+  return d;
 }
 
 function formatDate(d = new Date()) {
@@ -133,9 +143,15 @@ function buildPDF(data, invoiceId) {
     doc.on('end',  () => resolve(Buffer.concat(chunks)));
     doc.on('error', reject);
 
-    const heute = new Date();
-    const frist = addDays(heute, parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
-    const tage  = process.env.ZAHLUNGSZIEL_TAGE ?? '14';
+    const heute       = new Date();
+    const frist       = addDays(heute, parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
+    const tage        = process.env.ZAHLUNGSZIEL_TAGE ?? '14';
+    const skontoPct   = 5;
+    const skontoTage  = 5;
+    const skontoFrist = addWorkdays(heute, skontoTage);
+    const bruttoGes   = 296.31;
+    const skontoAbzug = Math.round(bruttoGes * skontoPct) / 100;  // 14.82
+    const skontoBetrag = Math.round((bruttoGes - skontoAbzug) * 100) / 100; // 281.49
 
     // ── HEADER ────────────────────────────────────────────────────────────────
     doc.rect(0, 0, PW, 72).fill(NAVY);
@@ -230,18 +246,27 @@ function buildPDF(data, invoiceId) {
     doc.moveTo(sLX, sY).lineTo(PW - MR, sY).strokeColor('#d1d5db').lineWidth(0.5).stroke();
 
     doc.font('Helvetica').fontSize(9).fillColor(GRAY);
-    txt(doc, 'Nettobetrag:',       sLX, sY+6,  { width: w3, align: 'right' });
-    txt(doc, 'MwSt. 19 %:',        sLX, sY+20, { width: w3, align: 'right' });
+    txt(doc, 'Nettobetrag:',  sLX, sY+6,  { width: w3, align: 'right' });
+    txt(doc, 'MwSt. 19 %:',   sLX, sY+20, { width: w3, align: 'right' });
     doc.fillColor(NAVY);
-    txt(doc, eur(249),             sVX, sY+6,  { width: w4, align: 'right' });
-    txt(doc, eur(47.31),           sVX, sY+20, { width: w4, align: 'right' });
+    txt(doc, eur(249),        sVX, sY+6,  { width: w4, align: 'right' });
+    txt(doc, eur(47.31),      sVX, sY+20, { width: w4, align: 'right' });
 
     // Gesamt-Box
     const gY = sY + 38;
     doc.rect(sLX - 4, gY, PW - MR - sLX + 4, 22).fill(NAVY);
     doc.font('Helvetica-Bold').fontSize(10).fillColor('#ffffff');
     txt(doc, 'Gesamtbetrag:', sLX, gY+5, { width: w3, align: 'right' });
-    txt(doc, eur(296.31),     sVX, gY+5, { width: w4, align: 'right' });
+    txt(doc, eur(bruttoGes),  sVX, gY+5, { width: w4, align: 'right' });
+
+    // Skonto-Hinweis unter Gesamtbox
+    const skY = gY + 28;
+    doc.rect(sLX - 4, skY, PW - MR - sLX + 4, 28).fill('#eff6ff');
+    doc.font('Helvetica-Bold').fontSize(8).fillColor(BLUE);
+    txt(doc, `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}:`, sLX, skY+5, { width: w3+w4, align: 'left' });
+    txt(doc, eur(skontoBetrag), sVX, skY+5, { width: w4, align: 'right' });
+    doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
+    txt(doc, `(Abzug ${eur(skontoAbzug)} bei Zahlung innerhalb von ${skontoTage} Werktagen)`, sLX, skY+17, { width: w3+w4 });
 
     // ── BANKVERBINDUNG ────────────────────────────────────────────────────────
     const bY = gY + 36;
@@ -259,10 +284,11 @@ function buildPDF(data, invoiceId) {
     txt(doc, 'Vertragsbedingungen', ML, vY);
     doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
     doc.text(
-      `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats. ` +
-      `Danach monatlich kündbar zum Monatsende mit 1 Monat Kündigungsfrist. ` +
-      `Bitte ueberweisen Sie den Betrag innerhalb von ${tage} Tagen ` +
-      `unter Angabe des Verwendungszwecks.`,
+      `Zahlungsbedingungen: ${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)} (${skontoTage} Werktage). ` +
+      `Danach faellig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
+      `Bitte ueberweisen Sie unter Angabe des Verwendungszwecks. ` +
+      `12-Monatsvertrag, erstmalig kuendbar zum Ablauf des 12. Monats. ` +
+      `Danach monatlich kuendbar zum Monatsende mit 1 Monat Kuendigungsfrist.`,
       ML, vY + 12, { width: CW, lineBreak: true }
     );
 
