@@ -1,0 +1,48 @@
+{
+  "slug": "wuppertal",
+  "name": "Stadt Wuppertal",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 355000,
+  "haushalt": "1,6 Mrd. €",
+  "beamteUndBeschaeftigte": 8500,
+  "gruendungsjahr": 1929,
+  "buergermeister": "Uwe Schneidewind",
+  "claim": "Bergische Substanz. Klarer Kurs.",
+  "beschreibung": "Wuppertal ist die größte Stadt des Bergischen Landes und steht für einen konsequenten Erneuerungsprozess: Die Stadt hat in den vergangenen Jahren unter dem Bürgermeister Schneidewind eine ambitionierte Transformationsagenda entwickelt — von der Quartiersentwicklung über die Hochschulkooperation mit der Bergischen Universität bis zur Haushaltssanierung. Führungskräfte finden hier echte Gestaltungsverantwortung in einer Großstadt, die sich neu erfindet.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "355.000", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "1,6 Mrd. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "8.500", "icon": "🏛️" },
+    { "label": "Universität", "wert": "Bergische Uni", "icon": "🎓" }
+  ],
+  "benefits": [
+    { "titel": "TVöD-Vergütung", "beschreibung": "Leistungsgerechte Vergütung nach TVöD mit NRW-spezifischen Zulagen und strukturierten Stufenaufstiegen." },
+    { "titel": "Mobiles Arbeiten", "beschreibung": "Hybridmodelle mit bis zu 40 % Homeoffice — Wuppertal investiert aktiv in die digitale Verwaltungsinfrastruktur." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "Zusatzversorgung über die Rheinische Zusatzversorgungskasse (RZVK) — solide Absicherung fürs Alter." },
+    { "titel": "Bergische Lebensqualität", "beschreibung": "Bezahlbare Mieten, Nähe zu Düsseldorf und Köln (je 30 Min.), Natur direkt vor der Stadt." },
+    { "titel": "Schwebebahn & ÖPNV", "beschreibung": "Vergünstigtes Deutschlandticket — und die legendäre Wuppertaler Schwebebahn als täglicher Begleiter." },
+    { "titel": "Transformationsumfeld", "beschreibung": "Wuppertal baut seine Verwaltungsstrukturen aktiv um — wer gestalten will, findet hier offene Türen." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Wuppertal hat mich überrascht. Die Stadt denkt größer als man von außen vermutet — und die Bereitschaft, wirklich etwas zu verändern, spürt man täglich.",
+      "name": "Fachbereichsleitung Wirtschaftsförderung",
+      "amtsseit": "seit 2022"
+    },
+    {
+      "zitat": "Die Kombination aus Hochschulnähe, bezahlbarem Wohnen und echter Führungsverantwortung — das findet man selten. Ich hätte früher wechseln sollen.",
+      "name": "Teamleitung Digitale Verwaltung",
+      "amtsseit": "seit 2023"
+    }
+  ],
+  "kontakt": {
+    "personal": "Personalwirtschaft Stadt Wuppertal",
+    "email": "personal@wuppertal.de",
+    "telefon": "0202 563-0",
+    "bewerbungsportal": "https://www.wuppertal.de/karriere"
+  },
+  "logo": "/arbeitgeber/wuppertal/logo.svg",
+  "bild": "/arbeitgeber/wuppertal/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}

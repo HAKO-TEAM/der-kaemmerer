@@ -1,0 +1,48 @@
+{
+  "slug": "kiel",
+  "name": "Landeshauptstadt Kiel",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 247000,
+  "haushalt": "1,05 Mrd. €",
+  "beamteUndBeschaeftigte": 5800,
+  "gruendungsjahr": 1242,
+  "buergermeister": "Ulf Kämpfer",
+  "claim": "Nördlich. Digital. Nah am Wasser gebaut.",
+  "beschreibung": "Die Landeshauptstadt Kiel ist politisches Zentrum Schleswig-Holsteins, Universitätsstadt und einer der bedeutendsten Marinestützpunkte Europas. Mit direktem Zugang zur Ostsee, einer lebendigen Hochschullandschaft (CAU Kiel, FH Kiel) und einer Verwaltung, die konsequent auf Digitalisierung setzt, bietet Kiel kommunalen Führungskräften ein Umfeld, das Substanz mit Offenheit verbindet.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "247.000", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "1,05 Mrd. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "5.800", "icon": "🏛️" },
+    { "label": "Ostseeküste", "wert": "direkt", "icon": "⚓" }
+  ],
+  "benefits": [
+    { "titel": "TVöD-Vergütung", "beschreibung": "Tarifgerechte Bezahlung nach TVöD mit regelmäßigen Erhöhungen und transparenten Stufenaufstiegen." },
+    { "titel": "Digitale Verwaltung", "beschreibung": "Kiel ist Vorreiter bei der Verwaltungsdigitalisierung in SH — moderne Tools, papierarme Prozesse, digitale Aktenführung." },
+    { "titel": "Flexible Arbeitszeit", "beschreibung": "Gleitzeit und mobiles Arbeiten mit bis zu 50 % Homeoffice-Anteil je nach Fachbereich." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "VBL-Zusatzversorgung als verlässliche Ergänzung zur gesetzlichen Rente." },
+    { "titel": "Ostsee als Lebensraum", "beschreibung": "Segeln, Schwimmen, Strandleben — Kiel verbindet Großstadtflair mit einer Lebensqualität, die kaum zu toppen ist." },
+    { "titel": "NAH.SH-Jobticket", "beschreibung": "Vergünstigtes Ticket für den gesamten ÖPNV in Schleswig-Holstein inkl. Deutschlandticket-Option." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Kiel hat eine Energie, die mich jeden Morgen motiviert: die Stadt wächst, die Verwaltung modernisiert sich — und man ist nah genug an der Entscheidung, um wirklich etwas zu bewegen.",
+      "name": "Amtsleitung Stadtentwicklung und Bauen",
+      "amtsseit": "seit 2021"
+    },
+    {
+      "zitat": "Nach 15 Jahren in einer westdeutschen Großverwaltung war der Wechsel nach Kiel wie frische Luft. Buchstäblich.",
+      "name": "Sachgebietsleitung Kämmerei",
+      "amtsseit": "seit 2022"
+    }
+  ],
+  "kontakt": {
+    "personal": "Personalamt Landeshauptstadt Kiel",
+    "email": "personal@kiel.de",
+    "telefon": "0431 901-0",
+    "bewerbungsportal": "https://www.kiel.de/karriere"
+  },
+  "logo": "/arbeitgeber/kiel/logo.svg",
+  "bild": "/arbeitgeber/kiel/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}

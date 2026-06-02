@@ -1,0 +1,48 @@
+{
+  "slug": "hamburg",
+  "name": "Freie und Hansestadt Hamburg",
+  "bundesland": "Hamburg",
+  "einwohner": 1910000,
+  "haushalt": "19,8 Mrd. €",
+  "beamteUndBeschaeftigte": 85000,
+  "gruendungsjahr": 1189,
+  "buergermeister": "Peter Tschentscher",
+  "claim": "Wo Verwaltung Weltformat hat.",
+  "beschreibung": "Die Freie und Hansestadt Hamburg ist mit über 85.000 Beschäftigten einer der größten öffentlichen Arbeitgeber Deutschlands. Als Stadtstaat vereint Hamburg Landes- und Kommunalverwaltung — Führungskräfte arbeiten hier an Themen, die in anderen Bundesländern auf mehrere Ebenen verteilt sind. Hafen, Logistik, Medien, Luft- und Raumfahrt: Hamburg ist Wirtschaftsmotor des Nordens und bietet kommunalen Entscheidern ein einzigartiges Umfeld mit internationaler Strahlkraft.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "1,91 Mio.", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "19,8 Mrd. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "85.000", "icon": "🏛️" },
+    { "label": "Behörden", "wert": "16 Fachbehörden", "icon": "🏢" }
+  ],
+  "benefits": [
+    { "titel": "TV-L Hamburg", "beschreibung": "Tarifvergütung nach TV-L mit hamburgspezifischen Zulagen — in vielen Bereichen über TVöD-Niveau." },
+    { "titel": "Mobiles Arbeiten", "beschreibung": "Bis zu 60 % Homeoffice in den meisten Fachbehörden — mit moderner IT-Ausstattung und digitalem Aktensystem." },
+    { "titel": "HVV-ProfiCard", "beschreibung": "Stark vergünstigtes ÖPNV-Ticket für das gesamte Hamburger Verkehrsnetz inkl. Umlandverbindungen." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "Zusatzversorgung über die VBL sowie hamburgspezifische Versorgungsmodelle für Beamte." },
+    { "titel": "Karriere & Entwicklung", "beschreibung": "Hamburger Institut für Berufliche Bildung, interne Führungsakademie und Zugang zu bundesweiten Qualifizierungen." },
+    { "titel": "Stadtleben pur", "beschreibung": "Elbphilharmonie, Speicherstadt, Alster — und eine der attraktivsten Innenstädte Europas direkt vor der Tür." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Hamburg ist kein Job — es ist eine Haltung. Die Komplexität der Themen, die Größe der Behörden, das internationale Umfeld: hier wächst man als Führungskraft wirklich.",
+      "name": "Referatsleitung Haushalt, Finanzbehörde",
+      "amtsseit": "seit 2020"
+    },
+    {
+      "zitat": "Nirgendwo sonst arbeite ich an Themen dieser Tragweite. Wir gestalten eine Stadt für zwei Millionen Menschen — das ist kein Vergleich zu einer Kreisstadt.",
+      "name": "Abteilungsleitung Stadtentwicklung",
+      "amtsseit": "seit 2019"
+    }
+  ],
+  "kontakt": {
+    "personal": "Personalamt der Freien und Hansestadt Hamburg",
+    "email": "karriere@personalamt.hamburg.de",
+    "telefon": "040 428 31-0",
+    "bewerbungsportal": "https://www.hamburg.de/karriere"
+  },
+  "logo": "/arbeitgeber/hamburg/logo.svg",
+  "bild": "/arbeitgeber/hamburg/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}
