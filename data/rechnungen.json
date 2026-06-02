@@ -30,5 +30,13 @@
     "organisation": "TEST",
     "email": "test@test.de",
     "betrag": 296.31
+  },
+  {
+    "id": "DK-2026-0005",
+    "year": 2026,
+    "date": "2026-06-02",
+    "organisation": "Stadtverwaltung Teststadt",
+    "email": "anzeigen@derkaemmerer.de",
+    "betrag": 296.31
   }
 ]
