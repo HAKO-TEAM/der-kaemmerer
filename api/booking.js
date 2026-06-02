@@ -100,7 +100,7 @@ async function sendEmail(d, slug) {
   // 2. Buchungsbestätigung an den Kunden
   const kundeEmail = d.rechnungsemail || d.kontaktemail;
   await resend.emails.send({
-    from: 'Der Kämmerer – Stellenbörse <anzeigen@derkaemmerer.de>',
+    from: 'Der Kämmerer <anzeigen@derkaemmerer.de>',
     to: [kundeEmail],
     subject: `Buchungsbestätigung KommunalFlat – ${d.behoerde}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">

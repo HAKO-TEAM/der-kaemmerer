@@ -348,7 +348,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
   const frist    = new Date(); frist.setDate(frist.getDate() + parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
 
   await resend.emails.send({
-    from:    'HAKO Beteiligungsgesellschaft mbH <anzeigen@derkaemmerer.de>',
+    from:    'Rechnungsstelle Der Kämmerer <rechnung@derkaemmerer.de>',
     to:      [data.email],
     cc:      ['anzeigen@derkaemmerer.de'],
     subject: `Ihre Rechnung ${invoiceId} – KommunalFlat derkaemmerer.de`,
