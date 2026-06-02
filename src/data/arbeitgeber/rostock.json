@@ -1,0 +1,48 @@
+{
+  "slug": "rostock",
+  "name": "Hanse- und Universitätsstadt Rostock",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 210000,
+  "haushalt": "870 Mio. €",
+  "beamteUndBeschaeftigte": 5200,
+  "gruendungsjahr": 1218,
+  "buergermeister": "Eva-Maria Kröger",
+  "claim": "Hansegeist trifft Hafenstadtzukunft.",
+  "beschreibung": "Die Hanse- und Universitätsstadt Rostock ist das wirtschaftliche Zentrum Mecklenburg-Vorpommerns: Ostseehafen, Ernst-Moritz-Arndt-Universität, Tourismusstandort und wachsender Technologiestandort in einem. Mit über 5.200 Beschäftigten ist die Stadtverwaltung einer der größten Arbeitgeber der Region — und befindet sich in einem umfassenden Transformationsprozess, der Führungskräften mit Gestaltungswillen echten Spielraum bietet.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "210.000", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "870 Mio. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "5.200", "icon": "🏛️" },
+    { "label": "Hochschulstandort", "wert": "Universität + FH", "icon": "🎓" }
+  ],
+  "benefits": [
+    { "titel": "TVöD-Vergütung", "beschreibung": "Tarifgerechte Bezahlung nach TVöD mit automatischen Stufenaufstiegen und regelmäßigen Tariferhöhungen." },
+    { "titel": "Flexible Arbeitszeit", "beschreibung": "Gleitzeit und mobiles Arbeiten in weiten Teilen der Verwaltung — bis zu 2 Tage/Woche Homeoffice möglich." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "Zusatzversorgung über die VBL — betriebliche Rente als Ergänzung zur gesetzlichen Rentenversicherung." },
+    { "titel": "Ostsee als Arbeitsumfeld", "beschreibung": "Wohnstandort mit Strandnähe, überschaubaren Mietpreisen und hervorragender Lebensqualität für Familien." },
+    { "titel": "Weiterbildung & Karriere", "beschreibung": "Strukturierte Führungskräfteentwicklung, Zugang zu Hochschulkooperationen und bezahlte Qualifizierungen." },
+    { "titel": "Jobticket ÖPNV", "beschreibung": "Vergünstigtes Deutschlandticket für den gesamten öffentlichen Nahverkehr inkl. regionale Verbindungen." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Rostock bietet etwas Seltenes: echte Gestaltungsverantwortung in einer Großstadt, die gerade im Aufbruch ist. Die Projekte, an denen wir arbeiten, haben wirkliche Tragweite.",
+      "name": "Abteilungsleitung Haushalt & Steuerung",
+      "amtsseit": "seit 2022"
+    },
+    {
+      "zitat": "Der Wechsel aus einer westdeutschen Großstadt war die beste Entscheidung. Weniger Stau, Ostsee in 20 Minuten — und ein Team, das wirklich zusammenhält.",
+      "name": "Sachgebietsleitung Jugendhilfeplanung",
+      "amtsseit": "seit 2023"
+    }
+  ],
+  "kontakt": {
+    "personal": "Personalamt der Hanse- und Universitätsstadt Rostock",
+    "email": "personal@rostock.de",
+    "telefon": "0381 381-0",
+    "bewerbungsportal": "https://www.rostock.de/karriere"
+  },
+  "logo": "/arbeitgeber/rostock/logo.svg",
+  "bild": "/arbeitgeber/rostock/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}

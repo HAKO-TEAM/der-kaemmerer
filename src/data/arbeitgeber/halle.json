@@ -1,0 +1,48 @@
+{
+  "slug": "halle",
+  "name": "Stadt Halle (Saale)",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 239000,
+  "haushalt": "1,1 Mrd. €",
+  "beamteUndBeschaeftigte": 4800,
+  "gruendungsjahr": 806,
+  "buergermeister": "Egbert Lux",
+  "claim": "Transformation braucht Führungskräfte mit Rückgrat.",
+  "beschreibung": "Halle (Saale) ist die größte Stadt Sachsen-Anhalts und steht vor einer der ambitioniertesten Transformationsagenden Mitteldeutschlands: Mit dem HALLE2035-Programm werden Industrieflächen zu Datacenter- und Energiestandorten entwickelt, Sozialkosten digital gesteuert und Liquiditätspotenziale systematisch gehoben. Wer als Führungskraft gestalten will — und nicht nur verwalten — findet hier ein Umfeld, das konsequent in die Zukunft investiert.",
+  "kennzahlen": [
+    { "label": "Einwohner", "wert": "239.000", "icon": "👥" },
+    { "label": "Jahreshaushalt", "wert": "1,1 Mrd. €", "icon": "💰" },
+    { "label": "Beschäftigte", "wert": "4.800", "icon": "🏛️" },
+    { "label": "Transformationsprogramm", "wert": "HALLE2035", "icon": "🔄" }
+  ],
+  "benefits": [
+    { "titel": "TVöD-Vergütung", "beschreibung": "Wettbewerbsfähige Vergütung nach TVöD — ergänzt durch Leistungsprämien in Pilotbereichen." },
+    { "titel": "Transformationsverantwortung", "beschreibung": "Führungskräfte in Halle gestalten aktiv das HALLE2035-Programm mit messbarer strategischer Wirkung." },
+    { "titel": "Mobiles Arbeiten", "beschreibung": "Hybridarbeitsmodelle mit bis zu 40 % Homeoffice-Anteil je nach Fachbereich." },
+    { "titel": "Betriebliche Altersvorsorge", "beschreibung": "VBL-Zusatzversorgung als gesichertes Standbein neben der gesetzlichen Rente." },
+    { "titel": "Lebenswertes Mittelzentrum", "beschreibung": "Erschwingliche Mieten, kurze Wege, starkes Kulturangebot — und gute Zuganbindung nach Leipzig (30 Min.) und Berlin (90 Min.)." },
+    { "titel": "Digitalisierungsinfrastruktur", "beschreibung": "Investitionen in digitale Verwaltung, Steuerungsplattformen und moderne IT-Infrastruktur laufen aktiv." }
+  ],
+  "testimonials": [
+    {
+      "zitat": "Halle ist nicht die einfachste Stadt — aber genau das macht den Reiz aus. Wer hier Verantwortung übernimmt, kann wirklich etwas bewegen. Ich habe selten so viel gestaltet wie hier.",
+      "name": "Fachbereichsleitung Finanzen & Steuerung",
+      "amtsseit": "seit 2021"
+    },
+    {
+      "zitat": "Das HALLE2035-Programm gibt uns einen klaren strategischen Rahmen. Als Führungskraft weiß ich, wohin die Reise geht — das ist in vielen Kommunen nicht selbstverständlich.",
+      "name": "Projektleitung Digitale Verwaltung",
+      "amtsseit": "seit 2024"
+    }
+  ],
+  "kontakt": {
+    "personal": "Fachbereich Personal & Organisation",
+    "email": "karriere@halle.de",
+    "telefon": "0345 221-0",
+    "bewerbungsportal": "https://www.halle.de/karriere"
+  },
+  "logo": "/arbeitgeber/halle/logo.svg",
+  "bild": "/arbeitgeber/halle/stadtbild.jpg",
+  "kommunalflat": true,
+  "partner_seit": "2026"
+}
