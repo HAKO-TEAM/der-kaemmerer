@@ -93,9 +93,10 @@ async function nextInvoiceNumber() {
     records = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8'));
   }
 
-  const year = new Date().getFullYear();
-  const num  = (records.filter(r => r.year === year).length + 1).toString().padStart(4, '0');
-  const id   = `DK-${year}-${num}`;
+  const year  = new Date().getFullYear();
+  const count = records.filter(r => r.year === year).length;
+  const num   = Math.max(count + 1, 1001).toString().padStart(4, '0');
+  const id    = `DK-${year}-${num}`;
   return { id, records, sha, path };
 }
 
