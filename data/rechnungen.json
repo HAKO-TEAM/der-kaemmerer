@@ -174,5 +174,13 @@
     "organisation": "Stadtverwaltung Chemnitz",
     "email": "m.kosel@nurovia.de",
     "betrag": 296.31
+  },
+  {
+    "id": "DK-2026-0023",
+    "year": 2026,
+    "date": "2026-06-02",
+    "organisation": "CIA",
+    "email": "m.kosel@nurovia.de",
+    "betrag": 296.31
   }
 ]
