@@ -238,57 +238,57 @@ function buildPDF(data, invoiceId) {
     txt(doc, eur(249),         c3, rY+4, { width: w3, align: 'right' });
     txt(doc, eur(249),         c4, rY+4, { width: w4, align: 'right' });
 
-    // ── SUMMENBLOCK ───────────────────────────────────────────────────────────
+    // ── SUMMENBLOCK (rechts) ──────────────────────────────────────────────────
     const sY  = rY + 56;
-    const sLX = c3;   // Summen-Label ab Einzelpreis-Spalte
-    const sVX = c4;   // Summen-Wert in Betrag-Spalte
+    const sLX = c3;
+    const sVX = c4;
 
     doc.moveTo(sLX, sY).lineTo(PW - MR, sY).strokeColor('#d1d5db').lineWidth(0.5).stroke();
-
     doc.font('Helvetica').fontSize(9).fillColor(GRAY);
-    txt(doc, 'Nettobetrag:',  sLX, sY+6,  { width: w3, align: 'right' });
-    txt(doc, 'MwSt. 19 %:',   sLX, sY+20, { width: w3, align: 'right' });
+    txt(doc, 'Nettobetrag:', sLX, sY+6,  { width: w3, align: 'right' });
+    txt(doc, 'MwSt. 19 %:', sLX, sY+20, { width: w3, align: 'right' });
     doc.fillColor(NAVY);
-    txt(doc, eur(249),        sVX, sY+6,  { width: w4, align: 'right' });
-    txt(doc, eur(47.31),      sVX, sY+20, { width: w4, align: 'right' });
+    txt(doc, eur(249),      sVX, sY+6,  { width: w4, align: 'right' });
+    txt(doc, eur(47.31),    sVX, sY+20, { width: w4, align: 'right' });
 
-    // Gesamt-Box
+    // Gesamtbetrag (volle Breite)
     const gY = sY + 38;
-    doc.rect(sLX - 4, gY, PW - MR - sLX + 4, 22).fill(NAVY);
-    doc.font('Helvetica-Bold').fontSize(10).fillColor('#ffffff');
-    txt(doc, 'Gesamtbetrag:', sLX, gY+5, { width: w3, align: 'right' });
-    txt(doc, eur(bruttoGes),  sVX, gY+5, { width: w4, align: 'right' });
+    doc.rect(ML, gY, CW, 24).fill(NAVY);
+    doc.font('Helvetica-Bold').fontSize(11).fillColor('#ffffff');
+    txt(doc, 'Gesamtbetrag:', ML+12, gY+6);
+    txt(doc, eur(bruttoGes), ML, gY+6, { width: CW - 12, align: 'right' });
 
-    // Skonto-Hinweis unter Gesamtbox
-    const skY = gY + 28;
-    doc.rect(sLX - 4, skY, PW - MR - sLX + 4, 28).fill('#eff6ff');
-    doc.font('Helvetica-Bold').fontSize(8).fillColor(BLUE);
-    txt(doc, `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}:`, sLX, skY+5, { width: w3+w4, align: 'left' });
-    txt(doc, eur(skontoBetrag), sVX, skY+5, { width: w4, align: 'right' });
-    doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
-    txt(doc, `(Abzug ${eur(skontoAbzug)} bei Zahlung innerhalb von ${skontoTage} Werktagen)`, sLX, skY+17, { width: w3+w4 });
+    // Skonto (volle Breite, hellblau, klar sichtbar)
+    const skY = gY + 30;
+    doc.rect(ML, skY, CW, 34).fill('#dbeafe');
+    doc.moveTo(ML, skY).lineTo(ML, skY + 34).strokeColor(BLUE).lineWidth(3).stroke();
+    doc.font('Helvetica-Bold').fontSize(9).fillColor(BLUE);
+    txt(doc, `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)} (${skontoTage} Werktage):`, ML+10, skY+6);
+    txt(doc, eur(skontoBetrag), ML, skY+6, { width: CW - 12, align: 'right' });
+    doc.font('Helvetica').fontSize(8).fillColor('#1d4ed8');
+    txt(doc, `Abzug ${eur(skontoAbzug)} vom Gesamtbetrag — danach zahlbar netto ${tage} Tage bis ${formatDate(frist)}`, ML+10, skY+20);
 
     // ── BANKVERBINDUNG ────────────────────────────────────────────────────────
-    const bY = skY + 40;  // nach Skonto-Box (skY + 28 Höhe + 12 Abstand)
-    doc.rect(ML, bY, CW, 66).fill(LIGHT);
+    const bY = skY + 46;
+    doc.rect(ML, bY, CW, 64).fill(LIGHT);
     doc.font('Helvetica-Bold').fontSize(8.5).fillColor(NAVY);
     txt(doc, 'Bankverbindung', ML+12, bY+10);
     doc.font('Helvetica').fontSize(8.5).fillColor('#374151');
-    txt(doc, `IBAN: ${process.env.FIRMA_IBAN ?? '(wird nachgereicht)'}`,   ML+12, bY+24);
-    txt(doc, `BIC:  ${process.env.FIRMA_BIC  ?? ''}   ${process.env.FIRMA_BANK ?? ''}`, ML+12, bY+38);
-    txt(doc, `Verwendungszweck: ${invoiceId}  |  ${data.organisation}`,    ML+12, bY+52);
+    txt(doc, `IBAN: ${process.env.FIRMA_IBAN ?? '(wird nachgereicht)'}`, ML+12, bY+24);
+    txt(doc, `BIC: ${process.env.FIRMA_BIC ?? ''}   ${process.env.FIRMA_BANK ?? ''}`, ML+12, bY+38);
+    txt(doc, `Verwendungszweck: ${invoiceId}  |  ${data.organisation}`, ML+12, bY+51);
 
     // ── VERTRAGSBEDINGUNGEN ───────────────────────────────────────────────────
-    const vY = bY + 82;
+    const vY = bY + 76;
     doc.font('Helvetica-Bold').fontSize(8).fillColor(NAVY);
-    txt(doc, 'Vertragsbedingungen', ML, vY);
+    txt(doc, 'Zahlungs- und Vertragsbedingungen', ML, vY);
     doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
     doc.text(
-      `Zahlungsbedingungen: ${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)} (${skontoTage} Werktage). ` +
+      `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
       `Danach faellig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
       `Bitte ueberweisen Sie unter Angabe des Verwendungszwecks. ` +
-      `12-Monatsvertrag, erstmalig kuendbar zum Ablauf des 12. Monats. ` +
-      `Danach monatlich kuendbar zum Monatsende mit 1 Monat Kuendigungsfrist.`,
+      `12-Monatsvertrag, erstmalig kuendbar zum Ablauf des 12. Monats, ` +
+      `danach monatlich zum Monatsende mit 1 Monat Kuendigungsfrist.`,
       ML, vY + 12, { width: CW, lineBreak: true }
     );
 
