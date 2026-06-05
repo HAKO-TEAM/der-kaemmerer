@@ -388,29 +388,42 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
 
 // ─── E-Mail versenden ────────────────────────────────────────────────────────
 
-async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
+async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag, vorlage = 'kaemmerer') {
   betrag = betrag ?? 296.31;
   const resend  = new Resend(process.env.RESEND_API_KEY);
   const pdfB64  = pdfBuffer.toString('base64');
   const filename = `Rechnung_${invoiceId}.pdf`;
   const frist    = new Date(); frist.setDate(frist.getDate() + parseInt(process.env.ZAHLUNGSZIEL_TAGE ?? '14'));
 
+  const isHako = vorlage === 'hako';
+  const absender   = isHako
+    ? 'HAKO Beteiligungsgesellschaft mbH <rechnung@derkaemmerer.de>'
+    : 'Rechnungsstelle Der Kämmerer <rechnung@derkaemmerer.de>';
+  const grusszeile = isHako
+    ? 'HAKO Beteiligungsgesellschaft mbH<br>Hertha-Lindner-Str. 10–12 · 01067 Dresden<br>HRB 29317 · AG Dresden'
+    : 'Das Team von Der Kämmerer';
+  const hinweis = isHako
+    ? 'Bitte überweisen Sie den Rechnungsbetrag unter Angabe der Rechnungsnummer als Verwendungszweck.'
+    : 'Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.';
+  const footer = isHako
+    ? 'HAKO Beteiligungsgesellschaft mbH · hako.team · anzeigen@derkaemmerer.de'
+    : 'derkaemmerer.de · anzeigen@derkaemmerer.de';
+
   await resend.emails.send({
-    from:    'Rechnungsstelle Der Kämmerer <rechnung@derkaemmerer.de>',
+    from:    absender,
     to:      [data.email],
     cc:      ['anzeigen@derkaemmerer.de'],
-    subject: `Ihre Rechnung ${invoiceId} – derkaemmerer.de`,
+    subject: `Ihre Rechnung ${invoiceId}`,
     attachments: [{ filename, content: pdfB64 }],
     html: `
 <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
   <div style="background:#172840;padding:24px;color:#fff">
-    <h1 style="margin:0;font-size:20px">Ihre Rechnung ist eingegangen</h1>
-    <p style="margin:8px 0 0;color:#94a3b8;font-size:14px">${invoiceId}</p>
+    <h1 style="margin:0;font-size:20px">Rechnung ${invoiceId}</h1>
+    <p style="margin:8px 0 0;color:#94a3b8;font-size:14px">${data.organisation}</p>
   </div>
   <div style="padding:24px">
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
-    <p style="color:#374151">vielen Dank für Ihre Buchung auf derkaemmerer.de.
-    Anbei erhalten Sie Ihre Rechnung als PDF.</p>
+    <p style="color:#374151">anbei erhalten Sie Ihre Rechnung als PDF.</p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
       <tr style="background:#f8fafc">
         <td style="padding:10px;color:#6b7280">Rechnungsnummer</td>
@@ -418,7 +431,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
       </tr>
       <tr>
         <td style="padding:10px;color:#6b7280">Betrag</td>
-        <td style="padding:10px;color:#172840">${betrag.toFixed(2).replace('.',',')} € (inkl. MwSt.)</td>
+        <td style="padding:10px;color:#172840">${betrag.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})} € (inkl. MwSt.)</td>
       </tr>
       <tr style="background:#f8fafc">
         <td style="padding:10px;color:#6b7280">Zahlungsziel</td>
@@ -428,13 +441,16 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
         <td style="padding:10px;color:#6b7280">IBAN</td>
         <td style="padding:10px;color:#172840">${process.env.FIRMA_IBAN ?? '(wird nachgereicht)'}</td>
       </tr>
+      <tr style="background:#f8fafc">
+        <td style="padding:10px;color:#6b7280">Verwendungszweck</td>
+        <td style="padding:10px;color:#172840">${invoiceId} · ${data.organisation}</td>
+      </tr>
     </table>
-    <p style="color:#374151">Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.
-    Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
-    <p style="color:#374151">Mit freundlichen Grüßen<br><strong>Das Team von Der Kämmerer</strong></p>
+    <p style="color:#374151">${hinweis}<br>Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
+    <p style="color:#374151;margin-top:24px">Mit freundlichen Grüßen<br><strong>${grusszeile}</strong></p>
   </div>
-  <div style="background:#f8fafc;padding:16px;text-align:center;font-size:11px;color:#9ca3af">
-    derkaemmerer.de · anzeigen@derkaemmerer.de
+  <div style="background:#f8fafc;padding:16px;text-align:center;font-size:11px;color:#9ca3af;border-top:1px solid #e2e8f0">
+    ${footer}
   </div>
 </div>`,
   });
@@ -455,7 +471,7 @@ export async function createInvoice(data, positionen, vorlage = 'kaemmerer') {
   const mwst  = data.mwstSatz ?? 19;
   const brutto = Math.round(netto * (1 + mwst / 100) * 100) / 100;
   try {
-    await sendInvoiceEmail(data, id, pdf, brutto);
+    await sendInvoiceEmail(data, id, pdf, brutto, vorlage);
     console.log(`[RE] E-Mail gesendet an ${data.email}`);
   } catch (mailErr) {
     console.error(`[RE] E-Mail FEHLER:`, mailErr.message ?? mailErr);
