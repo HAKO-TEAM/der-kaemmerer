@@ -93,10 +93,16 @@ async function nextInvoiceNumber() {
     records = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8'));
   }
 
-  const year  = new Date().getFullYear();
-  const count = records.filter(r => r.year === year).length;
-  const num   = Math.max(count + 1, 1001).toString().padStart(4, '0');
-  const id    = `DK-${year}-${num}`;
+  const year = new Date().getFullYear();
+  // Höchste bereits vergebene Nummer dieses Jahres finden
+  const maxNum = records
+    .filter(r => r.year === year)
+    .reduce((max, r) => {
+      const n = parseInt((r.id ?? '').split('-')[2]) || 0;
+      return Math.max(max, n);
+    }, 1000);  // Startwert 1000 → erste Rechnung = 1001
+  const num = (maxNum + 1).toString().padStart(4, '0');
+  const id  = `DK-${year}-${num}`;
   return { id, records, sha, path };
 }
 
@@ -440,12 +446,21 @@ export async function createInvoice(data, positionen, vorlage = 'kaemmerer') {
   if (!data.organisation || !data.email) {
     throw new Error(`Pflichtfelder fehlen: organisation="${data.organisation}" email="${data.email}"`);
   }
+  console.log(`[RE] Starte Rechnung für ${data.organisation} (${data.email})`);
   const { id, records, sha, path } = await nextInvoiceNumber();
+  console.log(`[RE] Nächste Nummer: ${id}`);
   const pdf = await buildPDF(data, id, positionen, vorlage);
+  console.log(`[RE] PDF generiert (${pdf.length} bytes)`);
   const netto = (positionen || []).reduce((s, p) => s + p.einzelpreis * p.menge, 0) || 249;
   const mwst  = data.mwstSatz ?? 19;
   const brutto = Math.round(netto * (1 + mwst / 100) * 100) / 100;
-  await sendInvoiceEmail(data, id, pdf, brutto);
+  try {
+    await sendInvoiceEmail(data, id, pdf, brutto);
+    console.log(`[RE] E-Mail gesendet an ${data.email}`);
+  } catch (mailErr) {
+    console.error(`[RE] E-Mail FEHLER:`, mailErr.message ?? mailErr);
+    throw mailErr;
+  }
   await saveInvoiceRecord(path, sha, records, {
     id,
     year: new Date().getFullYear(),
