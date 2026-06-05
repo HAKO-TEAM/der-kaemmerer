@@ -131,7 +131,7 @@ const MR = 50;  // margin right
 const CW = PW - ML - MR; // content width = 495.28
 
 function eur(amount) {
-  return amount.toFixed(2).replace('.', ',') + ' EUR';
+  return amount.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' EUR';
 }
 
 function addWorkdays(date, days) {
