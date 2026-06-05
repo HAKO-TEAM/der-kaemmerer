@@ -262,5 +262,13 @@
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
     "betrag": 25000
+  },
+  {
+    "id": "DK-2026-1034",
+    "year": 2026,
+    "date": "2026-06-05",
+    "organisation": "Staddt X",
+    "email": "pmo@hako.team",
+    "betrag": 26750
   }
 ]
