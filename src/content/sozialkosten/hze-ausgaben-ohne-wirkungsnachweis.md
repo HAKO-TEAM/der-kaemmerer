@@ -1,6 +1,6 @@
 ---
 title: "Das teuerste Schweigen der Kommunalpolitik"
-beschreibung: "Eine deutsche Großstadt gibt 215 Millionen Euro jährlich für Hilfen zur Erziehung aus — 142 Prozent mehr als 2018. Eine systematische Wirkungsanalyse hat der Stadtrat nie beschlossen. Das ist kein Einzelfall."
+beschreibung: "Eine deutsche Großstadt in Sachsen gibt 215 Millionen Euro jährlich für Hilfen zur Erziehung aus — 142 Prozent mehr als 2018. Eine systematische Wirkungsanalyse hat der Stadtrat nie beschlossen. Das ist kein Einzelfall."
 ressort: sozialkosten
 datum: "2026-06-04"
 minuten: 7
