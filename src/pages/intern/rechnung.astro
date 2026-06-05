@@ -347,7 +347,7 @@ export const prerender = false;
       const cell = document.getElementById(`pos-sum-${id}`);
       if (cell) cell.textContent = fmt(s);
     });
-    const mwst = parseInt(document.getElementById('mwstSatz')?.value) || 19;
+    const mwst = parseInt(document.getElementById('mwstSatz')?.value ?? '19');
     const mwstBetrag = Math.round(netto * mwst) / 100;
     const brutto = netto + mwstBetrag;
     document.getElementById('s-netto').textContent   = fmt(netto);
@@ -384,7 +384,7 @@ export const prerender = false;
       ort:             document.getElementById('ort').value.trim(),
       leitwegId:       document.getElementById('leitwegId').value.trim() || '-',
     };
-    const mwstSatz = parseInt(document.getElementById('mwstSatz').value) || 19;
+    const mwstSatz = parseInt(document.getElementById('mwstSatz').value ?? '19');
     const positionen = getPositionen();
 
     if (!empfaenger.organisation) return toast('Organisation fehlt', 'error');
