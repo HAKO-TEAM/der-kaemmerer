@@ -3,7 +3,7 @@ import { createInvoice } from './rechnung.js';
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { passwort, empfaenger, positionen, mwstSatz, vorlage, _check } = req.body;
+  const { passwort, empfaenger, positionen, vorlage, _check } = req.body;
   if (passwort !== process.env.INTERN_PASSWORT) {
     return res.status(401).json({ error: 'Falsches Passwort' });
   }
@@ -17,9 +17,12 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Mindestens eine Position erforderlich' });
   }
 
+  // mwstSatz kommt im empfaenger-Objekt vom Interface mit
+  const mwstSatz = empfaenger.mwstSatz ?? 19;
+
   try {
     const id = await createInvoice(
-      { ...empfaenger, mwstSatz: mwstSatz ?? 19 },
+      { ...empfaenger, mwstSatz },
       positionen,
       vorlage ?? 'kaemmerer'
     );
