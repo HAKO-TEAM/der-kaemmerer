@@ -190,5 +190,13 @@
     "organisation": "HAKO Teststadt",
     "email": "pmo@hako.team",
     "betrag": 142800
+  },
+  {
+    "id": "DK-2026-1001",
+    "year": 2026,
+    "date": "2026-06-05",
+    "organisation": "Stadt X",
+    "email": "pmo@hako.team",
+    "betrag": 29750
   }
 ]
