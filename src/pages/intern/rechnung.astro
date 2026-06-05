@@ -1,0 +1,403 @@
+---
+export const prerender = false;
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rechnung erstellen – Der Kämmerer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; color: #1e293b; min-height: 100vh; }
+
+  .header { background: #172840; padding: 20px 32px; display: flex; align-items: center; gap: 16px; }
+  .header-logo { font-size: 20px; font-weight: 700; color: #fff; }
+  .header-logo span { color: #60a5fa; }
+  .header-sub { font-size: 12px; color: #94a3b8; }
+
+  .container { max-width: 860px; margin: 32px auto; padding: 0 24px; }
+
+  .card { background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 24px; overflow: hidden; }
+  .card-header { background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 16px 24px; display: flex; align-items: center; gap: 10px; }
+  .card-header h2 { font-size: 15px; font-weight: 600; color: #172840; }
+  .card-num { width: 26px; height: 26px; background: #172840; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+  .card-body { padding: 24px; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .col-full { grid-column: 1 / -1; }
+
+  label { display: block; font-size: 12px; font-weight: 600; color: #64748b; margin-bottom: 5px; letter-spacing: 0.3px; text-transform: uppercase; }
+  input, select, textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px;
+    font-size: 14px; color: #1e293b; background: #fff;
+    transition: border-color 0.15s;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+  textarea { resize: vertical; min-height: 60px; }
+
+  /* Positionen */
+  .pos-table { width: 100%; border-collapse: collapse; }
+  .pos-table thead tr { background: #172840; }
+  .pos-table thead th { padding: 10px 12px; text-align: left; font-size: 11px; font-weight: 600; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+  .pos-table thead th:last-child { width: 40px; }
+  .pos-row td { padding: 8px 6px; vertical-align: middle; border-bottom: 1px solid #f1f5f9; }
+  .pos-row input { padding: 8px 10px; font-size: 13px; }
+  .del-btn { background: #fee2e2; border: none; border-radius: 4px; width: 30px; height: 30px; cursor: pointer; font-size: 16px; color: #dc2626; display: flex; align-items: center; justify-content: center; }
+  .del-btn:hover { background: #fca5a5; }
+
+  .btn-add { background: #eff6ff; border: 1px dashed #93c5fd; color: #2563eb; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; width: 100%; margin-top: 12px; transition: background 0.15s; }
+  .btn-add:hover { background: #dbeafe; }
+
+  /* Vorlagen */
+  .templates { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .tpl-btn { padding: 7px 14px; border: 1px solid #cbd5e1; border-radius: 20px; background: #fff; cursor: pointer; font-size: 12px; font-weight: 500; color: #475569; transition: all 0.15s; }
+  .tpl-btn:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+
+  /* Summe */
+  .summe-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px 20px; }
+  .summe-row { display: flex; justify-content: space-between; font-size: 13px; color: #64748b; padding: 4px 0; }
+  .summe-row.total { font-size: 16px; font-weight: 700; color: #172840; border-top: 2px solid #172840; margin-top: 8px; padding-top: 10px; }
+
+  /* Passwort */
+  .pw-screen { position: fixed; inset: 0; background: #172840; display: flex; align-items: center; justify-content: center; z-index: 100; }
+  .pw-box { background: #fff; border-radius: 12px; padding: 40px; width: 360px; text-align: center; }
+  .pw-box h1 { font-size: 22px; font-weight: 700; color: #172840; margin-bottom: 8px; }
+  .pw-box p { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+  .pw-box input { padding: 12px; font-size: 16px; letter-spacing: 4px; text-align: center; }
+  .btn-pw { background: #172840; color: #fff; border: none; border-radius: 6px; padding: 12px; width: 100%; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 12px; }
+  .pw-err { color: #dc2626; font-size: 12px; margin-top: 8px; display: none; }
+
+  /* Submit */
+  .btn-submit { background: #172840; color: #fff; border: none; border-radius: 6px; padding: 16px 32px; font-size: 15px; font-weight: 600; cursor: pointer; width: 100%; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .btn-submit:hover { background: #1e3a5f; }
+  .btn-submit:disabled { background: #94a3b8; cursor: not-allowed; }
+
+  /* Toast */
+  .toast { position: fixed; top: 24px; right: 24px; background: #172840; color: #fff; padding: 16px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; z-index: 200; transform: translateY(-80px); opacity: 0; transition: all 0.3s; }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast.error { background: #dc2626; }
+  .toast.success { background: #16a34a; }
+</style>
+</head>
+<body>
+
+<!-- Passwort-Screen -->
+<div class="pw-screen" id="pwScreen">
+  <div class="pw-box">
+    <h1>Der Kämmerer</h1>
+    <p>Internes Rechnungstool</p>
+    <input type="password" id="pwInput" placeholder="Passwort" autocomplete="current-password">
+    <button class="btn-pw" onclick="checkPw()">Anmelden</button>
+    <div class="pw-err" id="pwErr">Falsches Passwort</div>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+
+<!-- Header -->
+<div class="header">
+  <div>
+    <div class="header-logo">Der <span>Kämmerer</span></div>
+    <div class="header-sub">Internes Rechnungstool</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 1. Empfänger -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">1</div>
+      <h2>Rechnungsempfänger</h2>
+    </div>
+    <div class="card-body">
+      <div class="grid2" style="gap:16px">
+        <div>
+          <label>Organisation / Behörde *</label>
+          <input type="text" id="organisation" placeholder="z.B. Landkreis Musterstadt">
+        </div>
+        <div>
+          <label>Abteilung (optional)</label>
+          <input type="text" id="abteilung" placeholder="z.B. Kämmerei">
+        </div>
+        <div>
+          <label>Ansprechpartner *</label>
+          <input type="text" id="ansprechpartner" placeholder="z.B. Dr. Max Mustermann">
+        </div>
+        <div>
+          <label>Rechnungs-E-Mail *</label>
+          <input type="email" id="email" placeholder="rechnung@kommune.de">
+        </div>
+        <div>
+          <label>Straße + Hausnummer *</label>
+          <input type="text" id="strasse" placeholder="Rathausplatz 1">
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:12px">
+          <div>
+            <label>PLZ *</label>
+            <input type="text" id="plz" placeholder="12345">
+          </div>
+          <div>
+            <label>Ort *</label>
+            <input type="text" id="ort" placeholder="Musterstadt">
+          </div>
+        </div>
+        <div>
+          <label>Leitweg-ID (XRechnung, optional)</label>
+          <input type="text" id="leitwegId" placeholder="04011000-1234567890-06">
+        </div>
+        <div>
+          <label>MwSt-Satz</label>
+          <select id="mwstSatz">
+            <option value="19">19 % (Standard)</option>
+            <option value="7">7 % (ermäßigt)</option>
+            <option value="0">0 % (steuerbefreit)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Leistungen -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">2</div>
+      <h2>Leistungspositionen</h2>
+    </div>
+    <div class="card-body">
+
+      <!-- Vorlagen -->
+      <div style="margin-bottom:16px">
+        <label style="margin-bottom:8px">Schnellauswahl</label>
+        <div class="templates">
+          <button class="tpl-btn" onclick="addTemplate('kommunalflat')">KommunalFlat (249 €)</button>
+          <button class="tpl-btn" onclick="addTemplate('hze-check-basis')">HzE-Check Basis (25.000 €)</button>
+          <button class="tpl-btn" onclick="addTemplate('hze-check-premium')">HzE-Check Premium (50.000 €)</button>
+          <button class="tpl-btn" onclick="addTemplate('ascend-implementierung')">ASCEND Implementierung</button>
+          <button class="tpl-btn" onclick="addTemplate('ascend-lizenz')">ASCEND Jahreslizenz</button>
+          <button class="tpl-btn" onclick="addTemplate('beratung')">Beratungsleistung</button>
+        </div>
+      </div>
+
+      <table class="pos-table">
+        <thead>
+          <tr>
+            <th style="width:40%">Leistungsbeschreibung</th>
+            <th style="width:12%">Menge</th>
+            <th style="width:18%">Einheit</th>
+            <th style="width:18%">Einzelpreis (€)</th>
+            <th style="width:8%">Gesamt</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="posBody"></tbody>
+      </table>
+
+      <button class="btn-add" onclick="addPos()">+ Position hinzufügen</button>
+
+      <!-- Summe -->
+      <div style="display:grid;grid-template-columns:1fr 280px;gap:24px;margin-top:24px;align-items:start">
+        <div>
+          <label>Interne Notiz (erscheint nicht auf Rechnung)</label>
+          <textarea id="notiz" placeholder="z.B. Auftragsnummer, Projektreferenz..."></textarea>
+        </div>
+        <div class="summe-box">
+          <div class="summe-row"><span>Nettobetrag</span><span id="s-netto">0,00 €</span></div>
+          <div class="summe-row"><span id="s-mwst-label">MwSt. 19 %</span><span id="s-mwst">0,00 €</span></div>
+          <div class="summe-row total"><span>Gesamt (brutto)</span><span id="s-brutto">0,00 €</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Absenden -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">3</div>
+      <h2>Rechnung erstellen &amp; versenden</h2>
+    </div>
+    <div class="card-body">
+      <p style="font-size:13px;color:#64748b;margin-bottom:20px">
+        Die Rechnung wird als PDF generiert, an den Empfänger gesendet und in CC an <strong>anzeigen@derkaemmerer.de</strong> verschickt.
+        Die Rechnungsnummer wird automatisch vergeben.
+      </p>
+      <button class="btn-submit" id="submitBtn" onclick="submitRechnung()">
+        <span>📄</span>
+        <span id="submitLabel">Rechnung erstellen und versenden</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let pw = '';
+  let posCount = 0;
+
+  const TEMPLATES = {
+    'kommunalflat':          { desc: 'KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen | Stadt-Dossier | Newsletter + LinkedIn', menge: 1, einheit: '1 Monat', preis: 249 },
+    'hze-check-basis':       { desc: 'HzE-Check Basis – Analyse der Hilfen zur Erziehung\nFallstrukturanalyse, Träger-Benchmarking, Outcome-Auswertung', menge: 1, einheit: 'Pauschal', preis: 25000 },
+    'hze-check-premium':     { desc: 'HzE-Check Premium – Vollständige Steuerungsanalyse Hilfen zur Erziehung\nFallstruktur, Träger-Benchmarking, Outcome-Auswertung, Handlungsempfehlungen, Präsentation Stadtrat', menge: 1, einheit: 'Pauschal', preis: 50000 },
+    'ascend-implementierung':{ desc: 'ASCEND – Implementierung und Konfiguration\nEinrichtung, Datenmigration, Schulung, Go-Live-Begleitung', menge: 1, einheit: 'Pauschal', preis: 0 },
+    'ascend-lizenz':         { desc: 'ASCEND – Jahreslizenz\nSoftwarenutzung, Updates, Support', menge: 1, einheit: '1 Jahr', preis: 0 },
+    'beratung':              { desc: 'Beratungsleistung – kommunale Steuerung und Finanzen', menge: 1, einheit: 'Stunden', preis: 0 },
+  };
+
+  function checkPw() {
+    const val = document.getElementById('pwInput').value;
+    fetch('/api/rechnung-intern', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ passwort: val, _check: true, empfaenger: { organisation: 'X', email: 'x@x.de' }, positionen: [{ beschreibung: 'X', menge: 1, einheit: 'X', einzelpreis: 1 }] }),
+    }).then(r => {
+      if (r.status !== 401) {
+        pw = val;
+        document.getElementById('pwScreen').style.display = 'none';
+        document.getElementById('app').style.display = 'block';
+        addPos(); // Eine leere Position vorbelegen
+      } else {
+        document.getElementById('pwErr').style.display = 'block';
+      }
+    });
+  }
+
+  document.getElementById('pwInput').addEventListener('keydown', e => { if (e.key === 'Enter') checkPw(); });
+
+  function addTemplate(key) {
+    const t = TEMPLATES[key];
+    if (!t) return;
+    const id = ++posCount;
+    const tbody = document.getElementById('posBody');
+    const tr = document.createElement('tr');
+    tr.className = 'pos-row';
+    tr.id = `pos-${id}`;
+    tr.innerHTML = `
+      <td><input type="text" class="p-desc" value="${t.desc}" placeholder="Leistungsbeschreibung" oninput="updateSumme()"></td>
+      <td><input type="number" class="p-menge" value="${t.menge}" min="0.01" step="0.01" oninput="updateSumme()"></td>
+      <td><input type="text" class="p-einheit" value="${t.einheit}" placeholder="Stk / h / Monat"></td>
+      <td><input type="number" class="p-preis" value="${t.preis}" min="0" step="0.01" oninput="updateSumme()"></td>
+      <td style="text-align:right;font-size:13px;font-weight:600;color:#172840;padding-right:8px" id="pos-sum-${id}">—</td>
+      <td><button class="del-btn" onclick="delPos(${id})">×</button></td>`;
+    tbody.appendChild(tr);
+    updateSumme();
+  }
+
+  function addPos() {
+    const id = ++posCount;
+    const tbody = document.getElementById('posBody');
+    const tr = document.createElement('tr');
+    tr.className = 'pos-row';
+    tr.id = `pos-${id}`;
+    tr.innerHTML = `
+      <td><input type="text" class="p-desc" placeholder="Leistungsbeschreibung" oninput="updateSumme()"></td>
+      <td><input type="number" class="p-menge" value="1" min="0.01" step="0.01" oninput="updateSumme()"></td>
+      <td><input type="text" class="p-einheit" value="Pauschal" placeholder="Einheit"></td>
+      <td><input type="number" class="p-preis" value="0" min="0" step="0.01" oninput="updateSumme()"></td>
+      <td style="text-align:right;font-size:13px;font-weight:600;color:#172840;padding-right:8px" id="pos-sum-${id}">—</td>
+      <td><button class="del-btn" onclick="delPos(${id})">×</button></td>`;
+    tbody.appendChild(tr);
+    updateSumme();
+  }
+
+  function delPos(id) {
+    document.getElementById(`pos-${id}`)?.remove();
+    updateSumme();
+  }
+
+  function fmt(n) { return n.toFixed(2).replace('.', ',') + ' €'; }
+
+  function updateSumme() {
+    let netto = 0;
+    document.querySelectorAll('.pos-row').forEach(tr => {
+      const m = parseFloat(tr.querySelector('.p-menge')?.value) || 0;
+      const p = parseFloat(tr.querySelector('.p-preis')?.value) || 0;
+      const s = m * p;
+      netto += s;
+      const id = tr.id.replace('pos-', '');
+      const cell = document.getElementById(`pos-sum-${id}`);
+      if (cell) cell.textContent = fmt(s);
+    });
+    const mwst = parseInt(document.getElementById('mwstSatz')?.value) || 19;
+    const mwstBetrag = Math.round(netto * mwst) / 100;
+    const brutto = netto + mwstBetrag;
+    document.getElementById('s-netto').textContent   = fmt(netto);
+    document.getElementById('s-mwst').textContent    = fmt(mwstBetrag);
+    document.getElementById('s-brutto').textContent  = fmt(brutto);
+    document.getElementById('s-mwst-label').textContent = `MwSt. ${mwst} %`;
+  }
+
+  document.getElementById('mwstSatz')?.addEventListener('change', updateSumme);
+
+  function getPositionen() {
+    const pos = [];
+    document.querySelectorAll('.pos-row').forEach(tr => {
+      const desc = tr.querySelector('.p-desc')?.value?.trim();
+      const menge = parseFloat(tr.querySelector('.p-menge')?.value) || 1;
+      const einheit = tr.querySelector('.p-einheit')?.value?.trim() || 'Pauschal';
+      const preis = parseFloat(tr.querySelector('.p-preis')?.value) || 0;
+      if (desc) pos.push({ beschreibung: desc, menge, einheit, einzelpreis: preis });
+    });
+    return pos;
+  }
+
+  async function submitRechnung() {
+    const btn = document.getElementById('submitBtn');
+    const lbl = document.getElementById('submitLabel');
+
+    const empfaenger = {
+      organisation:    document.getElementById('organisation').value.trim(),
+      abteilung:       document.getElementById('abteilung').value.trim(),
+      ansprechpartner: document.getElementById('ansprechpartner').value.trim(),
+      email:           document.getElementById('email').value.trim(),
+      strasse:         document.getElementById('strasse').value.trim(),
+      plz:             document.getElementById('plz').value.trim(),
+      ort:             document.getElementById('ort').value.trim(),
+      leitwegId:       document.getElementById('leitwegId').value.trim() || '-',
+    };
+    const mwstSatz = parseInt(document.getElementById('mwstSatz').value) || 19;
+    const positionen = getPositionen();
+
+    if (!empfaenger.organisation) return toast('Organisation fehlt', 'error');
+    if (!empfaenger.email)        return toast('E-Mail fehlt', 'error');
+    if (positionen.length === 0)  return toast('Mindestens eine Position erforderlich', 'error');
+
+    btn.disabled = true;
+    lbl.textContent = 'Wird erstellt…';
+
+    try {
+      const res = await fetch('/api/rechnung-intern', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passwort: pw, empfaenger: { ...empfaenger, mwstSatz }, positionen }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        toast(`✓ Rechnung ${data.rechnungsnummer} erstellt und versendet`, 'success');
+        lbl.textContent = `✓ ${data.rechnungsnummer} versendet`;
+        setTimeout(() => { btn.disabled = false; lbl.textContent = 'Rechnung erstellen und versenden'; }, 4000);
+      } else {
+        toast(data.error || 'Fehler', 'error');
+        btn.disabled = false;
+        lbl.textContent = 'Rechnung erstellen und versenden';
+      }
+    } catch (e) {
+      toast('Verbindungsfehler', 'error');
+      btn.disabled = false;
+      lbl.textContent = 'Rechnung erstellen und versenden';
+    }
+  }
+
+  function toast(msg, type = 'success') {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = `toast ${type} show`;
+    setTimeout(() => el.classList.remove('show'), 4000);
+  }
+</script>
+</body>
+</html>

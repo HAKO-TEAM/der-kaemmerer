@@ -158,7 +158,23 @@ function txt(doc, text, x, y, opts = {}) {
   doc.text(text, x, y, { lineBreak: false, ...opts });
 }
 
-function buildPDF(data, invoiceId) {
+function buildPDF(data, invoiceId, positionen) {
+  // positionen: [{ beschreibung, menge, einheit, einzelpreis }]
+  // Falls nicht übergeben → KommunalFlat-Standard
+  if (!positionen || positionen.length === 0) {
+    positionen = [{
+      beschreibung: 'KommunalFlat – Stellenboerse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier  |  Newsletter + LinkedIn',
+      menge: 1,
+      einheit: '1 Monat',
+      einzelpreis: 249,
+    }];
+  }
+
+  const mwstSatz   = data.mwstSatz ?? 19;
+  const nettoGes   = positionen.reduce((s, p) => s + (p.einzelpreis * p.menge), 0);
+  const mwstBetrag = Math.round(nettoGes * mwstSatz) / 100;
+  const bruttoGes  = Math.round((nettoGes + mwstBetrag) * 100) / 100;
+
   return new Promise((resolve, reject) => {
     const doc = new PDFDocument({
       size: 'A4',
@@ -177,9 +193,8 @@ function buildPDF(data, invoiceId) {
     const skontoPct   = 5;
     const skontoTage  = 5;
     const skontoFrist = addWorkdays(heute, skontoTage);
-    const bruttoGes   = 296.31;
-    const skontoAbzug = Math.round(bruttoGes * skontoPct) / 100;  // 14.82
-    const skontoBetrag = Math.round((bruttoGes - skontoAbzug) * 100) / 100; // 281.49
+    const skontoAbzug  = Math.round(bruttoGes * skontoPct) / 100;
+    const skontoBetrag = Math.round((bruttoGes - skontoAbzug) * 100) / 100;
 
     // ── HEADER ────────────────────────────────────────────────────────────────
     doc.rect(0, 0, PW, 72).fill(NAVY);
@@ -252,32 +267,38 @@ function buildPDF(data, invoiceId) {
     txt(doc, 'Einzelpreis',      c3,   tY+6, { width: w3, align: 'right' });
     txt(doc, 'Betrag',           c4,   tY+6, { width: w4, align: 'right' });
 
-    // Daten-Zeile
-    const rY = tY + tH + 6;
-    doc.rect(ML, rY - 4, CW, 42).fill(LIGHT);
-    doc.font('Helvetica-Bold').fontSize(9).fillColor(NAVY);
-    txt(doc, '1', c0+4, rY);
-    txt(doc, 'KommunalFlat – Stellenboerse derkaemmerer.de', c1, rY, { width: w1 });
-    doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
-    txt(doc, 'Unlimitierte Stellenanzeigen  |  Stadt-Dossier  |  Newsletter + LinkedIn', c1, rY+13, { width: w1 });
-
-    doc.font('Helvetica').fontSize(9).fillColor(NAVY);
-    txt(doc, '1 Monat',        c2, rY+4, { width: w2, align: 'right' });
-    txt(doc, eur(249),         c3, rY+4, { width: w3, align: 'right' });
-    txt(doc, eur(249),         c4, rY+4, { width: w4, align: 'right' });
+    // ── Dynamische Positionen ─────────────────────────────────────────────────
+    let curY = tY + tH + 6;
+    positionen.forEach((p, i) => {
+      const lines = p.beschreibung.split('\n');
+      const rowH  = 20 + (lines.length - 1) * 13 + 10;
+      doc.rect(ML, curY - 4, CW, rowH).fill(i % 2 === 0 ? LIGHT : '#ffffff');
+      doc.font('Helvetica-Bold').fontSize(9).fillColor(NAVY);
+      txt(doc, String(i + 1), c0 + 4, curY);
+      txt(doc, lines[0], c1, curY, { width: w1 });
+      if (lines.length > 1) {
+        doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
+        lines.slice(1).forEach((l, li) => txt(doc, l, c1, curY + 13 + li * 12, { width: w1 }));
+      }
+      doc.font('Helvetica').fontSize(9).fillColor(NAVY);
+      txt(doc, p.einheit || String(p.menge), c2, curY + 4, { width: w2, align: 'right' });
+      txt(doc, eur(p.einzelpreis),           c3, curY + 4, { width: w3, align: 'right' });
+      txt(doc, eur(p.einzelpreis * p.menge), c4, curY + 4, { width: w4, align: 'right' });
+      curY += rowH + 4;
+    });
 
     // ── SUMMENBLOCK (rechts) ──────────────────────────────────────────────────
-    const sY  = rY + 56;
+    const sY  = curY + 10;
     const sLX = c3;
     const sVX = c4;
 
     doc.moveTo(sLX, sY).lineTo(PW - MR, sY).strokeColor('#d1d5db').lineWidth(0.5).stroke();
     doc.font('Helvetica').fontSize(9).fillColor(GRAY);
-    txt(doc, 'Nettobetrag:', sLX, sY+6,  { width: w3, align: 'right' });
-    txt(doc, 'MwSt. 19 %:', sLX, sY+20, { width: w3, align: 'right' });
+    txt(doc, 'Nettobetrag:',          sLX, sY+6,  { width: w3, align: 'right' });
+    txt(doc, `MwSt. ${mwstSatz} %:`, sLX, sY+20, { width: w3, align: 'right' });
     doc.fillColor(NAVY);
-    txt(doc, eur(249),      sVX, sY+6,  { width: w4, align: 'right' });
-    txt(doc, eur(47.31),    sVX, sY+20, { width: w4, align: 'right' });
+    txt(doc, eur(nettoGes),   sVX, sY+6,  { width: w4, align: 'right' });
+    txt(doc, eur(mwstBetrag), sVX, sY+20, { width: w4, align: 'right' });
 
     // Gesamtbetrag (volle Breite)
     const gY = sY + 38;
@@ -342,7 +363,8 @@ function buildPDF(data, invoiceId) {
 
 // ─── E-Mail versenden ────────────────────────────────────────────────────────
 
-async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
+async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
+  betrag = betrag ?? 296.31;
   const resend  = new Resend(process.env.RESEND_API_KEY);
   const pdfB64  = pdfBuffer.toString('base64');
   const filename = `Rechnung_${invoiceId}.pdf`;
@@ -371,7 +393,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
       </tr>
       <tr>
         <td style="padding:10px;color:#6b7280">Betrag</td>
-        <td style="padding:10px;color:#172840">296,31 € (inkl. 19% MwSt.)</td>
+        <td style="padding:10px;color:#172840">${betrag.toFixed(2).replace('.',',')} € (inkl. MwSt.)</td>
       </tr>
       <tr style="background:#f8fafc">
         <td style="padding:10px;color:#6b7280">Zahlungsziel</td>
@@ -395,20 +417,23 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer) {
 
 // ─── Exportierte Funktion für direkten Aufruf aus booking.js ─────────────────
 
-export async function createInvoice(data) {
+export async function createInvoice(data, positionen) {
   if (!data.organisation || !data.email) {
     throw new Error(`Pflichtfelder fehlen: organisation="${data.organisation}" email="${data.email}"`);
   }
   const { id, records, sha, path } = await nextInvoiceNumber();
-  const pdf = await buildPDF(data, id);
-  await sendInvoiceEmail(data, id, pdf);
+  const pdf = await buildPDF(data, id, positionen);
+  const netto = (positionen || []).reduce((s, p) => s + p.einzelpreis * p.menge, 0) || 249;
+  const mwst  = data.mwstSatz ?? 19;
+  const brutto = Math.round(netto * (1 + mwst / 100) * 100) / 100;
+  await sendInvoiceEmail(data, id, pdf, brutto);
   await saveInvoiceRecord(path, sha, records, {
     id,
     year: new Date().getFullYear(),
     date: new Date().toISOString().split('T')[0],
     organisation: data.organisation,
     email: data.email,
-    betrag: 296.31,
+    betrag: brutto,
   });
   return id;
 }
