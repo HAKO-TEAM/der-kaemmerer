@@ -158,7 +158,8 @@ function txt(doc, text, x, y, opts = {}) {
   doc.text(text, x, y, { lineBreak: false, ...opts });
 }
 
-function buildPDF(data, invoiceId, positionen) {
+function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
+  // vorlage: 'kaemmerer' = Der Kämmerer-Branding | 'hako' = HAKO neutral
   // positionen: [{ beschreibung, menge, einheit, einzelpreis }]
   // Falls nicht übergeben → KommunalFlat-Standard
   if (!positionen || positionen.length === 0) {
@@ -199,12 +200,20 @@ function buildPDF(data, invoiceId, positionen) {
     // ── HEADER ────────────────────────────────────────────────────────────────
     doc.rect(0, 0, PW, 72).fill(NAVY);
 
-    // Logo links
+    // Logo links — je nach Vorlage
     doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(18);
-    txt(doc, 'Der Kämmerer', ML, 18);
-    doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
-    txt(doc, 'HAKO Beteiligungsgesellschaft mbH', ML, 40);
-    txt(doc, 'Das unabhängige Briefing für kommunale Entscheider', ML, 52);
+    if (vorlage === 'hako') {
+      txt(doc, 'HAKO', ML, 14);
+      doc.font('Helvetica').fontSize(10).fillColor('#93c5fd');
+      txt(doc, 'Beteiligungsgesellschaft mbH', ML, 36);
+      doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
+      txt(doc, 'Hertha-Lindner-Str. 10-12  |  01067 Dresden', ML, 52);
+    } else {
+      txt(doc, 'Der Kämmerer', ML, 18);
+      doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
+      txt(doc, 'HAKO Beteiligungsgesellschaft mbH', ML, 40);
+      txt(doc, 'Das unabhängige Briefing für kommunale Entscheider', ML, 52);
+    }
 
     // "RECHNUNG" rechts — genug Breite damit kein Umbruch
     doc.font('Helvetica-Bold').fontSize(18).fillColor(BLUE);
@@ -244,9 +253,15 @@ function buildPDF(data, invoiceId, positionen) {
 
     // ── BETREFF ───────────────────────────────────────────────────────────────
     doc.font('Helvetica-Bold').fontSize(12).fillColor(NAVY);
-    txt(doc, 'Rechnung KommunalFlat – Stellenboerse derkaemmerer.de', ML, lineY + 14);
-    doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
-    txt(doc, 'Flatrate-Abonnement  |  12-Monatsvertrag', ML, lineY + 30);
+    if (vorlage === 'hako') {
+      txt(doc, `Rechnung ${invoiceId}`, ML, lineY + 14);
+      doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
+      txt(doc, data.betreff || 'Leistungsrechnung', ML, lineY + 30);
+    } else {
+      txt(doc, 'Rechnung KommunalFlat – Stellenboerse derkaemmerer.de', ML, lineY + 14);
+      doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
+      txt(doc, 'Flatrate-Abonnement  |  12-Monatsvertrag', ML, lineY + 30);
+    }
 
     // ── TABELLE ───────────────────────────────────────────────────────────────
     const tY  = lineY + 50;
@@ -333,14 +348,16 @@ function buildPDF(data, invoiceId, positionen) {
     doc.font('Helvetica-Bold').fontSize(8).fillColor(NAVY);
     txt(doc, 'Zahlungs- und Vertragsbedingungen', ML, vY);
     doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
-    doc.text(
-      `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
-      `Danach fallig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
-      `Bitte uberweisen Sie unter Angabe des Verwendungszwecks. ` +
-      `12-Monatsvertrag, erstmalig kundbar zum Ablauf des 12. Monats, ` +
-      `danach monatlich zum Monatsende mit 1 Monat Kundigungsfrist.`,
-      ML, vY + 12, { width: CW, lineBreak: true }
-    );
+    const vertragsBed = vorlage === 'hako'
+      ? `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
+        `Danach fällig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
+        `Bitte überweisen Sie unter Angabe des Verwendungszwecks (Rechnungsnummer und Organisation).`
+      : `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
+        `Danach fällig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
+        `Bitte überweisen Sie unter Angabe des Verwendungszwecks. ` +
+        `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats, ` +
+        `danach monatlich zum Monatsende mit 1 Monat Kündigungsfrist.`;
+    doc.text(vertragsBed, ML, vY + 12, { width: CW, lineBreak: true });
 
     // ── FOOTER (absolut auf Seite 1 — KEIN doc.text davor der umbricht) ───────
     const fY = PH - 38;
@@ -417,12 +434,12 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
 
 // ─── Exportierte Funktion für direkten Aufruf aus booking.js ─────────────────
 
-export async function createInvoice(data, positionen) {
+export async function createInvoice(data, positionen, vorlage = 'kaemmerer') {
   if (!data.organisation || !data.email) {
     throw new Error(`Pflichtfelder fehlen: organisation="${data.organisation}" email="${data.email}"`);
   }
   const { id, records, sha, path } = await nextInvoiceNumber();
-  const pdf = await buildPDF(data, id, positionen);
+  const pdf = await buildPDF(data, id, positionen, vorlage);
   const netto = (positionen || []).reduce((s, p) => s + p.einzelpreis * p.menge, 0) || 249;
   const mwst  = data.mwstSatz ?? 19;
   const brutto = Math.round(netto * (1 + mwst / 100) * 100) / 100;

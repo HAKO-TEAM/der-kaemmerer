@@ -102,6 +102,17 @@ export const prerender = false;
     <div class="header-logo">Der <span>Kämmerer</span></div>
     <div class="header-sub">Internes Rechnungstool</div>
   </div>
+  <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+    <span style="font-size:12px;color:#94a3b8">Vorlage:</span>
+    <button id="btn-tpl-kaemmerer" onclick="setVorlage('kaemmerer')"
+      style="padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid #60a5fa;background:#2563eb;color:#fff">
+      Der Kämmerer
+    </button>
+    <button id="btn-tpl-hako" onclick="setVorlage('hako')"
+      style="padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid rgba(255,255,255,0.3);background:transparent;color:#94a3b8">
+      HAKO
+    </button>
+  </div>
 </div>
 
 <div class="container">
@@ -238,6 +249,20 @@ export const prerender = false;
 <script is:inline>
   let pw = '';
   let posCount = 0;
+  let aktVorlage = 'kaemmerer';
+
+  function setVorlage(v) {
+    aktVorlage = v;
+    const btnK = document.getElementById('btn-tpl-kaemmerer');
+    const btnH = document.getElementById('btn-tpl-hako');
+    if (v === 'kaemmerer') {
+      btnK.style.background = '#2563eb'; btnK.style.color = '#fff'; btnK.style.borderColor = '#60a5fa';
+      btnH.style.background = 'transparent'; btnH.style.color = '#94a3b8'; btnH.style.borderColor = 'rgba(255,255,255,0.3)';
+    } else {
+      btnH.style.background = '#2563eb'; btnH.style.color = '#fff'; btnH.style.borderColor = '#60a5fa';
+      btnK.style.background = 'transparent'; btnK.style.color = '#94a3b8'; btnK.style.borderColor = 'rgba(255,255,255,0.3)';
+    }
+  }
 
   const TEMPLATES = {
     'kommunalflat':          { desc: 'KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen | Stadt-Dossier | Newsletter + LinkedIn', menge: 1, einheit: '1 Monat', preis: 249 },
@@ -373,7 +398,7 @@ export const prerender = false;
       const res = await fetch('/api/rechnung-intern', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ passwort: pw, empfaenger: { ...empfaenger, mwstSatz }, positionen }),
+        body: JSON.stringify({ passwort: pw, empfaenger: { ...empfaenger, mwstSatz }, positionen, vorlage: aktVorlage }),
       });
       const data = await res.json();
       if (res.ok) {
