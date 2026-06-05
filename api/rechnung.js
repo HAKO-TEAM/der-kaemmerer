@@ -399,7 +399,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
     from:    'Rechnungsstelle Der Kämmerer <rechnung@derkaemmerer.de>',
     to:      [data.email],
     cc:      ['anzeigen@derkaemmerer.de'],
-    subject: `Ihre Rechnung ${invoiceId} – KommunalFlat derkaemmerer.de`,
+    subject: `Ihre Rechnung ${invoiceId} – derkaemmerer.de`,
     attachments: [{ filename, content: pdfB64 }],
     html: `
 <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
@@ -409,7 +409,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag) {
   </div>
   <div style="padding:24px">
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
-    <p style="color:#374151">vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de.
+    <p style="color:#374151">vielen Dank für Ihre Buchung auf derkaemmerer.de.
     Anbei erhalten Sie Ihre Rechnung als PDF.</p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
       <tr style="background:#f8fafc">
