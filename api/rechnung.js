@@ -219,25 +219,27 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     doc.font('Helvetica-Bold').fontSize(18).fillColor(BLUE);
     txt(doc, 'RECHNUNG', ML, 22, { align: 'right', width: CW, lineBreak: false });
 
-    // ── RECHNUNGSINFOS (rechts) ───────────────────────────────────────────────
+    // ── RECHNUNGSINFOS (rechts) — DIN 5008: ab 80pt ──────────────────────────
     const infoX = 340;
     const infoW = PW - infoX - MR;
     doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
-    txt(doc, `Rechnungsnr.: ${invoiceId}`,         infoX, 90,  { width: infoW, align: 'right' });
-    txt(doc, `Datum: ${formatDate(heute)}`,         infoX, 103, { width: infoW, align: 'right' });
-    txt(doc, `Leistungsdatum: ${formatDate(heute)}`,infoX, 116, { width: infoW, align: 'right' });
-    txt(doc, `Zahlungsziel: ${formatDate(frist)}`,  infoX, 129, { width: infoW, align: 'right' });
+    txt(doc, `Rechnungsnr.: ${invoiceId}`,         infoX, 82,  { width: infoW, align: 'right' });
+    txt(doc, `Datum: ${formatDate(heute)}`,         infoX, 96,  { width: infoW, align: 'right' });
+    txt(doc, `Leistungsdatum: ${formatDate(heute)}`,infoX, 110, { width: infoW, align: 'right' });
+    txt(doc, `Zahlungsziel: ${formatDate(frist)}`,  infoX, 124, { width: infoW, align: 'right' });
 
-    // ── ABSENDER (winzig über Adresse) ────────────────────────────────────────
+    // ── ABSENDER-RÜCKSENDEZEILE — DIN 5008: 45mm = 127pt vom oberen Rand ─────
+    // Unterstrichen / abgetrennt für Kuvertfenster
+    doc.moveTo(ML, 125).lineTo(ML + 185, 125).strokeColor('#d1d5db').lineWidth(0.5).stroke();
     doc.font('Helvetica').fontSize(6.5).fillColor(GRAY);
-    txt(doc, `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, 01067 Dresden  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}`, ML, 88);
+    txt(doc, `HAKO Beteiligungsgesellschaft mbH  ·  Hertha-Lindner-Str. 10-12  ·  01067 Dresden`, ML, 128, { width: 185 });
 
-    // ── RECHNUNGSADRESSE ──────────────────────────────────────────────────────
+    // ── RECHNUNGSADRESSE — DIN 5008: ab 50mm = 142pt ─────────────────────────
     doc.font('Helvetica-Bold').fontSize(10).fillColor(NAVY);
-    txt(doc, data.organisation, ML, 100);
+    txt(doc, data.organisation, ML, 145);
 
     doc.font('Helvetica').fontSize(9).fillColor('#374151');
-    let addrY = 114;
+    let addrY = 160;
     if (data.abteilung)      { txt(doc, data.abteilung,      ML, addrY); addrY += 13; }
     if (data.ansprechpartner){ txt(doc, data.ansprechpartner,ML, addrY); addrY += 13; }
     txt(doc, data.strasse,             ML, addrY); addrY += 13;
@@ -247,8 +249,8 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
       txt(doc, `Leitweg-ID: ${data.leitwegId}`, ML, addrY);
     }
 
-    // ── TRENNLINIE ────────────────────────────────────────────────────────────
-    const lineY = 200;
+    // ── TRENNLINIE — nach DIN 5008 Adressfeld (max 95mm = 269pt) ─────────────
+    const lineY = 272;
     doc.moveTo(ML, lineY).lineTo(PW - MR, lineY).strokeColor(BLUE).lineWidth(1.5).stroke();
 
     // ── BETREFF ───────────────────────────────────────────────────────────────
