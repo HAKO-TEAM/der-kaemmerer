@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Wo die kommunalen Schulden wirklich liegen</text>
+  <text x="60" y="90" font-size="17" fill="#64748b">Der Kernhaushalt steht im Fokus der Aufsicht &#8211; der gr&#246;&#223;ere Teil liegt daneben.</text>
+
+  <!-- Brackets above bar -->
+  <path d="M 60 196 v -10 h 334 v 10" fill="none" stroke="#1a2744" stroke-width="2"/>
+  <text x="227" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2744" letter-spacing="0.6">IM FOKUS DER AUFSICHT</text>
+
+  <path d="M 394 196 v -10 h 546 v 10" fill="none" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="667" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d" letter-spacing="0.6">WEITGEHEND AUSSERHALB DER AUFSICHT</text>
+
+  <!-- Stacked bar -->
+  <rect x="60"  y="210" width="334" height="96" fill="#1a2744"/>
+  <rect x="394" y="210" width="264" height="96" fill="#7f1d1d"/>
+  <rect x="658" y="210" width="150" height="96" fill="#a62a2a"/>
+  <rect x="808" y="210" width="132" height="96" fill="#c8991f"/>
+
+  <text x="227" y="266" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">38 %</text>
+  <text x="526" y="266" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">30 %</text>
+  <text x="733" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">17 %</text>
+  <text x="874" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">15 %</text>
+
+  <!-- Legend rows -->
+  <rect x="60" y="352" width="20" height="20" fill="#1a2744"/>
+  <text x="92" y="362" font-size="16" font-weight="700" fill="#1a2744">Kernhaushalt</text>
+  <text x="92" y="384" font-size="14.5" fill="#64748b">Kredite im eigentlichen Haushalt &#8211; die einzige Zahl der meisten Schuldenstatistiken.</text>
+
+  <rect x="60" y="408" width="20" height="20" fill="#7f1d1d"/>
+  <text x="92" y="418" font-size="16" font-weight="700" fill="#1a2744">Eigenbetriebe &amp; Eigengesellschaften</text>
+  <text x="92" y="440" font-size="14.5" fill="#64748b">Stadtwerke, Wohnungs-, Verkehrs- und Klinik-Gesellschaften in kommunaler Hand.</text>
+
+  <rect x="60" y="464" width="20" height="20" fill="#a62a2a"/>
+  <text x="92" y="474" font-size="16" font-weight="700" fill="#1a2744">Zweckverb&#228;nde &amp; Beteiligungen</text>
+  <text x="92" y="496" font-size="14.5" fill="#64748b">Gemeinsame Aufgabentr&#228;ger und Minderheitsanteile &#8211; anteilige Haftung inklusive.</text>
+
+  <rect x="640" y="408" width="20" height="20" fill="#c8991f"/>
+  <text x="672" y="418" font-size="16" font-weight="700" fill="#1a2744">&#214;PP, Leasing &amp; Kassenkredite</text>
+  <text x="672" y="440" font-size="14.5" fill="#64748b">Vertraglich gebundene Zahlungslasten der</text>
+  <text x="672" y="460" font-size="14.5" fill="#64748b">Nebenhaushalte &#8211; oft &#252;ber Jahrzehnte.</text>
+
+  <!-- Footnote -->
+  <line x1="60" y1="524" x2="940" y2="524" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="546" font-size="12.5" fill="#94a3b8">Illustrative Anteile; die Aufteilung variiert stark je Kommune. Kategorien nach Kern- und Extrahaushalten / &#246;ffentlichen FEU (Statistisches Bundesamt).</text>
+</svg>
