@@ -11,6 +11,9 @@ const nav = [
   { href: '/stellen', label: 'Stellenbörse' },
 ];
 const currentPath = Astro.url.pathname;
+
+// Aktuelles Tagesdatum für die Anzeige oben rechts (Build-Zeit; wird clientseitig auf "heute" aktualisiert)
+const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
 ---
 <style>
   /* ── Topbar ── */
@@ -107,7 +110,7 @@ const currentPath = Astro.url.pathname;
         <div class="tagline">Das unabhängige Briefing für kommunale Entscheider</div>
       </div>
       <div class="masthead-right">
-        <span class="pill">Juni 2026</span>
+        <span class="pill" id="ausgabe-datum">{aktuellesDatum}</span>
         <a href="/#newsletter" class="btn">Abonnieren</a>
         <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
           <span></span>
@@ -162,4 +165,10 @@ const currentPath = Astro.url.pathname;
       burger?.setAttribute('aria-expanded', 'false');
     }
   });
+
+  // Datumsanzeige (oben rechts) live auf das heutige Datum setzen
+  const datumEl = document.getElementById('ausgabe-datum');
+  if (datumEl) {
+    datumEl.textContent = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
+  }
 </script>
