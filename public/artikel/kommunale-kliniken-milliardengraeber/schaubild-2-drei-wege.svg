@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Drei Wege, wie die Kliniklast im Haushalt landet</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Vom laufenden Zuschuss bis zur schlagend werdenden B&#252;rgschaft.</text>
+
+  <!-- Row 1: Verlustausgleich -->
+  <rect x="60" y="130" width="880" height="110" rx="6" fill="#f8fafc"/>
+  <rect x="60" y="130" width="8" height="110" fill="#1a2744"/>
+  <text x="92" y="168" font-size="19" font-weight="700" fill="#1a2744">1 &#183; Verlustausgleich (laufend)</text>
+  <text x="92" y="197" font-size="15.5" fill="#334155">Der Gesellschafterzuschuss deckt den Jahresfehlbetrag &#8211; direkt kassenwirksam, jedes Jahr aufs Neue.</text>
+  <rect x="792" y="150" width="120" height="26" rx="13" fill="#1a2744"/>
+  <text x="852" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">LAUFEND</text>
+
+  <!-- Row 2: Investitionslücke -->
+  <rect x="60" y="255" width="880" height="110" rx="6" fill="#f8fafc"/>
+  <rect x="60" y="255" width="8" height="110" fill="#a62a2a"/>
+  <text x="92" y="293" font-size="19" font-weight="700" fill="#1a2744">2 &#183; Investitionsl&#252;cke</text>
+  <text x="92" y="322" font-size="15.5" fill="#334155">Die L&#228;nder finanzieren Investitionen zu knapp (duale Finanzierung); der Tr&#228;ger springt mit Krediten ein.</text>
+  <rect x="792" y="275" width="120" height="26" rx="13" fill="#a62a2a"/>
+  <text x="852" y="293" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">AUFGESCHOBEN</text>
+
+  <!-- Row 3: Bürgschaft -->
+  <rect x="60" y="380" width="880" height="110" rx="6" fill="#f8fafc"/>
+  <rect x="60" y="380" width="8" height="110" fill="#c8991f"/>
+  <text x="92" y="418" font-size="19" font-weight="700" fill="#1a2744">3 &#183; B&#252;rgschaft / Gew&#228;hrtr&#228;gerhaftung</text>
+  <text x="92" y="447" font-size="15.5" fill="#334155">Eine Eventualverbindlichkeit &#8211; bis zur Klinik-Insolvenz. Dann wird sie &#252;ber Nacht kassenwirksam.</text>
+  <rect x="792" y="400" width="120" height="26" rx="13" fill="#c8991f"/>
+  <text x="852" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">EVENTUAL</text>
+
+  <!-- Footnote -->
+  <line x1="60" y1="516" x2="940" y2="516" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="538" font-size="12.5" fill="#94a3b8">Strukturelles Muster; Gewichtung je Kommune verschieden. Investitionsfinanzierung der Kliniken ist L&#228;ndersache (duale Finanzierung), wird aber vielerorts als unzureichend kritisiert.</text>
+</svg>

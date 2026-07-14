@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Die Klinik als Zuschussbetrieb</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Laufende Erl&#246;se decken den Aufwand nicht &#8211; die L&#252;cke tr&#228;gt der kommunale Tr&#228;ger.</text>
+
+  <!-- Baseline -->
+  <line x1="150" y1="470" x2="640" y2="470" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Aufwand bar: navy (gedeckt) + red (ungedeckt) -->
+  <rect x="180" y="250" width="150" height="220" fill="#1a2744"/>
+  <rect x="180" y="150" width="150" height="100" fill="#a62a2a"/>
+  <text x="255" y="500" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Betrieblicher</text>
+  <text x="255" y="520" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Aufwand</text>
+
+  <!-- Erlöse bar: blue -->
+  <rect x="440" y="250" width="150" height="220" fill="#3b82f6"/>
+  <text x="515" y="500" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Erl&#246;se</text>
+  <text x="515" y="520" text-anchor="middle" font-size="13.5" fill="#64748b">(DRG + Vorhaltung)</text>
+
+  <!-- Level line linking covered heights -->
+  <line x1="180" y1="250" x2="640" y2="250" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Bracket for the deficit (red segment) -->
+  <path d="M 350 150 h 14 v 100 h -14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="188" font-size="14" font-weight="700" fill="#a62a2a" letter-spacing="0.6">JAHRESFEHLBETRAG</text>
+  <text x="700" y="212" font-size="15" fill="#334155">Der ungedeckte Teil des Betriebs &#8211;</text>
+  <text x="700" y="233" font-size="15" fill="#334155">Jahr f&#252;r Jahr.</text>
+  <text x="700" y="270" font-size="15" font-weight="700" fill="#7f1d1d">&#8594; Verlustausgleich der Kommune</text>
+
+  <!-- Footnote -->
+  <line x1="60" y1="524" x2="940" y2="524" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="546" font-size="12.5" fill="#94a3b8">Schematische Darstellung; H&#246;he des Defizits variiert stark je Haus. Betriebsdefizite kommunaler Kliniken sind seit Jahren die Regel (u.&#8201;a. DKG-Krankenhaus-Barometer).</text>
+</svg>
