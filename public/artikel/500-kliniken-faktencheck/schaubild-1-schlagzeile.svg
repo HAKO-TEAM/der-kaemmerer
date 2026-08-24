@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="520" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Schlagzeile gegen harten Kern</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Was &#8222;500 vor der Pleite&#8220; wirklich meint &#8211; Projektion gegen akuten Ist-Stand.</text>
+
+  <line x1="150" y1="440" x2="820" y2="440" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Bar A: projection ~49% (red, tall) -->
+  <rect x="230" y="140" width="170" height="300" fill="#a62a2a"/>
+  <text x="315" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#7f1d1d">&#8776; 49 %</text>
+  <text x="315" y="466" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2744">&#8222;gef&#228;hrdet&#8220; bis 2030</text>
+  <text x="315" y="486" text-anchor="middle" font-size="12.5" fill="#64748b">Projektion, konditional,</text>
+  <text x="315" y="504" text-anchor="middle" font-size="12.5" fill="#64748b">Verbandswarnung</text>
+
+  <!-- Bar B: acute ~16% (navy, short) -->
+  <rect x="560" y="342" width="170" height="98" fill="#1a2744"/>
+  <text x="645" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1a2744">&#8776; 16 %</text>
+  <text x="645" y="466" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2744">akut hohes Risiko</text>
+  <text x="645" y="486" text-anchor="middle" font-size="12.5" fill="#64748b">heute &#8222;rot&#8220; eingestuft</text>
+
+  <line x1="60" y1="500" x2="940" y2="500" stroke="#e2e8f0" stroke-width="0"/>
+  <text x="60" y="516" font-size="12.5" fill="#94a3b8">Tats&#228;chliche Insolvenzen 2020&#8211;2024: 88 H&#228;user. Quellen: DKG-Projektion (bis 2030) bzw. Krankenhaus Rating Report 2025 (Risikoeinstufung).</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="420" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">So verteilt sich das Risiko wirklich</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Wirtschaftliche Einstufung der Kliniken &#8211; nur eine Minderheit ist akut gef&#228;hrdet.</text>
+
+  <!-- Stacked bar: 63 / 21 / 16 over width 880 (x 60..940) -->
+  <rect x="60"  y="150" width="554" height="90" fill="#2f855a"/>
+  <rect x="614" y="150" width="185" height="90" fill="#c8991f"/>
+  <rect x="799" y="150" width="141" height="90" fill="#a62a2a"/>
+
+  <text x="337" y="203" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">63 %</text>
+  <text x="706" y="203" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">21 %</text>
+  <text x="869" y="203" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">16 %</text>
+
+  <!-- Legend -->
+  <rect x="60" y="280" width="18" height="18" fill="#2f855a"/>
+  <text x="86" y="294" font-size="15" fill="#334155"><tspan font-weight="700" fill="#1a2744">stabil</tspan> &#8211; wirtschaftlich tragf&#228;hig</text>
+
+  <rect x="380" y="280" width="18" height="18" fill="#c8991f"/>
+  <text x="406" y="294" font-size="15" fill="#334155"><tspan font-weight="700" fill="#1a2744">erh&#246;htes Risiko</tspan> (&#8222;gelb&#8220;)</text>
+
+  <rect x="680" y="280" width="18" height="18" fill="#a62a2a"/>
+  <text x="706" y="294" font-size="15" fill="#334155"><tspan font-weight="700" fill="#1a2744">hohes Risiko</tspan> (&#8222;rot&#8220;)</text>
+
+  <line x1="60" y1="360" x2="940" y2="360" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="382" font-size="12.5" fill="#94a3b8">Anteile gerundet; Risikoeinstufung nach Krankenhaus Rating Report 2025 (RWI). „Rot&#8220; bedeutet hohes Insolvenzrisiko, nicht laufende Insolvenz.</text>
+</svg>
