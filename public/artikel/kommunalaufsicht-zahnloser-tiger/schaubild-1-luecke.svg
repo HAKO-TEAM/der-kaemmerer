@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="540" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Aufgabe w&#228;chst, Kapazit&#228;t nicht</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Die Aufsicht soll immer mehr pr&#252;fen &#8211; mit gleichbleibend d&#252;nner Personaldecke.</text>
+
+  <line x1="150" y1="450" x2="700" y2="450" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Aufgabe bar (tall) -->
+  <rect x="200" y="140" width="150" height="310" fill="#a62a2a"/>
+  <text x="275" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Pr&#252;faufgabe</text>
+  <text x="275" y="500" text-anchor="middle" font-size="12.5" fill="#64748b">Haushalte, HSK, Beteiligungen,</text>
+  <text x="275" y="518" text-anchor="middle" font-size="12.5" fill="#64748b">Gesamtabschl&#252;sse</text>
+
+  <!-- Kapazität bar (short) -->
+  <rect x="470" y="366" width="150" height="84" fill="#1a2744"/>
+  <text x="545" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Pr&#252;fkapazit&#228;t</text>
+  <text x="545" y="500" text-anchor="middle" font-size="12.5" fill="#64748b">verf&#252;gbares Fachpersonal</text>
+
+  <!-- Gap bracket -->
+  <path d="M 636 140 h 14 v 226 h -14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="245" font-size="15" font-weight="700" fill="#7f1d1d" letter-spacing="0.6">PR&#220;FL&#220;CKE</text>
+  <text x="700" y="271" font-size="15" fill="#334155">Was faktisch nicht mehr</text>
+  <text x="700" y="292" font-size="15" fill="#334155">wirklich gepr&#252;ft wird.</text>
+
+  <line x1="60" y1="518" x2="940" y2="518" stroke="#e2e8f0" stroke-width="1"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="460" fill="#ffffff"/>
+
+  <text x="60" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#1a2744">Das Aufsichts-Ritual</text>
+  <text x="60" y="82" font-size="16" fill="#64748b">Ein Kreislauf, der sich j&#228;hrlich wiederholt &#8211; ohne die Ursache zu l&#246;sen.</text>
+
+  <!-- Boxes -->
+  <g>
+    <rect x="60"  y="150" width="190" height="100" rx="6" fill="#f8fafc" stroke="#a62a2a" stroke-width="2"/>
+    <text x="155" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Defizit&#228;rer</text>
+    <text x="155" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Haushalt / HSK</text>
+
+    <rect x="290" y="150" width="190" height="100" rx="6" fill="#f8fafc" stroke="#c8991f" stroke-width="2"/>
+    <text x="385" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Genehmigung</text>
+    <text x="385" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">unter Auflagen</text>
+
+    <rect x="520" y="150" width="190" height="100" rx="6" fill="#f8fafc" stroke="#c8991f" stroke-width="2"/>
+    <text x="615" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Auflagen</text>
+    <text x="615" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">nicht erf&#252;llt</text>
+
+    <rect x="750" y="150" width="190" height="100" rx="6" fill="#f8fafc" stroke="#a62a2a" stroke-width="2"/>
+    <text x="845" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Neues HSK</text>
+    <text x="845" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">gefordert</text>
+  </g>
+
+  <!-- Arrows between -->
+  <g fill="#94a3b8">
+    <path d="M 258 200 l 24 0 l -6 -6 m 6 6 l -6 6" stroke="#94a3b8" stroke-width="2" fill="none"/>
+    <path d="M 488 200 l 24 0 l -6 -6 m 6 6 l -6 6" stroke="#94a3b8" stroke-width="2" fill="none"/>
+    <path d="M 718 200 l 24 0 l -6 -6 m 6 6 l -6 6" stroke="#94a3b8" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Return loop arrow -->
+  <path d="M 845 250 L 845 320 L 155 320 L 155 250" fill="none" stroke="#7f1d1d" stroke-width="2" stroke-dasharray="7 5"/>
+  <path d="M 155 262 l -6 -12 l 12 0 z" fill="#7f1d1d"/>
+  <text x="500" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">und wieder von vorn</text>
+
+  <line x1="60" y1="400" x2="940" y2="400" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="422" font-size="12.5" fill="#94a3b8">Schematische Darstellung eines h&#228;ufigen Musters; nicht jede Kommune und Aufsicht folgt ihm zwingend.</text>
+</svg>
