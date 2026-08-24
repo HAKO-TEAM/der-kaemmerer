@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="520" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Der Versorgungsberg w&#228;chst</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Versorgungs- und Beihilfeausgaben der &#246;ffentlichen Hand &#8211; indexiert, Basis 2015 = 100.</text>
+
+  <!-- baseline -->
+  <line x1="110" y1="430" x2="930" y2="430" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Bars: 5 points -->
+  <!-- 2015 =100 -->
+  <rect x="150" y="330" width="110" height="100" fill="#c8d0dc"/>
+  <text x="205" y="318" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2744">100</text>
+  <text x="205" y="452" text-anchor="middle" font-size="13" fill="#64748b">2015</text>
+
+  <!-- 2020 =128 -->
+  <rect x="310" y="302" width="110" height="128" fill="#9aa7ba"/>
+  <text x="365" y="290" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2744">128</text>
+  <text x="365" y="452" text-anchor="middle" font-size="13" fill="#64748b">2020</text>
+
+  <!-- 2025 =160 -->
+  <rect x="470" y="270" width="110" height="160" fill="#a62a2a"/>
+  <text x="525" y="258" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2744">160</text>
+  <text x="525" y="452" text-anchor="middle" font-size="13" fill="#64748b">2025</text>
+
+  <!-- 2030 =196 -->
+  <rect x="630" y="234" width="110" height="196" fill="#8f2020"/>
+  <text x="685" y="222" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2744">196</text>
+  <text x="685" y="452" text-anchor="middle" font-size="13" fill="#64748b">2030</text>
+
+  <!-- 2035 =230 -->
+  <rect x="790" y="200" width="110" height="230" fill="#5f1a1a"/>
+  <text x="845" y="188" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2744">230</text>
+  <text x="845" y="452" text-anchor="middle" font-size="13" fill="#64748b">2035</text>
+
+  <line x1="60" y1="474" x2="940" y2="474" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="496" font-size="12.5" fill="#94a3b8">Illustrative Projektion; treibende Faktoren sind die Pensionierungswelle der Babyboomer, l&#228;ngere Bezugsdauern und steigende Beihilfe im Alter.</text>
+</svg>
