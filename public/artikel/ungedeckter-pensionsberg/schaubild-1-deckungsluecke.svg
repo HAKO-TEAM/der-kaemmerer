@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Die Pensionsl&#252;cke</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Den k&#252;nftigen Versorgungslasten stehen nur schmale R&#252;cklagen gegen&#252;ber.</text>
+
+  <line x1="180" y1="470" x2="640" y2="470" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Single bar: gedeckt (blue) bottom + ungedeckt (red) top -->
+  <rect x="210" y="400" width="170" height="70" fill="#3b82f6"/>
+  <rect x="210" y="140" width="170" height="260" fill="#a62a2a"/>
+  <text x="295" y="500" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2744">K&#252;nftige Versorgungs-</text>
+  <text x="295" y="520" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1a2744">&amp; Beihilfelasten</text>
+
+  <!-- Right labels -->
+  <path d="M 396 140 h 14 v 260 h -14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="470" y="250" font-size="15" font-weight="700" fill="#7f1d1d" letter-spacing="0.6">UNGEDECKT</text>
+  <text x="470" y="276" font-size="15" fill="#334155">Wird aus dem laufenden Haushalt</text>
+  <text x="470" y="297" font-size="15" fill="#334155">von morgen gezahlt.</text>
+
+  <path d="M 396 400 h 14 v 70 h -14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="470" y="432" font-size="15" font-weight="700" fill="#1e40af" letter-spacing="0.6">GEDECKT</text>
+  <text x="470" y="455" font-size="15" fill="#334155">R&#252;cklagen und Pensionsfonds &#8211;</text>
+  <text x="470" y="476" font-size="15" fill="#334155">nur ein Bruchteil.</text>
+
+  <line x1="60" y1="510" x2="940" y2="510" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="532" font-size="12.5" fill="#94a3b8">Schematische Darstellung; das Deckungsverh&#228;ltnis variiert je Dienstherr. Beamtenversorgung ist &#252;berwiegend umlagefinanziert, nicht kapitalgedeckt.</text>
+</svg>

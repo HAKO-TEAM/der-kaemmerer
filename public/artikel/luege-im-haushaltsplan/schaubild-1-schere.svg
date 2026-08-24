@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Ansatz flach, Ist steigt</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Die L&#252;cke zwischen Haushaltsansatz und Ergebnis ist kein Ausrutscher &#8211; sie wiederholt sich.</text>
+
+  <!-- Axes -->
+  <line x1="110" y1="430" x2="930" y2="430" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="110" y1="130" x2="110" y2="430" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="70" y="140" font-size="12" fill="#94a3b8" transform="rotate(-90 70 140)" text-anchor="end">Kosten (indexiert)</text>
+
+  <!-- Gap area between Ansatz and Ist -->
+  <path d="M 140 350 L 292 346 L 444 342 L 596 340 L 748 336 L 900 332 L 900 160 L 748 196 L 596 232 L 444 272 L 292 308 L 140 350 Z" fill="#a62a2a" fill-opacity="0.12"/>
+
+  <!-- Ist line (rising) -->
+  <polyline points="140,350 292,308 444,272 596,232 748,196 900,160" fill="none" stroke="#a62a2a" stroke-width="3.5"/>
+  <!-- Ansatz line (flat) -->
+  <polyline points="140,350 292,346 444,342 596,340 748,336 900,332" fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-dasharray="2 0"/>
+
+  <!-- Point markers -->
+  <circle cx="900" cy="160" r="5" fill="#a62a2a"/>
+  <circle cx="900" cy="332" r="5" fill="#3b82f6"/>
+
+  <!-- X labels -->
+  <g font-size="13" fill="#64748b" text-anchor="middle">
+    <text x="140" y="452">2021</text>
+    <text x="292" y="452">2022</text>
+    <text x="444" y="452">2023</text>
+    <text x="596" y="452">2024</text>
+    <text x="748" y="452">2025</text>
+    <text x="900" y="452">2026</text>
+  </g>
+
+  <!-- Inline line labels -->
+  <text x="905" y="150" font-size="14" font-weight="700" fill="#a62a2a">Ist (Ergebnis)</text>
+  <text x="905" y="336" font-size="14" font-weight="700" fill="#3b82f6">Ansatz (Planung)</text>
+
+  <!-- Gap callout -->
+  <text x="470" y="300" font-size="14" font-weight="700" fill="#7f1d1d">programmierte L&#252;cke</text>
+
+  <line x1="60" y1="500" x2="940" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="522" font-size="12.5" fill="#94a3b8">Schematische, indexierte Darstellung (Basisjahr = 100). Muster aus wiederkehrenden Nachtragshaushalten; H&#246;he der L&#252;cke variiert je Kommune und Kostenblock.</text>
+</svg>
