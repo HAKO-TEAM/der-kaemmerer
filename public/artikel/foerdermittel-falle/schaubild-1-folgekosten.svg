@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="540" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Das Geschenk mit Preisschild</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Der Zuschuss deckt die Investition &#8211; nicht den Betrieb der n&#228;chsten Jahrzehnte.</text>
+
+  <line x1="150" y1="460" x2="700" y2="460" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Zuschuss bar (small, blue) -->
+  <rect x="200" y="360" width="150" height="100" fill="#3b82f6"/>
+  <text x="275" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Investitions-</text>
+  <text x="275" y="510" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">zuschuss (einmalig)</text>
+
+  <!-- Folgekosten bar (large, red) -->
+  <rect x="470" y="150" width="150" height="310" fill="#a62a2a"/>
+  <text x="545" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Betrieb &amp; Unterhalt</text>
+  <text x="545" y="510" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">(25 Jahre)</text>
+
+  <!-- Bracket on Folgekosten -->
+  <path d="M 636 150 h 14 v 310 h -14" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="285" font-size="15" font-weight="700" fill="#7f1d1d" letter-spacing="0.6">TR&#196;GT ALLEIN</text>
+  <text x="700" y="311" font-size="15" font-weight="700" fill="#7f1d1d" letter-spacing="0.6">DIE KOMMUNE</text>
+  <text x="700" y="337" font-size="15" fill="#334155">Personal, Energie, Instand-</text>
+  <text x="700" y="358" font-size="15" fill="#334155">haltung, Abschreibung.</text>
+
+  <line x1="60" y1="520" x2="940" y2="520" stroke="#e2e8f0" stroke-width="1"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="520" fill="#ffffff"/>
+
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1a2744">Wer Antr&#228;ge stemmen kann, gewinnt</text>
+  <text x="60" y="88" font-size="17" fill="#64748b">Abgerufene F&#246;rdermittel je Einwohner &#8211; die Schere zwischen stark und schwach.</text>
+
+  <line x1="150" y1="440" x2="820" y2="440" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Strukturstark (high) -->
+  <rect x="230" y="160" width="170" height="280" fill="#1a2744"/>
+  <text x="315" y="145" text-anchor="middle" font-size="18" font-weight="700" fill="#1a2744">hoch</text>
+  <text x="315" y="466" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Strukturstarke</text>
+  <text x="315" y="486" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Kommune</text>
+  <text x="315" y="506" text-anchor="middle" font-size="12.5" fill="#64748b">eigenes F&#246;rderteam, Kofinanzierung m&#246;glich</text>
+
+  <!-- Strukturschwach (low) -->
+  <rect x="570" y="360" width="170" height="80" fill="#a62a2a"/>
+  <text x="655" y="345" text-anchor="middle" font-size="18" font-weight="700" fill="#7f1d1d">gering</text>
+  <text x="655" y="466" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Strukturschwache</text>
+  <text x="655" y="486" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2744">Kommune</text>
+  <text x="655" y="506" text-anchor="middle" font-size="12.5" fill="#64748b">kein Personal, Eigenanteil nicht darstellbar</text>
+
+  <text x="855" y="250" font-size="14" font-weight="700" fill="#7f1d1d" transform="rotate(90 855 250)" text-anchor="middle">Matth&#228;us-Effekt</text>
+</svg>
