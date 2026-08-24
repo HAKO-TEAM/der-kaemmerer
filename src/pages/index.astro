@@ -18,6 +18,15 @@ const alle = [...haushalt,...einnahmen,...ausgaben,...praxis,...recht,...analyse
 const featured  = alle.find(a => a.data.featured) || alle[0];
 const neueste   = alle.filter(a => a.id !== featured?.id).slice(0, 8);
 
+// Rotationspool fürs Hauptthema (Leitartikel) — clientseitig täglich wechselnd.
+// SSR rendert den neuesten featured-Artikel; das Skript unten wählt je nach Tag einen anderen.
+const rotationPool = alle.slice(0, 8).map(a => ({
+  title: a.data.title,
+  beschreibung: a.data.beschreibung,
+  datum: a.data.datum,
+  href: `/${a.collection}/${(a.id as string).split('/').pop()!.replace('.md','')}`,
+}));
+
 const catColor: Record<string,string> = {
   haushalt:'#c2410c', einnahmen:'#3b82f6', ausgaben:'#1e40af',
   praxis:'#92400e', recht:'#6b21a8', analyse:'#374151', sozialkosten:'#be123c'
@@ -62,14 +71,14 @@ const catLabel: Record<string,string> = {
   <div class="hero-grid">
     {featured && (
     <div>
-      <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:12px;">
+      <div id="hero-eyebrow" style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6ee7b7;margin-bottom:12px;">
         Leitartikel · {featured.data.datum}
       </div>
-      <h1 style="font-size:30px;font-weight:800;line-height:1.15;color:#fff;margin-bottom:12px;letter-spacing:-.02em;" class="hero-h1-mobile">
+      <h1 id="hero-title" style="font-size:30px;font-weight:800;line-height:1.15;color:#fff;margin-bottom:12px;letter-spacing:-.02em;" class="hero-h1-mobile">
         {featured.data.title}
       </h1>
-      <p style="font-size:14px;color:#93c5fd;line-height:1.7;margin-bottom:14px;">{featured.data.beschreibung}</p>
-      <a href={`/${featured.collection}/${(featured.id as string).split("/").pop()!.replace(".md","")}`}
+      <p id="hero-desc" style="font-size:14px;color:#93c5fd;line-height:1.7;margin-bottom:14px;">{featured.data.beschreibung}</p>
+      <a id="hero-link" href={`/${featured.collection}/${(featured.id as string).split("/").pop()!.replace(".md","")}`}
          style="display:inline-block;background:#3b82f6;color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 16px;border-radius:3px;">
         Weiterlesen →
       </a>
@@ -93,6 +102,35 @@ const catLabel: Record<string,string> = {
     </div>
   </div>
 </section>
+
+<!-- Tägliche Rotation des Hauptthemas (Leitartikel) -->
+<script type="application/json" id="rotation-data" set:html={JSON.stringify(rotationPool)}></script>
+<script is:inline>
+  (function () {
+    try {
+      var el = document.getElementById('rotation-data');
+      if (!el) return;
+      var pool = JSON.parse(el.textContent || '[]');
+      if (!Array.isArray(pool) || pool.length === 0) return;
+
+      // Tag des Jahres → jeden Tag ein anderer Leitartikel
+      var now = new Date();
+      var start = new Date(now.getFullYear(), 0, 0);
+      var dayOfYear = Math.floor((now - start) / 86400000);
+      var pick = pool[dayOfYear % pool.length];
+      if (!pick) return;
+
+      var eyebrow = document.getElementById('hero-eyebrow');
+      var title   = document.getElementById('hero-title');
+      var desc    = document.getElementById('hero-desc');
+      var link    = document.getElementById('hero-link');
+      if (eyebrow) eyebrow.textContent = 'Leitartikel · ' + pick.datum;
+      if (title)   title.textContent = pick.title;
+      if (desc)    desc.textContent = pick.beschreibung;
+      if (link)    link.setAttribute('href', pick.href);
+    } catch (e) { /* Fallback: SSR-Leitartikel bleibt stehen */ }
+  })();
+</script>
 
 <!-- KPI-Band -->
 <div style="background:#1a2744;padding:26px 0;">
