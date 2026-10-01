@@ -9,10 +9,10 @@ beschaeftigung: "Vollzeit"
 befristung: "Unbefristet"
 startdatum: "01.05.2027"
 bewerbungsschluss: "2026-11-01"
-bewerbungslink: "www.stadt.bamberg.de/stellenangebote"
+bewerbungslink: "https://www.stadt.bamberg.de/stellenangebote"
 schlagwoerter: ["Finanzen", "Verwaltung", "Haushalt", "Bamberg", "Leitung"]
 paket: "KommunalFlat"
-aktiv: false
+aktiv: true
 datum: "2026-10-01"
 featured: false
 ---
