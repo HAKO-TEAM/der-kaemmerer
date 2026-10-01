@@ -342,5 +342,13 @@
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
     "betrag": 29750
+  },
+  {
+    "id": "DK-2026-1044",
+    "year": 2026,
+    "date": "2026-10-01",
+    "organisation": "Stadt Bamberg",
+    "email": "rechnung@stadt.bamberg.de",
+    "betrag": 296.31
   }
 ]
