@@ -364,14 +364,6 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
                   </div>
                   <div style="display:flex;align-items:flex-start;gap:10px">
                     <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
-                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Newsletter-Erwähnung bei jeder neuen Stelle</span>
-                  </div>
-                  <div style="display:flex;align-items:flex-start;gap:10px">
-                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
-                    <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">LinkedIn-Post für jede neue Ausschreibung</span>
-                  </div>
-                  <div style="display:flex;align-items:flex-start;gap:10px">
-                    <span style="color:#60a5fa;font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
                     <span style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.4">Professionelle Gestaltung in 24 Stunden</span>
                   </div>
                   <div style="display:flex;align-items:flex-start;gap:10px">
@@ -672,24 +664,6 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 
         <div class="f-addon-grid">
           <label class="f-addon">
-            <input type="checkbox" name="addon_newsletter" value="Newsletter Solo-Mailing +390 €"
-              class="addon-check">
-            <div>
-              <div class="f-addon-name">Newsletter Solo-Mailing</div>
-              <div class="f-addon-price">+ 390 €</div>
-              <div class="f-addon-desc">Dedizierte E-Mail an alle Abonnenten nur für Ihre Stelle</div>
-            </div>
-          </label>
-          <label class="f-addon">
-            <input type="checkbox" name="addon_linkedin" value="LinkedIn Sponsored Post +250 €"
-              class="addon-check">
-            <div>
-              <div class="f-addon-name">LinkedIn Sponsored Post</div>
-              <div class="f-addon-price">+ 250 €</div>
-              <div class="f-addon-desc">Bezahlter Post auf dem derkaemmerer.de-Profil, 7 Tage</div>
-            </div>
-          </label>
-          <label class="f-addon">
             <input type="checkbox" name="addon_portraet" value="Arbeitgeber-Porträt (inklusive)"
               class="addon-check">
             <div>
@@ -770,8 +744,6 @@ const paketPreise: Record<string, number> = {
   'KommunalFlat – 249 €/Monat': 249,
 };
 const addonPreise: Record<string, number> = {
-  addon_newsletter: 390,
-  addon_linkedin:   250,
   addon_portraet:   0,
 };
 let selectedPaket = 'KommunalFlat – 249 €/Monat';

@@ -170,7 +170,7 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
   // Falls nicht übergeben → KommunalFlat-Standard
   if (!positionen || positionen.length === 0) {
     positionen = [{
-      beschreibung: 'KommunalFlat – Stellenboerse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier  |  Newsletter + LinkedIn',
+      beschreibung: 'KommunalFlat – Stellenboerse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier',
       menge: 1,
       einheit: '1 Monat',
       einzelpreis: 249,
