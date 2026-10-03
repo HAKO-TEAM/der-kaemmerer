@@ -1,0 +1,72 @@
+{
+  "slug": "bamberg",
+  "name": "Stadt Bamberg",
+  "bundesland": "Bayern",
+  "einwohner": 77218,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Sebastian Niedermaier",
+  "claim": "Ein Oberzentrum und UNESCO-Welterbe persönlich mitgestalten.",
+  "beschreibung": "Bamberg ist Oberzentrum in Oberfranken und seit 1993 mit seiner Altstadt UNESCO-Welterbe. Die Stadtverwaltung verbindet ein außergewöhnlich breites Aufgabenspektrum mit kurzen Wegen in einer überschaubaren Großstadt-Struktur: vom städtischen Haushalt über Stiftungswesen, Liegenschaften und Stadtwald bis zu Bildung, Kultur und Stadtentwicklung. Wer hier Verantwortung übernimmt, gestaltet die Entwicklung und Lebensqualität einer Stadt mit Universität, lebendiger Kulturszene und starkem Wirtschaftsstandort sichtbar mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "77.218",
+      "icon": "👥"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "1993",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "902",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Gestaltung der Arbeitszeiten im Rahmen der dienstlichen Erfordernisse, einschließlich der Möglichkeit zur mobilen Arbeit."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bezuschusstes Deutschlandticket oder VGN-Abo sowie ein attraktives Angebot zum Fahrrad- und E-Bike-Leasing."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Individuelle Beratungsangebote zur Vereinbarkeit von Familie und Beruf, Kinder-Ferienprogramm und Kinder-Mitbringtag."
+    },
+    {
+      "titel": "Betriebsklima",
+      "beschreibung": "Gemeinsame Mitarbeiter-Events und viele Sportgruppen."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Verschiedene Vergünstigungen für Beschäftigte der Stadtverwaltung."
+    },
+    {
+      "titel": "Fortbildung und Netzwerk",
+      "beschreibung": "Teilnahme an Fachtagungen, Engagement im Städtetag und Austausch mit den Partnerstädten – insbesondere für Führungskräfte."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Personalgewinnung",
+    "email": "personalgewinnung@stadt.bamberg.de",
+    "telefon": "0951 87-4033",
+    "bewerbungsportal": "https://www.stadt.bamberg.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Ersterwähnung, UNESCO-Welterbe: de.wikipedia.org/wiki/Bamberg (abgerufen 03.10.2026)",
+    "Oberbürgermeister: Stichwahl 22.03.2026, Amtsantritt 01.05.2026 (infranken.de, schwaebische.de)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Finanzreferat, Stadt Bamberg, eingereicht 01.10.2026"
+  ]
+}
