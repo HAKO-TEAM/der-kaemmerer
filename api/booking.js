@@ -68,14 +68,49 @@ async function createGitHubFile(slug, content) {
   if (!res.ok) { const e = await res.json(); throw new Error(`GitHub: ${e.message}`); }
 }
 
-async function sendEmail(d, slug) {
+// ── Bestehende KommunalFlat erkennen ────────────────────
+// Die Flat enthält beliebig viele Anzeigen. Hat dieselbe Behörde in den letzten
+// 12 Monaten bereits eine Flat-Rechnung erhalten, wird keine weitere erstellt.
+const FREEMAIL = ['gmail.com', 'googlemail.com', 'web.de', 'gmx.de', 'gmx.net', 't-online.de', 'outlook.com', 'hotmail.com', 'yahoo.de', 'icloud.com'];
+
+const normOrg = s => (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+const domainOf = e => ((e || '').toLowerCase().trim().split('@')[1] || '');
+
+export function passtZuFlat(records, d, heute = new Date()) {
+  const grenze = new Date(heute); grenze.setFullYear(grenze.getFullYear() - 1);
+  const org = normOrg(d.behoerde);
+  const mails = [d.rechnungsemail, d.kontaktemail].filter(Boolean).map(e => e.toLowerCase().trim());
+  const domains = mails.map(domainOf).filter(x => x && !FREEMAIL.includes(x));
+  return records.find(r => {
+    if (!r.date || new Date(r.date) < grenze) return false;
+    const rMail = (r.email || '').toLowerCase().trim();
+    return (org && normOrg(r.organisation) === org)
+        || mails.includes(rMail)
+        || domains.includes(domainOf(rMail));
+  }) || null;
+}
+
+async function findeBestehendeFlat(d) {
+  const owner = process.env.GITHUB_OWNER || 'HAKO-TEAM';
+  const repo  = process.env.GITHUB_REPO  || 'der-kaemmerer';
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/rechnungen.json`, {
+    headers: { 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
+  });
+  if (!res.ok) return null;
+  const records = JSON.parse(Buffer.from((await res.json()).content, 'base64').toString('utf8'));
+  return passtZuFlat(records, d);
+}
+
+async function sendEmail(d, slug, flat = null) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   // 1. Interne Benachrichtigung an DerKämmerer
   await resend.emails.send({
     from: 'Der Kämmerer <anzeigen@derkaemmerer.de>',
     to: 'anzeigen@derkaemmerer.de',
-    subject: `Neue Anzeigenbuchung: ${d.stellentitel} – ${d.behoerde}`,
+    subject: flat
+      ? `Weitere Anzeige (bestehende KommunalFlat, keine Rechnung): ${d.stellentitel} – ${d.behoerde}`
+      : `Neue Anzeigenbuchung: ${d.stellentitel} – ${d.behoerde}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
   <div style="background:#1a2744;padding:24px;color:#fff"><h1 style="margin:0;font-size:20px">Neue Stellenanzeigen-Buchung</h1></div>
   <div style="padding:24px;background:#f8fafc;border:1px solid #e2e8f0">
@@ -103,7 +138,9 @@ async function sendEmail(d, slug) {
   await resend.emails.send({
     from: 'Der Kämmerer <anzeigen@derkaemmerer.de>',
     to: [kundeEmail],
-    subject: `Buchungsbestätigung KommunalFlat – ${d.behoerde}`,
+    subject: flat
+      ? `Ihre weitere Stellenanzeige ist eingegangen – ${d.behoerde}`
+      : `Buchungsbestätigung KommunalFlat – ${d.behoerde}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
   <div style="background:#172840;padding:24px;color:#fff">
     <h1 style="margin:0;font-size:20px">Ihre Buchung ist eingegangen</h1>
@@ -118,7 +155,9 @@ async function sendEmail(d, slug) {
       <tr><td style="padding:10px 12px;color:#6b7280">Erster Stellentitel</td><td style="padding:10px 12px;color:#172840">${d.stellentitel}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Ansprechpartner</td><td style="padding:10px 12px;color:#172840">${d.kontaktname}</td></tr>
     </table>
-    <p style="color:#374151">Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail. Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.</p>
+    ${flat
+      ? `<p style="color:#374151">Diese Anzeige ist in Ihrer bestehenden <strong>KommunalFlat</strong> enthalten. Wir prüfen sie und schalten sie kurzfristig frei.</p>`
+      : `<p style="color:#374151">Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail. Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.</p>`}
     <p style="color:#374151">Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
     <p style="color:#374151">Mit freundlichen Grüßen<br><strong>Das Team von Der Kämmerer</strong><br>
     <a href="mailto:anzeigen@derkaemmerer.de" style="color:#2563eb">anzeigen@derkaemmerer.de</a></p>
@@ -140,7 +179,17 @@ export default async function handler(req, res) {
     }
     const { slug, content } = buildMarkdown(d);
     await createGitHubFile(slug, content);
-    if (process.env.RESEND_API_KEY) await sendEmail(d, slug);
+
+    // Bestehende KommunalFlat? Dann keine weitere Rechnung.
+    let flat = null;
+    try { flat = await findeBestehendeFlat(d); }
+    catch (e) { console.error('Flat-Prüfung fehlgeschlagen:', e.message); }
+
+    if (process.env.RESEND_API_KEY) await sendEmail(d, slug, flat);
+    if (flat) {
+      console.log(`Bestehende KommunalFlat (${flat.id}) – keine neue Rechnung für ${d.behoerde}`);
+      return res.status(200).json({ ok: true, slug, flat: flat.id });
+    }
 
     // Rechnung direkt erstellen und an Kunden senden
     try {
