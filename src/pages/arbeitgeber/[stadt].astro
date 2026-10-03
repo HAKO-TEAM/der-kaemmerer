@@ -107,6 +107,7 @@ function formatDatum(s: string) {
 .dos-contact-val { font-weight: 600; color: #172840; word-break: break-all; }
 .dos-contact-val a { color: #2563eb; text-decoration: none; }
 .dos-contact-val a:hover { text-decoration: underline; }
+.dos-contact-mail { font-size: 12px; white-space: nowrap; letter-spacing: -.01em; }
 .dos-apply-btn { display: flex; align-items: center; justify-content: center; margin-top: 14px; padding: 13px 16px; background: #2563eb; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border-radius: 6px; transition: background .15s; }
 .dos-apply-btn:hover { background: #1d4ed8; }
 
@@ -249,7 +250,7 @@ function formatDatum(s: string) {
           </div>
           <div class="dos-contact-row">
             <span class="dos-contact-key">E-Mail</span>
-            <span class="dos-contact-val"><a href={`mailto:${d.kontakt.email}`}>{d.kontakt.email}</a></span>
+            <span class="dos-contact-val dos-contact-mail"><a href={`mailto:${d.kontakt.email}`}>{d.kontakt.email}</a></span>
           </div>
           <a href={d.kontakt.bewerbungsportal} target="_blank" rel="noopener" class="dos-apply-btn">
             Zum Karriereportal →
