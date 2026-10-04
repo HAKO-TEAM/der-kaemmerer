@@ -20,7 +20,9 @@ const neueste   = alle.filter(a => a.id !== featured?.id).slice(0, 8);
 
 // Rotationspool fürs Hauptthema (Leitartikel) — clientseitig täglich wechselnd.
 // SSR rendert den neuesten featured-Artikel; das Skript unten wählt je nach Tag einen anderen.
-const rotationPool = alle.slice(0, 8).map(a => ({
+// Pool: die 4 neuesten Artikel plus Leitartikel (featured), max. 8, neueste zuerst
+const rotationQuelle = alle.filter((a, i) => i < 4 || a.data.featured).slice(0, 8);
+const rotationPool = rotationQuelle.map(a => ({
   title: a.data.title,
   beschreibung: a.data.beschreibung,
   datum: a.data.datum,
@@ -82,6 +84,7 @@ const catLabel: Record<string,string> = {
          style="display:inline-block;background:#3b82f6;color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 16px;border-radius:3px;">
         Weiterlesen →
       </a>
+      <div id="hero-dots" aria-label="Leitartikel wechseln" style="display:flex;gap:8px;margin-top:18px;"></div>
     </div>
     )}
     <div class="hero-sidebar" style="border-left:1px solid #1e3a5f;padding-left:28px;">
@@ -113,21 +116,65 @@ const catLabel: Record<string,string> = {
       var pool = JSON.parse(el.textContent || '[]');
       if (!Array.isArray(pool) || pool.length === 0) return;
 
-      // Tag des Jahres → jeden Tag ein anderer Leitartikel
-      var now = new Date();
-      var start = new Date(now.getFullYear(), 0, 0);
-      var dayOfYear = Math.floor((now - start) / 86400000);
-      var pick = pool[dayOfYear % pool.length];
-      if (!pick) return;
-
       var eyebrow = document.getElementById('hero-eyebrow');
       var title   = document.getElementById('hero-title');
       var desc    = document.getElementById('hero-desc');
       var link    = document.getElementById('hero-link');
-      if (eyebrow) eyebrow.textContent = 'Leitartikel · ' + pick.datum;
-      if (title)   title.textContent = pick.title;
-      if (desc)    desc.textContent = pick.beschreibung;
-      if (link)    link.setAttribute('href', pick.href);
+      var dots    = document.getElementById('hero-dots');
+      var box     = title ? title.parentElement : null;
+      if (!title || !box) return;
+
+      // Start: jeden Tag ein anderer Leitartikel, danach Wechsel alle 8 Sekunden
+      var now = new Date();
+      var dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+      var idx = dayOfYear % pool.length;
+      var INTERVALL = 8000;
+      var ruhig = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      box.style.transition = 'opacity .35s ease';
+
+      function zeige(i, sanft) {
+        idx = (i + pool.length) % pool.length;
+        var pick = pool[idx];
+        var setze = function () {
+          if (eyebrow) eyebrow.textContent = 'Leitartikel · ' + pick.datum;
+          title.textContent = pick.title;
+          if (desc) desc.textContent = pick.beschreibung;
+          if (link) link.setAttribute('href', pick.href);
+          if (dots) for (var k = 0; k < dots.children.length; k++) {
+            var d = dots.children[k], an = k === idx;
+            d.style.background = an ? '#6ee7b7' : 'rgba(255,255,255,.25)';
+            d.style.width = an ? '22px' : '8px';
+            d.setAttribute('aria-current', an ? 'true' : 'false');
+          }
+          box.style.opacity = '1';
+        };
+        if (sanft && !ruhig) { box.style.opacity = '0'; setTimeout(setze, 350); } else setze();
+      }
+
+      if (dots && pool.length > 1) {
+        pool.forEach(function (p, k) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Leitartikel ' + (k + 1) + ': ' + p.title);
+          b.style.cssText = 'height:8px;width:8px;border:0;border-radius:4px;padding:0;cursor:pointer;transition:all .3s ease;background:rgba(255,255,255,.25)';
+          b.addEventListener('click', function () { zeige(k, true); neustart(); });
+          dots.appendChild(b);
+        });
+      }
+
+      var timer = null, pause = false;
+      function neustart() {
+        if (timer) clearInterval(timer);
+        if (ruhig || pool.length < 2) return;
+        timer = setInterval(function () { if (!pause && !document.hidden) zeige(idx + 1, true); }, INTERVALL);
+      }
+      box.addEventListener('mouseenter', function () { pause = true; });
+      box.addEventListener('mouseleave', function () { pause = false; });
+      box.addEventListener('focusin', function () { pause = true; });
+      box.addEventListener('focusout', function () { pause = false; });
+
+      zeige(idx, false);
+      neustart();
     } catch (e) { /* Fallback: SSR-Leitartikel bleibt stehen */ }
   })();
 </script>
