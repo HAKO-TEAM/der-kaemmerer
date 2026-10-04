@@ -35,7 +35,8 @@ const schema = {
   datePosted,
   validThrough,
   employmentType,
-  directApply: true,
+  // Bewerbung läuft über das Portal des Arbeitgebers, nicht über derkaemmerer.de
+  directApply: false,
   hiringOrganization: {
     '@type': 'Organization',
     name: employerName,

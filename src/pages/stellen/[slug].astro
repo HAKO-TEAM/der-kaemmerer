@@ -9,7 +9,9 @@ import { join } from 'node:path';
 
 export async function getStaticPaths() {
   // Nur freigeschaltete Anzeigen erhalten eine Seite (Entwürfe/Kundenbuchungen vor Freigabe bleiben unerreichbar)
-  const jobs = await getCollection('jobs', ({ data }) => data.aktiv);
+  // Abgelaufene Stellen erhalten ebenfalls keine Seite – sie verschwinden mit dem nächsten Build aus Sitemap und Index
+  const heute = new Date(); heute.setHours(0, 0, 0, 0);
+  const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute);
   return jobs.map(job => ({ params: { slug: job.id }, props: { job } }));
 }
 
@@ -31,15 +33,33 @@ const daysText = tage <= 0 ? 'Frist abgelaufen' : tage === 1 ? 'Noch 1 Tag' : 'N
 const stadtSlug = d.ort.toLowerCase().replace(/\s+/g, '-').replace(/[äöüß]/g, c => ({'ä':'ae','ö':'oe','ü':'ue','ß':'ss'}[c] || c));
 const dossierPath = join(process.cwd(), `src/data/arbeitgeber/${stadtSlug}.json`);
 const dossier = existsSync(dossierPath) ? JSON.parse(readFileSync(dossierPath, 'utf-8')) : null;
+
+// Vollständige Stellenbeschreibung für das JobPosting-Schema (Google verlangt den kompletten Text als HTML)
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const inline = (s: string) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>');
+function mdToHtml(md: string) {
+  const out: string[] = []; let inList = false;
+  for (const raw of md.split('\n')) {
+    const l = raw.trim();
+    const isLi = l.startsWith('- ');
+    if (inList && !isLi) { out.push('</ul>'); inList = false; }
+    if (!l) continue;
+    if (l.startsWith('## ')) out.push(`<h3>${inline(l.slice(3))}</h3>`);
+    else if (isLi) { if (!inList) { out.push('<ul>'); inList = true; } out.push(`<li>${inline(l.slice(2))}</li>`); }
+    else out.push(`<p>${inline(l)}</p>`);
+  }
+  if (inList) out.push('</ul>');
+  return out.join('');
+}
+const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${esc(d.ort)} (${esc(d.bundesland)}). Vergütung: ${esc(d.entgelt)} · ${esc(d.beschaeftigung)} · ${esc(d.befristung)}.</p>` + mdToHtml(job.body || '');
 ---
 <Base
   title={`${d.title} – ${d.organisation}`}
   description={`${d.organisation} sucht ${d.title} in ${d.ort}, ${d.bundesland}. ${d.entgelt} · Bewerbungsschluss ${formatDatum(d.bewerbungsschluss)}.`}
-  ogType="article"
 >
 <JobPostingSchema
   title={d.title}
-  description={`${d.organisation} sucht ${d.title} in ${d.ort}, ${d.bundesland}. ${d.entgelt}. Beschäftigung: ${d.beschaeftigung}. Befristung: ${d.befristung}.`}
+  description={beschreibungHtml}
   datePosted={d.datum}
   validThrough={d.bewerbungsschluss}
   employerName={d.organisation}
