@@ -70,6 +70,7 @@ def main():
         if m:
             links.add(m.group(1).rstrip('/'))
     neu, verworfen = [], []
+    kontakte = []
     for f in dateien:
         for j in json.load(open(f)):
             fehlt = [k for k in PFLICHT if not j.get(k)]
@@ -93,7 +94,17 @@ def main():
             neu.append((s, j))
             if not dry:
                 (ZIEL / f'{s}.md').write_text(markdown(j))
-    print(f'neu: {len(neu)}  verworfen: {len(verworfen)}')
+            # Ansprechperson (nur intern, wird NICHT veröffentlicht) für das KommunalFlat-Angebot
+            if j.get('kontakt_email'):
+                kontakte.append({'slug': s, 'title': j['title'], 'org': j['organisation'], 'ort': j['ort'],
+                                 'kontakt_name': j.get('kontakt_name', ''), 'anrede': j.get('kontakt_anrede', ''),
+                                 'email': j['kontakt_email']})
+    print(f'neu: {len(neu)}  verworfen: {len(verworfen)}  mit Ansprechperson: {len(kontakte)}')
+    if kontakte and not dry:
+        ziel = Path(f'/tmp/derkaemmerer_stellen_kontakte_{date.today().isoformat()}.json')
+        alt = json.loads(ziel.read_text()) if ziel.exists() else []
+        ziel.write_text(json.dumps(alt + kontakte, ensure_ascii=False, indent=1))
+        print(f'Ansprechpersonen → {ziel}')
     for o, g in verworfen:
         print('  -', o, '→', g)
 
