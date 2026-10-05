@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { data: d } = Astro.props;
+const { data: d, vorschau = false } = Astro.props;
 
 // Passende Jobs für diese Stadt laden
 const heute = new Date();
@@ -38,6 +38,7 @@ function formatDatum(s: string) {
 <Base
   title={`${d.name} als Arbeitgeber – Dossier`}
   description={`${d.name}: ${d.beschreibung.slice(0, 150)}...`}
+  noindex={vorschau}
 >
 <Header />
 
@@ -136,6 +137,12 @@ function formatDatum(s: string) {
 </style>
 
 <!-- HERO -->
+{vorschau && (
+  <div style="background:#fef3c7;border-bottom:1px solid #f59e0b;padding:12px 20px;text-align:center;font-size:13px;color:#78350f;font-family:Arial,sans-serif">
+    <strong>Vorschau für {d.name}</strong> – so erscheint Ihr Arbeitgeberprofil mit der KommunalFlat. Diese Seite ist nur über Ihren persönlichen Link erreichbar.
+    <a href="/stellenanzeigen" style="color:#1d4ed8;font-weight:700;margin-left:8px">KommunalFlat ansehen →</a>
+  </div>
+)}
 <div class="dos-hero">
   <div class="dos-container">
     <a href="/arbeitgeber" class="dos-back">← Alle Arbeitgeber</a>

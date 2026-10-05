@@ -1,0 +1,17 @@
+---
+// Nicht öffentliche Profil-Vorschauen für Angebots-Mail #4 (noindex, nicht in Sitemap/Listen).
+// Daten: src/data/arbeitgeber-vorschau/<slug>.json – Format wie src/data/arbeitgeber, zusätzlich "token".
+import Profil from '../arbeitgeber/[stadt].astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const dir = join(process.cwd(), 'src/data/arbeitgeber-vorschau');
+  return readdirSync(dir).filter(f => f.endsWith('.json')).map(f => {
+    const data = JSON.parse(readFileSync(join(dir, f), 'utf-8'));
+    return { params: { token: data.token }, props: { data } };
+  });
+}
+const { data } = Astro.props;
+---
+<Profil data={data} vorschau={true} />
