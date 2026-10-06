@@ -43,7 +43,7 @@ def markdown(j):
         f"bewerbungsschluss: {q(j['bewerbungsschluss'])}",
         f"bewerbungslink: {q(j['bewerbungslink'])}",
         f"schlagwoerter: [{tags}]",
-        'paket: "Basis"',
+        f"paket: {q(j.get('paket') or 'Basis')}",
         'aktiv: true',
         f"datum: {q(date.today().isoformat())}",
         'featured: false',
@@ -80,7 +80,7 @@ def main():
                 schluss = date.fromisoformat(j['bewerbungsschluss'])
             except ValueError:
                 verworfen.append((j['organisation'], 'Datum ' + j['bewerbungsschluss'])); continue
-            if schluss < MIN_SCHLUSS:
+            if schluss < (date.today() + timedelta(days=1) if j.get('paket') == 'KommunalFlat' else MIN_SCHLUSS):  # Kundenstellen bis zum Vortag der Frist
                 verworfen.append((j['organisation'], f'Schluss {schluss}')); continue
             if not j['bewerbungslink'].startswith('https://'):
                 verworfen.append((j['organisation'], 'Link ohne https')); continue
@@ -95,7 +95,7 @@ def main():
             if not dry:
                 (ZIEL / f'{s}.md').write_text(markdown(j))
             # Ansprechperson (nur intern, wird NICHT veröffentlicht) für das KommunalFlat-Angebot
-            if j.get('kontakt_email'):
+            if j.get('kontakt_email') and (j.get('paket') or 'Basis') != 'KommunalFlat':  # Kunden bekommen keine Angebotsmails
                 kontakte.append({'slug': s, 'title': j['title'], 'org': j['organisation'], 'ort': j['ort'],
                                  'kontakt_name': j.get('kontakt_name', ''), 'anrede': j.get('kontakt_anrede', ''),
                                  'email': j['kontakt_email'], 'frist': schluss.isoformat()})

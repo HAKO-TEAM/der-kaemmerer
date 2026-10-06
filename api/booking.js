@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { randomBytes } from 'node:crypto';
 import { createInvoice } from './rechnung.js';
 
 function makeSlug(title, org) {
@@ -25,8 +26,8 @@ startdatum: "${d.startdatum || 'zum nächstmöglichen Zeitpunkt'}"
 bewerbungsschluss: "${d.bewerbungsschluss}"
 bewerbungslink: "${d.bewerbungslink || ''}"
 schlagwoerter: [${tags || '"Kommunalverwaltung", "TVöD"'}]
-paket: "${d.paket?.split(' – ')[0] || 'Basis'}"
-aktiv: false
+paket: "KommunalFlat"
+aktiv: true
 datum: "${new Date().toISOString().split('T')[0]}"
 featured: false
 ---
@@ -63,9 +64,35 @@ async function createGitHubFile(slug, content) {
   const sha = existing.ok ? (await existing.json()).sha : undefined;
   const res = await fetch(url, {
     method: 'PUT', headers,
-    body: JSON.stringify({ message: `Draft job: ${slug}`, content: encoded, branch: 'main', ...(sha ? { sha } : {}) }),
+    body: JSON.stringify({ message: `KommunalFlat: ${slug} (sofort freigeschaltet)`, content: encoded, branch: 'main', ...(sha ? { sha } : {}) }),
   });
   if (!res.ok) { const e = await res.json(); throw new Error(`GitHub: ${e.message}`); }
+}
+
+// ── Personal-Cockpit-Zugang: wird mit der Buchung sofort angelegt ──────────
+// Eintrag in src/data/personal-cockpit/zugaenge.json (gleiche Behörde → bestehender Token).
+async function cockpitZugang(d) {
+  const owner = process.env.GITHUB_OWNER || 'HAKO-TEAM';
+  const repo  = process.env.GITHUB_REPO  || 'der-kaemmerer';
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/src/data/personal-cockpit/zugaenge.json`;
+  const headers = { 'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' };
+  for (let versuch = 0; versuch < 3; versuch++) {
+    const r = await fetch(url, { headers });
+    if (!r.ok) throw new Error('zugaenge.json nicht lesbar');
+    const datei = await r.json();
+    const liste = JSON.parse(Buffer.from(datei.content, 'base64').toString('utf8'));
+    const vorhanden = liste.find(z => normOrg(z.org) === normOrg(d.behoerde));
+    if (vorhanden) return vorhanden.token;
+    const token = randomBytes(8).toString('hex');
+    liste.push({ token, org: d.behoerde.trim(), kommunalflat: true, seit: new Date().toISOString().slice(0, 10),
+      email: (d.rechnungsemail || d.kontaktemail || '').trim(), ort: d.ort || '', bundesland: d.bundesland || '' });
+    const put = await fetch(url, { method: 'PUT', headers, body: JSON.stringify({
+      message: `Personal-Cockpit: Zugang für ${d.behoerde}`, branch: 'main', sha: datei.sha,
+      content: Buffer.from(JSON.stringify(liste, null, 2) + '\n', 'utf8').toString('base64') }) });
+    if (put.ok) return token;
+    if (put.status !== 409) throw new Error(`GitHub ${put.status}`);
+  }
+  throw new Error('zugaenge.json: Konflikt');
 }
 
 // ── Bestehende KommunalFlat erkennen ────────────────────
@@ -101,7 +128,9 @@ async function findeBestehendeFlat(d) {
   return passtZuFlat(records, d);
 }
 
-async function sendEmail(d, slug, flat = null) {
+async function sendEmail(d, slug, flat = null, token = null) {
+  const anzeigeUrl = `https://derkaemmerer.de/stellen/${slug}/`;
+  const cockpitUrl = token ? `https://personal.derkaemmerer.de/${token}/` : null;
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   // 1. Interne Benachrichtigung an DerKämmerer
@@ -126,9 +155,9 @@ async function sendEmail(d, slug, flat = null) {
   <div style="padding:24px">
     <a href="https://github.com/HAKO-TEAM/der-kaemmerer/blob/main/src/content/jobs/${slug}.md"
        style="display:inline-block;background:#1a2744;color:#fff;padding:12px 24px;text-decoration:none;font-weight:bold;border-radius:4px;margin-right:12px">
-      Entwurf auf GitHub prüfen
+      Anzeige auf GitHub ansehen
     </a>
-    <p style="margin-top:16px;font-size:12px;color:#9ca3af">Zum Freigeben: aktiv: false → aktiv: true ändern und committen.</p>
+    <p style="margin-top:16px;font-size:12px;color:#6b7280">Bereits freigeschaltet und in wenigen Minuten live: <a href="${anzeigeUrl}">${anzeigeUrl}</a>${cockpitUrl ? `<br>Personal-Cockpit: <a href="${cockpitUrl}">${cockpitUrl}</a>` : ''}<br>Arbeitgeberprofil und Übernahme weiterer Stellen erledigt die Routine am nächsten Morgen.</p>
   </div>
 </div>`,
   });
@@ -148,16 +177,26 @@ async function sendEmail(d, slug, flat = null) {
   </div>
   <div style="padding:24px">
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
-    <p style="color:#374151">vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de. Wir haben Ihre Anfrage erhalten und bearbeiten diese schnellstmöglich.</p>
+    <p style="color:#374151">${flat ? 'vielen Dank für Ihre weitere Ausschreibung.' : 'vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de – herzlich willkommen als Partner.'} Ihre Anzeige ist ab sofort freigeschaltet und in wenigen Minuten online:<br><a href="${anzeigeUrl}" style="color:#2563eb">${anzeigeUrl}</a></p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0;background:#f8fafc;border:1px solid #e2e8f0">
       <tr><td style="padding:10px 12px;color:#6b7280;width:160px">Paket</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${d.paket || 'KommunalFlat – 249 €/Monat'}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Organisation</td><td style="padding:10px 12px;color:#172840">${d.behoerde}</td></tr>
       <tr><td style="padding:10px 12px;color:#6b7280">Erster Stellentitel</td><td style="padding:10px 12px;color:#172840">${d.stellentitel}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Ansprechpartner</td><td style="padding:10px 12px;color:#172840">${d.kontaktname}</td></tr>
     </table>
+    ${cockpitUrl ? `<div style="background:#eff6ff;border:1px solid #bfdbfe;padding:16px 18px;margin:0 0 18px">
+      <p style="margin:0 0 6px;color:#172840;font-weight:bold">Ihr Personal-Cockpit</p>
+      <p style="margin:0 0 10px;color:#374151;font-size:14px">Ihre Stellen im Vergleich mit dem kommunalen Stellenmarkt – Entgelt, Arbeitgeberleistungen, Wettbewerb im Umkreis. Neue Ausschreibungen prüfen Sie dort vor der Veröffentlichung und erhalten einen überarbeiteten Ausschreibungstext.</p>
+      <a href="${cockpitUrl}" style="display:inline-block;background:#2563eb;color:#fff;padding:10px 18px;text-decoration:none;font-weight:bold;border-radius:4px">Personal-Cockpit öffnen</a>
+      <p style="margin:10px 0 0;color:#6b7280;font-size:12px">Persönlicher Zugang – bitte nur innerhalb Ihrer Verwaltung weitergeben.</p></div>` : ''}
     ${flat
-      ? `<p style="color:#374151">Diese Anzeige ist in Ihrer bestehenden <strong>KommunalFlat</strong> enthalten. Wir prüfen sie und schalten sie kurzfristig frei.</p>`
-      : `<p style="color:#374151">Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail. Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.</p>`}
+      ? `<p style="color:#374151">Diese Anzeige ist in Ihrer bestehenden <strong>KommunalFlat</strong> enthalten – es entstehen keine weiteren Kosten.</p>`
+      : `<p style="color:#374151"><strong>So geht es weiter:</strong></p>
+    <ul style="color:#374151;padding-left:20px;line-height:1.6">
+      <li>Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail.</li>
+      <li>Ihr <strong>Arbeitgeberprofil</strong> auf derkaemmerer.de legen wir in den nächsten 24 Stunden an.</li>
+      <li>Ihre <strong>weiteren Ausschreibungen</strong>, die Sie auf interamt.de veröffentlichen, übernehmen wir automatisch als KommunalFlat-Anzeigen. Alle anderen senden Sie uns einfach über <a href="https://derkaemmerer.de/anzeige-aufgeben" style="color:#2563eb">derkaemmerer.de/anzeige-aufgeben</a> – sie sind sofort online.</li>
+    </ul>`}
     <p style="color:#374151">Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
     <p style="color:#374151">Mit freundlichen Grüßen<br><strong>Das Team von Der Kämmerer</strong><br>
     <a href="mailto:anzeigen@derkaemmerer.de" style="color:#2563eb">anzeigen@derkaemmerer.de</a></p>
@@ -185,7 +224,11 @@ export default async function handler(req, res) {
     try { flat = await findeBestehendeFlat(d); }
     catch (e) { console.error('Flat-Prüfung fehlgeschlagen:', e.message); }
 
-    if (process.env.RESEND_API_KEY) await sendEmail(d, slug, flat);
+    let token = null;
+    try { token = await cockpitZugang(d); }
+    catch (e) { console.error('Cockpit-Zugang fehlgeschlagen:', e.message); }
+
+    if (process.env.RESEND_API_KEY) await sendEmail(d, slug, flat, token);
     if (flat) {
       console.log(`Bestehende KommunalFlat (${flat.id}) – keine neue Rechnung für ${d.behoerde}`);
       return res.status(200).json({ ok: true, slug, flat: flat.id });
