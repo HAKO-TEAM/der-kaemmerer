@@ -4,7 +4,7 @@
   "description": "Der Kämmerer – Das unabhängige Briefing für kommunale Entscheider",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/slash-redirect.mjs",
     "preview": "astro preview"
   },
   "type": "module",
