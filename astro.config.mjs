@@ -8,5 +8,5 @@ export default defineConfig({
   site: 'https://derkaemmerer.de',
   output: 'static',
   security: { checkOrigin: false },
-  adapter: vercel(),
+  adapter: vercel({ maxDuration: 60 }),
 });
