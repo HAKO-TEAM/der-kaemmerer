@@ -28,7 +28,8 @@ mkdirSync(dirname(ZIEL), { recursive: true });
 const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : null; };
 const LIMIT = +(arg('--limit') || 0);
 const HEUTE = new Date(); HEUTE.setHours(0, 0, 0, 0);
-const iso = (d) => d.toISOString().slice(0, 10);
+// lokales Datum (toISOString wäre UTC und verschiebt Mitternacht auf den Vortag)
+const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const IA = { 'X-REMOTE-APPLICATION': 'Interamtb2c', 'Content-Type': 'application/json' };
 const LBIT = Object.fromEntries(LEISTUNGEN.map(([k], i) => [k, 1 << i]));
 
