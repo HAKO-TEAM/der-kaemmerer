@@ -1,0 +1,8 @@
+---
+// personal.derkaemmerer.de/<token>/ → Personal-Cockpit der Kommune (Vercel reicht die
+// Originaladresse an Astro durch, daher hier die interne Weitergabe).
+export const prerender = false;
+const { token } = Astro.params;
+if (token && /^[a-f0-9]{8,32}$/i.test(token)) return Astro.rewrite(`/personal-cockpit/${token}/`);
+return Astro.rewrite('/404');
+---
