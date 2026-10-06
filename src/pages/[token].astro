@@ -4,5 +4,5 @@
 export const prerender = false;
 const { token } = Astro.params;
 if (token && /^[a-f0-9]{8,32}$/i.test(token)) return Astro.rewrite(`/personal-cockpit/${token}/`);
-return Astro.rewrite('/404');
+return new Response('<!doctype html><meta charset="utf-8"><title>Seite nicht gefunden – Der Kämmerer</title><p style="font:16px system-ui;margin:60px auto;max-width:560px">Diese Seite gibt es nicht. <a href="https://derkaemmerer.de/">Zur Startseite von Der Kämmerer</a></p>', { status: 404, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 ---
