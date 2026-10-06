@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-10-30"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1476063"
 schlagwoerter: ["Haushalt", "Beteiligungsmanagement", "Kalkulation", "Kommunalrecht", "Zweckverband"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-04"
 featured: false
 ---
