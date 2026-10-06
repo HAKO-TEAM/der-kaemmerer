@@ -234,7 +234,7 @@ if (!D.kommunalflat) {
     ev.preventDefault();
     const btn = $('pc-go') as HTMLButtonElement; btn.disabled = true; btn.textContent = 'Wird ausgewertet …';
     try {
-      const r = await fetch('/api/personal-cockpit/analyse', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const r = await fetch('/personal-cockpit-api/analyse/', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: D.token, text: ($('pc-tx') as HTMLTextAreaElement).value, url: ($('pc-url') as HTMLInputElement).value }) });
       const j = await r.json();
       if (!r.ok) { $('pc-erg').innerHTML = `<div class="pc-leer">${esc(j.fehler || 'Fehler')}</div>`; return; }
@@ -244,7 +244,7 @@ if (!D.kommunalflat) {
       $('pc-vsb').addEventListener('click', async () => {
         const b2 = $('pc-vsb') as HTMLButtonElement; b2.disabled = true; b2.textContent = 'Vorschlag wird erstellt (ca. 30 Sekunden) …';
         const tx = ($('pc-tx') as HTMLTextAreaElement).value;
-        const r2 = await fetch('/api/personal-cockpit/vorschlag', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        const r2 = await fetch('/personal-cockpit-api/vorschlag/', { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ token: D.token, text: tx || letzte.volltext || '', hebel: letzte.bewertung.hebel, kennzahlen: `${letzte.bewertung.gruppe.anzahl} Vergleichsstellen, ${letzte.bewertung.gruppe.label}` }) });
         const v = await r2.json();
         if (!r2.ok) { $('pc-vs').innerHTML = `<p class="pc-hinweis">${esc(v.fehler || 'Fehler')}</p>`; return; }

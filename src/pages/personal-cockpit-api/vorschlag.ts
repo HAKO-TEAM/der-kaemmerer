@@ -2,8 +2,8 @@ import type { APIRoute } from 'astro';
 import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
-import { zugang } from '../../../lib/markt/zugang.mjs';
-import { htmlZuText } from '../../../lib/markt/merkmale.mjs';
+import { zugang } from '../../lib/markt/zugang.mjs';
+import { htmlZuText } from '../../lib/markt/merkmale.mjs';
 
 export const prerender = false;
 

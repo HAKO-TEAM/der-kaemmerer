@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
-import { zugang, MARKT } from '../../../lib/markt/zugang.mjs';
-import { merkmaleAusText, htmlZuText, LEISTUNGEN, land as landAusPlz } from '../../../lib/markt/merkmale.mjs';
-import { bewerten } from '../../../lib/markt/benchmark.mjs';
+import { zugang, MARKT } from '../../lib/markt/zugang.mjs';
+import { merkmaleAusText, htmlZuText, LEISTUNGEN, land as landAusPlz } from '../../lib/markt/merkmale.mjs';
+import { bewerten } from '../../lib/markt/benchmark.mjs';
 
 export const prerender = false;
 
