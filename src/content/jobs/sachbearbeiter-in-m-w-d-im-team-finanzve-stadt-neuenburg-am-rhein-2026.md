@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-10-11"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1487028"
 schlagwoerter: ["Finanzverwaltung", "Gemeindesteuern", "Grundsteuer", "Gebühren", "SAP"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-04"
 featured: false
 ---

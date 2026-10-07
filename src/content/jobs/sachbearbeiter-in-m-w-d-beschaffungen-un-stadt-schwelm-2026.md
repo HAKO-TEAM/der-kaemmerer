@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-12-01"
 bewerbungslink: "https://karriere.nrw/stellenausschreibung/0fbcf7c8-0fd5-40cb-8cc5-9d3732de8326"
 schlagwoerter: ["Haushaltsangelegenheiten", "IT-Beschaffung", "Vergabe", "Lizenzmanagement", "Controlling"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-01"
 featured: false
 ---

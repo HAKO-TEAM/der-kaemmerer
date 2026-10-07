@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-10-24"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1496934"
 schlagwoerter: ["Gebäudemanagement", "Bauunterhaltung", "Energiemanagement", "Abteilungsleitung", "Schulbau"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-07"
 featured: false
 ---
