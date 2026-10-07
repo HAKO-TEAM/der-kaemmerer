@@ -1,0 +1,75 @@
+{
+  "slug": "bottrop",
+  "token": "b931b6590d7163a6",
+  "name": "BEST AöR – Bottroper Entsorgung und Stadtreinigung",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 118482,
+  "beamteUndBeschaeftigte": "rd. 170",
+  "claim": "Die Finanzen eines kommunalen Entsorgungsunternehmens im Ruhrgebiet verantwortlich steuern.",
+  "beschreibung": "Die BEST AöR ist eine rechtlich und wirtschaftlich selbständige Anstalt des öffentlichen Rechts im Konzern der Stadt Bottrop. Sie verantwortet Müllabfuhr, Abfall- und Wertstoffwirtschaft, Stadtreinigung und Winterdienst für die kreisfreie Großstadt und betreibt zwei Recyclinghöfe sowie einen Containerdienst. Rund 170 Beschäftigte, ein großer Fuhrpark und ein eigener Werkstattbetrieb sorgen täglich für eine saubere Stadt. Wer hier Verantwortung übernimmt, arbeitet eng mit Vorstand und Fachabteilungen zusammen und gestaltet ein gebührenfinanziertes Kommunalunternehmen mit unternehmerischem Anspruch.",
+  "kennzahlen": [
+    {
+      "label": "Beschäftigte",
+      "wert": "rd. 170",
+      "icon": "👥"
+    },
+    {
+      "label": "Recyclinghöfe",
+      "wert": "2",
+      "icon": "♻️"
+    },
+    {
+      "label": "Einwohner Bottrop (31.12.2025)",
+      "wert": "118.482",
+      "icon": "🏙️"
+    },
+    {
+      "label": "Rechtsform",
+      "wert": "Anstalt des öffentlichen Rechts",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung nach TVöD-E mit allen tariflichen Leistungen wie Jahressonderzahlung, jährlichem Leistungsentgelt und Zuschuss zu vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Bonus",
+      "beschreibung": "Bonuszahlung bei entsprechendem Betriebsergebnis."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Zusätzliche betriebliche Altersversorgung über die kvw."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit mit persönlichem Arbeitszeitkonto und die Möglichkeit zum mobilen Arbeiten (Homeoffice)."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub, ab 01.01.2027 31 Tage."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Dienstrad-Leasing."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalabteilung · Bewerbermanagement",
+    "email": "bewerbungen@best-bottrop.de",
+    "telefon": "02041 7969-41"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Unternehmensdaten, Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Finanzbuchhaltung, BEST AöR, Kennziffer 12/2026 (interamt.de/koop/app/stelle?id=1495547, abgerufen 07.10.2026)",
+    "Rechtsform und Vertretung (Vorstand derzeit n. N.): best-bottrop.de/impressum (abgerufen 07.10.2026)",
+    "Einwohnerzahl Bottrop: de.wikipedia.org/wiki/Bottrop (abgerufen 07.10.2026)"
+  ]
+}

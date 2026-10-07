@@ -1,0 +1,69 @@
+{
+  "slug": "zell-im-wiesental",
+  "token": "fa1c9179ed161973",
+  "name": "Stadt Zell im Wiesental",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 6215,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Marion Isele",
+  "claim": "Eine Kleinstadt im Wiesental mit kurzen Wegen nach Lörrach und Basel mitgestalten.",
+  "beschreibung": "Zell im Wiesental ist eine Stadt im Landkreis Lörrach im Oberen Wiesental, erstmals urkundlich erwähnt im Jahr 1275. Über die Regio-S-Bahn ist die Stadt an Lörrach und Basel angebunden und verbindet hohen Freizeitwert mit einer umfassenden Grundversorgung. Die Verwaltung ist überschaubar und bietet in Leitungsfunktionen ein breites Aufgabenfeld von Schulen und Kindergärten über Wirtschaftsförderung und Tourismus bis zur Geschäftsstelle des Gemeinderats.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "6.215",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1275",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "36,12 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Lörrach",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Beamtenverhältnis oder unbefristeter Vertrag",
+      "beschreibung": "Einstellung ins Beamtenverhältnis oder unbefristet nach TVöD mit üblichen tariflichen Leistungen."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Moderner Arbeitsplatz mit anspruchsvollen Aufgaben und viel Gestaltungsspielraum."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Möglichkeit flexibler Arbeitszeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Ausgleichsaktivitäten im Rahmen des betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Erfahrung zählt",
+      "beschreibung": "Berufliche Erfahrungszeiten werden bei der Einstellung angerechnet."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Zell im Wiesental · Hauptamt",
+    "email": "bewerbung@stadt-zell.de",
+    "telefon": "07625 133-110",
+    "bewerbungsportal": "https://www.zell-im-wiesental.de/verwaltung-kontakt/stellenangebote/bewerben-im-karriereportal"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Bürgermeisterin (seit 01.12.2025): de.wikipedia.org/wiki/Zell_im_Wiesental (abgerufen 07.10.2026)",
+    "Lage/Anbindung, Benefits, Kontakt: Stellenausschreibung Leitung des Hauptamtes, Stadt Zell im Wiesental, interamt.de/koop/app/stelle?id=1496403 (abgerufen 07.10.2026)",
+    "Karriereportal: zell-im-wiesental.de/verwaltung-kontakt/stellenangebote/bewerben-im-karriereportal (abgerufen 07.10.2026)"
+  ]
+}

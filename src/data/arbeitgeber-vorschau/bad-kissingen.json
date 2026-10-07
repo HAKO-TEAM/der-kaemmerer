@@ -1,0 +1,64 @@
+{
+  "slug": "bad-kissingen",
+  "name": "Stadt Bad Kissingen",
+  "bundesland": "Bayern",
+  "einwohner": 23191,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dirk Vogel",
+  "token": "4be3d07f8d5d04c3",
+  "claim": "Ein traditionsreiches Weltbad und UNESCO-Welterbe technisch und planerisch weiterentwickeln.",
+  "beschreibung": "Bad Kissingen ist Große Kreisstadt, Sitz des Landratsamtes und bildet seit 2016 zusammen mit Bad Neustadt ein gemeinsames Oberzentrum in Unterfranken. Seit 2021 gehört das bayerische Staatsbad als Teil der bedeutenden Kurstädte Europas zum UNESCO-Welterbe. Die Stadtverwaltung versteht sich als kommunaler Dienstleister mit breitem Aufgabenfeld und nimmt als Große Kreisstadt auch die Aufgaben der unteren Bauaufsichtsbehörde wahr. Wer hier Verantwortung übernimmt, gestaltet eine Kur-, Tourismus- und Wirtschaftsstadt mit historischem Kurensemble und vollständiger Schul- und Betreuungslandschaft mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "23.191",
+      "icon": "👥"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "2021",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "801",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Große Kreisstadt · Oberzentrum mit Bad Neustadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Gestaltung der Arbeitszeit."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Gute Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit zahlreichen Vergünstigungen."
+    },
+    {
+      "titel": "Anspruchsvolle Aufgaben",
+      "beschreibung": "Vielseitige, herausgehobene Tätigkeiten in einem engagierten Umfeld, unbefristet und im Beamtenverhältnis möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalverwaltung",
+    "email": "personalamt@stadt.badkissingen.de",
+    "telefon": "0971 807-1200",
+    "bewerbungsportal": "https://www.mein-check-in.de/badkissingen/position-536431"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, UNESCO-Welterbe, Oberzentrum, Oberbürgermeister (Wahl 2026): de.wikipedia.org/wiki/Bad_Kissingen (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Städtisches Bauamt, https://interamt.de/koop/app/stelle?id=1491930 (API api.interamt.de/query/stellenangebot/1491930) (abgerufen 07.10.2026)"
+  ]
+}

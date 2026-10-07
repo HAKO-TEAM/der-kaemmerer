@@ -1,0 +1,67 @@
+{
+  "slug": "schwalmstadt",
+  "token": "a5b52a88e9c353fe",
+  "name": "Stadt Schwalmstadt",
+  "bundesland": "Hessen",
+  "einwohner": 18482,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Tobias Kreuter",
+  "claim": "Die Finanzen eines nordhessischen Mittelzentrums verantworten.",
+  "beschreibung": "Schwalmstadt ist die einwohnerstärkste Gemeinde des Schwalm-Eder-Kreises und Mittelzentrum in Nordhessen zwischen Marburg und Kassel. Die Stadt entstand 1970 aus Treysa, Ziegenhain und umliegenden Dörfern und trägt seit 2017 die Zusatzbezeichnung Konfirmationsstadt. Gewachsene und neue Gewerbegebiete, ein gutes Kinderbetreuungs- und Schulangebot sowie ein lebendiges Kulturleben prägen die Stadt. In der Verwaltung reicht das Aufgabenspektrum von Stadtkasse, Steuern und Haushalt bis zum kaufmännischen Betrieb des städtischen Freibads.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.482",
+      "icon": "👥"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Konfirmationsstadt seit",
+      "wert": "2017",
+      "icon": "⛪"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Urlaub im Jahr."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge (ZVK sowie Entgeltumwandlung) für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Möglichkeiten zur fachlichen und persönlichen Weiterentwicklung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrrad- bzw. E-Bike-Leasing im Rahmen der Entgeltumwandlung für Tarifbeschäftigte."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Schwalmstadt · Personalentwicklung",
+    "email": "bewerbungen@schwalmstadt.de",
+    "telefon": "06691 207-118"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Stadtteile, Konfirmationsstadt, Bürgermeister (seit 01.12.2022, Amtszeit bis 2028): de.wikipedia.org/wiki/Schwalmstadt (abgerufen 07.10.2026)",
+    "Funktion Mittelzentrum, Benefits, Kontakt: Stellenausschreibung Leiter/in Finanzverwaltung, Stadt Schwalmstadt, interamt.de/koop/app/stelle?id=1498142 (abgerufen 07.10.2026)"
+  ]
+}

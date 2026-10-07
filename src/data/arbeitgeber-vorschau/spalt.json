@@ -1,0 +1,72 @@
+{
+  "slug": "spalt",
+  "token": "3ae254d5a4cadf76",
+  "name": "Stadt Spalt",
+  "bundesland": "Bayern",
+  "einwohner": 5203,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Udo Weingart",
+  "claim": "Die Hopfen- und Bierstadt im Fränkischen Seenland in Führungsverantwortung weiterentwickeln.",
+  "beschreibung": "Spalt liegt im Landkreis Roth im Norden des Fränkischen Seenlands, unweit des Großen Brombachsees. Die Geschichte der Stadt reicht bis zum Kloster St. Salvator zurück, das 810 erstmals urkundlich erwähnt wurde; der Hopfenanbau ist seit 1341 belegt und prägt die Hopfen- und Bierstadt bis heute. Die Flächengemeinde mit 28 Gemeindeteilen bietet eine historische Altstadt und hohen Freizeitwert. Die Stadtverwaltung arbeitet mit kurzen Wegen und gibt Führungskräften Raum, Finanzen, Organisation und Digitalisierung aktiv zu gestalten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.203",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung (Kloster)",
+      "wert": "810",
+      "icon": "📜"
+    },
+    {
+      "label": "Hopfenanbau belegt seit",
+      "wert": "1341",
+      "icon": "🌿"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "28",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Krisensicherer Arbeitsplatz",
+      "beschreibung": "Abwechslungsreiches Aufgabenfeld an einem zukunftsorientierten, unbefristeten Arbeitsplatz."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD (VKA) mit Jahressonderzahlung, Leistungsentgelt und 30 Tagen Urlaub bei einer 5-Tage-Woche."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Flexible Zeitmodelle."
+    },
+    {
+      "titel": "Team und Arbeitsplatz",
+      "beschreibung": "Moderner Arbeitsplatz in einem engagierten Team."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiche Fortbildungsmöglichkeiten zur persönlichen und beruflichen Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt",
+    "email": "personal@spalt.de",
+    "telefon": "09175 7965-35"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Benefits und Kontakt: Stellenausschreibungen Fachbereichsleitung Finanzwesen/Kämmerer (interamt.de/koop/app/stelle?id=1496004) und Geschäftsleitung (interamt.de/koop/app/stelle?id=1498250), Stadt Spalt (abgerufen 07.10.2026)",
+    "Erster Bürgermeister: spalt.de (abgerufen 07.10.2026)",
+    "Einwohnerzahl, Ersterwähnung, Hopfenanbau, Gemeindeteile: de.wikipedia.org/wiki/Spalt (abgerufen 07.10.2026)"
+  ]
+}

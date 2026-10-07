@@ -1,0 +1,59 @@
+{
+  "slug": "muggensturm",
+  "token": "f5ee22dd008e59d5",
+  "name": "Gemeinde Muggensturm",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 6103,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Johannes Kopp",
+  "claim": "Kommunale Finanzen in einem kollegialen Team zwischen Karlsruhe und Baden-Baden gestalten.",
+  "beschreibung": "Muggensturm ist eine Gemeinde im Landkreis Rastatt in der Rheinebene am Fuß des Schwarzwalds, gelegen zwischen Karlsruhe und Baden-Baden. Der Ort wurde 1193 erstmals urkundlich erwähnt und verbindet hohen Wohn- und Freizeitwert mit kurzen Wegen in der Verwaltung. Im Rechnungsamt reicht das Spektrum von Haushaltsplanung und Jahresrechnung über Anlagenbuchhaltung und Kalkulationen bis zum Beteiligungsbericht und zu Zuschussangelegenheiten. Die Arbeit findet in einem kollegialen und motivierten Team statt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "6.103",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1193",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "11,56 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Landkreis Rastatt, zwischen Karlsruhe und Baden-Baden",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Abwechslungsreiche Aufgaben",
+      "beschreibung": "Ein interessanter und abwechslungsreicher Aufgabenbereich in einem kollegialen und motivierten Team."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Ein flexibles Arbeitszeitmodell; Besetzung auch in Teilzeit möglich."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Fachbezogene Aus- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Bürgermeisteramt · Hauptamt",
+    "email": "bewerbungen@muggensturm.de",
+    "telefon": "07222 9093-50"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Lage, Bürgermeister: de.wikipedia.org/wiki/Muggensturm (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung über api.interamt.de/query/stellenangebot/1494091 (Stellvertretende/r Rechnungsamtsleiter/in, abgerufen 07.10.2026)"
+  ]
+}

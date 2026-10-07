@@ -1,0 +1,67 @@
+{
+  "slug": "amstetten",
+  "token": "3de3f5aee426f6c3",
+  "name": "Gemeinde Amstetten",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 4248,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Thomas Schultheiß",
+  "claim": "Auf der Schwäbischen Alb Verantwortung übernehmen und kommunale Zukunftsprojekte voranbringen.",
+  "beschreibung": "Amstetten ist eine Gemeinde mit sechs Ortsteilen im Alb-Donau-Kreis auf der Schwäbischen Alb, erstmals urkundlich erwähnt 1275. Die Gemeinde beschreibt sich als wirtschaftlich starken Standort mit hoher Lebensqualität und guter Infrastruktur. In der kleinen Verwaltung arbeiten Finanzverwaltung sowie Haupt- und Personalamt eng zusammen, und die Aufgaben reichen von Fördermittelmanagement und Verwaltungsdigitalisierung bis zu Schwerpunktprojekten wie Breitbandausbau, Windkraft und Freiflächen-Photovoltaik. Wer hier arbeitet, übernimmt früh Verantwortung und gestaltet bereichsübergreifend mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "4.248",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1275",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "49,8 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "6",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Ein abwechslungsreiches und eigenverantwortliches Tätigkeitsfeld."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Unbefristete Vollzeitstelle nach TVöD bzw. Landesbesoldung Baden-Württemberg."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Umfassende Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Attraktive Zusatzleistungen wie Fahrrad-Leasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalamt",
+    "email": "adrian.holl@amstetten.de",
+    "telefon": "07331 3006-16"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Ersterwähnung, Bürgermeister (seit 2026): de.wikipedia.org/wiki/Amstetten_(Württemberg) (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung über api.interamt.de/query/stellenangebot/1498193 (Stellvertretende Leitung der Finanzverwaltung und des Haupt- und Personalamts, abgerufen 07.10.2026)"
+  ]
+}

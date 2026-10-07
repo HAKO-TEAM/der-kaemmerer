@@ -1,0 +1,78 @@
+{
+  "slug": "gelsenkirchen",
+  "token": "c65cf0624d332899",
+  "name": "Stadt Gelsenkirchen",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 266199,
+  "buergermeistertitel": "Oberbürgermeisterin",
+  "buergermeister": "Andrea Henze",
+  "claim": "Eine weltoffene Großstadt im Herzen des Ruhrgebiets mit über 7.300 Kolleginnen und Kollegen mitgestalten.",
+  "beschreibung": "Gelsenkirchen ist eine kreisfreie Großstadt im zentralen Ruhrgebiet und gehört zur Metropolregion Rhein-Ruhr. Die Stadt, die 1875 das Stadtrecht erhielt und vom Bergbau geprägt wurde, ist heute weit über die Region hinaus als Heimat des FC Schalke 04 bekannt. In der Stadtverwaltung arbeiten mehr als 7.300 Beschäftigte daran, dass die Menschen in Gelsenkirchen gut leben können – in einer Verwaltung, die Vielfalt ausdrücklich als Stärke versteht. Im Referat Stadtkämmerei und Finanzen reicht das Spektrum von der Gewerbesteuerprüfung bis zur Steuersachbearbeitung für die Betriebe gewerblicher Art der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "266.199",
+      "icon": "👥"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "über 7.300",
+      "icon": "🏢"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1875",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "104,94 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisfreie Großstadt, Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "5-Tage-Woche mit flexiblen Arbeitszeiten im Rahmen des Gleitzeitmodells."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Möglichkeit zum mobilen Arbeiten bzw. Homeoffice nach den Regelungen der Stadt Gelsenkirchen."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Vielseitige Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsvorsorge mit Sport- und Fitnessangeboten."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Vielfältige Möglichkeiten zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Altersvorsorge und Mobilität",
+      "beschreibung": "Gute betriebliche Altersvorsorge und ein kostengünstiges Firmenticket für den ÖPNV."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Referat 10 · Personal und Organisation",
+    "email": "bewerbung@gelsenkirchen.de",
+    "telefon": "0209 169-2624",
+    "bewerbungsportal": "https://www.gelsenkirchen.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtrecht, Funktion, Oberbürgermeisterin: de.wikipedia.org/wiki/Gelsenkirchen (abgerufen 07.10.2026)",
+    "Beschäftigtenzahl, Benefits: Stellenausschreibung über api.interamt.de/query/stellenangebot/1498475 (Sachbearbeitung Gewerbesteuerprüfdienst, abgerufen 07.10.2026)",
+    "Kontakt: www.gelsenkirchen.de/de/Rathaus/Karriere/index.aspx (abgerufen 07.10.2026)"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "biberach-an-der-riss",
+  "token": "e78c5403aa43a30a",
+  "name": "Landkreis Biberach",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 207203,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Mario Glaser",
+  "claim": "In der Kreiskämmerei eines wirtschaftsstarken Landkreises in Oberschwaben Verantwortung übernehmen.",
+  "beschreibung": "Der Landkreis Biberach liegt in Oberschwaben und bildet mit dem Alb-Donau-Kreis und der Stadt Ulm den baden-württembergischen Teil der Region Donau-Iller; Sitz des Landratsamts ist Biberach an der Riß. Der Kreis mit 45 Städten und Gemeinden zählt zu den wirtschaftsstärksten Landkreisen Deutschlands. In der Kreiskämmerei werden unter anderem öffentlich- und privatrechtliche Forderungen beigetrieben und die Vollstreckungssoftware fachlich weiterentwickelt. Der Landkreis bietet einen krisensicheren Arbeitsplatz mit flexiblen Arbeitszeitmodellen und einem breiten Fortbildungsprogramm.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "207.203",
+      "icon": "👥"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "45",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.409,49 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Region",
+      "wert": "Donau-Iller",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Flexible Arbeitszeitmodelle und Angebote zur Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältiges Fortbildungsprogramm zur persönlichen und fachlichen Weiterqualifizierung."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Zusätzliche Altersvorsorge über eine Betriebsrente."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrtkostenzuschüsse für den ÖPNV."
+    },
+    {
+      "titel": "Gesundheit und Verpflegung",
+      "beschreibung": "Attraktives Gesundheitsmanagement und eine hausinterne Cafeteria."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Zusätzlicher dienstfreier Tag am Schützendienstag sowie Rabatte über corporate benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Biberach · Personal (Anna-Lena Steinle)",
+    "email": "anna-lena.steinle@biberach.de",
+    "telefon": "07351 52-6309",
+    "bewerbungsportal": "https://www.mein-check-in.de/biberach"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindezahl, Region, Wirtschaftsstärke, Landrat: de.wikipedia.org/wiki/Landkreis_Biberach (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Vollstreckungsinnendienst in der Kreiskämmerei, Landkreis Biberach, interamt.de/koop/app/stelle?id=1498067 (abgerufen 07.10.2026)",
+    "Bewerbungsportal: www.mein-check-in.de/biberach (abgerufen 07.10.2026)"
+  ]
+}

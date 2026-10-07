@@ -1,0 +1,68 @@
+{
+  "slug": "konstanz",
+  "name": "Landratsamt Konstanz",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 291867,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Zeno Danner",
+  "token": "b7d9a823f388f9cf",
+  "claim": "Die Finanzen eines Grenzlandkreises am Bodensee verantwortlich mitgestalten.",
+  "beschreibung": "Der Landkreis Konstanz liegt im Süden Baden-Württembergs am Bodensee, grenzt an die Schweiz und umfasst 25 Gemeinden zwischen Hegau, Bodanrück und Untersee. Das Landratsamt mit Sitz in Konstanz bündelt Aufgaben von der Kreiskasse über die Kämmerei bis zu den Kassengeschäften für Eigenbetriebe wie den Abfallwirtschaftsbetrieb. Führungskräfte erhalten Gestaltungsspielraum und treiben die Digitalisierung der Verwaltungsabläufe aktiv voran.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "291.867",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreisangehörige Gemeinden",
+      "wert": "25",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "817,97 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Bodensee · Grenze zur Schweiz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Führungsaufgaben mit Gestaltungsspielraum für die finanzielle Zukunft des Landkreises."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Gleitzeit, mobiles Arbeiten und Arbeitszeitkonto für Freizeitausgleich."
+    },
+    {
+      "titel": "Fachlich entwickeln",
+      "beschreibung": "Individuelle Fort- und Weiterbildung sowie Personalentwicklungsprogramme."
+    },
+    {
+      "titel": "Ausgewogen leben",
+      "beschreibung": "Kantine, Sport- und Gesundheitsangebote (z. B. Hansefit) und Kinder-Ferienprogramm."
+    },
+    {
+      "titel": "Finanzielle Leistungen",
+      "beschreibung": "Betriebliche Altersvorsorge, Leistungsprämie, Jahressonderzahlung und vermögenswirksame Leistungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalleitung",
+    "email": "Bewerbung@LRAKN.de",
+    "telefon": "07531 800-1378",
+    "bewerbungsportal": "https://www.lrakn.de/stellen"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Lage, Landrat: de.wikipedia.org/wiki/Landkreis_Konstanz (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Referatsleitung Kreiskasse, https://interamt.de/koop/app/stelle?id=1493098 (API api.interamt.de/query/stellenangebot/1493098) (abgerufen 07.10.2026)"
+  ]
+}

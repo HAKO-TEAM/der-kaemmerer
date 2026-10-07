@@ -1,0 +1,63 @@
+{
+  "slug": "neudrossenfeld",
+  "token": "c62dbebe2a91a737",
+  "name": "Gemeinde Neudrossenfeld",
+  "bundesland": "Bayern",
+  "einwohner": 3738,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Rainer Strobel",
+  "claim": "Eine Gemeinde im Rotmaintal von der Geschäftsleitung aus gestalten.",
+  "beschreibung": "Neudrossenfeld liegt im oberfränkischen Landkreis Kulmbach im Rotmaintal zwischen Kulmbach und Bayreuth und wurde 1260 erstmals urkundlich erwähnt. Die Gemeindeverwaltung betreut rund 3.800 Einwohner in 48 Gemeindeteilen und zusätzlich zwei Zweckverbände für Abwasserbeseitigung und Wasserversorgung. Wer hier Verantwortung übernimmt, arbeitet nah am Bürgermeister und an den Gremien und deckt ein breites Spektrum vom Satzungs- und Grundstücksrecht über Bau- und Vergaberecht bis zu Förderprogrammen und Wahlen ab.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "3.738",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1260",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "50,25 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Betreute Zweckverbände",
+      "wert": "2",
+      "icon": "💧"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristetes Arbeitsverhältnis mit Vergütung nach Qualifikation gemäß TVöD bzw. BayBesG."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Krankenzusatzversicherung sowie die üblichen Sozialleistungen des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Digitale Arbeitsweise",
+      "beschreibung": "Unkompliziertes Arbeiten mit modernen Kommunikationsplattformen."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Freundliches und kollegiales Umfeld mit einer abwechslungsreichen, vielseitigen Tätigkeit."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Neudrossenfeld · Geschäftsleitung",
+    "email": "personal@neudrossenfeld.de",
+    "telefon": "09203 993-14"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Bürgermeister: de.wikipedia.org/wiki/Neudrossenfeld (abgerufen 07.10.2026)",
+    "Benefits, Kontakt, Zweckverbände: Stellenausschreibung Geschäftsleiter/in, Gemeinde Neudrossenfeld, interamt.de/koop/app/stelle?id=1493441 (abgerufen 07.10.2026)"
+  ]
+}

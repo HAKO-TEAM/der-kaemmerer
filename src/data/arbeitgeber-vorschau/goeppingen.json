@@ -1,0 +1,69 @@
+{
+  "slug": "goeppingen",
+  "token": "17bb746f86afcaa9",
+  "name": "Landkreis Göppingen",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 258048,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Markus Möller",
+  "claim": "Die Finanzen eines Landkreises in der Region Stuttgart mit Verantwortung und Familienfreundlichkeit verbinden.",
+  "beschreibung": "Der Landkreis Göppingen liegt am Rand der Schwäbischen Alb im Filstal und gehört zum Verband Region Stuttgart; sein Landratsamt hat seinen Sitz in der Großen Kreisstadt Göppingen. Zum Kreis zählen 38 Städte und Gemeinden. Im Amt für Finanzen und Beteiligungen werden unter anderem die steuerlichen Angelegenheiten der Kreisverwaltung und ihrer Betriebe gewerblicher Art sowie die Abrechnungen des Sozialbereichs mit Bund, Land und KVJS bearbeitet. Als Arbeitgeber ist der Landkreis mit dem audit berufundfamilie zertifiziert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "258.048",
+      "icon": "👥"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "38",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "642,32 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Region",
+      "wert": "Region Stuttgart",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Möglichkeiten zum Homeoffice."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Familienfreundliche Angebote; der Landkreis ist mit dem audit berufundfamilie zertifiziert."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Persönliche und fachliche Entwicklungsmöglichkeiten bei vielseitigen Aufgaben."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Göppingen · Bewerbungen (Lisa-Marie Horn)",
+    "email": "bewerbung@lkgp.de",
+    "telefon": "07161 202-1039",
+    "bewerbungsportal": "https://www.landkreis-goeppingen.de/check-in"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindezahl, Region, Landrat: de.wikipedia.org/wiki/Landkreis_Göppingen (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Steuerwesen und Sozialabrechnungen, Landkreis Göppingen, interamt.de/koop/app/stelle?id=1492550 (abgerufen 07.10.2026)",
+    "Bewerbungsportal: www.landkreis-goeppingen.de/check-in (abgerufen 07.10.2026)"
+  ]
+}

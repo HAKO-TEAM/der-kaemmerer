@@ -1,0 +1,77 @@
+{
+  "slug": "springe",
+  "token": "da192c4e95e4b867",
+  "name": "Stadt Springe",
+  "bundesland": "Niedersachsen",
+  "einwohner": 28851,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Christian Springfeld",
+  "claim": "Eine überschaubare Stadtverwaltung am Deister mit kurzen Wegen und echtem Gestaltungsspielraum.",
+  "beschreibung": "Springe liegt südwestlich von Hannover im Städtedreieck Hannover – Hameln – Hildesheim an der Deisterpforte und gehört zur Region Hannover. Die 1013 erstmals urkundlich erwähnte Stadt umfasst zwölf Ortsteile. Die Stadtverwaltung versteht sich als moderne, bürgerorientierte Dienstleisterin; der Fachbereich Innere Dienste und Finanzen bündelt Kämmerei, Personal und Organisation, IT und Digitalisierung sowie Zentrale Dienste. Aktuell baut die Stadt ein Tax Compliance Management System auf.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "28.851",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1013",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "160,12 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "12",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Homeoffice und Flexibilität",
+      "beschreibung": "Möglichkeit zum Homeoffice bzw. zur mobilen Arbeit und flexible Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Altersversorgung und LOB",
+      "beschreibung": "Betriebliche Altersversorgung und leistungsorientierte Bezahlung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Interne und externe Fort- und Weiterbildungsangebote sowie strukturierte Einarbeitung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Attraktives Jobticket und Fahrrad-Leasing."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Firmen-Fitness-Angebot (Epassi), aktive Gesundheitsförderung und externe Beratung für Mitarbeitende."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Kurzfristige Kinder- und Angehörigenbetreuung über die Fluxx-Notfallbetreuung."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachdienst Personal und Organisation",
+    "email": "bewerbung@springe.de",
+    "telefon": "05041 73-581",
+    "bewerbungsportal": "https://www.springe.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Ortsteile, Lage: de.wikipedia.org/wiki/Springe (abgerufen 07.10.2026)",
+    "Bürgermeister: www.springe.de/rathausinspringe/politik/buergermeister/ (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Sachbearbeiter/in Umsatzsteuer / Tax Compliance Management (interamt.de/koop/app/stelle?id=1496556) und Fachbereichsleitung Fachbereich I (interamt.de/koop/app/stelle?id=1496989), Stadt Springe (abgerufen 07.10.2026)"
+  ]
+}

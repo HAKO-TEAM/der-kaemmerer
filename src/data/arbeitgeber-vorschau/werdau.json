@@ -1,0 +1,73 @@
+{
+  "slug": "werdau",
+  "token": "2ca64b08a5f146e0",
+  "name": "Landkreis Zwickau",
+  "bundesland": "Sachsen",
+  "einwohner": 303634,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Carsten Michaelis",
+  "claim": "Öffentliche Finanzen im dichtest besiedelten Landkreis Ostdeutschlands sichern und mitgestalten.",
+  "beschreibung": "Der Landkreis Zwickau im Westen Sachsens entstand 2008 aus den Landkreisen Chemnitzer Land und Zwickauer Land sowie der Stadt Zwickau. Er ist flächenmäßig der kleinste Kreis im Freistaat und hat die höchste Einwohnerdichte aller Landkreise in den neuen Bundesländern. Im Dezernat Finanzverwaltung und Service sorgt das Amt Finanzverwaltung und Kreiskasse – unter anderem am Standort Werdau – für die Durchsetzung öffentlich-rechtlicher Forderungen. Das Landratsamt setzt auf Einarbeitung durch erfahrene Kolleginnen und Kollegen und ein Umfeld, in dem die Arbeit mitgestaltet werden kann.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "303.634",
+      "icon": "👥"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2008",
+      "icon": "📜"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "33",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "949,75 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten ohne Kernzeiten sowie mobiles Arbeiten im Rahmen der geltenden Dienstvereinbarungen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub sowie arbeitsfrei an Heiligabend und Silvester."
+    },
+    {
+      "titel": "Übertarifliche Zuschüsse",
+      "beschreibung": "Steuer- und sozialversicherungsfreie Zuschüsse zu Job-Ticket, Kinderbetreuungskosten, Gesundheitskursen oder zur betrieblichen Altersversorgung; Fahrradleasing möglich."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Tarifgerechte Vergütung nach TVöD mit Jahressonderzahlung und Leistungsentgelt, betriebliche Altersvorsorge (ZVK) und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Einarbeitung durch fachkundige Kolleginnen und Kollegen sowie stellenbezogene Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Rahmenbedingungen",
+      "beschreibung": "Kostenfreie Parkmöglichkeiten und arbeitsmedizinische Vorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Zwickau · Bewerbungen (Kerstin Wunderlich)",
+    "email": "karriere@landkreis-zwickau.de",
+    "telefon": "0375 4402-21510",
+    "bewerbungsportal": "https://www.landkreis-zwickau.de/Stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gründung, Gemeindezahl, Besonderheiten, Landrat: de.wikipedia.org/wiki/Landkreis_Zwickau (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Vollstreckungsaußendienst, Landkreis Zwickau, interamt.de/koop/app/stelle?id=1494956 (abgerufen 07.10.2026)",
+    "Bewerbungsportal: www.landkreis-zwickau.de/Stellenangebote (abgerufen 07.10.2026)"
+  ]
+}

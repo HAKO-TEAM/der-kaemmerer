@@ -1,0 +1,66 @@
+{
+  "slug": "pliening",
+  "name": "Gemeinde Pliening",
+  "bundesland": "Bayern",
+  "einwohner": 5957,
+  "token": "69611125aa58bcfb",
+  "claim": "Eine Gemeinde im Münchner Osten mit kurzen Wegen und breiter Verantwortung mitgestalten.",
+  "beschreibung": "Pliening ist die nördlichste Gemeinde im oberbayerischen Landkreis Ebersberg und liegt in der Region München, rund 21 Kilometer östlich der Landeshauptstadt. Zur Gemeinde gehören zehn Gemeindeteile, darunter Gelting, das bereits 855 urkundlich erwähnt wurde. Die Gemeindeverwaltung bietet ein abwechslungsreiches Tätigkeitsfeld in einem motivierten Team – von der Gemeindekasse über die Vermögensverwaltung bis zu Sitzungsdienst und Ortsrecht. Hybrides Arbeiten und Gleitzeit sind dabei Teil des Angebots.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.957",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "22,79 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Landkreis Ebersberg · Region München",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobiles Arbeiten und Gleitzeit",
+      "beschreibung": "Mobile Arbeit ist teilweise möglich, dazu flexible Gleitzeitregelungen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Sehr gute Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Leistungsentgelt",
+      "beschreibung": "Leistungsorientierte Bezahlung bei aktuell erhöhtem Gesamtvolumen des Leistungsentgelts."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Sozialleistungen des öffentlichen Dienstes, z. B. betriebliche Altersversorgung und Großraumzulage München."
+    },
+    {
+      "titel": "Betriebsklima",
+      "beschreibung": "Abwechslungsreiches Tätigkeitsfeld in einem motivierten Team mit gutem Betriebsklima."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalleitung",
+    "email": "personalstelle@pliening.de",
+    "telefon": "08121 793-17",
+    "bewerbungsportal": "https://www.pliening.de/Stellenanzeigen.n21.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindeteile, Lage, Ersterwähnung Gelting: de.wikipedia.org/wiki/Pliening (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Sachbearbeiter Gemeindekasse, https://interamt.de/koop/app/stelle?id=1379317 (API api.interamt.de/query/stellenangebot/1379317), und Mitarbeiter Geschäftsleitung, https://interamt.de/koop/app/stelle?id=1175626 (API api.interamt.de/query/stellenangebot/1175626) (abgerufen 07.10.2026)"
+  ]
+}

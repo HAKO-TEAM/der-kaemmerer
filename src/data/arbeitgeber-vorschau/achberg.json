@@ -1,0 +1,63 @@
+{
+  "slug": "achberg",
+  "name": "Gemeinde Achberg",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 1713,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Tobias Walch",
+  "token": "7d8032ccd577e536",
+  "claim": "Die Finanzen einer soliden kleinen Gemeinde an der Argen eigenverantwortlich führen.",
+  "beschreibung": "Achberg liegt an der Argen an der baden-württembergisch-bayerischen Grenze im Süden des Landkreises Ravensburg und bildet mit Wangen im Allgäu und Amtzell eine Verwaltungsgemeinschaft. Der Ort wird erstmals 1194 urkundlich genannt, der Gemeindename geht auf Schloss Achberg zurück. Die Gemeinde ist nach eigener Angabe finanziell solide aufgestellt und pflegt einen offenen Austausch mit den Nachbarkommunen. In der kleinen Verwaltung arbeiten alle eng zusammen, die Aufgaben sind entsprechend breit und gestaltbar.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "1.713",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1194",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "12,92 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Verwaltungsgemeinschaft",
+      "wert": "mit Wangen im Allgäu und Amtzell",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Solide Finanzlage",
+      "beschreibung": "Aufgabe in einer finanziell solide aufgestellten Gemeinde mit schwarzen Zahlen und finanziellem Polster."
+    },
+    {
+      "titel": "Fundierte Einarbeitung",
+      "beschreibung": "Einarbeitung durch die bisherige Stelleninhaberin im Rahmen einer frühzeitigen Nachfolgeregelung."
+    },
+    {
+      "titel": "Flexibler Stellenumfang",
+      "beschreibung": "Unbefristete Stelle mit flexibel gestaltbarem Umfang von 80 bis 100 Prozent und tarifgerechter Bezahlung."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Individuelle Möglichkeiten zur beruflichen Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeindeverwaltung Achberg · Bürgermeister",
+    "email": "t.walch@achberg.de",
+    "telefon": "08380 98141-15"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Verwaltungsgemeinschaft, Bürgermeister: de.wikipedia.org/wiki/Achberg (abgerufen 07.10.2026)",
+    "Bürgermeister, Finanzlage, Benefits und Kontakt: Stellenausschreibung Nachfolge Kämmerei, https://interamt.de/koop/app/stelle?id=1465831 (API api.interamt.de/query/stellenangebot/1465831) (abgerufen 07.10.2026)"
+  ]
+}

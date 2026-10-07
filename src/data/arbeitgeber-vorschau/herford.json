@@ -1,0 +1,72 @@
+{
+  "slug": "herford",
+  "token": "8c5df31d46a4ebfc",
+  "name": "Hansestadt Herford",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 67074,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Anke Theisen",
+  "claim": "In einer traditionsreichen Hansestadt Ostwestfalens Verantwortung übernehmen.",
+  "beschreibung": "Die Hansestadt Herford ist große kreisangehörige Stadt und Kreisstadt des Kreises Herford im Regierungsbezirk Detmold, rund 15 Kilometer nordöstlich von Bielefeld. Ihre Stadtwerdung wird um 789 datiert; seit 1342 gehörte Herford der Hanse an und trägt seit 2013 den Namenszusatz Hansestadt. Die Stadtverwaltung legt Wert auf die Beteiligung ihrer Mitarbeitenden und bietet Führungskräften eigenverantwortliche Aufgaben, etwa in der unabhängigen örtlichen Rechnungsprüfung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "67.074",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtwerdung",
+      "wert": "um 789",
+      "icon": "📜"
+    },
+    {
+      "label": "Hansestadt (Namenszusatz) seit",
+      "wert": "2013",
+      "icon": "⚓"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt, große kreisangehörige Stadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristetes und sicheres Arbeitsverhältnis mit leistungsgerechter Vergütung."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Betriebliche Altersversorgung bzw. Zusatzversorgung."
+    },
+    {
+      "titel": "Familie, Freizeit und Beruf",
+      "beschreibung": "Flexible Arbeitszeitmodelle und mobiles Arbeiten nach Absprache."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote im Rahmen des Betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungen zur Förderung der persönlichen und beruflichen Weiterbildung."
+    },
+    {
+      "titel": "Weitere Vorteile",
+      "beschreibung": "Fahrradleasing und Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalabteilung",
+    "email": "alexandra.hansmann@herford.de",
+    "telefon": "05221 189-244",
+    "bewerbungsportal": "https://www.karriere.herford.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Stadtwerdung, Hanse, Namenszusatz, Bürgermeisterin (seit Kommunalwahl 2025): de.wikipedia.org/wiki/Herford (abgerufen 07.10.2026)",
+    "Benefits, Kontakt, Bewerberportal: Stellenausschreibung Leitung des Stabsbereichs Örtliche Rechnungsprüfung, Hansestadt Herford, interamt.de/koop/app/stelle?id=1490353 (abgerufen 07.10.2026)"
+  ]
+}

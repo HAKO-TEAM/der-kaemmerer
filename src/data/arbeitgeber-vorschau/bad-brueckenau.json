@@ -1,0 +1,66 @@
+{
+  "slug": "bad-brueckenau",
+  "token": "638f7c8d4db2c8b7",
+  "name": "Verwaltungsgemeinschaft Bad Brückenau",
+  "bundesland": "Bayern",
+  "einwohner": 5433,
+  "gruendungsjahr": "1978",
+  "claim": "Vier Gemeinden im Landkreis Bad Kissingen mit einer gemeinsamen Verwaltung voranbringen.",
+  "beschreibung": "Die Verwaltungsgemeinschaft Bad Brückenau im unterfränkischen Landkreis Bad Kissingen erledigt seit 1978 die Verwaltungsgeschäfte ihrer vier Mitgliedsgemeinden Geroda, Oberleichtersbach, Riedenberg und Schondra. Von ihrem Sitz in Bad Brückenau aus betreut sie rund 5.400 Einwohner auf gut 86 km². Das Aufgabenspektrum reicht von Hauptverwaltung und Bürgerservice über Sitzungsdienst, Wahlen und Satzungsrecht bis zu Schul- und Kitawesen, IT und Katastrophenschutz. Wer hier Verantwortung übernimmt, arbeitet eng mit mehreren Bürgermeistern und Gemeinderäten zusammen und kann sich bis zur Geschäftsstellenleitung entwickeln.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.433",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "86,24 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1978",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Unbefristeter Arbeitsplatz mit flexibler, gleitender Arbeitszeit."
+    },
+    {
+      "titel": "Verantwortung und Perspektive",
+      "beschreibung": "Vielseitige Führungsposition mit hoher Eigenverantwortung und perspektivischer Entwicklung zur Geschäftsstellenleitung."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, leistungsorientierter Bezahlung und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Regelmäßige Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobilität und Rabatte",
+      "beschreibung": "Fahrradleasing und Mitarbeiterangebote über corporate benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalstelle",
+    "email": "personalstelle@vgem-bad-brueckenau.de",
+    "telefon": "0151 75041571"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Hauptverwaltung und Bürgerservice, VGem Bad Brückenau (interamt.de/koop/app/stelle?id=1495652, abgerufen 07.10.2026)",
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Gründung: de.wikipedia.org/wiki/Verwaltungsgemeinschaft_Bad_Brückenau (abgerufen 07.10.2026)"
+  ]
+}

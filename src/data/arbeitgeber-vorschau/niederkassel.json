@@ -1,0 +1,71 @@
+{
+  "slug": "niederkassel",
+  "token": "97544df8de3f6002",
+  "name": "Stadt Niederkassel",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 38357,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Matthias Großgarten",
+  "claim": "Arbeiten am Rhein zwischen Köln und Bonn – mit kurzen Entscheidungswegen und echtem Gestaltungsspielraum.",
+  "beschreibung": "Niederkassel ist eine Stadt im Rhein-Sieg-Kreis und liegt am Rhein zwischen Köln und Bonn. Die Stadt verbindet urbanes Umfeld mit viel Grün und hoher Lebensqualität. Die Verwaltung bietet vielseitige, verantwortungsvolle Aufgaben mit kurzen Entscheidungswegen und enger Zusammenarbeit mit Verwaltungsleitung und politischen Gremien. Im Fachbereich Finanzen geht es um die strategische Steuerung der städtischen Finanzen – von Haushalt und Jahresabschluss bis zu Fördermitteln und Investitionsprojekten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "38.357",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "35,79 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Rhein-Sieg-Kreis, zwischen Köln und Bonn",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit und mobiles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten, mobiles Arbeiten und ein kollegiales Arbeitsumfeld."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Höhenverstellbare Schreibtische, moderne Technik sowie IT-Ausstattung für das mobile Arbeiten."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Unbefristetes, krisensicheres Beschäftigungsverhältnis; Jahressonderzahlung, leistungsorientierte Bezahlung und betriebliche Altersversorgung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub bei einer 5-Tage-Woche sowie zusätzlich arbeitsfreie Tage am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Angebote zum betrieblichen Gesundheitsmanagement, Dienstradleasing nach sechs Monaten Betriebszugehörigkeit und kostenfreie Parkplätze."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Zentrale Dienste · Herr Bliersbach",
+    "email": "s.bliersbach@niederkassel.de",
+    "telefon": "02208 9466-150",
+    "bewerbungsportal": "https://www.niederkassel.de/karriere/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Lage: de.wikipedia.org/wiki/Niederkassel (abgerufen 07.10.2026)",
+    "Bürgermeister: www.niederkassel.de/politik/buergermeister (abgerufen 07.10.2026)",
+    "Benefits: Stellenausschreibung über api.interamt.de/query/stellenangebot/1497969 (Stadtkämmerer/-kämmerin und Fachbereichsleitung Finanzen) und Stellenausschreibung über api.interamt.de/query/stellenangebot/1496512 (Sachbearbeitung IT-Einkauf), beide abgerufen 07.10.2026",
+    "Bewerbungsportal: www.niederkassel.de/karriere/stellenangebote/ (abgerufen 07.10.2026)",
+    "Kontakt: Stellenausschreibung Stadt Niederkassel, interamt 1496512 (abgerufen 07.10.2026)"
+  ]
+}

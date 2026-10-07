@@ -1,0 +1,70 @@
+{
+  "slug": "donaueschingen",
+  "token": "5dac7af6504947be",
+  "name": "Stadt Donaueschingen",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 21734,
+  "beamteUndBeschaeftigte": "über 450",
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Erik Pauly",
+  "claim": "An der Donauquelle eine Große Kreisstadt in Leitungsverantwortung mitgestalten.",
+  "beschreibung": "Donaueschingen liegt auf der Baar zwischen Schwarzwald und Schwäbischer Alb, dort, wo Brigach und Breg zur Donau zusammenfließen. Die 889 erstmals urkundlich erwähnte frühere Residenzstadt der Fürstenberger ist seit 1993 Große Kreisstadt und Mittelzentrum im Schwarzwald-Baar-Kreis. Die Stadtverwaltung mit über 450 Beschäftigten deckt ein breites Spektrum ab – von Bildung und Sozialem über öffentliche Ordnung bis zu Kultur, Tourismus und Marketing. Wer hier Verantwortung übernimmt, prägt das Angebot einer Stadt mit lebendiger Kultur- und Bildungslandschaft sichtbar mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.734",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "889",
+      "icon": "📜"
+    },
+    {
+      "label": "Große Kreisstadt seit",
+      "wert": "1993",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Bezahlung nach Beamtenrecht bzw. TVöD mit Jahressonderzahlung, leistungsorientierter Bezahlung und betrieblicher Zusatzrente über die Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeiten und Möglichkeiten für Homeoffice."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildungsmöglichkeiten sowie interne Weiterentwicklung."
+    },
+    {
+      "titel": "Mobilität und Fitness",
+      "beschreibung": "JobRad- und Jobticket-Angebot sowie Hansefit."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Moderne Arbeitsplätze in der Stadtverwaltung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalverwaltung",
+    "email": "sebastian.pfaff@donaueschingen.de",
+    "telefon": "0771 857-114",
+    "bewerbungsportal": "https://www.donaueschingen.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Beschäftigtenzahl, Oberbürgermeister: Stellenausschreibung Erster Beigeordneter, Stadt Donaueschingen (interamt.de/koop/app/stelle?id=1495690, abgerufen 07.10.2026)",
+    "Benefits und Kontakt: donaueschingen.de/jobsundkarriere und donaueschingen.de/stellenangebote (abgerufen 07.10.2026); JobTicket/JobRad/Hansefit: Ausschreibung städtische Gärtnerei, donaueschingen.bewerbung.dvvbw.de (abgerufen 07.10.2026)",
+    "Einwohnerzahl, Ersterwähnung, Große Kreisstadt, Mittelzentrum, Donauquelle: de.wikipedia.org/wiki/Donaueschingen (abgerufen 07.10.2026)"
+  ]
+}

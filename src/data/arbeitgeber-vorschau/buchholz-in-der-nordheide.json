@@ -1,0 +1,71 @@
+{
+  "slug": "buchholz-in-der-nordheide",
+  "token": "865f8e2a6037afe4",
+  "name": "Stadt Buchholz in der Nordheide",
+  "bundesland": "Niedersachsen",
+  "einwohner": 41636,
+  "claim": "Moderne Verwaltung zwischen Hamburg und Lüneburger Heide mit Teamgeist und Gestaltungsspielraum.",
+  "beschreibung": "Buchholz in der Nordheide ist die größte Stadt im Landkreis Harburg und liegt rund 30 Kilometer südlich von Hamburg am Nordrand der Lüneburger Heide. Seit 1958 Stadt, ist Buchholz als selbständige Gemeinde Teil der Metropolregion Hamburg. Die Stadtverwaltung versteht sich als innovativ und bürgernah und setzt auf Teamarbeit, individuelle Förderung und Familienfreundlichkeit. In der Abteilung Finanzmanagement und Liegenschaften reicht die Arbeit von Haushalts- und Finanzplanung über Fördermittel und Darlehen bis zu den Steuerungsberichten für Rat und Gremien.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "41.636",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadt seit",
+      "wert": "1958",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "74,76 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Selbständige Gemeinde, größte Stadt im Landkreis Harburg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit und mobiles Arbeiten",
+      "beschreibung": "Vereinbarkeit von Familie und Beruf durch flexible Arbeitszeit und mobiles Arbeiten; Stellen teilzeitgeeignet."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub sowie zusätzlich frei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Sicherheit und Vorsorge",
+      "beschreibung": "Krisensicherer Arbeitsplatz, zusätzliche Altersvorsorge (VBL), Sozialleistungen des öffentlichen Dienstes und tarifliche Sonderzahlungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket als klimaschonender Mobilitätszuschuss und Fahrrad-Leasing im Rahmen der Entgeltumwandlung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement in Kooperation mit Wellpass."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Moderne Arbeitsplatzausstattung, hohe Eigenverantwortung und großer Gestaltungsspielraum."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abteilung Personalmanagement",
+    "email": "karriere@buchholz.de",
+    "telefon": "04181 214-125",
+    "bewerbungsportal": "https://www.buchholz.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadterhebung, Lage: de.wikipedia.org/wiki/Buchholz_in_der_Nordheide (abgerufen 07.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung über api.interamt.de/query/stellenangebot/1497766 (Sachbearbeitung Haushaltsplanung und -bewirtschaftung, abgerufen 07.10.2026)",
+    "Bewerbungsportal: www.buchholz.de/karriere (abgerufen 07.10.2026)"
+  ]
+}

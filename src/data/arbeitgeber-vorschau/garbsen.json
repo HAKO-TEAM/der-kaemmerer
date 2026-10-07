@@ -1,0 +1,70 @@
+{
+  "slug": "garbsen",
+  "token": "d49e0eb77e0db205",
+  "name": "Stadt Garbsen",
+  "bundesland": "Niedersachsen",
+  "einwohner": 60007,
+  "claim": "Die Finanzen einer wachsenden Stadt in der Region Hannover strategisch steuern.",
+  "beschreibung": "Garbsen liegt in der Region Hannover und entstand 1967 durch den Zusammenschluss mehrerer Gemeinden; Stadtrechte besitzt es seit 1968. Mit rund 60.000 Einwohnern in 13 Stadtteilen ist Garbsen als Mittelzentrum ausgewiesen und Standort des Campus Maschinenbau der Leibniz Universität Hannover. Die Stadtverwaltung arbeitet doppisch und verbindet Haushalt, Controlling, Jahresabschluss und Beteiligungsmanagement in einer Hand. Wer hier Verantwortung übernimmt, berät die Verwaltungsleitung direkt und sichert die finanzielle Leistungsfähigkeit der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "60.007",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1968",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitsmodelle",
+      "beschreibung": "Gleitende Arbeitszeit sowie mobiles Arbeiten, Homeoffice oder Telearbeit und gute Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Zusätzliche Zahlungen",
+      "beschreibung": "Variable, leistungsorientierte jährliche Einmalzahlung, Jahressonderzahlung und betriebliche Altersversorgung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Zahlreiche Möglichkeiten der individuellen Fortbildung und Qualifizierung."
+    },
+    {
+      "titel": "Familienservice",
+      "beschreibung": "Fluxx-Notfallbetreuung für Kinder und Angehörige mit Unterstützungsbedarf."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket als vergünstigtes Deutschlandticket, Fahrradleasing und vergünstigtes Laden von Elektrofahrzeugen am Rathaus."
+    },
+    {
+      "titel": "Gesundheit und Rabatte",
+      "beschreibung": "Firmenfitness über EGYM Wellpass und Teilnahme am corporate-benefits-Programm."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abteilung Personal",
+    "email": "bewerbung@garbsen.de",
+    "telefon": "05131 707-509",
+    "bewerbungsportal": "https://www.garbsen.de/rathaus/aktuelles/karriereportal/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Haushalt und Controlling, Stadt Garbsen (interamt.de/koop/app/stelle?id=1495160, abgerufen 07.10.2026)",
+    "Einwohnerzahl, Stadtrechte, Stadtteile, Mittelzentrum, Campus Maschinenbau: de.wikipedia.org/wiki/Garbsen (abgerufen 07.10.2026)"
+  ]
+}

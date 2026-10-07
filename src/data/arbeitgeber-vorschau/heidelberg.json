@@ -1,0 +1,73 @@
+{
+  "slug": "heidelberg",
+  "name": "Landkreis Rhein-Neckar-Kreis",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 559097,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Manuel Just",
+  "token": "8336b60a920f1ac4",
+  "claim": "Im bevölkerungsreichsten Landkreis Baden-Württembergs große Themen gemeinsam angehen.",
+  "beschreibung": "Der Rhein-Neckar-Kreis ist der bevölkerungsreichste Landkreis Baden-Württembergs und gehört zur Metropolregion Rhein-Neckar; Sitz der Kreisverwaltung ist Heidelberg. Das Landratsamt zählt mit 26 Ämtern und Stabsstellen an über zehn Standorten und mehr als 2.300 Mitarbeitenden zu den größten kommunalen Arbeitgebern der Region. Aufgaben reichen von Sozialem über Technik bis zur Verwaltung, aktuell mit Schwerpunkten wie Organisationsentwicklung, Digitalisierung und Haushaltskonsolidierung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "559.097",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende",
+      "wert": "über 2.300",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Kreisangehörige Gemeinden",
+      "wert": "54",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Bevölkerungsreichster Landkreis Baden-Württembergs",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Arbeitszeitrahmen von 6 bis 20 Uhr sowie Home-Office und mobiles Arbeiten."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Teilzeitmodelle, Eltern-Kind-Zimmer und Betreuung in den Sommerferien."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bezuschusstes Deutschlandticket, Fahrrad- und E-Bike-Leasing über das Gehalt sowie Diensträder."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit aktiver Pause, Sonderkonditionen bei Fitnessstudios und Präventionsprogramm."
+    },
+    {
+      "titel": "Fortbildung und Karriere",
+      "beschreibung": "Qualifizierte Weiterbildungen und Führungskräfteentwicklung."
+    },
+    {
+      "titel": "Sabbatical und Vorteilsportal",
+      "beschreibung": "Möglichkeit zum Sabbatical und Zugang zu Angeboten von über 800 Anbietern."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalamt",
+    "email": "Bewerbung@Rhein-Neckar-Kreis.de",
+    "telefon": "06221 522-1656",
+    "bewerbungsportal": "https://wir-der-kreis.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Gemeinden, Landrat, Kreissitz: de.wikipedia.org/wiki/Rhein-Neckar-Kreis (abgerufen 07.10.2026)",
+    "Benefits, Mitarbeitende, Ämter und Bewerbungspostfach: wir-der-kreis.de und wir-der-kreis.de/benefits/ (abgerufen 07.10.2026)",
+    "Kontakt Bewerbungsverfahren: Stellenausschreibung Referatsleitung Organisation & Prozessinnovation, https://interamt.de/koop/app/stelle?id=1497970 (API api.interamt.de/query/stellenangebot/1497970) (abgerufen 07.10.2026)"
+  ]
+}

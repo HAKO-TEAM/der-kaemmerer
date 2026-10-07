@@ -1,0 +1,73 @@
+{
+  "slug": "rastatt",
+  "token": "a332d9907739cc54",
+  "name": "Stadt Rastatt",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 50753,
+  "buergermeistertitel": "Oberbürgermeisterin",
+  "buergermeister": "Monika Müller",
+  "claim": "Die Barockstadt am Oberrhein mit rund 1.000 Kolleginnen und Kollegen gestalten.",
+  "beschreibung": "Rastatt ist Große Kreisstadt, Kreisstadt des gleichnamigen Landkreises und Mittelzentrum in Mittelbaden zwischen Karlsruhe und Baden-Baden. Im 18. Jahrhundert zur barocken Residenzstadt ausgebaut, prägt das Schloss bis heute das Stadtzentrum; seit 1992 ist Rastatt zudem Standort eines Mercedes-Benz-Werks. Die Stadtverwaltung beschäftigt rund 1.000 Mitarbeitende und setzt auf neue Ideen, Flexibilität und gute Kommunikation – in einer Verwaltung der kurzen Wege im Herzen der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "50.753",
+      "icon": "👥"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "rund 1.000",
+      "icon": "🏢"
+    },
+    {
+      "label": "Große Kreisstadt seit",
+      "wert": "1956",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Attraktives Arbeitszeitmodell für eine gute Vereinbarkeit; bei Bedarf ggf. Bereitstellung eines Kinderbetreuungsplatzes."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Moderne Arbeitsformen wie Telearbeit und mobiles Arbeiten."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Breitgefächerte Fort- und Weiterbildungsmöglichkeiten, auch in digitaler Form."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Diverse Angebote im Rahmen des betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket Job und Fahrradleasing."
+    },
+    {
+      "titel": "Vorteile",
+      "beschreibung": "Corporate Benefits mit Vorteilsportal, kostenlose Getränke und modern ausgestattete Arbeitsplätze in der Innenstadt."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Personal, Organisation und EDV · Kundenbereich Personal",
+    "email": "personal@rastatt.de",
+    "telefon": "07222 972-2320",
+    "bewerbungsportal": "https://www.rastatt.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Große Kreisstadt, Mittelzentrum, Geschichte, Oberbürgermeisterin (seit 17.12.2023): de.wikipedia.org/wiki/Rastatt (abgerufen 07.10.2026)",
+    "Beschäftigtenzahl, Benefits, Kontakt: Stellenausschreibung Leitung des Kundenbereichs Bürgerbüro, Stadt Rastatt, interamt.de/koop/app/stelle?id=1498208 (abgerufen 07.10.2026)",
+    "Karriereseite: rastatt.de/karriere (abgerufen 07.10.2026)"
+  ]
+}
