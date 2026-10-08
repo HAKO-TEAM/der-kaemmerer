@@ -52,6 +52,9 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
 .sp-cta { margin:40px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:30px; display:grid; grid-template-columns:1.4fr 1fr; gap:24px; align-items:center; }
 .sp-cta h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 8px; font-size:24px; } .sp-cta p { margin:0; color:rgba(255,255,255,.72); line-height:1.6; }
 .sp-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:12px 18px; border-radius:6px; text-decoration:none; margin:0 8px 8px 0; } .sp-btn.hell { background:#fff; color:#172840; }
+.sp-abo { display:flex; gap:8px; flex-wrap:wrap; } .sp-abo input { flex:1; min-width:200px; padding:12px; border-radius:6px; border:0; font:inherit; }
+.sp-abo .sp-btn { margin:0; border:0; cursor:pointer; font:inherit; font-weight:700; }
+.sp-ok { color:#bbf7d0; margin:6px 0 0 !important; } .sp-mini { display:inline-block; margin-top:12px; color:#93c5fd; font-size:14px; text-decoration:none; }
 @media (max-width:820px){ .sp-w{padding:0 16px} .sp-kpis{grid-template-columns:repeat(2,1fr)} .sp-zwei,.sp-cta{grid-template-columns:1fr} }
 </style>
 
@@ -114,9 +117,28 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
 
     <div class="sp-cta">
       <div><h2>Jeden Monat neu – im Kämmerer-Briefing</h2><p>Der Kämmerer ist das unabhängige Briefing für kommunale Entscheider: werbefrei, auf den Punkt. Mit dem Briefing erhalten Sie diesen Lagebericht für {g.name} monatlich aktualisiert.</p></div>
-      <div><a class="sp-btn hell" href="/newsletter/#anmelden">Briefing abonnieren</a><a class="sp-btn" href="/kaemmerer-cockpit/">Kämmerer-Cockpit ansehen</a></div>
+      <div>
+        <form id="sp-abo" class="sp-abo">
+          <input type="email" id="sp-mail" required placeholder="Ihre dienstliche E-Mail">
+          <button class="sp-btn hell" type="submit">Briefing abonnieren</button>
+        </form>
+        <p id="sp-ok" class="sp-ok" hidden>Fast geschafft: Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail, die wir Ihnen gerade geschickt haben.</p>
+        <a class="sp-mini" href="/kaemmerer-cockpit/">Kämmerer-Cockpit ansehen →</a>
+      </div>
     </div>
   </div>
 </div>
+<script define:vars={{ token, kommune: g.name, ags: g.ags }}>
+  document.getElementById('sp-abo')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('sp-mail').value;
+    const btn = e.target.querySelector('button'); btn.disabled = true;
+    try {
+      await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, lagebericht: token, kommune, ags }) });
+      e.target.hidden = true; document.getElementById('sp-ok').hidden = false;
+    } catch { btn.disabled = false; }
+  });
+</script>
 <Footer />
 </Base>
