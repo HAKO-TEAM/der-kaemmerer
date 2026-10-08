@@ -9,6 +9,7 @@ const nav = [
   { href: '/analyse',      label: 'Analyse' },
   { href: '/sozialkosten', label: 'Sozialkosten' },
   { href: '/stellen', label: 'Stellenbörse' },
+  { href: '/arbeitgeberservice', label: 'Arbeitgeberservice' },
 ];
 const currentPath = Astro.url.pathname;
 
@@ -34,8 +35,8 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
   .btn:hover{background:#0f3460}
 
   /* ── Desktop Nav ── */
-  nav{display:flex;gap:0}
-  nav a{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#374151;padding:9px 10px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
+  nav{display:flex;gap:0;justify-content:space-between}
+  nav a{font-size:11px;font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#374151;padding:9px 6px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
   nav a:hover,nav a.active{color:#3b82f6;border-color:#3b82f6}
 
   /* ── Hamburger Button (nur Mobile) ── */

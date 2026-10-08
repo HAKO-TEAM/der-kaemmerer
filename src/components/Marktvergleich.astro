@@ -1,0 +1,87 @@
+---
+// „Diese Stelle im Marktvergleich“ – öffentliche Bewerbersicht auf jeder Stellenseite.
+import markt from '../data/markt/markt.json';
+import { stelleAusAnzeige, marktKontext } from '../lib/markt/anzeige.mjs';
+
+const { d, body } = Astro.props;
+const s = stelleAusAnzeige(d, body, markt);
+const m = marktKontext(s, markt);
+const nt = m.niveauText;
+const pz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
+const lo = 4, hi = 16;
+const x = (v: number) => ((Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo)) * 100;
+const zeigen = m.anzahl >= 8;
+const entgeltSatz = m.n == null || m.median == null ? null
+  : m.n > m.median + 0.2 ? `Höher eingruppiert als die Mehrheit: ${pz(m.anteilDarunter)} der Vergleichsstellen liegen darunter.`
+  : m.n < m.median - 0.2 ? `Die Mehrzahl der Vergleichsstellen ist höher eingruppiert (Median ${nt(m.median)}).`
+  : `Im Rahmen des Marktes – der Median der Vergleichsstellen liegt bei ${nt(m.median)}.`;
+---
+{zeigen && (
+<section class="mv">
+  <div class="mv-kopf">
+    <span class="mv-k">Marktvergleich</span>
+    <h2>Diese Stelle im Vergleich mit {m.anzahl} ähnlichen kommunalen Stellen</h2>
+    <p>{m.feld} · {m.gruppe} · Stand: {new Date(markt.kopf.stand).toLocaleDateString('de-DE')}</p>
+  </div>
+
+  {m.n != null && m.p25 != null && (
+    <div class="mv-block">
+      <div class="mv-l">Entgelt</div>
+      <div class="mv-band">
+        <div class="mv-linie"></div>
+        <div class="mv-mitte" style={`left:${x(m.p25)}%;width:${Math.max(1, x(m.p75) - x(m.p25))}%`}></div>
+        <div class="mv-med" style={`left:${x(m.median)}%`}><span style={x(m.median) > 85 ? "transform:translateX(-100%)" : ""}>Median {nt(m.median)}</span></div>
+        <div class="mv-hier" style={`left:${x(m.n)}%`}><span style={x(m.n) > 82 ? "left:auto;right:-6px;transform:none" : x(m.n) < 18 ? "left:-6px;transform:none" : ""}>diese Stelle: {nt(m.n)}</span></div>
+      </div>
+      <div class="mv-skala"><span>EG 4</span><span>EG 8</span><span>EG 12</span><span>EG 16</span></div>
+      {entgeltSatz && <p class="mv-satz">{entgeltSatz}</p>}
+    </div>
+  )}
+
+  <div class="mv-zahlen">
+    <div><b>{pz(m.homeoffice)}</b><span>der Vergleichsstellen bieten Homeoffice{m.hierHomeoffice ? ' – diese Stelle auch' : ''}</span></div>
+    <div><b>{pz(m.befristet)}</b><span>der Vergleichsstellen sind befristet</span></div>
+    {m.umkreis != null && <div><b>{m.umkreis}</b><span>vergleichbare Stellen anderer Arbeitgeber im Umkreis von 50 km</span></div>}
+  </div>
+
+  <div class="mv-block">
+    <div class="mv-l">Häufigste Arbeitgeberleistungen in vergleichbaren Ausschreibungen</div>
+    <div class="mv-leist">
+      {m.top.map((t) => (
+        <div class="mv-zl"><span class={t.hier ? 'ja' : ''}>{t.hier ? '✓ ' : ''}{t.name}</span><i><em style={`width:${t.anteil * 100}%`}></em></i><small>{pz(t.anteil)}</small></div>
+      ))}
+    </div>
+    <p class="mv-fuss">✓ = in dieser Ausschreibung genannt. Ermittelt aus öffentlich ausgeschriebenen kommunalen Stellen mit dem <a href="/arbeitgeberservice/#personal-cockpit">Personal-Cockpit</a> von Der Kämmerer. Entgelt als TVöD-Äquivalent.</p>
+  </div>
+</section>
+)}
+
+<style>
+.mv { margin:36px 0 8px; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#fff; }
+.mv-kopf { background:#172840; color:#fff; padding:18px 22px; }
+.mv-k { font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#93c5fd; }
+.mv-kopf h2 { font-size:18px; margin:6px 0 4px; color:#fff; line-height:1.3; }
+.mv-kopf p { margin:0; font-size:12.5px; color:rgba(255,255,255,.6); }
+.mv-block { padding:18px 22px; border-top:1px solid #f1f5f9; }
+.mv-l { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#64748b; margin-bottom:10px; }
+.mv-band { position:relative; height:54px; }
+.mv-linie { position:absolute; left:0; right:0; top:26px; height:6px; background:#e2e8f0; border-radius:3px; }
+.mv-mitte { position:absolute; top:22px; height:14px; background:#bfdbfe; border-radius:4px; }
+.mv-med { position:absolute; top:16px; width:2px; height:26px; background:#1e40af; }
+.mv-med span { position:absolute; top:-16px; transform:translateX(-50%); font-size:11px; color:#1e40af; white-space:nowrap; }
+.mv-hier { position:absolute; top:19px; width:20px; height:20px; margin-left:-10px; border-radius:50%; background:#172840; border:3px solid #fff; box-shadow:0 0 0 1px #172840; }
+.mv-hier span { position:absolute; top:24px; left:50%; transform:translateX(-50%); font-size:11px; font-weight:700; white-space:nowrap; color:#0f172a; }
+.mv-skala { display:flex; justify-content:space-between; font-size:10px; color:#94a3b8; margin-top:10px; }
+.mv-satz { margin:10px 0 0; font-size:14px; color:#334155; }
+.mv-zahlen { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#f1f5f9; border-top:1px solid #f1f5f9; }
+.mv-zahlen div { background:#fff; padding:14px 18px; }
+.mv-zahlen b { display:block; font-size:22px; color:#172840; font-variant-numeric:tabular-nums; }
+.mv-zahlen span { font-size:12.5px; color:#475569; }
+.mv-leist { list-style:none; margin:0 !important; padding:0 !important; display:grid; gap:7px; }
+.mv-zl { display:grid; grid-template-columns:1fr 120px 44px; gap:10px; align-items:center; font-size:13.5px; }
+.mv-leist .ja { font-weight:700; color:#15803d; }
+.mv-leist i { display:block; height:7px; background:#e2e8f0; border-radius:4px; overflow:hidden; } .mv-leist em { display:block; height:100%; background:#2563eb; }
+.mv-leist small { text-align:right; color:#64748b; font-variant-numeric:tabular-nums; }
+.mv-fuss { margin:12px 0 0; font-size:12px; color:#64748b; } .mv-fuss a { color:#2563eb; }
+@media (max-width:700px) { .mv-zahlen { grid-template-columns:1fr; } .mv-zl { grid-template-columns:1fr 70px 40px; } }
+</style>

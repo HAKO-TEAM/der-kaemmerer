@@ -1,0 +1,111 @@
+---
+// Arbeitgeberservice – alles für Kommunen als Arbeitgeber an einem Ort.
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import markt from '../data/markt/markt.json';
+import { ueberblick, niveauText } from '../lib/markt/benchmark.mjs';
+import { getCollection } from 'astro:content';
+
+const u = ueberblick(markt.stellen);
+const pz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
+const heute = new Date(); heute.setHours(0, 0, 0, 0);
+const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute);
+const profile = Object.values(import.meta.glob('../data/arbeitgeber/*.json', { eager: true, import: 'default' })) as any[];
+---
+<Base title="Arbeitgeberservice für Kommunen – Stellen, Personal-Cockpit, Arbeitgeberprofil"
+  description={`Arbeitgeberservice von Der Kämmerer: KommunalFlat, Personal-Cockpit mit Marktvergleich gegen ${u.anzahl.toLocaleString('de-DE')} kommunale Stellen und eigenes Arbeitgeberprofil.`}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.as { color:#0f172a; } .as-w { max-width:1120px; margin:0 auto; padding:0 32px; }
+.as-hero { background:radial-gradient(1000px 360px at 90% -20%, rgba(37,99,235,.35), transparent 60%), #172840; color:#fff; padding:60px 0 50px; border-bottom:3px solid #2563eb; }
+.as-k { font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#93c5fd; }
+.as-hero h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,4.6vw,52px); line-height:1.08; margin:12px 0 14px; max-width:20ch; }
+.as-hero p { font-size:17px; color:rgba(255,255,255,.72); max-width:60ch; margin:0; }
+.as-zahlen { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.12); border-radius:8px; overflow:hidden; margin-top:34px; }
+.as-zahlen div { background:rgba(15,25,45,.6); padding:16px; } .as-zahlen b { display:block; font-size:26px; font-variant-numeric:tabular-nums; } .as-zahlen span { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.55); }
+.as-raster { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin:44px 0; }
+.as-karte { border:1px solid #e2e8f0; border-radius:12px; padding:26px; background:#fff; box-shadow:0 14px 34px -28px rgba(15,23,42,.55); display:flex; flex-direction:column; }
+.as-karte.gross { grid-column:1 / -1; display:grid; grid-template-columns:1.3fr 1fr; gap:28px; align-items:center; background:linear-gradient(135deg,#eff6ff,#fff); border-color:#bfdbfe; }
+.as-nr { font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#2563eb; }
+.as-karte h2 { font-family:'Playfair Display',Georgia,serif; font-size:26px; margin:8px 0 10px; }
+.as-karte p { color:#334155; font-size:15px; line-height:1.6; margin:0 0 14px; }
+.as-karte ul { margin:0 0 18px; padding-left:18px; color:#334155; font-size:14.5px; line-height:1.7; }
+.as-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:12px 18px; border-radius:8px; text-decoration:none; margin-top:auto; align-self:flex-start; }
+.as-btn.navy { background:#172840; } .as-link { color:#2563eb; font-weight:700; text-decoration:none; margin-left:14px; }
+.as-mini { background:#172840; color:#fff; border-radius:10px; padding:20px; }
+.as-mini div { display:flex; justify-content:space-between; font-size:13px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,.1); } .as-mini div:last-child { border:0; }
+.as-mini b { font-variant-numeric:tabular-nums; } .as-mini span { color:rgba(255,255,255,.65); }
+.as-profile { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; } .as-profile a { border:1px solid #cbd5e1; border-radius:20px; padding:5px 12px; font-size:13px; color:#172840; text-decoration:none; font-weight:600; }
+@media (max-width:860px){ .as-w{padding:0 16px} .as-zahlen{grid-template-columns:repeat(2,1fr)} .as-raster{grid-template-columns:1fr} .as-karte.gross{grid-template-columns:1fr} }
+</style>
+
+<div class="as">
+  <section class="as-hero"><div class="as-w">
+    <div class="as-k">Arbeitgeberservice · Der Kämmerer</div>
+    <h1>Für Kommunen, die Fachkräfte gewinnen wollen.</h1>
+    <p>Stellen veröffentlichen, gegen den gesamten kommunalen Stellenmarkt vergleichen und als Arbeitgeber sichtbar werden – alles aus einer Hand, werbefrei im redaktionellen Umfeld für kommunale Fach- und Führungskräfte.</p>
+    <div class="as-zahlen">
+      <div><b>{jobs.length.toLocaleString('de-DE')}</b><span>Stellen in unserer Stellenbörse</span></div>
+      <div><b>{u.anzahl.toLocaleString('de-DE')}</b><span>Kommunale Stellen im Marktvergleich</span></div>
+      <div><b>{u.arbeitgeber.toLocaleString('de-DE')}</b><span>Kommunale Arbeitgeber erfasst</span></div>
+      <div><b>{pz(u.kz.homeoffice)}</b><span>Stellen mit Homeoffice</span></div>
+    </div>
+  </div></section>
+
+  <div class="as-w">
+    <div class="as-raster">
+      <article class="as-karte gross" id="personal-cockpit">
+        <div>
+          <span class="as-nr">Personal-Cockpit · exklusiv in der KommunalFlat</span>
+          <h2>Ihre Stelle gegen den gesamten Markt.</h2>
+          <p>Jede Ausschreibung im Vergleich mit {u.anzahl.toLocaleString('de-DE')} aktiven kommunalen Stellen: Entgelt, Arbeitgeberleistungen, Homeoffice, Befristung und Wettbewerb im Umkreis von 50 km. Dazu eine Einschätzung der Marktposition, konkrete Hebel – und auf Wunsch ein überarbeiteter Ausschreibungstext.</p>
+          <a class="as-btn" href="https://personal.derkaemmerer.de/">Personal-Cockpit ansehen</a>
+        </div>
+        <div class="as-mini">
+          <div><span>Median-Entgelt im Markt</span><b>{niveauText(u.kz.niveau.median)}</b></div>
+          <div><span>Stellen mit Homeoffice</span><b>{pz(u.kz.homeoffice)}</b></div>
+          <div><span>Befristete Stellen</span><b>{pz(u.kz.befristet)}</b></div>
+          {u.top.slice(0, 3).map((t) => <div><span>{t.name}</span><b>{pz(t.anteil)}</b></div>)}
+        </div>
+      </article>
+
+      <article class="as-karte">
+        <span class="as-nr">KommunalFlat · 249 € im Monat</span>
+        <h2>Alle Ihre Stellen. Ganz oben.</h2>
+        <ul>
+          <li>Unbegrenzt viele Ausschreibungen, als Partner gekennzeichnet ganz oben in der Stellenbörse</li>
+          <li>Ihre Ausschreibungen auf interamt.de übernehmen wir automatisch</li>
+          <li>Eigenes Arbeitgeberprofil und Personal-Cockpit inklusive</li>
+          <li>Zwölf Monate, als Direktauftrag vergebbar</li>
+        </ul>
+        <a class="as-btn" href="/stellenanzeigen">KommunalFlat im Detail</a>
+      </article>
+
+      <article class="as-karte">
+        <span class="as-nr">Stelle aufgeben</span>
+        <h2>In Minuten online.</h2>
+        <p>Ausschreibung über das Formular einreichen – mit der KommunalFlat ist sie sofort freigeschaltet und am selben Tag in der Stellenbörse und in der Google-Jobsuche.</p>
+        <a class="as-btn navy" href="/anzeige-aufgeben">Anzeige aufgeben</a>
+      </article>
+
+      <article class="as-karte">
+        <span class="as-nr">Arbeitgeberprofile</span>
+        <h2>Ihre Kommune als Arbeitgeber.</h2>
+        <p>Ein eigenes Profil mit Kennzahlen, Leistungen und allen offenen Stellen – verlinkt aus jeder Ihrer Anzeigen.</p>
+        <div class="as-profile">{profile.map((p) => <a href={`/arbeitgeber/${p.slug}/`}>{p.name}</a>)}</div>
+        <a class="as-btn navy" href="/arbeitgeber/">Alle Arbeitgeberprofile</a>
+      </article>
+
+      <article class="as-karte">
+        <span class="as-nr">Bereits Partner?</span>
+        <h2>Ihr Zugang.</h2>
+        <p>Den persönlichen Link zu Ihrem Personal-Cockpit haben Sie mit der Buchungsbestätigung erhalten. Neuen Zugang oder Fragen gern an <a href="mailto:service@derkaemmerer.de">service@derkaemmerer.de</a> oder kostenfrei unter 0800 1480 450 100.</p>
+        <a class="as-btn navy" href="mailto:service@derkaemmerer.de?subject=Zugang%20Personal-Cockpit">Zugang anfragen</a>
+      </article>
+    </div>
+  </div>
+</div>
+<Footer />
+</Base>

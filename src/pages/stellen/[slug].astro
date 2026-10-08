@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import JobPostingSchema from '../../components/JobPostingSchema.astro';
+import Marktvergleich from '../../components/Marktvergleich.astro';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -207,6 +208,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
       <!-- Anzeigentext -->
       <div class="sj-content">
         <Content />
+        <Marktvergleich d={d} body={job.body} />
       </div>
 
       <!-- Sidebar -->

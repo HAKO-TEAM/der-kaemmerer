@@ -5,6 +5,10 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import markt from '../../data/markt/markt.json';
+import { ueberblick, niveauText } from '../../lib/markt/benchmark.mjs';
+const mu = ueberblick(markt.stellen);
+const mpz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
 
 const dataDir = join(process.cwd(), 'src/data/arbeitgeber');
 const dossiers = readdirSync(dataDir)
@@ -160,16 +164,16 @@ const jobs = rawJobs.map(job => {
     <p>Aktuelle Stellen in Kämmerei, Jugendamt und kommunaler Führung — gezielt für Fachkräfte im öffentlichen Dienst.</p>
     <div class="st-hero-stats">
       <div class="st-hero-stat">
-        <span class="n">~8.500</span>
-        <span class="l">Fachkräfte &amp; Führungspersönlichkeiten</span>
+        <span class="n">{jobs.length.toLocaleString('de-DE')}</span>
+        <span class="l">ausgewählte Stellen · täglich neue</span>
       </div>
       <div class="st-hero-stat">
-        <span class="n">11.000+</span>
-        <span class="l">Kommunen Deutschland</span>
+        <span class="n">{mu.anzahl.toLocaleString('de-DE')}</span>
+        <span class="l">kommunale Stellen im Marktvergleich</span>
       </div>
       <div class="st-hero-stat">
-        <span class="n">täglich</span>
-        <span class="l">neue Ausschreibungen</span>
+        <span class="n">{mpz(mu.kz.homeoffice)}</span>
+        <span class="l">mit Homeoffice · Median {niveauText(mu.kz.niveau.median)}</span>
       </div>
     </div>
   </div>
@@ -204,9 +208,9 @@ const jobs = rawJobs.map(job => {
     <div class="st-cta">
       <div>
         <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b82f6;margin-bottom:6px">Für Arbeitgeber</p>
-        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Erreichen Sie qualifizierte Fachkräfte und Führungspersönlichkeiten im kommunalen Umfeld — KommunalFlat ab 249 € / Monat, unlimitiert.</p>
+        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Stellen veröffentlichen, mit dem Personal-Cockpit gegen den Markt vergleichen, als Arbeitgeber sichtbar werden – im Arbeitgeberservice.</p>
       </div>
-      <a href="/anzeige-aufgeben" class="st-cta-btn">Jetzt Anzeige aufgeben →</a>
+      <a href="/arbeitgeberservice/" class="st-cta-btn">Zum Arbeitgeberservice →</a>
     </div>
 
     <div class="st-count" id="jobCount">{jobs.length} {jobs.length === 1 ? 'Stelle' : 'Stellen'} gefunden</div>
@@ -257,8 +261,8 @@ const jobs = rawJobs.map(job => {
 
     <!-- CTA für Arbeitgeber – unten -->
     <div class="st-cta">
-      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Schalten Sie jetzt Ihre kommunale Stellenanzeige — KommunalFlat ab 249 € / Monat – unlimitiert, innerhalb von 24 Stunden live.</p>
-      <a href="/anzeige-aufgeben" class="st-cta-btn">Anzeige aufgeben →</a>
+      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Mit der KommunalFlat sind alle Ihre Ausschreibungen sofort online – inklusive Personal-Cockpit und Arbeitgeberprofil.</p>
+      <a href="/arbeitgeberservice/" class="st-cta-btn">Arbeitgeberservice →</a>
     </div>
   </div>
 </div>
