@@ -28,7 +28,7 @@ for (const ags of process.argv.slice(2)) {
   // Betreff: stärkste persönliche Zahl
   let betreff;
   if (h.eigeneSperre) betreff = `${g.name} und ${h.imLand - 1} weitere Kommunen in ${land} mit Haushaltssperre – Ihr Lagebericht KW ${kw}`;
-  else if (p.finanz >= 3) betreff = `${g.name}: ${p.finanz} Kommunen im Umkreis suchen Finanzpersonal – Ihr Lagebericht KW ${kw}`;
+  else if (p.finanz >= 3) betreff = `${g.name}: ${p.finanz} offene Finanzstellen anderer Kommunen im Umkreis – Ihr Lagebericht KW ${kw}`;
   else if (auffaelligerRang) betreff = `${g.name}: Grundsteuer B ${gb.wert} %, Rang ${gb.rangLand.platz} von ${gb.rangLand.von} in ${land} – Ihr Lagebericht KW ${kw}`;
   else betreff = `${g.name}: Personal- und Haushaltslage – Ihr Lagebericht KW ${kw}`;
 
