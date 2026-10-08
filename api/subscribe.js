@@ -12,11 +12,22 @@ export function signatur(email, list, key) {
 
 async function attributeSicherstellen(KEY) {
   if (attributeAngelegt) return;
-  await Promise.all(ATTRIBUTE.map((name) => fetch(`https://api.brevo.com/v3/contacts/attributes/normal/${name}`, {
+  const antworten = await Promise.all(ATTRIBUTE.map((name) => fetch(`https://api.brevo.com/v3/contacts/attributes/normal/${name}`, {
     method: 'POST', headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
     body: JSON.stringify({ type: 'text' }),
   }).catch(() => null)));   // existiert das Merkmal bereits, antwortet Brevo mit 400 – das ist gewollt
+  // Frisch angelegte Merkmale kennt Brevo erst nach kurzer Zeit; Werte würden sonst stillschweigend verworfen
+  if (antworten.some((r) => r && r.ok)) await new Promise((ok) => setTimeout(ok, 3000));
   attributeAngelegt = true;
+}
+
+async function kontaktSchreiben(KEY, email, attributes) {
+  const r = await fetch('https://api.brevo.com/v3/contacts', {
+    method: 'POST',
+    headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
+    body: JSON.stringify({ email, attributes, updateEnabled: true }),
+  });
+  if (!r.ok && r.status !== 204) console.error('Brevo contact error:', r.status, await r.text());
 }
 
 export default async function handler(req, res) {
@@ -40,11 +51,7 @@ export default async function handler(req, res) {
   try {
     await attributeSicherstellen(KEY);
     // Schritt 1: Kontakt anlegen bzw. ergänzen (noch nicht in der Liste)
-    await fetch('https://api.brevo.com/v3/contacts', {
-      method: 'POST',
-      headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
-      body: JSON.stringify({ email, attributes, updateEnabled: true }),
-    });
+    await kontaktSchreiben(KEY, email, attributes);
     // Schritt 2: Bestätigungs-E-Mail – Link mit Prüfsumme, damit niemand fremde Adressen eintragen kann
     const sig = signatur(email, LIST_ID, KEY);
     const r = await fetch('https://api.brevo.com/v3/smtp/email', {
