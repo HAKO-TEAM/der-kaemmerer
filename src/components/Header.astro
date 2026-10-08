@@ -29,12 +29,16 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
   .logo{font-size:30px;font-weight:800;color:#1a2744;letter-spacing:-.03em;line-height:1}
   .logo .a{color:#3b82f6}
   .tagline{font-size:10px;font-weight:600;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
-  .masthead-right{display:flex;align-items:center;gap:16px}
+  .masthead-right{display:flex;align-items:center;gap:14px}
+  .mh-stack{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .mh-datum{font-size:10px;font-weight:600;color:#6b7280;letter-spacing:.1em;text-transform:uppercase}
+  .mh-btns{display:flex;gap:8px}
   .pill{background:#eff6ff;border:1px solid #93c5fd;border-radius:4px;padding:4px 10px;font-size:10px;font-weight:700;color:#1a2744;letter-spacing:.06em;text-transform:uppercase}
-  .btn-cockpit{border:1.5px solid #1a2744;color:#1a2744;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:3px;white-space:nowrap;transition:background .15s,color .15s}
+  .btn-cockpit,.btn{display:inline-flex;align-items:center;height:34px;box-sizing:border-box;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:0 16px;border-radius:4px;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
+  .btn-cockpit{border:1.5px solid #1a2744;color:#1a2744;background:#fff}
   .btn-cockpit:hover{background:#1a2744;color:#fff}
-  .btn{background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:background .15s}
-  .btn:hover{background:#0f3460}
+  .btn{border:1.5px solid #3b82f6;background:#3b82f6;color:#fff}
+  .btn:hover{background:#1a2744;border-color:#1a2744}
 
   /* ── Desktop Nav ── */
   nav{display:flex;gap:0;justify-content:space-between}
@@ -87,6 +91,7 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
     .logo{font-size:22px}
     .tagline{display:none}
     .pill{display:none}
+    .mh-datum{display:none}
     .btn{display:none}          /* Abonnieren-Button → im Mobile-Menu */
     nav{display:none}           /* Desktop-Nav ausblenden */
     .burger{display:flex}       /* Hamburger einblenden */
@@ -112,9 +117,13 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
         <div class="tagline">Das unabhängige Briefing für kommunale Entscheider</div>
       </div>
       <div class="masthead-right">
-        <span class="pill" id="ausgabe-datum">{aktuellesDatum}</span>
-        <a href="/kaemmerer-cockpit/" class="btn-cockpit">Kämmerer-Cockpit</a>
-        <a href="/newsletter/#anmelden" class="btn">Abonnieren</a>
+        <div class="mh-stack">
+          <span class="mh-datum" id="ausgabe-datum">{aktuellesDatum}</span>
+          <div class="mh-btns">
+            <a href="/kaemmerer-cockpit/" class="btn-cockpit">Kämmerer-Cockpit</a>
+            <a href="/newsletter/#anmelden" class="btn">Abonnieren</a>
+          </div>
+        </div>
         <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
           <span></span>
           <span></span>
