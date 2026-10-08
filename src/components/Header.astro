@@ -31,6 +31,8 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
   .tagline{font-size:10px;font-weight:600;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
   .masthead-right{display:flex;align-items:center;gap:16px}
   .pill{background:#eff6ff;border:1px solid #93c5fd;border-radius:4px;padding:4px 10px;font-size:10px;font-weight:700;color:#1a2744;letter-spacing:.06em;text-transform:uppercase}
+  .btn-cockpit{border:1.5px solid #1a2744;color:#1a2744;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:3px;white-space:nowrap;transition:background .15s,color .15s}
+  .btn-cockpit:hover{background:#1a2744;color:#fff}
   .btn{background:#3b82f6;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:background .15s}
   .btn:hover{background:#0f3460}
 
@@ -90,6 +92,7 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
     .burger{display:flex}       /* Hamburger einblenden */
   }
   @media(max-width:480px){
+    .btn-cockpit{display:none}
     .topbar .topbar-extra{display:none}
     .logo{font-size:20px}
   }
@@ -110,6 +113,7 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
       </div>
       <div class="masthead-right">
         <span class="pill" id="ausgabe-datum">{aktuellesDatum}</span>
+        <a href="/kaemmerer-cockpit/" class="btn-cockpit">Kämmerer-Cockpit</a>
         <a href="/#newsletter" class="btn">Abonnieren</a>
         <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
           <span></span>
@@ -132,6 +136,7 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
         <a href={n.href} class={currentPath.startsWith(n.href) ? 'active' : ''}>{n.label}</a>
       ))}
       <div class="m-divider"></div>
+      <a href="/kaemmerer-cockpit/" class="m-btn" style="background:#1a2744">Kämmerer-Cockpit</a>
       <a href="/#newsletter" class="m-btn">Newsletter abonnieren</a>
     </div>
   </div>
