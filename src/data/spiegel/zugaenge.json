@@ -16,5 +16,250 @@
   "ags": "05762024",
   "kommune": "Marienmünster",
   "beispiel": true
+ },
+ {
+  "token": "d1f96a69255b6723",
+  "ags": "05111000",
+  "kommune": "Düsseldorf"
+ },
+ {
+  "token": "5765852c275cb41a",
+  "ags": "05911000",
+  "kommune": "Bochum"
+ },
+ {
+  "token": "dd236fa6574f8771",
+  "ags": "08222000",
+  "kommune": "Mannheim"
+ },
+ {
+  "token": "4f15fb6f52d7fd04",
+  "ags": "05515000",
+  "kommune": "Münster"
+ },
+ {
+  "token": "e0bfc5e321c87647",
+  "ags": "05116000",
+  "kommune": "Mönchengladbach"
+ },
+ {
+  "token": "f83c7f747a18c707",
+  "ags": "09161000",
+  "kommune": "Ingolstadt"
+ },
+ {
+  "token": "155cfdedadbd5c94",
+  "ags": "09563000",
+  "kommune": "Fürth"
+ },
+ {
+  "token": "525c08534f6589b8",
+  "ags": "05358008",
+  "kommune": "Düren"
+ },
+ {
+  "token": "95cfa7b41189fcb8",
+  "ags": "08118048",
+  "kommune": "Ludwigsburg"
+ },
+ {
+  "token": "9aee650cf40d6dba",
+  "ags": "08335043",
+  "kommune": "Konstanz"
+ },
+ {
+  "token": "679f3446b09239a5",
+  "ags": "05158032",
+  "kommune": "Velbert"
+ },
+ {
+  "token": "d8799f61820403fe",
+  "ags": "05566076",
+  "kommune": "Rheine"
+ },
+ {
+  "token": "5aaa079cbf6770e8",
+  "ags": "05562012",
+  "kommune": "Dorsten"
+ },
+ {
+  "token": "247d2a9119d4dc33",
+  "ags": "05766020",
+  "kommune": "Detmold"
+ },
+ {
+  "token": "3f9f53afc664e0a0",
+  "ags": "09661000",
+  "kommune": "Aschaffenburg"
+ },
+ {
+  "token": "d7072685b41d4622",
+  "ags": "05974028",
+  "kommune": "Lippstadt"
+ },
+ {
+  "token": "d3c6bbed825c1ca9",
+  "ags": "05362032",
+  "kommune": "Kerpen"
+ },
+ {
+  "token": "8a56d55a4daa9967",
+  "ags": "09163000",
+  "kommune": "Rosenheim"
+ },
+ {
+  "token": "46aa0bab13bd9a9d",
+  "ags": "08136065",
+  "kommune": "Schwäbisch Gmünd"
+ },
+ {
+  "token": "9a5f5dd33d5625aa",
+  "ags": "05162004",
+  "kommune": "Dormagen"
+ },
+ {
+  "token": "5b5adb2bded2646e",
+  "ags": "08317096",
+  "kommune": "Offenburg"
+ },
+ {
+  "token": "d44fd721847d7cd7",
+  "ags": "09775135",
+  "kommune": "Neu-Ulm"
+ },
+ {
+  "token": "f080d235ec7ae53a",
+  "ags": "05362008",
+  "kommune": "Bergheim"
+ },
+ {
+  "token": "37448dd3b0b2fc53",
+  "ags": "05362028",
+  "kommune": "Hürth"
+ },
+ {
+  "token": "d3ddafa1ed322464",
+  "ags": "08115045",
+  "kommune": "Sindelfingen"
+ },
+ {
+  "token": "7013ae58e0e703a0",
+  "ags": "03241005",
+  "kommune": "Garbsen"
+ },
+ {
+  "token": "d514d235710af5a9",
+  "ags": "05366016",
+  "kommune": "Euskirchen"
+ },
+ {
+  "token": "b22e4d919d02d971",
+  "ags": "08117026",
+  "kommune": "Göppingen"
+ },
+ {
+  "token": "c2b1470ff29d571c",
+  "ags": "05978036",
+  "kommune": "Unna"
+ },
+ {
+  "token": "041b34b38b3131e1",
+  "ags": "05334032",
+  "kommune": "Stolberg (Rhld.)"
+ },
+ {
+  "token": "624afc89c861db67",
+  "ags": "05334012",
+  "kommune": "Eschweiler"
+ },
+ {
+  "token": "b3b40f7bf3dbf580",
+  "ags": "03456015",
+  "kommune": "Nordhorn"
+ },
+ {
+  "token": "f899b0459cad8a4f",
+  "ags": "05162022",
+  "kommune": "Meerbusch"
+ },
+ {
+  "token": "0d77e39a5e14ad0c",
+  "ags": "03454032",
+  "kommune": "Lingen (Ems)"
+ },
+ {
+  "token": "f92411f2f6a0b6b5",
+  "ags": "05362036",
+  "kommune": "Pulheim"
+ },
+ {
+  "token": "14980d330b173093",
+  "ags": "09262000",
+  "kommune": "Passau"
+ },
+ {
+  "token": "e5942c48d2eaa078",
+  "ags": "05362024",
+  "kommune": "Frechen"
+ },
+ {
+  "token": "643d16461895fdd7",
+  "ags": "05566028",
+  "kommune": "Ibbenbüren"
+ },
+ {
+  "token": "62e3ba5200d5700d",
+  "ags": "08336050",
+  "kommune": "Lörrach"
+ },
+ {
+  "token": "89ed7f6b4c4ed56b",
+  "ags": "05770004",
+  "kommune": "Bad Oeynhausen"
+ },
+ {
+  "token": "d79ee9dbeea61d26",
+  "ags": "05554020",
+  "kommune": "Gronau (Westf.)"
+ },
+ {
+  "token": "b3e94ac8947f2b1b",
+  "ags": "05166036",
+  "kommune": "Willich"
+ },
+ {
+  "token": "8be05f8a4af65520",
+  "ags": "05978004",
+  "kommune": "Bergkamen"
+ },
+ {
+  "token": "b3d8eb0c480f3ad7",
+  "ags": "09263000",
+  "kommune": "Straubing"
+ },
+ {
+  "token": "71c557f9ff08d46f",
+  "ags": "03402000",
+  "kommune": "Emden"
+ },
+ {
+  "token": "9f8b1d52f668e6b0",
+  "ags": "03359038",
+  "kommune": "Stade"
+ },
+ {
+  "token": "90f52646a720da0d",
+  "ags": "05974040",
+  "kommune": "Soest"
+ },
+ {
+  "token": "e54c33f9720302b1",
+  "ags": "03459024",
+  "kommune": "Melle"
+ },
+ {
+  "token": "d82504c9ad459fe3",
+  "ags": "05758004",
+  "kommune": "Bünde"
  }
 ]
