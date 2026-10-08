@@ -1,8 +1,8 @@
 ---
 title: "Haushaltssperre 2026: Welche Städte betroffen sind – Liste, Rechtsgrundlagen, Folgen"
-beschreibung: "33 belegte Haushaltssperren 2025/2026 von Dortmund bis Dresden, dazu acht Landkreise: was gesperrt wird, was weiterläuft und was Kämmereien jetzt tun."
+beschreibung: "36 belegte Haushaltssperren 2025/2026 von Dortmund bis Dresden, dazu acht Landkreise: was gesperrt wird, was weiterläuft und was Kämmereien jetzt tun."
 ressort: haushalt
-datum: "2026-10-06"
+datum: "2026-10-08"
 minuten: 11
 autor: Redaktion
 featured: true
@@ -55,8 +55,10 @@ Aufgenommen sind nur Fälle, die eine Haushaltssperre, Ausgabensperre oder haush
 | Chemnitz | SN | ab 01.01.2026; 5 % auf bestimmte Positionen, Ziel rund 23 Mio. € | Auflage der Landesdirektion, geplantes Defizit 100 Mio. € | [27] |
 | Ludwigsburg | BW | März 2026, Gemeinderatsbeschluss; 26 Mio. € im Ergebnishaushalt, 43 Mio. € Investitionen 2026–2029 | Gewerbesteuer voraussichtlich 85 statt 105 Mio. € | [19] |
 | Karlsruhe | BW | März 2026, Gemeinderatsbeschluss; 60 Mio. €, Stellenbesetzungsstopp seit 01.03. | Gewerbesteuerzahler fordert 51 Mio. € für 2024/25 zurück und leistet keine Vorauszahlungen | [18] |
+| Bielefeld | NRW | 08.05.2026, sofortige Wirkung | Steuerschätzung: rund 32 Mio. € weniger Steuern im laufenden Jahr, bis 2030 fast 114 Mio. € | [43] |
 | Lahr | BW | Juni 2026, sofortige Wirkung | Gewerbesteuerausfälle rund 10 Mio. € | [20] |
 | Schwerte | NRW | Juni 2026, haushaltswirtschaftliche Sperre durch den Kämmerer | Gewerbesteuer deutlich unter Ansatz, Nachtragssatzung erwartet | [13] |
+| Monheim am Rhein | NRW | gemeldet 01.07.2026, bis 30.09.2026 | Gewerbesteueransatz von 140 Mio. € könnte um bis zu ein Drittel verfehlt werden | [44] |
 | Krefeld | NRW | 09.07.2026; sämtliche Ansätze gesperrt, Einzelfreigabe | Schreiben der Bezirksregierung Düsseldorf vom 06.07.: gestiegene Fehlbeträge, Gefahr bilanzieller Überschuldung | [10] |
 | Nürnberg | BY | 29.07.2026; externer Einstellungsstopp, Projekte über 50.000 € genehmigungspflichtig | Gewerbesteuer schwächer, Sozialausgaben, Klinikum | [3][4] |
 | Neuberg | HE | Juli 2026, Gemeindevorstand; 10 % | laufende Haushaltsentwicklung | [23] |
@@ -65,6 +67,7 @@ Aufgenommen sind nur Fälle, die eine Haushaltssperre, Ausgabensperre oder haush
 | Arnsberg | NRW | 03.09.2026 | Gewerbesteuer 48 statt 74 Mio. € | [15] |
 | Bonn | NRW | 08.09.2026 | Defizitprognose 167,5 statt 123,4 Mio. € | [11] |
 | Münster | NRW | 08.09.2026 | Schlüsselzuweisungen 2027 rund 2,8 statt 95 Mio. € | [12] |
+| Unna | NRW | 09.09.2026, sofortige Wirkung | angekündigte Erhöhung der Kreisumlage, Vorausberechnung der Landeszuweisungen | [45] |
 | Gießen | HE | September 2026; rund 3,74 Mio. € | Lücke im Jugendamt rund 4,5 Mio. € | [21] |
 | Bergkamen | NRW | 22.09.2026, bis auf Weiteres | Mehraufwand im Sozial- und Pflegebereich | [14] |
 | Nidderau | HE | 23.09.2026, Magistrat; dazu Einstellungsstopp | verschärfte Finanzlage | [22] |
@@ -141,9 +144,9 @@ Die meisten Sperren laufen zum 31. Dezember 2026 aus. Die Ursachen bleiben. Mün
 <div class="warnbox">
 <div class="box-title">Stand Oktober 2026</div>
 
-- **33 belegte Fälle** in dieser Liste: 22 Städte und Gemeinden sowie 8 Landkreise mit Sperre für 2026, dazu 3 Städte mit Sperre 2025.
+- **36 belegte Fälle** in dieser Liste: 25 Städte und Gemeinden sowie 8 Landkreise mit Sperre für 2026, dazu 3 Städte mit Sperre 2025.
 - **Acht Länder** sind vertreten: Baden-Württemberg, Bayern, Berlin, Brandenburg, Hessen, Nordrhein-Westfalen, Sachsen, Sachsen-Anhalt.
-- **Schwerpunkt NRW:** 13 der 33 Fälle.
+- **Schwerpunkt NRW:** 16 der 36 Fälle.
 - **Zeitliche Häufung:** Allein zwischen dem 3. September und Anfang Oktober 2026 kamen mindestens zwölf Sperren hinzu.
 - **Aufsicht greift durch:** Im Harz und im Burgenlandkreis hat das Landesverwaltungsamt die Sperre selbst angeordnet.
 
@@ -210,3 +213,6 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 40. [§ 82 GO NRW – Vorläufige Haushaltsführung](https://lexmea.de/de/gesetz/go-nrw/82) – LexMea – abgerufen 06.10.2026
 41. [§ 81 GO NRW – Nachtragssatzung (Abs. 2 und Abs. 4)](https://lexmea.de/de/gesetz/go-nrw/81) – LexMea – abgerufen 06.10.2026
 42. [§ 76 GO NRW – Haushaltssicherungskonzept](https://lexmea.de/de/gesetz/go-nrw/76) – LexMea – abgerufen 06.10.2026
+43. [Dramatische Steuerprognose bringt Haushaltssperre für Bielefeld](https://www.radiobielefeld.de/nachrichten/am-puls-der-stadt/dramatische-steuerprognose-bringt-haushaltssperre-fuer-bielefeld.html) – Radio Bielefeld – 08.05.2026
+44. [Lob für schnelle Haushaltssperre in Monheim](https://steuerzahler.de/aktuelles/detail/lob-fuer-schnelle-haushaltssperre-in-monheim/) – Bund der Steuerzahler NRW – 01.07.2026
+45. [Eisernes Sparen ab sofort: Unnas Kämmerer verhängt Haushaltssperre](https://rundblick-unna.de/2026/09/09/eisernes-sparen-ab-sofort-unnas-kaemmerer-verhaengt-haushaltssperre/) – Rundblick Unna – 09.09.2026
