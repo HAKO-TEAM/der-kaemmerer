@@ -1,0 +1,475 @@
+{
+ "stand": "2026-10-08",
+ "faelle": [
+  {
+   "kommune": "Dresden",
+   "land": "SN",
+   "art": "26.09.2025 für das Haushaltsjahr 2026; 50 % der Aufwendungen im Ergebnishaushalt gesperrt, Förderung Dritter zu 75 % freigegeben",
+   "anlass": "ungedeckter Fehlbetrag Ende 2025 rund 64 Mio. €",
+   "quellen": [
+    "https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/09/Pm_086.php"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Dresden"
+  },
+  {
+   "kommune": "Chemnitz",
+   "land": "SN",
+   "art": "ab 01.01.2026; 5 % auf bestimmte Positionen, Ziel rund 23 Mio. €",
+   "anlass": "Auflage der Landesdirektion, geplantes Defizit 100 Mio. €",
+   "quellen": [
+    "https://www.chemnitz.de/en/news/press/press-releases/detail/continued-tight-financial-situation-requires-a-budget-freeze-for-2026-as-well"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Chemnitz"
+  },
+  {
+   "kommune": "Ludwigsburg",
+   "land": "BW",
+   "art": "März 2026, Gemeinderatsbeschluss; 26 Mio. € im Ergebnishaushalt, 43 Mio. € Investitionen 2026–2029",
+   "anlass": "Gewerbesteuer voraussichtlich 85 statt 105 Mio. €",
+   "quellen": [
+    "https://www.ludwigsburg.de/start/rathaus+und+service/artikel+in+lb+kompakt+-+gemeinderat+beschliesst+haushaltssperre.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Ludwigsburg"
+  },
+  {
+   "kommune": "Karlsruhe",
+   "land": "BW",
+   "art": "März 2026, Gemeinderatsbeschluss; 60 Mio. €, Stellenbesetzungsstopp seit 01.03.",
+   "anlass": "Gewerbesteuerzahler fordert 51 Mio. € für 2024/25 zurück und leistet keine Vorauszahlungen",
+   "quellen": [
+    "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/60-millionen-euro-haushaltssperre-beschlossen"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Karlsruhe"
+  },
+  {
+   "kommune": "Bielefeld",
+   "land": "NW",
+   "art": "08.05.2026, sofortige Wirkung",
+   "anlass": "Steuerschätzung: rund 32 Mio. € weniger Steuern im laufenden Jahr, bis 2030 fast 114 Mio. €",
+   "quellen": [
+    "https://www.radiobielefeld.de/nachrichten/am-puls-der-stadt/dramatische-steuerprognose-bringt-haushaltssperre-fuer-bielefeld.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Bielefeld"
+  },
+  {
+   "kommune": "Lahr",
+   "land": "BW",
+   "art": "Juni 2026, sofortige Wirkung",
+   "anlass": "Gewerbesteuerausfälle rund 10 Mio. €",
+   "quellen": [
+    "https://www.news-aus-baden.de/news/11626-haushaltssperrelahr-18375"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Lahr"
+  },
+  {
+   "kommune": "Schwerte",
+   "land": "NW",
+   "art": "Juni 2026, haushaltswirtschaftliche Sperre durch den Kämmerer",
+   "anlass": "Gewerbesteuer deutlich unter Ansatz, Nachtragssatzung erwartet",
+   "quellen": [
+    "https://www.schwerte.de/politik-verwaltung-mitmachstadt/verwaltung/nachrichten-presseinfos/detailansicht/stadt-schwerte-reagiert-auf-negative-finanzprognose-kaemmerer-spricht-haushaltssperre-aus"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Schwerte"
+  },
+  {
+   "kommune": "Monheim am Rhein",
+   "land": "NW",
+   "art": "gemeldet 01.07.2026, bis 30.09.2026",
+   "anlass": "Gewerbesteueransatz von 140 Mio. € könnte um bis zu ein Drittel verfehlt werden",
+   "quellen": [
+    "https://steuerzahler.de/aktuelles/detail/lob-fuer-schnelle-haushaltssperre-in-monheim/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Monheim am Rhein"
+  },
+  {
+   "kommune": "Krefeld",
+   "land": "NW",
+   "art": "09.07.2026; sämtliche Ansätze gesperrt, Einzelfreigabe",
+   "anlass": "Schreiben der Bezirksregierung Düsseldorf vom 06.07.: gestiegene Fehlbeträge, Gefahr bilanzieller Überschuldung",
+   "quellen": [
+    "https://www.krefeld.de/kaemmerer-verhaengt-haushaltssperre"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Krefeld"
+  },
+  {
+   "kommune": "Nürnberg",
+   "land": "BY",
+   "art": "29.07.2026; externer Einstellungsstopp, Projekte über 50.000 € genehmigungspflichtig",
+   "anlass": "Gewerbesteuer schwächer, Sozialausgaben, Klinikum",
+   "quellen": [
+    "https://www.nuernberg.de/presse/mitteilungen/pm_27923.html",
+    "https://www.nuernberg.de/internet/stadtportal/haushaltssperre.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Nürnberg"
+  },
+  {
+   "kommune": "Neuberg",
+   "land": "HE",
+   "art": "Juli 2026, Gemeindevorstand; 10 %",
+   "anlass": "laufende Haushaltsentwicklung",
+   "quellen": [
+    "https://erlensee-aktuell.com/2026/07/30/neuberger-gemeindevorstand-beschliesst-zehnprozentige-haushaltssperre/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Neuberg"
+  },
+  {
+   "kommune": "Lage",
+   "land": "NW",
+   "art": "August 2026; Ziel rund 1,5 Mio. €",
+   "anlass": "Erträge deutlich unter Ansatz trotz HSK",
+   "quellen": [
+    "https://www.lz.de/lippe/lage/24389909_Kein-Geld-Lages-Kaemmerer-verhaengt-eine-Haushaltssperre.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Lage"
+  },
+  {
+   "kommune": "Berlin-Neukölln (Bezirk)",
+   "land": "BE",
+   "art": "01.09.2026; Sperre nach § 41 LHO",
+   "anlass": "negativer Jahresabschluss 2026 erwartet",
+   "quellen": [
+    "https://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2026/pressemitteilung.1709403.php"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Berlin-Neukölln (Bezirk)"
+  },
+  {
+   "kommune": "Arnsberg",
+   "land": "NW",
+   "art": "03.09.2026",
+   "anlass": "Gewerbesteuer 48 statt 74 Mio. €",
+   "quellen": [
+    "https://neheim-huesten.de/2026/09/03/arnsberg-verhaengt-haushaltssperre-gewerbesteuer-bricht-um-26-millionen-euro-ein/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Arnsberg"
+  },
+  {
+   "kommune": "Bonn",
+   "land": "NW",
+   "art": "08.09.2026",
+   "anlass": "Defizitprognose 167,5 statt 123,4 Mio. €",
+   "quellen": [
+    "https://www.hausundgrund.de/verein/bonn-rhein-sieg/einnahmen-aus-grundsteuer-gingen-zurueck-kaemmerer-michael-fark-verhaengt-haushaltssperre-fuer-bonn"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Bonn"
+  },
+  {
+   "kommune": "Münster",
+   "land": "NW",
+   "art": "08.09.2026",
+   "anlass": "Schlüsselzuweisungen 2027 rund 2,8 statt 95 Mio. €",
+   "quellen": [
+    "https://www.stadt-muenster.de/stadtfinanzen"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Münster"
+  },
+  {
+   "kommune": "Unna",
+   "land": "NW",
+   "art": "09.09.2026, sofortige Wirkung",
+   "anlass": "angekündigte Erhöhung der Kreisumlage, Vorausberechnung der Landeszuweisungen",
+   "quellen": [
+    "https://rundblick-unna.de/2026/09/09/eisernes-sparen-ab-sofort-unnas-kaemmerer-verhaengt-haushaltssperre/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Unna"
+  },
+  {
+   "kommune": "Gießen",
+   "land": "HE",
+   "art": "September 2026; rund 3,74 Mio. €",
+   "anlass": "Lücke im Jugendamt rund 4,5 Mio. €",
+   "quellen": [
+    "https://www.hessenschau.de/politik/unerwartetes-finanzloch-giessen-beschliesst-sofortige-haushaltssperre-v1,giessen-haushaltssperre-100.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Gießen"
+  },
+  {
+   "kommune": "Bergkamen",
+   "land": "NW",
+   "art": "22.09.2026, bis auf Weiteres",
+   "anlass": "Mehraufwand im Sozial- und Pflegebereich",
+   "quellen": [
+    "https://rundblick-unna.de/2026/09/23/naechste-stadt-im-kreis-zieht-die-notbremse-haushaltssperre-fuer-bergkamen/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Bergkamen"
+  },
+  {
+   "kommune": "Nidderau",
+   "land": "HE",
+   "art": "23.09.2026, Magistrat; dazu Einstellungsstopp",
+   "anlass": "verschärfte Finanzlage",
+   "quellen": [
+    "https://www.nidderau.de/rathaus-service/aktuelles/pressemitteilungen/2026/sonstiges/2026-09-23-verschaerfte-sparmassnahmen/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Nidderau"
+  },
+  {
+   "kommune": "Augsburg",
+   "land": "BY",
+   "art": "September 2026 bis Jahresende",
+   "anlass": "Soziales, Bau, Personal, Jugendhilfe",
+   "quellen": [
+    "https://www.augsburg.de/aktuelles-aus-der-stadt/detail/oberbuergermeister-freund-erlaesst-haushaltsperre-fuer-2026"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Augsburg"
+  },
+  {
+   "kommune": "Dortmund",
+   "land": "NW",
+   "art": "01.10.2026, viertes Quartal",
+   "anlass": "Defizitprognose rund 206 statt 54,9 Mio. €, Gewerbesteuer rund 116 Mio. € unter Plan",
+   "quellen": [
+    "https://www.dortmund.de/newsroom/presse-mitteilungen/stadt-dortmund-verhaengt-haushaltssperre-fuer-das-vierte-quartal.html",
+    "https://www.nordstadtblogger.de/keine-entwarnung-dortmund-verhaengt-haushaltssperre-defizit-bleibt-weiterhin-kritisch/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Dortmund"
+  },
+  {
+   "kommune": "Potsdam",
+   "land": "BB",
+   "art": "01.10.2026, viertes Quartal; 5 % der Sach- und Dienstleistungen",
+   "anlass": "Defizit 2024 von 45,55 Mio. €, liquide Mittel Mitte September rund 32,7 Mio. €",
+   "quellen": [
+    "https://www.stadtspuren.com/aktuelles/potsdam-verhaengt-haushaltssperre-fuer-das-vierte-quartal-2026/",
+    "https://www.tagesspiegel.de/berlin/dpa-angespannte-finanzlage-landeshauptstadt-potsdam-verhangt-haushaltssperre-16116730.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Potsdam"
+  },
+  {
+   "kommune": "Grevenbroich",
+   "land": "NW",
+   "art": "Anfang Oktober 2026; Teilsperre bereits seit Ende Juli",
+   "anlass": "Defizit 2026 knapp 11 statt 3,9 Mio. €",
+   "quellen": [
+    "https://www.wz.de/nrw/stadt-verhaengt-wegen-finanznot-eine-haushaltssperre_aid-155963959"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Grevenbroich"
+  },
+  {
+   "kommune": "Bad Sooden-Allendorf",
+   "land": "HE",
+   "art": "Oktober 2026 bis Jahresende",
+   "anlass": "Personalkosten 105.000 € über Plan",
+   "quellen": [
+    "https://www.werra-rundschau.de/witzenhausen/bad-sooden-allendorf-verhaengt-haushaltssperre-im-dezember-drohte-gehaltsausfall-94527081.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Bad Sooden-Allendorf"
+  },
+  {
+   "kommune": "Burgenlandkreis",
+   "land": "ST",
+   "art": "Mai 2026, von der Kommunalaufsicht angeordnet; Verbesserung um mindestens 3,6 Mio. €",
+   "anlass": "Defizit 2026 rund 23,6 Mio. €",
+   "quellen": [
+    "https://presse.sachsen-anhalt.de/wp-content/uploads/pdf/lvwa_08_05_2026_Pressemitteilung_landesverwaltungsamt-genehmigt-haushaltssatzung-2026-des-burgenlandkreises-unter-auflagen-haushaltssperre-angeordnet.pdf"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Burgenlandkreis",
+   "kreisname": "Burgenlandkreis"
+  },
+  {
+   "kommune": "Landkreis Harz",
+   "land": "ST",
+   "art": "Mai 2026, von der Kommunalaufsicht angeordnet; Verbesserung um mindestens 6,8 Mio. €",
+   "anlass": "Defizit 2026 rund 20,65 Mio. €, Liquiditätskredite bis 160 Mio. €",
+   "quellen": [
+    "https://lvwa.sachsen-anhalt.de/das-lvwa/news-details/landesverwaltungsamt-genehmigt-haushaltssatzung-2026-des-landkreises-harz-unter-auflagen-haushaltssperre-angeordnet"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Harz",
+   "kreisname": "Harz"
+  },
+  {
+   "kommune": "Lörrach",
+   "land": "BW",
+   "art": "22.06.2026 bis Jahresende",
+   "anlass": "Sozialhaushalt 8 bis 10 Mio. € über Plan",
+   "quellen": [
+    "https://www.loerrach-landkreis.de/haushaltssperre"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Lörrach",
+   "kreisname": "Lörrach"
+  },
+  {
+   "kommune": "Breisgau-Hochschwarzwald",
+   "land": "BW",
+   "art": "01.07.2026; § 29 GemHVO",
+   "anlass": "Eingliederungshilfe, Kreisdefizit verdoppelt sich auf rund 24 Mio. €",
+   "quellen": [
+    "https://www.breisgau-hochschwarzwald.de/Start/Landkreis+_+Politik/haushaltssperre+ab+1_+juli+2026.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Breisgau-Hochschwarzwald",
+   "kreisname": "Breisgau-Hochschwarzwald"
+  },
+  {
+   "kommune": "Barnim",
+   "land": "BB",
+   "art": "03.07.2026",
+   "anlass": "geplantes Defizit von rund 30 Mio. € wird um rund 16,3 Mio. € überschritten",
+   "quellen": [
+    "https://presse.barnim.de/pressreleases/landkreis-barnim-verhaengt-haushaltssperre-3457777"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Barnim",
+   "kreisname": "Barnim"
+  },
+  {
+   "kommune": "Ebersberg",
+   "land": "BY",
+   "art": "09.07.2026",
+   "anlass": "Defizit bis zu 10 statt 4,3 Mio. €",
+   "quellen": [
+    "https://lra-ebe.de/aktuelles/aktuelle-meldungen/haushaltssperre-wegen-dramatischer-finanzentwicklung-in-kommunaler-finanzkrise/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Ebersberg",
+   "kreisname": "Ebersberg"
+  },
+  {
+   "kommune": "Kreis Unna",
+   "land": "NW",
+   "art": "September 2026, sofortige Wirkung",
+   "anlass": "Mehraufwand u. a. im Sozialbereich",
+   "quellen": [
+    "https://www.hellwegeranzeiger.de/kreis-und-region/haushaltssperre-kreis-unna-landrat-loehr-sparmassnahmen-defizit-ausgleich-w1245175-1001769128"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Kreis Unna",
+   "kreisname": "Unna"
+  },
+  {
+   "kommune": "Forchheim",
+   "land": "BY",
+   "art": "21.09.2026",
+   "anlass": "keine eigenen liquiden Mittel mehr, laufende Einzahlungen rund 30 % unter Plan",
+   "quellen": [
+    "https://www.lra-fo.de/index.php?object=tx%2C3925.5.1&ModID=7&FID=3925.34790.1"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Forchheim",
+   "kreisname": "Forchheim"
+  },
+  {
+   "kommune": "Velbert",
+   "land": "NW",
+   "art": "26.05.2025",
+   "anlass": "Steuereinnahmen unter Plan",
+   "quellen": [
+    "https://supertipp-online.de/top/velbert-muss-sparen-kaemmerer-verhaengt-haushaltssperre-id491536"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Velbert"
+  },
+  {
+   "kommune": "Willich",
+   "land": "NW",
+   "art": "15.10.2025; § 25 KomHVO",
+   "anlass": "Steuermindereinnahmen 5 bis 6 Mio. €, höhere Transferaufwendungen",
+   "quellen": [
+    "https://www.extra-tipp-am-sonntag.de/willich/kaemmerer-dr-raimund-berg-verhaengt-eine-neue-haushaltssperre_aid-137046357"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Willich"
+  },
+  {
+   "kommune": "Köln",
+   "land": "NW",
+   "art": "04.11.2025 bis 31.12.2025; seit 2026 restriktive Haushaltsbewirtschaftung ohne förmliche Sperre",
+   "anlass": "Defizitprognose 582 statt 399,5 Mio. €",
+   "quellen": [
+    "https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/28019/index.html",
+    "https://www.stadt-koeln.de/politik-und-verwaltung/presseservice/stadt-koeln-informiert-ueber-finanzprognose-der-kommenden-jahre"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Köln"
+  },
+  {
+   "kommune": "Dortmund (1. Sperre)",
+   "land": "NW",
+   "art": "13.01.2026, befristet bis 31.03., am 10.03. aufgehoben",
+   "anlass": "absehbares Defizit in dreistelliger Millionenhöhe, Ziel: Verbesserung um 80 bis 100 Mio. €",
+   "quellen": [
+    "https://www.nordstadtblogger.de/millionenrisiken-im-haushalt-die-stadt-dortmund-verhaengt-eine-sperre-bis-ende-maerz-2026/",
+    "https://www.dortmund.de/newsroom/presse-mitteilungen/dortmund-hebt-haushaltssperre-auf-und-bleibt-dennoch-auf-sparkurs.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-nrw-2026-staedte/",
+   "ebene": "gemeinde",
+   "anzeige": "Dortmund"
+  },
+  {
+   "kommune": "Dortmund (2. Sperre)",
+   "land": "NW",
+   "art": "01.10.–31.12.2026",
+   "anlass": "Defizit rund 206 statt 54,9 Mio. €, Gewerbesteuer rund 116 Mio. € unter Plan",
+   "quellen": [
+    "https://www.dortmund.de/newsroom/presse-mitteilungen/stadt-dortmund-verhaengt-haushaltssperre-fuer-das-vierte-quartal.html",
+    "https://www.nordstadtblogger.de/keine-entwarnung-dortmund-verhaengt-haushaltssperre-defizit-bleibt-weiterhin-kritisch/"
+   ],
+   "artikel": "/haushalt/haushaltssperre-nrw-2026-staedte/",
+   "ebene": "gemeinde",
+   "anzeige": "Dortmund"
+  }
+ ]
+}

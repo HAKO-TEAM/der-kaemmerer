@@ -140,7 +140,7 @@ export function land(plz) {
 // ── Kommunaler Arbeitgeber? (Behördenname) ───────────────────────────────────
 export function istKommunal(name = '') {
   const n = name.toLowerCase();
-  if (/bundes|landesamt|landesbetrieb|ministerium|regierungspräsid|regierungspraesid|bezirksregierung|polizei|universit|hochschule|finanzamt|zoll|bundeswehr|landgericht|amtsgericht|oberlandes|staatlich|deutsche rentenversicherung|agentur für arbeit|jobcenter|krankenkasse|\baok\b|klinik|universitätsklinik|forschungs|fraunhofer|max-planck|helmholtz|leibniz/.test(n)) return false;
+  if (/evangelisch|katholisch|kirche|kirchenkreis|bistum|erzbistum|diakon|caritas|landeskirche|dekanat|pfarr|awo\b|drk\b|paritätisch|bundes|landesamt|landesbetrieb|ministerium|regierungspräsid|regierungspraesid|bezirksregierung|polizei|universit|hochschule|finanzamt|zoll|bundeswehr|landgericht|amtsgericht|oberlandes|staatlich|deutsche rentenversicherung|agentur für arbeit|jobcenter|krankenkasse|\baok\b|klinik|universitätsklinik|forschungs|fraunhofer|max-planck|helmholtz|leibniz/.test(n)) return false;
   return /stadt|gemeinde|landkreis|kreis\b|kreis |kreisverwaltung|landratsamt|markt |verbandsgemeinde|samtgemeinde|amt |zweckverband|bezirksamt|magistrat|verwaltungsgemeinschaft|eigenbetrieb|kommunal|städt|bezirk |region |regionalverband|landschaftsverband|kreisstadt|hansestadt|ortsgemeinde|gemeindeverwaltung|stadtverwaltung|abwasserverband|wasserverband|aör|anstalt des öffentlichen rechts/.test(n);
 }
 
