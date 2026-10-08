@@ -1,0 +1,60 @@
+{
+  "slug": "osterode-am-harz",
+  "token": "088bc8e5ed5c9391",
+  "name": "Landkreis Göttingen",
+  "bundesland": "Niedersachsen",
+  "einwohner": 330943,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Marcel Riethig",
+  "claim": "Den südlichsten Landkreis Niedersachsens zwischen Harz und Universitätsstadt verantwortlich mitgestalten.",
+  "beschreibung": "Der Landkreis Göttingen ist der südlichste Landkreis Niedersachsens und umfasst mit der Universitätsstadt Göttingen ein Oberzentrum. In seiner heutigen Form entstand er am 1. November 2016 durch die Fusion mit dem Landkreis Osterode am Harz; Sitz der Kreisverwaltung ist Göttingen, ein weiterer Dienstort ist Osterode am Harz. Zum Kreis gehören 39 Gemeinden. Als Arbeitgeber hat der Landkreis die Charta der Vielfalt unterzeichnet und ermöglicht bei Vorliegen der Voraussetzungen Telearbeit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "330.943",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "39",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.755,39 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Heutiger Zuschnitt seit",
+      "wert": "1. November 2016",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Telearbeit",
+      "beschreibung": "Nutzung von Telearbeit (Home-Office) bei Vorliegen der entsprechenden Voraussetzungen."
+    },
+    {
+      "titel": "Vielfalt",
+      "beschreibung": "Unterzeichnerin der Charta der Vielfalt; die Verwaltung soll die Vielfalt der Bevölkerung abbilden."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stellen, auch im Beamtenverhältnis."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung · Bewerbungsverfahren (Enrico Bauer)",
+    "email": "bewerbungen@landkreisgoettingen.de",
+    "telefon": "0551 525-2624"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindezahl, Fusion 2016, Landrat: de.wikipedia.org/wiki/Landkreis_Göttingen (abgerufen 08.10.2026)",
+    "Benefits, Dienstort und Kontakt: Stellenausschreibung Fachbereichsleitung Öffentliche Sicherheit und Ordnung, https://interamt.de/koop/app/stelle?id=1497873 (API api.interamt.de/query/stellenangebot/1497873) (abgerufen 08.10.2026)",
+    "Landratswahl 2026 (Ulrike Witt, Stichwahl 27.09.2026): kommunal.de/kommunalwahl-niedersachsen-2026-stichwahl-ergebnisse (abgerufen 08.10.2026)"
+  ]
+}

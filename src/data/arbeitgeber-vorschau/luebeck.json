@@ -1,0 +1,81 @@
+{
+  "slug": "luebeck",
+  "name": "Hansestadt Lübeck",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 217061,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Jan Lindenau",
+  "token": "49e45980b9e6308c",
+  "claim": "Die Finanzen der Hansestadt an der Ostsee mitten im UNESCO-Welterbe mitgestalten.",
+  "beschreibung": "Lübeck wurde 1143 an seiner heutigen Stelle gegründet, war über Jahrhunderte Hauptort der Hanse und von 1226 bis 1937 ein eigener Stadtstaat. Die Altstadt mit über tausend Kulturdenkmalen gehört seit 1987 zum UNESCO-Welterbe. Als Oberzentrum in der Metropolregion Hamburg versorgt die Stadt einen Raum weit über die eigenen Grenzen hinaus. Die Verwaltung bündelt ein großstädtisches Aufgabenspektrum, vom Haushalt und Jahresabschluss einschließlich der Stiftungen und Konzernbilanz bis zu Jugend, Ordnung und Hafen, und bietet Arbeitsplätze im Herzen der Altstadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "217.061",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "214,19 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1143",
+      "icon": "📜"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "1987",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Work-Lübeck-Balance",
+      "beschreibung": "Flexible Arbeitszeitmodelle und vielfältige Angebote zur Vereinbarkeit von Beruf und Familie, Teilzeit nach Absprache."
+    },
+    {
+      "titel": "Sicherheit und Leistungen",
+      "beschreibung": "Tarifgebundene Beschäftigung mit 30 Tagen Urlaub, Sonderzahlungen, vermögenswirksamen Leistungen und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Perspektive",
+      "beschreibung": "Fortbildungsmöglichkeiten für den Aufgabenbereich, individuelle Weiterentwicklung und ein eigenes Fortbildungszentrum."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Gesundheitstage, Betriebssport und aktive Pause."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Monatlicher Zuschuss zum NAH.SH-Jobticket sowie Unterstützung bei Fahrradkauf, -miete oder -leasing."
+    },
+    {
+      "titel": "Vergünstigungen",
+      "beschreibung": "Rabatte und Vergünstigungen über Corporate Benefits."
+    },
+    {
+      "titel": "Arbeiten an der Ostsee",
+      "beschreibung": "Arbeitsplatz im Herzen der Lübecker Altstadt in einer lebendigen Stadt an der Ostsee."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Hansestadt Lübeck · Personalangelegenheiten",
+    "email": "bewerbungen@luebeck.de",
+    "telefon": "0451 122-1148",
+    "bewerbungsportal": "https://www.luebeck.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gründung 1143, Stadtstaat 1226–1937, UNESCO-Welterbe 1987, Oberzentrum, Bürgermeister: de.wikipedia.org/wiki/Lübeck (abgerufen 08.10.2026)",
+    "Benefits, Kontakt, Karriereportal: Stellenausschreibung Bilanzbuchhalter:in im Bereich Haushalt und Steuerung, Hansestadt Lübeck, https://interamt.de/koop/app/stelle?id=1497809 (API api.interamt.de/query/stellenangebot/1497809) (abgerufen 08.10.2026)"
+  ]
+}

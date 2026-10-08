@@ -1,0 +1,77 @@
+{
+  "slug": "meissen",
+  "name": "Stadt Meißen",
+  "bundesland": "Sachsen",
+  "einwohner": 28863,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Markus Renner",
+  "token": "e1c4d58b70922f85",
+  "claim": "Die Finanzen und Dienste der Porzellanstadt an der Elbe in historischer Umgebung mitgestalten.",
+  "beschreibung": "Meißen entwickelte sich unterhalb der um 929 gegründeten Burg Misnia und gilt mit Dom und Albrechtsburg als einer der geschichtsträchtigsten Orte Sachsens. Weltbekannt ist die Stadt für das Meissener Porzellan, das seit 1708 als erstes europäisches Porzellan hergestellt wird. Als Große Kreisstadt und Sitz des Landkreises ist Meißen Verwaltungsmittelpunkt, Kulturstadt und Tourismusstandort zugleich. Die Stadtverwaltung arbeitet mit moderner IT-Ausstattung in einer weitgehend erhaltenen Altstadt und bietet Aufgaben mit direktem Bezug zur kommunalen Daseinsvorsorge.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "28.863",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "30,92 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Burggründung",
+      "wert": "um 929",
+      "icon": "📜"
+    },
+    {
+      "label": "Meissener Porzellan seit",
+      "wert": "1708",
+      "icon": "🏺"
+    },
+    {
+      "label": "Status",
+      "wert": "Große Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit und mobiles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen der Gleitzeitregelung und mobiles Arbeiten, soweit dienstlich vereinbar."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "30 Tage Urlaub, Jahressonderzahlung, betriebliche Altersversorgung und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Sachbezug",
+      "beschreibung": "Monatlicher steuerfreier Sachbezug."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Vergünstigte ÖPNV-Tickets und Fahrradleasing im Rahmen der Entgeltumwandlung."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote der Gesundheitsförderung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Meißen · Haupt- und Personalamt",
+    "email": "hauptamt@stadt-meissen.de",
+    "telefon": "03521 467-471",
+    "bewerbungsportal": "https://www.stadt-meissen.de/de/aktuelle-stellenangebote.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Burggründung um 929, Porzellan seit 1708, Oberbürgermeister: de.wikipedia.org/wiki/Meißen (abgerufen 08.10.2026)",
+    "Große Kreisstadt, Benefits und Kontakt: Stellenausschreibungen Stadt Meißen, Erster Sachbearbeiter Zahlungsabwicklung https://interamt.de/koop/app/stelle?id=1494055 (API api.interamt.de/query/stellenangebot/1494055) und Leitung des Ordnungsamtes https://interamt.de/koop/app/stelle?id=1492381 (API api.interamt.de/query/stellenangebot/1492381) (abgerufen 08.10.2026)"
+  ]
+}

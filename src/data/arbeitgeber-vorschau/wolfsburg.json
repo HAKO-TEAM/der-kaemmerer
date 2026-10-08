@@ -1,0 +1,73 @@
+{
+  "slug": "wolfsburg",
+  "token": "2fbe8b3553a06b9b",
+  "name": "Stadt Wolfsburg",
+  "bundesland": "Niedersachsen",
+  "einwohner": 129813,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dennis Weilmann",
+  "claim": "Die Zukunft einer jungen Großstadt mit über 3.000 Kolleginnen und Kollegen gestalten.",
+  "beschreibung": "Wolfsburg ist eine kreisfreie Großstadt im Osten Niedersachsens und wurde 1938 als Sitz des Volkswagenwerks gegründet; namensgebend ist das 1302 erstmals erwähnte Schloss Wolfsburg. Mit über 3.000 Mitarbeitenden bietet die Stadtverwaltung zahlreiche Einstiegs- und Karrieremöglichkeiten und versteht sich unter dem Leitgedanken VielWert als Arbeitgeberin für Vielfalt und Wertschätzung. Die Aufgaben reichen von Schulen und Kitas bis zu prägenden Bauten wie dem Scharoun Theater, dem BadeLand und dem phaeno.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "129.813",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtgründung",
+      "wert": "1938",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "204,61 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung (lt. Ausschreibung)",
+      "wert": "über 3.000",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und hybride Arbeitsmöglichkeiten nach Absprache."
+    },
+    {
+      "titel": "Urlaub und Auszeit",
+      "beschreibung": "30 Tage Urlaub, frei am 24. und 31. Dezember sowie die Möglichkeit eines Sabbaticals."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Leistungsorientierte Bezahlung, betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bike-Leasing und Zuschuss zum Jobticket Deutschland."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Firmenfitness mit Wellpass und Gesundheitsförderung."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Aktive Förderung der persönlichen und beruflichen Entwicklung durch Fort- und Weiterbildungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Wolfsburg · Personal (Katrin Simon)",
+    "email": "katrin.simon@stadt.wolfsburg.de",
+    "telefon": "05361 28-1649",
+    "bewerbungsportal": "https://wolfsburg.hrpuls.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtgründung 1938, Ersterwähnung Schloss 1302, Oberbürgermeister: de.wikipedia.org/wiki/Wolfsburg (abgerufen 08.10.2026)",
+    "Wiederwahl Oberbürgermeister Weilmann am 13.09.2026 (vorläufiges Ergebnis): infranken.de, Niedersachsen hat gewählt – Wolfsburg bleibt in CDU-Hand (abgerufen 08.10.2026)",
+    "Beschäftigte, Benefits und Kontakt: Stellenausschreibung Controller Hochbau mit Fachverantwortung Haushalt, https://interamt.de/koop/app/stelle?id=1499369 (API api.interamt.de/query/stellenangebot/1499369) (abgerufen 08.10.2026)"
+  ]
+}

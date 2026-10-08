@@ -1,0 +1,68 @@
+{
+  "slug": "bad-camberg",
+  "token": "97c715293eed4af5",
+  "name": "Stadt Bad Camberg",
+  "bundesland": "Hessen",
+  "einwohner": 14134,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Daniel Rühl",
+  "claim": "Die Finanzen der ältesten Kneippkurstadt Hessens mit großem Gestaltungsspielraum führen.",
+  "beschreibung": "Bad Camberg liegt im Hintertaunus im Goldenen Grund, rund 30 Kilometer nördlich von Wiesbaden, und ist die zweitgrößte Stadt im Süden des Landkreises Limburg-Weilburg. Der anerkannte Kneippkurort ist der älteste seiner Art in Hessen und der drittälteste in Deutschland; Wahrzeichen der Stadt ist die Kreuzkapelle. Die Stadtverwaltung ist als familienfreundlicher Arbeitgeber zertifiziert und bietet verantwortungsvolle Aufgaben mit großem Gestaltungsspielraum, etwa in der finanziellen Steuerung der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.134",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "54,6 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kneippkurort",
+      "wert": "ältester in Hessen",
+      "icon": "♨️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Hintertaunus, Goldener Grund",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vereinbarkeit von Beruf und Familie",
+      "beschreibung": "Flexible Arbeitszeitmodelle; die Stadt ist als familienfreundlicher Arbeitgeber zertifiziert."
+    },
+    {
+      "titel": "Finanzielle Zusatzleistungen",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt, zusätzliche Altersvorsorge über die kommunalen Versorgungsträger sowie Corporate Benefits."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit vielfältigen Angeboten und EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "JobRad-Leasing für umweltfreundliche Mobilität."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Individuelle Fort- und Weiterbildungsmöglichkeiten zur fachlichen und persönlichen Entwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalamt · Personalamt (Kim Eichhorn)",
+    "email": "personalamt@bad-camberg.de",
+    "telefon": "06434 202-111",
+    "bewerbungsportal": "https://karriere.bad-camberg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Lage, Kneippkurort, Bürgermeister: de.wikipedia.org/wiki/Bad_Camberg (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleiter Finanzen, https://interamt.de/koop/app/stelle?id=1499361 (API api.interamt.de/query/stellenangebot/1499361) (abgerufen 08.10.2026)"
+  ]
+}

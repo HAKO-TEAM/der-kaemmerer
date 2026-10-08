@@ -1,0 +1,72 @@
+{
+  "slug": "bautzen",
+  "name": "Landkreis Bautzen",
+  "bundesland": "Sachsen",
+  "einwohner": 290610,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Udo Witschas",
+  "token": "ab7d34cb1ff5984b",
+  "claim": "Den flächengrößten Landkreis Sachsens in Haushalt, Finanzen und Infrastruktur mitsteuern.",
+  "beschreibung": "Der Landkreis Bautzen in Ostsachsen ist flächenmäßig der größte Landkreis des Freistaates. Er entstand 2008 im Zuge der sächsischen Kreisreform aus den Landkreisen Bautzen und Kamenz sowie der Stadt Hoyerswerda und umfasst heute 57 Städte und Gemeinden. Das Landratsamt mit Sitz in Bautzen und Standorten wie Kamenz verantwortet ein breites Aufgabenfeld, vom kommunalen Haushaltsrecht und der Förderung von Investitionen über Liegenschaften und Hochbau bis zu Umwelt und Naturschutz. Wer hier arbeitet, begleitet die Entwicklung einer großen, vielfältigen Region an der Spree.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "290.610",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.395,6 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "57",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "2008 (Kreisreform Sachsen)",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeit bei durchschnittlich 39 Wochenstunden sowie die Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Arbeitstage Urlaub, ab 2027 31 Arbeitstage, zusätzlich frei am 24.12. und 31.12."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Bezahlung nach TVöD mit vermögenswirksamen Leistungen, Jahressonderzahlung, Leistungsentgelt und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Möglichkeiten zur Fortbildung sowie finanzielle Unterstützung bei Qualifizierungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing für Beschäftigte."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Ein moderner Arbeitsplatz in der Kreisverwaltung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Bautzen · Bewerbermanagement",
+    "email": "bewerbermanagement@lra-bautzen.de",
+    "telefon": "03591 5251-10122",
+    "bewerbungsportal": "https://www.landkreis-bautzen.de/stellen-und-ausbildungsangebote.php"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreisreform 2008, flächengrößter Landkreis Sachsens, Landrat: de.wikipedia.org/wiki/Landkreis_Bautzen (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Landkreis Bautzen, Amtsleiter Gebäude- und Liegenschaftsamt https://interamt.de/koop/app/stelle?id=1498211 (API api.interamt.de/query/stellenangebot/1498211), Sachbearbeiter Kommunalpaket/Haushalt https://interamt.de/koop/app/stelle?id=1493672 (API api.interamt.de/query/stellenangebot/1493672), Sachbearbeiter naturschutzrechtliche Genehmigungen/Breitband https://interamt.de/koop/app/stelle?id=1499469 (API api.interamt.de/query/stellenangebot/1499469) (abgerufen 08.10.2026)"
+  ]
+}

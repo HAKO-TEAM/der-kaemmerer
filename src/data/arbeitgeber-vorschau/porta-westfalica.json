@@ -1,0 +1,71 @@
+{
+  "slug": "porta-westfalica",
+  "name": "Stadt Porta Westfalica",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 36502,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Anke Grotjohann",
+  "token": "a7a93671284528f1",
+  "claim": "Eine Stadt am Weserdurchbruch mit fünfzehn Stadtteilen verantwortlich voranbringen.",
+  "beschreibung": "Porta Westfalica liegt im Kreis Minden-Lübbecke am gleichnamigen Weserdurchbruch, an dem die Weser zwischen Weser- und Wiehengebirge in die Norddeutsche Tiefebene tritt. Die heutige Stadt entstand 1973 aus dem Zusammenschluss von fünfzehn Gemeinden und verbindet entsprechend vielfältige Ortsteile, Landschaft und Infrastruktur. Die Stadtverwaltung bietet abwechslungsreiche, verantwortungsvolle Aufgaben mit kurzen Wegen zur Verwaltungsspitze und fördert die persönliche und fachliche Weiterentwicklung ihrer Beschäftigten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "36.502",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadt in heutiger Form seit",
+      "wert": "1973",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "105,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "15",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, leistungsorientierter Bezahlung, betrieblicher Altersvorsorge (VBL) und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Gestaltung der Arbeitszeit im Rahmen der dienstlichen Erfordernisse."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Möglichkeiten zur persönlichen und fachlichen Weiterbildung."
+    },
+    {
+      "titel": "Corporate Benefits",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    },
+    {
+      "titel": "Fahrrad-Leasing",
+      "beschreibung": "Die Möglichkeit, ein Fahrrad über die Stadt zu leasen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt",
+    "email": "carsten.reese@portawestfalica.de",
+    "telefon": "0571 791-132"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Entstehung 1973, Stadtteile, Bürgermeisterin: de.wikipedia.org/wiki/Porta_Westfalica_(Stadt) (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Fachbereich 4 – Bildung, Jugend und Sozialwesen, https://interamt.de/koop/app/stelle?id=1495321 (API api.interamt.de/query/stellenangebot/1495321) (abgerufen 08.10.2026)"
+  ]
+}

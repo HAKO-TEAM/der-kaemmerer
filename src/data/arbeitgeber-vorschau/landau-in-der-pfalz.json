@@ -1,0 +1,76 @@
+{
+  "slug": "landau-in-der-pfalz",
+  "name": "Landkreis Südliche Weinstraße",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 112597,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Dietmar Seefeldt",
+  "token": "8ddf02ec1990d9f6",
+  "claim": "Finanzen und Beteiligungen eines Weinbaulandkreises zwischen Rheinebene und Pfälzerwald mitsteuern.",
+  "beschreibung": "Der Landkreis Südliche Weinstraße wurde 1969 gebildet und reicht von der pfälzischen Rheinebene im Osten bis in den Pfälzerwald im Westen. Weite Teile im Osten sind vom Weinbau geprägt, der Tourismus gewinnt zunehmend an Bedeutung. Die Kreisverwaltung hat ihren Sitz in der vom Kreis umschlossenen kreisfreien Stadt Landau in der Pfalz und betreut 75 Gemeinden. Im Referat Finanzen und Beteiligungen erwarten Beschäftigte vielseitige Aufgaben, hilfsbereite Kolleginnen und Kollegen sowie ein umfangreiches Fortbildungsangebot.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "112.597",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "639,95 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "75",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1969",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Landau in der Pfalz",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz mit attraktiver Vergütung, Jahressonderzahlung, leistungsorientierter Bezahlung und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten mit diversen Teilzeitmodellen und der Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket- und Jobradangebot, gute Anbindung an den ÖPNV sowie kostenfreie Parkmöglichkeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiches Fortbildungsangebot zur Förderung der Entwicklung nach individuellem Bedarf."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote im Rahmen der betrieblichen Gesundheitsförderung."
+    },
+    {
+      "titel": "Team",
+      "beschreibung": "Vielseitige Tätigkeiten mit hilfsbereiten und motivierten Kolleginnen und Kollegen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Südliche Weinstraße · Referat Personal und Zentrale Dienste",
+    "email": "bewerbung@suedliche-weinstrasse.de",
+    "telefon": "06341 940-914"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Bildung 1969, Weinbau, Sitz der Kreisverwaltung, Landrat: de.wikipedia.org/wiki/Landkreis_Südliche_Weinstraße (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Landkreis Südliche Weinstraße, Sachbearbeitung Steuern und Abgaben sowie Haushalt https://interamt.de/koop/app/stelle?id=1498808 (API api.interamt.de/query/stellenangebot/1498808) und Sachbearbeitung Innendienst Vollstreckung https://interamt.de/koop/app/stelle?id=1498828 (API api.interamt.de/query/stellenangebot/1498828) (abgerufen 08.10.2026)"
+  ]
+}

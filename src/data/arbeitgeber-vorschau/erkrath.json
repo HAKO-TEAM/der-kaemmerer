@@ -1,0 +1,71 @@
+{
+  "slug": "erkrath",
+  "name": "Stadt Erkrath",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 43555,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Christoph Schultz",
+  "token": "c6bca7c32097e297",
+  "claim": "Am Fundort des Neandertalers eine kompakte Stadtverwaltung im Kreis Mettmann mitgestalten.",
+  "beschreibung": "Erkrath liegt im Kreis Mettmann und ist dessen fünftgrößte Stadt. Zur Stadt gehören die Fundstelle des Neandertalers und große Teile des Naturschutzgebiets Neandertal, daher trägt Erkrath den Beinamen „Fundort des Neandertalers“. Der Name wird 1148 erstmals urkundlich genannt, Stadt ist Erkrath seit 1966 und damit die jüngste Stadt im Kreis. Die Stadtverwaltung lebt Chancengleichheit, Diversität und die Vereinbarkeit von Familie und Beruf und bietet einen gut angebundenen Arbeitsplatz nahe Parks, Unterbacher See und Neandertal.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "43.555",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1148",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "26,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1966",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Leistungsorientierte Bezahlung nach TVöD, attraktive betriebliche Altersversorgung sowie vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Individuelle Schulungen, Fort- und Weiterbildungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Vergünstigtes Jobticket für den VRR und ein verkehrstechnisch gut angebundener Arbeitsplatz für ÖPNV, Fahrrad und Pkw."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebssport, Kurse, Vorträge und Workshops sowie Vergünstigungen im privaten Bereich, unter anderem eine E-Bike-Förderung."
+    },
+    {
+      "titel": "Beratung für die Familie",
+      "beschreibung": "Kostenfreie ärztliche oder psychologische Beratung und Hilfe für Beschäftigte und ihre Familienangehörigen."
+    },
+    {
+      "titel": "Arbeiten im Grünen",
+      "beschreibung": "Arbeitsplatz in unmittelbarer Nähe zu Parks, dem Naherholungsgebiet Unterbacher See und dem Neandertal."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Personal · Organisation",
+    "email": "Tobias.Freese@erkrath.de",
+    "telefon": "0211 2407-1118"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Stadterhebung 1966, Neandertal, Bürgermeister: de.wikipedia.org/wiki/Erkrath (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Schule, https://interamt.de/koop/app/stelle?id=1498094 (API api.interamt.de/query/stellenangebot/1498094) (abgerufen 08.10.2026)"
+  ]
+}

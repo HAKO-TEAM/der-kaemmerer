@@ -1,0 +1,68 @@
+{
+  "slug": "erbach",
+  "token": "089ad095c347a045",
+  "name": "Magistrat der Kreisstadt Erbach",
+  "bundesland": "Hessen",
+  "einwohner": 13858,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Peter Traub",
+  "claim": "In der Kreisstadt des Odenwalds die städtischen Finanzen mit viel Eigenverantwortung gestalten.",
+  "beschreibung": "Erbach ist die Kreisstadt des Odenwaldkreises und liegt im Mümlingtal im Buntsandstein-Odenwald. Der Ort wird 1095 im Lorscher Codex erstmals erwähnt und erhielt 1560 die Stadtrechte; als frühere Residenzstadt der Grafen zu Erbach-Erbach ist die Stadt bis heute von ihrem Schloss und der Elfenbeinschnitzerei geprägt, die im Deutschen Elfenbeinmuseum präsentiert wird. Die Stadtverwaltung bietet anspruchsvolle, vielseitige Aufgaben mit hoher Eigenverantwortung in einem freundlichen und offenen Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.858",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1095",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "61,52 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt des Odenwaldkreises",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Anspruchsvolles und vielseitiges Aufgabengebiet mit hoher Eigenverantwortung in einem freundlichen und offenen Team."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitregelung zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Zusätzliche betriebliche Altersvorsorge über die ZVK."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Individuelle Fort- und Weiterbildungsmöglichkeiten durch externe Angebote."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliche Gesundheitsförderung, zum Beispiel JobRad."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Kreisstadt Erbach · Personalverwaltung",
+    "email": "personalamt@erbach.de",
+    "telefon": "06062 64-22",
+    "bewerbungsportal": "https://www.erbach.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Stadtrechte, Kreisstadt, Elfenbeinmuseum, Bürgermeister: de.wikipedia.org/wiki/Erbach_(Odenwald) (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Bilanzbuchhalter/-in mit stellvertretender Leitungsfunktion, https://interamt.de/koop/app/stelle?id=1498711 (API api.interamt.de/query/stellenangebot/1498711) (abgerufen 08.10.2026)"
+  ]
+}

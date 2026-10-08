@@ -1,0 +1,72 @@
+{
+  "slug": "dorsten",
+  "name": "Stadt Dorsten",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 74783,
+  "beamteUndBeschaeftigte": "rd. 1.200",
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Tobias Stockhoff",
+  "token": "3c1a706561a0f6dd",
+  "claim": "Die kleine Hansestadt an der Lippe zwischen Münsterland und Ruhrgebiet aktiv mitgestalten.",
+  "beschreibung": "Dorsten liegt an der Lippe im Übergang vom nördlichen Ruhrgebiet zum südlichen Münsterland und ist mit rund 171 km² die flächengrößte Stadt im Kreis Recklinghausen. Die Stadtrechte erhielt Dorsten 1251, heute versteht sich die Stadt als kleine Hansestadt und Brücke zwischen Münsterland und Ruhrgebiet. Rund 1.200 Beschäftigte arbeiten in der Stadtverwaltung in über 60 Berufen. Die Verwaltung setzt auf flache Hierarchien, offene Kommunikation, Eigeninitiative und eine konstruktive Fehlerkultur, in der sich alle weiterentwickeln können.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "74.783",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1251",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "171,2 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "rd. 1.200",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Perspektive",
+      "beschreibung": "Sicherer Arbeitsplatz mit Zukunftsperspektive und guten Aufstiegschancen."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung und leistungsorientierte Bezahlung."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mehr Flexibilität für Familie und Beruf mit mobilem Arbeiten an bis zu zwei Tagen pro Woche."
+    },
+    {
+      "titel": "Gesundheit und Sport",
+      "beschreibung": "Umfassendes Gesundheitsmanagement und Sportangebote in Kooperation mit dem Atlantis Dorsten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing für nachhaltige Wege zur Arbeit und in der Freizeit."
+    },
+    {
+      "titel": "Rabatte und Vorschüsse",
+      "beschreibung": "Exklusive Rabatte über Corporate Benefits sowie finanzielle Flexibilität durch Vorschüsse."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Dorsten · Personal, Rückfragen zur Ausschreibung",
+    "email": "j.cholewa@dorsten.de",
+    "telefon": "02362 66-3401"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtrechte, Bürgermeister: de.wikipedia.org/wiki/Dorsten (abgerufen 08.10.2026)",
+    "Beschäftigtenzahl, Selbstverständnis der Verwaltung, Benefits und Kontakt: Stellenausschreibung Amtsleitung Sozialamt, https://interamt.de/koop/app/stelle?id=1498375 (API api.interamt.de/query/stellenangebot/1498375) (abgerufen 08.10.2026)"
+  ]
+}

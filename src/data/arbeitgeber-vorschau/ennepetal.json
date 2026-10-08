@@ -1,0 +1,68 @@
+{
+  "slug": "ennepetal",
+  "name": "Stadt Ennepetal",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 29266,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Imke Heymann",
+  "token": "d161eb65676f40ad",
+  "claim": "In der Stadt der Kluterthöhle Steuerung und Finanzen mit Kennzahlen voranbringen.",
+  "beschreibung": "Ennepetal entstand 1949 aus dem Zusammenschluss der Gemeinden Milspe und Voerde und liegt landschaftlich reizvoll im Ennepe-Ruhr-Kreis. Seit 2012 trägt die Stadt offiziell den Titel Stadt der Kluterthöhle, einer der längsten Schauhöhlen Deutschlands. Die Stadtverwaltung versteht sich als moderne und familienfreundliche Arbeitgeberin mit Beschäftigten unterschiedlichster Qualifikationen. Sie bietet Arbeitszeitmodelle für eine gute Vereinbarkeit von Familie und Beruf, Gesundheitsangebote und gezielte Fort- und Weiterbildung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "29.266",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "57,77 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtgründung",
+      "wert": "1949",
+      "icon": "📜"
+    },
+    {
+      "label": "Beiname",
+      "wert": "Stadt der Kluterthöhle",
+      "icon": "🏔️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Ennepe-Ruhr-Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitsplatzsicherheit",
+      "beschreibung": "Alle Vorzüge des öffentlichen Dienstes, insbesondere ein sicherer Arbeitsplatz."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Familienfreundliche Arbeitszeitmodelle für eine gute Vereinbarkeit von Familie und Beruf, teilbare Vollzeitstellen."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Gesundheitsangebote für eine ausgewogene Work-Life-Balance."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Kontinuierliche Förderung durch gezielte Fort- und Weiterbildungsoptionen und persönliche Entwicklungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Ennepetal · Personalservice",
+    "email": "personal@ennepetal.de",
+    "telefon": "02333 979-1102"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtgründung 1949, Stadt der Kluterthöhle, Bürgermeisterin (wiedergewählt 2025): de.wikipedia.org/wiki/Ennepetal (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fach- und Finanzcontrolling im Jugendamt, Stadt Ennepetal, https://interamt.de/koop/app/stelle?id=1493463 (API api.interamt.de/query/stellenangebot/1493463) (abgerufen 08.10.2026)"
+  ]
+}

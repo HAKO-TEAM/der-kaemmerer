@@ -1,0 +1,76 @@
+{
+  "slug": "haldensleben",
+  "name": "Landkreis Börde",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 167314,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Martin Stichnoth",
+  "token": "791c0280f164c1e4",
+  "claim": "Die Finanzen eines großen Flächenlandkreises zwischen Börde und Heide verantwortlich gestalten.",
+  "beschreibung": "Der Landkreis Börde entstand 2007 aus dem Ohrekreis und dem Bördekreis und ist flächenmäßig der zweitgrößte Landkreis Sachsen-Anhalts. Die Landschaft reicht von der fruchtbaren Magdeburger Börde im Süden bis zur Colbitz-Letzlinger Heide im Norden, wirtschaftlich prägt unter anderem das Kaliwerk Zielitz die Region. Die Kreisverwaltung in Haldensleben betreut 34 Städte und Gemeinden. Für ihre familienfreundliche Personalpolitik nutzt sie das audit berufundfamilie und baut die Angebote zur Vereinbarkeit von Beruf und Familie aktiv weiter aus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "167.314",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.367,15 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "34",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "2007",
+      "icon": "📍"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Haldensleben",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Beruf und Familie",
+      "beschreibung": "Familienfreundliche Personalpolitik, begleitet durch das audit berufundfamilie, einschließlich Unterstützung bei der Pflege von Angehörigen."
+    },
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Gleitzeitsystem zur eigenen Planung der Arbeitszeit mit flexiblem Auf- und Abbau von Mehrstunden."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Möglichkeiten zur mobilen Arbeit samt Ausstattung mit den nötigen technischen Arbeitsmitteln sowie Teilzeitmodelle."
+    },
+    {
+      "titel": "Zeitwertkonten",
+      "beschreibung": "Zeitwertkonten für längerfristige Freistellungen."
+    },
+    {
+      "titel": "JobRad",
+      "beschreibung": "Fahrradleasing über JobRad."
+    },
+    {
+      "titel": "Tarifbindung",
+      "beschreibung": "Arbeitsverhältnis nach den tariflichen Bestimmungen des TVöD-V VKA."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Börde · Haupt- und Personalamt",
+    "email": "personal@landkreis-boerde.de",
+    "telefon": "03904 7240-1104"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Bildung 2007, Landschaft, Kaliwerk Zielitz, Landrat: de.wikipedia.org/wiki/Landkreis_Börde (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Amtsleiter Amt für Finanzen, Landkreis Börde, https://interamt.de/koop/app/stelle?id=1498716 (API api.interamt.de/query/stellenangebot/1498716) einschließlich PDF-Anlage (abgerufen 08.10.2026)"
+  ]
+}

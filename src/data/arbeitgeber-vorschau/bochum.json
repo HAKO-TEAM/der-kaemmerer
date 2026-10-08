@@ -1,0 +1,60 @@
+{
+  "slug": "bochum",
+  "name": "Stadt Bochum",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 358880,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Jörg Lukat",
+  "token": "f41b69bc4e630cb4",
+  "claim": "Ein Oberzentrum im Herzen des Ruhrgebiets mit der Bochum Strategie weiterentwickeln.",
+  "beschreibung": "Bochum ist eine kreisfreie Großstadt und eines der fünf Oberzentren des Ruhrgebiets, gelegen in dessen geografischer Mitte. Die Stadt wird um 890 erstmals erwähnt und ist heute mit zahlreichen Wissenschafts-, Bildungs- und Kulturstätten eines der wirtschaftlichen und kulturellen Zentren der Region. Mit der Bochum Strategie sind die Weichen der Stadtentwicklung gestellt, fachübergreifende Zusammenarbeit an gesamtstädtischen Projekten wird großgeschrieben. Die Stadtverwaltung versteht sich als moderne, dienstleistungsorientierte Verwaltung mit einer Kultur von Respekt, Wertschätzung und Vielfalt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "358.880",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "um 890",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "145,66 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gesamtstädtische Projekte",
+      "beschreibung": "Fachübergreifende Zusammenarbeit an gesamtstädtischen Projekten im Rahmen der Bochum Strategie."
+    },
+    {
+      "titel": "Führungskultur",
+      "beschreibung": "Der Kompass für gute Zusammenarbeit und Führung gibt den Rahmen für eine moderne, gestaltende Verwaltung."
+    },
+    {
+      "titel": "Vielfalt und Wertschätzung",
+      "beschreibung": "Eine Unternehmenskultur, die von gegenseitigem Respekt, Wertschätzung, Diversität und kultureller Vielfalt geprägt ist."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Bochum · Ansprechpartnerin Personalauswahl",
+    "email": "ASander@bochum.de",
+    "telefon": "0234 910-2638",
+    "bewerbungsportal": "https://karriere.bochum.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Oberzentrum, Oberbürgermeister: de.wikipedia.org/wiki/Bochum (abgerufen 08.10.2026)",
+    "Profil der Verwaltung, Bochum Strategie, Kompass für Zusammenarbeit und Führung, Kontakt: Stellenausschreibungen Beigeordnete*r für Bildung, Integration, Kultur und Sport, https://interamt.de/koop/app/stelle?id=1498247 (API api.interamt.de/query/stellenangebot/1498247), und Beigeordnete*r für Personal, Digitalisierung, Recht und Ordnung, https://interamt.de/koop/app/stelle?id=1498150 (API api.interamt.de/query/stellenangebot/1498150) (abgerufen 08.10.2026)"
+  ]
+}

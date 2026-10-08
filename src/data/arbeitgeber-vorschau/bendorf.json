@@ -1,0 +1,77 @@
+{
+  "slug": "bendorf",
+  "name": "Stadt Bendorf",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 17661,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Christoph Mohr",
+  "token": "a6c6577790a77469",
+  "claim": "Die Finanzen einer Mittelstadt am Rhein mit Geschichte und kurzen Wegen mitverantworten.",
+  "beschreibung": "Bendorf liegt am Rhein im Landkreis Mayen-Koblenz und ist als Mittelzentrum ausgewiesen. Der Ort wird 1064 erstmals genannt, 1560 erhielt er die Marktrechte. Zur verbandsfreien Stadt gehören die Stadtteile Bendorf, Sayn, Mülhofen und Stromberg, bekannt sind unter anderem Schloss und Burg Sayn sowie die Sayner Hütte. Die Stadtverwaltung im Stadtpark bietet vielseitige Aufgaben mit Freiraum für eigenverantwortliches Arbeiten in einem motivierten Team und ist als Betrieb im Gesundheitsmanagement zertifiziert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "17.661",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "24,12 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste Nennung",
+      "wert": "1064",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Vielseitige, interessante und verantwortungsvolle Tätigkeit mit Freiraum für eigenverantwortliches Arbeiten in einem motivierten Team."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Krisensichere, unbefristete Anstellung mit Aufstiegschancen."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Eingruppierung nach TVöD-VKA bzw. Besoldung nach LBesG mit den im öffentlichen Dienst üblichen Sozialleistungen wie Zusatzversorgung und Sonderzuwendung."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Gute Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheitsmanagement",
+      "beschreibung": "Individuelle und gemeinschaftliche Angebote des betrieblichen Gesundheitsmanagements in einem zertifizierten Betrieb."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Bendorf · Personal",
+    "email": "personal@bendorf.de",
+    "telefon": "02622 703104",
+    "bewerbungsportal": "https://karriere.bendorf.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1064, Marktrechte 1560, Stadtteile, Mittelzentrum, Bürgermeister: de.wikipedia.org/wiki/Bendorf (abgerufen 08.10.2026)",
+    "Benefits, Kontakt, Bewerbungsportal: Stellenausschreibung Stellvertretende Leitung Fachbereich Finanzen, Stadt Bendorf, https://interamt.de/koop/app/stelle?id=1498648 (API api.interamt.de/query/stellenangebot/1498648) einschließlich PDF-Anlage (abgerufen 08.10.2026)"
+  ]
+}

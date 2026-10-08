@@ -1,0 +1,73 @@
+{
+  "slug": "dreieich",
+  "token": "3f4e39c7db0665bf",
+  "name": "Kreis Offenbach",
+  "bundesland": "Hessen",
+  "einwohner": 358984,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Oliver Quilling",
+  "claim": "In der Metropolregion FrankfurtRheinMain eine moderne Kreisverwaltung mitgestalten.",
+  "beschreibung": "Der Kreis Offenbach gehört zur Metropolregion FrankfurtRheinMain; in seinen 13 kreisangehörigen Kommunen leben Menschen aus annähernd 170 Nationen. Sitz der Kreisverwaltung ist Dietzenbach, die Revision als Rechnungsprüfungsamt arbeitet im Haus des Lebenslangen Lernens in Dreieich. In der Kreisverwaltung sind etwa 1.400 Beschäftigte in 25 Organisationseinheiten tätig. Der Kreis bietet familienfreundliche Arbeitsbedingungen, eine strukturierte Einarbeitung und Arbeitsplätze in zentraler Lage mit guter Verkehrsanbindung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "358.984",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreisangehörige Kommunen",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "356,23 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte Kreisverwaltung (lt. Ausschreibung)",
+      "wert": "etwa 1.400",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobilität",
+      "beschreibung": "JobTicket Premium ohne Eigenbeteiligung für alle Tarifgebiete des RMV mit Mitfahrregelung sowie Leasingbike per Entgeltumwandlung."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Familienfreundliche Arbeitsbedingungen, flexible Arbeitszeitgestaltung und Homeoffice im Rahmen der dienstlichen Belange."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Sonderzahlungen nach dem TVöD und umfangreiche Vorsorgeleistungen für das Alter."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Aktives Gesundheits- und Eingliederungsmanagement sowie ein Gesundheitslotsendienst in Kooperation mit den Asklepios Kliniken."
+    },
+    {
+      "titel": "Fortbildung und Einarbeitung",
+      "beschreibung": "Strukturierte Einarbeitung und Fortbildungsangebote zur fachlichen und persönlichen Weiterbildung."
+    },
+    {
+      "titel": "Betriebsrestaurant und Rabatte",
+      "beschreibung": "Betriebsrestaurant mit Frühstück, Mittagessen und Kaffee to go sowie Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung · Fachdienst Personal",
+    "email": "bewerbung@kreis-offenbach.de",
+    "telefon": "06074 8180-5158",
+    "bewerbungsportal": "https://www.kreis-offenbach.de/Stellenmarkt"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kommunenzahl, Verwaltungssitz, Landrat: de.wikipedia.org/wiki/Landkreis_Offenbach (abgerufen 08.10.2026)",
+    "Beschäftigte, Revision in Dreieich, Benefits und Kontakt: Stellenausschreibung Prüferin oder Prüfer für die Revision, https://interamt.de/koop/app/stelle?id=1451624 (API api.interamt.de/query/stellenangebot/1451624) (abgerufen 08.10.2026)",
+    "Benefits (Betriebsrestaurant): Stellenausschreibung Fachkraft ganzheitliche Personalsachbearbeitung, https://interamt.de/koop/app/stelle?id=1477614 (API api.interamt.de/query/stellenangebot/1477614) (abgerufen 08.10.2026)"
+  ]
+}

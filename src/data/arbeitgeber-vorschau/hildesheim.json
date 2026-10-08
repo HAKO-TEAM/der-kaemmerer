@@ -1,0 +1,72 @@
+{
+  "slug": "hildesheim",
+  "token": "3c6d24956456b782",
+  "name": "Landkreis Hildesheim",
+  "bundesland": "Niedersachsen",
+  "einwohner": 266613,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Bernd Lynack",
+  "claim": "Steuerung und Finanzen eines großen niedersächsischen Landkreises mitprägen.",
+  "beschreibung": "Der Landkreis Hildesheim entstand in seiner heutigen Form 1977 aus den Altkreisen Hildesheim und Alfeld. Zum Kreis gehören 20 Gemeinden, Kreisstadt ist die große selbständige Stadt Hildesheim. In der Kreisverwaltung unterstützen Referentinnen und Referenten die Dezernatsleitungen bei Steuerung, doppischer Haushaltsplanung und Berichtswesen. Der Landkreis legt Wert auf eine freundliche, wertschätzende Arbeitsatmosphäre und betreibt eine eigene Betriebs-Kita im Kreishaus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "266.613",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "20",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.208,35 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Heutiger Zuschnitt seit",
+      "wert": "1977",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeiten sowie Betreuung für Kinder von 1 bis 6 Jahren in der Betriebs-Kita im Kreishaus."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Möglichkeit zum mobilen Arbeiten und zur Telearbeit."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge, tarifliche Jahressonderzahlung und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Eigene Gesundheitsangebote und Firmenfitness im Hansefit-Verbund."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket-Job."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Gezielte persönliche und fachliche Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt für Personal, Organisation und Digitalisierung (Andrea Gentz)",
+    "email": "andrea.gentz@landkreishildesheim.de",
+    "telefon": "05121 309-2312",
+    "bewerbungsportal": "https://bewerbung.landkreishildesheim.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindezahl, Kreisbildung 1977, Landrat: de.wikipedia.org/wiki/Landkreis_Hildesheim (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Co-Referent*in Steuerungsunterstützung (https://interamt.de/koop/app/stelle?id=1474067 (API api.interamt.de/query/stellenangebot/1474067)), Sachbearbeitung Steuerungsunterstützung (https://interamt.de/koop/app/stelle?id=1477880 (API api.interamt.de/query/stellenangebot/1477880)) und Sachbearbeitung Finanzcontrolling, Haushalt (https://interamt.de/koop/app/stelle?id=1489347 (API api.interamt.de/query/stellenangebot/1489347)) (abgerufen 08.10.2026)"
+  ]
+}

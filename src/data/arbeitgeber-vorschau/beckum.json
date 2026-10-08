@@ -1,0 +1,67 @@
+{
+  "slug": "beckum",
+  "name": "Stadt Beckum",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 37110,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Michael Gerdhenrich",
+  "token": "8d3e8cd26aec4b4a",
+  "claim": "In einer traditionsreichen Hansestadt im Münsterland große Investitionen sichtbar voranbringen.",
+  "beschreibung": "Beckum liegt im Kreis Warendorf im Münsterland, wird 1134 erstmals urkundlich erwähnt und war von 1816 bis 1974 Kreisstadt. Seit dem 19. Jahrhundert prägt die Zementindustrie die Stadt, heute ist Beckum Mitglied der Neuen Hanse und des Westfälischen Hansebunds. Aktuell treibt die Stadt den Neubau der Feuer- und Rettungswache sowie ein umfangreiches Erneuerungs- und Neubauprogramm an den Schulen voran. Als familienfreundliche Arbeitgeberin unterstützt die Stadtverwaltung die Vereinbarkeit von Familie und Beruf mit flexiblen Arbeitszeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "37.110",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1134",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "111,46 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitglied",
+      "wert": "Neue Hanse",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Unterstützung der Vereinbarkeit von Familie und Beruf durch eine familienfreundliche Arbeitgeberin."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten als Selbstverständlichkeit, Teilzeit ist grundsätzlich möglich."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge und die sonstigen im öffentlichen Dienst üblichen Leistungen."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Am individuellen Bedarf orientierte Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gestaltungsaufgaben",
+      "beschreibung": "Mitwirkung an bedeutenden Investitionsvorhaben wie dem Neubau der Feuer- und Rettungswache und dem Schulbauprogramm."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Bewerbungen",
+    "email": "bewerbung@beckum.de",
+    "telefon": "02521 29-1107"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, ehemalige Kreisstadt, Zementindustrie, Neue Hanse, Bürgermeister: de.wikipedia.org/wiki/Beckum (abgerufen 08.10.2026)",
+    "Investitionsvorhaben, Benefits und Kontakt: Stellenausschreibung Leitung Fachdienst Gebäudemanagement, https://interamt.de/koop/app/stelle?id=1497666 (API api.interamt.de/query/stellenangebot/1497666) (abgerufen 08.10.2026)"
+  ]
+}

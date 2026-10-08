@@ -1,0 +1,68 @@
+{
+  "slug": "darmstadt",
+  "token": "97dbb24cc7e3cef1",
+  "name": "DA-Di-Werk – Eigenbetrieb für Gebäudemanagement des Landkreises Darmstadt-Dieburg",
+  "bundesland": "Hessen",
+  "einwohner": 301529,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Klaus Peter Schellhaas",
+  "claim": "Die Schulgebäude eines ganzen Landkreises finanziell solide aufstellen.",
+  "beschreibung": "Das DA-Di-Werk ist das Gebäudemanagement des Landkreises Darmstadt-Dieburg und baut, saniert und unterhält alle kreiseigenen Schulen. Der Träger, der Landkreis Darmstadt-Dieburg, entstand 1977 aus den Kreisen Darmstadt und Dieburg und zählt mit 23 Städten und Gemeinden zum Rhein-Main-Gebiet. Der Arbeitsplatz liegt im Herzen von Darmstadt mit sehr guter Anbindung an den Nahverkehr. Im Fachbereich Finanz- und Rechnungswesen wirken Beschäftigte aktiv am Aufbau eines neuen Buchhaltungssystems und an der Liquiditätsplanung mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Landkreis (31.12.2025)",
+      "wert": "301.529",
+      "icon": "👥"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "23",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche Landkreis",
+      "wert": "658,61 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Aufgabe",
+      "wert": "Bau, Sanierung und Unterhalt aller Kreisschulen",
+      "icon": "🏫"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten ohne Kernarbeitszeit, 30 Urlaubstage plus verwaltungsinterner Zusatzurlaub."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Preisgünstiges Jobticket für das gesamte RMV-Gebiet inklusive Mitnahmeregelung, Dienstrad-Leasing sowie Firmenparkplatz."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Bezahlung nach TVöD-VKA zuzüglich Jahressonderzahlung und tariflicher Altersvorsorge."
+    },
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Strukturierte Einarbeitung und Zusammenarbeit, damit neue Kolleginnen und Kollegen schnell dazugehören."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiche interne und externe Fortbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "DA-Di-Werk · Personal und Auswahlverfahren (Claudia Wiener)",
+    "email": "c.wiener@ladadi.de",
+    "telefon": "06151 88-12434",
+    "bewerbungsportal": "https://www.ladadi.de/umwelt-soziales/natur-bauen/wohnen-bauen/gebaeudemanagement-da-di-werk/offene-stellen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindezahl, Kreisbildung 1977, Landrat: de.wikipedia.org/wiki/Landkreis_Darmstadt-Dieburg (abgerufen 08.10.2026)",
+    "Aufgabe des Eigenbetriebs, Benefits und Kontakt: Stellenausschreibung Bilanzbuchhalterin/Bilanzbuchhalter, https://interamt.de/koop/app/stelle?id=1498910 (API api.interamt.de/query/stellenangebot/1498910) (abgerufen 08.10.2026)"
+  ]
+}

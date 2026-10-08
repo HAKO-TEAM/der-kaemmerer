@@ -1,0 +1,80 @@
+{
+  "slug": "wiehl",
+  "name": "Stadt Wiehl",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 25213,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Ulrich Stücker",
+  "token": "3defc1f1db2ee634",
+  "claim": "Prüfung, Personal und Finanzen einer entwicklungsstarken Stadt im Oberbergischen mitgestalten.",
+  "beschreibung": "Wiehl wurde 1131 als Wila erstmals urkundlich erwähnt und erhielt 1971, nach dem Zusammenschluss mit Bielstein, das Stadtrecht. Die Stadt im Oberbergischen Kreis liegt verkehrsgünstig an der A4 und umfasst 52 Ortsteile. Eine reizvolle Innenstadt, ein familienfreundliches Umfeld und naturverbundene Sportmöglichkeiten sorgen für hohe Wohn- und Lebensqualität. Die Stadtverwaltung mit rund 280 Mitarbeitenden versteht sich als moderne Kommunalverwaltung mit vielfältigen Aufgaben und Gestaltungsmöglichkeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "25.213",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "53,26 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1131",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1971",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "52",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit und Telearbeit",
+      "beschreibung": "Flexibel geregelte Arbeitszeiten im Rahmen der Gleitzeit und die Möglichkeit der Telearbeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "Urlaubsanspruch von 31 Arbeitstagen pro Kalenderjahr."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Eingruppierung nach TVöD mit Jahressonderzuwendung und Anspruch auf leistungsorientierte Bezahlung."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Arbeitgeberfinanzierte betriebliche Altersvorsorge über die Zusatzversorgung im öffentlichen Dienst."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Unterstützung beim Leasing eines Dienstfahrrades."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Möglichkeiten der fachlichen Fortbildung und persönlichen Entwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Wiehl · Personalabteilung",
+    "email": "bewerbung@wiehl.de",
+    "telefon": "02262 99-246"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1131, Stadtrecht 1971, Ortsteile, Bürgermeister (bestätigt 2025): de.wikipedia.org/wiki/Wiehl (abgerufen 08.10.2026)",
+    "Lage, Beschäftigtenzahl, Benefits und Kontakt: Stellenausschreibungen Stadt Wiehl, Rechnungsprüfer/in https://interamt.de/koop/app/stelle?id=1494428 (API api.interamt.de/query/stellenangebot/1494428) und Sachbearbeiter/in Personalangelegenheiten https://interamt.de/koop/app/stelle?id=1497892 (API api.interamt.de/query/stellenangebot/1497892) (abgerufen 08.10.2026)"
+  ]
+}

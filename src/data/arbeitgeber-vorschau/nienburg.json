@@ -1,0 +1,68 @@
+{
+  "slug": "nienburg",
+  "name": "Stadt Nienburg/Weser",
+  "bundesland": "Niedersachsen",
+  "einwohner": 32644,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Jan Wendorf",
+  "token": "6fa93e05b92e52a5",
+  "claim": "Die Finanzen einer Kreisstadt an der Weser zukunftssicher mitgestalten.",
+  "beschreibung": "Nienburg/Weser ist Kreisstadt des gleichnamigen Landkreises in Niedersachsen und liegt an der Weser zwischen Hannover und Bremen. Die Stadt wird 1025 erstmals in einer Urkunde des Bistums Minden erwähnt und erhielt 1225 die Stadtrechte. Die Stadtverwaltung versteht sich als Chancengeberin: Die Vielfalt der Bevölkerung soll sich auch in der Verwaltung abbilden. Beschäftigte finden ein kollegiales, familienfreundliches Arbeitsumfeld und eine zuverlässige Arbeitgeberin.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "32.644",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1025",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "64,53 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Tarifgerechte Bezahlung nach TVöD, leistungsorientierte Bezahlung und eine attraktive Altersversorgung über die VBL."
+    },
+    {
+      "titel": "Telearbeit",
+      "beschreibung": "Die Möglichkeit zur Telearbeit im Rahmen der dienstlichen Gegebenheiten."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Individuelle Angebote zur Fort- und Weiterbildung."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Ein kollegiales und familienfreundliches Arbeitsumfeld bei einer zuverlässigen Arbeitgeberin."
+    },
+    {
+      "titel": "Dienstrad-Leasing",
+      "beschreibung": "Die Möglichkeit zur Teilnahme am Dienstrad-Leasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachgebiet Organisation und Personal",
+    "email": "d.luebkemann@nienburg.de",
+    "telefon": "05021 87-328",
+    "bewerbungsportal": "https://www.nienburg.de/bewerbung/uebersicht.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Stadtrechte, Kreisstadt, Bürgermeister: de.wikipedia.org/wiki/Nienburg/Weser (abgerufen 08.10.2026)",
+    "Leitbild, Benefits, Kontakt und Bewerbungsportal: Stellenausschreibung Sachbearbeitung Umsatzsteuerabrechnung und BgA, https://interamt.de/koop/app/stelle?id=1498184 (API api.interamt.de/query/stellenangebot/1498184) (abgerufen 08.10.2026)"
+  ]
+}

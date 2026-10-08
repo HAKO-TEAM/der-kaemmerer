@@ -1,0 +1,72 @@
+{
+  "slug": "muenster",
+  "name": "Stadt Münster",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 306368,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Tilman Fuchs",
+  "token": "ec56738d0bd0856b",
+  "claim": "Die Zukunft eines Oberzentrums im Herzen des Münsterlandes mitgestalten.",
+  "beschreibung": "Münster liegt im Zentrum des Münsterlandes, ist Sitz des gleichnamigen Regierungsbezirks und eines der Oberzentren Nordrhein-Westfalens. Die Stadtgeschichte reicht bis zur Klostergründung durch Liudger im Jahr 793 zurück, das Rathaus trägt als Stätte des Westfälischen Friedens das Europäische Kulturerbe-Siegel. Die Stadtverwaltung bietet Aufgaben mit hoher Verantwortung und viel Gestaltungsspielraum in einer zukunftsorientierten Kommunalverwaltung. Chancengleichheit, Vielfalt und ein familienfreundliches Arbeitsumfeld sind ausdrücklich Teil ihres Selbstverständnisses.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "306.368",
+      "icon": "👥"
+    },
+    {
+      "label": "Klostergründung durch Liudger",
+      "wert": "793",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "303,28 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Vergütung",
+      "beschreibung": "Transparente Bezahlung nach TVöD-VKA mit Jahressonderzahlung und leistungsorientierter Bezahlung."
+    },
+    {
+      "titel": "Karriere und Weiterbildung",
+      "beschreibung": "Fachliche und persönliche Fortbildungsangebote, unter anderem Führungskräftecoaching, Führungsseminare und kollegiale Beratung."
+    },
+    {
+      "titel": "Gestaltung",
+      "beschreibung": "Hohe Verantwortung und Gestaltungsspielraum in einer zukunftsorientierten Kommunalverwaltung."
+    },
+    {
+      "titel": "Corporate Benefits",
+      "beschreibung": "Zugang zu exklusiven Rabatten und Sonderkonditionen auf eine Vielzahl von Produkten und Dienstleistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Vergünstigtes JobTicket für den ÖPNV und die Möglichkeit eines Fahrradleasings."
+    },
+    {
+      "titel": "Vielfalt und Familie",
+      "beschreibung": "Ein wertschätzendes, geschlechtersensibles und familienfreundliches Arbeitsumfeld."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal- und Organisationsamt",
+    "email": "DeckerP@stadt-muenster.de",
+    "telefon": "0251 492-1138",
+    "bewerbungsportal": "https://www.stadt-muenster.de/gute-einstellung"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Klostergründung 793, Oberzentrum, Kulturerbe-Siegel, Oberbürgermeister: de.wikipedia.org/wiki/Münster (abgerufen 08.10.2026)",
+    "Benefits, Kontakt und Karriereportal: Stellenausschreibung Leitung Abteilung Informelle Planung, Projektsteuerung (63-042/26), https://interamt.de/koop/app/stelle?id=1492237 (API api.interamt.de/query/stellenangebot/1492237) (abgerufen 08.10.2026)"
+  ]
+}

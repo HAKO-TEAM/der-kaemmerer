@@ -1,0 +1,72 @@
+{
+  "slug": "witten",
+  "name": "Stadt Witten",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 91474,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dirk Leistner",
+  "token": "3f8d5267a0cf99f2",
+  "claim": "Die größte Stadt des Ennepe-Ruhr-Kreises im Wandel aktiv mitgestalten.",
+  "beschreibung": "Witten liegt im Südosten des Ruhrgebiets an der Ruhr zwischen Dortmund, Bochum und Hagen und ist die größte Stadt des Ennepe-Ruhr-Kreises. Der Ort wird 1214 erstmals urkundlich erwähnt, die Stadtrechte folgten 1823. Die Stadtverwaltung entwickelt ihre Organisation aktiv weiter, etwa mit digitalen Arbeitsabläufen und moderner Verwaltungssteuerung, und bietet dabei großen Gestaltungsspielraum. Als Trägerin des Prädikats Total E-Quality setzt sie sich für Chancengleichheit und die Vereinbarkeit von Beruf und privaten Lebenswelten ein.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "91.474",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1214",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "72,4 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1823",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Möglichkeiten zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Individuelle Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Eine familienfreundliche Arbeitgeberin, die die Vereinbarkeit von Beruf und privaten Lebenswelten fördert."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Chancengleichheit",
+      "beschreibung": "Trägerin des Prädikats Total E-Quality, aktiver Einsatz für Gleichstellung und Chancengleichheit."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Aufgaben mit großem Gestaltungsspielraum in einer sich modernisierenden Verwaltung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalabteilung",
+    "email": "personal@stadt-witten.de",
+    "telefon": "02302 581-1543",
+    "bewerbungsportal": "https://www.witten.de/rathaus-service/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Stadtrechte, größte Stadt des Kreises, Bürgermeister: de.wikipedia.org/wiki/Witten (abgerufen 08.10.2026)",
+    "Benefits, Total E-Quality, Kontakt und Karriereseite: Stellenausschreibung Abteilungsleitung Zentrale Dienste und Gebäudemanagement, https://interamt.de/koop/app/stelle?id=1496154 (API api.interamt.de/query/stellenangebot/1496154) (abgerufen 08.10.2026)"
+  ]
+}

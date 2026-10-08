@@ -1,0 +1,71 @@
+{
+  "slug": "moerfelden-walldorf",
+  "token": "b2668c4cbcbaad8a",
+  "name": "Magistrat der Stadt Mörfelden-Walldorf",
+  "bundesland": "Hessen",
+  "einwohner": 31441,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Karsten Groß",
+  "claim": "Eine Doppelstadt im Herzen des Rhein-Main-Gebiets an der Schnittstelle von Verwaltung und Politik mitgestalten.",
+  "beschreibung": "Mörfelden-Walldorf ist nach Rüsselsheim am Main die zweitgrößte Stadt im Landkreis Groß-Gerau und liegt im Dreieck zwischen Frankfurt am Main, Darmstadt und Wiesbaden; der südliche Teil des Frankfurter Flughafens reicht in das Stadtgebiet hinein. Die Stadt entstand 1977 aus dem Zusammenschluss der Städte Mörfelden, erstmals im 9. Jahrhundert im Lorscher Codex erwähnt, und Walldorf, 1699 als Waldenserkolonie gegründet. Die Verwaltung verbindet Gremienarbeit, Kultur mit Museen und Stadtarchiv sowie gelebte Städtepartnerschaften und arbeitet in Teams mit offenem Austausch und gegenseitiger Unterstützung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "31.441",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "44,13 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadt Mörfelden-Walldorf seit",
+      "wert": "1977",
+      "icon": "📜"
+    },
+    {
+      "label": "Lage",
+      "wert": "Rhein-Main-Gebiet, Kreis Groß-Gerau",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende Arbeitszeit, 31 Urlaubstage sowie Anspruch auf Bildungsurlaub."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "RMV-JobTicket Premium ohne Eigenbeteiligung inklusive Mitnahmeregelung sowie zinsfreies Darlehen für den Kauf eines Fahrrads."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt, betriebliche Altersvorsorge, vermögenswirksame Leistungen und Jubiläumsgeld."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Großzügiges Fortbildungsangebot zur beruflichen Weiterentwicklung."
+    },
+    {
+      "titel": "Freizeit und Vergünstigungen",
+      "beschreibung": "Freier Eintritt ins Waldschwimmbad Mörfelden sowie Vergünstigungen in lokalen Geschäften, Fitnessstudios und bei Versicherungen."
+    },
+    {
+      "titel": "Betriebsklima",
+      "beschreibung": "Jährlicher Betriebsausflug, Jahresfest und kostenloses Mineralwasser."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Hauptamt · Abteilung Personal und Organisation (Selina Gunkel)",
+    "email": "bewerbung@moerfelden-walldorf.de",
+    "telefon": "06105 938-864"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtbildung 1977, Ersterwähnung Mörfelden, Gründung Walldorf, Lage, Bürgermeister: de.wikipedia.org/wiki/Mörfelden-Walldorf (abgerufen 08.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Zentrale Dienste, https://interamt.de/koop/app/stelle?id=1498235 (API api.interamt.de/query/stellenangebot/1498235) (abgerufen 08.10.2026)"
+  ]
+}

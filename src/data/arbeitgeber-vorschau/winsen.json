@@ -1,0 +1,71 @@
+{
+  "slug": "winsen",
+  "token": "844f8346a96ba200",
+  "name": "ITK Harburg (AöR) – Landkreis Harburg",
+  "bundesland": "Niedersachsen",
+  "einwohner": 265727,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Rainer Rempe",
+  "claim": "Die digitale Verwaltung im Landkreis Harburg von morgen mitgestalten.",
+  "beschreibung": "Die ITK Harburg ist als Anstalt des öffentlichen Rechts der Full-Service-IT-Dienstleister für den Landkreis Harburg, seine Gemeinden und zahlreiche kommunale Einrichtungen wie Krankenhäuser, Klärwerke und rund 40 Schul-Clouds. Rund 65 IT-Fachleute betreuen nach eigener Angabe mehr als 3.500 Anwenderinnen und Anwender, von Fachverfahren bis zu Cloud-Lösungen. Der Träger, der Landkreis Harburg mit Sitz in Winsen (Luhe), liegt in der Metropolregion Hamburg und umfasst 42 Gemeinden. Kurze Entscheidungswege und ein kollegiales Team prägen die Arbeit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Landkreis (31.12.2025)",
+      "wert": "265.727",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden im Landkreis",
+      "wert": "42",
+      "icon": "🏘️"
+    },
+    {
+      "label": "IT-Fachleute (lt. Ausschreibung)",
+      "wert": "rund 65",
+      "icon": "💻"
+    },
+    {
+      "label": "Anwenderinnen und Anwender",
+      "wert": "über 3.500",
+      "icon": "🖥️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit und die Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub sowie arbeitsfreie Tage an Heiligabend und Silvester."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Bezahlung nach TVöD-VKA mit Jahressonderzahlung, betrieblicher Altersvorsorge und tariflicher Gehaltsentwicklung."
+    },
+    {
+      "titel": "Mobilität und Fitness",
+      "beschreibung": "HVV-ProfiCard, HanseFit sowie Corporate Benefits."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Individuelle fachliche und persönliche Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Moderne Technik",
+      "beschreibung": "Modernes Arbeitsumfeld mit aktuellen Technologien und Projekten zur Digitalisierung der Kommunalverwaltung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Harburg · Abteilung Personal (Rebecca Riedel)",
+    "email": "r.riedel@lkharburg.de",
+    "telefon": "04171 693-1077"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Gemeindezahl, Kreissitz, Metropolregion, Landrat: de.wikipedia.org/wiki/Landkreis_Harburg (abgerufen 08.10.2026)",
+    "Angaben zur ITK Harburg, Benefits und Kontakt: Stellenausschreibung ERP-Consultant / IT-Anwendungsbetreuung Finanzwesen, https://interamt.de/koop/app/stelle?id=1491080 (API api.interamt.de/query/stellenangebot/1491080) (abgerufen 08.10.2026)"
+  ]
+}
