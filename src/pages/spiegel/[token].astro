@@ -12,6 +12,7 @@ import schulden from '../../data/spiegel/schulden.json';
 import zugaenge from '../../data/spiegel/zugaenge.json';
 import { spiegel, kalenderwoche } from '../../lib/spiegel.mjs';
 import { niveauText } from '../../lib/markt/merkmale.mjs';
+import { kennwerte, vormonat, differenz, mitVorzeichen, datumKurz } from '../../lib/spiegel-stand.mjs';
 
 const token = Astro.params.token || '';
 const z = (zugaenge as any[]).find((x) => x.token === token);
@@ -23,6 +24,18 @@ const kw = kalenderwoche();
 const heute = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
 const pz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
 const zahl = (x: number | null, e = '') => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + e);
+// Vergleich mit dem Monatsstand (src/data/spiegel/stand/), sobald einer mindestens 20 Tage alt ist
+const staende = Object.fromEntries(Object.entries(import.meta.glob('../../data/spiegel/stand/*.json', { eager: true, import: 'default' }))
+  .map(([pfad, w]) => [pfad.split('/').pop()!.slice(0, 10), w as any]));
+const vm = vormonat(staende);
+const alt = vm?.werte?.[z.ags] || null;
+const jetzt = kennwerte(s);
+const veraenderung = alt ? [
+  ['Offene Stellen im Umkreis', jetzt.anzahl, differenz(jetzt.anzahl, alt.anzahl)],
+  ['davon im Finanzwesen', jetzt.finanz, differenz(jetzt.finanz, alt.finanz)],
+  ['Kommunale Arbeitgeber', jetzt.arbeitgeber, differenz(jetzt.arbeitgeber, alt.arbeitgeber)],
+  [`Haushaltssperren ${g.landLang}`, jetzt.sperrenLand, differenz(jetzt.sperrenLand, alt.sperrenLand)],
+] as [string, number, number | null][] : [];
 const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? '' : w > v * 1.02 ? '▲' : w < v * 0.98 ? '▼' : '●');
 ---
 <Base title={`Personal- und Haushaltslage ${g.name} – KW ${kw}`} description="Persönlicher Lagebericht von Der Kämmerer" noindex={true}>
@@ -36,6 +49,12 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
 .sp-kopf .sp-meta { color:rgba(255,255,255,.65); font-size:14px; }
 .sp-saetze { margin:26px 0 0; padding:20px 22px; background:rgba(255,255,255,.06); border-left:3px solid #93c5fd; border-radius:6px; }
 .sp-saetze p { margin:0 0 8px; font-size:16px; line-height:1.55; color:#e2e8f0; } .sp-saetze p:last-child { margin:0; }
+.sp-delta { margin:14px 0 0; padding:14px 18px; border:1px solid rgba(255,255,255,.15); border-radius:6px; }
+.sp-delta-k { font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#93c5fd; margin-bottom:8px; }
+.sp-delta-r { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; } .sp-delta-r b { font-size:20px; font-variant-numeric:tabular-nums; }
+.sp-delta-r em { font-style:normal; font-size:13px; font-weight:700; color:#cbd5e1; margin-left:4px; } .sp-delta-r em.auf { color:#fcd34d; } .sp-delta-r em.ab { color:#86efac; }
+.sp-delta-r span { display:block; font-size:12px; color:rgba(255,255,255,.6); }
+@media (max-width:820px){ .sp-delta-r{grid-template-columns:repeat(2,1fr)} }
 .sp-abschnitt { padding:36px 0 6px; }
 .sp-abschnitt h2 { font-family:'Playfair Display',Georgia,serif; font-size:26px; margin:0 0 4px; }
 .sp-unter { color:#64748b; font-size:14px; margin:0 0 18px; }
@@ -64,6 +83,14 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
     <h1>Personal- und Haushaltslage {g.name}</h1>
     <div class="sp-meta">{zahl(g.einwohner)} Einwohner · {g.kreis ? `${g.kreis} · ` : ''}{g.landLang} · Stand {heute}</div>
     {s.saetze.length > 0 && <div class="sp-saetze">{s.saetze.map((t) => <p>{t}</p>)}</div>}
+    {veraenderung.length > 0 && (
+      <div class="sp-delta">
+        <div class="sp-delta-k">Veränderung seit {datumKurz(vm!.datum)}</div>
+        <div class="sp-delta-r">{veraenderung.map(([n, w, d]) => (
+          <div><b>{w.toLocaleString('de-DE')}</b> <em class={d! > 0 ? 'auf' : d! < 0 ? 'ab' : ''}>{mitVorzeichen(d)}</em><span>{n}</span></div>
+        ))}</div>
+      </div>
+    )}
   </div></section>
 
   <div class="sp-w">
