@@ -130,8 +130,8 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
       <h2>Haushaltssperren im Umfeld von {g.name}</h2>
       <p class="gm-unter">Von der Redaktion belegte Haushaltssperren seit 2025 – {h.bundesweit} Kommunen bundesweit, {h.imLand} {imLand(g.landLang)}.</p>
       <div class="gm-karte">
-        {h.naechste.map((x: any) => <div class="gm-zeile"><span>{x.artikel ? <a href={x.artikel}>{x.kommune}</a> : <b>{x.kommune}</b>}</span><small>{x.km} km</small></div>)}
-        <p class="gm-hin">Alle Fälle mit Quellen: <a href="/haushalt/haushaltssperre-2026-stadte/">Haushaltssperre 2026 – Liste, Rechtsgrundlagen, Folgen</a></p>
+        {h.naechste.map((x: any) => <div class="gm-zeile"><span><a href={`/haushaltssperren/#fall-${x.land}-${x.kommune}`.toLowerCase().replace(/[^a-z0-9äöüß/#]+/g, '-')}>{x.kommune}</a></span><small>{x.km} km</small></div>)}
+        <p class="gm-hin">Alle Fälle auf der Karte, mit Quellen: <a href="/haushaltssperren/">Verzeichnis der Haushaltssperren</a> · Hintergrund: <a href="/haushalt/haushaltssperre-2026-stadte/">Haushaltssperre 2026 – Rechtsgrundlagen und Folgen</a></p>
       </div>
     </section>
 
