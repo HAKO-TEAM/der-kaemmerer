@@ -33,8 +33,11 @@ export function kommunenMitSperre(sperren, gemeinden) {
           url = `/gemeinden/${LAND_SLUG[f.land]}/#${anker(haupt.kreis)}`;
         }
       } else {
-        const suche = norm(name.replace(/-.*\(bezirk\)/i, ''));
+        const roh = name.replace(/-.*\(bezirk\)/i, '');
+        const suche = norm(roh);
+        const alias = norm(roh.replace(/^(Ostseeheilbad|Ostseebad|Hansestadt|Stadt|Gemeinde|Markt)\s+/i, '').replace(/ bei /, ' b ').replace(/ in der Oberpfalz/, ' i d opf'));
         const g = gemeinden.find((x) => x.land === f.land && norm(x.name) === suche)
+          || gemeinden.find((x) => x.land === f.land && norm(x.name) === alias)
           || gemeinden.find((x) => x.land === f.land && norm(x.name).startsWith(suche + ' '));
         if (g) { ort = { lat: g.lat, lon: g.lon }; url = `/gemeinden/${pfad[g.ags]}/`; }
       }
