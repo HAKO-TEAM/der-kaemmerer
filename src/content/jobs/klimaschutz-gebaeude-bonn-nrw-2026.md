@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-15"
 bewerbungslink: "https://recruitingapp-5327.de.umantis.com/Vacancies/4848/Description/1"
 schlagwoerter: ["Klimaschutz","Gebaeude","Bonn","NRW","Stadtplanung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

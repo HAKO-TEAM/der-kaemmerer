@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-20"
 bewerbungslink: "https://www.agfk-thueringen.de/2026/05/26/wir-suchen-referentin-fuer-rad-und-fussverkehrsfoerderung/"
 schlagwoerter: ["Radverkehr","Fussverkehr","Thueringen","Klimaschutz","Foerderung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

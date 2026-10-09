@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-30"
 bewerbungslink: "https://stellen.aken.de/jobposting/c7aea697dac94f6e26775d592cb74c561fd79d890"
 schlagwoerter: ["Klimaschutz","Klimaschutzmanager","Aken","Sachsen-Anhalt","Energie"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

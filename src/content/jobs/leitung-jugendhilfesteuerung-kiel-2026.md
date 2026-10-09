@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-15"
 bewerbungslink: "https://www.kiel.de"
 schlagwoerter: ["Jugendhilfe","Strategische Steuerung","Kiel","Schleswig-Holstein","EG15"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

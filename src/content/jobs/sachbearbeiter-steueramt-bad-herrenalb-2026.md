@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-30"
 bewerbungslink: "https://www.badherrenalb.de/Rathaus/Rathaus/Stellenangebote/"
 schlagwoerter: ["Steueramt", "Steuern", "Abgaben", "Baden-Württemberg", "Finanzen"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

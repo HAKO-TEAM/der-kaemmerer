@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
 bewerbungslink: "https://www.aschaffenburg.de/karriere"
 schlagwoerter: ["Tiefbau","Strassen","Aschaffenburg","Bayern","Abteilungsleitung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

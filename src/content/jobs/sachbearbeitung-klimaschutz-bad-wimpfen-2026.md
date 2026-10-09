@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-12"
 bewerbungslink: "https://bad-wimpfen.bewerbung.dvvbw.de/115-sachbearbeitung-klimaschutz-und-liegenschaften-m-w-d/de/job.html"
 schlagwoerter: ["Klimaschutz","Liegenschaften","Bad-Wimpfen","Baden-Wuerttemberg","Nachhaltigkeit"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

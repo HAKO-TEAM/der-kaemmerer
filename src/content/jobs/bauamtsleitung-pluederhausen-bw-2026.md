@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-31"
 bewerbungslink: "https://www.pluederhausen.de"
 schlagwoerter: ["Bauamt","Baugenehmigung","Pluederhausen","Rems-Murr-Kreis","Baden-Wuerttemberg"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

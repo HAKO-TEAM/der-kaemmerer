@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
 bewerbungslink: "https://www.freiburg.de/karriere"
 schlagwoerter: ["Stadtarchiv","Archiv","Freiburg","Baden-Wuerttemberg","Kulturarbeit"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

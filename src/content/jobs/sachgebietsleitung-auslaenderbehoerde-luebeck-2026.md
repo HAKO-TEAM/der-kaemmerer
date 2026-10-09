@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-20"
 bewerbungslink: "https://stadtluebeckjobs.de/"
 schlagwoerter: ["Ausländerbehörde", "Ordnungsamt", "Lübeck", "Führung", "TVöD"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-31"
 bewerbungslink: "https://www.koenigsbach-stein.de"
 schlagwoerter: ["Bauamt","Bauleitplanung","Koenigsbach-Stein","Baden-Wuerttemberg","Amtsleitung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

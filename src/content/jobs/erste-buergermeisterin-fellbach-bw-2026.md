@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-31"
 bewerbungslink: "https://www.zfm-bonn.de/jobboerse/"
 schlagwoerter: ["Buergermeister","Finanzen","Fellbach","Baden-Wuerttemberg","B5"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

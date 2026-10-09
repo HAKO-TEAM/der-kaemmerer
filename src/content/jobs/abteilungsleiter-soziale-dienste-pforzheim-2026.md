@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-20"
 bewerbungslink: "https://www.pforzheim.de/offene-stellen/formular.html"
 schlagwoerter: ["Soziale Dienste", "Abteilungsleitung", "SGB VIII", "Pforzheim", "Jugendhilfe"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-26"
 bewerbungslink: "https://stadtluebeckjobs.de/"
 schlagwoerter: ["Port Authority", "Hafen", "Luebeck", "Betrieb", "Sachgebietsleitung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

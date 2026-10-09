@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-15"
 bewerbungslink: "https://www.zfm-bonn.de/jobboerse/"
 schlagwoerter: ["Stadtkaemmerer","Haushalt","Wuppertal","NRW","B5"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-15"
 bewerbungslink: "https://www.amtzell.de"
 schlagwoerter: ["Bauamt","Stellvertretung","Amtzell","Ravensburg","Baden-Wuerttemberg"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

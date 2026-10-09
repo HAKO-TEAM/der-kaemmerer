@@ -11,7 +11,7 @@ startdatum: "zum naechstmoeglichen Zeitpunkt"
 bewerbungsschluss: "2026-08-15"
 bewerbungslink: "https://www.paderborn.de"
 schlagwoerter: ["Wirtschaftsfoerderung","Standortmarketing","Paderborn","NRW","Leitung"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

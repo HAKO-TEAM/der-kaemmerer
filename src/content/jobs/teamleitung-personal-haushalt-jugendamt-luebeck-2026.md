@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-06-25"
 bewerbungslink: "https://stadtluebeckjobs.de/"
 schlagwoerter: ["Jugendamt", "Teamleitung", "Personal", "Haushalt", "Lübeck"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false

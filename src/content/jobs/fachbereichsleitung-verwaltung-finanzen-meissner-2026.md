@@ -11,7 +11,7 @@ startdatum: "zum nächstmöglichen Zeitpunkt"
 bewerbungsschluss: "2026-07-31"
 bewerbungslink: "https://www.gemeinde-meissner.de"
 schlagwoerter: ["Fachbereichsleitung", "Verwaltung", "Finanzen", "Hessen", "TVöD"]
-paket: "KommunalFlat"
+paket: "Basis"
 aktiv: true
 datum: "2026-06-02"
 featured: false
