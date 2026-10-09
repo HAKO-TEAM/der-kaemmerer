@@ -20,6 +20,6 @@ for (const z of a.zeilen) {
   const s = spiegel(z.ags, daten), sch = s?.finanzen.schulden;
   const sp = kommunen.find((k) => k.url === z.url);
   aus[z.name] = { url: `https://derkaemmerer.de${z.url}`, einstufung: STUFEN[z.s].lang, stufe: z.s, ueberschuldung: UEBERSCHULDUNG[z.u] || null,
-    sperre: sp ? sp.faelle.map((f) => f.art.split(';')[0]).join(' / ') : null, schulden: sch?.wert ?? null, rang: sch?.rangLand?.platz ?? null, einwohner: z.einwohner };
+    sperre: sp ? sp.faelle.map((f) => f.art.split(';')[0]).join(' / ') : null, akt: z.akt ? `${z.akt.kurz} (${z.akt.stand}): ${z.akt.text}` : null, schulden: sch?.wert ?? null, rang: sch?.rangLand?.platz ?? null, einwohner: z.einwohner };
 }
 console.log(JSON.stringify(aus));
