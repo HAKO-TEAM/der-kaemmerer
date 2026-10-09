@@ -231,7 +231,7 @@ function karte(s: S, b: S, titel?: string, nb = '') {
 // ── Nachbesetzungs-Check (Schnellbefund)
 const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
 const dz = (x: number, n = 2) => x.toLocaleString('de-DE', { minimumFractionDigits: n, maximumFractionDigits: n });
-const NB_ANFRAGE = 'mailto:anzeigen@derkaemmerer.de?subject=' + encodeURIComponent('Nachbesetzungs-Check ' + D.org);
+const NB_ANFRAGE = 'mailto:personal@derkaemmerer.de?subject=' + encodeURIComponent('Nachbesetzungs-Check ' + D.org);
 function nbLeer(id: string) {
   if (!D.kommunalflat) return `<div class="pc-nb"><div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><span class="pc-hinweis">Der Schnellbefund ist Teil der KommunalFlat: welcher Anteil der Stelle mit vorhandener IT-Unterstützung entfällt, in VZÄ und Personalkosten. <a href="/stellenanzeigen" style="color:var(--blau);font-weight:700">KommunalFlat ansehen →</a></span></div></div>`;
   return `<div class="pc-nb" id="nb-${id}"><div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><button class="pc-btn sek" data-nb="${id}">Schnellbefund erstellen</button><span class="pc-hinweis">ca. 20 Sekunden · KI-gestützte Klassifizierung der Tätigkeiten, gerechnet nach KGSt</span></div></div>`;
