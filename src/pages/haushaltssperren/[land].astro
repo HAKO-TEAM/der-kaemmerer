@@ -9,7 +9,8 @@ import gemeinden from '../../data/spiegel/gemeinden.json';
 import { LAND_LANG, LAND_SLUG, imLand } from '../../lib/gemeinden.mjs';
 import { kommunenMitSperre, laenderRaster, ausschnitt, projiziere } from '../../lib/sperren-karte.mjs';
 import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
-import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import { nrwAuswertung } from '../../lib/haushaltsstatus.mjs';
+import HaushaltsstatusKarte from '../../components/HaushaltsstatusKarte.astro';
 import { verzeichnis } from '../../lib/gemeinden.mjs';
 
 export function getStaticPaths() {
@@ -39,16 +40,9 @@ for (const gruppe of Object.values(gleich)) if (gruppe.length > 1) gruppe.forEac
   const w = (2 * Math.PI * i) / gruppe.length, d = r * (1.4 + gruppe.length * 0.25);
   m.x += Math.cos(w) * d; m.y += Math.sin(w) * d;
 });
-// NRW: amtlicher Haushaltsstatus aller Gemeinden als Punktkarte
-const hsDaten = land === 'NW' ? (hsNw as any).gemeinden : null;
+// NRW: amtlicher Haushaltsstatus aller Gemeinden als Punktkarte (Komponente, auch auf /haushaltslage-nrw/)
 const { pfad: gPfad } = verzeichnis(alleG);
-const mitSperre = new Set(ks.filter((k: any) => k.url && k.ebene !== 'kreis').map((k: any) => k.url));
-const hsPunkte = hsDaten ? gemeindenImLand.filter((g) => hsDaten[g.ags] && g.lat != null).map((g) => {
-  const url = `/gemeinden/${gPfad[g.ags]}/`;
-  return { ...projiziere(g.lat, g.lon), s: hsDaten[g.ags].s, u: hsDaten[g.ags].u, name: g.name, url, sperre: mitSperre.has(url), r: Math.max(1.6, Math.min(4.2, Math.sqrt((g.einwohner || 1) / 9000))) };
-}).sort((a, b) => b.r - a.r) : [];
-const hsZahl = hsDaten ? Object.fromEntries(Object.keys(STUFEN).map((k) => [k, Object.values(hsDaten).filter((x: any) => x.s === Number(k)).length])) : {};
-const hsUeber = hsDaten ? Object.values(hsDaten).filter((x: any) => x.u === 1).length : 0;
+const hsA = land === 'NW' ? nrwAuswertung({ gemeinden: alleG, hs: hsNw, kommunen, pfad: gPfad, projiziere }) : null;
 const titel = ks.length ? `Haushaltssperre ${name} 2026: alle ${ks.length} ${ks.length === 1 ? (land === 'BE' ? 'Bezirk' : 'Kommune') : land === 'BE' ? 'Bezirke' : 'Städte, Gemeinden und Kreise'}` : `Haushaltssperren ${imLand(name)}`;
 const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Haushaltssperren', item: 'https://derkaemmerer.de/haushaltssperren/' },
@@ -123,27 +117,11 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
       <p class="hl-leer">Die Redaktion recherchiert laufend. Hinweise auf eine Haushaltssperre {imLand(name)} – mit Quelle – gern an <a href="mailto:chefredaktion@derkaemmerer.de?subject=Haushaltssperre%20%E2%80%93%20Hinweis">chefredaktion@derkaemmerer.de</a>.</p>
     )}
 
-    {hsPunkte.length > 0 && (
+    {hsA && (
     <section class="hl-hs" id="haushaltsstatus">
       <h2>Wie es um alle 396 Gemeinden in NRW steht</h2>
-      <p class="hl-hs-lead"><b>Nur {hsZahl[1]} von 396 Gemeinden</b> haben einen echt ausgeglichenen Haushalt. {hsZahl[2]} gleichen nur mit ihrer Ausgleichsrücklage aus, {hsZahl[3] + hsZahl[4]} verzehren mit Genehmigung Eigenkapital oder tragen Fehlbeträge vor, {hsZahl[5] + hsZahl[6] + hsZahl[7]} stehen in der Haushaltssicherung. {hsUeber} Gemeinden sind überschuldet. Amtliche Einstufung zum 31.12.2025; Ringe markieren die seitdem belegten Haushaltssperren.</p>
-      <div class="hl-hs-raster">
-        <div class="hl-karte hl-hs-karte">
-          <svg viewBox={`${vb.x} ${vb.y} ${vb.b} ${vb.h}`} role="img" aria-label="Karte: amtlicher Haushaltsstatus aller NRW-Gemeinden">
-            <path class="nachbar" d={grob[land].pfad} style="fill:#f1f5f9" />
-            {hsPunkte.map((p: any) => (
-              <a href={p.url} class="hs-punkt"><circle cx={p.x} cy={p.y} r={p.r} style={`fill:${(STUFEN as any)[p.s].farbe};stroke:${p.sperre ? '#0f172a' : '#fff'};stroke-width:${p.sperre ? 1.1 : 0.4}`}><title>{p.name}: {(STUFEN as any)[p.s].lang}{p.u === 1 ? ' · überschuldet' : ''}{p.sperre ? ' · Haushaltssperre belegt' : ''}</title></circle></a>
-            ))}
-          </svg>
-        </div>
-        <div class="hl-hs-leg">
-          {Object.entries(STUFEN).map(([k, v]: any) => (
-            <div class="hl-hs-z"><i style={`background:${v.farbe}`}></i><span>{v.lang}</span><b>{hsZahl[k]}</b><em><s style={`width:${(hsZahl[k] / 396) * 100}%;background:${v.farbe}`}></s></em></div>
-          ))}
-          <div class="hl-hs-z"><i style="background:#fff;border:2px solid #0f172a"></i><span>davon mit belegter Haushaltssperre (Ring)</span><b>{hsPunkte.filter((p: any) => p.sperre).length}</b><em></em></div>
-          <p class="hl-hs-q">Punktgröße nach Einwohnerzahl, Klick öffnet das Gemeindeprofil. Quelle: {(hsNw as any).quelle}.</p>
-        </div>
-      </div>
+      <p class="hl-hs-lead"><b>Nur {hsA.zahl[1]} von {hsA.gesamt} Gemeinden</b> haben einen ausgeglichenen Haushalt, {hsA.ueberschuldet.length} sind überschuldet (amtliche Einstufung zum 31.12.2025). Ringe markieren die seitdem belegten Haushaltssperren. <a href="/haushaltslage-nrw/" style="color:#2563eb;font-weight:700">Alle Zahlen, Listen und Gemeindesuche: Haushaltslage NRW →</a></p>
+      <HaushaltsstatusKarte a={hsA} viewBox={`${vb.x} ${vb.y} ${vb.b} ${vb.h}`} landPfad={grob[land].pfad} quelle={(hsNw as any).quelle} />
     </section>)}
 
     <section class="hl-laender">

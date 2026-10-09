@@ -1,0 +1,136 @@
+---
+// Haushaltslage NRW: amtlicher Haushaltsstatus aller 396 Gemeinden (Stand 31.12.2025) mit Karte, Listen, Gemeindesuche und Pressehinweisen.
+// Zielseite für die Pressemitteilung „8 von 396“. Daten: src/data/spiegel/haushaltsstatus_nw.json + belegte Haushaltssperren.
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HaushaltsstatusKarte from '../components/HaushaltsstatusKarte.astro';
+import sperren from '../data/haushaltslage/sperren.json';
+import gemeinden from '../data/spiegel/gemeinden.json';
+import hsNw from '../data/spiegel/haushaltsstatus_nw.json';
+import { verzeichnis } from '../lib/gemeinden.mjs';
+import { kommunenMitSperre, laenderRaster, ausschnitt, projiziere } from '../lib/sperren-karte.mjs';
+import { STUFEN, nrwAuswertung } from '../lib/haushaltsstatus.mjs';
+
+const alleG = gemeinden as any[];
+const { pfad } = verzeichnis(alleG);
+const kommunen = kommunenMitSperre(sperren as any, alleG);
+const a = nrwAuswertung({ gemeinden: alleG, hs: hsNw, kommunen, pfad, projiziere });
+const vb = ausschnitt(alleG, 'NW', 16);
+const landPfad = laenderRaster(alleG).NW.pfad;
+const nachName = (l: any[]) => [...l].sort((x, y) => x.name.localeCompare(y.name, 'de'));
+const nachGroesse = (l: any[]) => [...l].sort((x, y) => y.einwohner - x.einwohner);
+const z = a.zahl;
+const hsk = a.zeilen.filter((x: any) => x.s >= 5);
+const verzehr = a.zeilen.filter((x: any) => x.s === 3 || x.s === 4);
+const fiktiv = a.zeilen.filter((x: any) => x.s === 2);
+const ausgeglichen = a.zeilen.filter((x: any) => x.s === 1);
+const sperrenNw = kommunen.filter((k) => k.land === 'NW').length;
+const zitat = 'Quelle: Der Kämmerer (derkaemmerer.de/haushaltslage-nrw) auf Grundlage des Haushaltsstatus der Kommunen in NRW, Ministerium für Heimat, Kommunales, Bau und Digitalisierung NRW, Stand 31.12.2025';
+const suche = a.zeilen.map((x: any) => [x.name, x.s, x.u, x.url]);
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltslage der Gemeinden in Nordrhein-Westfalen',
+  description: `Amtlicher Haushaltsstatus aller ${a.gesamt} Gemeinden in NRW zum 31.12.2025: ${z[1]} mit ausgeglichenem Haushalt, ${a.ueberschuldet.length} überschuldet, ${hsk.length} in der Haushaltssicherung.`,
+  url: 'https://derkaemmerer.de/haushaltslage-nrw/', creator: { '@type': 'Organization', name: 'Der Kämmerer' }, spatialCoverage: 'Nordrhein-Westfalen',
+  temporalCoverage: '2025-12-31', isAccessibleForFree: true, isBasedOn: 'https://data.gov.de/suche/daten/haushaltsstatus-der-kommunen-in-nrw' };
+---
+<Base title={`Haushaltslage NRW: Nur ${z[1]} von ${a.gesamt} Gemeinden mit ausgeglichenem Haushalt`}
+  description={`Amtlicher Haushaltsstatus aller ${a.gesamt} Gemeinden in Nordrhein-Westfalen: ${z[1]} ausgeglichen, ${z[2]} nur mit Ausgleichsrücklage, ${hsk.length} in der Haushaltssicherung, ${a.ueberschuldet.length} überschuldet. Karte, Listen und Suche je Gemeinde.`}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.hn { color:#0f172a; } .hn-w { max-width:1080px; margin:0 auto; padding:0 28px; }
+.hn-kopf { background:#172840; color:#fff; padding:42px 0 38px; border-bottom:3px solid #ef4444; }
+.hn-k { font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#fca5a5; }
+.hn-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4.4vw,48px); line-height:1.08; margin:10px 0 14px; max-width:22ch; }
+.hn-kopf p { color:rgba(255,255,255,.76); font-size:17px; max-width:68ch; line-height:1.55; margin:0; }
+.hn-zahlen { display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:rgba(255,255,255,.15); border-radius:10px; overflow:hidden; margin-top:26px; }
+.hn-zahlen div { background:#1d3150; padding:14px; } .hn-zahlen b { display:block; font-size:28px; font-family:'Playfair Display',Georgia,serif; } .hn-zahlen span { font-size:12px; color:rgba(255,255,255,.65); line-height:1.35; display:block; }
+.hn-ab { padding:38px 0 6px; } .hn-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:26px; margin:0 0 6px; } .hn-unter { color:#64748b; font-size:14.5px; margin:0 0 18px; line-height:1.55; max-width:80ch; }
+.hn-such { max-width:520px; position:relative; } .hn-such input { width:100%; box-sizing:border-box; padding:13px 14px; font:inherit; font-size:16px; border:1px solid #cbd5e1; border-radius:8px; }
+.hn-erg { margin-top:10px; } .hn-erg :global(a) { display:flex; justify-content:space-between; gap:12px; padding:9px 12px; border-bottom:1px solid #f1f5f9; text-decoration:none; color:#0f172a; font-size:15px; }
+.hn-erg :global(a:hover) { background:#f8fafc; } .hn-erg :global(small) { font-weight:700; white-space:nowrap; }
+.hn-listen { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.hn-liste { border:1px solid #e2e8f0; border-radius:12px; padding:16px 18px; background:#fff; }
+.hn-liste h3 { margin:0 0 4px; font-size:16px; display:flex; align-items:center; gap:8px; } .hn-liste h3 i { width:11px; height:11px; border-radius:50%; display:inline-block; }
+.hn-liste p { margin:0 0 10px; font-size:13px; color:#64748b; }
+.hn-namen { display:flex; flex-wrap:wrap; gap:6px; } .hn-namen a { font-size:13.5px; border:1px solid #e2e8f0; border-radius:999px; padding:4px 10px; text-decoration:none; color:#0f172a; background:#fff; }
+.hn-namen a:hover { border-color:#2563eb; color:#2563eb; } .hn-namen a.sp { border-color:#0f172a; font-weight:700; }
+details.hn-liste summary { cursor:pointer; font-weight:700; font-size:16px; list-style:none; display:flex; align-items:center; gap:8px; } details.hn-liste summary::-webkit-details-marker { display:none; }
+details.hn-liste summary::after { content:'▾'; margin-left:auto; color:#64748b; } details.hn-liste[open] summary::after { content:'▴'; }
+details.hn-liste summary i { width:11px; height:11px; border-radius:50%; display:inline-block; } details.hn-liste .hn-namen { margin-top:12px; }
+.hn-presse { margin:40px 0 60px; background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #172840; border-radius:10px; padding:24px 26px; }
+.hn-presse h2 { font-family:'Playfair Display',Georgia,serif; font-size:22px; margin:0 0 10px; } .hn-presse p { margin:0 0 10px; font-size:15px; line-height:1.6; color:#334155; }
+.hn-presse code { display:block; background:#fff; border:1px solid #e2e8f0; border-radius:6px; padding:10px 12px; font-size:13px; color:#0f172a; white-space:normal; font-family:inherit; }
+.hn-presse a { color:#2563eb; }
+@media (max-width:900px){ .hn-w{padding:0 16px} .hn-zahlen{grid-template-columns:repeat(3,1fr)} .hn-listen{grid-template-columns:1fr} }
+</style>
+
+<div class="hn">
+  <section class="hn-kopf"><div class="hn-w">
+    <div class="hn-k">Der Kämmerer · Haushaltslage NRW · amtlicher Stand 31.12.2025</div>
+    <h1>Nur {z[1]} von {a.gesamt} Gemeinden in NRW haben einen ausgeglichenen Haushalt</h1>
+    <p>Die Kommunalaufsicht stuft jede Gemeinde in Nordrhein-Westfalen nach ihrer Haushaltslage ein. Das Ergebnis zum Jahresende 2025: {z[2]} Gemeinden gleichen ihren Haushalt nur noch mit der Ausgleichsrücklage aus, {z[3] + z[4]} verzehren mit Genehmigung Eigenkapital, {hsk.length} stehen in der Haushaltssicherung – und {a.ueberschuldet.length} sind überschuldet. Seit 2025 hat die Redaktion in NRW {sperrenNw} Haushaltssperren belegt.</p>
+    <div class="hn-zahlen">
+      <div><b>{z[1]}</b><span>ausgeglichener Haushalt</span></div>
+      <div><b>{z[2]}</b><span>fiktiv ausgeglichen (Ausgleichsrücklage)</span></div>
+      <div><b>{z[3] + z[4]}</b><span>genehmigter Eigenkapitalverzehr</span></div>
+      <div><b>{hsk.length}</b><span>in der Haushaltssicherung</span></div>
+      <div><b>{a.ueberschuldet.length}</b><span>überschuldet</span></div>
+      <div><b>{sperrenNw}</b><span>Haushaltssperren seit 2025 belegt</span></div>
+    </div>
+  </div></section>
+
+  <div class="hn-w">
+    <section class="hn-ab">
+      <h2>Die Karte: alle {a.gesamt} Gemeinden</h2>
+      <p class="hn-unter">Jeder Punkt ist eine Gemeinde, eingefärbt nach ihrer amtlichen Einstufung; Ringe markieren belegte Haushaltssperren seit 2025. Klick öffnet das Gemeindeprofil mit Hebesätzen, Schulden und Personalmarkt.</p>
+      <HaushaltsstatusKarte a={a} viewBox={`${vb.x} ${vb.y} ${vb.b} ${vb.h}`} landPfad={landPfad} quelle={(hsNw as any).quelle} />
+    </section>
+
+    <section class="hn-ab">
+      <h2>Wie steht Ihre Gemeinde da?</h2>
+      <div class="hn-such"><input id="hn-q" type="search" placeholder="Gemeinde eingeben, z. B. Oberhausen" autocomplete="off" aria-label="Gemeinde suchen"></div>
+      <div class="hn-erg" id="hn-erg"></div>
+    </section>
+
+    <section class="hn-ab">
+      <h2>Die Listen</h2>
+      <div class="hn-listen">
+        <div class="hn-liste"><h3><i style={`background:${STUFEN[1].farbe}`}></i>Ausgeglichener Haushalt ({z[1]})</h3><p>Ausgleich ohne Rückgriff auf Rücklagen.</p>
+          <div class="hn-namen">{nachName(ausgeglichen).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
+        <div class="hn-liste"><h3><i style="background:#b91c1c"></i>Überschuldet ({a.ueberschuldet.length})</h3><p>Eigenkapital aufgebraucht – negatives Eigenkapital.</p>
+          <div class="hn-namen">{nachGroesse(a.ueberschuldet).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
+        <div class="hn-liste"><h3><i style={`background:${STUFEN[5].farbe}`}></i>Haushaltssicherung ({hsk.length})</h3><p>Haushaltssicherungskonzept genehmigt ({z[5]}) oder nicht genehmigt ({z[6]}), dazu {z[7]} im Nothaushalt.</p>
+          <div class="hn-namen">{nachGroesse(hsk).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
+        <div class="hn-liste"><h3><i style="background:#f97316"></i>Überschuldung droht ({a.drohend.length})</h3><p>Eintritt der Überschuldung im oder nach dem Finanzplanungszeitraum erwartet.</p>
+          <div class="hn-namen">{nachGroesse(a.drohend).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
+        <details class="hn-liste"><summary><i style={`background:${STUFEN[4].farbe}`}></i>Genehmigter Eigenkapitalverzehr ({verzehr.length})</summary>
+          <div class="hn-namen">{nachName(verzehr).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></details>
+        <details class="hn-liste"><summary><i style={`background:${STUFEN[2].farbe}`}></i>Fiktiv ausgeglichen ({fiktiv.length})</summary>
+          <div class="hn-namen">{nachName(fiktiv).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></details>
+      </div>
+      <p class="hn-unter" style="margin-top:12px">Fett umrandet: Gemeinde mit belegter Haushaltssperre seit 2025 – Einzelheiten im <a href="/haushaltssperren/nordrhein-westfalen/" style="color:#2563eb">Verzeichnis der Haushaltssperren NRW</a>.</p>
+    </section>
+
+    <section class="hn-presse" id="presse">
+      <h2>Für Redaktionen</h2>
+      <p><b>Datengrundlage:</b> Haushaltsstatus der Kommunen in NRW, herausgegeben vom Ministerium für Heimat, Kommunales, Bau und Digitalisierung NRW über Open.NRW (Stand 31.12.2025, Datenlizenz Deutschland – Namensnennung 2.0). Die Einstufung beschreibt die Haushaltslage zum Stichtag. Die Haushaltssperren seit 2025 hat die Redaktion einzeln mit Quelle belegt; die Liste wird laufend ergänzt.</p>
+      <p><b>Zitiervorschlag:</b></p>
+      <code>{zitat}</code>
+      <p style="margin-top:12px"><b>Je Gemeinde</b> liefert das Profil unter derkaemmerer.de/gemeinden/ zusätzlich Hebesätze, Verschuldung je Einwohner im Vergleich mit Kreis und Land sowie offene Stellen im Umkreis. Rückfragen an die Chefredaktion: <a href="mailto:chefredaktion@derkaemmerer.de?subject=Haushaltslage%20NRW%20%E2%80%93%20Presseanfrage">chefredaktion@derkaemmerer.de</a>.</p>
+    </section>
+  </div>
+</div>
+
+<script define:vars={{ suche, STUFEN }}>
+  const q = document.getElementById('hn-q'), erg = document.getElementById('hn-erg');
+  const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss');
+  q.addEventListener('input', () => {
+    const s = norm(q.value.trim()); if (s.length < 2) { erg.innerHTML = ''; return; }
+    const t = suche.filter((x) => norm(x[0]).includes(s)).sort((a, b) => (norm(a[0]).startsWith(s) ? 0 : 1) - (norm(b[0]).startsWith(s) ? 0 : 1)).slice(0, 8);
+    erg.innerHTML = t.length ? t.map((x) => `<a href="${x[3]}"><span>${x[0]}</span><small style="color:${STUFEN[x[1]].farbe}">${STUFEN[x[1]].lang}${x[2] === 1 ? ' · überschuldet' : ''}</small></a>`).join('') : '<a><span>Keine NRW-Gemeinde gefunden</span></a>';
+  });
+</script>
+<Footer />
+</Base>

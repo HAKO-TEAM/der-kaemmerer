@@ -124,7 +124,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
     {hsStufe && (
     <section class="gm-ab">
       <h2>Amtlicher Haushaltsstatus von {g.name}</h2>
-      <p class="gm-unter">Einstufung der Kommunalaufsicht NRW zum 31.12.2025 – {hsGleich} von 396 Gemeinden in NRW haben dieselbe Einstufung. <a href="/haushaltssperren/nordrhein-westfalen/#haushaltsstatus" style="color:#2563eb">Karte aller NRW-Gemeinden →</a></p>
+      <p class="gm-unter">Einstufung der Kommunalaufsicht NRW zum 31.12.2025 – {hsGleich} von 396 Gemeinden in NRW haben dieselbe Einstufung. <a href="/haushaltslage-nrw/" style="color:#2563eb">Haushaltslage aller NRW-Gemeinden →</a></p>
       <div class="gm-karte">
         <div class="gm-skala">{Object.entries(STUFEN).map(([k, v]: any) => <span class={Number(k) === hs.s ? 'aktiv' : ''} style={`--f:${v.farbe}`} title={v.lang}>{v.kurz}</span>)}</div>
         <p class="gm-hs"><b style={`color:${hsStufe.farbe}`}>{hsStufe.lang}</b> – {hsStufe.text}</p>
