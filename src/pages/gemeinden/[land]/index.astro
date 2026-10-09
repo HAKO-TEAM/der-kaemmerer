@@ -1,0 +1,55 @@
+---
+// Gemeindeverzeichnis je Bundesland (statisch): alle Gemeinden nach Kreisen, mit Hebesatz Grundsteuer B und Gewerbesteuer.
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import gemeinden from '../../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../../data/spiegel/hebesaetze.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../../lib/gemeinden.mjs';
+
+export function getStaticPaths() {
+  return Object.entries(LAND_SLUG).filter(([k]) => (gemeinden as any[]).some((g) => g.land === k)).map(([k, s]) => ({ params: { land: s }, props: { land: k } }));
+}
+const { land } = Astro.props as { land: string };
+const { pfad } = verzeichnis(gemeinden as any[]);
+const liste = (gemeinden as any[]).filter((g) => g.land === land);
+const kreise = Object.entries(liste.reduce((m: any, g) => ((m[g.kreis || g.name] ||= []).push(g), m), {}))
+  .map(([k, gs]: any) => [k, gs.sort((a: any, b: any) => a.name.localeCompare(b.name, 'de'))] as [string, any[]])
+  .sort((a, b) => a[0].localeCompare(b[0], 'de'));
+const name = LAND_LANG[land];
+const hs = (a: string) => (hebesaetze as any)[a] || {};
+const anker = (k: string) => k.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-');
+---
+<Base title={`Hebesätze und Schulden aller Gemeinden ${imLand(name)}`}
+  description={`Alle ${liste.length.toLocaleString('de-DE')} Gemeinden ${imLand(name)}: Hebesätze Grundsteuer und Gewerbesteuer, Schulden je Einwohner, Haushaltslage und kommunaler Personalmarkt – je Gemeinde im Vergleich mit Kreis und Land.`}>
+<Header />
+<style>
+.gl { max-width:1040px; margin:0 auto; padding:30px 28px 60px; color:#0f172a; }
+.gl-pfad { font-size:13px; color:#64748b; } .gl-pfad a { color:#2563eb; text-decoration:none; }
+.gl h1 { font-family:Georgia,serif; font-size:clamp(26px,3.6vw,38px); margin:10px 0 8px; }
+.gl > p { color:#475569; max-width:70ch; line-height:1.6; }
+.gl-kreise { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 8px; } .gl-kreise a { font-size:13px; border:1px solid #e2e8f0; border-radius:999px; padding:4px 10px; color:#334155; text-decoration:none; }
+.gl-kreis { margin-top:26px; } .gl-kreis h2 { font-size:18px; margin:0 0 8px; padding-bottom:6px; border-bottom:2px solid #172840; }
+.gl-tab { width:100%; border-collapse:collapse; font-size:14px; } .gl-tab td { padding:6px 6px; border-bottom:1px solid #f1f5f9; font-variant-numeric:tabular-nums; }
+.gl-tab td:nth-child(n+2) { text-align:right; color:#475569; white-space:nowrap; } .gl-tab th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#64748b; text-align:right; padding:6px; } .gl-tab th:first-child { text-align:left; }
+.gl-tab a { color:#0f172a; text-decoration:none; font-weight:600; } .gl-tab a:hover { color:#2563eb; }
+@media (max-width:700px){ .gl{padding:24px 16px 50px} .gl-tab td:nth-child(2), .gl-tab th:nth-child(2){display:none} }
+</style>
+<div class="gl">
+  <div class="gl-pfad"><a href="/gemeinden/">Gemeinden</a> › {name}</div>
+  <h1>Hebesätze und Schulden aller Gemeinden {imLand(name)}</h1>
+  <p>{liste.length.toLocaleString('de-DE')} Gemeinden in {kreise.length} {kreise.length === 1 ? 'Gebiet' : 'Kreisen und kreisfreien Städten'}. Je Gemeinde: Hebesätze für Grundsteuer und Gewerbesteuer (2024), Schulden je Einwohner (31.12.2025), Haushaltssperren im Umfeld und offene kommunale Stellen im Umkreis – im Vergleich mit Kreis, Land und gleich großen Gemeinden.</p>
+  {kreise.length > 1 && <div class="gl-kreise">{kreise.map(([k]) => <a href={`#${anker(k)}`}>{k}</a>)}</div>}
+  {kreise.map(([k, gs]) => (
+    <section class="gl-kreis" id={anker(k)}>
+      <h2>{k}</h2>
+      <table class="gl-tab">
+        <thead><tr><th>Gemeinde</th><th>Einwohner</th><th>Grundsteuer B</th><th>Gewerbesteuer</th></tr></thead>
+        <tbody>{gs.map((g: any) => <tr><td><a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a></td><td>{(g.einwohner || 0).toLocaleString('de-DE')}</td><td>{hs(g.ags).grundsteuer_b != null ? `${hs(g.ags).grundsteuer_b} %` : '–'}</td><td>{hs(g.ags).gewerbesteuer != null ? `${hs(g.ags).gewerbesteuer} %` : '–'}</td></tr>)}</tbody>
+      </table>
+    </section>
+  ))}
+  <p style="font-size:12px;color:#64748b;margin-top:30px">Quelle: Statistische Ämter des Bundes und der Länder, Gemeindeverzeichnis GV-ISys und Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0). Hebesätze 2024 nach altem Grundsteuerrecht.</p>
+</div>
+<Footer />
+</Base>

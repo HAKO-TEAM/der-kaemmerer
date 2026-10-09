@@ -78,7 +78,7 @@ export function spiegel(ags, { gemeinden, markt, sperren, hebesaetze = {}, schul
       rangLand: rangVon(w(landAgs), eigen, hochIstOben) };
   };
   const finanzen = {
-    grundsteuerB: vergleich(hebesaetze, 'grundsteuer_b'), gewerbesteuer: vergleich(hebesaetze, 'gewerbesteuer'),
+    grundsteuerA: vergleich(hebesaetze, 'grundsteuer_a'), grundsteuerB: vergleich(hebesaetze, 'grundsteuer_b'), gewerbesteuer: vergleich(hebesaetze, 'gewerbesteuer'),
     schulden: vergleich(schulden, 'schulden_je_ew'), kassenkredite: vergleich(schulden, 'kassenkredite_je_ew'),
     beteiligungen: vergleich(schulden, 'beteiligungen_je_ew'), kreisLabel: kreisfrei ? 'Kreisfreie Städte' : 'Kreis',
   };

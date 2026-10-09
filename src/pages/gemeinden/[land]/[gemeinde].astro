@@ -1,0 +1,150 @@
+---
+// Öffentliches Gemeindeprofil (eine Seite je Gemeinde, für die Google-Suche):
+// Hebesätze und Verschuldung im Vergleich, Personalmarkt im Umkreis, Haushaltssperren im Umfeld.
+// Gleicher Rechenweg wie der persönliche Lagebericht (src/lib/spiegel.mjs); ausgeliefert per Funktion, einen Tag im CDN zwischengespeichert.
+export const prerender = false;
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import markt from '../../../data/markt/markt.json';
+import sperren from '../../../data/haushaltslage/sperren.json';
+import gemeinden from '../../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../../data/spiegel/hebesaetze.json';
+import schulden from '../../../data/spiegel/schulden.json';
+import { spiegel } from '../../../lib/spiegel.mjs';
+import { verzeichnis, gemeindeUrl, LAND_SLUG, imLand } from '../../../lib/gemeinden.mjs';
+import { km } from '../../../lib/markt/benchmark.mjs';
+import { niveauText } from '../../../lib/markt/merkmale.mjs';
+
+const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
+const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
+const ags = agsVon[p];
+if (!ags) return new Response('Nicht gefunden', { status: 404 });
+const s = spiegel(ags, { gemeinden, markt, sperren, hebesaetze, schulden } as any);
+if (!s) return new Response('Nicht gefunden', { status: 404 });
+Astro.response.headers.set('Cache-Control', 'public, max-age=3600');
+Astro.response.headers.set('CDN-Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
+
+const { gemeinde: g, personal: pm, haushalt: h, finanzen: f } = s;
+const zahl = (x: number | null, e = '') => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + e);
+const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? '' : w > v * 1.02 ? '▲' : w < v * 0.98 ? '▼' : '●');
+const landUrl = `/gemeinden/${LAND_SLUG[g.land]}/`;
+const ort = { la: g.lat, lo: g.lon };
+const nachbarn = (gemeinden as any[]).filter((x) => x.ags !== g.ags && x.land === g.land && x.lat != null)
+  .map((x) => ({ ...x, d: km(ort, { la: x.lat, lo: x.lon }) })).sort((a, b) => a.d - b.d).slice(0, 10);
+const gb = f.grundsteuerB, gw = f.gewerbesteuer, sch = f.schulden;
+const titel = `${g.name}: Hebesatz Grundsteuer und Gewerbesteuer, Schulden je Einwohner`;
+const beschreibung = [
+  `${g.name} (${g.kreis && g.kreis !== g.name ? `${g.kreis}, ` : ''}${g.landLang})`,
+  gb.wert != null ? `Grundsteuer B ${gb.wert} %` : '', gw.wert != null ? `Gewerbesteuer ${gw.wert} %` : '',
+  sch.wert != null ? `Schulden ${zahl(sch.wert)} € je Einwohner` : '',
+].filter(Boolean).join(' · ') + ' – im Vergleich mit Kreis, Land und gleich großen Gemeinden. Dazu offene kommunale Stellen im Umkreis.';
+const zeilen = [['Grundsteuer A (Hebesatz)', f.grundsteuerA, ' %'], ['Grundsteuer B (Hebesatz)', gb, ' %'], ['Gewerbesteuer (Hebesatz)', gw, ' %'],
+  ['Schulden Kernhaushalt je Einwohner', sch, ' €'], ['davon Kassenkredite je Einwohner', f.kassenkredite, ' €'], ['Schulden der 100-%-Beteiligungen je Einwohner', f.beteiligungen, ' €']]
+  .filter(([, v]: any) => v.wert != null) as [string, any, string][];
+const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
+  { '@type': 'ListItem', position: 2, name: g.landLang, item: `https://derkaemmerer.de${landUrl}` },
+  { '@type': 'ListItem', position: 3, name: g.name, item: `https://derkaemmerer.de${gemeindeUrl(p)}` } ] };
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.gm { color:#0f172a; } .gm-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.gm-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
+.gm-pfad { font-size:13px; color:rgba(255,255,255,.6); } .gm-pfad a { color:#93c5fd; text-decoration:none; }
+.gm-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,44px); line-height:1.1; margin:10px 0 6px; }
+.gm-meta { color:rgba(255,255,255,.65); font-size:14px; }
+.gm-saetze { margin:22px 0 0; padding:18px 20px; background:rgba(255,255,255,.06); border-left:3px solid #93c5fd; border-radius:6px; }
+.gm-saetze p { margin:0 0 8px; font-size:16px; line-height:1.55; color:#e2e8f0; } .gm-saetze p:last-child { margin:0; }
+.gm-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#e2e8f0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin-top:22px; }
+.gm-kpis div { background:#fff; padding:16px; } .gm-kpis b { display:block; font-size:26px; font-variant-numeric:tabular-nums; color:#172840; } .gm-kpis span { font-size:12px; color:#64748b; }
+.gm-ab { padding:34px 0 4px; } .gm-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:0 0 4px; }
+.gm-unter { color:#64748b; font-size:14px; margin:0 0 16px; line-height:1.5; }
+.gm-karte { border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px; background:#fff; overflow-x:auto; }
+.gm-tab { width:100%; border-collapse:collapse; font-size:14px; min-width:620px; }
+.gm-tab th { text-align:left; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; padding:8px; border-bottom:1px solid #e2e8f0; }
+.gm-tab td { padding:10px 8px; border-bottom:1px solid #f1f5f9; font-variant-numeric:tabular-nums; } .gm-tab td b { font-size:16px; }
+.gm-zwei { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.gm-zeile { display:flex; justify-content:space-between; gap:12px; font-size:14px; padding:7px 0; border-bottom:1px solid #f1f5f9; } .gm-zeile:last-child { border:0; }
+.gm-zeile small { color:#64748b; white-space:nowrap; } .gm-zeile a { color:#0f172a; text-decoration:none; font-weight:600; } .gm-zeile a:hover { color:#2563eb; }
+.gm-karte h3 { margin:0 0 10px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#64748b; }
+.gm-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.5; } .gm-hin a { color:#2563eb; }
+.gm-nachbarn { display:flex; flex-wrap:wrap; gap:8px; } .gm-nachbarn a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
+.gm-nachbarn a:hover { border-color:#2563eb; color:#2563eb; }
+.gm-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.gm-cta h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 8px; font-size:21px; } .gm-cta p { margin:0 0 14px; color:rgba(255,255,255,.72); line-height:1.6; font-size:15px; }
+.gm-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:11px 16px; border-radius:6px; text-decoration:none; } .gm-btn.hell { background:#fff; color:#172840; }
+@media (max-width:820px){ .gm-w{padding:0 16px} .gm-kpis{grid-template-columns:repeat(2,1fr)} .gm-zwei,.gm-cta{grid-template-columns:1fr} }
+</style>
+
+<div class="gm">
+  <section class="gm-kopf"><div class="gm-w">
+    <div class="gm-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={landUrl}>{g.landLang}</a>{g.kreis && g.kreis !== g.name ? ` › ${g.kreis}` : ''}</div>
+    <h1>{g.name}: Hebesätze, Schulden und Haushaltslage</h1>
+    <div class="gm-meta">{zahl(g.einwohner)} Einwohner · {g.typ || 'Gemeinde'}{g.kreis && g.kreis !== g.name ? ` · ${g.kreis}` : ''} · {g.landLang}</div>
+    {s.saetze.length > 0 && <div class="gm-saetze">{s.saetze.map((t) => <p>{t.replace('Ihres Kreises', 'des Kreises').replace(' in Saarland', ' im Saarland')}</p>)}</div>}
+  </div></section>
+
+  <div class="gm-w">
+    <div class="gm-kpis">
+      <div><b>{zahl(gb.wert, ' %')}</b><span>Grundsteuer B {gb.rangLand ? `· Platz ${gb.rangLand.platz} von ${gb.rangLand.von}` : ''}</span></div>
+      <div><b>{zahl(gw.wert, ' %')}</b><span>Gewerbesteuer {gw.rangLand ? `· Platz ${gw.rangLand.platz} von ${gw.rangLand.von}` : ''}</span></div>
+      <div><b>{zahl(sch.wert, ' €')}</b><span>Schulden je Einwohner (Kernhaushalt)</span></div>
+      <div><b>{pm.anzahl}</b><span>offene kommunale Stellen im Umkreis von 50 km</span></div>
+    </div>
+
+    {zeilen.length > 0 && (
+    <section class="gm-ab">
+      <h2>Hebesätze und Verschuldung von {g.name} im Vergleich</h2>
+      <p class="gm-unter">Vergleich mit dem Median {f.kreisLabel === 'Kreis' ? 'des Kreises' : 'der kreisfreien Städte'}, des Landes {g.landLang} und gleich großer Gemeinden im Land (± 50 % Einwohner).</p>
+      <div class="gm-karte"><table class="gm-tab">
+        <thead><tr><th></th><th>{g.name}</th><th>{f.kreisLabel}</th><th>Land</th><th>Gleich groß</th><th>Rang im Land</th></tr></thead>
+        <tbody>
+          {zeilen.map(([n, v, e]) => (
+            <tr><td>{n}<br><small style="color:#64748b">{v.jahr}</small></td><td><b>{zahl(v.wert, e)}</b> {pfeil(v.wert, v.kreis)}</td><td>{zahl(v.kreis, e)}</td><td>{zahl(v.land, e)}</td><td>{zahl(v.groesse, e)}</td><td>{v.rangLand ? `${v.rangLand.platz} von ${v.rangLand.von}` : '–'}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="gm-hin">Hebesätze 2024 nach altem Grundsteuerrecht (die reformierten Sätze ab 2025 liegen amtlich noch nicht vollständig vor). Schulden zum 31.12.2025; bei Mitgliedsgemeinden von Ämtern und Verbandsgemeinden ohne deren Anteil am Verband. ▲ über / ▼ unter dem Kreismedian. Rang 1 = höchster Wert im Land. Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0).</p></div>
+    </section>)}
+
+    <section class="gm-ab">
+      <h2>Kommunaler Personalmarkt rund um {g.name}</h2>
+      <p class="gm-unter">Aktive Ausschreibungen kommunaler Arbeitgeber im Umkreis von 50 km – erfasst aus {markt.stellen.length.toLocaleString('de-DE')} öffentlichen Stellen bundesweit, täglich aktualisiert.</p>
+      <div class="gm-zwei">
+        <div class="gm-karte"><h3>Finanzstellen im Umkreis</h3>
+          {pm.finanzStellen.length ? pm.finanzStellen.slice(0, 8).map((x) => <div class="gm-zeile"><a href={x.u} target="_blank" rel="noopener nofollow">{x.t}<br><small style="font-weight:400">{x.o}</small></a><small>{niveauText(x.n)} · {x.km} km</small></div>) : <p class="gm-hin">Aktuell sind im Umkreis keine Finanzstellen anderer Kommunen ausgeschrieben.</p>}
+          <p class="gm-hin"><a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
+        </div>
+        <div class="gm-karte"><h3>Gesuchte Berufsfelder im Umkreis</h3>
+          {pm.felder.map((x) => <div class="gm-zeile"><span>{x.name}</span><small>{x.n} Stellen</small></div>)}
+          {pm.median != null && <p class="gm-hin">Median-Entgelt aller Ausschreibungen im Umkreis: {niveauText(pm.median)}.</p>}
+        </div>
+      </div>
+    </section>
+
+    <section class="gm-ab">
+      <h2>Haushaltssperren im Umfeld von {g.name}</h2>
+      <p class="gm-unter">Von der Redaktion belegte Haushaltssperren seit 2025 – {h.bundesweit} Kommunen bundesweit, {h.imLand} {imLand(g.landLang)}.</p>
+      <div class="gm-karte">
+        {h.naechste.map((x: any) => <div class="gm-zeile"><span>{x.artikel ? <a href={x.artikel}>{x.kommune}</a> : <b>{x.kommune}</b>}</span><small>{x.km} km</small></div>)}
+        <p class="gm-hin">Alle Fälle mit Quellen: <a href="/haushalt/haushaltssperre-2026-stadte/">Haushaltssperre 2026 – Liste, Rechtsgrundlagen, Folgen</a></p>
+      </div>
+    </section>
+
+    <section class="gm-ab">
+      <h2>Gemeinden in der Nähe</h2>
+      <div class="gm-nachbarn">{nachbarn.map((x) => <a href={gemeindeUrl(pfad[x.ags])}>{x.name}</a>)}<a href={landUrl}>Alle Gemeinden {imLand(g.landLang)} →</a></div>
+    </section>
+
+    <div class="gm-cta">
+      <div><h2>Lagebericht für {g.name}</h2><p>Kämmerinnen und Kämmerer erhalten mit dem Briefing von Der Kämmerer jeden Monat den persönlichen Lagebericht ihrer Kommune – mit Veränderung zum Vormonat. Werbefrei und auf den Punkt.</p><a class="gm-btn" href="/newsletter/#anmelden">Briefing abonnieren</a></div>
+      <div><h2>Vor der nächsten Nachbesetzung</h2><p>Der Kämmerer prüft die nächsten fünf Ausschreibungen einer Kommune kostenfrei auf ihren Digitalisierungsanteil – je Stelle ein Einseiter mit Empfehlung.</p><a class="gm-btn hell" href="/nachbesetzungs-check/">Nachbesetzungs-Check</a></div>
+    </div>
+  </div>
+</div>
+<Footer />
+</Base>

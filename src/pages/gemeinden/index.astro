@@ -1,0 +1,96 @@
+---
+// Gemeindeverzeichnis: Einstieg mit Suche, Bundesländern und größten Städten (statisch).
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG } from '../../lib/gemeinden.mjs';
+
+const alle = gemeinden as any[];
+const { pfad } = verzeichnis(alle);
+const laender = Object.entries(LAND_LANG).map(([k, n]) => ({ k, n, anzahl: alle.filter((g) => g.land === k).length }))
+  .filter((l) => l.anzahl).sort((a, b) => a.n.localeCompare(b.n, 'de'));
+const gross = [...alle].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0)).slice(0, 40);
+---
+<Base title="Hebesätze, Schulden und Haushaltslage aller Gemeinden in Deutschland"
+  description={`Gemeindeverzeichnis von Der Kämmerer: Hebesätze für Grundsteuer und Gewerbesteuer, Schulden je Einwohner, Haushaltssperren und kommunaler Personalmarkt für alle ${alle.length.toLocaleString('de-DE')} Gemeinden – je Gemeinde im Vergleich mit Kreis und Land.`}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.gv { color:#0f172a; } .gv-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.gv-kopf { background:#172840; color:#fff; padding:46px 0 40px; border-bottom:3px solid #2563eb; }
+.gv-k { font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#93c5fd; }
+.gv-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4.2vw,46px); line-height:1.1; margin:10px 0 12px; max-width:22ch; }
+.gv-kopf p { color:rgba(255,255,255,.74); font-size:17px; max-width:64ch; line-height:1.55; margin:0 0 22px; }
+.gv-suche { position:relative; max-width:560px; }
+.gv-suche input { width:100%; box-sizing:border-box; padding:15px 16px; font:inherit; font-size:17px; border-radius:8px; border:0; }
+.gv-treffer { position:absolute; left:0; right:0; top:100%; margin-top:6px; background:#fff; border-radius:8px; box-shadow:0 20px 40px -10px rgba(0,0,0,.4); overflow:hidden; z-index:5; }
+.gv-treffer :global(a) { display:flex; justify-content:space-between; gap:12px; padding:10px 14px; color:#0f172a; text-decoration:none; border-bottom:1px solid #f1f5f9; font-size:15px; }
+.gv-treffer :global(a:hover), .gv-treffer :global(a.aktiv) { background:#eff6ff; } .gv-treffer :global(small) { color:#64748b; }
+.gv-ab { padding:36px 0 6px; } .gv-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:0 0 14px; }
+.gv-laender { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.gv-laender a { border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; text-decoration:none; color:#0f172a; background:#fff; }
+.gv-laender a:hover { border-color:#2563eb; } .gv-laender b { display:block; font-size:15px; } .gv-laender span { font-size:13px; color:#64748b; }
+.gv-staedte { display:flex; flex-wrap:wrap; gap:8px; } .gv-staedte a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
+.gv-staedte a:hover { border-color:#2563eb; color:#2563eb; }
+.gv-text { color:#475569; line-height:1.65; max-width:72ch; font-size:15px; }
+.gv-quelle { font-size:12px; color:#64748b; margin:30px 0 60px; }
+@media (max-width:820px){ .gv-w{padding:0 16px} .gv-laender{grid-template-columns:repeat(2,1fr)} }
+</style>
+
+<div class="gv">
+  <section class="gv-kopf"><div class="gv-w">
+    <div class="gv-k">Der Kämmerer · Gemeindeverzeichnis</div>
+    <h1>Hebesätze, Schulden und Haushaltslage aller Gemeinden</h1>
+    <p>{alle.length.toLocaleString('de-DE')} Gemeinden mit Grundsteuer- und Gewerbesteuer-Hebesatz, Verschuldung je Einwohner, Haushaltssperren im Umfeld und offenen kommunalen Stellen im Umkreis – jeweils im Vergleich mit Kreis, Land und gleich großen Gemeinden.</p>
+    <div class="gv-suche">
+      <input id="gv-q" type="search" placeholder="Gemeinde suchen, z. B. Schwerte" autocomplete="off" aria-label="Gemeinde suchen">
+      <div class="gv-treffer" id="gv-t" hidden></div>
+    </div>
+  </div></section>
+
+  <div class="gv-w">
+    <section class="gv-ab">
+      <h2>Nach Bundesland</h2>
+      <div class="gv-laender">{laender.map((l) => <a href={`/gemeinden/${LAND_SLUG[l.k]}/`}><b>{l.n}</b><span>{l.anzahl.toLocaleString('de-DE')} {l.anzahl === 1 ? 'Gemeinde' : 'Gemeinden'}</span></a>)}</div>
+    </section>
+
+    <section class="gv-ab">
+      <h2>Die größten Städte</h2>
+      <div class="gv-staedte">{gross.map((g) => <a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a>)}</div>
+    </section>
+
+    <section class="gv-ab">
+      <h2>Was die Gemeindeprofile zeigen</h2>
+      <p class="gv-text">Jedes Profil vergleicht die Hebesätze für Grundsteuer A, Grundsteuer B und Gewerbesteuer sowie die Verschuldung je Einwohner mit dem Median des Kreises, des Landes und gleich großer Gemeinden und nennt den Rang im Land. Dazu kommen die nächstgelegenen von der Redaktion belegten Haushaltssperren und der kommunale Personalmarkt im Umkreis von 50 Kilometern – mit den offenen Stellen im Finanzwesen. Kämmerinnen und Kämmerer erhalten mit dem Briefing jeden Monat einen persönlichen Lagebericht ihrer Kommune.</p>
+    </section>
+
+    <p class="gv-quelle">Quellen: Statistische Ämter des Bundes und der Länder – Gemeindeverzeichnis GV-ISys, Regionaldatenbank (Realsteuer-Hebesätze 2024, Schulden 31.12.2025), Datenlizenz Deutschland – Namensnennung 2.0 · Ausschreibungen kommunaler Arbeitgeber (interamt, karriere.nrw) · Haushaltssperren: Recherche der Redaktion.</p>
+  </div>
+</div>
+
+<script>
+  const q = document.getElementById('gv-q') as HTMLInputElement, t = document.getElementById('gv-t') as HTMLDivElement;
+  const KURZ: Record<string, string> = { BW: 'BW', BY: 'BY', BE: 'BE', BB: 'BB', HB: 'HB', HH: 'HH', HE: 'HE', MV: 'MV', NI: 'NI', NW: 'NRW', RP: 'RP', SL: 'SL', SN: 'SN', ST: 'ST', SH: 'SH', TH: 'TH' };
+  let daten: any[] | null = null, aktiv = -1;
+  const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss');
+  async function laden() { if (!daten) daten = await (await fetch('/gemeinden/suche.json')).json(); return daten!; }
+  q.addEventListener('focus', laden, { once: true });
+  q.addEventListener('input', async () => {
+    const s = norm(q.value.trim()); if (s.length < 2) { t.hidden = true; return; }
+    const d = await laden();
+    const treffer = d.filter((x) => norm(x[0]).includes(s))
+      .sort((a, b) => (norm(a[0]).startsWith(s) ? 0 : 1) - (norm(b[0]).startsWith(s) ? 0 : 1) || b[4] - a[4]).slice(0, 12);
+    aktiv = -1;
+    t.innerHTML = treffer.length ? treffer.map((x) => `<a href="/gemeinden/${x[3]}/"><span>${x[0]}</span><small>${x[1] ? x[1] + ' · ' : ''}${KURZ[x[2]] || x[2]}</small></a>`).join('') : '<a><span>Keine Gemeinde gefunden</span></a>';
+    t.hidden = false;
+  });
+  q.addEventListener('keydown', (e) => {
+    const l = [...t.querySelectorAll('a[href]')] as HTMLAnchorElement[]; if (!l.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); aktiv = (aktiv + (e.key === 'ArrowDown' ? 1 : -1) + l.length) % l.length; l.forEach((a, i) => a.classList.toggle('aktiv', i === aktiv)); }
+    if (e.key === 'Enter') { e.preventDefault(); location.href = (l[aktiv] || l[0]).href; }
+  });
+  document.addEventListener('click', (e) => { if (!(e.target as HTMLElement).closest('.gv-suche')) t.hidden = true; });
+</script>
+<Footer />
+</Base>
