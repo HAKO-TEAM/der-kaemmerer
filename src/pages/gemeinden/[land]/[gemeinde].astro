@@ -47,6 +47,7 @@ const zeilen = [['Grundsteuer A (Hebesatz)', f.grundsteuerA, ' %'], ['Grundsteue
 // Amtlicher Haushaltsstatus (nur NRW)
 const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
 const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
+const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
 const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
@@ -81,6 +82,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
 .gm-skala { display:grid; grid-template-columns:repeat(7,1fr); gap:3px; margin-bottom:12px; } .gm-skala span { font-size:11px; text-align:center; padding:8px 3px; border-radius:4px; background:#f1f5f9; color:#94a3b8; border-top:4px solid var(--f); line-height:1.25; }
 .gm-skala span.aktiv { background:var(--f); color:#fff; font-weight:700; transform:scale(1.06); box-shadow:0 6px 14px -6px var(--f); }
 .gm-hs { margin:6px 0; font-size:15px; line-height:1.55; }
+.gm-akt { margin:10px 0 4px; padding:10px 12px; background:#fff7ed; border-left:4px solid #ea580c; border-radius:6px; font-size:14px; line-height:1.55; color:#7c2d12; } .gm-akt a { color:#c2410c; }
 @media (max-width:640px){ .gm-skala{grid-template-columns:repeat(4,1fr)} }
 .gm-nachbarn { display:flex; flex-wrap:wrap; gap:8px; } .gm-nachbarn a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
 .gm-nachbarn a:hover { border-color:#2563eb; color:#2563eb; }
@@ -129,6 +131,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         <div class="gm-skala">{Object.entries(STUFEN).map(([k, v]: any) => <span class={Number(k) === hs.s ? 'aktiv' : ''} style={`--f:${v.farbe}`} title={v.lang}>{v.kurz}</span>)}</div>
         <p class="gm-hs"><b style={`color:${hsStufe.farbe}`}>{hsStufe.lang}</b> – {hsStufe.text}</p>
         {(UEBERSCHULDUNG as any)[hs.u] && <p class="gm-hs"><b style="color:#b91c1c">{(UEBERSCHULDUNG as any)[hs.u]}.</b></p>}
+        {hsAkt && <div class="gm-akt"><b>Aktualisierung {hsAkt.stand}: {hsAkt.kurz}.</b> {hsAkt.text} <a href={hsAkt.quelle} target="_blank" rel="noopener nofollow">Quelle ↗</a></div>}
         <p class="gm-hin">Quelle: {(hsNw as any).quelle}. Die Einstufung beschreibt die Haushaltslage zum Stichtag; spätere Haushaltssperren sind im <a href="/haushaltssperren/nordrhein-westfalen/">Verzeichnis der Haushaltssperren NRW</a> erfasst.</p>
       </div>
     </section>)}

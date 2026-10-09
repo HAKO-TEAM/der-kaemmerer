@@ -20,7 +20,7 @@ const { a, viewBox, landPfad, quelle } = Astro.props;
     <svg viewBox={viewBox} role="img" aria-label="Karte: amtlicher Haushaltsstatus aller Gemeinden in Nordrhein-Westfalen">
       <path d={landPfad} style="fill:#f1f5f9" />
       {a.punkte.map((p: any) => (
-        <a href={p.url}><circle cx={p.x} cy={p.y} r={p.r} style={`fill:${(STUFEN as any)[p.s].farbe};stroke:${p.sperre ? '#0f172a' : '#fff'};stroke-width:${p.sperre ? 1.1 : 0.4}`}><title>{p.name}: {(STUFEN as any)[p.s].lang}{p.u === 1 ? ' · überschuldet' : ''}{p.sperre ? ' · Haushaltssperre belegt' : ''}</title></circle></a>
+        <a href={p.url}><circle cx={p.x} cy={p.y} r={p.r} style={`fill:${(STUFEN as any)[p.s].farbe};stroke:${p.sperre ? '#0f172a' : '#fff'};stroke-width:${p.sperre ? 1.1 : 0.4}`}><title>{p.name}: {(STUFEN as any)[p.s].lang}{p.u === 1 ? ' · überschuldet' : ''}{p.sperre ? ' · Haushaltssperre belegt' : ''}{p.akt ? ` · ${p.akt.kurz} (${p.akt.stand})` : ''}</title></circle></a>
       ))}
     </svg>
   </div>

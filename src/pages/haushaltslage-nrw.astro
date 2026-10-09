@@ -70,7 +70,7 @@ details.hn-liste summary i { width:11px; height:11px; border-radius:50%; display
   <section class="hn-kopf"><div class="hn-w">
     <div class="hn-k">Der Kämmerer · Haushaltslage NRW · amtlicher Stand 31.12.2025</div>
     <h1>Nur {z[1]} von {a.gesamt} Gemeinden in NRW haben einen ausgeglichenen Haushalt</h1>
-    <p>Die Kommunalaufsicht stuft jede Gemeinde in Nordrhein-Westfalen nach ihrer Haushaltslage ein. Das Ergebnis zum Jahresende 2025: {z[2]} Gemeinden gleichen ihren Haushalt nur noch mit der Ausgleichsrücklage aus, {z[3] + z[4]} verzehren mit Genehmigung Eigenkapital, {hsk.length} stehen in der Haushaltssicherung – und {a.ueberschuldet.length} sind überschuldet. Seit 2025 hat die Redaktion in NRW {sperrenNw} Haushaltssperren belegt.</p>
+    <p>Die Kommunalaufsicht stuft jede Gemeinde in Nordrhein-Westfalen nach ihrer Haushaltslage ein. Das Ergebnis zum Jahresende 2025: {z[2]} Gemeinden gleichen ihren Haushalt nur noch mit der Ausgleichsrücklage aus, {z[3] + z[4]} verzehren mit Genehmigung Eigenkapital, {hsk.length} stehen in der Haushaltssicherung – und {a.ueberschuldet.length} sind überschuldet. Seit 2025 hat die Redaktion in NRW {sperrenNw} Haushaltssperren belegt – darunter in {a.ueberholt.map((x: any) => x.name).join(' und ')}, zwei der acht Gemeinden mit amtlich ausgeglichenem Haushalt: Dort ist der Ausgleich 2026 bereits überholt.</p>
     <div class="hn-zahlen">
       <div><b>{z[1]}</b><span>ausgeglichener Haushalt</span></div>
       <div><b>{z[2]}</b><span>fiktiv ausgeglichen (Ausgleichsrücklage)</span></div>
@@ -98,7 +98,8 @@ details.hn-liste summary i { width:11px; height:11px; border-radius:50%; display
       <h2>Die Listen</h2>
       <div class="hn-listen">
         <div class="hn-liste"><h3><i style={`background:${STUFEN[1].farbe}`}></i>Ausgeglichener Haushalt ({z[1]})</h3><p>Ausgleich ohne Rückgriff auf Rücklagen.</p>
-          <div class="hn-namen">{nachName(ausgeglichen).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
+          <div class="hn-namen">{nachName(ausgeglichen).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}{x.akt ? ' *' : ''}</a>)}</div>
+          {a.ueberholt.length > 0 && <p style="margin:10px 0 0;font-size:12.5px;color:#9a3412;line-height:1.5">* 2026 überholt: {a.ueberholt.map((x: any) => `${x.name} (${x.akt.stand})`).join(', ')} – Haushaltssperre und Ergebnisverschlechterung im laufenden Jahr. Damit halten 2026 nur noch {z[1] - a.ueberholt.length} der 8 den Ausgleich.</p>}</div>
         <div class="hn-liste"><h3><i style="background:#b91c1c"></i>Überschuldet ({a.ueberschuldet.length})</h3><p>Eigenkapital aufgebraucht – negatives Eigenkapital.</p>
           <div class="hn-namen">{nachGroesse(a.ueberschuldet).map((x) => <a href={x.url} class={x.sperre ? 'sp' : ''}>{x.name}</a>)}</div></div>
         <div class="hn-liste"><h3><i style={`background:${STUFEN[5].farbe}`}></i>Haushaltssicherung ({hsk.length})</h3><p>Haushaltssicherungskonzept genehmigt ({z[5]}) oder nicht genehmigt ({z[6]}), dazu {z[7]} im Nothaushalt.</p>

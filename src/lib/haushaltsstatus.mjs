@@ -16,10 +16,11 @@ export function nrwAuswertung({ gemeinden, hs, kommunen, pfad, projiziere }) {
   const sperrUrls = new Set(kommunen.filter((k) => k.land === 'NW' && k.url && k.ebene !== 'kreis').map((k) => k.url));
   const nw = gemeinden.filter((g) => g.land === 'NW' && daten[g.ags]);
   const zeilen = nw.map((g) => ({ ags: g.ags, name: g.name, kreis: g.kreis, einwohner: g.einwohner || 0, s: daten[g.ags].s, u: daten[g.ags].u,
-    url: `/gemeinden/${pfad[g.ags]}/`, sperre: sperrUrls.has(`/gemeinden/${pfad[g.ags]}/`), lat: g.lat, lon: g.lon }));
+    url: `/gemeinden/${pfad[g.ags]}/`, sperre: sperrUrls.has(`/gemeinden/${pfad[g.ags]}/`), lat: g.lat, lon: g.lon, akt: (hs.aktualisierungen || {})[g.ags] || null }));
   const punkte = zeilen.filter((z) => z.lat != null).map((z) => ({ ...z, ...projiziere(z.lat, z.lon), r: Math.max(1.6, Math.min(4.2, Math.sqrt(z.einwohner / 9000))) }))
     .sort((a, b) => b.r - a.r);
   const zahl = Object.fromEntries(Object.keys(STUFEN).map((k) => [k, zeilen.filter((z) => z.s === Number(k)).length]));
-  return { zeilen, punkte, zahl, gesamt: zeilen.length, ueberschuldet: zeilen.filter((z) => z.u === 1), drohend: zeilen.filter((z) => z.u === 2 || z.u === 3),
+  const ueberholt = zeilen.filter((z) => z.akt);
+  return { zeilen, punkte, zahl, ueberholt, gesamt: zeilen.length, ueberschuldet: zeilen.filter((z) => z.u === 1), drohend: zeilen.filter((z) => z.u === 2 || z.u === 3),
     mitSperre: zeilen.filter((z) => z.sperre) };
 }
