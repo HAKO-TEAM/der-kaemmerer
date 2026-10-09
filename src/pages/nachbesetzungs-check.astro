@@ -1,0 +1,111 @@
+---
+// Nachbesetzungs-Check – kostenfreie Prüfung der nächsten fünf Ausschreibungen (Angebot an alle Kommunen, MK 09.10.2026).
+// Bewusst ohne Preise: Ziel ist die Anfrage an personal@derkaemmerer.de.
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const ANFRAGE = 'mailto:personal@derkaemmerer.de?subject=Nachbesetzungs-Check%20%E2%80%93%20unsere%20n%C3%A4chsten%20f%C3%BCnf%20Ausschreibungen';
+---
+<Base title="Nachbesetzungs-Check – fünf Ausschreibungen kostenfrei prüfen lassen"
+  description="Der Kämmerer prüft die nächsten fünf Ausschreibungen einer Kommune kostenfrei auf ihren Digitalisierungsanteil: je Stelle ein Einseiter mit Tätigkeiten, VZÄ-Potenzial und Empfehlung – binnen einer Woche.">
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.nc { color:#0f172a; } .nc-w { max-width:1040px; margin:0 auto; padding:0 32px; }
+.nc-hero { background:radial-gradient(1000px 360px at 85% -20%, rgba(37,99,235,.4), transparent 60%), #172840; color:#fff; padding:60px 0 54px; }
+.nc-k { font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#93c5fd; }
+.nc-hero h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,50px); line-height:1.08; margin:12px 0 16px; max-width:20ch; }
+.nc-hero p { font-size:18px; color:rgba(255,255,255,.76); max-width:62ch; margin:0 0 26px; line-height:1.55; }
+.nc-cta { display:inline-block; background:#2563eb; color:#fff; font-weight:800; padding:14px 22px; border-radius:8px; text-decoration:none; }
+.nc-cta.hell { background:#fff; color:#172840; }
+.nc-merk { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:22px; font-size:14px; color:rgba(255,255,255,.7); }
+.nc-merk span::before { content:'✓ '; color:#93c5fd; font-weight:700; }
+.nc-s { padding:54px 0 6px; } .nc-s h2 { font-family:'Playfair Display',Georgia,serif; font-size:32px; margin:0 0 10px; }
+.nc-s > .nc-w > p { color:#475569; max-width:68ch; font-size:16px; line-height:1.6; }
+.nc-schritte { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#cbd5e1; border:1px solid #cbd5e1; border-radius:12px; overflow:hidden; margin-top:22px; }
+.nc-schritte div { background:#f8fafc; padding:22px; } .nc-schritte b { font-size:28px; color:#2563eb; font-family:'Playfair Display',Georgia,serif; }
+.nc-schritte h3 { margin:6px 0 6px; font-size:17px; } .nc-schritte p { margin:0; font-size:14.5px; color:#475569; line-height:1.55; }
+.nc-tab { width:100%; border-collapse:collapse; margin-top:20px; font-size:15px; }
+.nc-tab th { text-align:left; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#64748b; padding:10px; border-bottom:1px solid #e2e8f0; }
+.nc-tab td { padding:12px 10px; border-bottom:1px solid #f1f5f9; vertical-align:top; line-height:1.5; }
+.nc-tab td:first-child { font-weight:800; color:#2563eb; font-size:18px; width:44px; } .nc-tab td.grad { font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap; }
+.nc-raster { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:22px; }
+.nc-f { border:1px solid #e2e8f0; border-radius:12px; padding:20px 22px; background:#fff; box-shadow:0 12px 30px -26px rgba(15,23,42,.5); }
+.nc-f h3 { margin:0 0 8px; font-size:17px; } .nc-f p { margin:0; color:#334155; font-size:14.5px; line-height:1.6; }
+.nc-empf { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px; }
+.nc-empf div { border-radius:10px; padding:16px 18px; border:1px solid #e2e8f0; } .nc-empf b { display:block; font-size:16px; margin-bottom:4px; }
+.nc-empf span { font-size:14px; color:#475569; line-height:1.5; }
+.nc-empf .g { background:#f0fdf4; border-color:#bbf7d0; } .nc-empf .y { background:#fefce8; border-color:#fde68a; } .nc-empf .b { background:#eff6ff; border-color:#bfdbfe; }
+.nc-ende { margin:56px 0 70px; background:#172840; color:#fff; border-radius:14px; padding:38px; display:grid; grid-template-columns:1.5fr 1fr; gap:28px; align-items:center; }
+.nc-ende h2 { font-family:'Playfair Display',Georgia,serif; font-size:28px; margin:0 0 10px; } .nc-ende p { color:rgba(255,255,255,.74); margin:0; line-height:1.6; }
+.nc-ende a.mail { color:#93c5fd; }
+@media (max-width:860px){ .nc-w{padding:0 16px} .nc-schritte,.nc-raster,.nc-empf,.nc-ende{grid-template-columns:1fr} }
+</style>
+
+<div class="nc">
+  <section class="nc-hero"><div class="nc-w">
+    <div class="nc-k">Der Kämmerer · Nachbesetzungs-Check</div>
+    <h1>Vor der Nachbesetzung wissen, was die Stelle künftig leisten muss.</h1>
+    <p>Der Kämmerer prüft die nächsten fünf Ausschreibungen Ihrer Kommune kostenfrei auf ihren Digitalisierungsanteil. Je Stelle erhalten Sie binnen einer Woche einen Einseiter: welche Tätigkeiten Fachverfahren übernehmen können, wie viel Arbeitszeit das freisetzt und welcher Zuschnitt sich für die Nachbesetzung empfiehlt.</p>
+    <a class="nc-cta" href={ANFRAGE}>Fünf Ausschreibungen prüfen lassen</a>
+    <div class="nc-merk"><span>kostenfrei und unverbindlich</span><span>vergabefrei</span><span>Ergebnis binnen einer Woche</span><span>je Stelle ein Einseiter</span></div>
+  </div></section>
+
+  <section class="nc-s"><div class="nc-w">
+    <h2>So läuft die Prüfung</h2>
+    <p>Jede Nachbesetzung ist eine Gelegenheit, den Zuschnitt einer Stelle neu zu denken. Der Check liefert dafür eine nachvollziehbare Grundlage – rechtzeitig vor der Ausschreibung.</p>
+    <div class="nc-schritte">
+      <div><b>1</b><h3>Ausschreibungen senden</h3><p>Schicken Sie uns die nächsten fünf geplanten Ausschreibungen als Text, PDF oder Link an personal@derkaemmerer.de. Liegt eine Stellenbeschreibung mit Arbeitsvorgängen und Zeitanteilen vor, wird das Ergebnis noch genauer.</p></div>
+      <div><b>2</b><h3>Tätigkeiten einordnen</h3><p>Jede Tätigkeit wird einer von vier Klassen zugeordnet, mit dem dafür nötigen Fachverfahren. Öffnungszeiten, Mindestbesetzung und Präsenzpflichten fließen in die Bewertung ein.</p></div>
+      <div><b>3</b><h3>Einseiter erhalten</h3><p>Binnen einer Woche liegt für jede Stelle ein Einseiter vor – als Entscheidungsgrundlage für Personalabteilung, Fachbereich und Verwaltungsspitze.</p></div>
+    </div>
+  </div></section>
+
+  <section class="nc-s"><div class="nc-w">
+    <h2>Vier Klassen, eine klare Rechnung</h2>
+    <p>Die Einordnung folgt einem festen Schema. Gerechnet wird außerhalb der KI mit offenen Parametern – jedes Ergebnis lässt sich Schritt für Schritt nachvollziehen.</p>
+    <table class="nc-tab">
+      <thead><tr><th>Klasse</th><th>Art der Tätigkeit</th><th>Anteil für Fachverfahren</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td><b>Regelbasiert und standardisiert</b> – eindeutige Regeln, strukturierte Eingangsdaten, etwa Datenerfassung, Bescheide nach festem Muster, Abgleiche</td><td class="grad">bis 80 %</td></tr>
+        <tr><td>B</td><td><b>Teilautomatisierbar</b> – System oder KI bereitet vor, ein Mensch prüft und zeichnet</td><td class="grad">bis 40 %</td></tr>
+        <tr><td>C</td><td><b>Ermessen, Beratung, Entscheidung</b> – rechtliche Würdigung, Einzelfall, Führung, Beziehungsarbeit</td><td class="grad">5 %</td></tr>
+        <tr><td>D</td><td><b>Präsenz und Einsatz</b> – körperliche Tätigkeit, Präsenzpflicht, Einsatzdienst</td><td class="grad">0 %</td></tr>
+      </tbody>
+    </table>
+  </div></section>
+
+  <section class="nc-s"><div class="nc-w">
+    <h2>Was der Einseiter zeigt</h2>
+    <div class="nc-raster">
+      <article class="nc-f"><h3>Tätigkeiten und Zeitanteile</h3><p>Die Aufgaben der Stelle mit ihrem Anteil an der Arbeitszeit – aus der Stellenbeschreibung übernommen oder aus der Ausschreibung abgeleitet und als Schätzung gekennzeichnet.</p></article>
+      <article class="nc-f"><h3>Klasse und Voraussetzung</h3><p>Für jede Tätigkeit die Klasse A bis D und das Fachverfahren, die Schnittstelle oder die Online-Leistung, die dafür vorhanden sein muss.</p></article>
+      <article class="nc-f"><h3>Potenzial in Vollzeitäquivalenten</h3><p>Der Anteil der Arbeitszeit, den Fachverfahren übernehmen können – realistisch bewertet mit Blick auf Öffnungszeiten, Mindestbesetzung und Präsenzpflichten.</p></article>
+      <article class="nc-f"><h3>Personalkosten im Blick</h3><p>Die Personalkosten der Stelle nach den KGSt-Werten für die jeweilige Entgeltgruppe – damit der Fachbereich weiß, worüber er entscheidet.</p></article>
+    </div>
+    <div class="nc-empf">
+      <div class="g"><b>Nachbesetzen</b><span>Die Stelle bleibt im heutigen Zuschnitt – ihre Aufgaben brauchen die volle Arbeitszeit.</span></div>
+      <div class="y"><b>Aufgaben bündeln</b><span>Ein Teil der Arbeitszeit wird frei und lässt sich mit Aufgaben einer benachbarten Stelle verbinden.</span></div>
+      <div class="b"><b>Zuschnitt prüfen</b><span>Ein großer Anteil lässt sich digital erledigen – vor der Ausschreibung lohnt ein neuer Zuschnitt.</span></div>
+    </div>
+  </div></section>
+
+  <section class="nc-s"><div class="nc-w">
+    <h2>Grundsätze</h2>
+    <div class="nc-raster">
+      <article class="nc-f"><h3>Bewertet wird die Aufgabe</h3><p>Gegenstand der Prüfung sind ausschließlich Tätigkeiten und Zeitanteile. Angaben zu Stelleninhaberinnen und Stelleninhabern sind dafür unerheblich.</p></article>
+      <article class="nc-f"><h3>Natürliche Fluktuation</h3><p>Der Check setzt dort an, wo eine Stelle ohnehin frei wird. Er unterstützt die Entscheidung über den Zuschnitt – die Entscheidung selbst trifft die Kommune.</p></article>
+      <article class="nc-f"><h3>Hoheitliches bleibt beim Menschen</h3><p>Ermessensentscheidungen, Beurkundungen, Führung und die Arbeit mit Kindern, Kranken und Hilfebedürftigen ordnet der Check grundsätzlich den Klassen C und D zu.</p></article>
+      <article class="nc-f"><h3>Nachvollziehbar und justierbar</h3><p>Grade, Schwellenwerte und Kostensätze sind offen ausgewiesen und lassen sich an die Lage Ihrer Kommune anpassen.</p></article>
+    </div>
+  </div></section>
+
+  <div class="nc-w">
+    <div class="nc-ende">
+      <div><h2>Ihre nächsten fünf Ausschreibungen</h2><p>Senden Sie die Ausschreibungen – oder einfach eine kurze Nachricht – an <a class="mail" href={ANFRAGE}>personal@derkaemmerer.de</a>. Die Prüfung ist kostenfrei, unverbindlich und vergabefrei; die Einseiter liegen binnen einer Woche vor.</p></div>
+      <div><a class="nc-cta hell" href={ANFRAGE}>Prüfung anfragen</a></div>
+    </div>
+  </div>
+</div>
+<Footer />
+</Base>
