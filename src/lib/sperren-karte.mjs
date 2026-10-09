@@ -44,3 +44,27 @@ export function kommunenMitSperre(sperren, gemeinden) {
   }
   return [...gruppen.values()].sort((a, b) => a.land.localeCompare(b.land) || a.name.localeCompare(b.name, 'de'));
 }
+
+/** Raster je Bundesland: {land: {pfad, x, y}} – Fläche als Pfad, Schwerpunkt für die Beschriftung. */
+export function laenderRaster(gemeinden, dLat = 0.09, dLon = 0.14) {
+  const zelle = new Map();   // Zelle → Land (erste Gemeinde gewinnt)
+  for (const g of gemeinden) if (g.lat != null) { const k = `${Math.round(g.lat / dLat)}|${Math.round(g.lon / dLon)}`; if (!zelle.has(k)) zelle.set(k, g.land); }
+  const s = (dLon * COS * K) * 0.92, laender = {};
+  for (const [k, land] of zelle) {
+    const [a, b] = k.split('|').map(Number); const p = projiziere(a * dLat, b * dLon);
+    const l = (laender[land] ||= { teile: [], sx: 0, sy: 0, n: 0 });
+    l.teile.push(`M${p.x.toFixed(1)} ${p.y.toFixed(1)}h${s.toFixed(1)}v${s.toFixed(1)}h-${s.toFixed(1)}z`); l.sx += p.x; l.sy += p.y; l.n++;
+  }
+  return Object.fromEntries(Object.entries(laender).map(([l, v]) => [l, { pfad: v.teile.join(''), x: v.sx / v.n, y: v.sy / v.n, zellen: v.n }]));
+}
+
+/** Ausschnitt (viewBox) eines Landes mit Rand. */
+export function ausschnitt(gemeinden, land, rand = 14) {
+  const ps = gemeinden.filter((g) => g.land === land && g.lat != null).map((g) => projiziere(g.lat, g.lon));
+  const x0 = Math.min(...ps.map((p) => p.x)) - rand, x1 = Math.max(...ps.map((p) => p.x)) + rand;
+  const y0 = Math.min(...ps.map((p) => p.y)) - rand, y1 = Math.max(...ps.map((p) => p.y)) + rand;
+  return { x: x0, y: y0, b: Math.max(x1 - x0, 40), h: Math.max(y1 - y0, 40) };
+}
+
+/** Farbstufe nach Anzahl (0 = neutral). */
+export const stufe = (n, max) => (!n ? 0 : Math.min(5, Math.ceil((n / Math.max(max, 1)) * 5)));

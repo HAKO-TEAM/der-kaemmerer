@@ -1,0 +1,32 @@
+---
+// Liste belegter Haushaltssperren (Übersicht und Länderseiten). nummern = Marker-Nummern wie auf der Landeskarte.
+interface Props { kommunen: any[]; nummern?: boolean }
+const { kommunen, nummern = false } = Astro.props;
+export const fallId = (k: any) => `fall-${k.land}-${k.name}`.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-');
+const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'Quelle'; } };
+---
+<style>
+.sl-fall { display:grid; grid-template-columns:auto 1fr; gap:12px; padding:13px 0; border-bottom:1px solid #f1f5f9; scroll-margin-top:20px; }
+.sl-fall:target { background:#fef2f2; }
+.sl-nr { width:26px; height:26px; border-radius:50%; background:#172840; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.sl-nr.kreis { background:#c2410c; } .sl-nr.leer { visibility:hidden; width:0; }
+.sl-fall h3 { margin:0 0 4px; font-size:16px; } .sl-fall h3 a { color:#0f172a; text-decoration:none; } .sl-fall h3 a:hover { color:#2563eb; }
+.sl-fall h3 em { font-style:normal; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#c2410c; background:#ffedd5; border-radius:4px; padding:2px 6px; margin-left:6px; vertical-align:2px; }
+.sl-fall p { margin:3px 0; font-size:14px; color:#334155; line-height:1.5; } .sl-fall p b { color:#0f172a; }
+.sl-q { font-size:12px; } .sl-q a { color:#2563eb; margin-right:10px; }
+.sl-trenner { border-top:1px dashed #e2e8f0; margin:6px 0; }
+</style>
+{kommunen.map((k: any, i: number) => (
+  <article class="sl-fall" id={fallId(k)}>
+    <span class={`sl-nr ${k.ebene === 'kreis' ? 'kreis' : ''} ${nummern ? '' : 'leer'}`}>{i + 1}</span>
+    <div>
+      <h3>{k.url ? <a href={k.url}>{k.name}</a> : k.name}{k.ebene === 'kreis' && <em>Kreis</em>}</h3>
+      {k.faelle.map((f: any, j: number) => (<>
+        {j > 0 && <div class="sl-trenner"></div>}
+        <p><b>Sperre:</b>{' '}{f.art}</p>
+        {f.anlass && <p><b>Anlass:</b>{' '}{f.anlass}</p>}
+        <p class="sl-q">{(f.quellen || []).map((q: string) => <a href={q} target="_blank" rel="noopener nofollow">{host(q)} ↗</a>)}{f.artikel && <a href={f.artikel}>Einordnung der Redaktion</a>}</p>
+      </>))}
+    </div>
+  </article>
+))}

@@ -1,0 +1,124 @@
+---
+// Verzeichnis der Haushaltssperren: anklickbare Länderkarte (eingefärbt nach Fällen), Balkendiagramm je Land und Liste aller Fälle.
+// Datenbasis src/data/haushaltslage/sperren.json (Artikel-Routine + Länderrecherche); Karte als SVG ohne externe Kartendienste.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SperrenListe from '../../components/SperrenListe.astro';
+import sperren from '../../data/haushaltslage/sperren.json';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import { LAND_LANG, LAND_SLUG } from '../../lib/gemeinden.mjs';
+import { kommunenMitSperre, laenderRaster, KARTE, stufe } from '../../lib/sperren-karte.mjs';
+
+const kommunen = kommunenMitSperre(sperren as any, gemeinden as any[]);
+const flaechen = laenderRaster(gemeinden as any[]);
+const stand = new Date((sperren as any).stand).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+const jeLand = Object.keys(LAND_LANG).map((l) => ({ l, name: LAND_LANG[l], slug: LAND_SLUG[l], ks: kommunen.filter((k) => k.land === l) }))
+  .sort((a, b) => b.ks.length - a.ks.length || a.name.localeCompare(b.name, 'de'));
+const max = Math.max(...jeLand.map((x) => x.ks.length));
+const mitFall = jeLand.filter((x) => x.ks.length);
+const anzahlKreise = kommunen.filter((k) => k.ebene === 'kreis').length;
+const KLEIN = new Set(['BE', 'HB', 'HH']);   // Stadtstaaten: auf der Karte als beschriftete Marke
+const VERSATZ: Record<string, [number, number]> = { BB: [6, 26], NI: [0, 10], SH: [0, -6] };   // Zahl neben Stadtstaaten/Inseln setzen
+const pos = (l: string) => ({ x: flaechen[l].x + 3 + (VERSATZ[l]?.[0] || 0), y: flaechen[l].y + 3 + (VERSATZ[l]?.[1] || 0) });
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltssperren deutscher Kommunen seit 2025',
+  description: `Von der Redaktion Der Kämmerer belegte Haushaltssperren in ${kommunen.length} Kommunen, jeweils mit Quelle. Stand ${stand}.`,
+  url: 'https://derkaemmerer.de/haushaltssperren/', creator: { '@type': 'Organization', name: 'Der Kämmerer' }, dateModified: (sperren as any).stand,
+  spatialCoverage: 'Deutschland', isAccessibleForFree: true };
+---
+<Base title={`Haushaltssperren 2026: Karte und Liste aller ${kommunen.length} Kommunen`}
+  description={`Welche Städte, Gemeinden und Kreise haben eine Haushaltssperre? Karte je Bundesland und Liste aller ${kommunen.length} von der Redaktion belegten Fälle seit 2025 – mit Datum, Umfang, Anlass und Quelle. Stand ${stand}.`}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.hs { color:#0f172a; } .hs-w { max-width:1080px; margin:0 auto; padding:0 28px; }
+.hs-kopf { background:#172840; color:#fff; padding:40px 0 36px; border-bottom:3px solid #dc2626; }
+.hs-k { font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#fca5a5; }
+.hs-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4.2vw,46px); line-height:1.1; margin:10px 0 12px; max-width:24ch; }
+.hs-kopf p { color:rgba(255,255,255,.75); font-size:17px; max-width:66ch; line-height:1.55; margin:0; }
+.hs-zahlen { display:flex; flex-wrap:wrap; gap:28px; margin-top:22px; } .hs-zahlen b { display:block; font-size:30px; font-family:'Playfair Display',Georgia,serif; } .hs-zahlen span { font-size:13px; color:rgba(255,255,255,.6); }
+.hs-grafik { display:grid; grid-template-columns:430px 1fr; gap:36px; padding:36px 0 10px; align-items:start; }
+.hs-karte { background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:16px; }
+.hs-karte svg { width:100%; height:auto; display:block; overflow:visible; }
+.hs-karte a path { stroke:#fff; stroke-width:.6; transition:filter .15s, opacity .15s; cursor:pointer; }
+.hs-karte a:hover path, .hs-karte a:focus path { filter:brightness(.82) saturate(1.2); }
+.s0 { fill:#e2e8f0; } .s1 { fill:#fecaca; } .s2 { fill:#fca5a5; } .s3 { fill:#f87171; } .s4 { fill:#ef4444; } .s5 { fill:#b91c1c; }
+.hs-karte .zahl circle { fill:#172840; stroke:#fff; stroke-width:1.5; } .hs-karte .zahl text { fill:#fff; font:700 9px Arial,sans-serif; text-anchor:middle; dominant-baseline:central; pointer-events:none; }
+.hs-karte .zahl.null circle { fill:#94a3b8; }
+.hs-karte .stadt rect { stroke:#fff; stroke-width:1.2; rx:3; } .hs-karte .stadt text { font:700 8px Arial,sans-serif; fill:#172840; }
+.hs-leg { display:flex; align-items:center; gap:6px; font-size:12px; color:#475569; margin-top:10px; } .hs-leg i { width:18px; height:10px; display:inline-block; border-radius:2px; }
+.hs-balken h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:0 0 4px; } .hs-balken > p { color:#64748b; font-size:14px; margin:0 0 14px; }
+.hs-bz { display:grid; grid-template-columns:190px 1fr 34px; align-items:center; gap:10px; padding:5px 6px; border-radius:6px; text-decoration:none; color:#0f172a; font-size:14px; }
+.hs-bz:hover { background:#f1f5f9; } .hs-bz .bar { height:14px; border-radius:3px; background:#e2e8f0; position:relative; overflow:hidden; }
+.hs-bz .bar span { position:absolute; inset:0 auto 0 0; background:linear-gradient(90deg,#f87171,#b91c1c); border-radius:3px; }
+.hs-bz b { text-align:right; font-variant-numeric:tabular-nums; } .hs-bz.leer { color:#94a3b8; }
+.hs-land { margin:30px 0 0; } .hs-land h2 { font-family:'Playfair Display',Georgia,serif; font-size:22px; margin:0 0 6px; padding-bottom:6px; border-bottom:2px solid #172840; display:flex; justify-content:space-between; align-items:baseline; }
+.hs-land h2 a { color:#0f172a; text-decoration:none; } .hs-land h2 a:hover { color:#2563eb; } .hs-land h2 small { font-family:Arial,sans-serif; font-size:13px; font-weight:400; } .hs-land h2 small a { color:#2563eb; }
+.hs-text { padding:30px 0 50px; max-width:72ch; color:#475569; font-size:15px; line-height:1.65; } .hs-text h2 { font-family:'Playfair Display',Georgia,serif; color:#0f172a; font-size:22px; } .hs-text a { color:#2563eb; }
+@media (max-width:900px){ .hs-w{padding:0 16px} .hs-grafik{grid-template-columns:1fr} .hs-karte{max-width:460px; margin:0 auto; width:100%; box-sizing:border-box} .hs-bz{grid-template-columns:130px 1fr 30px} }
+</style>
+
+<div class="hs">
+  <section class="hs-kopf"><div class="hs-w">
+    <div class="hs-k">Der Kämmerer · Verzeichnis der Haushaltssperren</div>
+    <h1>Haushaltssperren in Deutschland: alle belegten Fälle</h1>
+    <p>Welche Städte, Gemeinden und Kreise haben eine Haushaltssperre verhängt? Die Redaktion führt jeden Fall mit Datum, Umfang, Anlass und Quelle. Ein Klick auf ein Bundesland zeigt alle Fälle dort. Stand {stand}.</p>
+    <div class="hs-zahlen">
+      <div><b>{kommunen.length}</b><span>Kommunen seit 2025</span></div>
+      <div><b>{kommunen.length - anzahlKreise}</b><span>Städte und Gemeinden</span></div>
+      <div><b>{anzahlKreise}</b><span>Kreise</span></div>
+      <div><b>{mitFall.length}</b><span>Bundesländer</span></div>
+    </div>
+  </div></section>
+
+  <div class="hs-w">
+    <div class="hs-grafik">
+      <div class="hs-karte">
+        <svg viewBox={`-4 -4 ${KARTE.breite + 8} ${KARTE.hoehe + 8}`} role="img" aria-label="Karte Deutschlands: Haushaltssperren je Bundesland, anklickbar">
+          {jeLand.filter((x) => !KLEIN.has(x.l) && flaechen[x.l]).map((x) => (
+            <a href={`/haushaltssperren/${x.slug}/`} aria-label={`${x.name}: ${x.ks.length} Kommunen mit Haushaltssperre`}>
+              <path class={`s${stufe(x.ks.length, max)}`} d={flaechen[x.l].pfad}><title>{x.name}: {x.ks.length} {x.ks.length === 1 ? 'Kommune' : 'Kommunen'}</title></path>
+            </a>
+          ))}
+          {jeLand.filter((x) => !KLEIN.has(x.l) && flaechen[x.l]).map((x) => (
+            <g class={`zahl ${x.ks.length ? '' : 'null'}`}><circle cx={pos(x.l).x} cy={pos(x.l).y} r="9" /><text x={pos(x.l).x} y={pos(x.l).y}>{x.ks.length}</text></g>
+          ))}
+          {jeLand.filter((x) => KLEIN.has(x.l) && flaechen[x.l]).map((x) => (
+            <a href={`/haushaltssperren/${x.slug}/`} class="stadt">
+              <rect class={`s${stufe(x.ks.length, max)}`} x={flaechen[x.l].x - 4} y={flaechen[x.l].y - 4} width="15" height="15"><title>{x.name}: {x.ks.length}</title></rect>
+              <text x={flaechen[x.l].x + 14} y={flaechen[x.l].y + 6}>{x.l === 'BE' ? 'Berlin' : x.l === 'HB' ? 'Bremen' : 'Hamburg'} {x.ks.length}</text>
+            </a>
+          ))}
+        </svg>
+        <div class="hs-leg"><span>weniger</span><i class="s1" style="background:#fecaca"></i><i style="background:#fca5a5"></i><i style="background:#f87171"></i><i style="background:#ef4444"></i><i style="background:#b91c1c"></i><span>mehr Kommunen mit Haushaltssperre</span></div>
+      </div>
+
+      <div class="hs-balken">
+        <h2>Haushaltssperren je Bundesland</h2>
+        <p>Kommunen mit belegter Haushaltssperre seit 2025 – Klick öffnet die Länderseite mit Karte und allen Fällen.</p>
+        {jeLand.map((x) => (
+          <a class={`hs-bz ${x.ks.length ? '' : 'leer'}`} href={`/haushaltssperren/${x.slug}/`}>
+            <span>{x.name}</span><span class="bar"><span style={`width:${(x.ks.length / max) * 100}%`}></span></span><b>{x.ks.length}</b>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {mitFall.map((x) => (
+      <section class="hs-land">
+        <h2><a href={`/haushaltssperren/${x.slug}/`}>{x.name}</a><small>{x.ks.length} {x.ks.length === 1 ? 'Kommune' : 'Kommunen'} · <a href={`/haushaltssperren/${x.slug}/`}>Karte {x.name} →</a></small></h2>
+        <SperrenListe kommunen={x.ks} />
+      </section>
+    ))}
+
+    <section class="hs-text">
+      <h2>Was eine Haushaltssperre bedeutet</h2>
+      <p>Mit einer Haushaltssperre stoppt die Kämmerin oder der Kämmerer – je nach Landesrecht auch die Verwaltungsspitze oder die Kommunalaufsicht – die Inanspruchnahme bereits beschlossener Ansätze, wenn sich ein Fehlbetrag abzeichnet. Ausgaben, zu denen die Kommune rechtlich verpflichtet ist, laufen weiter; gesperrt werden freiwillige Leistungen, neue Aufträge und oft auch Stellenbesetzungen. Grundlage sind die Gemeindehaushaltsverordnungen der Länder, etwa § 25 KomHVO in Nordrhein-Westfalen oder § 29 GemHVO in Baden-Württemberg.</p>
+      <p>Hintergründe, Rechtsgrundlagen und Folgen: <a href="/haushalt/haushaltssperre-2026-stadte/">Haushaltssperre 2026 – Liste, Rechtsgrundlagen, Folgen</a>. Hebesätze und Verschuldung jeder Kommune im Vergleich zeigt das <a href="/gemeinden/">Gemeindeverzeichnis</a>.</p>
+      <p>Ein Fall fehlt oder hat sich geändert? Hinweise mit Quelle an <a href="mailto:chefredaktion@derkaemmerer.de?subject=Haushaltssperre%20%E2%80%93%20Hinweis">chefredaktion@derkaemmerer.de</a>.</p>
+    </section>
+  </div>
+</div>
+<Footer />
+</Base>
