@@ -104,6 +104,18 @@ const standText = new Date(MARKT.kopf.stand).toLocaleDateString('de-DE', { day: 
 .pc-tab { width:100%; border-collapse:collapse; font-size:13px; } .pc-tab th { text-align:left; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding:8px; border-bottom:1px solid var(--linie); }
 .pc-tab td { padding:9px 8px; border-bottom:1px solid #f1f5f9; vertical-align:top; } .pc-tab a { color:var(--ink); text-decoration:none; font-weight:600; } .pc-tab a:hover { color:var(--blau); }
 .pc-chip { display:inline-block; font-size:10.5px; font-weight:700; padding:1px 6px; border-radius:3px; background:#eef2ff; color:#3730a3; margin-left:4px; }
+.pc-nb { border-top:1px solid var(--linie); padding:18px 22px; background:#fbfaf7; }
+.pc-nb-kopf { display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; }
+.pc-nb-kopf h4 { margin:0; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.pc-nb-erg { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--linie); border:1px solid var(--linie); border-radius:8px; overflow:hidden; margin:14px 0; }
+.pc-nb-erg div { background:#fff; padding:10px 12px; } .pc-nb-erg b { display:block; font-size:19px; font-variant-numeric:tabular-nums; } .pc-nb-erg span { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.pc-nb-t { display:grid; grid-template-columns:24px 1fr 44px; gap:8px; font-size:13px; padding:4px 0; border-bottom:1px solid #f1f5f9; }
+.pc-nb-t small { color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; }
+.pc-kl { display:inline-grid; place-items:center; width:20px; height:20px; border-radius:4px; color:#fff; font-size:11px; font-weight:800; }
+.pc-kl.A { background:#92400e } .pc-kl.B { background:#c27a3a } .pc-kl.C { background:#2563eb } .pc-kl.D { background:#64748b }
+.pc-nb-e { font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 10px; border-radius:20px; }
+.pc-nb-e.pruefen { color:#92400e; background:#fef3c7 } .pc-nb-e.buendeln { color:#1d4ed8; background:#dbeafe } .pc-nb-e.nach { color:var(--ink2); background:#f1f5f9 }
+.pc-nb-alle { display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin:0 0 18px; padding:14px 18px; border:1px solid #fde68a; background:#fffbeb; border-radius:10px; }
 .pc-fuss { color:var(--muted); font-size:12px; padding:30px 0 50px; border-top:1px solid var(--linie); margin-top:30px; }
 @media (max-width:820px) { .pc-wrap{padding:0 16px} .pc-koerper{grid-template-columns:1fr} .pc-links{border-right:0;border-bottom:1px solid var(--linie)} .pc-mgrid{grid-template-columns:1fr} .pc-mkpis{grid-template-columns:repeat(2,1fr)} .pc-kopf{grid-template-columns:auto 1fr} .pc-kopf .pc-badge{grid-column:2;justify-self:start} }
 </style>
@@ -130,7 +142,8 @@ const standText = new Date(MARKT.kopf.stand).toLocaleDateString('de-DE', { day: 
   <div class="pc-wrap">
     <section class="pc-sek" id="stellen">
       <h2>Ihre Stellen im Marktvergleich</h2>
-      <p class="pc-unter">Jede Ihrer aktiven Ausschreibungen gegen vergleichbare kommunale Stellen – gleiches Funktionsfeld, gleiche Entgeltstufe, bevorzugt im eigenen Land. Die Ampel fasst Attraktivität und Wettbewerbsdruck im Umkreis zusammen.</p>
+      <p class="pc-unter">Jede Ihrer aktiven Ausschreibungen gegen vergleichbare kommunale Stellen – gleiches Funktionsfeld, gleiche Entgeltstufe, bevorzugt im eigenen Land. Die Ampel fasst Attraktivität und Wettbewerbsdruck im Umkreis zusammen. Der Schnellbefund zeigt zusätzlich, welcher Anteil der Stelle mit vorhandener IT-Unterstützung entfällt – vor der Entscheidung über die Nachbesetzung.</p>
+      <div id="pc-nb-alle"></div>
       <div id="pc-eigene"></div>
     </section>
 
@@ -196,7 +209,7 @@ function leistungsTabelle(s: S, kz: S) {
     return `<div class="pc-lz ${!z.hat && z.m >= 0.3 ? 'hervor' : ''}">${zeichen}<u>${esc(D.lname[z.k])}</u><small>${pz(z.m)}</small></div>`;
   }).join('') + `</div><p class="pc-hinweis" style="margin:10px 0 0">✓ in Ihrer Ausschreibung genannt · <b style="color:#b91c1c">!</b> fehlt, obwohl ≥ 30 % der Vergleichsstellen es nennen · Prozent = Anteil im Vergleichsmarkt</p>`;
 }
-function karte(s: S, b: S, titel?: string) {
+function karte(s: S, b: S, titel?: string, nb = '') {
   const meta = [D.felder[s.f] || s.f, nt(s.n), s.h ? 'Homeoffice' : null, s.b ? 'befristet' : 'unbefristet', s.s ? 'Frist ' + new Date(s.s).toLocaleDateString('de-DE') : null].filter(Boolean).join(' · ');
   return `<article class="pc-karte">
   <div class="pc-kopf"><span class="pc-ampel ${b.ampel}"></span><div><h3>${s.u ? `<a href="${esc(s.u)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${esc(titel || s.t)}</a>` : esc(titel || s.t)}</h3><div class="pc-meta">${esc(meta)}</div></div><span class="pc-badge ${b.ampel}">${AMPEL[b.ampel]}</span></div>
@@ -212,13 +225,89 @@ function karte(s: S, b: S, titel?: string) {
         ${b.umkreis.arbeitgeber.length ? `<div class="pc-umkreis">${b.umkreis.arbeitgeber.map((a: string) => `<span>${esc(a)}</span>`).join('')}</div>` : ''}</div>
       <div class="pc-block"><h4>Arbeitgeberleistungen</h4>${leistungsTabelle(s, b.kz)}</div>
     </div>
-  </div></article>`;
+  </div>${nb}</article>`;
+}
+
+// ── Nachbesetzungs-Check (Schnellbefund)
+const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+const dz = (x: number, n = 2) => x.toLocaleString('de-DE', { minimumFractionDigits: n, maximumFractionDigits: n });
+const NB_ANFRAGE = 'mailto:anzeigen@derkaemmerer.de?subject=' + encodeURIComponent('Nachbesetzungs-Check ' + D.org);
+function nbLeer(id: string) {
+  if (!D.kommunalflat) return `<div class="pc-nb"><div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><span class="pc-hinweis">Der Schnellbefund ist Teil der KommunalFlat: welcher Anteil der Stelle mit vorhandener IT-Unterstützung entfällt, in VZÄ und Personalkosten. <a href="/stellenanzeigen" style="color:var(--blau);font-weight:700">KommunalFlat ansehen →</a></span></div></div>`;
+  return `<div class="pc-nb" id="nb-${id}"><div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><button class="pc-btn sek" data-nb="${id}">Schnellbefund erstellen</button><span class="pc-hinweis">ca. 20 Sekunden · KI-gestützte Klassifizierung der Tätigkeiten, gerechnet nach KGSt</span></div></div>`;
+}
+function nbErgebnis(j: S) {
+  const r = j.rechnung, b = j.befund;
+  const kl = r.empfehlung === 'Nachbesetzung prüfen' ? 'pruefen' : r.empfehlung === 'Aufgaben bündeln' ? 'buendeln' : 'nach';
+  const t = [...b.taetigkeiten].sort((x: S, y: S) => y.zeitanteil - x.zeitanteil)
+    .map((x: S) => `<div class="pc-nb-t"><span class="pc-kl ${x.klasse}">${x.klasse}</span><span>${esc(x.bezeichnung)}${(x.klasse === 'A' || x.klasse === 'B') && x.voraussetzung ? `<br><small style="text-align:left;display:block">Voraussetzung: ${esc(x.voraussetzung)}</small>` : ''}</span><small>${pz(x.zeitanteil)}</small></div>`).join('');
+  return `<div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><span class="pc-nb-e ${kl}">${r.empfehlung}</span></div>
+  <div class="pc-nb-erg"><div><b>${pz(r.anteil)}</b><span>automatisierbarer Anteil</span></div><div><b>${pz(r.real)}</b><span>Realisierbarkeit</span></div>
+  <div><b>${dz(r.potenzial)}</b><span>VZÄ-Potenzial</span></div><div><b>${eur(r.pk)}</b><span>Personalkosten p. a.</span></div></div>
+  <div>${t}</div>
+  <p class="pc-hinweis" style="margin:12px 0 0"><b>Realisierbarkeit:</b> ${esc(b.begruendung_realisierbarkeit)}</p>
+  <p class="pc-hinweis" style="margin:8px 0 0"><span class="pc-kl A">A</span> regelbasiert 80 % · <span class="pc-kl B">B</span> teilautomatisierbar 40 % · <span class="pc-kl C">C</span> Ermessen/Beratung 5 % · <span class="pc-kl D">D</span> Präsenz/Einsatz 0 %.
+  Kostenansatz ${esc(r.eg)} nach KGSt-Bericht 8/2025${r.egHinweis ? ` (${esc(r.egHinweis)})` : ''}. Zeitanteile aus dem Ausschreibungstext geschätzt – belastbar wird der Wert mit Ihrer Stellenbeschreibung und Ihrem IT-Stand.
+  <a href="${NB_ANFRAGE}" style="color:var(--blau);font-weight:700">Nachbesetzungs-Check für Ihre Verwaltung anfragen →</a></p>`;
+}
+// Ergebnisse im Browser merken (je Stelle, 30 Tage) – spart wiederholte Auswertungen
+const NB_TAGE = 30;
+function nbGemerkt(id: string) {
+  try { const v = JSON.parse(localStorage.getItem('pc-nb:' + id) || 'null'); return v && Date.now() - v.zeit < NB_TAGE * 864e5 ? v.daten : null; } catch { return null; }
+}
+function nbMerken(id: string, daten: S) { try { localStorage.setItem('pc-nb:' + id, JSON.stringify({ zeit: Date.now(), daten })); } catch {} }
+async function nbAnfordern(ziel: HTMLElement, body: S, merkId?: string) {
+  const btn = ziel.querySelector('button') as HTMLButtonElement | null;
+  if (btn) { btn.disabled = true; btn.textContent = 'Befund wird erstellt …'; }
+  try {
+    const r = await fetch('/personal-cockpit-api/befund/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token: D.token, ...body }) });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.fehler || 'Fehler');
+    if (merkId) nbMerken(merkId, j);
+    ziel.innerHTML = nbErgebnis(j);
+    return j;
+  } catch (e: S) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Erneut versuchen'; }
+    const h = ziel.querySelector('.pc-hinweis'); if (h) h.textContent = e.message || 'Der Befund ist gerade nicht erreichbar.';
+    return null;
+  }
 }
 
 // ── Ihre Stellen
 $('pc-eigene').innerHTML = D.eigene.length
-  ? D.eigene.map((e: S) => karte(e.s, e.b)).join('')
+  ? D.eigene.map((e: S) => karte(e.s, e.b, undefined, nbLeer(e.s.id))).join('')
   : `<div class="pc-leer">Im erfassten Markt finden wir derzeit keine aktive Ausschreibung von ${esc(D.org)}. Prüfen Sie Ihre nächste Ausschreibung direkt unten – oder senden Sie uns den Link, wir nehmen sie auf.</div>`;
+
+if (D.kommunalflat && D.eigene.length) {
+  D.eigene.forEach((e: S) => { const g = nbGemerkt(e.s.id); if (g) $('nb-' + e.s.id).innerHTML = nbErgebnis(g); });
+  $('pc-eigene').addEventListener('click', (ev) => {
+    const id = (ev.target as HTMLElement).closest('button')?.getAttribute('data-nb');
+    if (id) nbAnfordern($('nb-' + id), { id }, id);
+  });
+  const offen = () => D.eigene.filter((e: S) => document.querySelector(`[data-nb="${e.s.id}"]`));
+  const zusammenfassung = () => {
+    const fertig = D.eigene.map((e: S) => nbGemerkt(e.s.id)).filter(Boolean);
+    if (!fertig.length) return '';
+    const pot = fertig.reduce((a: number, j: S) => a + j.rechnung.potenzial, 0), pk = fertig.reduce((a: number, j: S) => a + j.rechnung.pk, 0);
+    const pr = fertig.filter((j: S) => j.rechnung.empfehlung === 'Nachbesetzung prüfen').length;
+    return `<span style="font-size:14px"><b>${fertig.length}</b> von ${D.eigene.length} Stellen ausgewertet · VZÄ-Potenzial <b>${dz(pot)}</b> · <b>${eur(pk)}</b> Personalkosten p. a. · <b>${pr}</b> × „Nachbesetzung prüfen“</span>`;
+  };
+  const alleZeigen = () => {
+    const n = offen().length;
+    $('pc-nb-alle').innerHTML = `<div class="pc-nb-alle">${zusammenfassung() || '<span style="font-size:14px"><b>Schnellbefund:</b> Welche Ihrer Stellen müssen Sie gar nicht mehr suchen?</span>'}${n ? `<button class="pc-btn sek" id="pc-nb-go">Schnellbefund für ${n === D.eigene.length ? 'alle' : 'die übrigen'} ${n} Stellen</button>` : ''}</div>`;
+    $('pc-nb-go')?.addEventListener('click', async () => {
+      const b = $('pc-nb-go') as HTMLButtonElement; b.disabled = true; b.textContent = 'Wird ausgewertet …';
+      const liste = offen(); let i = 0;
+      await Promise.all(Array.from({ length: 3 }, async () => {
+        while (i < liste.length) { const e = liste[i++]; await nbAnfordern($('nb-' + e.s.id), { id: e.s.id }, e.s.id); }
+      }));
+      alleZeigen();
+    });
+  };
+  alleZeigen();
+  new MutationObserver(() => { if (!document.getElementById('pc-nb-go')?.hasAttribute('disabled')) alleZeigen(); })
+    .observe($('pc-eigene'), { childList: true, subtree: true });
+}
 
 // ── Prüfen
 if (!D.kommunalflat) {
@@ -239,8 +328,9 @@ if (!D.kommunalflat) {
       const j = await r.json();
       if (!r.ok) { $('pc-erg').innerHTML = `<div class="pc-leer">${esc(j.fehler || 'Fehler')}</div>`; return; }
       letzte = j;
-      $('pc-erg').innerHTML = karte(j.stelle, j.bewertung, j.stelle.t || 'Ihre Ausschreibung')
+      $('pc-erg').innerHTML = karte(j.stelle, j.bewertung, j.stelle.t || 'Ihre Ausschreibung', `<div class="pc-nb" id="nb-neu"><div class="pc-nb-kopf"><h4>Muss diese Stelle nachbesetzt werden?</h4><button class="pc-btn sek" id="pc-nb-neu">Schnellbefund erstellen</button><span class="pc-hinweis">Vor der Veröffentlichung prüfen, welcher Anteil der Stelle mit vorhandener IT-Unterstützung entfällt.</span></div></div>`)
         + `<div class="pc-karte"><div class="pc-vorschlag" id="pc-vs"><button class="pc-btn sek" id="pc-vsb">Überarbeiteten Ausschreibungstext erstellen</button> <span class="pc-hinweis">KI-Vorschlag auf Basis Ihres Textes und des Marktvergleichs – es werden keine Leistungen erfunden.</span></div></div>`;
+      $('pc-nb-neu').addEventListener('click', () => nbAnfordern($('nb-neu'), { text: ($('pc-tx') as HTMLTextAreaElement).value || letzte.volltext || '', titel: j.stelle.t }));
       $('pc-vsb').addEventListener('click', async () => {
         const b2 = $('pc-vsb') as HTMLButtonElement; b2.disabled = true; b2.textContent = 'Vorschlag wird erstellt (ca. 30 Sekunden) …';
         const tx = ($('pc-tx') as HTMLTextAreaElement).value;
