@@ -1,0 +1,66 @@
+{
+  "slug": "fulda",
+  "name": "Stadt Fulda",
+  "bundesland": "Hessen",
+  "einwohner": 65755,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dr. Heiko Wingenfeld",
+  "token": "100034dcc8a7cc6b",
+  "claim": "Die Finanzen der Barock- und Bischofsstadt im Herzen Osthessens mitgestalten.",
+  "beschreibung": "Fulda ist Oberzentrum der Region Osthessen, Kreisstadt des Landkreises Fulda und eine von sechs Sonderstatusstädten in Hessen. Als Hochschul-, Barock- und Bischofsstadt mit dem Dom St. Salvator als Wahrzeichen verbindet die Stadt Geschichte mit einer dynamischen Wirtschaft. Mit über 1.600 Mitarbeiterinnen und Mitarbeitern zählt die Stadtverwaltung zu den größten Arbeitgebern der Region. In der Stadtkämmerei warten anspruchsvolle steuerliche Aufgaben bis hin zur Umsetzung des § 2b UStG und zum Tax-Compliance-Management.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "65.755",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "104,05 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "über 1.600",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "24",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Sonderstatusstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Unbefristete Stelle",
+      "beschreibung": "Unbefristete Anstellung in der Stadtkämmerei."
+    },
+    {
+      "titel": "Tarifliche Bezahlung",
+      "beschreibung": "Entgeltgruppe 10 TVöD bzw. Besoldung nach A 11 HBesG."
+    },
+    {
+      "titel": "Teilzeit möglich",
+      "beschreibung": "Die Stelle ist in Vollzeit ausgeschrieben, Teilzeit ist möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Fulda · Personalamt",
+    "email": "bewerbung@fulda.de",
+    "telefon": "0661 102-1142",
+    "bewerbungsportal": "https://karriere-stadt.fulda.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Oberzentrum/Sonderstatusstadt, Dom St. Salvator: https://de.wikipedia.org/wiki/Fulda (abgerufen 09.10.2026)",
+    "Oberbürgermeister Dr. Heiko Wingenfeld, über 1.600 Mitarbeitende, Karriereportal: https://karriere-stadt.fulda.de/ (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in im Aufgabenbereich Steuern, https://interamt.de/koop/app/stelle?id=1499326 (API api.interamt.de/query/stellenangebot/1499326) (abgerufen 09.10.2026)"
+  ]
+}

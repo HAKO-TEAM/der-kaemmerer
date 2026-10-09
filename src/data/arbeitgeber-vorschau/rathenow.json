@@ -1,0 +1,83 @@
+{
+  "slug": "rathenow",
+  "name": "Landkreis Havelland",
+  "bundesland": "Brandenburg",
+  "einwohner": 170792,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Roger Lewandowski",
+  "token": "02d202d975500ac3",
+  "claim": "Kommunale Prüfung und Verwaltung im Havelland zwischen Berlin und Elbe gestalten.",
+  "beschreibung": "Der Landkreis Havelland liegt im Westen Brandenburgs und umfasst den größten Teil der namensgebenden Landschaft. Er grenzt im Osten an den Berliner Bezirk Spandau und an Potsdam, im Westen an Sachsen-Anhalt. Zum Kreis gehören 26 Gemeinden, darunter sieben Städte; Verwaltungssitz ist Rathenow. Die Kreisverwaltung bietet abwechslungsreiche Aufgaben, etwa in der Rechnungs- und Gemeindeprüfung, und fördert die Vereinbarkeit von Familie und Beruf.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "170.792",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.727,32 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "26",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreisstadt",
+      "wert": "Rathenow",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Westlich von Berlin",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Stelle",
+      "beschreibung": "Unbefristeter Arbeitsvertrag mit 30 Arbeitstagen Erholungsurlaub."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeiten und Telearbeit im Rahmen der dienstlichen Möglichkeiten."
+    },
+    {
+      "titel": "Tarifliche Vergütung",
+      "beschreibung": "Vergütung nach TVöD inklusive Jahressonderzahlung, leistungsorientierter Vergütung bzw. Sachbezugskarte und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des Gesundheitsmanagements."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Firmenticket und Möglichkeit des Fahrradleasings."
+    },
+    {
+      "titel": "Mitarbeiterangebote",
+      "beschreibung": "Vergünstigte Konditionen für Produkte und Dienstleistungen."
+    },
+    {
+      "titel": "Team",
+      "beschreibung": "Kollegiales Miteinander und gegenseitige Unterstützung im Team."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Havelland · Haupt- und Personalamt",
+    "email": "haupt-personalamt@havelland.de",
+    "telefon": "03385 551-1270",
+    "bewerbungsportal": "https://www.havelland.de/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, 26 Gemeinden, Lage, Kreisstadt Rathenow, Landrat Roger Lewandowski (wiedergewählt 26.05.2024, bis voraussichtlich 2032): https://de.wikipedia.org/wiki/Landkreis_Havelland (abgerufen 09.10.2026)",
+    "Benefits: Stellenausschreibung Prüfer Rechnungs- und Gemeindeprüfung, https://interamt.de/koop/app/stelle?id=1499168 (API api.interamt.de/query/stellenangebot/1499168) (abgerufen 09.10.2026)",
+    "Kontakt Haupt- und Personalamt: https://www.havelland.de/landkreis-verwaltung/verwaltung/haupt-und-personalamt/ (abgerufen 09.10.2026)",
+    "Karriereseite: https://www.havelland.de/stellenangebote/ (abgerufen 09.10.2026)"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "linz",
+  "name": "Verbandsgemeinde Linz am Rhein",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 18978,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Frank Becker",
+  "token": "fbafbb7f43796e2d",
+  "claim": "Kommunale Verantwortung am Mittelrhein, vom Rathaus bis zum eigenen Abwasserbetrieb.",
+  "beschreibung": "Die Verbandsgemeinde Linz am Rhein liegt im Landkreis Neuwied im Norden von Rheinland-Pfalz und umfasst sieben Gemeinden, darunter die Stadt Linz am Rhein. Ihr Gebiet geht weitgehend auf die frühere Bürgermeisterei Linz zurück. Zur Verwaltung gehört der Eigenbetrieb Verbandsgemeindewerke Abwasser, der auch die Betriebsführung für zwei Zweckverbände mit den Nachbar-Verbandsgemeinden Unkel und Asbach übernimmt. Damit bietet die Verbandsgemeinde vielseitige Aufgaben mit direktem Bezug zur kommunalen Daseinsvorsorge.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.978",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "64,72 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Neuwied",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit und Homeoffice",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen der Gleitzeitregelung inklusive Homeoffice-Möglichkeit."
+    },
+    {
+      "titel": "31 Tage Urlaub",
+      "beschreibung": "31 Urlaubstage in der Fünf-Tage-Woche."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung und zusätzliche Altersvorsorge über die Rheinische Zusatzversorgungskasse für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mitarbeitervorteile",
+      "beschreibung": "Vorteile über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Linz am Rhein · Personalabteilung",
+    "email": "bewerbungen@vg-linz.de",
+    "telefon": "02644 5601-0",
+    "bewerbungsportal": "https://www.vg-linz.de/verwaltung-politik/karriere-zukunft/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Landkreis, Geschichte: https://de.wikipedia.org/wiki/Verbandsgemeinde_Linz_am_Rhein (abgerufen 09.10.2026)",
+    "Bürgermeister Frank Becker: https://www.vg-linz.de/verwaltung-politik/verwaltung/grusswort-buergermeister/ (abgerufen 09.10.2026)",
+    "Eigenbetrieb Abwasser, Benefits und Bewerbungspostfach: Stellenausschreibung Sachgebietsleitung allgemeine Verwaltung, Verbandsgemeindewerke Abwasser https://interamt.de/koop/app/stelle?id=1495001 (API api.interamt.de/query/stellenangebot/1495001) (abgerufen 09.10.2026)",
+    "Telefon (Zentrale) und Stellenportal: https://www.vg-linz.de/verwaltung-politik/karriere-zukunft/stellenangebote/ (abgerufen 09.10.2026)"
+  ]
+}

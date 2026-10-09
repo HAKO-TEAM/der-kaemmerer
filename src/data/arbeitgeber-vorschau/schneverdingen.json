@@ -1,0 +1,73 @@
+{
+  "slug": "schneverdingen",
+  "name": "Stadt Schneverdingen",
+  "bundesland": "Niedersachsen",
+  "einwohner": 18964,
+  "token": "bbb71bf729b3175d",
+  "claim": "Planen, bauen und ordnen mitten im Naturpark Lüneburger Heide.",
+  "beschreibung": "Schneverdingen liegt im Heidekreis zwischen Soltau, Rotenburg (Wümme) und Buchholz in der Nordheide und gehört zur Metropolregion Hamburg. Die Stadt ist staatlich anerkannter Luftkurort und Ausgangspunkt für Besuche im Naturpark Lüneburger Heide; weite Teile des Stadtgebiets bestehen aus Heide, Wald und Moor. Über den Autobahnanschluss an die A 7 ist Schneverdingen auch als Wirtschaftsstandort gut erreichbar. Die Stadtverwaltung betreut die Kernstadt und zehn Ortschaften und sucht Fach- und Führungskräfte mit Gestaltungswillen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.964",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "234,92 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortschaften",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Staatlich anerkannter Luftkurort",
+      "icon": "🌿"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Heidekreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Perspektive",
+      "beschreibung": "Unbefristete Stelle mit Bezahlung nach TVöD-VKA bzw. Besoldung nach NBesG."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Führungsaufgaben mit vielfältigen Gestaltungsmöglichkeiten."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Angebote zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Fahrradleasing für tariflich Beschäftigte."
+    },
+    {
+      "titel": "Firmenfitness",
+      "beschreibung": "Firmenfitness über EGYM Wellpass."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Schneverdingen · FB I – Personal und Organisation",
+    "email": "bewerbung@schneverdingen.de",
+    "telefon": "05193 93-111",
+    "bewerbungsportal": "https://www.schneverdingen.de/desktopdefault.aspx/tabid-8083/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Ortschaften, Lage im Heidekreis/Metropolregion Hamburg: https://de.wikipedia.org/wiki/Schneverdingen (abgerufen 09.10.2026)",
+    "Luftkurort, Lage im Städtedreieck, A-7-Anschluss: https://www.schneverdingen.de/desktopdefault.aspx/tabid-7196/ (abgerufen 09.10.2026)",
+    "Benefits und Bewerbungsadresse: Stellenausschreibung Fachbereichsleitung Fachbereich III, https://interamt.de/koop/app/stelle?id=1493269 (API api.interamt.de/query/stellenangebot/1493269) (abgerufen 09.10.2026)",
+    "Kontakt FB I – Personal und Organisation, Karriereseite: https://www.schneverdingen.de/desktopdefault.aspx/tabid-8083/ (abgerufen 09.10.2026)"
+  ]
+}

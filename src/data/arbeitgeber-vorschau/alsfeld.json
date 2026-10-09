@@ -1,0 +1,83 @@
+{
+  "slug": "alsfeld",
+  "name": "Vogelsbergkreis",
+  "bundesland": "Hessen",
+  "einwohner": 100723,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Dr. Jens Mischak",
+  "token": "bfc7c0541b692540",
+  "claim": "Ländlicher Raum in Mittelhessen, Projekte mit Gewicht und eine Verwaltung, die Vereinbarkeit ernst nimmt.",
+  "beschreibung": "Der Vogelsbergkreis liegt im Regierungsbezirk Gießen in Mittelhessen und ist nach dem Vogelsberg benannt, einem erloschenen Vulkangebiet im Süden des Kreises. Kreisstadt ist Lauterbach, bevölkerungsreichste Stadt ist Alsfeld. Der Kreis entstand 1972 im Zuge der hessischen Gebietsreform aus den Landkreisen Alsfeld und Lauterbach und umfasst heute 19 Gemeinden. Die Kreisverwaltung verantwortet unter anderem Hochbauprojekte mit Projektsummen von etwa einer bis 30 Millionen Euro und hat die Charta der Vielfalt unterzeichnet.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "100.723",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.458,91 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "19",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1972",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Lauterbach",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, Sonderzahlung nach § 18a TVöD und betrieblicher Altersversorgung über die Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Gleitzeit und Homeoffice",
+      "beschreibung": "Flexible Arbeitszeitgestaltung im Rahmen der Gleitzeit und Möglichkeit zum Homeoffice für die Vereinbarkeit von Familie, Pflege und Beruf."
+    },
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Gründliche Einarbeitung in ein engagiertes, aufgeschlossenes Team."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiches Fortbildungsprogramm für die persönliche und fachliche Weiterentwicklung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Vielseitige Angebote im Rahmen des Gesundheitsmanagements."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing und Zuschuss zum Deutschlandticket als Jobticket."
+    },
+    {
+      "titel": "Mitarbeitervorteile",
+      "beschreibung": "Vergünstigungen über das Vorteilsportal Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisausschuss des Vogelsbergkreises · Personalservice im Haupt- und Personalamt",
+    "email": "bewerbung@vogelsbergkreis.de",
+    "telefon": "06641 977-3408",
+    "bewerbungsportal": "https://www.vogelsbergkreis.de/kreisverwaltung/ausbildung-und-karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Gründung 1972, Kreisstadt, Vogelsberg: https://de.wikipedia.org/wiki/Vogelsbergkreis (abgerufen 09.10.2026)",
+    "Landrat Dr. Jens Mischak: https://www.vogelsbergkreis.de/ (abgerufen 09.10.2026)",
+    "Benefits, Projektsummen, Charta der Vielfalt und Kontakt: Stellenausschreibungen Sachgebietsleitung Plan- und Baumanagement https://interamt.de/koop/app/stelle?id=1470534 (API api.interamt.de/query/stellenangebot/1470534) und Sachbearbeitung Buchhaltung https://interamt.de/koop/app/stelle?id=1494377 (API api.interamt.de/query/stellenangebot/1494377) (abgerufen 09.10.2026)",
+    "Bewerbungsportal: https://www.vogelsbergkreis.de/kreisverwaltung/ausbildung-und-karriere/ (abgerufen 09.10.2026)"
+  ]
+}

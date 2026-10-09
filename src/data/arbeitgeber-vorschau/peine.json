@@ -1,0 +1,73 @@
+{
+  "slug": "peine",
+  "name": "Stadt Peine",
+  "bundesland": "Niedersachsen",
+  "einwohner": 51005,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Klaus Saemann",
+  "token": "1131feeb664db8ac",
+  "claim": "Die Kreisstadt mit Stahltradition gestaltet ihre digitale Verwaltung von morgen.",
+  "beschreibung": "Peine ist eine um 1220 gegründete Stadt in Niedersachsen und Kreisstadt des gleichnamigen Landkreises. Bekannt ist sie vor allem für ihre Stahlindustrie; der Begriff Peiner Träger steht in der Bauwirtschaft bis heute für breitflanschige Stahlträger. Als selbständige Gemeinde zählt Peine rund 51.000 Einwohner. Die Stadtverwaltung treibt ihre Digitalisierung strategisch voran und bietet Arbeitsplätze mit Bahnhof und Parkplätzen in direkter Nähe.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "51.005",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "119,84 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "um 1220",
+      "icon": "📜"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit, alternierende Telearbeit und Homeoffice im Rahmen der dienstlichen Möglichkeiten."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Konjunkturunabhängiger Arbeitsplatz mit unbefristeter Einstellung."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Leistungsorientierte Bezahlung und zusätzliche betriebliche Altersvorsorge (VBL)."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket, Fahrradleasing sowie Bahnhof und Parkplätze in direkter Nähe."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Bedarfsgerechte Fortbildungen."
+    },
+    {
+      "titel": "Firmenfitness",
+      "beschreibung": "Firmenfitness im Hansefit-Verbund."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Peine · Amt Personal/Organisation",
+    "email": "poststelle@stadt-peine.de",
+    "telefon": "05171 49-9278",
+    "bewerbungsportal": "https://www.peine.de/de/wirtschaft/stadt-peine-als-arbeitgerberin/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gründung, Kreisstadt, Stahlindustrie, Bürgermeister: https://de.wikipedia.org/wiki/Peine (abgerufen 09.10.2026)",
+    "Benefits und Kontakt (Telefon Personalsachbearbeitung): Stellenausschreibung Digitalisierungsmanager/in https://interamt.de/koop/app/stelle?id=1496449 (API api.interamt.de/query/stellenangebot/1496449) (abgerufen 09.10.2026)",
+    "E-Mail-Postfach und Stellenportal: https://www.peine.de/de/wirtschaft/stadt-peine-als-arbeitgerberin/stellenausschreibungen/ (abgerufen 09.10.2026)"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "uetze",
+  "name": "Gemeinde Uetze",
+  "bundesland": "Niedersachsen",
+  "einwohner": 20107,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Florian Gahre",
+  "token": "1bf19ba1b492e504",
+  "claim": "Infrastruktur für eine Flächengemeinde in der Region Hannover planen und bauen.",
+  "beschreibung": "Uetze ist eine selbständige Gemeinde im Osten der Region Hannover und mit gut 140 Quadratkilometern eine echte Flächengemeinde. Zu ihr gehören neben dem Kernort Uetze Ortschaften wie Hänigsen, Dollbergen, Eltze und Obershagen. Die Verwaltung verantwortet ein breites Spektrum kommunaler Infrastruktur von Straßen- und Wegebau über Ingenieurbauwerke bis zum Breitbandausbau. Mitarbeitende profitieren von modernen Büros, flexiblen Arbeitsmodellen und einem umfangreichen Benefit-Paket.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "20.107",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "140,85 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gebietskörperschaft",
+      "wert": "Region Hannover",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeit- und Organisationsmodelle sowie mobiles Arbeiten."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Krisensichere Beschäftigung mit tarifgerechter und leistungsorientierter Bezahlung, betriebliche Altersversorgung."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Individuelle Entwicklungs- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "JobRad (auch E-Bike), Jobticket (Deutschlandticket) und kostenlose Parkmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Firmenfitness über Hansefit und hausinterne Massagetermine."
+    },
+    {
+      "titel": "Vergünstigungen",
+      "beschreibung": "Rabatte in den Bereichen Shopping, Freizeit, Reisen und Kultur."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Uetze · Team Personalstrategie",
+    "email": "bewerbung@uetze.de",
+    "telefon": "05173 970-133",
+    "bewerbungsportal": "https://www.uetze.de/rathaus-buergerservice/aktuelle-informationen/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortschaften: https://de.wikipedia.org/wiki/Uetze (abgerufen 09.10.2026)",
+    "Bürgermeister Florian Gahre: https://www.uetze.de/rathaus-buergerservice/politik/buergermeister/ (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Karriereseite https://www.uetze.de/rathaus-buergerservice/aktuelle-informationen/stellenangebote/ (abgerufen 09.10.2026)",
+    "Aufgabenspektrum, Benefits, Kontakt: Stellenausschreibung Teamleitung Tief- und Straßenbau, https://interamt.de/koop/app/stelle?id=1495728 (API api.interamt.de/query/stellenangebot/1495728) (abgerufen 09.10.2026)"
+  ]
+}

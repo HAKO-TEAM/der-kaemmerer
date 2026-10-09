@@ -1,0 +1,73 @@
+{
+  "slug": "stade",
+  "name": "Landkreis Stade",
+  "bundesland": "Niedersachsen",
+  "einwohner": 207935,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Kai Seefried",
+  "token": "27d9015a9333175f",
+  "claim": "Moderne Kreisverwaltung mit Verantwortung für 40 Gemeinden und rund 208.000 Menschen.",
+  "beschreibung": "Der Landkreis Stade liegt in Niedersachsen und hat seinen Verwaltungssitz in Stade. In seiner heutigen Form entstand er 1932 aus dem alten Kreis Stade, dem Kreis Kehdingen und dem Westteil des Kreises Jork. Heute leben rund 208.000 Menschen in den 40 Gemeinden des Kreises. Die Kreisverwaltung übt unter anderem die Fachaufsicht in straßenverkehrsbehördlichen Angelegenheiten über die Städte Stade, Buxtehude und Harsefeld aus und bietet eine moderne Arbeitsumgebung mit flexiblen Arbeitszeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "207.935",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.267,4 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "40",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Stade",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Zusätzliche Altersvorsorge (VBL), Jahressonderzahlung und arbeitsfreie Tage am 24.12. und 31.12."
+    },
+    {
+      "titel": "Verbeamtung möglich",
+      "beschreibung": "Einstellung im Beamtenverhältnis bei Befähigung für die Laufbahngruppe 2, 1. Einstiegsamt, Fachrichtung Allgemeine Dienste."
+    },
+    {
+      "titel": "Homeoffice und Gleitzeit",
+      "beschreibung": "Moderne Arbeitsumgebung mit Homeoffice-Möglichkeit und Gleitzeitrahmen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Firmenfitness (EGYM Wellpass)."
+    },
+    {
+      "titel": "Mobilität und Vorteile",
+      "beschreibung": "Jobticket, Jobbike (Fahrradleasing) und Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Stade · Personal und Interner Service",
+    "email": "personal@landkreis-stade.de",
+    "telefon": "04141 12-1061",
+    "bewerbungsportal": "https://www.landkreis-stade.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz, Landrat, Kreisreform 1932: https://de.wikipedia.org/wiki/Landkreis_Stade (abgerufen 09.10.2026)",
+    "Benefits, Fachaufsicht und Kontakt: Stellenausschreibung Leitung Abteilung Verkehr https://interamt.de/koop/app/stelle?id=1497528 (API api.interamt.de/query/stellenangebot/1497528) (abgerufen 09.10.2026)",
+    "Bewerbungsportal: https://www.landkreis-stade.de/jobs (abgerufen 09.10.2026)"
+  ]
+}

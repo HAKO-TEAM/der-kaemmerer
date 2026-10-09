@@ -1,0 +1,78 @@
+{
+  "slug": "pirna",
+  "name": "Stadt Pirna",
+  "bundesland": "Sachsen",
+  "einwohner": 40039,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Tim Lochner",
+  "token": "976cb54899d8ecf2",
+  "claim": "Große Kreisstadt mit historischem Stadtkern vor den Toren Dresdens.",
+  "beschreibung": "Pirna ist Große Kreisstadt und Verwaltungssitz des Landkreises Sächsische Schweiz-Osterzgebirge, rund 20 Kilometer vom Zentrum Dresdens entfernt. Die Stadt besitzt einen wertvollen Stadtkern mit zahlreichen historischen Bauten. In der Stadtverwaltung arbeiten mehr als 250 Beschäftigte, im gesamten Konzern Stadt Pirna über 500. Die Verwaltung versteht sich als modern organisiert und bürgerorientiert und bildet auch selbst aus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "40.039",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "53,06 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte Stadtverwaltung",
+      "wert": "über 250",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Große Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit und Homeoffice",
+      "beschreibung": "Flexible Arbeitszeiten im Gleitzeitmodell in der Fünf-Tage-Woche; Homeoffice nach erfolgreicher Probezeit gemäß Dienstvereinbarung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub sowie arbeitsfreie Tage am 24.12. und 31.12."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung, alternative Entgeltanreizsysteme, Zusatzversorgung des öffentlichen Dienstes und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Ermäßigtes Jobticket für den öffentlichen Personennahverkehr."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Kostenzuschuss für Bildschirmbrillen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielseitige Fortbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Pirna · Fachdienst Personalmanagement",
+    "email": "personal@pirna.de",
+    "telefon": "03501 556-295",
+    "bewerbungsportal": "https://www.pirna.de/stadtinfo/pirna-als-arbeitgeber/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Große Kreisstadt, Kreissitz, Oberbürgermeister: https://de.wikipedia.org/wiki/Pirna (abgerufen 09.10.2026)",
+    "Lage zu Dresden, historischer Stadtkern, Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Verwaltungsprüfung https://interamt.de/koop/app/stelle?id=1435660 (API api.interamt.de/query/stellenangebot/1435660) (abgerufen 09.10.2026)",
+    "Beschäftigtenzahlen (über 250 Stadtverwaltung, über 500 Konzern) und Stellenportal: https://www.pirna.de/stadtinfo/pirna-als-arbeitgeber/ und https://www.pirna.de/stadtinfo/pirna-als-arbeitgeber/stellenangebote/ (abgerufen 09.10.2026)"
+  ]
+}

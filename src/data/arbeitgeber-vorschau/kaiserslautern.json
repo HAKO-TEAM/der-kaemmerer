@@ -1,0 +1,77 @@
+{
+  "slug": "kaiserslautern",
+  "name": "Stadt Kaiserslautern",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 100247,
+  "buergermeistertitel": "Oberbürgermeisterin",
+  "buergermeister": "Beate Kimmel",
+  "token": "6a56f3ee1155a9d3",
+  "claim": "Die Universitätsstadt am Pfälzerwald digital und wirtschaftlich voranbringen.",
+  "beschreibung": "Kaiserslautern ist eine kreisfreie Großstadt sowie Industrie- und Universitätsstadt am nordwestlichen Rand des Pfälzerwalds. Flächenmäßig ist sie die größte Stadt in Rheinland-Pfalz und Sitz der Kreisverwaltung des Landkreises Kaiserslautern. Ihre Geschichte reicht bis zur Kaiserpfalz Friedrich Barbarossas zurück. Die Stadtverwaltung bietet vielfältige Einsatzmöglichkeiten, eine strukturierte Einarbeitung mit Patensystem und ein Referat für Digitalisierung und Innovation.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "100.247",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "139,7 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisfreie Großstadt",
+      "icon": "📍"
+    },
+    {
+      "label": "Profil",
+      "wert": "Universitätsstadt",
+      "icon": "🎓"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und Sicherheit",
+      "beschreibung": "Krisensicherer Arbeitsplatz mit 30 Tagen tariflichem Erholungsurlaub."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Vereinbarkeit von Familie und Beruf durch flexible Zeitmodelle."
+    },
+    {
+      "titel": "Finanzielle Vorteile",
+      "beschreibung": "Tarifliche Bezahlung, Jahressonderzahlung, betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Jobticket",
+      "beschreibung": "Zuschuss zum Deutschland-Ticket."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit kostenfreien Sportkursen, Screenings und Vergünstigungen im Fitnessstudio."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Strukturierte Einarbeitung durch Paten, umfassende Fort- und Weiterbildung sowie Führungskräftequalifizierung."
+    },
+    {
+      "titel": "Corporate Benefits",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Kaiserslautern · Bewerbungsverfahren",
+    "email": "jens.chapuis-roux@kaiserslautern.de",
+    "telefon": "0631 365-2412",
+    "bewerbungsportal": "https://www.kaiserslautern.de/buerger_rathaus_politik/stadtverwaltung/karriere/index.html.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, kreisfreie Großstadt/Universitätsstadt, Barbarossa-Pfalz, Oberbürgermeisterin: https://de.wikipedia.org/wiki/Kaiserslautern (abgerufen 09.10.2026)",
+    "Benefits (Karriereseite): https://www.kaiserslautern.de/buerger_rathaus_politik/stadtverwaltung/karriere/index.html.de (abgerufen 09.10.2026)",
+    "Benefits, Kontakt, Oberbürgermeisterin Beate Kimmel: Stellenausschreibung Sachbearbeiter/in Beschaffung, Vertragsrecht und Haushalt, https://interamt.de/koop/app/stelle?id=1488779 (API api.interamt.de/query/stellenangebot/1488779) (abgerufen 09.10.2026)"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "monschau",
+  "name": "Stadt Monschau",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 12303,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Dr. Carmen Krämer",
+  "token": "03e19f2cbb7574ca",
+  "claim": "Haushalt und Finanzen der Eifelstadt an der Rur verantwortlich mitgestalten.",
+  "beschreibung": "Monschau liegt an der Rur in der Eifel, im Naturpark Hohes Venn-Eifel, und gehört zur Städteregion Aachen. Bis 1918 trug die Stadt den Namen Montjoie. Die Region bietet hohen Freizeit- und Erholungswert und liegt nah an Aachen sowie an den Grenzen zu Belgien und den Niederlanden. In der Verwaltung übernimmt der Fachbereich II neben Ordnung, Forst und Abgaben auch die Finanzbuchhaltung und die Kämmereiaufgaben für den Schulverband Nordeifel.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "12.303",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "94,6 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Höhe",
+      "wert": "517 m ü. NHN",
+      "icon": "⛰️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Städteregion Aachen",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stelle mit Eigenverantwortung und Gestaltungsfreiheit."
+    },
+    {
+      "titel": "Weiterbildung und Gesundheit",
+      "beschreibung": "Vielseitige Fort- und Weiterbildungsmöglichkeiten sowie Angebote des Gesundheitsmanagements."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Flexible Arbeitszeiten für eine gute Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Leistungsorientierte Bezahlung, Jahressonderzuwendung und Zusatzversorgung (TVöD)."
+    },
+    {
+      "titel": "Jobticket",
+      "beschreibung": "Bezuschusstes Jobticket."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Urlaubstage pro Jahr."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Monschau · III.1 Zentrale Dienste",
+    "email": "stadtverwaltung@monschau.de",
+    "telefon": "02472 81-222",
+    "bewerbungsportal": "https://www.monschau.de/rathaus-politik/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Höhe, Lage an der Rur, Montjoie, Bürgermeisterin: https://de.wikipedia.org/wiki/Monschau (abgerufen 09.10.2026)",
+    "Stellenausschreibungen: https://www.monschau.de/rathaus-politik/stellenausschreibungen/ (abgerufen 09.10.2026)",
+    "Benefits, Kontakt, Bürgermeisterin Dr. Carmen Krämer (Zeichnung 30.09.2026): Stellenausschreibung Stellvertretende Fachbereichsleitung und Sachgebietsleitung Finanzbuchhaltung, https://interamt.de/koop/app/stelle?id=1497862 (API api.interamt.de/query/stellenangebot/1497862) (abgerufen 09.10.2026)",
+    "Parallelausschreibung: https://karriere.nrw/stellenausschreibung/323e9877-622a-47d9-8621-347c39d52bf1 (Seite nur per JavaScript, Inhalt nicht ausgewertet) (abgerufen 09.10.2026)"
+  ]
+}

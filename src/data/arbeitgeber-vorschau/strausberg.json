@@ -1,0 +1,76 @@
+{
+  "slug": "strausberg",
+  "name": "Stadt Strausberg",
+  "bundesland": "Brandenburg",
+  "einwohner": 27765,
+  "token": "bc5eb1b46d46ca0e",
+  "claim": "Die grüne Stadt am See vor den Toren Berlins verantwortungsvoll mitgestalten.",
+  "beschreibung": "Strausberg ist eine amtsfreie Stadt im Landkreis Märkisch-Oderland und liegt nur rund 35 Kilometer von Berlin entfernt. Die Stadt am See verbindet Natur, Lebensqualität und berufliche Perspektiven. Rund 350 Mitarbeitende in Kernverwaltung und nachgeordneten Einrichtungen gestalten die Entwicklung der Stadt bürgernah mit. Aufgaben im Beitragswesen und in der Vollstreckung bieten einen direkten Bezug zu den kommunalen Finanzen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "27.765",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "67,94 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende Verwaltung",
+      "wert": "rund 350",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Entfernung Berlin",
+      "wert": "ca. 35 km",
+      "icon": "🚆"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Märkisch-Oderland",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "30 Tage Erholungsurlaub sowie bezahlte Freistellung am 24.12. und 31.12."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Kern- und Gleitarbeitszeit für die Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobile Arbeit nach Probezeit und erfolgreicher Einarbeitung."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD, betriebliche Altersvorsorge (ZVK) und Jahressonderzahlung."
+    },
+    {
+      "titel": "Leistungsanreize",
+      "beschreibung": "Leistungsprämie oder alternatives Entgeltanreizsystem nach § 18a TVöD als Gutscheinsystem."
+    },
+    {
+      "titel": "Gesundheit und Fortbildung",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und individuelle Fortbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Strausberg · Bewerbungen",
+    "email": "bewerbungen@stadt-strausberg.de",
+    "telefon": "03341 381-263",
+    "bewerbungsportal": "https://www.stadt-strausberg.de/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, amtsfreie Stadt im Landkreis Märkisch-Oderland: https://de.wikipedia.org/wiki/Strausberg (abgerufen 09.10.2026)",
+    "Stellenausschreibungen und Bewerbungspostfach; Bürgermeisteramt derzeit offen (Wiederholungsstichwahl 11.10.2026), daher kein Amtsinhaber angegeben: https://www.stadt-strausberg.de/stellenausschreibungen/ und https://www.stadt-strausberg.de/ (abgerufen 09.10.2026)",
+    "Lage, rund 350 Mitarbeitende, Benefits, Kontakt: Stellenausschreibungen Sachbearbeitung Beitragswesen https://interamt.de/koop/app/stelle?id=1450840 (API api.interamt.de/query/stellenangebot/1450840) und Sachbearbeitung Vollstreckung https://interamt.de/koop/app/stelle?id=1495650 (API api.interamt.de/query/stellenangebot/1495650) (abgerufen 09.10.2026)"
+  ]
+}

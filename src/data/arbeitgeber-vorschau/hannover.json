@@ -1,0 +1,80 @@
+{
+  "slug": "hannover",
+  "name": "Region Hannover",
+  "bundesland": "Niedersachsen",
+  "einwohner": 1141128,
+  "token": "4750b51b4f1f7782",
+  "claim": "Für über eine Million Menschen zwischen Steinhuder Meer und Deister Verwaltung gestalten.",
+  "beschreibung": "Die Region Hannover ist ein Kommunalverband besonderer Art und steht in Niedersachsen auf der Ebene der Landkreise. Sie umfasst 21 Städte und Gemeinden, darunter die Landeshauptstadt Hannover, Garbsen und Langenhagen, und reicht vom Steinhuder Meer bis zu Deister und Hildesheimer Börde. Als Teil der Metropolregion Hannover-Braunschweig-Göttingen-Wolfsburg erfüllt sie überörtliche Aufgaben etwa in Migration, Soziales, Umwelt, Verkehr und Finanzen. Die Verwaltung setzt auf familienfreundliche Arbeitszeitmodelle und gezielte Führungskräfteentwicklung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "1.141.128",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.297,13 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "21",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kommunalverband besonderer Art",
+      "icon": "📍"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Hannover",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristetes Arbeitsverhältnis mit den Sozialleistungen nach TVöD bzw. Beamtenbesoldung."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Betriebliche Altersversorgung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Familienfreundlichkeit",
+      "beschreibung": "Gleitzeit, Homeoffice-Möglichkeiten, individuelle Teilzeitlösungen, Belegplätze in einer Kinderkrippe, Ferienbetreuung für Schulkinder und Notfallbetreuung für Kinder und Angehörige."
+    },
+    {
+      "titel": "Hannover Jobticket",
+      "beschreibung": "Deutschlandticket als Jobticket für 34,95 Euro im Monat."
+    },
+    {
+      "titel": "Fahrrad-Leasing",
+      "beschreibung": "Möglichkeit zum Fahrrad-Leasing."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Aktive Gesundheitsförderung."
+    },
+    {
+      "titel": "Fortbildung und Führung",
+      "beschreibung": "Gezielte Fort- und Weiterbildung, für Führungskräfte auch Coaching und das Programm „kompetente Führung“."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Region Hannover · Team Operatives Personalmanagement",
+    "email": "bewerbung@region-hannover.de",
+    "telefon": "0511 616-23721",
+    "bewerbungsportal": "https://hannit.pi-asp.de/bewerber-web/?companyEid=0033&tenant=0033&lang=D"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, 21 Gemeinden, Status Kommunalverband besonderer Art, Lage: https://de.wikipedia.org/wiki/Region_Hannover (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung des Teams Allgemeines und humanitäres Aufenthaltsrecht 3, https://interamt.de/koop/app/stelle?id=1498977 (API api.interamt.de/query/stellenangebot/1498977) (abgerufen 09.10.2026)",
+    "Bewerbungsportal (aus der Ausschreibung, Aufruf geprüft): https://hannit.pi-asp.de/bewerber-web/?companyEid=0033&tenant=0033&lang=D (abgerufen 09.10.2026)"
+  ]
+}

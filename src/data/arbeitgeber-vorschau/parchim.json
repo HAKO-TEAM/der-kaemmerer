@@ -1,0 +1,86 @@
+{
+  "slug": "parchim",
+  "name": "Landkreis Ludwigslust-Parchim",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 207160,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Stefan Sternberg",
+  "token": "c0ca89c93acb6f75",
+  "claim": "Verwaltung mit Weitblick im zweitgrößten Landkreis Deutschlands.",
+  "beschreibung": "Der Landkreis Ludwigslust-Parchim liegt im Südwesten Mecklenburg-Vorpommerns und ist nach der Mecklenburgischen Seenplatte der flächenmäßig zweitgrößte Landkreis Deutschlands. Er entstand 2011 aus den Altkreisen Parchim und Ludwigslust; Kreisstadt ist Parchim, Ludwigslust ist Außenstelle der Verwaltung. Insgesamt 142 Gemeinden gehören zum Kreis, der zu den ländlichen Ausläufern der Metropolregion Hamburg zählt. Mit mehr als 30 Fachdiensten bietet die Kreisverwaltung ein breites Aufgabenspektrum und ist als familienfreundlicher Arbeitgeber ausgezeichnet.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "207.160",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "4.766,76 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "142",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2011",
+      "icon": "📜"
+    },
+    {
+      "label": "Fachdienste",
+      "wert": "über 30",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Familienfreundliche Arbeitsbedingungen, ausgezeichnet mit dem Qualitätssiegel „Familienfreundlicher Arbeitgeber“."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub und zwei zusätzliche freie Tage an Weihnachten und Silvester."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Moderne Arbeitsplätze",
+      "beschreibung": "Höhenverstellbare Schreibtische, Dienstlaptops und die Möglichkeit der Dienstwagennutzung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, etwa bewegte Pausen."
+    },
+    {
+      "titel": "Vor Ort",
+      "beschreibung": "Kantine, kostenlose Parkplätze sowie kostenloses Trinkwasser und Kaffee."
+    },
+    {
+      "titel": "Miteinander",
+      "beschreibung": "Teamtage, Personalversammlung und jährliches Mitarbeiterfest."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Ludwigslust-Parchim · Fachdienst 11 – Personal und Organisation",
+    "email": "carolin.behrens@kreis-lup.de",
+    "telefon": "03871 722-1127",
+    "bewerbungsportal": "https://www.kreis-lup.de/Verwaltung/Aktuelles/Stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, 142 Gemeinden, Gründung 2011, Kreisstadt, Landrat Stefan Sternberg: https://de.wikipedia.org/wiki/Landkreis_Ludwigslust-Parchim (abgerufen 09.10.2026)",
+    "Benefits, Kontakt Fachdienst 11 und Landrat Sternberg (Zeichnung): Stellenausschreibungen Sachbearbeitung Ordnung/Haushalt, https://interamt.de/koop/app/stelle?id=1490232 (API api.interamt.de/query/stellenangebot/1490232); Teamleitung Leistungs- und Entgeltverhandlungen, https://interamt.de/koop/app/stelle?id=1476081 (API api.interamt.de/query/stellenangebot/1476081); Leitung des Fachdienstes Rechnungs- und Gemeindeprüfung, https://interamt.de/koop/app/stelle?id=1494330 (API api.interamt.de/query/stellenangebot/1494330) (abgerufen 09.10.2026)",
+    "Benefits auf einen Blick, mehr als 30 Fachdienste, Landrat Stefan Sternberg: Karriereseite https://www.kreis-lup.de/Verwaltung/Aktuelles/Stellenausschreibungen/ (abgerufen 09.10.2026)"
+  ]
+}

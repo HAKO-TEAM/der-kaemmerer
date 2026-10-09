@@ -1,0 +1,79 @@
+{
+  "slug": "wennigsen",
+  "name": "Gemeinde Wennigsen (Deister)",
+  "bundesland": "Niedersachsen",
+  "einwohner": 14216,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Ingo Klokemann",
+  "token": "1988157447c0b65c",
+  "claim": "Bauen und Gestalten für eine Gemeinde am Deister – mit der S-Bahn vor der Tür nach Hannover.",
+  "beschreibung": "Wennigsen (Deister) liegt rund 15 Kilometer südwestlich von Hannover am bewaldeten Höhenzug des Deisters im Calenberger Land und gehört zur Region Hannover. Die Gemeinde mit acht Ortsteilen ist über eine S-Bahn-Haltestelle direkt an die Landeshauptstadt angebunden. Der Fachbereich Bau und Umwelt mit derzeit 59 Mitarbeitenden betreut zahlreiche öffentliche Bauprojekte, darunter zwei Grundschulen, mehrere Kitas, eine Gesamtschule und Feuerwehrgerätehäuser. Wer hier arbeitet, gestaltet die Infrastruktur einer naturnahen Gemeinde im Hannoveraner Umland unmittelbar mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.216",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "53,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "8",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Entfernung Hannover",
+      "wert": "ca. 15 km",
+      "icon": "🚆"
+    },
+    {
+      "label": "Gebietskörperschaft",
+      "wert": "Region Hannover",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Flexible Arbeitszeitgestaltung und eine mehrmonatige Einarbeitung."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD, betriebliche Altersversorgung und leistungsorientierte Bezahlung."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Interne und externe Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit und Familie",
+      "beschreibung": "Gesundheitsförderung über Hansefit/Epassi und Fluxx-Notfallbetreuung für Kinder und Angehörige."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Deutschlandticket Hannover Job, Fahrrad- und E-Bike-Leasing sowie S-Bahn-Anbindung im Ort."
+    },
+    {
+      "titel": "Vergünstigungen",
+      "beschreibung": "Corporate Benefits mit monatlich wechselnden Angeboten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Wennigsen (Deister) · Team 1.4 Personal",
+    "email": "t.meyer@wennigsen.de",
+    "telefon": "05103 7007-555",
+    "bewerbungsportal": "https://www.wennigsen.de/buerger-gemeinde/verwaltung/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Lage am Deister/Calenberger Land: https://de.wikipedia.org/wiki/Wennigsen_(Deister) (abgerufen 09.10.2026)",
+    "Bürgermeister Ingo Klokemann: https://www.wennigsen.de/buerger-gemeinde/verwaltung/grusswort-des-buergermeisters/ (abgerufen 09.10.2026)",
+    "Stellenseite: https://www.wennigsen.de/buerger-gemeinde/verwaltung/stellenangebote/ (abgerufen 09.10.2026)",
+    "Benefits, Kontakt, Fachbereich Bau und Umwelt (59 Mitarbeitende, Bauprojekte): Stellenausschreibung Leitung des Fachbereiches Bau und Umwelt, https://interamt.de/koop/app/stelle?id=1496839 (API api.interamt.de/query/stellenangebot/1496839) (abgerufen 09.10.2026)"
+  ]
+}

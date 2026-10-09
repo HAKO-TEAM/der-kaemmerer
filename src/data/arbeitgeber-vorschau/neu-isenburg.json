@@ -1,0 +1,82 @@
+{
+  "slug": "neu-isenburg",
+  "name": "Stadt Neu-Isenburg",
+  "bundesland": "Hessen",
+  "einwohner": 38236,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dirk Gene Hagelstein",
+  "token": "ba7f048aa9c19410",
+  "claim": "Hugenotten- und Waldenserstadt direkt vor den Toren Frankfurts mit einer modernen, vielfältigen Verwaltung.",
+  "beschreibung": "Neu-Isenburg liegt im Landkreis Offenbach in direkter Nachbarschaft zu Frankfurt am Main und nahe dem Frankfurter Flughafen. Die Stadt wurde als Zufluchtsort von Hugenotten gegründet und trägt seit 2024 den amtlichen Namenszusatz Hugenotten- und Waldenserstadt. Heute ist sie vor allem Dienstleistungsstandort und Wohnort in der Region Frankfurt Rhein-Main. Die Stadtverwaltung beschäftigt rund 600 Mitarbeitende und hat die Charta der Vielfalt unterzeichnet.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "38.236",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "24,29 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "rund 600",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "3",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Namenszusatz seit",
+      "wert": "2024",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Betriebliche Altersvorsorge, vermögenswirksame Leistungen, Leistungsentgelt und Jahressonderzahlung; Übernahme der Erfahrungsstufe beim direkten Wechsel im TVöD."
+    },
+    {
+      "titel": "Jobticket Premium",
+      "beschreibung": "Kostenloses Jobticket Premium, ab 19 Uhr und am Wochenende auch mit der Familie nutzbar."
+    },
+    {
+      "titel": "Zusätzliche freie Tage",
+      "beschreibung": "Arbeitsfrei an Rosenmontag, Heiligabend und Silvester."
+    },
+    {
+      "titel": "Flexibles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeitgestaltung mit der Option, tageweise mobil zu arbeiten."
+    },
+    {
+      "titel": "Gesundheit und Beratung",
+      "beschreibung": "Angebote zur Gesundheitsförderung und kostenloses Employee Assistance Program (EAP) für Beratung in jeder Lebenslage."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mitarbeitervorteile",
+      "beschreibung": "Rabattaktionen im Rahmen eines Benefits-Programms."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Neu-Isenburg · Karriere",
+    "email": "karriere@stadt-neu-isenburg.de",
+    "telefon": "06102 241-711",
+    "bewerbungsportal": "https://www.neu-isenburg.de/rathaus_und_service/karriere_und_ausbildung/jobsundkarriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Bürgermeister, Lage, Namenszusatz 2024, Geschichte: https://de.wikipedia.org/wiki/Neu-Isenburg (abgerufen 09.10.2026)",
+    "Mitarbeitende, Charta der Vielfalt, Benefits und Kontakt: Stellenausschreibung stv. Leitung Fachbereich Hochbau https://interamt.de/koop/app/stelle?id=1497520 (API api.interamt.de/query/stellenangebot/1497520) (abgerufen 09.10.2026)",
+    "Bewerbungsportal: https://www.neu-isenburg.de/rathaus_und_service/karriere_und_ausbildung/jobsundkarriere (abgerufen 09.10.2026)"
+  ]
+}

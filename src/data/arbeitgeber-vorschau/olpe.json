@@ -1,0 +1,78 @@
+{
+  "slug": "olpe",
+  "name": "Kreis Olpe",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 131265,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Theo Melcher",
+  "token": "a0a4b1f03d063fa7",
+  "claim": "Die Finanzen eines Sauerland-Kreises strategisch und zukunftsorientiert steuern.",
+  "beschreibung": "Der Kreis Olpe liegt im Südosten Nordrhein-Westfalens im Sauerland und gehört zur Region Südwestfalen im Regierungsbezirk Arnsberg. Er umfasst sieben Städte und Gemeinden; Sitz und größte Stadt ist Olpe. Gemessen an der Einwohnerzahl ist er der kleinste Kreis des Landes, mit dem Härdler als höchster Erhebung von 756 Metern. Die Kreisverwaltung ist für die Vereinbarkeit von Familie, Pflege und Beruf zertifiziert und setzt auf eine Führungskultur des Zuhörens und Unterstützens.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "131.265",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "712,11 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Olpe",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Region",
+      "wert": "Südwestfalen / Sauerland",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Stelle",
+      "beschreibung": "Unbefristete Vollzeitstelle mit Besoldung nach LBesG NRW."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und die Möglichkeit mobilen Arbeitens."
+    },
+    {
+      "titel": "Familie, Pflege und Beruf",
+      "beschreibung": "Gute Vereinbarkeit von Familie, Pflege und Beruf mit entsprechender Zertifizierung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten sowie fachliche und persönliche Begleitung."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Betriebliche Altersvorsorge, Leistungsentgelt und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Gesundheitsfördernde Maßnahmen und E-Bike-Leasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Olpe · Fachdienst Personal",
+    "email": "l.stremmel@kreis-olpe.de",
+    "telefon": "02761 81-631",
+    "bewerbungsportal": "https://kreis-olpe.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, 7 Gemeinden, Lage, Landrat Theo Melcher: https://de.wikipedia.org/wiki/Kreis_Olpe (abgerufen 09.10.2026)",
+    "Benefits, Landrat Theo Melcher als Ansprechpartner, Fachdienst Personal: Stellenausschreibung Kämmerer oder Kämmerin, https://interamt.de/koop/app/stelle?id=1498737 (API api.interamt.de/query/stellenangebot/1498737) (abgerufen 09.10.2026)",
+    "Kontakt (Ansprechperson Stellenangebote) und Karriereseite: https://kreis-olpe.de/stellenangebote (abgerufen 09.10.2026)"
+  ]
+}

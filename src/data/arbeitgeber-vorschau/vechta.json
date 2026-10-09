@@ -1,0 +1,65 @@
+{
+  "slug": "vechta",
+  "name": "Landkreis Vechta",
+  "bundesland": "Niedersachsen",
+  "einwohner": 146838,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Tobias Gerdesmeyer",
+  "token": "7a69c47c4ff8a0db",
+  "claim": "Verwaltung mit Gestaltungsspielraum zwischen Wildeshauser Geest und Dammer Bergen.",
+  "beschreibung": "Der Landkreis Vechta liegt im Westen Niedersachsens in der Norddeutschen Tiefebene, Kreisstadt ist Vechta. Zum Kreisgebiet gehören zehn Städte und Gemeinden, darunter Damme, Dinklage und Lohne. Landschaftlich reicht der Kreis vom Naturpark Wildeshauser Geest im Nordosten bis zu den Dammer Bergen und dem Dümmer im Süden. Die Kreisverwaltung bündelt Aufgaben von der Bauordnung über den Immissionsschutz bis zur Kreisplanung und setzt dabei auf eigenverantwortliches Arbeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "146.838",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "814,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Vechta",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Unbefristete Beschäftigung",
+      "beschreibung": "Unbefristete Stellen mit einer wöchentlichen Arbeitszeit von 39 bzw. 40 Stunden."
+    },
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Arbeitsplätze mit einem hohen Maß an Eigenverantwortung und eigenen Entscheidungsbefugnissen."
+    },
+    {
+      "titel": "Gesundheitsmanagement",
+      "beschreibung": "Umfassendes Gesundheitsmanagement, bei dem die Mitarbeitenden im Vordergrund stehen."
+    },
+    {
+      "titel": "Kollegiales Miteinander",
+      "beschreibung": "Gemeinsame Aktionen im Laufe des Jahres."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Vechta · Personalstelle",
+    "email": "1201@landkreis-vechta.de",
+    "telefon": "04441 898-1201",
+    "bewerbungsportal": "https://bewerbung.landkreis-vechta.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz, Landrat, Lage/Naturparks: https://de.wikipedia.org/wiki/Landkreis_Vechta (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Amt für Bauordnung, Planung und Immissionsschutz https://interamt.de/koop/app/stelle?id=1497001 (API api.interamt.de/query/stellenangebot/1497001) (abgerufen 09.10.2026)",
+    "Bewerbungsportal: https://bewerbung.landkreis-vechta.de/ (Stellenmarkt Landkreis Vechta) (abgerufen 09.10.2026)"
+  ]
+}

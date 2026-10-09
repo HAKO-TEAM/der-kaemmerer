@@ -1,0 +1,79 @@
+{
+  "slug": "meppen",
+  "name": "Stadt Meppen",
+  "bundesland": "Niedersachsen",
+  "einwohner": 36984,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Helmut Knurbein",
+  "token": "ce14b2eff2befd9c",
+  "claim": "Die digitale Verwaltung der Kreisstadt an Hase und Ems voranbringen.",
+  "beschreibung": "Meppen ist Kreisstadt des Landkreises Emsland und Mittelzentrum im Westen Niedersachsens, nahe der Grenze zu den Niederlanden. Die Stadt liegt am Zusammenfluss von Hase und Ems und ist über die A 31 verkehrsgünstig angebunden. Sie bietet ein gutes Kinderbetreuungs- und Schulangebot sowie ein vielfältiges kulturelles Leben. Die Stadtverwaltung versteht sich als moderne, bürgernahe Kommunalverwaltung mit kurzen Entscheidungswegen und treibt die Digitalisierung ihrer Dienste aktiv voran.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "36.984",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "188,4 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortschaften",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Hase und Ems, A 31",
+      "icon": "🛣️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisstadt Emsland",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD bzw. Besoldung, Jahressonderzahlung und Leistungsprämie."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Zusätzliche betriebliche Altersversorgung."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Flexible Arbeitszeiten und ein familiäres Betriebsklima mit kurzen Entscheidungswegen."
+    },
+    {
+      "titel": "Firmenfitness",
+      "beschreibung": "Teilnahme am Firmenfitnessangebot Epassi (Hansefit)."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Möglichkeit des Fahrradleasings."
+    },
+    {
+      "titel": "Vergünstigungen",
+      "beschreibung": "Nutzung des Vorteilsportals corporate benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Meppen · Personalabteilung",
+    "email": "bewerbungen@meppen.de",
+    "telefon": "05931 153-191",
+    "bewerbungsportal": "https://www.meppen.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortschaften, Kreisstadt Emsland: https://de.wikipedia.org/wiki/Meppen (abgerufen 09.10.2026)",
+    "Bürgermeister Helmut Knurbein (aktuelle Meldung auf der Startseite): https://www.meppen.de/ (abgerufen 09.10.2026)",
+    "Stellenangebote: https://www.meppen.de/stellenangebote (abgerufen 09.10.2026)",
+    "Lage an Hase und Ems/A 31, Benefits und Kontakt: Stellenausschreibung IT-Sachgebietsleitung, https://interamt.de/koop/app/stelle?id=1495621 (API api.interamt.de/query/stellenangebot/1495621) (abgerufen 09.10.2026)"
+  ]
+}

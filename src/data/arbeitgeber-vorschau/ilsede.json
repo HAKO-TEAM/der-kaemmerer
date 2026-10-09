@@ -1,0 +1,73 @@
+{
+  "slug": "ilsede",
+  "name": "Gemeinde Ilsede",
+  "bundesland": "Niedersachsen",
+  "einwohner": 21525,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Nils Neuhäuser genannt Holtbrügge",
+  "token": "09b0d3065778af29",
+  "claim": "Den Wirtschaftsstandort im Peiner Südkreis aktiv nach vorn bringen.",
+  "beschreibung": "Ilsede liegt im Landkreis Peine und ist im Südkreis Grundzentrum für Wohnen, Handel und Gewerbe. Zur Gemeinde gehören elf Ortsteile, darunter Groß Ilsede, Gadenstedt und Groß Lafferde. Die Verwaltung setzt auf aktive Wirtschaftsförderung, betreut ansässige Unternehmen und richtet mit der Ilseder Jobbörse eine eigene Präsenz- und virtuelle Messe aus. Mitarbeitende finden hier kurze Wege zur Verwaltungsspitze und viel Raum für eigene Initiative.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.525",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "72,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "11",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Grundzentrum Südkreis Peine",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitende Arbeitszeit",
+      "beschreibung": "Gleitzeit zur besseren Vereinbarkeit von Beruf und Familie, Teilzeit grundsätzlich möglich."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobiles Arbeiten im Rahmen der dienstlichen Belange."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, u. a. mit epassi (ehemals Hansefit)."
+    },
+    {
+      "titel": "Jobbike-Leasing",
+      "beschreibung": "Leasing eines Dienstfahrrads."
+    },
+    {
+      "titel": "Kostenlose Parkplätze",
+      "beschreibung": "Kostenfreie Parkmöglichkeiten am Arbeitsplatz."
+    },
+    {
+      "titel": "Tarifliche Bezahlung",
+      "beschreibung": "Vergütung nach TVöD."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Ilsede · Personalabteilung Bewerbungen",
+    "email": "bewerbungen@ilsede.de",
+    "telefon": "05172 411-129",
+    "bewerbungsportal": "https://www.gemeinde-ilsede.de/rathaus/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Grundzentrum, Bürgermeister (Wiederwahl 13.09.2026): https://de.wikipedia.org/wiki/Ilsede (abgerufen 09.10.2026)",
+    "Karriereseite und Kontakt Personalabteilung: https://www.gemeinde-ilsede.de/rathaus/karriere/ (abgerufen 09.10.2026)",
+    "Benefits, Ilseder Jobbörse, Bürgermeister: Stellenausschreibung Wirtschaftsförderin/Wirtschaftsförderer, https://interamt.de/koop/app/stelle?id=1494574 (API api.interamt.de/query/stellenangebot/1494574) (abgerufen 09.10.2026)"
+  ]
+}

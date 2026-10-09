@@ -1,0 +1,82 @@
+{
+  "slug": "hockenheim",
+  "name": "Stadt Hockenheim",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 21599,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Marcus Zeitler",
+  "token": "5b40be62b7198b7d",
+  "claim": "Prüfen und gestalten in der Großen Kreisstadt am Hockenheimring.",
+  "beschreibung": "Hockenheim liegt in der Oberrheinischen Tiefebene rund 20 Kilometer südlich von Mannheim und gehört zur Metropolregion Rhein-Neckar. Seit 2001 ist die Stadt Große Kreisstadt und bildet mit Altlußheim, Neulußheim und Reilingen eine Verwaltungsgemeinschaft. Überregional bekannt ist Hockenheim durch die Rennstrecke Hockenheimring. Die Stadtverwaltung bietet facettenreiche Aufgaben, flexible Arbeitszeiten und eine gezielte Förderung von Fort- und Weiterbildung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.599",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "34,84 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Große Kreisstadt seit",
+      "wert": "2001",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Rhein-Neckar-Kreis",
+      "icon": "📍"
+    },
+    {
+      "label": "Bekannt für",
+      "wert": "Hockenheimring",
+      "icon": "🏁"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung nach TVöD",
+      "beschreibung": "Attraktive Vergütung nach TVöD mit Leistungsentgelt."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Betriebliche Altersversorgung und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket und zentrale Parkplätze."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Rabatte über Corporate Benefits."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Freistellung und finanzielle Unterstützung bei Fort- und Weiterbildungen."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Elektronische Arbeitszeiterfassung mit Arbeitszeitkonto."
+    },
+    {
+      "titel": "Urlaub und Miteinander",
+      "beschreibung": "30 Tage Jahresurlaub, anlassbezogene Sonderurlaubstage, Jubiläen, Betriebsausflug und innerbetriebliche Feste."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Hockenheim · Fachbereich Personal",
+    "email": "s.laier@hockenheim.de",
+    "telefon": "06205 21-2120",
+    "bewerbungsportal": "https://www.hockenheim.de/startseite/rathaus/karriere.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Große Kreisstadt seit 2001, Verwaltungsgemeinschaft, Hockenheimring, Oberbürgermeister Marcus Zeitler (seit 2019): https://de.wikipedia.org/wiki/Hockenheim (abgerufen 09.10.2026)",
+    "Benefits und Kontakt Fachbereich Personal: Stellenausschreibung Technischer Prüfer im Rechnungsprüfungsamt, https://interamt.de/koop/app/stelle?id=1498936 (API api.interamt.de/query/stellenangebot/1498936) (abgerufen 09.10.2026)",
+    "Karriereseite: https://www.hockenheim.de/startseite/rathaus/karriere.html (abgerufen 09.10.2026)"
+  ]
+}

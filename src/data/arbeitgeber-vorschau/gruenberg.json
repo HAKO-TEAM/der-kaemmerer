@@ -1,0 +1,82 @@
+{
+  "slug": "gruenberg",
+  "name": "Stadt Grünberg",
+  "bundesland": "Hessen",
+  "einwohner": 13627,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Marcel Schlosser",
+  "token": "ec66457432329b61",
+  "claim": "Bauen und gestalten im Luftkurort am Rand des Vogelsbergs.",
+  "beschreibung": "Grünberg ist eine Kleinstadt im mittelhessischen Landkreis Gießen und staatlich anerkannter Luftkurort. Die Stadt liegt naturräumlich im Vorderen Vogelsberg und gliedert sich in die Kernstadt und insgesamt 14 Stadtteile. Die Stadtverwaltung verantwortet unter anderem den Hochbau und die Bauunterhaltung der städtischen Gebäude. Gesucht werden Fach- und Führungskräfte, die selbstständig arbeiten und Projekte vor Ort voranbringen wollen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.627",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "89,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "14",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Staatlich anerkannter Luftkurort",
+      "icon": "🌿"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Gießen",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Krisensichere Führungsposition",
+      "beschreibung": "Verantwortungsvolle Führungsaufgabe in einem umfangreichen Aufgabengebiet."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Leistungsgerechte Bezahlung nach TVöD, tarifliche Jahressonderzahlung und zusätzliche Leistungsprämie."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Zusätzliche Altersvorsorge des öffentlichen Dienstes und betriebliche Krankenzusatzversicherung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub, ab 01.01.2027 31 Tage."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Gute Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Jobrad und Fortbildung",
+      "beschreibung": "Jobradleasing sowie Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Gute Verkehrsanbindung und kostenlose Dauerkarte für das städtische Freibad."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Grünberg · Fachdienst Personalmanagement",
+    "email": "bewerbung@gruenberg.de",
+    "telefon": "06401 804-113",
+    "bewerbungsportal": "https://www.gruenberg.de/rathaus-buergerservice/aktuelles/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, 14 Stadtteile, Luftkurort, Landkreis Gießen, Bürgermeister Marcel Schlosser (Amtszeit 2022–2028): https://de.wikipedia.org/wiki/Grünberg_(Hessen) (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachdienstleitung Hochbau, https://interamt.de/koop/app/stelle?id=1498579 (API api.interamt.de/query/stellenangebot/1498579) (abgerufen 09.10.2026)",
+    "Karriereseite: https://www.gruenberg.de/rathaus-buergerservice/aktuelles/stellenangebote/ (abgerufen 09.10.2026)"
+  ]
+}

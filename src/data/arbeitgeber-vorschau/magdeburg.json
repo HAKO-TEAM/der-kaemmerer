@@ -1,0 +1,83 @@
+{
+  "slug": "magdeburg",
+  "name": "Landeshauptstadt Magdeburg",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 244494,
+  "buergermeistertitel": "Oberbürgermeisterin",
+  "buergermeister": "Simone Borris",
+  "token": "83ecec2f643cd973",
+  "claim": "In der Ottostadt an der Elbe Verantwortung für eine Landeshauptstadt übernehmen.",
+  "beschreibung": "Magdeburg ist die Hauptstadt des Landes Sachsen-Anhalt, eines der drei Oberzentren des Landes und dessen größte Stadt. Die Stadt an der Elbe wurde im Jahr 805 erstmals urkundlich erwähnt und war im Spätmittelalter eine der größten deutschen Städte. Mit Otto I. und Bürgermeister Otto von Guericke als Namenspatronen tritt sie heute als Ottostadt Magdeburg auf. Die Stadtverwaltung bietet Laufbahnen von Recht und Vergabe über Vermessung bis zur sozialen Arbeit und Grundsicherung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "244.494",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "201,03 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "40",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "805",
+      "icon": "📜"
+    },
+    {
+      "label": "Status",
+      "wert": "Landeshauptstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Bezahlung",
+      "beschreibung": "Bezahlung nach TVöD-VKA bzw. Besoldung mit dynamischer Entwicklung über Erfahrungsstufen, Weihnachtsgeld und Leistungsprämie."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge für Tarifbeschäftigte mit 3,9 % Arbeitgeberanteil."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Arbeitszeiten ohne Kernarbeitszeit und anteiliges Home-Office."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, 24.12. und 31.12. dienstfrei."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Vergünstigung im Nahverkehr des marego-Verbunds und Fahrrad-Leasing."
+    },
+    {
+      "titel": "Fortbildung und Gesundheit",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsangebote sowie Angebote zur Gesundheitsförderung."
+    },
+    {
+      "titel": "Gemeinschaft",
+      "beschreibung": "Veranstaltungen wie Teamtage, Jubiläen und Kinderweihnachtsfeiern."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landeshauptstadt Magdeburg · Ansprechpartnerin Bewerbungsprozess",
+    "email": "sandra.feustel@pa.magdeburg.de",
+    "telefon": "0391 540-2368",
+    "bewerbungsportal": "https://www.magdeburg.de/Wirtschaft-Arbeit/Karriereportal/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Ersterwähnung 805, Landeshauptstadt, Ottostadt: https://de.wikipedia.org/wiki/Magdeburg (abgerufen 09.10.2026)",
+    "Oberbürgermeisterin Simone Borris (aktuelle Meldungen): https://www.magdeburg.de/ (abgerufen 09.10.2026)",
+    "Karriereportal: https://www.magdeburg.de/Wirtschaft-Arbeit/Karriereportal/ (abgerufen 09.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Teamleitung Liegenschaftsvermessung/Bodenordnung https://interamt.de/koop/app/stelle?id=1470900 (API api.interamt.de/query/stellenangebot/1470900), Abteilungsleitung Zentrale Vergabestelle https://interamt.de/koop/app/stelle?id=1496034 (API api.interamt.de/query/stellenangebot/1496034), Gruppenleitung Grundsicherung/HLU https://interamt.de/koop/app/stelle?id=1498608 (API api.interamt.de/query/stellenangebot/1498608), Soziale Arbeit im Schutzhaus https://interamt.de/koop/app/stelle?id=1497734 (API api.interamt.de/query/stellenangebot/1497734) (abgerufen 09.10.2026)"
+  ]
+}

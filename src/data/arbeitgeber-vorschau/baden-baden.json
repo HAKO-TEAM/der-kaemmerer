@@ -1,0 +1,72 @@
+{
+  "slug": "baden-baden",
+  "name": "Stadt Baden-Baden",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 56952,
+  "token": "9fd3b262a5facd16",
+  "claim": "Arbeiten im UNESCO-Welterbe zwischen Rheinebene und Schwarzwald.",
+  "beschreibung": "Baden-Baden liegt im Westen Baden-Württembergs am Rand des Schwarzwalds und ist der bevölkerungsärmste Stadtkreis des Landes. Schon die Römer nutzten die heißen Thermalquellen; heute ist die Stadt als Kur- und Bäderstadt, Medien-, Kunst- und Festspielstadt bekannt. Seit 2021 trägt Baden-Baden den Titel UNESCO-Welterbe. Die Kämmerei verantwortet unter anderem die Erhebung von Gewerbe-, Grund- und Zweitwohnungssteuer sowie der Kurtaxe.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "56.952",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "140,19 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "11",
+      "icon": "🏘️"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "2021",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Status",
+      "wert": "Stadtkreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Vielfältige Entwicklungs- und Weiterqualifizierungsmöglichkeiten."
+    },
+    {
+      "titel": "Arbeitszeit und mobiles Arbeiten",
+      "beschreibung": "Individuelle Arbeitszeitmodelle und die Möglichkeit des mobilen Arbeitens."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Strukturiertes Einarbeitungskonzept."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschland-Ticket (Job) für den öffentlichen Nahverkehr."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Baden-Baden · Personal",
+    "email": "personal@baden-baden.de",
+    "telefon": "07221 93-2088",
+    "bewerbungsportal": "https://wir-im-rathaus.de/offene-stellen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Stadtkreis, Kur- und Bäderstadt: https://de.wikipedia.org/wiki/Baden-Baden (abgerufen 09.10.2026)",
+    "UNESCO-Welterbe 2021, Benefits und Kontakt: Stellenausschreibung Leitung Abteilung Steuern https://interamt.de/koop/app/stelle?id=1427287 (API api.interamt.de/query/stellenangebot/1427287) (abgerufen 09.10.2026)",
+    "Bewerbungsportal: https://wir-im-rathaus.de/offene-stellen/ (Karriereseite der Stadtverwaltung Baden-Baden, verlinkt in der Ausschreibung) (abgerufen 09.10.2026)"
+  ]
+}

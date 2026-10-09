@@ -1,0 +1,86 @@
+{
+  "slug": "offenbach",
+  "name": "Stadt Offenbach am Main",
+  "bundesland": "Hessen",
+  "einwohner": 133195,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Felix Schwenke",
+  "token": "214b0159711908a7",
+  "claim": "Kommunalpolitik und Finanzen in einer jungen, vielfältigen Großstadt am Main gestalten.",
+  "beschreibung": "Offenbach am Main ist die fünftgrößte Stadt Hessens, kreisfreie Großstadt und eines der Oberzentren des Landes im Rhein-Main-Gebiet. Die einst von Hugenotten geprägte Industriestadt war lange Zentrum der Lederwarenindustrie und hat sich zu einem Dienstleistungs- und Designstandort entwickelt, unter anderem mit der Hochschule für Gestaltung und dem Sitz des Deutschen Wetterdienstes. Die Stadtverwaltung bietet Aufgaben mit direkter Nähe zur Kommunalpolitik und zum kommunalen Steuerwesen. Gearbeitet wird in zentraler Lage mit flexiblen Arbeitszeitmodellen und guter ÖPNV-Anbindung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "133.195",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "44,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "21",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisfreie Stadt, Oberzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Rang in Hessen",
+      "wert": "5. größte Stadt",
+      "icon": "🏙️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "30 Tage Urlaub (ab 2027 31 Tage für Beschäftigte), ein Familientag, arbeitsfrei am 24.12. und 31.12. sowie ein Zeit-statt-Geld-Wahlmodell mit bis zu drei zusätzlichen Urlaubstagen."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit mit Zeiterfassung, teils mobiles Arbeiten; Vollzeitstellen grundsätzlich teilbar."
+    },
+    {
+      "titel": "Kostenloses Jobticket",
+      "beschreibung": "Jobticket für das gesamte RMV-Gebiet inklusive Mitnahmeregelung."
+    },
+    {
+      "titel": "Fahrrad",
+      "beschreibung": "Fahrradleasing, gesicherte Fahrradstellplätze und Duschen im Rathaus."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge bei der ZVK Darmstadt für Beschäftigte."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Interne und externe Fortbildungen sowie Maßnahmen für eine gute Führungskultur."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement für körperliches und mentales Wohlbefinden."
+    },
+    {
+      "titel": "Ankommen in Offenbach",
+      "beschreibung": "Unterstützung bei der Wohnungs- und Kitaplatzsuche, Rabattplattformen und kostenlose Mitgliedschaft in der Stadtbibliothek."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Offenbach am Main · Personalamt",
+    "email": "personalbetreuung@offenbach.de",
+    "telefon": "069 8065-1",
+    "bewerbungsportal": "https://www.offenbach.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Stadtteile, Status, Rang in Hessen, Stadtgeschichte, Oberbürgermeister Felix Schwenke (wiedergewählt 17.09.2023): https://de.wikipedia.org/wiki/Offenbach_am_Main (abgerufen 09.10.2026)",
+    "Benefits: Stellenausschreibungen Stellvertretende Amtsleitung Büro der Stadtverordnetenversammlung, https://interamt.de/koop/app/stelle?id=1495557 (API api.interamt.de/query/stellenangebot/1495557), und Sachbearbeitung Mitwirkung Grund- und Gewerbesteuer, https://interamt.de/koop/app/stelle?id=1493981 (API api.interamt.de/query/stellenangebot/1493981) (abgerufen 09.10.2026)",
+    "Kontakt Personalamt (personalbetreuung@offenbach.de, Zentrale 069 8065-1), Karriereseite: https://www.offenbach.de/jobs (abgerufen 09.10.2026)"
+  ]
+}
