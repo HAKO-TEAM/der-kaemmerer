@@ -15,6 +15,8 @@ import { spiegel } from '../../../lib/spiegel.mjs';
 import { verzeichnis, gemeindeUrl, LAND_SLUG, imLand } from '../../../lib/gemeinden.mjs';
 import { km } from '../../../lib/markt/benchmark.mjs';
 import { niveauText } from '../../../lib/markt/merkmale.mjs';
+import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
 
 const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
 const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
@@ -42,6 +44,10 @@ const beschreibung = [
 const zeilen = [['Grundsteuer A (Hebesatz)', f.grundsteuerA, ' %'], ['Grundsteuer B (Hebesatz)', gb, ' %'], ['Gewerbesteuer (Hebesatz)', gw, ' %'],
   ['Schulden Kernhaushalt je Einwohner', sch, ' €'], ['davon Kassenkredite je Einwohner', f.kassenkredite, ' €'], ['Schulden der 100-%-Beteiligungen je Einwohner', f.beteiligungen, ' €']]
   .filter(([, v]: any) => v.wert != null) as [string, any, string][];
+// Amtlicher Haushaltsstatus (nur NRW)
+const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
+const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
+const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
 const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
   { '@type': 'ListItem', position: 2, name: g.landLang, item: `https://derkaemmerer.de${landUrl}` },
@@ -72,6 +78,10 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
 .gm-zeile small { color:#64748b; white-space:nowrap; } .gm-zeile a { color:#0f172a; text-decoration:none; font-weight:600; } .gm-zeile a:hover { color:#2563eb; }
 .gm-karte h3 { margin:0 0 10px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#64748b; }
 .gm-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.5; } .gm-hin a { color:#2563eb; }
+.gm-skala { display:grid; grid-template-columns:repeat(7,1fr); gap:3px; margin-bottom:12px; } .gm-skala span { font-size:11px; text-align:center; padding:8px 3px; border-radius:4px; background:#f1f5f9; color:#94a3b8; border-top:4px solid var(--f); line-height:1.25; }
+.gm-skala span.aktiv { background:var(--f); color:#fff; font-weight:700; transform:scale(1.06); box-shadow:0 6px 14px -6px var(--f); }
+.gm-hs { margin:6px 0; font-size:15px; line-height:1.55; }
+@media (max-width:640px){ .gm-skala{grid-template-columns:repeat(4,1fr)} }
 .gm-nachbarn { display:flex; flex-wrap:wrap; gap:8px; } .gm-nachbarn a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
 .gm-nachbarn a:hover { border-color:#2563eb; color:#2563eb; }
 .gm-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
@@ -109,6 +119,18 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         </tbody>
       </table>
       <p class="gm-hin">Hebesätze 2024 nach altem Grundsteuerrecht (die reformierten Sätze ab 2025 liegen amtlich noch nicht vollständig vor). Schulden zum 31.12.2025; bei Mitgliedsgemeinden von Ämtern und Verbandsgemeinden ohne deren Anteil am Verband. ▲ über / ▼ unter dem Kreismedian. Rang 1 = höchster Wert im Land. Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0).</p></div>
+    </section>)}
+
+    {hsStufe && (
+    <section class="gm-ab">
+      <h2>Amtlicher Haushaltsstatus von {g.name}</h2>
+      <p class="gm-unter">Einstufung der Kommunalaufsicht NRW zum 31.12.2025 – {hsGleich} von 396 Gemeinden in NRW haben dieselbe Einstufung. <a href="/haushaltssperren/nordrhein-westfalen/#haushaltsstatus" style="color:#2563eb">Karte aller NRW-Gemeinden →</a></p>
+      <div class="gm-karte">
+        <div class="gm-skala">{Object.entries(STUFEN).map(([k, v]: any) => <span class={Number(k) === hs.s ? 'aktiv' : ''} style={`--f:${v.farbe}`} title={v.lang}>{v.kurz}</span>)}</div>
+        <p class="gm-hs"><b style={`color:${hsStufe.farbe}`}>{hsStufe.lang}</b> – {hsStufe.text}</p>
+        {(UEBERSCHULDUNG as any)[hs.u] && <p class="gm-hs"><b style="color:#b91c1c">{(UEBERSCHULDUNG as any)[hs.u]}.</b></p>}
+        <p class="gm-hin">Quelle: {(hsNw as any).quelle}. Die Einstufung beschreibt die Haushaltslage zum Stichtag; spätere Haushaltssperren sind im <a href="/haushaltssperren/nordrhein-westfalen/">Verzeichnis der Haushaltssperren NRW</a> erfasst.</p>
+      </div>
     </section>)}
 
     <section class="gm-ab">

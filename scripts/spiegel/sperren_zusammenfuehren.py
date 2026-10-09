@@ -31,8 +31,10 @@ def erreichbar(url):
 def main():
     ordner, dry = sys.argv[1], '--dry' in sys.argv
     daten = json.load(open(ZIEL, encoding='utf-8'))
-    bestand = {(f['land'], norm(f.get('anzeige') or f['kommune'])) for f in daten['faelle']}
+    ebene = lambda f: 'kreis' if f.get('ebene') == 'kreis' else 'gemeinde'
+    bestand = {(f['land'], ebene(f), norm(f.get('anzeige') or f['kommune'])) for f in daten['faelle']}
     neu, abgelehnt = [], []
+    aus_datei = {}   # (land, name) → Datei, aus der die Kommune zuerst übernommen wurde
     for datei in sorted(glob.glob(os.path.join(ordner, '*.json'))):
         try: liste = json.load(open(datei, encoding='utf-8'))
         except Exception as e: abgelehnt.append((os.path.basename(datei), f'Datei unlesbar: {e}')); continue
@@ -40,15 +42,16 @@ def main():
             name = f.get('anzeige') or f.get('kommune')
             if not name or f.get('land') not in LAENDER or not f.get('art') or not f.get('quellen'):
                 abgelehnt.append((name, 'Pflichtfeld fehlt')); continue
-            k = (f['land'], norm(name))
+            k = (f['land'], ebene(f), norm(name))
             if k in bestand: abgelehnt.append((name, 'schon erfasst')); continue
+            if k in aus_datei and aus_datei[k] != datei: abgelehnt.append((name, f'doppelt (schon aus {os.path.basename(aus_datei[k])})')); continue
             quellen = [q for q in f['quellen'] if isinstance(q, str) and q.startswith('http') and erreichbar(q)]
             if not quellen: abgelehnt.append((name, 'keine erreichbare Quelle')); continue
             eintrag = {'kommune': f['kommune'], 'land': f['land'], 'art': f['art'].strip(), 'anlass': (f.get('anlass') or '').strip(),
                        'quellen': quellen, 'artikel': PILLAR, 'ebene': 'kreis' if f.get('ebene') == 'kreis' else 'gemeinde', 'anzeige': name}
             if eintrag['ebene'] == 'kreis': eintrag['kreisname'] = f.get('kreisname') or re.sub(r'^(Landkreis|Kreis)\s+', '', name)
             if not eintrag['anlass']: del eintrag['anlass']
-            neu.append(eintrag)   # mehrere Sperren derselben Kommune aus der Recherche bleiben getrennte Fälle
+            neu.append(eintrag); aus_datei.setdefault(k, datei)   # mehrere Sperren derselben Kommune aus EINER Datei bleiben getrennte Fälle
     print(f'{len(neu)} neue Fälle übernommen, {len(abgelehnt)} nicht übernommen')
     for n, g in abgelehnt: print(f'  – {n}: {g}')
     if not dry and neu:
