@@ -1,1 +1,6439 @@
-[]
+[
+ {
+  "land": "BY",
+  "programm": "Bedarfszuweisungen und Stabilisierungshilfen 2025",
+  "beschreibung": "Jährliche Bewilligungen des Freistaats Bayern (Art. 11 BayFAG) an finanzschwache Gemeinden, Städte und Landkreise; Stabilisierungshilfen setzen eigene Haushaltskonsolidierung voraus (Altschuldentilgung und/oder Investitionshilfe). 2025: 111 Kommunen, rund 136,9 Mio. Euro, Verteilerausschuss 20.10.2025.",
+  "quelle_url": "https://www.bayern.de/pdf/data/bayernde_182887.pdf",
+  "stand": "2025-10-20",
+  "gemeinden": [
+   {
+    "name": "Landkreis Deggendorf",
+    "url": "/kreise/bayern/deggendorf/"
+   },
+   {
+    "name": "Landkreis Freyung-Grafenau",
+    "url": "/kreise/bayern/freyung-grafenau/"
+   },
+   {
+    "name": "Landkreis Passau",
+    "url": "/kreise/bayern/passau/"
+   },
+   {
+    "name": "Landkreis Regen",
+    "url": "/kreise/bayern/regen/"
+   },
+   {
+    "name": "Haidmühle",
+    "url": "/gemeinden/bayern/haidmuehle/"
+   },
+   {
+    "name": "Mauth",
+    "url": "/gemeinden/bayern/mauth/"
+   },
+   {
+    "name": "Sankt Oswald-Riedlhütte",
+    "url": "/gemeinden/bayern/sankt-oswald-riedlhuette/"
+   },
+   {
+    "name": "Essing",
+    "url": "/gemeinden/bayern/essing/"
+   },
+   {
+    "name": "Buch a.Erlbach",
+    "url": "/gemeinden/bayern/buch-a-erlbach/"
+   },
+   {
+    "name": "Fürstenstein",
+    "url": "/gemeinden/bayern/fuerstenstein/"
+   },
+   {
+    "name": "Langdorf",
+    "url": "/gemeinden/bayern/langdorf/"
+   },
+   {
+    "name": "Landkreis Amberg-Sulzbach",
+    "url": "/kreise/bayern/amberg-sulzbach/"
+   },
+   {
+    "name": "Landkreis Neustadt a.d.Waldnaab",
+    "url": "/kreise/bayern/neustadt-a-d-waldnaab/"
+   },
+   {
+    "name": "Landkreis Schwandorf",
+    "url": "/kreise/bayern/schwandorf/"
+   },
+   {
+    "name": "Auerbach i.d.OPf.",
+    "url": "/gemeinden/bayern/auerbach-i-d-opf/"
+   },
+   {
+    "name": "Birgland",
+    "url": "/gemeinden/bayern/birgland/"
+   },
+   {
+    "name": "Gebenbach",
+    "url": "/gemeinden/bayern/gebenbach/"
+   },
+   {
+    "name": "Etzelwang",
+    "url": "/gemeinden/bayern/etzelwang/"
+   },
+   {
+    "name": "Schnaittenbach",
+    "url": "/gemeinden/bayern/schnaittenbach/"
+   },
+   {
+    "name": "Sulzbach-Rosenberg",
+    "url": "/gemeinden/bayern/sulzbach-rosenberg/"
+   },
+   {
+    "name": "Weigendorf",
+    "url": "/gemeinden/bayern/weigendorf/"
+   },
+   {
+    "name": "Bad Kötzting",
+    "url": "/gemeinden/bayern/bad-koetzting/"
+   },
+   {
+    "name": "Roding",
+    "url": "/gemeinden/bayern/roding/"
+   },
+   {
+    "name": "Waldmünchen",
+    "url": "/gemeinden/bayern/waldmuenchen/"
+   },
+   {
+    "name": "Georgenberg",
+    "url": "/gemeinden/bayern/georgenberg/"
+   },
+   {
+    "name": "Pleystein",
+    "url": "/gemeinden/bayern/pleystein/"
+   },
+   {
+    "name": "Windischeschenbach",
+    "url": "/gemeinden/bayern/windischeschenbach/"
+   },
+   {
+    "name": "Beratzhausen",
+    "url": "/gemeinden/bayern/beratzhausen/"
+   },
+   {
+    "name": "Altendorf (SAD)"
+   },
+   {
+    "name": "Guteneck",
+    "url": "/gemeinden/bayern/guteneck/"
+   },
+   {
+    "name": "Nabburg",
+    "url": "/gemeinden/bayern/nabburg/"
+   },
+   {
+    "name": "Oberviechtach",
+    "url": "/gemeinden/bayern/oberviechtach/"
+   },
+   {
+    "name": "Schwarzhofen",
+    "url": "/gemeinden/bayern/schwarzhofen/"
+   },
+   {
+    "name": "Trausnitz",
+    "url": "/gemeinden/bayern/trausnitz/"
+   },
+   {
+    "name": "Ebnath",
+    "url": "/gemeinden/bayern/ebnath/"
+   },
+   {
+    "name": "Erbendorf",
+    "url": "/gemeinden/bayern/erbendorf/"
+   },
+   {
+    "name": "Friedenfels",
+    "url": "/gemeinden/bayern/friedenfels/"
+   },
+   {
+    "name": "Immenreuth",
+    "url": "/gemeinden/bayern/immenreuth/"
+   },
+   {
+    "name": "Konnersreuth",
+    "url": "/gemeinden/bayern/konnersreuth/"
+   },
+   {
+    "name": "Krummennaab",
+    "url": "/gemeinden/bayern/krummennaab/"
+   },
+   {
+    "name": "Kulmain",
+    "url": "/gemeinden/bayern/kulmain/"
+   },
+   {
+    "name": "Pullenreuth",
+    "url": "/gemeinden/bayern/pullenreuth/"
+   },
+   {
+    "name": "Waldsassen",
+    "url": "/gemeinden/bayern/waldsassen/"
+   },
+   {
+    "name": "Landkreis Bayreuth",
+    "url": "/kreise/bayern/bayreuth/"
+   },
+   {
+    "name": "Landkreis Coburg",
+    "url": "/kreise/bayern/coburg/"
+   },
+   {
+    "name": "Landkreis Hof",
+    "url": "/kreise/bayern/hof/"
+   },
+   {
+    "name": "Landkreis Kronach",
+    "url": "/kreise/bayern/kronach/"
+   },
+   {
+    "name": "Landkreis Lichtenfels",
+    "url": "/kreise/bayern/lichtenfels/"
+   },
+   {
+    "name": "Landkreis Wunsiedel i.Fichtelgebirge",
+    "url": "/kreise/bayern/wunsiedel-i-fichtelgebirge/"
+   },
+   {
+    "name": "Hof",
+    "url": "/gemeinden/bayern/hof/"
+   },
+   {
+    "name": "Ahorntal",
+    "url": "/gemeinden/bayern/ahorntal/"
+   },
+   {
+    "name": "Bad Berneck i.Fichtelgebirge",
+    "url": "/gemeinden/bayern/bad-berneck-i-fichtelgebirge/"
+   },
+   {
+    "name": "Emtmannsberg",
+    "url": "/gemeinden/bayern/emtmannsberg/"
+   },
+   {
+    "name": "Fichtelberg",
+    "url": "/gemeinden/bayern/fichtelberg/"
+   },
+   {
+    "name": "Hollfeld",
+    "url": "/gemeinden/bayern/hollfeld/"
+   },
+   {
+    "name": "Kirchenpingarten",
+    "url": "/gemeinden/bayern/kirchenpingarten/"
+   },
+   {
+    "name": "Mehlmeisel",
+    "url": "/gemeinden/bayern/mehlmeisel/"
+   },
+   {
+    "name": "Pegnitz",
+    "url": "/gemeinden/bayern/pegnitz/"
+   },
+   {
+    "name": "Schnabelwaid",
+    "url": "/gemeinden/bayern/schnabelwaid/"
+   },
+   {
+    "name": "Seybothenreuth",
+    "url": "/gemeinden/bayern/seybothenreuth/"
+   },
+   {
+    "name": "Waischenfeld",
+    "url": "/gemeinden/bayern/waischenfeld/"
+   },
+   {
+    "name": "Warmensteinach",
+    "url": "/gemeinden/bayern/warmensteinach/"
+   },
+   {
+    "name": "Weidenberg",
+    "url": "/gemeinden/bayern/weidenberg/"
+   },
+   {
+    "name": "Rödental",
+    "url": "/gemeinden/bayern/roedental/"
+   },
+   {
+    "name": "Weidhausen b.Coburg",
+    "url": "/gemeinden/bayern/weidhausen-b-coburg/"
+   },
+   {
+    "name": "Berg (HO)"
+   },
+   {
+    "name": "Gattendorf",
+    "url": "/gemeinden/bayern/gattendorf/"
+   },
+   {
+    "name": "Nordhalben",
+    "url": "/gemeinden/bayern/nordhalben/"
+   },
+   {
+    "name": "Weißenbrunn",
+    "url": "/gemeinden/bayern/weissenbrunn/"
+   },
+   {
+    "name": "Harsdorf",
+    "url": "/gemeinden/bayern/harsdorf/"
+   },
+   {
+    "name": "Weismain",
+    "url": "/gemeinden/bayern/weismain/"
+   },
+   {
+    "name": "Arzberg",
+    "url": "/gemeinden/bayern/arzberg/"
+   },
+   {
+    "name": "Höchstädt i.Fichtelgebirge",
+    "url": "/gemeinden/bayern/hoechstaedt-i-fichtelgebirge/"
+   },
+   {
+    "name": "Hohenberg a.d.Eger",
+    "url": "/gemeinden/bayern/hohenberg-a-d-eger/"
+   },
+   {
+    "name": "Kirchenlamitz",
+    "url": "/gemeinden/bayern/kirchenlamitz/"
+   },
+   {
+    "name": "Marktleuthen",
+    "url": "/gemeinden/bayern/marktleuthen/"
+   },
+   {
+    "name": "Nagel",
+    "url": "/gemeinden/bayern/nagel/"
+   },
+   {
+    "name": "Röslau",
+    "url": "/gemeinden/bayern/roeslau/"
+   },
+   {
+    "name": "Schirnding",
+    "url": "/gemeinden/bayern/schirnding/"
+   },
+   {
+    "name": "Schönwald",
+    "url": "/gemeinden/bayern/schoenwald/"
+   },
+   {
+    "name": "Tröstau",
+    "url": "/gemeinden/bayern/troestau/"
+   },
+   {
+    "name": "Wunsiedel",
+    "url": "/gemeinden/bayern/wunsiedel/"
+   },
+   {
+    "name": "Erlangen",
+    "url": "/gemeinden/bayern/erlangen/"
+   },
+   {
+    "name": "Fürth",
+    "url": "/gemeinden/bayern/fuerth/"
+   },
+   {
+    "name": "Alfeld",
+    "url": "/gemeinden/bayern/alfeld/"
+   },
+   {
+    "name": "Vorra",
+    "url": "/gemeinden/bayern/vorra/"
+   },
+   {
+    "name": "Treuchtlingen",
+    "url": "/gemeinden/bayern/treuchtlingen/"
+   },
+   {
+    "name": "Waldaschaff",
+    "url": "/gemeinden/bayern/waldaschaff/"
+   },
+   {
+    "name": "Münnerstadt",
+    "url": "/gemeinden/bayern/muennerstadt/"
+   },
+   {
+    "name": "Bastheim",
+    "url": "/gemeinden/bayern/bastheim/"
+   },
+   {
+    "name": "Herbstadt",
+    "url": "/gemeinden/bayern/herbstadt/"
+   },
+   {
+    "name": "Hohenroth",
+    "url": "/gemeinden/bayern/hohenroth/"
+   },
+   {
+    "name": "Bad Königshofen i.Grabfeld",
+    "url": "/gemeinden/bayern/bad-koenigshofen-i-grabfeld/"
+   },
+   {
+    "name": "Ostheim v.d.Rhön",
+    "url": "/gemeinden/bayern/ostheim-v-d-rhoen/"
+   },
+   {
+    "name": "Rödelmaier",
+    "url": "/gemeinden/bayern/roedelmaier/"
+   },
+   {
+    "name": "Sandberg",
+    "url": "/gemeinden/bayern/sandberg/"
+   },
+   {
+    "name": "Schönau a.d.Brend",
+    "url": "/gemeinden/bayern/schoenau-a-d-brend/"
+   },
+   {
+    "name": "Sondheim v.d.Rhön",
+    "url": "/gemeinden/bayern/sondheim-v-d-rhoen/"
+   },
+   {
+    "name": "Sulzdorf a.d.Lederhecke",
+    "url": "/gemeinden/bayern/sulzdorf-a-d-lederhecke/"
+   },
+   {
+    "name": "Trappstadt",
+    "url": "/gemeinden/bayern/trappstadt/"
+   },
+   {
+    "name": "Burglauer",
+    "url": "/gemeinden/bayern/burglauer/"
+   },
+   {
+    "name": "Altenbuch",
+    "url": "/gemeinden/bayern/altenbuch/"
+   },
+   {
+    "name": "Stadtprozelten",
+    "url": "/gemeinden/bayern/stadtprozelten/"
+   },
+   {
+    "name": "Wipfeld",
+    "url": "/gemeinden/bayern/wipfeld/"
+   },
+   {
+    "name": "Kaufbeuren",
+    "url": "/gemeinden/bayern/kaufbeuren/"
+   },
+   {
+    "name": "Lauingen (Donau)",
+    "url": "/gemeinden/bayern/lauingen-donau/"
+   },
+   {
+    "name": "Füssen",
+    "url": "/gemeinden/bayern/fuessen/"
+   },
+   {
+    "name": "Markt Schwaben",
+    "url": "/gemeinden/bayern/markt-schwaben/"
+   },
+   {
+    "name": "Landkreis Ansbach",
+    "url": "/kreise/bayern/ansbach/"
+   },
+   {
+    "name": "Landkreis Haßberge",
+    "url": "/kreise/bayern/hassberge/"
+   },
+   {
+    "name": "Landkreis Würzburg",
+    "url": "/kreise/bayern/wuerzburg/"
+   }
+  ]
+ },
+ {
+  "land": "BY",
+  "programm": "Bedarfszuweisungen und Stabilisierungshilfen 2024",
+  "beschreibung": "Wie oben, Bewilligungsrunde 2024 (Verteilerausschuss 08.11.2024): 116 Kommunen, über 103 Mio. Euro.",
+  "quelle_url": "https://www.bayern.de/pdf/data/bayernde_162391.pdf",
+  "stand": "2024-11-08",
+  "gemeinden": [
+   {
+    "name": "Landkreis Deggendorf",
+    "url": "/kreise/bayern/deggendorf/"
+   },
+   {
+    "name": "Landkreis Freyung-Grafenau",
+    "url": "/kreise/bayern/freyung-grafenau/"
+   },
+   {
+    "name": "Landkreis Regen",
+    "url": "/kreise/bayern/regen/"
+   },
+   {
+    "name": "Haidmühle",
+    "url": "/gemeinden/bayern/haidmuehle/"
+   },
+   {
+    "name": "Sankt Oswald-Riedlhütte",
+    "url": "/gemeinden/bayern/sankt-oswald-riedlhuette/"
+   },
+   {
+    "name": "Fürstenstein",
+    "url": "/gemeinden/bayern/fuerstenstein/"
+   },
+   {
+    "name": "Arnbruck",
+    "url": "/gemeinden/bayern/arnbruck/"
+   },
+   {
+    "name": "Langdorf",
+    "url": "/gemeinden/bayern/langdorf/"
+   },
+   {
+    "name": "Landkreis Bayreuth",
+    "url": "/kreise/bayern/bayreuth/"
+   },
+   {
+    "name": "Landkreis Coburg",
+    "url": "/kreise/bayern/coburg/"
+   },
+   {
+    "name": "Landkreis Hof",
+    "url": "/kreise/bayern/hof/"
+   },
+   {
+    "name": "Landkreis Kronach",
+    "url": "/kreise/bayern/kronach/"
+   },
+   {
+    "name": "Landkreis Lichtenfels",
+    "url": "/kreise/bayern/lichtenfels/"
+   },
+   {
+    "name": "Landkreis Wunsiedel i.Fichtelgebirge",
+    "url": "/kreise/bayern/wunsiedel-i-fichtelgebirge/"
+   },
+   {
+    "name": "Hof",
+    "url": "/gemeinden/bayern/hof/"
+   },
+   {
+    "name": "Ahorntal",
+    "url": "/gemeinden/bayern/ahorntal/"
+   },
+   {
+    "name": "Bad Berneck i.Fichtelgebirge",
+    "url": "/gemeinden/bayern/bad-berneck-i-fichtelgebirge/"
+   },
+   {
+    "name": "Creußen",
+    "url": "/gemeinden/bayern/creussen/"
+   },
+   {
+    "name": "Emtmannsberg",
+    "url": "/gemeinden/bayern/emtmannsberg/"
+   },
+   {
+    "name": "Fichtelberg",
+    "url": "/gemeinden/bayern/fichtelberg/"
+   },
+   {
+    "name": "Hollfeld",
+    "url": "/gemeinden/bayern/hollfeld/"
+   },
+   {
+    "name": "Kirchenpingarten",
+    "url": "/gemeinden/bayern/kirchenpingarten/"
+   },
+   {
+    "name": "Mehlmeisel",
+    "url": "/gemeinden/bayern/mehlmeisel/"
+   },
+   {
+    "name": "Pegnitz",
+    "url": "/gemeinden/bayern/pegnitz/"
+   },
+   {
+    "name": "Schnabelwaid",
+    "url": "/gemeinden/bayern/schnabelwaid/"
+   },
+   {
+    "name": "Seybothenreuth",
+    "url": "/gemeinden/bayern/seybothenreuth/"
+   },
+   {
+    "name": "Waischenfeld",
+    "url": "/gemeinden/bayern/waischenfeld/"
+   },
+   {
+    "name": "Warmensteinach",
+    "url": "/gemeinden/bayern/warmensteinach/"
+   },
+   {
+    "name": "Weidenberg",
+    "url": "/gemeinden/bayern/weidenberg/"
+   },
+   {
+    "name": "Rödental",
+    "url": "/gemeinden/bayern/roedental/"
+   },
+   {
+    "name": "Berg (HO)"
+   },
+   {
+    "name": "Gattendorf",
+    "url": "/gemeinden/bayern/gattendorf/"
+   },
+   {
+    "name": "Naila",
+    "url": "/gemeinden/bayern/naila/"
+   },
+   {
+    "name": "Schwarzenbach a.Wald",
+    "url": "/gemeinden/bayern/schwarzenbach-a-wald/"
+   },
+   {
+    "name": "Kronach",
+    "url": "/gemeinden/bayern/kronach/"
+   },
+   {
+    "name": "Mitwitz",
+    "url": "/gemeinden/bayern/mitwitz/"
+   },
+   {
+    "name": "Nordhalben",
+    "url": "/gemeinden/bayern/nordhalben/"
+   },
+   {
+    "name": "Steinwiesen",
+    "url": "/gemeinden/bayern/steinwiesen/"
+   },
+   {
+    "name": "Tschirn",
+    "url": "/gemeinden/bayern/tschirn/"
+   },
+   {
+    "name": "Wallenfels",
+    "url": "/gemeinden/bayern/wallenfels/"
+   },
+   {
+    "name": "Weißenbrunn",
+    "url": "/gemeinden/bayern/weissenbrunn/"
+   },
+   {
+    "name": "Wilhelmsthal",
+    "url": "/gemeinden/bayern/wilhelmsthal/"
+   },
+   {
+    "name": "Harsdorf",
+    "url": "/gemeinden/bayern/harsdorf/"
+   },
+   {
+    "name": "Marktleugast",
+    "url": "/gemeinden/bayern/marktleugast/"
+   },
+   {
+    "name": "Weismain",
+    "url": "/gemeinden/bayern/weismain/"
+   },
+   {
+    "name": "Hohenberg a.d.Eger",
+    "url": "/gemeinden/bayern/hohenberg-a-d-eger/"
+   },
+   {
+    "name": "Kirchenlamitz",
+    "url": "/gemeinden/bayern/kirchenlamitz/"
+   },
+   {
+    "name": "Marktleuthen",
+    "url": "/gemeinden/bayern/marktleuthen/"
+   },
+   {
+    "name": "Nagel",
+    "url": "/gemeinden/bayern/nagel/"
+   },
+   {
+    "name": "Röslau",
+    "url": "/gemeinden/bayern/roeslau/"
+   },
+   {
+    "name": "Schirnding",
+    "url": "/gemeinden/bayern/schirnding/"
+   },
+   {
+    "name": "Schönwald",
+    "url": "/gemeinden/bayern/schoenwald/"
+   },
+   {
+    "name": "Selb",
+    "url": "/gemeinden/bayern/selb/"
+   },
+   {
+    "name": "Thierstein",
+    "url": "/gemeinden/bayern/thierstein/"
+   },
+   {
+    "name": "Tröstau",
+    "url": "/gemeinden/bayern/troestau/"
+   },
+   {
+    "name": "Wunsiedel",
+    "url": "/gemeinden/bayern/wunsiedel/"
+   },
+   {
+    "name": "Landkreis Amberg-Sulzbach",
+    "url": "/kreise/bayern/amberg-sulzbach/"
+   },
+   {
+    "name": "Landkreis Neustadt a.d.Waldnaab",
+    "url": "/kreise/bayern/neustadt-a-d-waldnaab/"
+   },
+   {
+    "name": "Auerbach i.d.OPf.",
+    "url": "/gemeinden/bayern/auerbach-i-d-opf/"
+   },
+   {
+    "name": "Birgland",
+    "url": "/gemeinden/bayern/birgland/"
+   },
+   {
+    "name": "Königstein",
+    "url": "/gemeinden/bayern/koenigstein/"
+   },
+   {
+    "name": "Etzelwang",
+    "url": "/gemeinden/bayern/etzelwang/"
+   },
+   {
+    "name": "Weigendorf",
+    "url": "/gemeinden/bayern/weigendorf/"
+   },
+   {
+    "name": "Bad Kötzting",
+    "url": "/gemeinden/bayern/bad-koetzting/"
+   },
+   {
+    "name": "Roding",
+    "url": "/gemeinden/bayern/roding/"
+   },
+   {
+    "name": "Rötz",
+    "url": "/gemeinden/bayern/roetz/"
+   },
+   {
+    "name": "Waldmünchen",
+    "url": "/gemeinden/bayern/waldmuenchen/"
+   },
+   {
+    "name": "Georgenberg",
+    "url": "/gemeinden/bayern/georgenberg/"
+   },
+   {
+    "name": "Pleystein",
+    "url": "/gemeinden/bayern/pleystein/"
+   },
+   {
+    "name": "Beratzhausen",
+    "url": "/gemeinden/bayern/beratzhausen/"
+   },
+   {
+    "name": "Altendorf (SAD)"
+   },
+   {
+    "name": "Guteneck",
+    "url": "/gemeinden/bayern/guteneck/"
+   },
+   {
+    "name": "Oberviechtach",
+    "url": "/gemeinden/bayern/oberviechtach/"
+   },
+   {
+    "name": "Trausnitz",
+    "url": "/gemeinden/bayern/trausnitz/"
+   },
+   {
+    "name": "Ebnath",
+    "url": "/gemeinden/bayern/ebnath/"
+   },
+   {
+    "name": "Erbendorf",
+    "url": "/gemeinden/bayern/erbendorf/"
+   },
+   {
+    "name": "Friedenfels",
+    "url": "/gemeinden/bayern/friedenfels/"
+   },
+   {
+    "name": "Fuchsmühl",
+    "url": "/gemeinden/bayern/fuchsmuehl/"
+   },
+   {
+    "name": "Immenreuth",
+    "url": "/gemeinden/bayern/immenreuth/"
+   },
+   {
+    "name": "Konnersreuth",
+    "url": "/gemeinden/bayern/konnersreuth/"
+   },
+   {
+    "name": "Kulmain",
+    "url": "/gemeinden/bayern/kulmain/"
+   },
+   {
+    "name": "Bad Neualbenreuth",
+    "url": "/gemeinden/bayern/bad-neualbenreuth/"
+   },
+   {
+    "name": "Pullenreuth",
+    "url": "/gemeinden/bayern/pullenreuth/"
+   },
+   {
+    "name": "Waldsassen",
+    "url": "/gemeinden/bayern/waldsassen/"
+   },
+   {
+    "name": "Wiesau",
+    "url": "/gemeinden/bayern/wiesau/"
+   },
+   {
+    "name": "Landkreis Rhön-Grabfeld",
+    "url": "/kreise/bayern/rhoen-grabfeld/"
+   },
+   {
+    "name": "Landkreis Haßberge",
+    "url": "/kreise/bayern/hassberge/"
+   },
+   {
+    "name": "Landkreis Würzburg",
+    "url": "/kreise/bayern/wuerzburg/"
+   },
+   {
+    "name": "Waldaschaff",
+    "url": "/gemeinden/bayern/waldaschaff/"
+   },
+   {
+    "name": "Bastheim",
+    "url": "/gemeinden/bayern/bastheim/"
+   },
+   {
+    "name": "Fladungen",
+    "url": "/gemeinden/bayern/fladungen/"
+   },
+   {
+    "name": "Großbardorf",
+    "url": "/gemeinden/bayern/grossbardorf/"
+   },
+   {
+    "name": "Herbstadt",
+    "url": "/gemeinden/bayern/herbstadt/"
+   },
+   {
+    "name": "Bad Königshofen i.Grabfeld",
+    "url": "/gemeinden/bayern/bad-koenigshofen-i-grabfeld/"
+   },
+   {
+    "name": "Ostheim v.d.Rhön",
+    "url": "/gemeinden/bayern/ostheim-v-d-rhoen/"
+   },
+   {
+    "name": "Rödelmaier",
+    "url": "/gemeinden/bayern/roedelmaier/"
+   },
+   {
+    "name": "Sandberg",
+    "url": "/gemeinden/bayern/sandberg/"
+   },
+   {
+    "name": "Schönau a.d.Brend",
+    "url": "/gemeinden/bayern/schoenau-a-d-brend/"
+   },
+   {
+    "name": "Sondheim v.d.Rhön",
+    "url": "/gemeinden/bayern/sondheim-v-d-rhoen/"
+   },
+   {
+    "name": "Sulzdorf a.d.Lederhecke",
+    "url": "/gemeinden/bayern/sulzdorf-a-d-lederhecke/"
+   },
+   {
+    "name": "Trappstadt",
+    "url": "/gemeinden/bayern/trappstadt/"
+   },
+   {
+    "name": "Burglauer",
+    "url": "/gemeinden/bayern/burglauer/"
+   },
+   {
+    "name": "Zeil a.Main",
+    "url": "/gemeinden/bayern/zeil-a-main/"
+   },
+   {
+    "name": "Altenbuch",
+    "url": "/gemeinden/bayern/altenbuch/"
+   },
+   {
+    "name": "Eichenbühl",
+    "url": "/gemeinden/bayern/eichenbuehl/"
+   },
+   {
+    "name": "Stadtprozelten",
+    "url": "/gemeinden/bayern/stadtprozelten/"
+   },
+   {
+    "name": "Hafenlohr",
+    "url": "/gemeinden/bayern/hafenlohr/"
+   },
+   {
+    "name": "Wipfeld",
+    "url": "/gemeinden/bayern/wipfeld/"
+   },
+   {
+    "name": "Kaufbeuren",
+    "url": "/gemeinden/bayern/kaufbeuren/"
+   },
+   {
+    "name": "Fischach",
+    "url": "/gemeinden/bayern/fischach/"
+   },
+   {
+    "name": "Lauingen (Donau)",
+    "url": "/gemeinden/bayern/lauingen-donau/"
+   },
+   {
+    "name": "Füssen",
+    "url": "/gemeinden/bayern/fuessen/"
+   },
+   {
+    "name": "Markt Schwaben",
+    "url": "/gemeinden/bayern/markt-schwaben/"
+   },
+   {
+    "name": "Fürth",
+    "url": "/gemeinden/bayern/fuerth/"
+   },
+   {
+    "name": "Treuchtlingen",
+    "url": "/gemeinden/bayern/treuchtlingen/"
+   },
+   {
+    "name": "Landkreis Ansbach",
+    "url": "/kreise/bayern/ansbach/"
+   }
+  ]
+ },
+ {
+  "land": "HE",
+  "programm": "Kommunaler Schutzschirm Hessen (2012)",
+  "beschreibung": "Entschuldungsfonds nach dem Hessischen kommunalen Schutzschirmgesetz vom 14.05.2012: Ablösung von Schulden plus Zinsdiensthilfen gegen vertraglich vereinbarte Konsolidierung bis zum Haushaltsausgleich. 106 antragsberechtigte Kommunen, 100 Schutzschirmverträge; Betrag = Gesamtsumme der Entschuldung.",
+  "quelle_url": "https://finanzen.hessen.de/sites/finanzen.hessen.de/files/2021-09/broschuerekommunalerschutzschirm_druckversion_0.pdf",
+  "stand": "2014-04 (Broschüre HMdF, Anhang Abb. 13)",
+  "gemeinden": [
+   {
+    "name": "Darmstadt",
+    "url": "/gemeinden/hessen/darmstadt/"
+   },
+   {
+    "name": "Kassel",
+    "url": "/gemeinden/hessen/kassel/"
+   },
+   {
+    "name": "Offenbach am Main",
+    "url": "/gemeinden/hessen/offenbach-am-main/"
+   },
+   {
+    "name": "Lahn-Dill-Kreis",
+    "url": "/kreise/hessen/lahn-dill-kreis/"
+   },
+   {
+    "name": "Landkreis Bergstraße",
+    "url": "/kreise/hessen/bergstrasse/"
+   },
+   {
+    "name": "Landkreis Gießen",
+    "url": "/kreise/hessen/giessen/"
+   },
+   {
+    "name": "Landkreis Groß-Gerau",
+    "url": "/kreise/hessen/gross-gerau/"
+   },
+   {
+    "name": "Landkreis Kassel",
+    "url": "/kreise/hessen/kassel/"
+   },
+   {
+    "name": "Landkreis Limburg-Weilburg",
+    "url": "/kreise/hessen/limburg-weilburg/"
+   },
+   {
+    "name": "Landkreis Marburg-Biedenkopf",
+    "url": "/kreise/hessen/marburg-biedenkopf/"
+   },
+   {
+    "name": "Landkreis Offenbach",
+    "url": "/kreise/hessen/offenbach/"
+   },
+   {
+    "name": "Main-Kinzig-Kreis",
+    "url": "/kreise/hessen/main-kinzig-kreis/"
+   },
+   {
+    "name": "Odenwaldkreis",
+    "url": "/kreise/hessen/odenwaldkreis/"
+   },
+   {
+    "name": "Rheingau-Taunus-Kreis",
+    "url": "/kreise/hessen/rheingau-taunus-kreis/"
+   },
+   {
+    "name": "Vogelsbergkreis",
+    "url": "/kreise/hessen/vogelsbergkreis/"
+   },
+   {
+    "name": "Werra-Meißner-Kreis",
+    "url": "/kreise/hessen/werra-meissner-kreis/"
+   },
+   {
+    "name": "Wetteraukreis",
+    "url": "/kreise/hessen/wetteraukreis/"
+   },
+   {
+    "name": "Allendorf (Lumda), St."
+   },
+   {
+    "name": "Alsfeld",
+    "url": "/gemeinden/hessen/alsfeld/"
+   },
+   {
+    "name": "Antrifttal",
+    "url": "/gemeinden/hessen/antrifttal/"
+   },
+   {
+    "name": "Bad Arolsen",
+    "url": "/gemeinden/hessen/bad-arolsen/"
+   },
+   {
+    "name": "Bad Emstal",
+    "url": "/gemeinden/hessen/bad-emstal/"
+   },
+   {
+    "name": "Bad Karlshafen",
+    "url": "/gemeinden/hessen/bad-karlshafen/"
+   },
+   {
+    "name": "Bad Orb",
+    "url": "/gemeinden/hessen/bad-orb/"
+   },
+   {
+    "name": "Bad Schwalbach",
+    "url": "/gemeinden/hessen/bad-schwalbach/"
+   },
+   {
+    "name": "Bad Sooden-Allendorf",
+    "url": "/gemeinden/hessen/bad-sooden-allendorf/"
+   },
+   {
+    "name": "Berkatal",
+    "url": "/gemeinden/hessen/berkatal/"
+   },
+   {
+    "name": "Borken (Hessen)",
+    "url": "/gemeinden/hessen/borken-hessen/"
+   },
+   {
+    "name": "Brachttal",
+    "url": "/gemeinden/hessen/brachttal/"
+   },
+   {
+    "name": "Cornberg",
+    "url": "/gemeinden/hessen/cornberg/"
+   },
+   {
+    "name": "Dietzenbach",
+    "url": "/gemeinden/hessen/dietzenbach/"
+   },
+   {
+    "name": "Dillenburg",
+    "url": "/gemeinden/hessen/dillenburg/"
+   },
+   {
+    "name": "Dreieich",
+    "url": "/gemeinden/hessen/dreieich/"
+   },
+   {
+    "name": "Egelsbach",
+    "url": "/gemeinden/hessen/egelsbach/"
+   },
+   {
+    "name": "Eltville am Rhein",
+    "url": "/gemeinden/hessen/eltville-am-rhein/"
+   },
+   {
+    "name": "Erbach",
+    "url": "/gemeinden/hessen/erbach/"
+   },
+   {
+    "name": "Frankenau",
+    "url": "/gemeinden/hessen/frankenau/"
+   },
+   {
+    "name": "Frielendorf",
+    "url": "/gemeinden/hessen/frielendorf/"
+   },
+   {
+    "name": "Fuldatal",
+    "url": "/gemeinden/hessen/fuldatal/"
+   },
+   {
+    "name": "Gedern",
+    "url": "/gemeinden/hessen/gedern/"
+   },
+   {
+    "name": "Gelnhausen",
+    "url": "/gemeinden/hessen/gelnhausen/"
+   },
+   {
+    "name": "Gießen",
+    "url": "/gemeinden/hessen/giessen/"
+   },
+   {
+    "name": "Gladenbach",
+    "url": "/gemeinden/hessen/gladenbach/"
+   },
+   {
+    "name": "Glauburg",
+    "url": "/gemeinden/hessen/glauburg/"
+   },
+   {
+    "name": "Grasellenbach",
+    "url": "/gemeinden/hessen/grasellenbach/"
+   },
+   {
+    "name": "Hanau",
+    "url": "/gemeinden/hessen/hanau/"
+   },
+   {
+    "name": "Hattersheim am Main",
+    "url": "/gemeinden/hessen/hattersheim-am-main/"
+   },
+   {
+    "name": "Hatzfeld (Eder)",
+    "url": "/gemeinden/hessen/hatzfeld-eder/"
+   },
+   {
+    "name": "Heidenrod",
+    "url": "/gemeinden/hessen/heidenrod/"
+   },
+   {
+    "name": "Helsa",
+    "url": "/gemeinden/hessen/helsa/"
+   },
+   {
+    "name": "Heppenheim (Bergstraße)",
+    "url": "/gemeinden/hessen/heppenheim-bergstrasse/"
+   },
+   {
+    "name": "Herleshausen",
+    "url": "/gemeinden/hessen/herleshausen/"
+   },
+   {
+    "name": "Hesseneck"
+   },
+   {
+    "name": "Hessisch Lichtenau",
+    "url": "/gemeinden/hessen/hessisch-lichtenau/"
+   },
+   {
+    "name": "Hirschhorn (Neckar)",
+    "url": "/gemeinden/hessen/hirschhorn-neckar/"
+   },
+   {
+    "name": "Hirzenhain",
+    "url": "/gemeinden/hessen/hirzenhain/"
+   },
+   {
+    "name": "Hohenroda",
+    "url": "/gemeinden/hessen/hohenroda/"
+   },
+   {
+    "name": "Homberg (Efze), Kreisstadt"
+   },
+   {
+    "name": "Hungen",
+    "url": "/gemeinden/hessen/hungen/"
+   },
+   {
+    "name": "Karben",
+    "url": "/gemeinden/hessen/karben/"
+   },
+   {
+    "name": "Kiedrich",
+    "url": "/gemeinden/hessen/kiedrich/"
+   },
+   {
+    "name": "Kirchhain",
+    "url": "/gemeinden/hessen/kirchhain/"
+   },
+   {
+    "name": "Kirchheim",
+    "url": "/gemeinden/hessen/kirchheim/"
+   },
+   {
+    "name": "Langenselbold",
+    "url": "/gemeinden/hessen/langenselbold/"
+   },
+   {
+    "name": "Laubach",
+    "url": "/gemeinden/hessen/laubach/"
+   },
+   {
+    "name": "Lauterbach (Hessen)",
+    "url": "/gemeinden/hessen/lauterbach-hessen/"
+   },
+   {
+    "name": "Lautertal (Odenwald)"
+   },
+   {
+    "name": "Lindenfels",
+    "url": "/gemeinden/hessen/lindenfels/"
+   },
+   {
+    "name": "Löhnberg",
+    "url": "/gemeinden/hessen/loehnberg/"
+   },
+   {
+    "name": "Lorch",
+    "url": "/gemeinden/hessen/lorch/"
+   },
+   {
+    "name": "Meinhard",
+    "url": "/gemeinden/hessen/meinhard/"
+   },
+   {
+    "name": "Meißner",
+    "url": "/gemeinden/hessen/meissner/"
+   },
+   {
+    "name": "Merenberg",
+    "url": "/gemeinden/hessen/merenberg/"
+   },
+   {
+    "name": "Mörfelden-Walldorf",
+    "url": "/gemeinden/hessen/moerfelden-walldorf/"
+   },
+   {
+    "name": "Nauheim",
+    "url": "/gemeinden/hessen/nauheim/"
+   },
+   {
+    "name": "Nentershausen",
+    "url": "/gemeinden/hessen/nentershausen/"
+   },
+   {
+    "name": "Neuental",
+    "url": "/gemeinden/hessen/neuental/"
+   },
+   {
+    "name": "Oestrich-Winkel",
+    "url": "/gemeinden/hessen/oestrich-winkel/"
+   },
+   {
+    "name": "Ringgau",
+    "url": "/gemeinden/hessen/ringgau/"
+   },
+   {
+    "name": "Rödermark",
+    "url": "/gemeinden/hessen/roedermark/"
+   },
+   {
+    "name": "Ronshausen",
+    "url": "/gemeinden/hessen/ronshausen/"
+   },
+   {
+    "name": "Rotenburg a. d. Fulda",
+    "url": "/gemeinden/hessen/rotenburg-a-d-fulda/"
+   },
+   {
+    "name": "Rüdesheim am Rhein",
+    "url": "/gemeinden/hessen/ruedesheim-am-rhein/"
+   },
+   {
+    "name": "Rüsselsheim am Main",
+    "url": "/gemeinden/hessen/ruesselsheim-am-main/"
+   },
+   {
+    "name": "Schlangenbad",
+    "url": "/gemeinden/hessen/schlangenbad/"
+   },
+   {
+    "name": "Sinn",
+    "url": "/gemeinden/hessen/sinn/"
+   },
+   {
+    "name": "Spangenberg",
+    "url": "/gemeinden/hessen/spangenberg/"
+   },
+   {
+    "name": "Staufenberg",
+    "url": "/gemeinden/hessen/staufenberg/"
+   },
+   {
+    "name": "Steinau a. d. Straße, St."
+   },
+   {
+    "name": "Steinbach (Taunus)",
+    "url": "/gemeinden/hessen/steinbach-taunus/"
+   },
+   {
+    "name": "Trendelburg",
+    "url": "/gemeinden/hessen/trendelburg/"
+   },
+   {
+    "name": "Viernheim",
+    "url": "/gemeinden/hessen/viernheim/"
+   },
+   {
+    "name": "Volkmarsen",
+    "url": "/gemeinden/hessen/volkmarsen/"
+   },
+   {
+    "name": "Waldkappel",
+    "url": "/gemeinden/hessen/waldkappel/"
+   },
+   {
+    "name": "Wanfried",
+    "url": "/gemeinden/hessen/wanfried/"
+   },
+   {
+    "name": "Weilburg",
+    "url": "/gemeinden/hessen/weilburg/"
+   },
+   {
+    "name": "Weilrod",
+    "url": "/gemeinden/hessen/weilrod/"
+   },
+   {
+    "name": "Weißenborn",
+    "url": "/gemeinden/hessen/weissenborn/"
+   },
+   {
+    "name": "Willingen (Upland)",
+    "url": "/gemeinden/hessen/willingen-upland/"
+   },
+   {
+    "name": "Witzenhausen",
+    "url": "/gemeinden/hessen/witzenhausen/"
+   }
+  ]
+ },
+ {
+  "land": "HE",
+  "programm": "Hessenkasse – Kassenkreditablösung (2018)",
+  "beschreibung": "Ablösung kommunaler Kassenkredite der Kernhaushalte durch das Sondervermögen Hessenkasse (HessenkasseG vom 25.04.2018); teilnehmende Kommunen zahlen 25 Euro je Einwohner und Jahr. 179 Kommunen, rund 4,93 Mrd. Euro; Betrag = Gesamtbetrag Entschuldung (Ablösungshöchstbetrag). Namen in Großschreibung wie in der Quelle. Laut HMdF-PM vom 11.01.2023 sind 8 Kommunen inzwischen ausgeschieden (Berkatal, Büdingen, Flörsheim, Hattersheim, Hünfelden, Idstein, Karben, Poppenhausen).",
+  "quelle_url": "https://finanzen.hessen.de/sites/finanzen.hessen.de/files/2021-11/hessenkasse_-_uebersicht_abloesungshoechstbetraege.pdf",
+  "stand": "2018-12-17",
+  "gemeinden": [
+   {
+    "name": "Darmstadt",
+    "url": "/gemeinden/hessen/darmstadt/"
+   },
+   {
+    "name": "Offenbach am Main",
+    "url": "/gemeinden/hessen/offenbach-am-main/"
+   },
+   {
+    "name": "Hochtaunuskreis",
+    "url": "/kreise/hessen/hochtaunuskreis/"
+   },
+   {
+    "name": "Neu-Anspach",
+    "url": "/gemeinden/hessen/neu-anspach/"
+   },
+   {
+    "name": "Schmitten im Taunus",
+    "url": "/gemeinden/hessen/schmitten-im-taunus/"
+   },
+   {
+    "name": "Steinbach (Taunus)",
+    "url": "/gemeinden/hessen/steinbach-taunus/"
+   },
+   {
+    "name": "Lahn-Dill-Kreis",
+    "url": "/kreise/hessen/lahn-dill-kreis/"
+   },
+   {
+    "name": "Braunfels",
+    "url": "/gemeinden/hessen/braunfels/"
+   },
+   {
+    "name": "Dillenburg",
+    "url": "/gemeinden/hessen/dillenburg/"
+   },
+   {
+    "name": "Eschenburg",
+    "url": "/gemeinden/hessen/eschenburg/"
+   },
+   {
+    "name": "Herborn",
+    "url": "/gemeinden/hessen/herborn/"
+   },
+   {
+    "name": "Schöffengrund",
+    "url": "/gemeinden/hessen/schoeffengrund/"
+   },
+   {
+    "name": "Siegbach",
+    "url": "/gemeinden/hessen/siegbach/"
+   },
+   {
+    "name": "Sinn",
+    "url": "/gemeinden/hessen/sinn/"
+   },
+   {
+    "name": "Wetzlar",
+    "url": "/gemeinden/hessen/wetzlar/"
+   },
+   {
+    "name": "Landkreis Bergstraße",
+    "url": "/kreise/hessen/bergstrasse/"
+   },
+   {
+    "name": "Birkenau",
+    "url": "/gemeinden/hessen/birkenau/"
+   },
+   {
+    "name": "Grasellenbach",
+    "url": "/gemeinden/hessen/grasellenbach/"
+   },
+   {
+    "name": "Hirschhorn (Neckar)",
+    "url": "/gemeinden/hessen/hirschhorn-neckar/"
+   },
+   {
+    "name": "Lampertheim",
+    "url": "/gemeinden/hessen/lampertheim/"
+   },
+   {
+    "name": "Lautertal (Odenwald)",
+    "url": "/gemeinden/hessen/lautertal-odenwald/"
+   },
+   {
+    "name": "Lindenfels",
+    "url": "/gemeinden/hessen/lindenfels/"
+   },
+   {
+    "name": "Mörlenbach",
+    "url": "/gemeinden/hessen/moerlenbach/"
+   },
+   {
+    "name": "Landkreis Darmstadt-Dieburg",
+    "url": "/kreise/hessen/darmstadt-dieburg/"
+   },
+   {
+    "name": "Messel",
+    "url": "/gemeinden/hessen/messel/"
+   },
+   {
+    "name": "Bad Salzschlirf",
+    "url": "/gemeinden/hessen/bad-salzschlirf/"
+   },
+   {
+    "name": "Burghaun",
+    "url": "/gemeinden/hessen/burghaun/"
+   },
+   {
+    "name": "Ehrenberg (Rhön)",
+    "url": "/gemeinden/hessen/ehrenberg-rhoen/"
+   },
+   {
+    "name": "Gersfeld (Rhön)",
+    "url": "/gemeinden/hessen/gersfeld-rhoen/"
+   },
+   {
+    "name": "Hofbieber",
+    "url": "/gemeinden/hessen/hofbieber/"
+   },
+   {
+    "name": "Hosenfeld",
+    "url": "/gemeinden/hessen/hosenfeld/"
+   },
+   {
+    "name": "Poppenhausen (Wasserkuppe)",
+    "url": "/gemeinden/hessen/poppenhausen-wasserkuppe/"
+   },
+   {
+    "name": "Tann (Rhön)",
+    "url": "/gemeinden/hessen/tann-rhoen/"
+   },
+   {
+    "name": "Landkreis Gießen",
+    "url": "/kreise/hessen/giessen/"
+   },
+   {
+    "name": "Biebertal",
+    "url": "/gemeinden/hessen/biebertal/"
+   },
+   {
+    "name": "Hungen",
+    "url": "/gemeinden/hessen/hungen/"
+   },
+   {
+    "name": "Lollar",
+    "url": "/gemeinden/hessen/lollar/"
+   },
+   {
+    "name": "Rabenau",
+    "url": "/gemeinden/hessen/rabenau/"
+   },
+   {
+    "name": "Staufenberg",
+    "url": "/gemeinden/hessen/staufenberg/"
+   },
+   {
+    "name": "Landkreis Groß-Gerau",
+    "url": "/kreise/hessen/gross-gerau/"
+   },
+   {
+    "name": "Bischofsheim",
+    "url": "/gemeinden/hessen/bischofsheim/"
+   },
+   {
+    "name": "Büttelborn",
+    "url": "/gemeinden/hessen/buettelborn/"
+   },
+   {
+    "name": "Ginsheim-Gustavsburg",
+    "url": "/gemeinden/hessen/ginsheim-gustavsburg/"
+   },
+   {
+    "name": "Mörfelden-Walldorf",
+    "url": "/gemeinden/hessen/moerfelden-walldorf/"
+   },
+   {
+    "name": "Raunheim",
+    "url": "/gemeinden/hessen/raunheim/"
+   },
+   {
+    "name": "Riedstadt",
+    "url": "/gemeinden/hessen/riedstadt/"
+   },
+   {
+    "name": "Rüsselsheim am Main",
+    "url": "/gemeinden/hessen/ruesselsheim-am-main/"
+   },
+   {
+    "name": "Trebur",
+    "url": "/gemeinden/hessen/trebur/"
+   },
+   {
+    "name": "Landkreis Hersfeld-Rotenburg",
+    "url": "/kreise/hessen/hersfeld-rotenburg/"
+   },
+   {
+    "name": "Bad Hersfeld",
+    "url": "/gemeinden/hessen/bad-hersfeld/"
+   },
+   {
+    "name": "Cornberg",
+    "url": "/gemeinden/hessen/cornberg/"
+   },
+   {
+    "name": "Haunetal",
+    "url": "/gemeinden/hessen/haunetal/"
+   },
+   {
+    "name": "Heringen (Werra)",
+    "url": "/gemeinden/hessen/heringen-werra/"
+   },
+   {
+    "name": "Nentershausen",
+    "url": "/gemeinden/hessen/nentershausen/"
+   },
+   {
+    "name": "Philippsthal (Werra)",
+    "url": "/gemeinden/hessen/philippsthal-werra/"
+   },
+   {
+    "name": "Ronshausen",
+    "url": "/gemeinden/hessen/ronshausen/"
+   },
+   {
+    "name": "Rotenburg a. d. Fulda",
+    "url": "/gemeinden/hessen/rotenburg-a-d-fulda/"
+   },
+   {
+    "name": "Wildeck",
+    "url": "/gemeinden/hessen/wildeck/"
+   },
+   {
+    "name": "Landkreis Kassel",
+    "url": "/kreise/hessen/kassel/"
+   },
+   {
+    "name": "Bad Emstal",
+    "url": "/gemeinden/hessen/bad-emstal/"
+   },
+   {
+    "name": "Bad Karlshafen",
+    "url": "/gemeinden/hessen/bad-karlshafen/"
+   },
+   {
+    "name": "Breuna",
+    "url": "/gemeinden/hessen/breuna/"
+   },
+   {
+    "name": "Fuldatal",
+    "url": "/gemeinden/hessen/fuldatal/"
+   },
+   {
+    "name": "Helsa",
+    "url": "/gemeinden/hessen/helsa/"
+   },
+   {
+    "name": "Naumburg",
+    "url": "/gemeinden/hessen/naumburg/"
+   },
+   {
+    "name": "Nieste",
+    "url": "/gemeinden/hessen/nieste/"
+   },
+   {
+    "name": "Reinhardshagen",
+    "url": "/gemeinden/hessen/reinhardshagen/"
+   },
+   {
+    "name": "Söhrewald",
+    "url": "/gemeinden/hessen/soehrewald/"
+   },
+   {
+    "name": "Trendelburg",
+    "url": "/gemeinden/hessen/trendelburg/"
+   },
+   {
+    "name": "Vellmar",
+    "url": "/gemeinden/hessen/vellmar/"
+   },
+   {
+    "name": "Wahlsburg"
+   },
+   {
+    "name": "Wolfhagen",
+    "url": "/gemeinden/hessen/wolfhagen/"
+   },
+   {
+    "name": "Landkreis Limburg-Weilburg",
+    "url": "/kreise/hessen/limburg-weilburg/"
+   },
+   {
+    "name": "Hünfelden",
+    "url": "/gemeinden/hessen/huenfelden/"
+   },
+   {
+    "name": "Löhnberg",
+    "url": "/gemeinden/hessen/loehnberg/"
+   },
+   {
+    "name": "Merenberg",
+    "url": "/gemeinden/hessen/merenberg/"
+   },
+   {
+    "name": "Runkel",
+    "url": "/gemeinden/hessen/runkel/"
+   },
+   {
+    "name": "Villmar",
+    "url": "/gemeinden/hessen/villmar/"
+   },
+   {
+    "name": "Weilburg",
+    "url": "/gemeinden/hessen/weilburg/"
+   },
+   {
+    "name": "Bad Endbach",
+    "url": "/gemeinden/hessen/bad-endbach/"
+   },
+   {
+    "name": "Gladenbach",
+    "url": "/gemeinden/hessen/gladenbach/"
+   },
+   {
+    "name": "Kirchhain",
+    "url": "/gemeinden/hessen/kirchhain/"
+   },
+   {
+    "name": "Lohra",
+    "url": "/gemeinden/hessen/lohra/"
+   },
+   {
+    "name": "Münchhausen",
+    "url": "/gemeinden/hessen/muenchhausen/"
+   },
+   {
+    "name": "Rauschenberg",
+    "url": "/gemeinden/hessen/rauschenberg/"
+   },
+   {
+    "name": "Wohratal",
+    "url": "/gemeinden/hessen/wohratal/"
+   },
+   {
+    "name": "Landkreis Offenbach",
+    "url": "/kreise/hessen/offenbach/"
+   },
+   {
+    "name": "Dietzenbach",
+    "url": "/gemeinden/hessen/dietzenbach/"
+   },
+   {
+    "name": "Egelsbach",
+    "url": "/gemeinden/hessen/egelsbach/"
+   },
+   {
+    "name": "Heusenstamm",
+    "url": "/gemeinden/hessen/heusenstamm/"
+   },
+   {
+    "name": "Langen (Hessen)",
+    "url": "/gemeinden/hessen/langen-hessen/"
+   },
+   {
+    "name": "Mühlheim am Main",
+    "url": "/gemeinden/hessen/muehlheim-am-main/"
+   },
+   {
+    "name": "Obertshausen",
+    "url": "/gemeinden/hessen/obertshausen/"
+   },
+   {
+    "name": "Rodgau",
+    "url": "/gemeinden/hessen/rodgau/"
+   },
+   {
+    "name": "Rödermark",
+    "url": "/gemeinden/hessen/roedermark/"
+   },
+   {
+    "name": "Bad Arolsen",
+    "url": "/gemeinden/hessen/bad-arolsen/"
+   },
+   {
+    "name": "Bromskirchen"
+   },
+   {
+    "name": "Burgwald",
+    "url": "/gemeinden/hessen/burgwald/"
+   },
+   {
+    "name": "Frankenau",
+    "url": "/gemeinden/hessen/frankenau/"
+   },
+   {
+    "name": "Gemünden (Wohra)",
+    "url": "/gemeinden/hessen/gemuenden-wohra/"
+   },
+   {
+    "name": "Haina (Kloster)",
+    "url": "/gemeinden/hessen/haina-kloster/"
+   },
+   {
+    "name": "Volkmarsen",
+    "url": "/gemeinden/hessen/volkmarsen/"
+   },
+   {
+    "name": "Main-Kinzig-Kreis",
+    "url": "/kreise/hessen/main-kinzig-kreis/"
+   },
+   {
+    "name": "Bad Orb",
+    "url": "/gemeinden/hessen/bad-orb/"
+   },
+   {
+    "name": "Birstein",
+    "url": "/gemeinden/hessen/birstein/"
+   },
+   {
+    "name": "Brachttal",
+    "url": "/gemeinden/hessen/brachttal/"
+   },
+   {
+    "name": "Bruchköbel",
+    "url": "/gemeinden/hessen/bruchkoebel/"
+   },
+   {
+    "name": "Erlensee",
+    "url": "/gemeinden/hessen/erlensee/"
+   },
+   {
+    "name": "Großkrotzenburg",
+    "url": "/gemeinden/hessen/grosskrotzenburg/"
+   },
+   {
+    "name": "Hammersbach",
+    "url": "/gemeinden/hessen/hammersbach/"
+   },
+   {
+    "name": "Hanau",
+    "url": "/gemeinden/hessen/hanau/"
+   },
+   {
+    "name": "Langenselbold",
+    "url": "/gemeinden/hessen/langenselbold/"
+   },
+   {
+    "name": "Nidderau",
+    "url": "/gemeinden/hessen/nidderau/"
+   },
+   {
+    "name": "Ronneburg",
+    "url": "/gemeinden/hessen/ronneburg/"
+   },
+   {
+    "name": "Schlüchtern",
+    "url": "/gemeinden/hessen/schluechtern/"
+   },
+   {
+    "name": "Steinau an der Straße",
+    "url": "/gemeinden/hessen/steinau-an-der-strasse/"
+   },
+   {
+    "name": "Eppstein",
+    "url": "/gemeinden/hessen/eppstein/"
+   },
+   {
+    "name": "Flörsheim am Main",
+    "url": "/gemeinden/hessen/floersheim-am-main/"
+   },
+   {
+    "name": "Hattersheim am Main",
+    "url": "/gemeinden/hessen/hattersheim-am-main/"
+   },
+   {
+    "name": "Hofheim am Taunus",
+    "url": "/gemeinden/hessen/hofheim-am-taunus/"
+   },
+   {
+    "name": "Kelkheim (Taunus)",
+    "url": "/gemeinden/hessen/kelkheim-taunus/"
+   },
+   {
+    "name": "Kriftel",
+    "url": "/gemeinden/hessen/kriftel/"
+   },
+   {
+    "name": "Odenwaldkreis",
+    "url": "/kreise/hessen/odenwaldkreis/"
+   },
+   {
+    "name": "Bad König",
+    "url": "/gemeinden/hessen/bad-koenig/"
+   },
+   {
+    "name": "Erbach",
+    "url": "/gemeinden/hessen/erbach/"
+   },
+   {
+    "name": "Fränkisch-Crumbach",
+    "url": "/gemeinden/hessen/fraenkisch-crumbach/"
+   },
+   {
+    "name": "Rheingau-Taunus-Kreis",
+    "url": "/kreise/hessen/rheingau-taunus-kreis/"
+   },
+   {
+    "name": "Aarbergen",
+    "url": "/gemeinden/hessen/aarbergen/"
+   },
+   {
+    "name": "Bad Schwalbach",
+    "url": "/gemeinden/hessen/bad-schwalbach/"
+   },
+   {
+    "name": "Eltville am Rhein",
+    "url": "/gemeinden/hessen/eltville-am-rhein/"
+   },
+   {
+    "name": "Geisenheim",
+    "url": "/gemeinden/hessen/geisenheim/"
+   },
+   {
+    "name": "Heidenrod",
+    "url": "/gemeinden/hessen/heidenrod/"
+   },
+   {
+    "name": "Hohenstein",
+    "url": "/gemeinden/hessen/hohenstein/"
+   },
+   {
+    "name": "Hünstetten",
+    "url": "/gemeinden/hessen/huenstetten/"
+   },
+   {
+    "name": "Idstein",
+    "url": "/gemeinden/hessen/idstein/"
+   },
+   {
+    "name": "Niedernhausen",
+    "url": "/gemeinden/hessen/niedernhausen/"
+   },
+   {
+    "name": "Oestrich-Winkel",
+    "url": "/gemeinden/hessen/oestrich-winkel/"
+   },
+   {
+    "name": "Rüdesheim am Rhein",
+    "url": "/gemeinden/hessen/ruedesheim-am-rhein/"
+   },
+   {
+    "name": "Taunusstein",
+    "url": "/gemeinden/hessen/taunusstein/"
+   },
+   {
+    "name": "Waldems",
+    "url": "/gemeinden/hessen/waldems/"
+   },
+   {
+    "name": "Felsberg",
+    "url": "/gemeinden/hessen/felsberg/"
+   },
+   {
+    "name": "Gilserberg",
+    "url": "/gemeinden/hessen/gilserberg/"
+   },
+   {
+    "name": "Jesberg",
+    "url": "/gemeinden/hessen/jesberg/"
+   },
+   {
+    "name": "Knüllwald",
+    "url": "/gemeinden/hessen/knuellwald/"
+   },
+   {
+    "name": "Morschen",
+    "url": "/gemeinden/hessen/morschen/"
+   },
+   {
+    "name": "Neuental",
+    "url": "/gemeinden/hessen/neuental/"
+   },
+   {
+    "name": "Neukirchen",
+    "url": "/gemeinden/hessen/neukirchen/"
+   },
+   {
+    "name": "Niedenstein",
+    "url": "/gemeinden/hessen/niedenstein/"
+   },
+   {
+    "name": "Oberaula",
+    "url": "/gemeinden/hessen/oberaula/"
+   },
+   {
+    "name": "Ottrau",
+    "url": "/gemeinden/hessen/ottrau/"
+   },
+   {
+    "name": "Schrecksbach",
+    "url": "/gemeinden/hessen/schrecksbach/"
+   },
+   {
+    "name": "Schwalmstadt",
+    "url": "/gemeinden/hessen/schwalmstadt/"
+   },
+   {
+    "name": "Spangenberg",
+    "url": "/gemeinden/hessen/spangenberg/"
+   },
+   {
+    "name": "Vogelsbergkreis",
+    "url": "/kreise/hessen/vogelsbergkreis/"
+   },
+   {
+    "name": "Feldatal",
+    "url": "/gemeinden/hessen/feldatal/"
+   },
+   {
+    "name": "Kirtorf",
+    "url": "/gemeinden/hessen/kirtorf/"
+   },
+   {
+    "name": "Schotten",
+    "url": "/gemeinden/hessen/schotten/"
+   },
+   {
+    "name": "Ulrichstein",
+    "url": "/gemeinden/hessen/ulrichstein/"
+   },
+   {
+    "name": "Werra-Meißner-Kreis",
+    "url": "/kreise/hessen/werra-meissner-kreis/"
+   },
+   {
+    "name": "Bad Sooden-Allendorf",
+    "url": "/gemeinden/hessen/bad-sooden-allendorf/"
+   },
+   {
+    "name": "Berkatal",
+    "url": "/gemeinden/hessen/berkatal/"
+   },
+   {
+    "name": "Großalmerode",
+    "url": "/gemeinden/hessen/grossalmerode/"
+   },
+   {
+    "name": "Herleshausen",
+    "url": "/gemeinden/hessen/herleshausen/"
+   },
+   {
+    "name": "Hessisch Lichtenau",
+    "url": "/gemeinden/hessen/hessisch-lichtenau/"
+   },
+   {
+    "name": "Meinhard",
+    "url": "/gemeinden/hessen/meinhard/"
+   },
+   {
+    "name": "Ringgau",
+    "url": "/gemeinden/hessen/ringgau/"
+   },
+   {
+    "name": "Waldkappel",
+    "url": "/gemeinden/hessen/waldkappel/"
+   },
+   {
+    "name": "Wanfried",
+    "url": "/gemeinden/hessen/wanfried/"
+   },
+   {
+    "name": "Witzenhausen",
+    "url": "/gemeinden/hessen/witzenhausen/"
+   },
+   {
+    "name": "Büdingen",
+    "url": "/gemeinden/hessen/buedingen/"
+   },
+   {
+    "name": "Butzbach",
+    "url": "/gemeinden/hessen/butzbach/"
+   },
+   {
+    "name": "Florstadt",
+    "url": "/gemeinden/hessen/florstadt/"
+   },
+   {
+    "name": "Gedern",
+    "url": "/gemeinden/hessen/gedern/"
+   },
+   {
+    "name": "Glauburg",
+    "url": "/gemeinden/hessen/glauburg/"
+   },
+   {
+    "name": "Hirzenhain",
+    "url": "/gemeinden/hessen/hirzenhain/"
+   },
+   {
+    "name": "Karben",
+    "url": "/gemeinden/hessen/karben/"
+   },
+   {
+    "name": "Kefenrod",
+    "url": "/gemeinden/hessen/kefenrod/"
+   },
+   {
+    "name": "Nidda",
+    "url": "/gemeinden/hessen/nidda/"
+   },
+   {
+    "name": "Ortenberg",
+    "url": "/gemeinden/hessen/ortenberg/"
+   }
+  ]
+ },
+ {
+  "land": "RP",
+  "programm": "Partnerschaft zur Entschuldung der Kommunen in Rheinland-Pfalz (PEK-RP)",
+  "beschreibung": "Teilentschuldung: Das Land übernimmt Liquiditätskredite der Kommunen (Stand 31.12.2020) im Umfang von 3 Mrd. Euro (LGPEK-RP, in Kraft 08.02.2023); Gegenleistung ist die Rückführung der verbleibenden Liquiditätskredite binnen 30 Jahren. Liste = 519 Kommunen mit Entschuldungsvolumen/Vertragsangebot (Stand 23.01.2024); laut FM haben am Ende 515 teilgenommen (487 statt 491 Ortsgemeinden) – welche vier Ortsgemeinden ausgestiegen sind, nennt die Quelle nicht.",
+  "quelle_url": "https://fm.rlp.de/fileadmin/04/Themen/Finanzen/Kommunale_Finanzen/PEK-RP/Berechnung_und_Uebersichten/Kommunalentschuldung_PEK-RP_Berechnung_Entschuldungsvolumen_endgueltig_v._23.01.24.xlsx",
+  "stand": "2024-01-23",
+  "gemeinden": [
+   {
+    "name": "Dankerath",
+    "url": "/gemeinden/rheinland-pfalz/dankerath/"
+   },
+   {
+    "name": "Hoffeld",
+    "url": "/gemeinden/rheinland-pfalz/hoffeld/"
+   },
+   {
+    "name": "Dernau",
+    "url": "/gemeinden/rheinland-pfalz/dernau/"
+   },
+   {
+    "name": "Mayschoß",
+    "url": "/gemeinden/rheinland-pfalz/mayschoss/"
+   },
+   {
+    "name": "Rech",
+    "url": "/gemeinden/rheinland-pfalz/rech/"
+   },
+   {
+    "name": "Bad Breisig",
+    "url": "/gemeinden/rheinland-pfalz/bad-breisig/"
+   },
+   {
+    "name": "Herdorf",
+    "url": "/gemeinden/rheinland-pfalz/herdorf/"
+   },
+   {
+    "name": "Fürthen",
+    "url": "/gemeinden/rheinland-pfalz/fuerthen/"
+   },
+   {
+    "name": "Hamm (Sieg)"
+   },
+   {
+    "name": "Pracht",
+    "url": "/gemeinden/rheinland-pfalz/pracht/"
+   },
+   {
+    "name": "Kirchen (Sieg)",
+    "url": "/gemeinden/rheinland-pfalz/kirchen-sieg/"
+   },
+   {
+    "name": "Birken-Honigsessen",
+    "url": "/gemeinden/rheinland-pfalz/birken-honigsessen/"
+   },
+   {
+    "name": "Hövels",
+    "url": "/gemeinden/rheinland-pfalz/hoevels/"
+   },
+   {
+    "name": "Katzwinkel (Sieg)"
+   },
+   {
+    "name": "Selbach (Sieg)",
+    "url": "/gemeinden/rheinland-pfalz/selbach-sieg/"
+   },
+   {
+    "name": "Wissen",
+    "url": "/gemeinden/rheinland-pfalz/wissen/"
+   },
+   {
+    "name": "Alsdorf"
+   },
+   {
+    "name": "Betzdorf",
+    "url": "/gemeinden/rheinland-pfalz/betzdorf/"
+   },
+   {
+    "name": "Grünebach",
+    "url": "/gemeinden/rheinland-pfalz/gruenebach/"
+   },
+   {
+    "name": "Wallmenroth",
+    "url": "/gemeinden/rheinland-pfalz/wallmenroth/"
+   },
+   {
+    "name": "Eulenberg",
+    "url": "/gemeinden/rheinland-pfalz/eulenberg/"
+   },
+   {
+    "name": "Flammersfeld",
+    "url": "/gemeinden/rheinland-pfalz/flammersfeld/"
+   },
+   {
+    "name": "Niedersteinebach",
+    "url": "/gemeinden/rheinland-pfalz/niedersteinebach/"
+   },
+   {
+    "name": "Reiferscheid",
+    "url": "/gemeinden/rheinland-pfalz/reiferscheid/"
+   },
+   {
+    "name": "Seelbach (Westerwald)"
+   },
+   {
+    "name": "Seifen",
+    "url": "/gemeinden/rheinland-pfalz/seifen/"
+   },
+   {
+    "name": "Walterschen",
+    "url": "/gemeinden/rheinland-pfalz/walterschen/"
+   },
+   {
+    "name": "Willroth",
+    "url": "/gemeinden/rheinland-pfalz/willroth/"
+   },
+   {
+    "name": "Bad Kreuznach",
+    "url": "/gemeinden/rheinland-pfalz/bad-kreuznach/"
+   },
+   {
+    "name": "Landkreis Bad Kreuznach",
+    "url": "/kreise/rheinland-pfalz/bad-kreuznach/"
+   },
+   {
+    "name": "Altenbamberg",
+    "url": "/gemeinden/rheinland-pfalz/altenbamberg/"
+   },
+   {
+    "name": "Hallgarten",
+    "url": "/gemeinden/rheinland-pfalz/hallgarten/"
+   },
+   {
+    "name": "Hochstätten",
+    "url": "/gemeinden/rheinland-pfalz/hochstaetten/"
+   },
+   {
+    "name": "Niederhausen"
+   },
+   {
+    "name": "Hennweiler",
+    "url": "/gemeinden/rheinland-pfalz/hennweiler/"
+   },
+   {
+    "name": "Horbach"
+   },
+   {
+    "name": "Kirn",
+    "url": "/gemeinden/rheinland-pfalz/kirn/"
+   },
+   {
+    "name": "Otzweiler",
+    "url": "/gemeinden/rheinland-pfalz/otzweiler/"
+   },
+   {
+    "name": "Weitersborn",
+    "url": "/gemeinden/rheinland-pfalz/weitersborn/"
+   },
+   {
+    "name": "Abtweiler",
+    "url": "/gemeinden/rheinland-pfalz/abtweiler/"
+   },
+   {
+    "name": "Bärweiler",
+    "url": "/gemeinden/rheinland-pfalz/baerweiler/"
+   },
+   {
+    "name": "Becherbach"
+   },
+   {
+    "name": "Callbach",
+    "url": "/gemeinden/rheinland-pfalz/callbach/"
+   },
+   {
+    "name": "Jeckenbach",
+    "url": "/gemeinden/rheinland-pfalz/jeckenbach/"
+   },
+   {
+    "name": "Kirschroth",
+    "url": "/gemeinden/rheinland-pfalz/kirschroth/"
+   },
+   {
+    "name": "Langenthal",
+    "url": "/gemeinden/rheinland-pfalz/langenthal/"
+   },
+   {
+    "name": "Lauschied",
+    "url": "/gemeinden/rheinland-pfalz/lauschied/"
+   },
+   {
+    "name": "Löllbach",
+    "url": "/gemeinden/rheinland-pfalz/loellbach/"
+   },
+   {
+    "name": "Meddersheim",
+    "url": "/gemeinden/rheinland-pfalz/meddersheim/"
+   },
+   {
+    "name": "Odernheim am Glan",
+    "url": "/gemeinden/rheinland-pfalz/odernheim-am-glan/"
+   },
+   {
+    "name": "Rehbach",
+    "url": "/gemeinden/rheinland-pfalz/rehbach/"
+   },
+   {
+    "name": "Schmittweiler",
+    "url": "/gemeinden/rheinland-pfalz/schmittweiler/"
+   },
+   {
+    "name": "Schweinschied",
+    "url": "/gemeinden/rheinland-pfalz/schweinschied/"
+   },
+   {
+    "name": "Seesbach",
+    "url": "/gemeinden/rheinland-pfalz/seesbach/"
+   },
+   {
+    "name": "Staudernheim",
+    "url": "/gemeinden/rheinland-pfalz/staudernheim/"
+   },
+   {
+    "name": "Winterburg",
+    "url": "/gemeinden/rheinland-pfalz/winterburg/"
+   },
+   {
+    "name": "Roth"
+   },
+   {
+    "name": "Landkreis Birkenfeld",
+    "url": "/kreise/rheinland-pfalz/birkenfeld/"
+   },
+   {
+    "name": "Baumholder",
+    "url": "/gemeinden/rheinland-pfalz/baumholder/"
+   },
+   {
+    "name": "Abentheuer",
+    "url": "/gemeinden/rheinland-pfalz/abentheuer/"
+   },
+   {
+    "name": "Birkenfeld",
+    "url": "/gemeinden/rheinland-pfalz/birkenfeld/"
+   },
+   {
+    "name": "Elchweiler",
+    "url": "/gemeinden/rheinland-pfalz/elchweiler/"
+   },
+   {
+    "name": "Ellweiler",
+    "url": "/gemeinden/rheinland-pfalz/ellweiler/"
+   },
+   {
+    "name": "Gimbweiler",
+    "url": "/gemeinden/rheinland-pfalz/gimbweiler/"
+   },
+   {
+    "name": "Kronweiler",
+    "url": "/gemeinden/rheinland-pfalz/kronweiler/"
+   },
+   {
+    "name": "Nohen",
+    "url": "/gemeinden/rheinland-pfalz/nohen/"
+   },
+   {
+    "name": "Rötsweiler-Nockenthal",
+    "url": "/gemeinden/rheinland-pfalz/roetsweiler-nockenthal/"
+   },
+   {
+    "name": "Sonnenberg-Winnenberg",
+    "url": "/gemeinden/rheinland-pfalz/sonnenberg-winnenberg/"
+   },
+   {
+    "name": "Fischbach"
+   },
+   {
+    "name": "Moselkern",
+    "url": "/gemeinden/rheinland-pfalz/moselkern/"
+   },
+   {
+    "name": "Müden (Mosel)",
+    "url": "/gemeinden/rheinland-pfalz/mueden-mosel/"
+   },
+   {
+    "name": "Pommern",
+    "url": "/gemeinden/rheinland-pfalz/pommern/"
+   },
+   {
+    "name": "Binningen",
+    "url": "/gemeinden/rheinland-pfalz/binningen/"
+   },
+   {
+    "name": "Brachtendorf",
+    "url": "/gemeinden/rheinland-pfalz/brachtendorf/"
+   },
+   {
+    "name": "Dünfus",
+    "url": "/gemeinden/rheinland-pfalz/duenfus/"
+   },
+   {
+    "name": "Forst (Eifel)"
+   },
+   {
+    "name": "Hambuch",
+    "url": "/gemeinden/rheinland-pfalz/hambuch/"
+   },
+   {
+    "name": "Kaifenheim",
+    "url": "/gemeinden/rheinland-pfalz/kaifenheim/"
+   },
+   {
+    "name": "Kail",
+    "url": "/gemeinden/rheinland-pfalz/kail/"
+   },
+   {
+    "name": "Kaisersesch",
+    "url": "/gemeinden/rheinland-pfalz/kaisersesch/"
+   },
+   {
+    "name": "Leienkaul",
+    "url": "/gemeinden/rheinland-pfalz/leienkaul/"
+   },
+   {
+    "name": "Möntenich",
+    "url": "/gemeinden/rheinland-pfalz/moentenich/"
+   },
+   {
+    "name": "Müllenbach"
+   },
+   {
+    "name": "Zettingen",
+    "url": "/gemeinden/rheinland-pfalz/zettingen/"
+   },
+   {
+    "name": "Bad Bertrich",
+    "url": "/gemeinden/rheinland-pfalz/bad-bertrich/"
+   },
+   {
+    "name": "Filz",
+    "url": "/gemeinden/rheinland-pfalz/filz/"
+   },
+   {
+    "name": "Schmitt",
+    "url": "/gemeinden/rheinland-pfalz/schmitt/"
+   },
+   {
+    "name": "Ulmen",
+    "url": "/gemeinden/rheinland-pfalz/ulmen/"
+   },
+   {
+    "name": "Urschmitt",
+    "url": "/gemeinden/rheinland-pfalz/urschmitt/"
+   },
+   {
+    "name": "Wagenhausen",
+    "url": "/gemeinden/rheinland-pfalz/wagenhausen/"
+   },
+   {
+    "name": "Wollmerath",
+    "url": "/gemeinden/rheinland-pfalz/wollmerath/"
+   },
+   {
+    "name": "Bendorf",
+    "url": "/gemeinden/rheinland-pfalz/bendorf/"
+   },
+   {
+    "name": "Mayen",
+    "url": "/gemeinden/rheinland-pfalz/mayen/"
+   },
+   {
+    "name": "Kruft",
+    "url": "/gemeinden/rheinland-pfalz/kruft/"
+   },
+   {
+    "name": "Plaidt",
+    "url": "/gemeinden/rheinland-pfalz/plaidt/"
+   },
+   {
+    "name": "Münstermaifeld",
+    "url": "/gemeinden/rheinland-pfalz/muenstermaifeld/"
+   },
+   {
+    "name": "Ochtendung",
+    "url": "/gemeinden/rheinland-pfalz/ochtendung/"
+   },
+   {
+    "name": "Ettringen",
+    "url": "/gemeinden/rheinland-pfalz/ettringen/"
+   },
+   {
+    "name": "Hirten",
+    "url": "/gemeinden/rheinland-pfalz/hirten/"
+   },
+   {
+    "name": "Kirchwald",
+    "url": "/gemeinden/rheinland-pfalz/kirchwald/"
+   },
+   {
+    "name": "Monreal",
+    "url": "/gemeinden/rheinland-pfalz/monreal/"
+   },
+   {
+    "name": "Sankt Johann"
+   },
+   {
+    "name": "Virneburg",
+    "url": "/gemeinden/rheinland-pfalz/virneburg/"
+   },
+   {
+    "name": "Rieden",
+    "url": "/gemeinden/rheinland-pfalz/rieden/"
+   },
+   {
+    "name": "Thür",
+    "url": "/gemeinden/rheinland-pfalz/thuer/"
+   },
+   {
+    "name": "Volkesfeld",
+    "url": "/gemeinden/rheinland-pfalz/volkesfeld/"
+   },
+   {
+    "name": "Niederwerth",
+    "url": "/gemeinden/rheinland-pfalz/niederwerth/"
+   },
+   {
+    "name": "Vallendar",
+    "url": "/gemeinden/rheinland-pfalz/vallendar/"
+   },
+   {
+    "name": "Weitersburg",
+    "url": "/gemeinden/rheinland-pfalz/weitersburg/"
+   },
+   {
+    "name": "Kettig",
+    "url": "/gemeinden/rheinland-pfalz/kettig/"
+   },
+   {
+    "name": "Sankt Sebastian",
+    "url": "/gemeinden/rheinland-pfalz/sankt-sebastian/"
+   },
+   {
+    "name": "Weißenthurm",
+    "url": "/gemeinden/rheinland-pfalz/weissenthurm/"
+   },
+   {
+    "name": "Brodenbach",
+    "url": "/gemeinden/rheinland-pfalz/brodenbach/"
+   },
+   {
+    "name": "Oberfell",
+    "url": "/gemeinden/rheinland-pfalz/oberfell/"
+   },
+   {
+    "name": "Neuwied",
+    "url": "/gemeinden/rheinland-pfalz/neuwied/"
+   },
+   {
+    "name": "Landkreis Neuwied",
+    "url": "/kreise/rheinland-pfalz/neuwied/"
+   },
+   {
+    "name": "Bad Hönningen",
+    "url": "/gemeinden/rheinland-pfalz/bad-hoenningen/"
+   },
+   {
+    "name": "Hammerstein",
+    "url": "/gemeinden/rheinland-pfalz/hammerstein/"
+   },
+   {
+    "name": "Leutesdorf",
+    "url": "/gemeinden/rheinland-pfalz/leutesdorf/"
+   },
+   {
+    "name": "Döttesfeld",
+    "url": "/gemeinden/rheinland-pfalz/doettesfeld/"
+   },
+   {
+    "name": "Bruchhausen",
+    "url": "/gemeinden/rheinland-pfalz/bruchhausen/"
+   },
+   {
+    "name": "Erpel",
+    "url": "/gemeinden/rheinland-pfalz/erpel/"
+   },
+   {
+    "name": "Unkel",
+    "url": "/gemeinden/rheinland-pfalz/unkel/"
+   },
+   {
+    "name": "Waldbreitbach",
+    "url": "/gemeinden/rheinland-pfalz/waldbreitbach/"
+   },
+   {
+    "name": "Lahnstein",
+    "url": "/gemeinden/rheinland-pfalz/lahnstein/"
+   },
+   {
+    "name": "Birlenbach",
+    "url": "/gemeinden/rheinland-pfalz/birlenbach/"
+   },
+   {
+    "name": "Diez",
+    "url": "/gemeinden/rheinland-pfalz/diez/"
+   },
+   {
+    "name": "Hambach",
+    "url": "/gemeinden/rheinland-pfalz/hambach/"
+   },
+   {
+    "name": "Auel",
+    "url": "/gemeinden/rheinland-pfalz/auel/"
+   },
+   {
+    "name": "Braubach",
+    "url": "/gemeinden/rheinland-pfalz/braubach/"
+   },
+   {
+    "name": "Dahlheim",
+    "url": "/gemeinden/rheinland-pfalz/dahlheim/"
+   },
+   {
+    "name": "Filsen",
+    "url": "/gemeinden/rheinland-pfalz/filsen/"
+   },
+   {
+    "name": "Kamp-Bornhofen",
+    "url": "/gemeinden/rheinland-pfalz/kamp-bornhofen/"
+   },
+   {
+    "name": "Kaub",
+    "url": "/gemeinden/rheinland-pfalz/kaub/"
+   },
+   {
+    "name": "Kestert",
+    "url": "/gemeinden/rheinland-pfalz/kestert/"
+   },
+   {
+    "name": "Osterspai",
+    "url": "/gemeinden/rheinland-pfalz/osterspai/"
+   },
+   {
+    "name": "Patersberg",
+    "url": "/gemeinden/rheinland-pfalz/patersberg/"
+   },
+   {
+    "name": "Prath",
+    "url": "/gemeinden/rheinland-pfalz/prath/"
+   },
+   {
+    "name": "Sankt Goarshausen",
+    "url": "/gemeinden/rheinland-pfalz/sankt-goarshausen/"
+   },
+   {
+    "name": "Arzbach",
+    "url": "/gemeinden/rheinland-pfalz/arzbach/"
+   },
+   {
+    "name": "Dausenau",
+    "url": "/gemeinden/rheinland-pfalz/dausenau/"
+   },
+   {
+    "name": "Fachbach",
+    "url": "/gemeinden/rheinland-pfalz/fachbach/"
+   },
+   {
+    "name": "Nassau",
+    "url": "/gemeinden/rheinland-pfalz/nassau/"
+   },
+   {
+    "name": "Obernhof",
+    "url": "/gemeinden/rheinland-pfalz/obernhof/"
+   },
+   {
+    "name": "Oberwies",
+    "url": "/gemeinden/rheinland-pfalz/oberwies/"
+   },
+   {
+    "name": "Weinähr",
+    "url": "/gemeinden/rheinland-pfalz/weinaehr/"
+   },
+   {
+    "name": "Niederneisen",
+    "url": "/gemeinden/rheinland-pfalz/niederneisen/"
+   },
+   {
+    "name": "Oberneisen",
+    "url": "/gemeinden/rheinland-pfalz/oberneisen/"
+   },
+   {
+    "name": "Trier",
+    "url": "/gemeinden/rheinland-pfalz/trier/"
+   },
+   {
+    "name": "Kesten",
+    "url": "/gemeinden/rheinland-pfalz/kesten/"
+   },
+   {
+    "name": "Neumagen-Dhron",
+    "url": "/gemeinden/rheinland-pfalz/neumagen-dhron/"
+   },
+   {
+    "name": "Burtscheid",
+    "url": "/gemeinden/rheinland-pfalz/burtscheid/"
+   },
+   {
+    "name": "Deuselbach",
+    "url": "/gemeinden/rheinland-pfalz/deuselbach/"
+   },
+   {
+    "name": "Dhronecken",
+    "url": "/gemeinden/rheinland-pfalz/dhronecken/"
+   },
+   {
+    "name": "Gielert",
+    "url": "/gemeinden/rheinland-pfalz/gielert/"
+   },
+   {
+    "name": "Gräfendhron",
+    "url": "/gemeinden/rheinland-pfalz/graefendhron/"
+   },
+   {
+    "name": "Hilscheid",
+    "url": "/gemeinden/rheinland-pfalz/hilscheid/"
+   },
+   {
+    "name": "Immert",
+    "url": "/gemeinden/rheinland-pfalz/immert/"
+   },
+   {
+    "name": "Lückenburg",
+    "url": "/gemeinden/rheinland-pfalz/lueckenburg/"
+   },
+   {
+    "name": "Neunkirchen"
+   },
+   {
+    "name": "Rorodt",
+    "url": "/gemeinden/rheinland-pfalz/rorodt/"
+   },
+   {
+    "name": "Thalfang",
+    "url": "/gemeinden/rheinland-pfalz/thalfang/"
+   },
+   {
+    "name": "VG Thalfang am Erbeskopf"
+   },
+   {
+    "name": "Manderscheid,St"
+   },
+   {
+    "name": "Rivenich",
+    "url": "/gemeinden/rheinland-pfalz/rivenich/"
+   },
+   {
+    "name": "Schladt",
+    "url": "/gemeinden/rheinland-pfalz/schladt/"
+   },
+   {
+    "name": "Bengel",
+    "url": "/gemeinden/rheinland-pfalz/bengel/"
+   },
+   {
+    "name": "Enkirch",
+    "url": "/gemeinden/rheinland-pfalz/enkirch/"
+   },
+   {
+    "name": "Flußbach",
+    "url": "/gemeinden/rheinland-pfalz/flussbach/"
+   },
+   {
+    "name": "Hontheim",
+    "url": "/gemeinden/rheinland-pfalz/hontheim/"
+   },
+   {
+    "name": "Irmenach",
+    "url": "/gemeinden/rheinland-pfalz/irmenach/"
+   },
+   {
+    "name": "Kinderbeuern",
+    "url": "/gemeinden/rheinland-pfalz/kinderbeuern/"
+   },
+   {
+    "name": "Kinheim",
+    "url": "/gemeinden/rheinland-pfalz/kinheim/"
+   },
+   {
+    "name": "Kröv",
+    "url": "/gemeinden/rheinland-pfalz/kroev/"
+   },
+   {
+    "name": "Reil",
+    "url": "/gemeinden/rheinland-pfalz/reil/"
+   },
+   {
+    "name": "Starkenburg",
+    "url": "/gemeinden/rheinland-pfalz/starkenburg/"
+   },
+   {
+    "name": "Traben-Trarbach",
+    "url": "/gemeinden/rheinland-pfalz/traben-trarbach/"
+   },
+   {
+    "name": "Arzfeld",
+    "url": "/gemeinden/rheinland-pfalz/arzfeld/"
+   },
+   {
+    "name": "Dahnen",
+    "url": "/gemeinden/rheinland-pfalz/dahnen/"
+   },
+   {
+    "name": "Daleiden",
+    "url": "/gemeinden/rheinland-pfalz/daleiden/"
+   },
+   {
+    "name": "Dasburg",
+    "url": "/gemeinden/rheinland-pfalz/dasburg/"
+   },
+   {
+    "name": "Eschfeld",
+    "url": "/gemeinden/rheinland-pfalz/eschfeld/"
+   },
+   {
+    "name": "Herzfeld",
+    "url": "/gemeinden/rheinland-pfalz/herzfeld/"
+   },
+   {
+    "name": "Kickeshausen",
+    "url": "/gemeinden/rheinland-pfalz/kickeshausen/"
+   },
+   {
+    "name": "Kinzenburg",
+    "url": "/gemeinden/rheinland-pfalz/kinzenburg/"
+   },
+   {
+    "name": "Lambertsberg",
+    "url": "/gemeinden/rheinland-pfalz/lambertsberg/"
+   },
+   {
+    "name": "Leidenborn",
+    "url": "/gemeinden/rheinland-pfalz/leidenborn/"
+   },
+   {
+    "name": "Lünebach",
+    "url": "/gemeinden/rheinland-pfalz/luenebach/"
+   },
+   {
+    "name": "Lützkampen",
+    "url": "/gemeinden/rheinland-pfalz/luetzkampen/"
+   },
+   {
+    "name": "Merlscheid",
+    "url": "/gemeinden/rheinland-pfalz/merlscheid/"
+   },
+   {
+    "name": "Niederpierscheid",
+    "url": "/gemeinden/rheinland-pfalz/niederpierscheid/"
+   },
+   {
+    "name": "Pintesfeld",
+    "url": "/gemeinden/rheinland-pfalz/pintesfeld/"
+   },
+   {
+    "name": "Roscheid",
+    "url": "/gemeinden/rheinland-pfalz/roscheid/"
+   },
+   {
+    "name": "Sengerich",
+    "url": "/gemeinden/rheinland-pfalz/sengerich/"
+   },
+   {
+    "name": "Sevenig (Our)"
+   },
+   {
+    "name": "Üttfeld",
+    "url": "/gemeinden/rheinland-pfalz/uettfeld/"
+   },
+   {
+    "name": "Waxweiler",
+    "url": "/gemeinden/rheinland-pfalz/waxweiler/"
+   },
+   {
+    "name": "Ammeldingen an der Our",
+    "url": "/gemeinden/rheinland-pfalz/ammeldingen-an-der-our/"
+   },
+   {
+    "name": "Bollendorf",
+    "url": "/gemeinden/rheinland-pfalz/bollendorf/"
+   },
+   {
+    "name": "Echternacherbrück",
+    "url": "/gemeinden/rheinland-pfalz/echternacherbrueck/"
+   },
+   {
+    "name": "Emmelbaum",
+    "url": "/gemeinden/rheinland-pfalz/emmelbaum/"
+   },
+   {
+    "name": "Ferschweiler",
+    "url": "/gemeinden/rheinland-pfalz/ferschweiler/"
+   },
+   {
+    "name": "Gemünd",
+    "url": "/gemeinden/rheinland-pfalz/gemuend/"
+   },
+   {
+    "name": "Gentingen",
+    "url": "/gemeinden/rheinland-pfalz/gentingen/"
+   },
+   {
+    "name": "Irrel",
+    "url": "/gemeinden/rheinland-pfalz/irrel/"
+   },
+   {
+    "name": "Keppeshausen",
+    "url": "/gemeinden/rheinland-pfalz/keppeshausen/"
+   },
+   {
+    "name": "Körperich",
+    "url": "/gemeinden/rheinland-pfalz/koerperich/"
+   },
+   {
+    "name": "Menningen",
+    "url": "/gemeinden/rheinland-pfalz/menningen/"
+   },
+   {
+    "name": "Minden",
+    "url": "/gemeinden/rheinland-pfalz/minden/"
+   },
+   {
+    "name": "Neuerburg",
+    "url": "/gemeinden/rheinland-pfalz/neuerburg/"
+   },
+   {
+    "name": "Niedergeckler"
+   },
+   {
+    "name": "Plascheid",
+    "url": "/gemeinden/rheinland-pfalz/plascheid/"
+   },
+   {
+    "name": "Schankweiler",
+    "url": "/gemeinden/rheinland-pfalz/schankweiler/"
+   },
+   {
+    "name": "Sevenig bei Neuerburg",
+    "url": "/gemeinden/rheinland-pfalz/sevenig-bei-neuerburg/"
+   },
+   {
+    "name": "Sinspelt",
+    "url": "/gemeinden/rheinland-pfalz/sinspelt/"
+   },
+   {
+    "name": "Übereisenbach",
+    "url": "/gemeinden/rheinland-pfalz/uebereisenbach/"
+   },
+   {
+    "name": "Waldhof-Falkenstein",
+    "url": "/gemeinden/rheinland-pfalz/waldhof-falkenstein/"
+   },
+   {
+    "name": "Wallendorf",
+    "url": "/gemeinden/rheinland-pfalz/wallendorf/"
+   },
+   {
+    "name": "Weidingen",
+    "url": "/gemeinden/rheinland-pfalz/weidingen/"
+   },
+   {
+    "name": "Zweifelscheid",
+    "url": "/gemeinden/rheinland-pfalz/zweifelscheid/"
+   },
+   {
+    "name": "Auw an der Kyll",
+    "url": "/gemeinden/rheinland-pfalz/auw-an-der-kyll/"
+   },
+   {
+    "name": "Hosten",
+    "url": "/gemeinden/rheinland-pfalz/hosten/"
+   },
+   {
+    "name": "Orenhofen",
+    "url": "/gemeinden/rheinland-pfalz/orenhofen/"
+   },
+   {
+    "name": "Preist",
+    "url": "/gemeinden/rheinland-pfalz/preist/"
+   },
+   {
+    "name": "Spangdahlem",
+    "url": "/gemeinden/rheinland-pfalz/spangdahlem/"
+   },
+   {
+    "name": "Bettingen",
+    "url": "/gemeinden/rheinland-pfalz/bettingen/"
+   },
+   {
+    "name": "Biersdorf am See",
+    "url": "/gemeinden/rheinland-pfalz/biersdorf-am-see/"
+   },
+   {
+    "name": "Etteldorf",
+    "url": "/gemeinden/rheinland-pfalz/etteldorf/"
+   },
+   {
+    "name": "Feilsdorf",
+    "url": "/gemeinden/rheinland-pfalz/feilsdorf/"
+   },
+   {
+    "name": "Hamm"
+   },
+   {
+    "name": "Hütterscheid",
+    "url": "/gemeinden/rheinland-pfalz/huetterscheid/"
+   },
+   {
+    "name": "Kyllburg",
+    "url": "/gemeinden/rheinland-pfalz/kyllburg/"
+   },
+   {
+    "name": "Malberg"
+   },
+   {
+    "name": "Malbergweich",
+    "url": "/gemeinden/rheinland-pfalz/malbergweich/"
+   },
+   {
+    "name": "Oberkail",
+    "url": "/gemeinden/rheinland-pfalz/oberkail/"
+   },
+   {
+    "name": "Sankt Thomas",
+    "url": "/gemeinden/rheinland-pfalz/sankt-thomas/"
+   },
+   {
+    "name": "Schleid",
+    "url": "/gemeinden/rheinland-pfalz/schleid/"
+   },
+   {
+    "name": "Seffern",
+    "url": "/gemeinden/rheinland-pfalz/seffern/"
+   },
+   {
+    "name": "Landkreis Vulkaneifel",
+    "url": "/kreise/rheinland-pfalz/vulkaneifel/"
+   },
+   {
+    "name": "Daun",
+    "url": "/gemeinden/rheinland-pfalz/daun/"
+   },
+   {
+    "name": "Deudesfeld",
+    "url": "/gemeinden/rheinland-pfalz/deudesfeld/"
+   },
+   {
+    "name": "Gefell",
+    "url": "/gemeinden/rheinland-pfalz/gefell/"
+   },
+   {
+    "name": "Mehren"
+   },
+   {
+    "name": "Schönbach",
+    "url": "/gemeinden/rheinland-pfalz/schoenbach/"
+   },
+   {
+    "name": "Schutz",
+    "url": "/gemeinden/rheinland-pfalz/schutz/"
+   },
+   {
+    "name": "Steineberg",
+    "url": "/gemeinden/rheinland-pfalz/steineberg/"
+   },
+   {
+    "name": "Gerolstein",
+    "url": "/gemeinden/rheinland-pfalz/gerolstein/"
+   },
+   {
+    "name": "Hillesheim,St"
+   },
+   {
+    "name": "Neroth",
+    "url": "/gemeinden/rheinland-pfalz/neroth/"
+   },
+   {
+    "name": "Salm",
+    "url": "/gemeinden/rheinland-pfalz/salm/"
+   },
+   {
+    "name": "Damflos",
+    "url": "/gemeinden/rheinland-pfalz/damflos/"
+   },
+   {
+    "name": "Gusenburg",
+    "url": "/gemeinden/rheinland-pfalz/gusenburg/"
+   },
+   {
+    "name": "Neuhütten",
+    "url": "/gemeinden/rheinland-pfalz/neuhuetten/"
+   },
+   {
+    "name": "Konz",
+    "url": "/gemeinden/rheinland-pfalz/konz/"
+   },
+   {
+    "name": "Oberbillig",
+    "url": "/gemeinden/rheinland-pfalz/oberbillig/"
+   },
+   {
+    "name": "Tawern",
+    "url": "/gemeinden/rheinland-pfalz/tawern/"
+   },
+   {
+    "name": "Temmels",
+    "url": "/gemeinden/rheinland-pfalz/temmels/"
+   },
+   {
+    "name": "Wasserliesch",
+    "url": "/gemeinden/rheinland-pfalz/wasserliesch/"
+   },
+   {
+    "name": "Wawern"
+   },
+   {
+    "name": "Wellen",
+    "url": "/gemeinden/rheinland-pfalz/wellen/"
+   },
+   {
+    "name": "Lorscheid",
+    "url": "/gemeinden/rheinland-pfalz/lorscheid/"
+   },
+   {
+    "name": "Pluwig",
+    "url": "/gemeinden/rheinland-pfalz/pluwig/"
+   },
+   {
+    "name": "Riveris",
+    "url": "/gemeinden/rheinland-pfalz/riveris/"
+   },
+   {
+    "name": "Thomm",
+    "url": "/gemeinden/rheinland-pfalz/thomm/"
+   },
+   {
+    "name": "Schleich",
+    "url": "/gemeinden/rheinland-pfalz/schleich/"
+   },
+   {
+    "name": "Kordel",
+    "url": "/gemeinden/rheinland-pfalz/kordel/"
+   },
+   {
+    "name": "Lampaden",
+    "url": "/gemeinden/rheinland-pfalz/lampaden/"
+   },
+   {
+    "name": "Saarburg",
+    "url": "/gemeinden/rheinland-pfalz/saarburg/"
+   },
+   {
+    "name": "Taben-Rodt",
+    "url": "/gemeinden/rheinland-pfalz/taben-rodt/"
+   },
+   {
+    "name": "Frankenthal (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/frankenthal-pfalz/"
+   },
+   {
+    "name": "Kaiserslautern",
+    "url": "/gemeinden/rheinland-pfalz/kaiserslautern/"
+   },
+   {
+    "name": "Ludwigshafen am Rhein",
+    "url": "/gemeinden/rheinland-pfalz/ludwigshafen-am-rhein/"
+   },
+   {
+    "name": "Pirmasens",
+    "url": "/gemeinden/rheinland-pfalz/pirmasens/"
+   },
+   {
+    "name": "Speyer",
+    "url": "/gemeinden/rheinland-pfalz/speyer/"
+   },
+   {
+    "name": "Worms",
+    "url": "/gemeinden/rheinland-pfalz/worms/"
+   },
+   {
+    "name": "Zweibrücken",
+    "url": "/gemeinden/rheinland-pfalz/zweibruecken/"
+   },
+   {
+    "name": "Landkreis Alzey-Worms",
+    "url": "/kreise/rheinland-pfalz/alzey-worms/"
+   },
+   {
+    "name": "Bechenheim",
+    "url": "/gemeinden/rheinland-pfalz/bechenheim/"
+   },
+   {
+    "name": "Biebelnheim",
+    "url": "/gemeinden/rheinland-pfalz/biebelnheim/"
+   },
+   {
+    "name": "Flonheim",
+    "url": "/gemeinden/rheinland-pfalz/flonheim/"
+   },
+   {
+    "name": "Mauchenheim",
+    "url": "/gemeinden/rheinland-pfalz/mauchenheim/"
+   },
+   {
+    "name": "Mölsheim",
+    "url": "/gemeinden/rheinland-pfalz/moelsheim/"
+   },
+   {
+    "name": "Offstein",
+    "url": "/gemeinden/rheinland-pfalz/offstein/"
+   },
+   {
+    "name": "Armsheim",
+    "url": "/gemeinden/rheinland-pfalz/armsheim/"
+   },
+   {
+    "name": "Ensheim",
+    "url": "/gemeinden/rheinland-pfalz/ensheim/"
+   },
+   {
+    "name": "Landkreis Bad Dürkheim",
+    "url": "/kreise/rheinland-pfalz/bad-duerkheim/"
+   },
+   {
+    "name": "Deidesheim",
+    "url": "/gemeinden/rheinland-pfalz/deidesheim/"
+   },
+   {
+    "name": "Bobenheim am Berg",
+    "url": "/gemeinden/rheinland-pfalz/bobenheim-am-berg/"
+   },
+   {
+    "name": "Elmstein",
+    "url": "/gemeinden/rheinland-pfalz/elmstein/"
+   },
+   {
+    "name": "Esthal",
+    "url": "/gemeinden/rheinland-pfalz/esthal/"
+   },
+   {
+    "name": "Frankeneck",
+    "url": "/gemeinden/rheinland-pfalz/frankeneck/"
+   },
+   {
+    "name": "Lambrecht (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/lambrecht-pfalz/"
+   },
+   {
+    "name": "Lindenberg",
+    "url": "/gemeinden/rheinland-pfalz/lindenberg/"
+   },
+   {
+    "name": "Neidenfels",
+    "url": "/gemeinden/rheinland-pfalz/neidenfels/"
+   },
+   {
+    "name": "Weidenthal",
+    "url": "/gemeinden/rheinland-pfalz/weidenthal/"
+   },
+   {
+    "name": "Wachenheim a.d.W.,St"
+   },
+   {
+    "name": "Altleiningen",
+    "url": "/gemeinden/rheinland-pfalz/altleiningen/"
+   },
+   {
+    "name": "Carlsberg",
+    "url": "/gemeinden/rheinland-pfalz/carlsberg/"
+   },
+   {
+    "name": "Ebertsheim",
+    "url": "/gemeinden/rheinland-pfalz/ebertsheim/"
+   },
+   {
+    "name": "Hettenleidelheim",
+    "url": "/gemeinden/rheinland-pfalz/hettenleidelheim/"
+   },
+   {
+    "name": "Laumersheim",
+    "url": "/gemeinden/rheinland-pfalz/laumersheim/"
+   },
+   {
+    "name": "Obrigheim (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/obrigheim-pfalz/"
+   },
+   {
+    "name": "Quirnheim",
+    "url": "/gemeinden/rheinland-pfalz/quirnheim/"
+   },
+   {
+    "name": "Tiefenthal"
+   },
+   {
+    "name": "Wattenheim",
+    "url": "/gemeinden/rheinland-pfalz/wattenheim/"
+   },
+   {
+    "name": "Donnersbergkreis",
+    "url": "/kreise/rheinland-pfalz/donnersbergkreis/"
+   },
+   {
+    "name": "Eisenberg (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/eisenberg-pfalz/"
+   },
+   {
+    "name": "Kerzenheim",
+    "url": "/gemeinden/rheinland-pfalz/kerzenheim/"
+   },
+   {
+    "name": "Ramsen",
+    "url": "/gemeinden/rheinland-pfalz/ramsen/"
+   },
+   {
+    "name": "Albisheim (Pfrimm)",
+    "url": "/gemeinden/rheinland-pfalz/albisheim-pfrimm/"
+   },
+   {
+    "name": "Biedesheim",
+    "url": "/gemeinden/rheinland-pfalz/biedesheim/"
+   },
+   {
+    "name": "Dreisen",
+    "url": "/gemeinden/rheinland-pfalz/dreisen/"
+   },
+   {
+    "name": "Einselthum",
+    "url": "/gemeinden/rheinland-pfalz/einselthum/"
+   },
+   {
+    "name": "Göllheim",
+    "url": "/gemeinden/rheinland-pfalz/goellheim/"
+   },
+   {
+    "name": "Lautersheim",
+    "url": "/gemeinden/rheinland-pfalz/lautersheim/"
+   },
+   {
+    "name": "Ottersheim"
+   },
+   {
+    "name": "Rüssingen",
+    "url": "/gemeinden/rheinland-pfalz/ruessingen/"
+   },
+   {
+    "name": "Standenbühl",
+    "url": "/gemeinden/rheinland-pfalz/standenbuehl/"
+   },
+   {
+    "name": "Weitersweiler",
+    "url": "/gemeinden/rheinland-pfalz/weitersweiler/"
+   },
+   {
+    "name": "Zellertal",
+    "url": "/gemeinden/rheinland-pfalz/zellertal/"
+   },
+   {
+    "name": "Bennhausen",
+    "url": "/gemeinden/rheinland-pfalz/bennhausen/"
+   },
+   {
+    "name": "Dannenfels",
+    "url": "/gemeinden/rheinland-pfalz/dannenfels/"
+   },
+   {
+    "name": "Jakobsweiler",
+    "url": "/gemeinden/rheinland-pfalz/jakobsweiler/"
+   },
+   {
+    "name": "Kirchheimbolanden",
+    "url": "/gemeinden/rheinland-pfalz/kirchheimbolanden/"
+   },
+   {
+    "name": "Kriegsfeld",
+    "url": "/gemeinden/rheinland-pfalz/kriegsfeld/"
+   },
+   {
+    "name": "Morschheim",
+    "url": "/gemeinden/rheinland-pfalz/morschheim/"
+   },
+   {
+    "name": "Mörsfeld",
+    "url": "/gemeinden/rheinland-pfalz/moersfeld/"
+   },
+   {
+    "name": "Oberwiesen",
+    "url": "/gemeinden/rheinland-pfalz/oberwiesen/"
+   },
+   {
+    "name": "Rittersheim",
+    "url": "/gemeinden/rheinland-pfalz/rittersheim/"
+   },
+   {
+    "name": "Falkenstein",
+    "url": "/gemeinden/rheinland-pfalz/falkenstein/"
+   },
+   {
+    "name": "Schweisweiler",
+    "url": "/gemeinden/rheinland-pfalz/schweisweiler/"
+   },
+   {
+    "name": "Steinbach a.Donnersberg"
+   },
+   {
+    "name": "Winnweiler",
+    "url": "/gemeinden/rheinland-pfalz/winnweiler/"
+   },
+   {
+    "name": "Alsenz",
+    "url": "/gemeinden/rheinland-pfalz/alsenz/"
+   },
+   {
+    "name": "Dielkirchen",
+    "url": "/gemeinden/rheinland-pfalz/dielkirchen/"
+   },
+   {
+    "name": "Finkenbach-Gersweiler",
+    "url": "/gemeinden/rheinland-pfalz/finkenbach-gersweiler/"
+   },
+   {
+    "name": "Gaugrehweiler",
+    "url": "/gemeinden/rheinland-pfalz/gaugrehweiler/"
+   },
+   {
+    "name": "Gehrweiler",
+    "url": "/gemeinden/rheinland-pfalz/gehrweiler/"
+   },
+   {
+    "name": "Imsweiler",
+    "url": "/gemeinden/rheinland-pfalz/imsweiler/"
+   },
+   {
+    "name": "Kalkofen",
+    "url": "/gemeinden/rheinland-pfalz/kalkofen/"
+   },
+   {
+    "name": "Katzenbach",
+    "url": "/gemeinden/rheinland-pfalz/katzenbach/"
+   },
+   {
+    "name": "Mannweiler-Cölln",
+    "url": "/gemeinden/rheinland-pfalz/mannweiler-coelln/"
+   },
+   {
+    "name": "Münsterappel",
+    "url": "/gemeinden/rheinland-pfalz/muensterappel/"
+   },
+   {
+    "name": "Niederhausen a.d.Appel"
+   },
+   {
+    "name": "Niedermoschel",
+    "url": "/gemeinden/rheinland-pfalz/niedermoschel/"
+   },
+   {
+    "name": "Obermoschel",
+    "url": "/gemeinden/rheinland-pfalz/obermoschel/"
+   },
+   {
+    "name": "Ransweiler",
+    "url": "/gemeinden/rheinland-pfalz/ransweiler/"
+   },
+   {
+    "name": "Rathskirchen",
+    "url": "/gemeinden/rheinland-pfalz/rathskirchen/"
+   },
+   {
+    "name": "Reichsthal",
+    "url": "/gemeinden/rheinland-pfalz/reichsthal/"
+   },
+   {
+    "name": "Rockenhausen",
+    "url": "/gemeinden/rheinland-pfalz/rockenhausen/"
+   },
+   {
+    "name": "Ruppertsecken",
+    "url": "/gemeinden/rheinland-pfalz/ruppertsecken/"
+   },
+   {
+    "name": "Sankt Alban",
+    "url": "/gemeinden/rheinland-pfalz/sankt-alban/"
+   },
+   {
+    "name": "Schiersfeld",
+    "url": "/gemeinden/rheinland-pfalz/schiersfeld/"
+   },
+   {
+    "name": "Schönborn"
+   },
+   {
+    "name": "Seelen",
+    "url": "/gemeinden/rheinland-pfalz/seelen/"
+   },
+   {
+    "name": "Sitters",
+    "url": "/gemeinden/rheinland-pfalz/sitters/"
+   },
+   {
+    "name": "Stahlberg",
+    "url": "/gemeinden/rheinland-pfalz/stahlberg/"
+   },
+   {
+    "name": "Würzweiler",
+    "url": "/gemeinden/rheinland-pfalz/wuerzweiler/"
+   },
+   {
+    "name": "Berg (Pfalz)"
+   },
+   {
+    "name": "Hagenbach",
+    "url": "/gemeinden/rheinland-pfalz/hagenbach/"
+   },
+   {
+    "name": "Neuburg am Rhein",
+    "url": "/gemeinden/rheinland-pfalz/neuburg-am-rhein/"
+   },
+   {
+    "name": "Scheibenhardt",
+    "url": "/gemeinden/rheinland-pfalz/scheibenhardt/"
+   },
+   {
+    "name": "Jockgrim",
+    "url": "/gemeinden/rheinland-pfalz/jockgrim/"
+   },
+   {
+    "name": "Rheinzabern",
+    "url": "/gemeinden/rheinland-pfalz/rheinzabern/"
+   },
+   {
+    "name": "Erlenbach bei Kandel",
+    "url": "/gemeinden/rheinland-pfalz/erlenbach-bei-kandel/"
+   },
+   {
+    "name": "Kandel",
+    "url": "/gemeinden/rheinland-pfalz/kandel/"
+   },
+   {
+    "name": "Freisbach",
+    "url": "/gemeinden/rheinland-pfalz/freisbach/"
+   },
+   {
+    "name": "Lingenfeld",
+    "url": "/gemeinden/rheinland-pfalz/lingenfeld/"
+   },
+   {
+    "name": "Lustadt",
+    "url": "/gemeinden/rheinland-pfalz/lustadt/"
+   },
+   {
+    "name": "Schwegenheim",
+    "url": "/gemeinden/rheinland-pfalz/schwegenheim/"
+   },
+   {
+    "name": "Weingarten (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/weingarten-pfalz/"
+   },
+   {
+    "name": "Westheim (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/westheim-pfalz/"
+   },
+   {
+    "name": "Hördt",
+    "url": "/gemeinden/rheinland-pfalz/hoerdt/"
+   },
+   {
+    "name": "Kuhardt",
+    "url": "/gemeinden/rheinland-pfalz/kuhardt/"
+   },
+   {
+    "name": "Leimersheim",
+    "url": "/gemeinden/rheinland-pfalz/leimersheim/"
+   },
+   {
+    "name": "Rülzheim",
+    "url": "/gemeinden/rheinland-pfalz/ruelzheim/"
+   },
+   {
+    "name": "Landkreis Kaiserslautern",
+    "url": "/kreise/rheinland-pfalz/kaiserslautern/"
+   },
+   {
+    "name": "Bruchmühlbach-Miesau",
+    "url": "/gemeinden/rheinland-pfalz/bruchmuehlbach-miesau/"
+   },
+   {
+    "name": "Martinshöhe",
+    "url": "/gemeinden/rheinland-pfalz/martinshoehe/"
+   },
+   {
+    "name": "VG Bruchmühlbach-M."
+   },
+   {
+    "name": "Enkenbach-Alsenborn",
+    "url": "/gemeinden/rheinland-pfalz/enkenbach-alsenborn/"
+   },
+   {
+    "name": "Frankenstein",
+    "url": "/gemeinden/rheinland-pfalz/frankenstein/"
+   },
+   {
+    "name": "Hochspeyer",
+    "url": "/gemeinden/rheinland-pfalz/hochspeyer/"
+   },
+   {
+    "name": "Waldleiningen",
+    "url": "/gemeinden/rheinland-pfalz/waldleiningen/"
+   },
+   {
+    "name": "Hirschhorn/ Pfalz",
+    "url": "/gemeinden/rheinland-pfalz/hirschhorn-pfalz/"
+   },
+   {
+    "name": "Katzweiler",
+    "url": "/gemeinden/rheinland-pfalz/katzweiler/"
+   },
+   {
+    "name": "Mehlbach",
+    "url": "/gemeinden/rheinland-pfalz/mehlbach/"
+   },
+   {
+    "name": "Niederkirchen"
+   },
+   {
+    "name": "Olsbrücken",
+    "url": "/gemeinden/rheinland-pfalz/olsbruecken/"
+   },
+   {
+    "name": "Otterberg",
+    "url": "/gemeinden/rheinland-pfalz/otterberg/"
+   },
+   {
+    "name": "Schneckenhausen",
+    "url": "/gemeinden/rheinland-pfalz/schneckenhausen/"
+   },
+   {
+    "name": "Sulzbachtal",
+    "url": "/gemeinden/rheinland-pfalz/sulzbachtal/"
+   },
+   {
+    "name": "Bann",
+    "url": "/gemeinden/rheinland-pfalz/bann/"
+   },
+   {
+    "name": "Hauptstuhl",
+    "url": "/gemeinden/rheinland-pfalz/hauptstuhl/"
+   },
+   {
+    "name": "Krickenbach",
+    "url": "/gemeinden/rheinland-pfalz/krickenbach/"
+   },
+   {
+    "name": "Landstuhl",
+    "url": "/gemeinden/rheinland-pfalz/landstuhl/"
+   },
+   {
+    "name": "Linden"
+   },
+   {
+    "name": "Mittelbrunn",
+    "url": "/gemeinden/rheinland-pfalz/mittelbrunn/"
+   },
+   {
+    "name": "Schopp",
+    "url": "/gemeinden/rheinland-pfalz/schopp/"
+   },
+   {
+    "name": "Stelzenberg",
+    "url": "/gemeinden/rheinland-pfalz/stelzenberg/"
+   },
+   {
+    "name": "Trippstadt",
+    "url": "/gemeinden/rheinland-pfalz/trippstadt/"
+   },
+   {
+    "name": "Landkreis Kusel",
+    "url": "/kreise/rheinland-pfalz/kusel/"
+   },
+   {
+    "name": "Adenbach",
+    "url": "/gemeinden/rheinland-pfalz/adenbach/"
+   },
+   {
+    "name": "Aschbach",
+    "url": "/gemeinden/rheinland-pfalz/aschbach/"
+   },
+   {
+    "name": "Buborn",
+    "url": "/gemeinden/rheinland-pfalz/buborn/"
+   },
+   {
+    "name": "Cronenberg",
+    "url": "/gemeinden/rheinland-pfalz/cronenberg/"
+   },
+   {
+    "name": "Deimberg",
+    "url": "/gemeinden/rheinland-pfalz/deimberg/"
+   },
+   {
+    "name": "Einöllen",
+    "url": "/gemeinden/rheinland-pfalz/einoellen/"
+   },
+   {
+    "name": "Eßweiler",
+    "url": "/gemeinden/rheinland-pfalz/essweiler/"
+   },
+   {
+    "name": "Ginsweiler",
+    "url": "/gemeinden/rheinland-pfalz/ginsweiler/"
+   },
+   {
+    "name": "Glanbrücken",
+    "url": "/gemeinden/rheinland-pfalz/glanbruecken/"
+   },
+   {
+    "name": "Grumbach",
+    "url": "/gemeinden/rheinland-pfalz/grumbach/"
+   },
+   {
+    "name": "Hausweiler",
+    "url": "/gemeinden/rheinland-pfalz/hausweiler/"
+   },
+   {
+    "name": "Hefersweiler",
+    "url": "/gemeinden/rheinland-pfalz/hefersweiler/"
+   },
+   {
+    "name": "Heinzenhausen",
+    "url": "/gemeinden/rheinland-pfalz/heinzenhausen/"
+   },
+   {
+    "name": "Herren-Sulzbach",
+    "url": "/gemeinden/rheinland-pfalz/herren-sulzbach/"
+   },
+   {
+    "name": "Hinzweiler",
+    "url": "/gemeinden/rheinland-pfalz/hinzweiler/"
+   },
+   {
+    "name": "Homberg"
+   },
+   {
+    "name": "Hoppstädten"
+   },
+   {
+    "name": "Kappeln",
+    "url": "/gemeinden/rheinland-pfalz/kappeln/"
+   },
+   {
+    "name": "Langweiler"
+   },
+   {
+    "name": "Lauterecken",
+    "url": "/gemeinden/rheinland-pfalz/lauterecken/"
+   },
+   {
+    "name": "Lohnweiler",
+    "url": "/gemeinden/rheinland-pfalz/lohnweiler/"
+   },
+   {
+    "name": "Nerzweiler",
+    "url": "/gemeinden/rheinland-pfalz/nerzweiler/"
+   },
+   {
+    "name": "Nußbach",
+    "url": "/gemeinden/rheinland-pfalz/nussbach/"
+   },
+   {
+    "name": "Oberweiler im Tal",
+    "url": "/gemeinden/rheinland-pfalz/oberweiler-im-tal/"
+   },
+   {
+    "name": "Odenbach",
+    "url": "/gemeinden/rheinland-pfalz/odenbach/"
+   },
+   {
+    "name": "Offenbach-Hundheim",
+    "url": "/gemeinden/rheinland-pfalz/offenbach-hundheim/"
+   },
+   {
+    "name": "Reipoltskirchen",
+    "url": "/gemeinden/rheinland-pfalz/reipoltskirchen/"
+   },
+   {
+    "name": "Relsberg",
+    "url": "/gemeinden/rheinland-pfalz/relsberg/"
+   },
+   {
+    "name": "Rutsweiler a.d.Lauter"
+   },
+   {
+    "name": "Sankt Julian",
+    "url": "/gemeinden/rheinland-pfalz/sankt-julian/"
+   },
+   {
+    "name": "Unterjeckenbach",
+    "url": "/gemeinden/rheinland-pfalz/unterjeckenbach/"
+   },
+   {
+    "name": "Wiesweiler",
+    "url": "/gemeinden/rheinland-pfalz/wiesweiler/"
+   },
+   {
+    "name": "Wolfstein",
+    "url": "/gemeinden/rheinland-pfalz/wolfstein/"
+   },
+   {
+    "name": "Altenkirchen"
+   },
+   {
+    "name": "Breitenbach",
+    "url": "/gemeinden/rheinland-pfalz/breitenbach/"
+   },
+   {
+    "name": "Brücken (Pfalz)"
+   },
+   {
+    "name": "Dittweiler",
+    "url": "/gemeinden/rheinland-pfalz/dittweiler/"
+   },
+   {
+    "name": "Dunzweiler",
+    "url": "/gemeinden/rheinland-pfalz/dunzweiler/"
+   },
+   {
+    "name": "Frohnhofen",
+    "url": "/gemeinden/rheinland-pfalz/frohnhofen/"
+   },
+   {
+    "name": "Gries",
+    "url": "/gemeinden/rheinland-pfalz/gries/"
+   },
+   {
+    "name": "Henschtal",
+    "url": "/gemeinden/rheinland-pfalz/henschtal/"
+   },
+   {
+    "name": "Herschweiler-Pettersh."
+   },
+   {
+    "name": "Hüffler",
+    "url": "/gemeinden/rheinland-pfalz/hueffler/"
+   },
+   {
+    "name": "Krottelbach",
+    "url": "/gemeinden/rheinland-pfalz/krottelbach/"
+   },
+   {
+    "name": "Langenbach"
+   },
+   {
+    "name": "Matzenbach",
+    "url": "/gemeinden/rheinland-pfalz/matzenbach/"
+   },
+   {
+    "name": "Nanzdietschweiler",
+    "url": "/gemeinden/rheinland-pfalz/nanzdietschweiler/"
+   },
+   {
+    "name": "Ohmbach",
+    "url": "/gemeinden/rheinland-pfalz/ohmbach/"
+   },
+   {
+    "name": "Quirnbach/ Pfalz",
+    "url": "/gemeinden/rheinland-pfalz/quirnbach-pfalz/"
+   },
+   {
+    "name": "Rehweiler",
+    "url": "/gemeinden/rheinland-pfalz/rehweiler/"
+   },
+   {
+    "name": "Waldmohr",
+    "url": "/gemeinden/rheinland-pfalz/waldmohr/"
+   },
+   {
+    "name": "Albessen",
+    "url": "/gemeinden/rheinland-pfalz/albessen/"
+   },
+   {
+    "name": "Altenglan",
+    "url": "/gemeinden/rheinland-pfalz/altenglan/"
+   },
+   {
+    "name": "Bedesbach",
+    "url": "/gemeinden/rheinland-pfalz/bedesbach/"
+   },
+   {
+    "name": "Blaubach",
+    "url": "/gemeinden/rheinland-pfalz/blaubach/"
+   },
+   {
+    "name": "Bosenbach",
+    "url": "/gemeinden/rheinland-pfalz/bosenbach/"
+   },
+   {
+    "name": "Dennweiler-Frohnbach",
+    "url": "/gemeinden/rheinland-pfalz/dennweiler-frohnbach/"
+   },
+   {
+    "name": "Elzweiler",
+    "url": "/gemeinden/rheinland-pfalz/elzweiler/"
+   },
+   {
+    "name": "Erdesbach",
+    "url": "/gemeinden/rheinland-pfalz/erdesbach/"
+   },
+   {
+    "name": "Etschberg",
+    "url": "/gemeinden/rheinland-pfalz/etschberg/"
+   },
+   {
+    "name": "Föckelberg",
+    "url": "/gemeinden/rheinland-pfalz/foeckelberg/"
+   },
+   {
+    "name": "Haschbach am Remigiusb."
+   },
+   {
+    "name": "Herchweiler",
+    "url": "/gemeinden/rheinland-pfalz/herchweiler/"
+   },
+   {
+    "name": "Horschbach",
+    "url": "/gemeinden/rheinland-pfalz/horschbach/"
+   },
+   {
+    "name": "Konken",
+    "url": "/gemeinden/rheinland-pfalz/konken/"
+   },
+   {
+    "name": "Körborn",
+    "url": "/gemeinden/rheinland-pfalz/koerborn/"
+   },
+   {
+    "name": "Kusel",
+    "url": "/gemeinden/rheinland-pfalz/kusel/"
+   },
+   {
+    "name": "Neunkirchen am Potzberg",
+    "url": "/gemeinden/rheinland-pfalz/neunkirchen-am-potzberg/"
+   },
+   {
+    "name": "Niederalben",
+    "url": "/gemeinden/rheinland-pfalz/niederalben/"
+   },
+   {
+    "name": "Niederstaufenbach",
+    "url": "/gemeinden/rheinland-pfalz/niederstaufenbach/"
+   },
+   {
+    "name": "Oberalben",
+    "url": "/gemeinden/rheinland-pfalz/oberalben/"
+   },
+   {
+    "name": "Oberstaufenbach",
+    "url": "/gemeinden/rheinland-pfalz/oberstaufenbach/"
+   },
+   {
+    "name": "Rammelsbach",
+    "url": "/gemeinden/rheinland-pfalz/rammelsbach/"
+   },
+   {
+    "name": "Reichweiler",
+    "url": "/gemeinden/rheinland-pfalz/reichweiler/"
+   },
+   {
+    "name": "Ruthweiler",
+    "url": "/gemeinden/rheinland-pfalz/ruthweiler/"
+   },
+   {
+    "name": "Rutsweiler am Glan",
+    "url": "/gemeinden/rheinland-pfalz/rutsweiler-am-glan/"
+   },
+   {
+    "name": "Schellweiler",
+    "url": "/gemeinden/rheinland-pfalz/schellweiler/"
+   },
+   {
+    "name": "Selchenbach",
+    "url": "/gemeinden/rheinland-pfalz/selchenbach/"
+   },
+   {
+    "name": "Theisbergstegen",
+    "url": "/gemeinden/rheinland-pfalz/theisbergstegen/"
+   },
+   {
+    "name": "Ulmet",
+    "url": "/gemeinden/rheinland-pfalz/ulmet/"
+   },
+   {
+    "name": "Welchweiler",
+    "url": "/gemeinden/rheinland-pfalz/welchweiler/"
+   },
+   {
+    "name": "Albersweiler",
+    "url": "/gemeinden/rheinland-pfalz/albersweiler/"
+   },
+   {
+    "name": "Annweiler am Trifels",
+    "url": "/gemeinden/rheinland-pfalz/annweiler-am-trifels/"
+   },
+   {
+    "name": "Bad Bergzabern",
+    "url": "/gemeinden/rheinland-pfalz/bad-bergzabern/"
+   },
+   {
+    "name": "Hanhofen",
+    "url": "/gemeinden/rheinland-pfalz/hanhofen/"
+   },
+   {
+    "name": "Neuhofen",
+    "url": "/gemeinden/rheinland-pfalz/neuhofen/"
+   },
+   {
+    "name": "Bacharach",
+    "url": "/gemeinden/rheinland-pfalz/bacharach/"
+   },
+   {
+    "name": "Niederheimbach",
+    "url": "/gemeinden/rheinland-pfalz/niederheimbach/"
+   },
+   {
+    "name": "Weiler bei Bingen",
+    "url": "/gemeinden/rheinland-pfalz/weiler-bei-bingen/"
+   },
+   {
+    "name": "Engelstadt",
+    "url": "/gemeinden/rheinland-pfalz/engelstadt/"
+   },
+   {
+    "name": "Gau-Algesheim",
+    "url": "/gemeinden/rheinland-pfalz/gau-algesheim/"
+   },
+   {
+    "name": "Dalheim",
+    "url": "/gemeinden/rheinland-pfalz/dalheim/"
+   },
+   {
+    "name": "Guntersblum",
+    "url": "/gemeinden/rheinland-pfalz/guntersblum/"
+   },
+   {
+    "name": "Köngernheim",
+    "url": "/gemeinden/rheinland-pfalz/koengernheim/"
+   },
+   {
+    "name": "Nierstein",
+    "url": "/gemeinden/rheinland-pfalz/nierstein/"
+   },
+   {
+    "name": "Oppenheim",
+    "url": "/gemeinden/rheinland-pfalz/oppenheim/"
+   },
+   {
+    "name": "Bundenthal",
+    "url": "/gemeinden/rheinland-pfalz/bundenthal/"
+   },
+   {
+    "name": "Erfweiler",
+    "url": "/gemeinden/rheinland-pfalz/erfweiler/"
+   },
+   {
+    "name": "Fischbach bei Dahn",
+    "url": "/gemeinden/rheinland-pfalz/fischbach-bei-dahn/"
+   },
+   {
+    "name": "Ludwigswinkel",
+    "url": "/gemeinden/rheinland-pfalz/ludwigswinkel/"
+   },
+   {
+    "name": "Nothweiler",
+    "url": "/gemeinden/rheinland-pfalz/nothweiler/"
+   },
+   {
+    "name": "Schönau (Pfalz)",
+    "url": "/gemeinden/rheinland-pfalz/schoenau-pfalz/"
+   },
+   {
+    "name": "Hinterweidenthal",
+    "url": "/gemeinden/rheinland-pfalz/hinterweidenthal/"
+   },
+   {
+    "name": "Kröppen",
+    "url": "/gemeinden/rheinland-pfalz/kroeppen/"
+   },
+   {
+    "name": "Lemberg",
+    "url": "/gemeinden/rheinland-pfalz/lemberg/"
+   },
+   {
+    "name": "Obersimten",
+    "url": "/gemeinden/rheinland-pfalz/obersimten/"
+   },
+   {
+    "name": "Schweix",
+    "url": "/gemeinden/rheinland-pfalz/schweix/"
+   },
+   {
+    "name": "Trulben",
+    "url": "/gemeinden/rheinland-pfalz/trulben/"
+   },
+   {
+    "name": "Münchweiler a.d.Rodalb"
+   },
+   {
+    "name": "Höhfröschen",
+    "url": "/gemeinden/rheinland-pfalz/hoehfroeschen/"
+   },
+   {
+    "name": "Maßweiler",
+    "url": "/gemeinden/rheinland-pfalz/massweiler/"
+   }
+  ]
+ },
+ {
+  "land": "BW",
+  "programm": "Ausgleichstock 2025 – Regierungsbezirk Stuttgart",
+  "beschreibung": "Investitionshilfen (Bedarfszuweisungen nach § 13 FAG/VwV Ausgleichstock) für leistungsschwache Gemeinden; kein Konsolidierungs- oder Entschuldungsprogramm, aber amtliches Signal für Finanzschwäche. Betrag = Summe der bewilligten Investitionshilfen je Gemeinde.",
+  "quelle_url": "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Stuttgart/_DocumentLibraries/PresseAnhang/2025/250729_Uebersicht_Ausgleichstock_2025.pdf",
+  "stand": "2025-07-29",
+  "gemeinden": [
+   {
+    "name": "Mötzingen",
+    "url": "/gemeinden/baden-wuerttemberg/moetzingen/"
+   },
+   {
+    "name": "Waldenbuch",
+    "url": "/gemeinden/baden-wuerttemberg/waldenbuch/"
+   },
+   {
+    "name": "Weil der Stadt",
+    "url": "/gemeinden/baden-wuerttemberg/weil-der-stadt/"
+   },
+   {
+    "name": "Weil im Schönbuch",
+    "url": "/gemeinden/baden-wuerttemberg/weil-im-schoenbuch/"
+   },
+   {
+    "name": "Kohlberg",
+    "url": "/gemeinden/baden-wuerttemberg/kohlberg/"
+   },
+   {
+    "name": "Neckartailfingen",
+    "url": "/gemeinden/baden-wuerttemberg/neckartailfingen/"
+   },
+   {
+    "name": "Reichenbach a.d.F."
+   },
+   {
+    "name": "Bad Ditzenbach",
+    "url": "/gemeinden/baden-wuerttemberg/bad-ditzenbach/"
+   },
+   {
+    "name": "Bad Überkingen",
+    "url": "/gemeinden/baden-wuerttemberg/bad-ueberkingen/"
+   },
+   {
+    "name": "Böhmenkirch",
+    "url": "/gemeinden/baden-wuerttemberg/boehmenkirch/"
+   },
+   {
+    "name": "Donzdorf",
+    "url": "/gemeinden/baden-wuerttemberg/donzdorf/"
+   },
+   {
+    "name": "Drackenstein",
+    "url": "/gemeinden/baden-wuerttemberg/drackenstein/"
+   },
+   {
+    "name": "Geislingen a.d.St."
+   },
+   {
+    "name": "Gerstetten",
+    "url": "/gemeinden/baden-wuerttemberg/gerstetten/"
+   },
+   {
+    "name": "Giengen a.d.Br."
+   },
+   {
+    "name": "Herbrechtingen",
+    "url": "/gemeinden/baden-wuerttemberg/herbrechtingen/"
+   },
+   {
+    "name": "Nattheim",
+    "url": "/gemeinden/baden-wuerttemberg/nattheim/"
+   },
+   {
+    "name": "Niederstotzingen",
+    "url": "/gemeinden/baden-wuerttemberg/niederstotzingen/"
+   },
+   {
+    "name": "Sontheim a.d.B."
+   },
+   {
+    "name": "Steinheim a.A."
+   },
+   {
+    "name": "Bad Friedrichshall",
+    "url": "/gemeinden/baden-wuerttemberg/bad-friedrichshall/"
+   },
+   {
+    "name": "Bad Rappenau",
+    "url": "/gemeinden/baden-wuerttemberg/bad-rappenau/"
+   },
+   {
+    "name": "Eberstadt",
+    "url": "/gemeinden/baden-wuerttemberg/eberstadt/"
+   },
+   {
+    "name": "Eppingen",
+    "url": "/gemeinden/baden-wuerttemberg/eppingen/"
+   },
+   {
+    "name": "Gemmingen",
+    "url": "/gemeinden/baden-wuerttemberg/gemmingen/"
+   },
+   {
+    "name": "Hardthausen a.K."
+   },
+   {
+    "name": "Massenbachhausen",
+    "url": "/gemeinden/baden-wuerttemberg/massenbachhausen/"
+   },
+   {
+    "name": "Neudenau",
+    "url": "/gemeinden/baden-wuerttemberg/neudenau/"
+   },
+   {
+    "name": "Oedheim",
+    "url": "/gemeinden/baden-wuerttemberg/oedheim/"
+   },
+   {
+    "name": "Schwaigern",
+    "url": "/gemeinden/baden-wuerttemberg/schwaigern/"
+   },
+   {
+    "name": "Untereisesheim",
+    "url": "/gemeinden/baden-wuerttemberg/untereisesheim/"
+   },
+   {
+    "name": "Weinsberg",
+    "url": "/gemeinden/baden-wuerttemberg/weinsberg/"
+   },
+   {
+    "name": "Widdern",
+    "url": "/gemeinden/baden-wuerttemberg/widdern/"
+   },
+   {
+    "name": "Dörzbach",
+    "url": "/gemeinden/baden-wuerttemberg/doerzbach/"
+   },
+   {
+    "name": "Krautheim",
+    "url": "/gemeinden/baden-wuerttemberg/krautheim/"
+   },
+   {
+    "name": "Schöntal",
+    "url": "/gemeinden/baden-wuerttemberg/schoental/"
+   },
+   {
+    "name": "Zweiflingen",
+    "url": "/gemeinden/baden-wuerttemberg/zweiflingen/"
+   },
+   {
+    "name": "Besigheim",
+    "url": "/gemeinden/baden-wuerttemberg/besigheim/"
+   },
+   {
+    "name": "Freudental",
+    "url": "/gemeinden/baden-wuerttemberg/freudental/"
+   },
+   {
+    "name": "Kirchheim a.N."
+   },
+   {
+    "name": "Markgröningen",
+    "url": "/gemeinden/baden-wuerttemberg/markgroeningen/"
+   },
+   {
+    "name": "Mundelsheim",
+    "url": "/gemeinden/baden-wuerttemberg/mundelsheim/"
+   },
+   {
+    "name": "Oberstenfeld",
+    "url": "/gemeinden/baden-wuerttemberg/oberstenfeld/"
+   },
+   {
+    "name": "Pleidelsheim",
+    "url": "/gemeinden/baden-wuerttemberg/pleidelsheim/"
+   },
+   {
+    "name": "Ahorn",
+    "url": "/gemeinden/baden-wuerttemberg/ahorn/"
+   },
+   {
+    "name": "Assamstadt",
+    "url": "/gemeinden/baden-wuerttemberg/assamstadt/"
+   },
+   {
+    "name": "Bad Mergentheim",
+    "url": "/gemeinden/baden-wuerttemberg/bad-mergentheim/"
+   },
+   {
+    "name": "Creglingen",
+    "url": "/gemeinden/baden-wuerttemberg/creglingen/"
+   },
+   {
+    "name": "Freudenberg",
+    "url": "/gemeinden/baden-wuerttemberg/freudenberg/"
+   },
+   {
+    "name": "Grünsfeld",
+    "url": "/gemeinden/baden-wuerttemberg/gruensfeld/"
+   },
+   {
+    "name": "Igersheim",
+    "url": "/gemeinden/baden-wuerttemberg/igersheim/"
+   },
+   {
+    "name": "Königheim",
+    "url": "/gemeinden/baden-wuerttemberg/koenigheim/"
+   },
+   {
+    "name": "Külsheim",
+    "url": "/gemeinden/baden-wuerttemberg/kuelsheim/"
+   },
+   {
+    "name": "Tauberbischofsheim",
+    "url": "/gemeinden/baden-wuerttemberg/tauberbischofsheim/"
+   },
+   {
+    "name": "Weikersheim",
+    "url": "/gemeinden/baden-wuerttemberg/weikersheim/"
+   },
+   {
+    "name": "Wertheim",
+    "url": "/gemeinden/baden-wuerttemberg/wertheim/"
+   },
+   {
+    "name": "Wittighausen",
+    "url": "/gemeinden/baden-wuerttemberg/wittighausen/"
+   },
+   {
+    "name": "Ellenberg",
+    "url": "/gemeinden/baden-wuerttemberg/ellenberg/"
+   },
+   {
+    "name": "Ellwangen a.d.J."
+   },
+   {
+    "name": "Heubach",
+    "url": "/gemeinden/baden-wuerttemberg/heubach/"
+   },
+   {
+    "name": "Heuchlingen",
+    "url": "/gemeinden/baden-wuerttemberg/heuchlingen/"
+   },
+   {
+    "name": "Hüttlingen",
+    "url": "/gemeinden/baden-wuerttemberg/huettlingen/"
+   },
+   {
+    "name": "Jagstzell",
+    "url": "/gemeinden/baden-wuerttemberg/jagstzell/"
+   },
+   {
+    "name": "Lauchheim",
+    "url": "/gemeinden/baden-wuerttemberg/lauchheim/"
+   },
+   {
+    "name": "Mutlangen",
+    "url": "/gemeinden/baden-wuerttemberg/mutlangen/"
+   },
+   {
+    "name": "Neresheim",
+    "url": "/gemeinden/baden-wuerttemberg/neresheim/"
+   },
+   {
+    "name": "Neuler",
+    "url": "/gemeinden/baden-wuerttemberg/neuler/"
+   },
+   {
+    "name": "Spraitbach",
+    "url": "/gemeinden/baden-wuerttemberg/spraitbach/"
+   },
+   {
+    "name": "Stödtlen",
+    "url": "/gemeinden/baden-wuerttemberg/stoedtlen/"
+   },
+   {
+    "name": "Tannhausen",
+    "url": "/gemeinden/baden-wuerttemberg/tannhausen/"
+   },
+   {
+    "name": "Unterschneidheim",
+    "url": "/gemeinden/baden-wuerttemberg/unterschneidheim/"
+   },
+   {
+    "name": "Waldstetten",
+    "url": "/gemeinden/baden-wuerttemberg/waldstetten/"
+   },
+   {
+    "name": "Westhausen",
+    "url": "/gemeinden/baden-wuerttemberg/westhausen/"
+   },
+   {
+    "name": "Allmersbach i.T."
+   },
+   {
+    "name": "Murrhardt",
+    "url": "/gemeinden/baden-wuerttemberg/murrhardt/"
+   },
+   {
+    "name": "Remshalden",
+    "url": "/gemeinden/baden-wuerttemberg/remshalden/"
+   },
+   {
+    "name": "Rudersberg",
+    "url": "/gemeinden/baden-wuerttemberg/rudersberg/"
+   },
+   {
+    "name": "Schorndorf",
+    "url": "/gemeinden/baden-wuerttemberg/schorndorf/"
+   },
+   {
+    "name": "Sulzbach a.d.M."
+   },
+   {
+    "name": "Urbach",
+    "url": "/gemeinden/baden-wuerttemberg/urbach/"
+   },
+   {
+    "name": "Blaufelden",
+    "url": "/gemeinden/baden-wuerttemberg/blaufelden/"
+   },
+   {
+    "name": "Braunsbach",
+    "url": "/gemeinden/baden-wuerttemberg/braunsbach/"
+   },
+   {
+    "name": "Crailsheim",
+    "url": "/gemeinden/baden-wuerttemberg/crailsheim/"
+   },
+   {
+    "name": "Gerabronn",
+    "url": "/gemeinden/baden-wuerttemberg/gerabronn/"
+   },
+   {
+    "name": "Ilshofen",
+    "url": "/gemeinden/baden-wuerttemberg/ilshofen/"
+   },
+   {
+    "name": "Kreßberg",
+    "url": "/gemeinden/baden-wuerttemberg/kressberg/"
+   },
+   {
+    "name": "Langenburg",
+    "url": "/gemeinden/baden-wuerttemberg/langenburg/"
+   },
+   {
+    "name": "Michelfeld",
+    "url": "/gemeinden/baden-wuerttemberg/michelfeld/"
+   },
+   {
+    "name": "Obersontheim",
+    "url": "/gemeinden/baden-wuerttemberg/obersontheim/"
+   },
+   {
+    "name": "Rosengarten",
+    "url": "/gemeinden/baden-wuerttemberg/rosengarten/"
+   },
+   {
+    "name": "Rot am See",
+    "url": "/gemeinden/baden-wuerttemberg/rot-am-see/"
+   },
+   {
+    "name": "Schrozberg",
+    "url": "/gemeinden/baden-wuerttemberg/schrozberg/"
+   },
+   {
+    "name": "Stimpfach",
+    "url": "/gemeinden/baden-wuerttemberg/stimpfach/"
+   },
+   {
+    "name": "Sulzbach-Laufen",
+    "url": "/gemeinden/baden-wuerttemberg/sulzbach-laufen/"
+   },
+   {
+    "name": "Untermünkheim",
+    "url": "/gemeinden/baden-wuerttemberg/untermuenkheim/"
+   },
+   {
+    "name": "Wallhausen",
+    "url": "/gemeinden/baden-wuerttemberg/wallhausen/"
+   }
+  ]
+ },
+ {
+  "land": "BW",
+  "programm": "Ausgleichstock 2025 – Regierungsbezirk Karlsruhe, 1. Verteilungsrunde",
+  "beschreibung": "Investitionshilfen aus dem Ausgleichstock für leistungsschwache Gemeinden (Sommersitzung 21.07.2025: rund 22,03 Mio. Euro, 47 Gemeinden, 61 Vorhaben); kein Konsolidierungsprogramm. Betrag = Summe der Bewilligungen je Gemeinde (Quelle in T€).",
+  "quelle_url": "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Karlsruhe/_DocumentLibraries/PresseAnhang/250724-Ma%C3%9Fnahmenliste_Sommersitzung_2025.pdf",
+  "stand": "2025-07-24",
+  "gemeinden": [
+   {
+    "name": "Altensteig",
+    "url": "/gemeinden/baden-wuerttemberg/altensteig/"
+   },
+   {
+    "name": "Dobel",
+    "url": "/gemeinden/baden-wuerttemberg/dobel/"
+   },
+   {
+    "name": "Ebhausen",
+    "url": "/gemeinden/baden-wuerttemberg/ebhausen/"
+   },
+   {
+    "name": "Höfen an der Enz",
+    "url": "/gemeinden/baden-wuerttemberg/hoefen-an-der-enz/"
+   },
+   {
+    "name": "Engelsbrand",
+    "url": "/gemeinden/baden-wuerttemberg/engelsbrand/"
+   },
+   {
+    "name": "Bad Rippoldsau-Schapbach",
+    "url": "/gemeinden/baden-wuerttemberg/bad-rippoldsau-schapbach/"
+   },
+   {
+    "name": "Baiersbronn",
+    "url": "/gemeinden/baden-wuerttemberg/baiersbronn/"
+   },
+   {
+    "name": "Eutingen im Gäu",
+    "url": "/gemeinden/baden-wuerttemberg/eutingen-im-gaeu/"
+   },
+   {
+    "name": "Waldachtal",
+    "url": "/gemeinden/baden-wuerttemberg/waldachtal/"
+   },
+   {
+    "name": "Eggenstein-Leopoldshafen",
+    "url": "/gemeinden/baden-wuerttemberg/eggenstein-leopoldshafen/"
+   },
+   {
+    "name": "Gondelsheim",
+    "url": "/gemeinden/baden-wuerttemberg/gondelsheim/"
+   },
+   {
+    "name": "Kraichtal",
+    "url": "/gemeinden/baden-wuerttemberg/kraichtal/"
+   },
+   {
+    "name": "Kürnbach",
+    "url": "/gemeinden/baden-wuerttemberg/kuernbach/"
+   },
+   {
+    "name": "Östringen",
+    "url": "/gemeinden/baden-wuerttemberg/oestringen/"
+   },
+   {
+    "name": "Waldbronn",
+    "url": "/gemeinden/baden-wuerttemberg/waldbronn/"
+   },
+   {
+    "name": "Billigheim",
+    "url": "/gemeinden/baden-wuerttemberg/billigheim/"
+   },
+   {
+    "name": "Binau",
+    "url": "/gemeinden/baden-wuerttemberg/binau/"
+   },
+   {
+    "name": "Hardheim",
+    "url": "/gemeinden/baden-wuerttemberg/hardheim/"
+   },
+   {
+    "name": "Haßmersheim",
+    "url": "/gemeinden/baden-wuerttemberg/hassmersheim/"
+   },
+   {
+    "name": "Höpfingen",
+    "url": "/gemeinden/baden-wuerttemberg/hoepfingen/"
+   },
+   {
+    "name": "Limbach",
+    "url": "/gemeinden/baden-wuerttemberg/limbach/"
+   },
+   {
+    "name": "Neckargerach",
+    "url": "/gemeinden/baden-wuerttemberg/neckargerach/"
+   },
+   {
+    "name": "Osterburken",
+    "url": "/gemeinden/baden-wuerttemberg/osterburken/"
+   },
+   {
+    "name": "Ravenstein",
+    "url": "/gemeinden/baden-wuerttemberg/ravenstein/"
+   },
+   {
+    "name": "Rosenberg",
+    "url": "/gemeinden/baden-wuerttemberg/rosenberg-neckar-odenwald-kreis/"
+   },
+   {
+    "name": "Waldbrunn",
+    "url": "/gemeinden/baden-wuerttemberg/waldbrunn/"
+   },
+   {
+    "name": "Walldürn",
+    "url": "/gemeinden/baden-wuerttemberg/wallduern/"
+   },
+   {
+    "name": "Au am Rhein",
+    "url": "/gemeinden/baden-wuerttemberg/au-am-rhein/"
+   },
+   {
+    "name": "Bietigheim"
+   },
+   {
+    "name": "Bischweier",
+    "url": "/gemeinden/baden-wuerttemberg/bischweier/"
+   },
+   {
+    "name": "Elchesheim-Illingen",
+    "url": "/gemeinden/baden-wuerttemberg/elchesheim-illingen/"
+   },
+   {
+    "name": "Forbach",
+    "url": "/gemeinden/baden-wuerttemberg/forbach/"
+   },
+   {
+    "name": "Ötigheim",
+    "url": "/gemeinden/baden-wuerttemberg/oetigheim/"
+   },
+   {
+    "name": "Rheinmünster",
+    "url": "/gemeinden/baden-wuerttemberg/rheinmuenster/"
+   },
+   {
+    "name": "Sinzheim",
+    "url": "/gemeinden/baden-wuerttemberg/sinzheim/"
+   },
+   {
+    "name": "Steinmauern",
+    "url": "/gemeinden/baden-wuerttemberg/steinmauern/"
+   },
+   {
+    "name": "Edingen-Neckarhausen",
+    "url": "/gemeinden/baden-wuerttemberg/edingen-neckarhausen/"
+   },
+   {
+    "name": "Eschelbronn",
+    "url": "/gemeinden/baden-wuerttemberg/eschelbronn/"
+   },
+   {
+    "name": "Heddesbach",
+    "url": "/gemeinden/baden-wuerttemberg/heddesbach/"
+   },
+   {
+    "name": "Heiligkreuzsteinach",
+    "url": "/gemeinden/baden-wuerttemberg/heiligkreuzsteinach/"
+   },
+   {
+    "name": "Hemsbach",
+    "url": "/gemeinden/baden-wuerttemberg/hemsbach/"
+   },
+   {
+    "name": "Hirschberg an der Bergstraße",
+    "url": "/gemeinden/baden-wuerttemberg/hirschberg-an-der-bergstrasse/"
+   },
+   {
+    "name": "Laudenbach",
+    "url": "/gemeinden/baden-wuerttemberg/laudenbach/"
+   },
+   {
+    "name": "Meckesheim",
+    "url": "/gemeinden/baden-wuerttemberg/meckesheim/"
+   },
+   {
+    "name": "Neulußheim",
+    "url": "/gemeinden/baden-wuerttemberg/neulussheim/"
+   },
+   {
+    "name": "Reilingen",
+    "url": "/gemeinden/baden-wuerttemberg/reilingen/"
+   },
+   {
+    "name": "Wilhelmsfeld",
+    "url": "/gemeinden/baden-wuerttemberg/wilhelmsfeld/"
+   }
+  ]
+ },
+ {
+  "land": "NI",
+  "programm": "Entschuldungsprogramme nach §§ 13, 14a, 14b NFAG (Zukunftsvertrag, Stabilisierungshilfen, kapitalisierte Bedarfszuweisungen)",
+  "beschreibung": "Entschuldungshilfen des Landes und der Kommunen für finanzschwache Kommunen mit hohen Liquiditätskrediten: Zukunftsverträge (ZV, § 14a NFAG, Antragsfrist 31.03.2013), Stabilisierungshilfen (Stab.H., § 14b NFAG) und kapitalisierte Bedarfszuweisungen (k BzA, § 13 NFAG). Die Anlage der Zwischenbilanz des Innenministeriums listet 73 Maßnahmen bei 68 Kommunen mit zusammen 1.710.072.805 € Tilgungshilfe; jahr = Jahr des (letzten) Vertragsabschlusses.",
+  "quelle_url": "https://www.mi.niedersachsen.de/download/122951/Zwischenbilanz_der_Nds._Entschuldungsprogramme.pdf",
+  "stand": "2017-08-18",
+  "gemeinden": [
+   {
+    "name": "Landkreis Goslar",
+    "url": "/kreise/niedersachsen/goslar/"
+   },
+   {
+    "name": "Goslar",
+    "url": "/gemeinden/niedersachsen/goslar/"
+   },
+   {
+    "name": "Braunlage",
+    "url": "/gemeinden/niedersachsen/braunlage/"
+   },
+   {
+    "name": "Clausthal-Zellerfeld",
+    "url": "/gemeinden/niedersachsen/clausthal-zellerfeld/"
+   },
+   {
+    "name": "Landkreis Helmstedt",
+    "url": "/kreise/niedersachsen/helmstedt/"
+   },
+   {
+    "name": "Lehre",
+    "url": "/gemeinden/niedersachsen/lehre/"
+   },
+   {
+    "name": "Gemeinde Büddenstedt"
+   },
+   {
+    "name": "Königslutter am Elm",
+    "url": "/gemeinden/niedersachsen/koenigslutter-am-elm/"
+   },
+   {
+    "name": "Schöningen",
+    "url": "/gemeinden/niedersachsen/schoeningen/"
+   },
+   {
+    "name": "Bad Gandersheim",
+    "url": "/gemeinden/niedersachsen/bad-gandersheim/"
+   },
+   {
+    "name": "Northeim",
+    "url": "/gemeinden/niedersachsen/northeim/"
+   },
+   {
+    "name": "Dassel",
+    "url": "/gemeinden/niedersachsen/dassel/"
+   },
+   {
+    "name": "Uslar",
+    "url": "/gemeinden/niedersachsen/uslar/"
+   },
+   {
+    "name": "Einbeck",
+    "url": "/gemeinden/niedersachsen/einbeck/"
+   },
+   {
+    "name": "Bodenfelde",
+    "url": "/gemeinden/niedersachsen/bodenfelde/"
+   },
+   {
+    "name": "Kalefeld",
+    "url": "/gemeinden/niedersachsen/kalefeld/"
+   },
+   {
+    "name": "Ilsede",
+    "url": "/gemeinden/niedersachsen/ilsede/"
+   },
+   {
+    "name": "Schladen-Werla",
+    "url": "/gemeinden/niedersachsen/schladen-werla/"
+   },
+   {
+    "name": "Samtgemeinde Elm-Asse"
+   },
+   {
+    "name": "Landkreis Göttingen",
+    "url": "/kreise/niedersachsen/goettingen/"
+   },
+   {
+    "name": "Göttingen",
+    "url": "/gemeinden/niedersachsen/goettingen/"
+   },
+   {
+    "name": "Duderstadt",
+    "url": "/gemeinden/niedersachsen/duderstadt/"
+   },
+   {
+    "name": "Dransfeld",
+    "url": "/gemeinden/niedersachsen/dransfeld/"
+   },
+   {
+    "name": "Bad Lauterberg im Harz",
+    "url": "/gemeinden/niedersachsen/bad-lauterberg-im-harz/"
+   },
+   {
+    "name": "Bad Sachsa",
+    "url": "/gemeinden/niedersachsen/bad-sachsa/"
+   },
+   {
+    "name": "Bad Grund (Harz)",
+    "url": "/gemeinden/niedersachsen/bad-grund-harz/"
+   },
+   {
+    "name": "Walkenried",
+    "url": "/gemeinden/niedersachsen/walkenried/"
+   },
+   {
+    "name": "Hattorf am Harz",
+    "url": "/gemeinden/niedersachsen/hattorf-am-harz/"
+   },
+   {
+    "name": "Barsinghausen",
+    "url": "/gemeinden/niedersachsen/barsinghausen/"
+   },
+   {
+    "name": "Seelze",
+    "url": "/gemeinden/niedersachsen/seelze/"
+   },
+   {
+    "name": "Bad Münder am Deister",
+    "url": "/gemeinden/niedersachsen/bad-muender-am-deister/"
+   },
+   {
+    "name": "Hildesheim",
+    "url": "/gemeinden/niedersachsen/hildesheim/"
+   },
+   {
+    "name": "Freden (Leine)",
+    "url": "/gemeinden/niedersachsen/freden-leine/"
+   },
+   {
+    "name": "Liebenau",
+    "url": "/gemeinden/niedersachsen/liebenau/"
+   },
+   {
+    "name": "Südheide",
+    "url": "/gemeinden/niedersachsen/suedheide/"
+   },
+   {
+    "name": "Eschede",
+    "url": "/gemeinden/niedersachsen/eschede/"
+   },
+   {
+    "name": "Landkreis Cuxhaven",
+    "url": "/kreise/niedersachsen/cuxhaven/"
+   },
+   {
+    "name": "Cuxhaven",
+    "url": "/gemeinden/niedersachsen/cuxhaven/"
+   },
+   {
+    "name": "Geestland",
+    "url": "/gemeinden/niedersachsen/geestland/"
+   },
+   {
+    "name": "Wurster Nordseeküste",
+    "url": "/gemeinden/niedersachsen/wurster-nordseekueste/"
+   },
+   {
+    "name": "Beverstedt",
+    "url": "/gemeinden/niedersachsen/beverstedt/"
+   },
+   {
+    "name": "Hagen im Bremischen",
+    "url": "/gemeinden/niedersachsen/hagen-im-bremischen/"
+   },
+   {
+    "name": "Hemmoor",
+    "url": "/gemeinden/niedersachsen/hemmoor/"
+   },
+   {
+    "name": "Lamstedt",
+    "url": "/gemeinden/niedersachsen/lamstedt/"
+   },
+   {
+    "name": "Samtgemeinde Land Hadeln"
+   },
+   {
+    "name": "Landkreis Lüchow-Dannenberg",
+    "url": "/kreise/niedersachsen/luechow-dannenberg/"
+   },
+   {
+    "name": "Samtgemeinde Elbtalaue"
+   },
+   {
+    "name": "Lüchow (Wendland)",
+    "url": "/gemeinden/niedersachsen/luechow-wendland/"
+   },
+   {
+    "name": "Landkreis Lüneburg",
+    "url": "/kreise/niedersachsen/lueneburg/"
+   },
+   {
+    "name": "Lüneburg",
+    "url": "/gemeinden/niedersachsen/lueneburg/"
+   },
+   {
+    "name": "Amt Neuhaus",
+    "url": "/gemeinden/niedersachsen/amt-neuhaus/"
+   },
+   {
+    "name": "Landkreis Uelzen",
+    "url": "/kreise/niedersachsen/uelzen/"
+   },
+   {
+    "name": "Uelzen",
+    "url": "/gemeinden/niedersachsen/uelzen/"
+   },
+   {
+    "name": "Ebstorf",
+    "url": "/gemeinden/niedersachsen/ebstorf/"
+   },
+   {
+    "name": "Samtgemeinde Aue"
+   },
+   {
+    "name": "Rosche",
+    "url": "/gemeinden/niedersachsen/rosche/"
+   },
+   {
+    "name": "Suderburg",
+    "url": "/gemeinden/niedersachsen/suderburg/"
+   },
+   {
+    "name": "Wilhelmshaven",
+    "url": "/gemeinden/niedersachsen/wilhelmshaven/"
+   },
+   {
+    "name": "Ihlow",
+    "url": "/gemeinden/niedersachsen/ihlow/"
+   },
+   {
+    "name": "Dornum",
+    "url": "/gemeinden/niedersachsen/dornum/"
+   },
+   {
+    "name": "Juist",
+    "url": "/gemeinden/niedersachsen/juist/"
+   },
+   {
+    "name": "Wangerland",
+    "url": "/gemeinden/niedersachsen/wangerland/"
+   },
+   {
+    "name": "Varel",
+    "url": "/gemeinden/niedersachsen/varel/"
+   },
+   {
+    "name": "Wangerooge",
+    "url": "/gemeinden/niedersachsen/wangerooge/"
+   },
+   {
+    "name": "Jemgum",
+    "url": "/gemeinden/niedersachsen/jemgum/"
+   },
+   {
+    "name": "Fürstenau",
+    "url": "/gemeinden/niedersachsen/fuerstenau/"
+   },
+   {
+    "name": "Ostercappeln",
+    "url": "/gemeinden/niedersachsen/ostercappeln/"
+   },
+   {
+    "name": "Langeoog",
+    "url": "/gemeinden/niedersachsen/langeoog/"
+   }
+  ]
+ },
+ {
+  "land": "SH",
+  "programm": "Konsolidierungshilfen nach § 16a FAG a. F. / § 11 FAG (Konsolidierungskommunen)",
+  "beschreibung": "Das Land gewährte ab 2012 Kommunen mit besonders hohen aufgelaufenen Fehlbeträgen Konsolidierungshilfen auf Grundlage öffentlich-rechtlicher Konsolidierungsverträge mit dem Innenministerium. Der Bericht an den Innen- und Rechtsausschuss nennt 16 Konsolidierungskommunen (vier kreisfreie Städte, sechs Kreise, sechs kreisangehörige Städte/Gemeinden).",
+  "quelle_url": "https://www.landtag.ltsh.de/infothek/wahl18/umdrucke/5600/umdruck-18-5627.pdf",
+  "stand": "2016-01-26",
+  "gemeinden": [
+   {
+    "name": "Flensburg",
+    "url": "/gemeinden/schleswig-holstein/flensburg/"
+   },
+   {
+    "name": "Kiel",
+    "url": "/gemeinden/schleswig-holstein/kiel/"
+   },
+   {
+    "name": "Lübeck",
+    "url": "/gemeinden/schleswig-holstein/luebeck/"
+   },
+   {
+    "name": "Neumünster",
+    "url": "/gemeinden/schleswig-holstein/neumuenster/"
+   },
+   {
+    "name": "Kreis Dithmarschen",
+    "url": "/kreise/schleswig-holstein/dithmarschen/"
+   },
+   {
+    "name": "Kreis Herzogtum Lauenburg",
+    "url": "/kreise/schleswig-holstein/herzogtum-lauenburg/"
+   },
+   {
+    "name": "Kreis Ostholstein",
+    "url": "/kreise/schleswig-holstein/ostholstein/"
+   },
+   {
+    "name": "Kreis Pinneberg",
+    "url": "/kreise/schleswig-holstein/pinneberg/"
+   },
+   {
+    "name": "Kreis Plön",
+    "url": "/kreise/schleswig-holstein/ploen/"
+   },
+   {
+    "name": "Kreis Schleswig-Flensburg",
+    "url": "/kreise/schleswig-holstein/schleswig-flensburg/"
+   },
+   {
+    "name": "Lauenburg/ Elbe",
+    "url": "/gemeinden/schleswig-holstein/lauenburg-elbe/"
+   },
+   {
+    "name": "Schwarzenbek",
+    "url": "/gemeinden/schleswig-holstein/schwarzenbek/"
+   },
+   {
+    "name": "Pellworm",
+    "url": "/gemeinden/schleswig-holstein/pellworm/"
+   },
+   {
+    "name": "Pinneberg",
+    "url": "/gemeinden/schleswig-holstein/pinneberg/"
+   },
+   {
+    "name": "Uetersen",
+    "url": "/gemeinden/schleswig-holstein/uetersen/"
+   },
+   {
+    "name": "Bad Segeberg",
+    "url": "/gemeinden/schleswig-holstein/bad-segeberg/"
+   }
+  ]
+ },
+ {
+  "land": "SL",
+  "programm": "Saarlandpakt – Übernahme kommunaler Liquiditätskredite durch das Land",
+  "beschreibung": "Mit dem Gesetz über den Saarlandpakt (30.10.2019) übernimmt das Land ab 2020 kommunale Liquiditätskredite im Gesamtvolumen von 1 Mrd. €, verteilt nach dem Anteil an den strukturellen Liquiditätskrediten zum 31.12.2017. Die Anlage zur Ausführungsverordnung setzt diese Beträge je Gemeinde und Gemeindeverband verbindlich fest; betrag_eur = Übernahmeanteil nach § 3 Abs. 1 SaarlPaktG.",
+  "quelle_url": "https://lexaris.de/book/version/documentflat/head/1370003",
+  "stand": "2020-01-08",
+  "gemeinden": [
+   {
+    "name": "Saarbrücken",
+    "url": "/gemeinden/saarland/saarbruecken/"
+   },
+   {
+    "name": "Friedrichsthal",
+    "url": "/gemeinden/saarland/friedrichsthal/"
+   },
+   {
+    "name": "Großrosseln",
+    "url": "/gemeinden/saarland/grossrosseln/"
+   },
+   {
+    "name": "Heusweiler",
+    "url": "/gemeinden/saarland/heusweiler/"
+   },
+   {
+    "name": "Kleinblittersdorf",
+    "url": "/gemeinden/saarland/kleinblittersdorf/"
+   },
+   {
+    "name": "Püttlingen",
+    "url": "/gemeinden/saarland/puettlingen/"
+   },
+   {
+    "name": "Quierschied",
+    "url": "/gemeinden/saarland/quierschied/"
+   },
+   {
+    "name": "Riegelsberg",
+    "url": "/gemeinden/saarland/riegelsberg/"
+   },
+   {
+    "name": "Sulzbach/ Saar",
+    "url": "/gemeinden/saarland/sulzbach-saar/"
+   },
+   {
+    "name": "Völklingen",
+    "url": "/gemeinden/saarland/voelklingen/"
+   },
+   {
+    "name": "Beckingen",
+    "url": "/gemeinden/saarland/beckingen/"
+   },
+   {
+    "name": "Losheim am See",
+    "url": "/gemeinden/saarland/losheim-am-see/"
+   },
+   {
+    "name": "Merzig",
+    "url": "/gemeinden/saarland/merzig/"
+   },
+   {
+    "name": "Mettlach",
+    "url": "/gemeinden/saarland/mettlach/"
+   },
+   {
+    "name": "Perl",
+    "url": "/gemeinden/saarland/perl/"
+   },
+   {
+    "name": "Wadern",
+    "url": "/gemeinden/saarland/wadern/"
+   },
+   {
+    "name": "Weiskirchen",
+    "url": "/gemeinden/saarland/weiskirchen/"
+   },
+   {
+    "name": "Eppelborn",
+    "url": "/gemeinden/saarland/eppelborn/"
+   },
+   {
+    "name": "Illingen",
+    "url": "/gemeinden/saarland/illingen/"
+   },
+   {
+    "name": "Merchweiler",
+    "url": "/gemeinden/saarland/merchweiler/"
+   },
+   {
+    "name": "Neunkirchen",
+    "url": "/gemeinden/saarland/neunkirchen/"
+   },
+   {
+    "name": "Ottweiler",
+    "url": "/gemeinden/saarland/ottweiler/"
+   },
+   {
+    "name": "Schiffweiler",
+    "url": "/gemeinden/saarland/schiffweiler/"
+   },
+   {
+    "name": "Spiesen-Elversberg",
+    "url": "/gemeinden/saarland/spiesen-elversberg/"
+   },
+   {
+    "name": "Dillingen/ Saar",
+    "url": "/gemeinden/saarland/dillingen-saar/"
+   },
+   {
+    "name": "Lebach",
+    "url": "/gemeinden/saarland/lebach/"
+   },
+   {
+    "name": "Nalbach",
+    "url": "/gemeinden/saarland/nalbach/"
+   },
+   {
+    "name": "Rehlingen-Siersburg",
+    "url": "/gemeinden/saarland/rehlingen-siersburg/"
+   },
+   {
+    "name": "Saarlouis",
+    "url": "/gemeinden/saarland/saarlouis/"
+   },
+   {
+    "name": "Saarwellingen",
+    "url": "/gemeinden/saarland/saarwellingen/"
+   },
+   {
+    "name": "Schmelz",
+    "url": "/gemeinden/saarland/schmelz/"
+   },
+   {
+    "name": "Schwalbach",
+    "url": "/gemeinden/saarland/schwalbach/"
+   },
+   {
+    "name": "Überherrn",
+    "url": "/gemeinden/saarland/ueberherrn/"
+   },
+   {
+    "name": "Wadgassen",
+    "url": "/gemeinden/saarland/wadgassen/"
+   },
+   {
+    "name": "Wallerfangen",
+    "url": "/gemeinden/saarland/wallerfangen/"
+   },
+   {
+    "name": "Bous",
+    "url": "/gemeinden/saarland/bous/"
+   },
+   {
+    "name": "Ensdorf",
+    "url": "/gemeinden/saarland/ensdorf/"
+   },
+   {
+    "name": "Bexbach",
+    "url": "/gemeinden/saarland/bexbach/"
+   },
+   {
+    "name": "Blieskastel",
+    "url": "/gemeinden/saarland/blieskastel/"
+   },
+   {
+    "name": "Gersheim",
+    "url": "/gemeinden/saarland/gersheim/"
+   },
+   {
+    "name": "Homburg",
+    "url": "/gemeinden/saarland/homburg/"
+   },
+   {
+    "name": "Kirkel",
+    "url": "/gemeinden/saarland/kirkel/"
+   },
+   {
+    "name": "Mandelbachtal",
+    "url": "/gemeinden/saarland/mandelbachtal/"
+   },
+   {
+    "name": "St. Ingbert",
+    "url": "/gemeinden/saarland/st-ingbert/"
+   },
+   {
+    "name": "Freisen",
+    "url": "/gemeinden/saarland/freisen/"
+   },
+   {
+    "name": "Marpingen",
+    "url": "/gemeinden/saarland/marpingen/"
+   },
+   {
+    "name": "Namborn",
+    "url": "/gemeinden/saarland/namborn/"
+   },
+   {
+    "name": "Nohfelden",
+    "url": "/gemeinden/saarland/nohfelden/"
+   },
+   {
+    "name": "Nonnweiler",
+    "url": "/gemeinden/saarland/nonnweiler/"
+   },
+   {
+    "name": "Oberthal",
+    "url": "/gemeinden/saarland/oberthal/"
+   },
+   {
+    "name": "St. Wendel",
+    "url": "/gemeinden/saarland/st-wendel/"
+   },
+   {
+    "name": "Tholey",
+    "url": "/gemeinden/saarland/tholey/"
+   },
+   {
+    "name": "Regionalverband Saarbrücken",
+    "url": "/kreise/saarland/regionalverband-saarbruecken/"
+   },
+   {
+    "name": "Landkreis Merzig-Wadern",
+    "url": "/kreise/saarland/merzig-wadern/"
+   },
+   {
+    "name": "Landkreis Neunkirchen",
+    "url": "/kreise/saarland/neunkirchen/"
+   },
+   {
+    "name": "Landkreis Saarlouis",
+    "url": "/kreise/saarland/saarlouis/"
+   },
+   {
+    "name": "Saarpfalz-Kreis",
+    "url": "/kreise/saarland/saarpfalz-kreis/"
+   },
+   {
+    "name": "Landkreis St. Wendel",
+    "url": "/kreise/saarland/st-wendel/"
+   }
+  ]
+ },
+ {
+  "land": "MV",
+  "programm": "Kommunaler Entschuldungsfonds M-V – Ablösung von Altverbindlichkeiten der kommunalen Wohnungswirtschaft (DDR-Wohnungsbaualtschulden)",
+  "beschreibung": "Aus dem Sondervermögen Kommunaler Entschuldungsfonds gewährt das Land auf Antrag Zuweisungen zur Ablösung von DDR-Wohnungsbaualtschulden der Gemeinden (Verordnung vom 29.01.2021). Anlage 2 der Antwort der Landesregierung listet die bis Februar 2023 bewilligten Zuweisungen (353 Bescheide, 297 Gemeinden, zusammen rund 30,86 Mio. €); betrag_eur = Summe je Gemeinde, jahr = Jahr des letzten Bescheids.",
+  "quelle_url": "https://www.dokumentation.landtag-mv.de/parldok/dokument/55941/entlastung_von_altschulden_aus_dem_ddr_wohnungsbau.pdf",
+  "stand": "2023-02-15",
+  "gemeinden": [
+   {
+    "name": "Alt Bukow",
+    "url": "/gemeinden/mecklenburg-vorpommern/alt-bukow/"
+   },
+   {
+    "name": "Am Salzhaff",
+    "url": "/gemeinden/mecklenburg-vorpommern/am-salzhaff/"
+   },
+   {
+    "name": "Admannshagen-Bargeshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/admannshagen-bargeshagen/"
+   },
+   {
+    "name": "Blowatz",
+    "url": "/gemeinden/mecklenburg-vorpommern/blowatz/"
+   },
+   {
+    "name": "Gnoien",
+    "url": "/gemeinden/mecklenburg-vorpommern/gnoien/"
+   },
+   {
+    "name": "Biendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/biendorf/"
+   },
+   {
+    "name": "Altenkirchen",
+    "url": "/gemeinden/mecklenburg-vorpommern/altenkirchen/"
+   },
+   {
+    "name": "Retschow",
+    "url": "/gemeinden/mecklenburg-vorpommern/retschow/"
+   },
+   {
+    "name": "Steffenshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/steffenshagen/"
+   },
+   {
+    "name": "Rerik",
+    "url": "/gemeinden/mecklenburg-vorpommern/rerik/"
+   },
+   {
+    "name": "Satow",
+    "url": "/gemeinden/mecklenburg-vorpommern/satow/"
+   },
+   {
+    "name": "Görmin",
+    "url": "/gemeinden/mecklenburg-vorpommern/goermin/"
+   },
+   {
+    "name": "Warnkenhagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/warnkenhagen/"
+   },
+   {
+    "name": "Dalkendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/dalkendorf/"
+   },
+   {
+    "name": "Trinwillershagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/trinwillershagen/"
+   },
+   {
+    "name": "Röbel/Müritz",
+    "url": "/gemeinden/mecklenburg-vorpommern/roebel-mueritz/"
+   },
+   {
+    "name": "Hagenow",
+    "url": "/gemeinden/mecklenburg-vorpommern/hagenow/"
+   },
+   {
+    "name": "Moraas",
+    "url": "/gemeinden/mecklenburg-vorpommern/moraas/"
+   },
+   {
+    "name": "Kuhstorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/kuhstorf/"
+   },
+   {
+    "name": "Hoort",
+    "url": "/gemeinden/mecklenburg-vorpommern/hoort/"
+   },
+   {
+    "name": "Kirch Jesar",
+    "url": "/gemeinden/mecklenburg-vorpommern/kirch-jesar/"
+   },
+   {
+    "name": "Picher",
+    "url": "/gemeinden/mecklenburg-vorpommern/picher/"
+   },
+   {
+    "name": "Alt Zachun",
+    "url": "/gemeinden/mecklenburg-vorpommern/alt-zachun/"
+   },
+   {
+    "name": "Redefin",
+    "url": "/gemeinden/mecklenburg-vorpommern/redefin/"
+   },
+   {
+    "name": "Wittendörp",
+    "url": "/gemeinden/mecklenburg-vorpommern/wittendoerp/"
+   },
+   {
+    "name": "Toddin",
+    "url": "/gemeinden/mecklenburg-vorpommern/toddin/"
+   },
+   {
+    "name": "Rollwitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/rollwitz/"
+   },
+   {
+    "name": "Loitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/loitz/"
+   },
+   {
+    "name": "Sassen-Trantow",
+    "url": "/gemeinden/mecklenburg-vorpommern/sassen-trantow/"
+   },
+   {
+    "name": "Priborn",
+    "url": "/gemeinden/mecklenburg-vorpommern/priborn/"
+   },
+   {
+    "name": "Lärz",
+    "url": "/gemeinden/mecklenburg-vorpommern/laerz/"
+   },
+   {
+    "name": "Südmüritz",
+    "url": "/gemeinden/mecklenburg-vorpommern/suedmueritz/"
+   },
+   {
+    "name": "Blievenstorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/blievenstorf/"
+   },
+   {
+    "name": "Hugoldsdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/hugoldsdorf/"
+   },
+   {
+    "name": "Groß Mohrdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-mohrdorf/"
+   },
+   {
+    "name": "Schlemmin",
+    "url": "/gemeinden/mecklenburg-vorpommern/schlemmin/"
+   },
+   {
+    "name": "Neubukow",
+    "url": "/gemeinden/mecklenburg-vorpommern/neubukow/"
+   },
+   {
+    "name": "Lübtheen",
+    "url": "/gemeinden/mecklenburg-vorpommern/luebtheen/"
+   },
+   {
+    "name": "Lelkendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/lelkendorf/"
+   },
+   {
+    "name": "Groß Wüstenfelde",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-wuestenfelde/"
+   },
+   {
+    "name": "Schorssow",
+    "url": "/gemeinden/mecklenburg-vorpommern/schorssow/"
+   },
+   {
+    "name": "Hohen Demzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/hohen-demzin/"
+   },
+   {
+    "name": "Prebberede",
+    "url": "/gemeinden/mecklenburg-vorpommern/prebberede/"
+   },
+   {
+    "name": "Schwasdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/schwasdorf/"
+   },
+   {
+    "name": "Krusenhagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/krusenhagen/"
+   },
+   {
+    "name": "Gemeinde Benz"
+   },
+   {
+    "name": "Gehlsbach",
+    "url": "/gemeinden/mecklenburg-vorpommern/gehlsbach/"
+   },
+   {
+    "name": "Ribnitz-Damgarten",
+    "url": "/gemeinden/mecklenburg-vorpommern/ribnitz-damgarten/"
+   },
+   {
+    "name": "Gutow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gutow/"
+   },
+   {
+    "name": "Plaaz",
+    "url": "/gemeinden/mecklenburg-vorpommern/plaaz/"
+   },
+   {
+    "name": "Gemeinde Lüssow"
+   },
+   {
+    "name": "Reimershagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/reimershagen/"
+   },
+   {
+    "name": "Zehna",
+    "url": "/gemeinden/mecklenburg-vorpommern/zehna/"
+   },
+   {
+    "name": "Lohmen",
+    "url": "/gemeinden/mecklenburg-vorpommern/lohmen/"
+   },
+   {
+    "name": "Semlow",
+    "url": "/gemeinden/mecklenburg-vorpommern/semlow/"
+   },
+   {
+    "name": "Ahrenshagen-Daskow",
+    "url": "/gemeinden/mecklenburg-vorpommern/ahrenshagen-daskow/"
+   },
+   {
+    "name": "Zierzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zierzow/"
+   },
+   {
+    "name": "Kremmin",
+    "url": "/gemeinden/mecklenburg-vorpommern/kremmin/"
+   },
+   {
+    "name": "Eixen",
+    "url": "/gemeinden/mecklenburg-vorpommern/eixen/"
+   },
+   {
+    "name": "Altkalen",
+    "url": "/gemeinden/mecklenburg-vorpommern/altkalen/"
+   },
+   {
+    "name": "Walkendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/walkendorf/"
+   },
+   {
+    "name": "Finkenthal",
+    "url": "/gemeinden/mecklenburg-vorpommern/finkenthal/"
+   },
+   {
+    "name": "Behren-Lübchin",
+    "url": "/gemeinden/mecklenburg-vorpommern/behren-luebchin/"
+   },
+   {
+    "name": "Völschow",
+    "url": "/gemeinden/mecklenburg-vorpommern/voelschow/"
+   },
+   {
+    "name": "Grimmen",
+    "url": "/gemeinden/mecklenburg-vorpommern/grimmen/"
+   },
+   {
+    "name": "Bad Sülze",
+    "url": "/gemeinden/mecklenburg-vorpommern/bad-suelze/"
+   },
+   {
+    "name": "Gelbensande",
+    "url": "/gemeinden/mecklenburg-vorpommern/gelbensande/"
+   },
+   {
+    "name": "Stepenitztal",
+    "url": "/gemeinden/mecklenburg-vorpommern/stepenitztal/"
+   },
+   {
+    "name": "Testorf-Steinfort",
+    "url": "/gemeinden/mecklenburg-vorpommern/testorf-steinfort/"
+   },
+   {
+    "name": "Dassow",
+    "url": "/gemeinden/mecklenburg-vorpommern/dassow/"
+   },
+   {
+    "name": "Schönberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/schoenberg/"
+   },
+   {
+    "name": "Sagard",
+    "url": "/gemeinden/mecklenburg-vorpommern/sagard/"
+   },
+   {
+    "name": "Tutow",
+    "url": "/gemeinden/mecklenburg-vorpommern/tutow/"
+   },
+   {
+    "name": "Daberkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/daberkow/"
+   },
+   {
+    "name": "Drechow",
+    "url": "/gemeinden/mecklenburg-vorpommern/drechow/"
+   },
+   {
+    "name": "Barth",
+    "url": "/gemeinden/mecklenburg-vorpommern/barth/"
+   },
+   {
+    "name": "Groß Wokern",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-wokern/"
+   },
+   {
+    "name": "Grabow",
+    "url": "/gemeinden/mecklenburg-vorpommern/grabow/"
+   },
+   {
+    "name": "Prislich",
+    "url": "/gemeinden/mecklenburg-vorpommern/prislich/"
+   },
+   {
+    "name": "Burg Stargard",
+    "url": "/gemeinden/mecklenburg-vorpommern/burg-stargard/"
+   },
+   {
+    "name": "Neuburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/neuburg/"
+   },
+   {
+    "name": "Boiensdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/boiensdorf/"
+   },
+   {
+    "name": "Hornstorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/hornstorf/"
+   },
+   {
+    "name": "Gützkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/guetzkow/"
+   },
+   {
+    "name": "Groß Polzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-polzin/"
+   },
+   {
+    "name": "Klein Bünzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/klein-buenzow/"
+   },
+   {
+    "name": "Murchin",
+    "url": "/gemeinden/mecklenburg-vorpommern/murchin/"
+   },
+   {
+    "name": "Rubkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/rubkow/"
+   },
+   {
+    "name": "Schmatzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/schmatzin/"
+   },
+   {
+    "name": "Thürkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/thuerkow/"
+   },
+   {
+    "name": "Rövershagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/roevershagen/"
+   },
+   {
+    "name": "Velgast",
+    "url": "/gemeinden/mecklenburg-vorpommern/velgast/"
+   },
+   {
+    "name": "Prohn",
+    "url": "/gemeinden/mecklenburg-vorpommern/prohn/"
+   },
+   {
+    "name": "Wiek",
+    "url": "/gemeinden/mecklenburg-vorpommern/wiek/"
+   },
+   {
+    "name": "Klütz",
+    "url": "/gemeinden/mecklenburg-vorpommern/kluetz/"
+   },
+   {
+    "name": "Melz",
+    "url": "/gemeinden/mecklenburg-vorpommern/melz/"
+   },
+   {
+    "name": "Alt Tellin",
+    "url": "/gemeinden/mecklenburg-vorpommern/alt-tellin/"
+   },
+   {
+    "name": "Sanitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/sanitz/"
+   },
+   {
+    "name": "Marlow",
+    "url": "/gemeinden/mecklenburg-vorpommern/marlow/"
+   },
+   {
+    "name": "Tribsees",
+    "url": "/gemeinden/mecklenburg-vorpommern/tribsees/"
+   },
+   {
+    "name": "Dahmen",
+    "url": "/gemeinden/mecklenburg-vorpommern/dahmen/"
+   },
+   {
+    "name": "Dobbin-Linstow",
+    "url": "/gemeinden/mecklenburg-vorpommern/dobbin-linstow/"
+   },
+   {
+    "name": "Kuchelmiß",
+    "url": "/gemeinden/mecklenburg-vorpommern/kuchelmiss/"
+   },
+   {
+    "name": "Altentreptow",
+    "url": "/gemeinden/mecklenburg-vorpommern/altentreptow/"
+   },
+   {
+    "name": "Zarrentin am Schaalsee",
+    "url": "/gemeinden/mecklenburg-vorpommern/zarrentin-am-schaalsee/"
+   },
+   {
+    "name": "Bobzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/bobzin/"
+   },
+   {
+    "name": "Wittenburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/wittenburg/"
+   },
+   {
+    "name": "Groß Roge",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-roge/"
+   },
+   {
+    "name": "Alt Sührkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/alt-suehrkow/"
+   },
+   {
+    "name": "Gremersdorf-Buchholz",
+    "url": "/gemeinden/mecklenburg-vorpommern/gremersdorf-buchholz/"
+   },
+   {
+    "name": "Franzburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/franzburg/"
+   },
+   {
+    "name": "Richtenberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/richtenberg/"
+   },
+   {
+    "name": "Ventschow",
+    "url": "/gemeinden/mecklenburg-vorpommern/ventschow/"
+   },
+   {
+    "name": "Jarmen",
+    "url": "/gemeinden/mecklenburg-vorpommern/jarmen/"
+   },
+   {
+    "name": "Millienhagen-Oebelitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/millienhagen-oebelitz/"
+   },
+   {
+    "name": "Ziethen",
+    "url": "/gemeinden/mecklenburg-vorpommern/ziethen/"
+   },
+   {
+    "name": "Lalendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/lalendorf/"
+   },
+   {
+    "name": "Kriesow",
+    "url": "/gemeinden/mecklenburg-vorpommern/kriesow/"
+   },
+   {
+    "name": "Tützpatz",
+    "url": "/gemeinden/mecklenburg-vorpommern/tuetzpatz/"
+   },
+   {
+    "name": "Pripsleben",
+    "url": "/gemeinden/mecklenburg-vorpommern/pripsleben/"
+   },
+   {
+    "name": "Groß Teetzleben",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-teetzleben/"
+   },
+   {
+    "name": "Röckwitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/roeckwitz/"
+   },
+   {
+    "name": "Breesen",
+    "url": "/gemeinden/mecklenburg-vorpommern/breesen/"
+   },
+   {
+    "name": "Wildberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/wildberg/"
+   },
+   {
+    "name": "Wolde",
+    "url": "/gemeinden/mecklenburg-vorpommern/wolde/"
+   },
+   {
+    "name": "Burow",
+    "url": "/gemeinden/mecklenburg-vorpommern/burow/"
+   },
+   {
+    "name": "Gadebusch",
+    "url": "/gemeinden/mecklenburg-vorpommern/gadebusch/"
+   },
+   {
+    "name": "Rehna",
+    "url": "/gemeinden/mecklenburg-vorpommern/rehna/"
+   },
+   {
+    "name": "Roggendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/roggendorf/"
+   },
+   {
+    "name": "Mühlen Eichsen",
+    "url": "/gemeinden/mecklenburg-vorpommern/muehlen-eichsen/"
+   },
+   {
+    "name": "Veelböken",
+    "url": "/gemeinden/mecklenburg-vorpommern/veelboeken/"
+   },
+   {
+    "name": "Krembz",
+    "url": "/gemeinden/mecklenburg-vorpommern/krembz/"
+   },
+   {
+    "name": "Dragun",
+    "url": "/gemeinden/mecklenburg-vorpommern/dragun/"
+   },
+   {
+    "name": "Perlin",
+    "url": "/gemeinden/mecklenburg-vorpommern/perlin/"
+   },
+   {
+    "name": "Schlagsdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/schlagsdorf/"
+   },
+   {
+    "name": "Groß Molzahn",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-molzahn/"
+   },
+   {
+    "name": "Dechow",
+    "url": "/gemeinden/mecklenburg-vorpommern/dechow/"
+   },
+   {
+    "name": "Rieps",
+    "url": "/gemeinden/mecklenburg-vorpommern/rieps/"
+   },
+   {
+    "name": "Demmin",
+    "url": "/gemeinden/mecklenburg-vorpommern/demmin/"
+   },
+   {
+    "name": "Kalkhorst",
+    "url": "/gemeinden/mecklenburg-vorpommern/kalkhorst/"
+   },
+   {
+    "name": "Damshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/damshagen/"
+   },
+   {
+    "name": "Dranske",
+    "url": "/gemeinden/mecklenburg-vorpommern/dranske/"
+   },
+   {
+    "name": "Bartow",
+    "url": "/gemeinden/mecklenburg-vorpommern/bartow/"
+   },
+   {
+    "name": "Gnevkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gnevkow/"
+   },
+   {
+    "name": "Gültz",
+    "url": "/gemeinden/mecklenburg-vorpommern/gueltz/"
+   },
+   {
+    "name": "Ahlbeck",
+    "url": "/gemeinden/mecklenburg-vorpommern/ahlbeck/"
+   },
+   {
+    "name": "Siedenbollentin",
+    "url": "/gemeinden/mecklenburg-vorpommern/siedenbollentin/"
+   },
+   {
+    "name": "Gemeinde Breest"
+   },
+   {
+    "name": "Grischow",
+    "url": "/gemeinden/mecklenburg-vorpommern/grischow/"
+   },
+   {
+    "name": "Grapzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/grapzow/"
+   },
+   {
+    "name": "Gemeinde Werder"
+   },
+   {
+    "name": "Bergen auf Rügen",
+    "url": "/gemeinden/mecklenburg-vorpommern/bergen-auf-ruegen/"
+   },
+   {
+    "name": "Granzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/granzin/"
+   },
+   {
+    "name": "Mönchhagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/moenchhagen/"
+   },
+   {
+    "name": "Hoppenrade",
+    "url": "/gemeinden/mecklenburg-vorpommern/hoppenrade/"
+   },
+   {
+    "name": "Neustadt-Glewe",
+    "url": "/gemeinden/mecklenburg-vorpommern/neustadt-glewe/"
+   },
+   {
+    "name": "Wöbbelin",
+    "url": "/gemeinden/mecklenburg-vorpommern/woebbelin/"
+   },
+   {
+    "name": "Lüblow",
+    "url": "/gemeinden/mecklenburg-vorpommern/lueblow/"
+   },
+   {
+    "name": "Neu Poserin",
+    "url": "/gemeinden/mecklenburg-vorpommern/neu-poserin/"
+   },
+   {
+    "name": "Dobbertin",
+    "url": "/gemeinden/mecklenburg-vorpommern/dobbertin/"
+   },
+   {
+    "name": "Goldberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/goldberg/"
+   },
+   {
+    "name": "Mestlin",
+    "url": "/gemeinden/mecklenburg-vorpommern/mestlin/"
+   },
+   {
+    "name": "Pasewalk",
+    "url": "/gemeinden/mecklenburg-vorpommern/pasewalk/"
+   },
+   {
+    "name": "Jördenstorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/joerdenstorf/"
+   },
+   {
+    "name": "Teterow",
+    "url": "/gemeinden/mecklenburg-vorpommern/teterow/"
+   },
+   {
+    "name": "Hintersee",
+    "url": "/gemeinden/mecklenburg-vorpommern/hintersee/"
+   },
+   {
+    "name": "Ludwigslust",
+    "url": "/gemeinden/mecklenburg-vorpommern/ludwigslust/"
+   },
+   {
+    "name": "Löcknitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/loecknitz/"
+   },
+   {
+    "name": "Gemeinde Grambow"
+   },
+   {
+    "name": "Ramin",
+    "url": "/gemeinden/mecklenburg-vorpommern/ramin/"
+   },
+   {
+    "name": "Rossow",
+    "url": "/gemeinden/mecklenburg-vorpommern/rossow/"
+   },
+   {
+    "name": "Rothenklempenow",
+    "url": "/gemeinden/mecklenburg-vorpommern/rothenklempenow/"
+   },
+   {
+    "name": "Plöwen",
+    "url": "/gemeinden/mecklenburg-vorpommern/ploewen/"
+   },
+   {
+    "name": "Luckow",
+    "url": "/gemeinden/mecklenburg-vorpommern/luckow/"
+   },
+   {
+    "name": "Stadt Torgelow"
+   },
+   {
+    "name": "Sternberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/sternberg/"
+   },
+   {
+    "name": "Borkow",
+    "url": "/gemeinden/mecklenburg-vorpommern/borkow/"
+   },
+   {
+    "name": "Mustin",
+    "url": "/gemeinden/mecklenburg-vorpommern/mustin/"
+   },
+   {
+    "name": "Witzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/witzin/"
+   },
+   {
+    "name": "Brüel",
+    "url": "/gemeinden/mecklenburg-vorpommern/brueel/"
+   },
+   {
+    "name": "Blankenberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/blankenberg/"
+   },
+   {
+    "name": "Kuhlen-Wendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/kuhlen-wendorf/"
+   },
+   {
+    "name": "Kloster Tempzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/kloster-tempzin/"
+   },
+   {
+    "name": "Warin",
+    "url": "/gemeinden/mecklenburg-vorpommern/warin/"
+   },
+   {
+    "name": "Bibow",
+    "url": "/gemeinden/mecklenburg-vorpommern/bibow/"
+   },
+   {
+    "name": "Güstrow",
+    "url": "/gemeinden/mecklenburg-vorpommern/guestrow/"
+   },
+   {
+    "name": "Wolgast",
+    "url": "/gemeinden/mecklenburg-vorpommern/wolgast/"
+   },
+   {
+    "name": "Zierow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zierow/"
+   },
+   {
+    "name": "Bobitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/bobitz/"
+   },
+   {
+    "name": "Barnekow",
+    "url": "/gemeinden/mecklenburg-vorpommern/barnekow/"
+   },
+   {
+    "name": "Gägelow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gaegelow/"
+   },
+   {
+    "name": "Hohenkirchen",
+    "url": "/gemeinden/mecklenburg-vorpommern/hohenkirchen/"
+   },
+   {
+    "name": "Bad Kleinen",
+    "url": "/gemeinden/mecklenburg-vorpommern/bad-kleinen/"
+   },
+   {
+    "name": "Hohen Viecheln",
+    "url": "/gemeinden/mecklenburg-vorpommern/hohen-viecheln/"
+   },
+   {
+    "name": "Laage",
+    "url": "/gemeinden/mecklenburg-vorpommern/laage/"
+   },
+   {
+    "name": "Woldegk",
+    "url": "/gemeinden/mecklenburg-vorpommern/woldegk/"
+   },
+   {
+    "name": "Penkun",
+    "url": "/gemeinden/mecklenburg-vorpommern/penkun/"
+   },
+   {
+    "name": "Krackow",
+    "url": "/gemeinden/mecklenburg-vorpommern/krackow/"
+   },
+   {
+    "name": "Nadrensee",
+    "url": "/gemeinden/mecklenburg-vorpommern/nadrensee/"
+   },
+   {
+    "name": "Bentzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/bentzin/"
+   },
+   {
+    "name": "Strasburg (Uckermark)",
+    "url": "/gemeinden/mecklenburg-vorpommern/strasburg-uckermark/"
+   },
+   {
+    "name": "Neustrelitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/neustrelitz/"
+   },
+   {
+    "name": "Bützow",
+    "url": "/gemeinden/mecklenburg-vorpommern/buetzow/"
+   },
+   {
+    "name": "Groß Kiesow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-kiesow/"
+   },
+   {
+    "name": "Hanshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/hanshagen/"
+   },
+   {
+    "name": "Katzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/katzow/"
+   },
+   {
+    "name": "Dargelin",
+    "url": "/gemeinden/mecklenburg-vorpommern/dargelin/"
+   },
+   {
+    "name": "Neu Boltenhagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/neu-boltenhagen/"
+   },
+   {
+    "name": "Levenhagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/levenhagen/"
+   },
+   {
+    "name": "Gribow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gribow/"
+   },
+   {
+    "name": "Kemnitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/kemnitz/"
+   },
+   {
+    "name": "Karlsburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/karlsburg/"
+   },
+   {
+    "name": "Lubmin",
+    "url": "/gemeinden/mecklenburg-vorpommern/lubmin/"
+   },
+   {
+    "name": "Kummerow",
+    "url": "/gemeinden/mecklenburg-vorpommern/kummerow/"
+   },
+   {
+    "name": "Kritzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/kritzow/"
+   },
+   {
+    "name": "Plau am See",
+    "url": "/gemeinden/mecklenburg-vorpommern/plau-am-see/"
+   },
+   {
+    "name": "Züssow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zuessow/"
+   },
+   {
+    "name": "Neukalen",
+    "url": "/gemeinden/mecklenburg-vorpommern/neukalen/"
+   },
+   {
+    "name": "Stadt Tessin"
+   },
+   {
+    "name": "Greifswald",
+    "url": "/gemeinden/mecklenburg-vorpommern/greifswald/"
+   },
+   {
+    "name": "Groß Miltzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gross-miltzow/"
+   },
+   {
+    "name": "Jesendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/jesendorf/"
+   },
+   {
+    "name": "Krakow am See",
+    "url": "/gemeinden/mecklenburg-vorpommern/krakow-am-see/"
+   },
+   {
+    "name": "Wilhelmsburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/wilhelmsburg/"
+   },
+   {
+    "name": "Altwigshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/altwigshagen/"
+   },
+   {
+    "name": "Sauzin",
+    "url": "/gemeinden/mecklenburg-vorpommern/sauzin/"
+   },
+   {
+    "name": "Lübberstorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/luebberstorf/"
+   },
+   {
+    "name": "Jürgenshagen",
+    "url": "/gemeinden/mecklenburg-vorpommern/juergenshagen/"
+   },
+   {
+    "name": "Gemeinde Steinhagen"
+   },
+   {
+    "name": "Bernitt",
+    "url": "/gemeinden/mecklenburg-vorpommern/bernitt/"
+   },
+   {
+    "name": "Klein Belitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/klein-belitz/"
+   },
+   {
+    "name": "Lassan",
+    "url": "/gemeinden/mecklenburg-vorpommern/lassan/"
+   },
+   {
+    "name": "Jabel",
+    "url": "/gemeinden/mecklenburg-vorpommern/jabel/"
+   },
+   {
+    "name": "Klocksin",
+    "url": "/gemeinden/mecklenburg-vorpommern/klocksin/"
+   },
+   {
+    "name": "Glasin",
+    "url": "/gemeinden/mecklenburg-vorpommern/glasin/"
+   },
+   {
+    "name": "Züsow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zuesow/"
+   },
+   {
+    "name": "Vollrathsruhe",
+    "url": "/gemeinden/mecklenburg-vorpommern/vollrathsruhe/"
+   },
+   {
+    "name": "Moltzow",
+    "url": "/gemeinden/mecklenburg-vorpommern/moltzow/"
+   },
+   {
+    "name": "Hohen Wangelin",
+    "url": "/gemeinden/mecklenburg-vorpommern/hohen-wangelin/"
+   },
+   {
+    "name": "Grabowhöfe",
+    "url": "/gemeinden/mecklenburg-vorpommern/grabowhoefe/"
+   },
+   {
+    "name": "Malchow",
+    "url": "/gemeinden/mecklenburg-vorpommern/malchow/"
+   },
+   {
+    "name": "Rossin",
+    "url": "/gemeinden/mecklenburg-vorpommern/rossin/"
+   },
+   {
+    "name": "Spantekow",
+    "url": "/gemeinden/mecklenburg-vorpommern/spantekow/"
+   },
+   {
+    "name": "Blesewitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/blesewitz/"
+   },
+   {
+    "name": "Medow",
+    "url": "/gemeinden/mecklenburg-vorpommern/medow/"
+   },
+   {
+    "name": "Boldekow",
+    "url": "/gemeinden/mecklenburg-vorpommern/boldekow/"
+   },
+   {
+    "name": "Gemeinde Neuenkirchen"
+   },
+   {
+    "name": "Krusenfelde",
+    "url": "/gemeinden/mecklenburg-vorpommern/krusenfelde/"
+   },
+   {
+    "name": "Grevesmühlen",
+    "url": "/gemeinden/mecklenburg-vorpommern/grevesmuehlen/"
+   },
+   {
+    "name": "Gemeinde Stolpe"
+   },
+   {
+    "name": "Krien",
+    "url": "/gemeinden/mecklenburg-vorpommern/krien/"
+   },
+   {
+    "name": "Neetzow-Liepen",
+    "url": "/gemeinden/mecklenburg-vorpommern/neetzow-liepen/"
+   },
+   {
+    "name": "Bugewitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/bugewitz/"
+   },
+   {
+    "name": "Iven",
+    "url": "/gemeinden/mecklenburg-vorpommern/iven/"
+   },
+   {
+    "name": "Ferdinandshof",
+    "url": "/gemeinden/mecklenburg-vorpommern/ferdinandshof/"
+   },
+   {
+    "name": "Ducherow",
+    "url": "/gemeinden/mecklenburg-vorpommern/ducherow/"
+   },
+   {
+    "name": "Neetzka",
+    "url": "/gemeinden/mecklenburg-vorpommern/neetzka/"
+   },
+   {
+    "name": "Voigtsdorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/voigtsdorf/"
+   },
+   {
+    "name": "Schönbeck",
+    "url": "/gemeinden/mecklenburg-vorpommern/schoenbeck/"
+   },
+   {
+    "name": "Malchin",
+    "url": "/gemeinden/mecklenburg-vorpommern/malchin/"
+   },
+   {
+    "name": "Schönhausen",
+    "url": "/gemeinden/mecklenburg-vorpommern/schoenhausen/"
+   },
+   {
+    "name": "Zurow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zurow/"
+   },
+   {
+    "name": "Gemeinde Möllenbeck"
+   },
+   {
+    "name": "Grünow",
+    "url": "/gemeinden/mecklenburg-vorpommern/gruenow/"
+   },
+   {
+    "name": "Carpin",
+    "url": "/gemeinden/mecklenburg-vorpommern/carpin/"
+   },
+   {
+    "name": "Gemeinde Blankensee"
+   },
+   {
+    "name": "Kublank",
+    "url": "/gemeinden/mecklenburg-vorpommern/kublank/"
+   },
+   {
+    "name": "Bredenfelde",
+    "url": "/gemeinden/mecklenburg-vorpommern/bredenfelde/"
+   },
+   {
+    "name": "Gemeinde Gülzow"
+   },
+   {
+    "name": "Ivenack",
+    "url": "/gemeinden/mecklenburg-vorpommern/ivenack/"
+   },
+   {
+    "name": "Kittendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/kittendorf/"
+   },
+   {
+    "name": "Knorrendorf",
+    "url": "/gemeinden/mecklenburg-vorpommern/knorrendorf/"
+   },
+   {
+    "name": "Mölln",
+    "url": "/gemeinden/mecklenburg-vorpommern/moelln/"
+   },
+   {
+    "name": "Ritzerow",
+    "url": "/gemeinden/mecklenburg-vorpommern/ritzerow/"
+   },
+   {
+    "name": "Rosenow",
+    "url": "/gemeinden/mecklenburg-vorpommern/rosenow/"
+   },
+   {
+    "name": "Zettemin",
+    "url": "/gemeinden/mecklenburg-vorpommern/zettemin/"
+   },
+   {
+    "name": "Waren (Müritz)",
+    "url": "/gemeinden/mecklenburg-vorpommern/waren-mueritz/"
+   },
+   {
+    "name": "Lützow",
+    "url": "/gemeinden/mecklenburg-vorpommern/luetzow/"
+   },
+   {
+    "name": "Pokrent",
+    "url": "/gemeinden/mecklenburg-vorpommern/pokrent/"
+   },
+   {
+    "name": "Wesenberg",
+    "url": "/gemeinden/mecklenburg-vorpommern/wesenberg/"
+   },
+   {
+    "name": "Mirow",
+    "url": "/gemeinden/mecklenburg-vorpommern/mirow/"
+   },
+   {
+    "name": "Ueckermünde",
+    "url": "/gemeinden/mecklenburg-vorpommern/ueckermuende/"
+   },
+   {
+    "name": "Parchim",
+    "url": "/gemeinden/mecklenburg-vorpommern/parchim/"
+   },
+   {
+    "name": "Zirchow",
+    "url": "/gemeinden/mecklenburg-vorpommern/zirchow/"
+   },
+   {
+    "name": "Usedom",
+    "url": "/gemeinden/mecklenburg-vorpommern/usedom/"
+   },
+   {
+    "name": "Mellenthin",
+    "url": "/gemeinden/mecklenburg-vorpommern/mellenthin/"
+   },
+   {
+    "name": "Beggerow",
+    "url": "/gemeinden/mecklenburg-vorpommern/beggerow/"
+   },
+   {
+    "name": "Neubrandenburg",
+    "url": "/gemeinden/mecklenburg-vorpommern/neubrandenburg/"
+   },
+   {
+    "name": "Brüsewitz",
+    "url": "/gemeinden/mecklenburg-vorpommern/bruesewitz/"
+   },
+   {
+    "name": "Neukloster",
+    "url": "/gemeinden/mecklenburg-vorpommern/neukloster/"
+   },
+   {
+    "name": "Anklam",
+    "url": "/gemeinden/mecklenburg-vorpommern/anklam/"
+   },
+   {
+    "name": "Wismar",
+    "url": "/gemeinden/mecklenburg-vorpommern/wismar/"
+   },
+   {
+    "name": "Schwerin",
+    "url": "/gemeinden/mecklenburg-vorpommern/schwerin/"
+   },
+   {
+    "name": "Nossentiner Hütte",
+    "url": "/gemeinden/mecklenburg-vorpommern/nossentiner-huette/"
+   },
+   {
+    "name": "Walow",
+    "url": "/gemeinden/mecklenburg-vorpommern/walow/"
+   },
+   {
+    "name": "Gemeinde Penkow"
+   },
+   {
+    "name": "Fünfseen",
+    "url": "/gemeinden/mecklenburg-vorpommern/fuenfseen/"
+   }
+  ]
+ },
+ {
+  "land": "MV",
+  "programm": "Konsolidierungszuweisungen nach § 27 FAG M-V (namentlich belegte Einzelfälle)",
+  "beschreibung": "Seit 2020 gewährt das Land defizitären Kommunen Konsolidierungszuweisungen sowie Sonder- und Ergänzungszuweisungen aus dem Kommunalen Entschuldungsfonds. In den Pressemitteilungen sind nur einzelne Empfänger namentlich genannt; 2024 nutzten 67 kreisangehörige Kommunen, der LK Vorpommern-Greifswald und die Landeshauptstadt Schwerin die Hilfe.",
+  "quelle_url": "https://www.presseportal.de/blaulicht/pm/108531/5943051",
+  "stand": "2025-01-06",
+  "gemeinden": [
+   {
+    "name": "Landkreis Vorpommern-Greifswald",
+    "url": "/kreise/mecklenburg-vorpommern/vorpommern-greifswald/"
+   },
+   {
+    "name": "Schwerin",
+    "url": "/gemeinden/mecklenburg-vorpommern/schwerin/"
+   }
+  ]
+ }
+]

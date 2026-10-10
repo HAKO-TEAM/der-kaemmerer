@@ -144,13 +144,15 @@ const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: `Hausha
 
     {prog.length > 0 && (
     <section class="hl-ab">
-      <h2>Landesprogramme zur Konsolidierung und Entschuldung</h2>
-      <p class="hl-unter">Amtlich veröffentlichte Teilnehmer- und Empfängerlisten, jeweils mit Quelle.</p>
+      <h2>Landesprogramme für finanzschwache Kommunen</h2>
+      <p class="hl-unter">Entschuldung, Konsolidierung und Bedarfszuweisungen des Landes – amtlich veröffentlichte Teilnehmer- und Empfängerlisten, jeweils mit Quelle und Stand.</p>
       {prog.map((pr: any) => (
         <div class="hl-prog">
           <h3>{pr.programm}</h3>
-          <p>{pr.beschreibung} <a href={pr.quelle_url} target="_blank" rel="noopener nofollow" style="color:#2563eb">Quelle ↗</a></p>
-          <div class="namen">{pr.gemeinden.length} Kommunen: {pr.gemeinden.map((x: any, i: number) => <>{i > 0 && ' · '}{x.url ? <a href={x.url}>{x.name}</a> : x.name}</>)}</div>
+          <p>{pr.beschreibung} <span style="color:#64748b">Stand {String(pr.stand).split('-').reverse().join('.')}.</span> <a href={pr.quelle_url} target="_blank" rel="noopener nofollow" style="color:#2563eb">Quelle ↗</a></p>
+          {pr.gemeinden.length <= 60
+            ? <div class="namen"><b>{pr.gemeinden.length} Kommunen:</b> {pr.gemeinden.map((x: any, i: number) => <>{i > 0 && ' · '}{x.url ? <a href={x.url}>{x.name}</a> : x.name}</>)}</div>
+            : <details class="namen"><summary style="cursor:pointer;color:#1d4ed8;font-weight:700">{pr.gemeinden.length} Kommunen anzeigen</summary>{pr.gemeinden.map((x: any, i: number) => <>{i > 0 && ' · '}{x.url ? <a href={x.url}>{x.name}</a> : x.name}</>)}</details>}
         </div>
       ))}
     </section>)}

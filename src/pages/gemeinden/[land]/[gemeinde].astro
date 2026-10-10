@@ -16,6 +16,7 @@ import { verzeichnis, gemeindeUrl, LAND_SLUG, imLand } from '../../../lib/gemein
 import { km } from '../../../lib/markt/benchmark.mjs';
 import { niveauText } from '../../../lib/markt/merkmale.mjs';
 import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
+import programme from '../../../data/haushaltslage/programme.json';
 import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
 import { artikelIndex } from '../../../lib/artikel-index';
 import { kreisVonAgs } from '../../../lib/kreise.mjs';
@@ -54,6 +55,7 @@ const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
 const stellenHier = (stellenJeGemeinde((markt as any).stellen, gemeinden as any[]).get(g.ags) || []).length;
 const kreisInfo: any = kreisVonAgs(gemeinden as any[]).get(g.kreis_ags) || null;
+const meineProgramme = (programme as any[]).filter((pr) => pr.gemeinden.some((x: any) => x.url === gemeindeUrl(p)));
 const ai = await artikelIndex(gemeinden as any[]);
 const artikelHier = ai.jeAgs.get(g.ags) || [];
 const artikelListe = artikelHier.length ? artikelHier.slice(0, 8) : ai.neueste;
@@ -181,6 +183,16 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         </div>
       </div>
     </section>
+
+    {meineProgramme.length > 0 && (
+    <section class="gm-ab">
+      <h2>{g.name} in Landesprogrammen</h2>
+      <p class="gm-unter">Amtlich veröffentlichte Entschuldungs-, Konsolidierungs- und Zuweisungsprogramme des Landes, in denen {g.name} genannt ist.</p>
+      <div class="gm-karte">
+        {meineProgramme.map((pr: any) => <div class="gm-zeile"><span>{pr.programm}</span><small><a href={pr.quelle_url} target="_blank" rel="noopener nofollow" style="font-weight:400;color:#2563eb">Quelle ↗</a></small></div>)}
+        <p class="gm-hin"><a href={`/haushaltslage/${LAND_SLUG[g.land]}/`}>Haushaltslage aller Kommunen {imLand(g.landLang)} →</a></p>
+      </div>
+    </section>)}
 
     <section class="gm-ab">
       <h2>Haushaltssperren im Umfeld von {g.name}</h2>
