@@ -17,7 +17,7 @@ const { pfad: gemeindePfad } = verzeichnis(gemeinden);
 for (const ags of stellenJeGemeinde(markt.stellen, gemeinden).keys()) gemeindeSeiten.push(`https://derkaemmerer.de/gemeinden/${gemeindePfad[ags]}/stellen/`);
 
 export default defineConfig({
-  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/vorschau/'), customPages: gemeindeSeiten })],
+  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/vorschau/') && !page.includes('/revier/'), customPages: gemeindeSeiten })],
   site: 'https://derkaemmerer.de',
   // Erste Nennung einer Gemeinde in Fachartikeln verlinkt auf ihr Profil
   markdown: { rehypePlugins: [rehypeLexikonLinks(), rehypeGemeindeLinks({ gemeinden })] },

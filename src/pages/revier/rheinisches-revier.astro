@@ -1,0 +1,204 @@
+---
+// Rheinisches Revier: Haushaltslage der 65 Kommunen (6 Kreise + Mönchengladbach) als Gesprächsgrundlage – nicht verlinkt, nicht indexiert.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import sperren from '../../data/haushaltslage/sperren.json';
+import markt from '../../data/markt/markt.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { verzeichnis, gemeindeUrl } from '../../lib/gemeinden.mjs';
+import { kreisVonAgs } from '../../lib/kreise.mjs';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import { projiziere, kommunenMitSperre } from '../../lib/sperren-karte.mjs';
+import { stellenJeGemeinde } from '../../lib/stellen-ort.mjs';
+import { FELD_NAMEN } from '../../lib/markt/benchmark.mjs';
+
+const KREISE = ['Rhein-Kreis Neuss', 'Rhein-Erft-Kreis', 'Düren', 'Euskirchen', 'Heinsberg', 'Städteregion Aachen'];
+const H = hebesaetze as any, S = schulden as any, HS = (hsNw as any).gemeinden;
+const { pfad } = verzeichnis(gemeinden as any[]);
+const kv = kreisVonAgs(gemeinden as any[]);
+const gs = (gemeinden as any[]).filter((g) => g.land === 'NW' && (KREISE.includes(g.kreis) || g.name === 'Mönchengladbach'));
+const gruppe = (g: any) => (g.name === 'Mönchengladbach' ? 'Mönchengladbach' : kv.get(g.kreis_ags)?.titel || g.kreis);
+const ew = gs.reduce((a, g) => a + (g.einwohner || 0), 0);
+const status = (g: any) => HS[g.ags]?.s ?? null;
+const n = (s: number) => gs.filter((g) => status(g) === s).length;
+const sperrUrls = new Set(kommunenMitSperre(sperren as any, gemeinden as any[]).filter((k: any) => k.land === 'NW' && k.ebene !== 'kreis').map((k: any) => k.url));
+const hatSperre = (g: any) => sperrUrls.has(gemeindeUrl(pfad[g.ags]));
+const mitSperre = gs.filter(hatSperre);
+const kkSumme = gs.reduce((a, g) => a + (S[g.ags]?.kassenkredite_je_ew || 0) * (g.einwohner || 0), 0);
+const schSumme = gs.reduce((a, g) => a + (S[g.ags]?.schulden_je_ew || 0) * (g.einwohner || 0), 0);
+const sm = stellenJeGemeinde((markt as any).stellen, gemeinden as any[]);
+const stellen = gs.flatMap((g) => sm.get(g.ags) || []);
+const felder = Object.entries(stellen.reduce((m: any, s: any) => ((m[s.f] = (m[s.f] || 0) + 1), m), {})).sort((a: any, b: any) => b[1] - a[1]).slice(0, 5) as [string, number][];
+const bauPlanung = stellen.filter((s: any) => s.f === 'bau').length;
+const verzehr = gs.filter((g) => (status(g) ?? 0) >= 3);
+
+// Kreise im Überblick
+const gruppen = [...new Set(gs.map(gruppe))].map((name) => {
+  const x = gs.filter((g) => gruppe(g) === name);
+  const e = x.reduce((a, g) => a + (g.einwohner || 0), 0);
+  return { name, x, e, kk: x.reduce((a, g) => a + (S[g.ags]?.kassenkredite_je_ew || 0) * (g.einwohner || 0), 0) / e,
+    st: Object.fromEntries(Object.keys(STUFEN).map((k) => [k, x.filter((g) => status(g) === +k).length])), sp: x.filter(hatSperre).length,
+    stellen: x.reduce((a, g) => a + (sm.get(g.ags)?.length || 0), 0) };
+}).sort((a, b) => b.e - a.e);
+
+// Karte
+const pts = gs.filter((g) => g.lat != null).map((g) => ({ g, ...projiziere(g.lat, g.lon), s: status(g), sp: hatSperre(g) }));
+const x0 = Math.min(...pts.map((p) => p.x)) - 8, y0 = Math.min(...pts.map((p) => p.y)) - 8;
+const bw = Math.max(...pts.map((p) => p.x)) - x0 + 8, bh = Math.max(...pts.map((p) => p.y)) - y0 + 8;
+const kf = Math.max(bw, bh) / 220, maxEw = Math.max(...gs.map((g) => g.einwohner || 1));
+const LABEL: Record<string, string> = { 'Mönchengladbach': 'l', 'Neuss': 'r', 'Aachen': 'l', 'Düren': 'r', 'Euskirchen': 'r' };
+const umfeld = (gemeinden as any[]).filter((g) => g.lat != null && !gs.includes(g)).map((g) => projiziere(g.lat, g.lon)).filter((p) => p.x > x0 && p.x < x0 + bw && p.y > y0 && p.y < y0 + bh);
+const r = (e: number) => kf * (1.3 + 6.5 * Math.sqrt(e / maxEw));
+const z = (x: number | null, e = '') => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + e);
+const mio = (x: number) => (x / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 0 });
+const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
+---
+<Base title="Rheinisches Revier: Haushaltslage der 65 Kommunen" description="Haushaltslage, Kassenkredite, Haushaltssperren und Personalmarkt der 65 Kommunen im Rheinischen Revier." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.rr { color:#0f172a; } .rr-w { max-width:1120px; margin:0 auto; padding:0 28px; }
+.rr-kopf { background:radial-gradient(900px 380px at 88% -10%, rgba(234,179,8,.22), transparent 60%), radial-gradient(700px 300px at 0% 120%, rgba(37,99,235,.25), transparent 60%), #14233a; color:#fff; padding:52px 0 40px; }
+.rr-k { font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#fcd34d; }
+.rr-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,4.8vw,56px); line-height:1.05; margin:12px 0 16px; max-width:18ch; }
+.rr-kopf p { color:rgba(255,255,255,.78); font-size:18px; line-height:1.55; max-width:62ch; margin:0; }
+.rr-kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:rgba(255,255,255,.12); border-radius:14px; overflow:hidden; margin-top:30px; }
+.rr-kpis div { background:rgba(20,35,58,.92); padding:18px; } .rr-kpis b { display:block; font:700 34px/1.05 'Playfair Display',Georgia,serif; } .rr-kpis span { font-size:12.5px; color:rgba(255,255,255,.66); line-height:1.4; display:block; margin-top:4px; }
+.rr-kpis .gold b { color:#fcd34d; } .rr-kpis .rot b { color:#fca5a5; }
+.rr-ab { padding:44px 0 6px; } .rr-ab > h2 { font-family:'Playfair Display',Georgia,serif; font-size:30px; margin:0 0 6px; } .rr-unter { color:#64748b; font-size:15px; margin:0 0 18px; line-height:1.55; max-width:72ch; }
+.rr-zwei { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:start; }
+.rr-karte { background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:16px; }
+.rr-karte svg { width:100%; height:auto; display:block; } .rr-karte a:hover circle { stroke:#2563eb !important; stroke-width:1.4 !important; }
+.rr-karte text { font-family:Arial,sans-serif; font-weight:600; fill:#0f172a; paint-order:stroke; stroke:#f8fafc; pointer-events:none; }
+.rr-leg div { display:grid; grid-template-columns:14px 1fr 34px; gap:10px; align-items:center; padding:7px 0; border-bottom:1px solid #f1f5f9; font-size:14px; } .rr-leg i { width:12px; height:12px; border-radius:50%; } .rr-leg b { text-align:right; }
+.rr-kreise { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:14px; }
+.rr-kr { border:1px solid #e2e8f0; border-radius:14px; padding:16px 18px; background:#fff; box-shadow:0 14px 30px -28px rgba(15,23,42,.6); }
+.rr-kr h3 { margin:0; font-size:17px; } .rr-kr small { color:#64748b; font-size:12.5px; }
+.rr-band { display:flex; height:10px; border-radius:5px; overflow:hidden; margin:12px 0 10px; background:#f1f5f9; } .rr-band span { display:block; height:100%; }
+.rr-kr dl { display:grid; grid-template-columns:1fr auto; gap:4px 10px; margin:0; font-size:13.5px; } .rr-kr dt { color:#475569; } .rr-kr dd { margin:0; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.rr-drei { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.rr-these { border-radius:16px; padding:22px; background:#fff; border:1px solid #e2e8f0; border-top:4px solid #ca8a04; }
+.rr-these b { display:block; font:700 36px/1 'Playfair Display',Georgia,serif; color:#14233a; margin-bottom:8px; } .rr-these h3 { margin:0 0 8px; font-size:17px; } .rr-these p { margin:0; font-size:14.5px; line-height:1.6; color:#334155; }
+.rr-scroll { overflow-x:auto; border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:6px 14px; }
+.rr-tab { width:100%; border-collapse:collapse; font-size:13.5px; font-variant-numeric:tabular-nums; min-width:860px; }
+.rr-tab th { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; text-align:right; padding:9px 6px; border-bottom:1px solid #14233a; cursor:pointer; white-space:nowrap; user-select:none; } .rr-tab th:nth-child(-n+3), .rr-tab td:nth-child(-n+3) { text-align:left; }
+.rr-tab td { padding:8px 6px; border-bottom:1px solid #f1f5f9; text-align:right; } .rr-tab a { color:#0f172a; font-weight:600; text-decoration:none; } .rr-tab a:hover { color:#2563eb; }
+.rr-tab .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:11.5px; font-weight:700; color:#fff; white-space:nowrap; } .rr-tab .sp { color:#b91c1c; font-weight:700; }
+.rr-weiter { margin:48px 0 70px; border-radius:18px; background:linear-gradient(135deg,#14233a,#1e3a5f); color:#fff; padding:34px; display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center; }
+.rr-weiter h2 { font-family:'Playfair Display',Georgia,serif; font-size:28px; margin:0 0 10px; } .rr-weiter p { color:rgba(255,255,255,.78); line-height:1.65; margin:0 0 10px; font-size:15.5px; }
+.rr-weiter ul { margin:0; padding:0; list-style:none; } .rr-weiter li { padding:10px 0 10px 28px; position:relative; border-bottom:1px solid rgba(255,255,255,.12); font-size:15px; line-height:1.5; } .rr-weiter li::before { content:'→'; position:absolute; left:0; color:#fcd34d; font-weight:700; }
+.rr-weiter li b { color:#fff; } .rr-weiter li span { color:rgba(255,255,255,.7); }
+.rr-sign { margin-top:14px; font-size:14px; color:rgba(255,255,255,.85); } .rr-sign a { color:#fcd34d; }
+.rr-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.55; }
+@media (max-width:900px){ .rr-w{padding:0 16px} .rr-kpis{grid-template-columns:repeat(2,1fr)} .rr-zwei,.rr-drei,.rr-weiter{grid-template-columns:1fr} }
+</style>
+<div class="rr">
+  <section class="rr-kopf"><div class="rr-w">
+    <div class="rr-k">Rheinisches Revier · Haushaltslage der Kommunen</div>
+    <h1>65 Kommunen, ein Strukturwandel – und ihre Haushalte</h1>
+    <p>Die zweite Förderphase soll die Mittel stärker nach dem Bedarf der Region einsetzen. Dafür braucht es die Haushaltslage jeder einzelnen Kommune: wer den Eigenanteil trägt, wer Unterstützung braucht, wo Personal für die Umsetzung fehlt. Hier ist sie – amtlich zum 31.12.2025, ergänzt um die Haushaltssperren seit 2025.</p>
+    <div class="rr-kpis">
+      <div><b>{gs.length}</b><span>Kommunen in sechs Kreisen und Mönchengladbach · {(ew / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 2 })} Mio. Einwohner</span></div>
+      <div class="gold"><b>{n(1)}</b><span>Kommunen mit echt ausgeglichenem Haushalt</span></div>
+      <div><b>{n(2)}</b><span>nur fiktiv ausgeglichen – aus der Ausgleichsrücklage</span></div>
+      <div class="rot"><b>{mitSperre.length}</b><span>Kommunen mit Haushaltssperre seit 2025</span></div>
+      <div><b>{(kkSumme / 1e9).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Mrd. €</b><span>Kassenkredite der Revierkommunen insgesamt</span></div>
+    </div>
+  </div></section>
+
+  <div class="rr-w">
+    <section class="rr-ab">
+      <h2>Die Haushaltslage auf einen Blick</h2>
+      <p class="rr-unter">Jede Kommune als Punkt, Größe nach Einwohnern, Farbe nach der amtlichen Einstufung der Kommunalaufsicht NRW. Ein Ring markiert eine belegte Haushaltssperre. Klick öffnet das Gemeindeprofil.</p>
+      <div class="rr-zwei">
+        <div class="rr-karte">
+          <svg viewBox={`${x0} ${y0} ${bw} ${bh}`} role="img" aria-label="Karte der 65 Kommunen im Rheinischen Revier nach Haushaltsstatus">
+            {umfeld.map((p) => <circle cx={p.x} cy={p.y} r={kf * 1.1} style="fill:#e2e8f0;stroke:none" />)}
+            {pts.sort((a, b) => (b.g.einwohner || 0) - (a.g.einwohner || 0)).map((p) => (
+              <a href={gemeindeUrl(pfad[p.g.ags])}><circle cx={p.x} cy={p.y} r={r(p.g.einwohner || 1)} style={`fill:${p.s ? (STUFEN as any)[p.s].farbe : '#cbd5e1'};stroke:${p.sp ? '#0f172a' : '#fff'};stroke-width:${(p.sp ? 1.6 : 0.6) * kf}`}><title>{p.g.name}: {p.s ? (STUFEN as any)[p.s].lang : 'k. A.'}{p.sp ? ' · Haushaltssperre' : ''}</title></circle></a>
+            ))}
+            {pts.filter((p) => LABEL[p.g.name]).map((p) => { const links = LABEL[p.g.name] === 'l'; return <text x={p.x + (links ? -1 : 1) * (r(p.g.einwohner) + kf * 1.5)} y={p.y + kf * 2.2} text-anchor={links ? 'end' : 'start'} style={`font-size:${kf * 6.5}px;stroke-width:${kf * 1.6}px`}>{p.g.name}</text>; })}
+          </svg>
+        </div>
+        <div class="rr-leg">
+          {Object.entries(STUFEN).map(([k, v]: any) => <div><i style={`background:${v.farbe}`}></i><span>{v.lang}</span><b>{n(+k)}</b></div>)}
+          <div><i style="background:#fff;border:2px solid #0f172a;box-sizing:border-box"></i><span>davon mit Haushaltssperre (Ring): {mitSperre.map((g) => g.name).join(', ')}</span><b>{mitSperre.length}</b></div>
+          <p class="rr-hin">Quelle: {(hsNw as any).quelle}. Haushaltssperren: Recherche der Redaktion Der Kämmerer, jeder Fall mit Quelle im <a href="/haushaltssperren/nordrhein-westfalen/" style="color:#2563eb">Verzeichnis</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rr-ab">
+      <h2>Was das für die zweite Förderphase heißt</h2>
+      <p class="rr-unter">Drei Befunde aus den Daten, die für die Verteilung und Umsetzung der Strukturmittel zählen.</p>
+      <div class="rr-drei">
+        <div class="rr-these"><b>{verzehr.length} von {gs.length}</b><h3>Eigenanteile gezielt absichern</h3><p>{verzehr.length} Kommunen zehren bereits an der allgemeinen Rücklage oder stehen in der Haushaltssicherung, weitere {n(2)} gleichen nur noch über die Ausgleichsrücklage aus. Förderquoten und Eigenanteile lassen sich nach dieser Lage staffeln – damit die Mittel dort ankommen, wo der Bedarf am größten ist.</p></div>
+        <div class="rr-these"><b>{stellen.length}</b><h3>Verwaltungskraft für die Umsetzung</h3><p>So viele Stellen schreiben öffentliche Arbeitgeber in den Revierkommunen gerade aus, {bauPlanung} davon in Bau, Planung und Liegenschaften – genau die Profile, die Strukturwandelprojekte tragen. Wer Routinetätigkeiten über Fachverfahren löst, gewinnt Personal für Projekte.</p></div>
+        <div class="rr-these"><b>{mitSperre.length}</b><h3>Frühwarnung im Vollzug</h3><p>Haushaltssperren in {mitSperre.map((g) => g.name).join(', ')} zeigen, wie schnell sich die Lage 2026 dreht. Eine monatliche Lagebeobachtung für alle {gs.length} Kommunen macht Veränderungen sichtbar, bevor Projekte ins Stocken geraten.</p></div>
+      </div>
+    </section>
+
+    <section class="rr-ab">
+      <h2>Die sechs Kreise und Mönchengladbach</h2>
+      <p class="rr-unter">Verteilung der amtlichen Einstufung je Gebiet, Kassenkredite je Einwohner (einwohnergewichtet), Haushaltssperren und offene Stellen.</p>
+      <div class="rr-kreise">
+        {gruppen.map((k) => (
+          <div class="rr-kr">
+            <h3>{k.name}</h3><small>{k.x.length} {k.x.length === 1 ? 'Kommune' : 'Kommunen'} · {z(k.e)} Einwohner</small>
+            <div class="rr-band">{Object.entries(STUFEN).map(([s, v]: any) => k.st[s] ? <span style={`width:${k.st[s] / k.x.length * 100}%;background:${v.farbe}`} title={`${v.lang}: ${k.st[s]}`}></span> : '')}</div>
+            <dl><dt>echt ausgeglichen</dt><dd>{k.st[1]}</dd><dt>fiktiv ausgeglichen</dt><dd>{k.st[2]}</dd><dt>Rücklagenverzehr / HSK</dt><dd>{k.x.length - k.st[1] - k.st[2]}</dd><dt>Kassenkredite je EW</dt><dd>{z(k.kk, ' €')}</dd><dt>Haushaltssperren</dt><dd>{k.sp}</dd><dt>offene Stellen</dt><dd>{k.stellen}</dd></dl>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="rr-ab">
+      <h2>Alle {gs.length} Kommunen</h2>
+      <p class="rr-unter">Spaltenkopf anklicken zum Sortieren. Hebesätze 2024, Schulden zum 31.12.2025, offene Stellen tagesaktuell.</p>
+      <div class="rr-scroll"><table class="rr-tab" id="rr-tab">
+        <thead><tr><th>Kommune</th><th>Gebiet</th><th>Einstufung</th><th>Einwohner</th><th>Kassenkredite je EW</th><th>Schulden je EW</th><th>Grundsteuer B</th><th>Stellen</th></tr></thead>
+        <tbody>{tab.map((g) => { const s = status(g); return (
+          <tr><td><a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a>{hatSperre(g) && <span class="sp"> · Sperre</span>}</td><td>{gruppe(g).replace('Städteregion ', 'StR ').replace('Kreis ', '')}</td>
+            <td data-v={s ?? ''}>{s ? <span class="pill" style={`background:${(STUFEN as any)[s].farbe}`}>{(STUFEN as any)[s].kurz}</span> : '–'}</td>
+            <td data-v={g.einwohner}>{z(g.einwohner)}</td><td data-v={S[g.ags]?.kassenkredite_je_ew ?? ''}>{z(S[g.ags]?.kassenkredite_je_ew ?? null, ' €')}</td>
+            <td data-v={S[g.ags]?.schulden_je_ew ?? ''}>{z(S[g.ags]?.schulden_je_ew ?? null, ' €')}</td><td data-v={H[g.ags]?.grundsteuer_b ?? ''}>{z(H[g.ags]?.grundsteuer_b ?? null, ' %')}</td>
+            <td data-v={sm.get(g.ags)?.length || 0}>{sm.get(g.ags)?.length || ''}</td></tr>); })}</tbody>
+      </table></div>
+      <p class="rr-hin">Gesuchte Berufsfelder im Revier: {felder.map(([f, c]) => `${(FELD_NAMEN as any)[f] || 'Sonstige'} ${c}`).join(' · ')}. Schulden der Revierkommunen im Kernhaushalt insgesamt rund {mio(schSumme)} Mio. €. Quellen: Statistische Ämter des Bundes und der Länder (Regionaldatenbank), MHKBD NRW (Haushaltsstatus), Stellenmarkt Der Kämmerer.</p>
+    </section>
+
+    <div class="rr-weiter">
+      <div>
+        <h2>Wie es weitergehen kann</h2>
+        <p>Diese Übersicht entsteht aus den Datenbeständen von Der Kämmerer – amtliche Haushaltsdaten, eine täglich gepflegte Recherche der Haushaltssperren und der kommunale Stellenmarkt. Für das Revier lässt sie sich zu einem festen Instrument ausbauen.</p>
+        <div class="rr-sign">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de">chefredaktion@derkaemmerer.de</a></div>
+      </div>
+      <ul>
+        <li><b>Revier-Lagebericht, monatlich</b><br><span>Haushaltslage, Sperren und Personalmarkt aller 65 Kommunen mit Veränderung zum Vormonat – für die Agentur, die Kreise und die Räte.</span></li>
+        <li><b>Kämmerer-Cockpit für die Kommunen</b><br><span>Haushaltsvollzug wochenaktuell, Hochrechnung als Korridor – damit Eigenanteile früh gesichert sind.</span></li>
+        <li><b>Personal für die Umsetzung</b><br><span>Nachbesetzungs-Check: welche Stellen über Fachverfahren laufen und Kapazität für Strukturwandelprojekte freigeben.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  const t = document.getElementById('rr-tab') as HTMLTableElement | null;
+  t?.querySelectorAll('th').forEach((th, i) => {
+    let ab = true;
+    th.addEventListener('click', () => {
+      const rows = [...t.tBodies[0].rows];
+      rows.sort((a, b) => {
+        if (i < 2) return (ab ? 1 : -1) * a.cells[i].innerText.localeCompare(b.cells[i].innerText, 'de');
+        const x = parseFloat(a.cells[i].dataset.v || 'NaN'), y = parseFloat(b.cells[i].dataset.v || 'NaN');
+        return isNaN(x) ? 1 : isNaN(y) ? -1 : (ab ? y - x : x - y);
+      });
+      ab = !ab; rows.forEach((r) => t.tBodies[0].appendChild(r));
+    });
+  });
+</script>
+<Footer />
+</Base>
