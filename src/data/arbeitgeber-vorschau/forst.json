@@ -1,0 +1,77 @@
+{
+  "slug": "forst",
+  "name": "Landkreis Spree-Neiße",
+  "bundesland": "Brandenburg",
+  "einwohner": 108574,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Martin Heusler",
+  "token": "9511ceee6dccfd10",
+  "claim": "Den Strukturwandel in der Lausitz in der Kreisverwaltung aktiv begleiten.",
+  "beschreibung": "Der Landkreis Spree-Neiße/Wokrejs Sprjewja-Nysa liegt in der Niederlausitz im Südosten Brandenburgs und umschließt die kreisfreie Stadt Cottbus vollständig. Er entstand 1993 bei der brandenburgischen Kreisreform und ist der östlichste Landkreis des Landes. Bekannt ist die Region für ihre einzigartigen Naturräume sowie die gelebte Sprache und Kultur der Sorben/Wenden. Die Kreisverwaltung mit Sitz in Forst (Lausitz) trägt aktiv zur Attraktivität und Vielfalt der Region bei und begleitet langfristig den Strukturwandel in der Lausitz. Beschäftigte erwartet ein sicherer Arbeitsplatz in motivierten Teams.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "108.574",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.656,98 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "29",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1993",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Forst (Lausitz)",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Team",
+      "beschreibung": "Angenehme Arbeitsumgebung in einem motivierten Team, inklusive teambildender Maßnahmen wie einem Teamtag."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Bezahlung nach TVöD (VKA) mit Jahressonderzahlungen, vermögenswirksamen Leistungen und betrieblicher Altersvorsorge (ZVK)."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Kostenlose PKW-Stellplätze sowie ein Zuschuss zum ÖPNV."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Gute Vereinbarkeit von Familien- und Berufsleben durch flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Verschiedene Qualifikations- und Weiterbildungsangebote."
+    },
+    {
+      "titel": "Urlaub und Sicherheit",
+      "beschreibung": "30 Tage Erholungsurlaub im Jahr und ein sicherer Arbeitsplatz in der Region."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Spree-Neiße · Haupt- und Personalverwaltung",
+    "email": "hauptamt@lkspn.de",
+    "telefon": "03562 986-11116",
+    "bewerbungsportal": "https://www.lkspn.de/aktuelles/ausschreibungen/stellenangebote.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Bildung 1993, Lage, Sitz der Kreisverwaltung, Landrat (Stichwahl 22.03.2026, im Amt seit 10.05.2026): de.wikipedia.org/wiki/Landkreis_Spree-Neiße (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Landkreis Spree-Neiße, Sachbearbeiter Finanzierungen/Leistungsentgelte https://interamt.de/koop/app/stelle?id=1497201, Sachbearbeiter Personalangelegenheiten https://interamt.de/koop/app/stelle?id=1499960 und Sachbearbeiter Personalentwicklung https://interamt.de/koop/app/stelle?id=1500052 (API api.interamt.de/query/stellenangebot/<id>) (abgerufen 10.10.2026)"
+  ]
+}

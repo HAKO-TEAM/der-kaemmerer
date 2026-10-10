@@ -1,0 +1,76 @@
+{
+  "slug": "krefeld",
+  "name": "Stadt Krefeld",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 230738,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Frank Meyer",
+  "token": "0dd16f92bc5e6c26",
+  "claim": "Eine Großstadt mit Charakter im Rheinland verantwortungsvoll mitgestalten.",
+  "beschreibung": "Krefeld ist Oberzentrum in den Metropolregionen Rhein-Ruhr und Rheinland, wurde 1105 erstmals urkundlich erwähnt und erhielt 1373 die Stadtrechte. Die Stadt verbindet viel Grün und hohe Lebensqualität mit einem lebendigen Kulturleben und einer engagierten Stadtgesellschaft. Mit rund 4.000 Mitarbeitenden ist die Stadtverwaltung eine der größten Arbeitgeberinnen vor Ort. Aktuelle Schwerpunkte sind die Erneuerung der Infrastruktur, insbesondere von Schulen, Kitas und Verkehrsflächen, die nachhaltige Stadtentwicklung und die Stärkung der Innenstadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "230.738",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "137,78 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1105",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "rund 4.000",
+      "icon": "🏢"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Homeoffice je nach Stelle."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Sicherer Arbeitsplatz mit leistungsorientierter Bezahlung und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Personalentwicklung mit Coaching und Mentoring sowie strukturiertes Onboarding."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Moderne Mobilitätsangebote wie Jobrad, Arbeitgeberdarlehen und Dienstfahrkarten."
+    },
+    {
+      "titel": "Gesundheit und Miteinander",
+      "beschreibung": "Gesundheitsmanagement und Sport, Mitarbeitendenevents, Feedback- und Ideenmanagement sowie moderne Arbeitsplatzausstattung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Verwaltungssteuerung und -service",
+    "telefon": "02151 86-1319",
+    "bewerbungsportal": "https://karriere.krefeld.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Ersterwähnung 1105, Stadtrechte 1373, Oberzentrum, Oberbürgermeister (Stichwahl 2025): de.wikipedia.org/wiki/Krefeld (abgerufen 10.10.2026)",
+    "Benefits, Kontakt, Beschäftigtenzahl, Schwerpunkte: Stellenausschreibungen Stadt Krefeld, Fachprüfer/in Interne Kontrollsysteme https://interamt.de/koop/app/stelle?id=1474607 (API api.interamt.de/query/stellenangebot/1474607) und Beigeordnete/r Planung, Bau und Gebäudemanagement https://interamt.de/koop/app/stelle?id=1493073 (API api.interamt.de/query/stellenangebot/1493073) (abgerufen 10.10.2026)"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "neuss",
+  "name": "Stadt Neuss",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 153767,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Reiner Breuer",
+  "token": "4c0374d76b8bbb2f",
+  "claim": "In einer der ältesten Städte Deutschlands Wirtschaft und Finanzen am Rhein mitsteuern.",
+  "beschreibung": "Neuss ist eine Großstadt am linken Niederrhein gegenüber der Landeshauptstadt Düsseldorf und die bevölkerungsreichste Stadt des Rhein-Kreises Neuss. Mit ihrer 2000-Jahr-Feier im Jahr 1984 zählt sie zu den ältesten Städten Deutschlands; bekannt ist sie für ihre römische Vergangenheit, den Rheinhafen und das Bürger-Schützenfest. Das Dezernat für Wirtschaft, Finanzen und Liegenschaften umfasst rund 160 Mitarbeitende und verantwortet ein breites Aufgabenspektrum. Beschäftigte erwartet ein wertschätzendes Umfeld, das Eigeninitiative fördert, mit mobilem Arbeiten, individueller Entwicklung und Angeboten zur Kinderbetreuung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "153.767",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "99,52 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "2000-Jahr-Feier",
+      "wert": "1984",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Mobiles Arbeiten und flexible Arbeitszeiten; Teilzeitmodelle sind grundsätzlich möglich."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Urlaubstage bei einer Fünf-Tage-Woche."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "E-Learning, Fortbildungen und individuelle Entwicklung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "50 % Zuschuss zum Deutschlandticket."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Team und Familie",
+      "beschreibung": "Team-Events, Kinderbetreuungsangebote und ein wertschätzendes Umfeld, das Eigeninitiative fördert."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Neuss · Personal- und Organisationsamt",
+    "email": "lea.trappmann@stadt.neuss.de",
+    "telefon": "02131 90-2610",
+    "bewerbungsportal": "https://karriere.neuss.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (IT.NRW, 31.12.2025), Fläche, 2000-Jahr-Feier 1984, Mittelzentrum, Bürgermeister: de.wikipedia.org/wiki/Neuss (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Neuss, Leitung des Dezernatsbüros und persönliche Referent*in der Ersten Beigeordneten https://karriere.nrw/stellenausschreibung/9cade484-7cd6-4bbe-a881-1ea0bd2bc843 (API api.karriere.nrw/v1.0/combined-jobs/9cade484-7cd6-4bbe-a881-1ea0bd2bc843/) (abgerufen 10.10.2026)"
+  ]
+}

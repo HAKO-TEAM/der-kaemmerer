@@ -1,0 +1,77 @@
+{
+  "slug": "ludwigsfelde",
+  "name": "Stadt Ludwigsfelde",
+  "bundesland": "Brandenburg",
+  "einwohner": 29635,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Andreas Igel",
+  "token": "018963626a9b6565",
+  "claim": "Eine wirtschaftsstarke, wachsende Stadt vor den Toren Berlins mitgestalten.",
+  "beschreibung": "Ludwigsfelde ist eine amtsfreie Mittelstadt im Landkreis Teltow-Fläming, rund elf Kilometer südlich der Berliner Stadtgrenze in der Metropolregion Berlin-Brandenburg. Die Kernstadt geht auf eine Gründung um 1750 zurück, das Stadtrecht besteht seit 1965; seit 1936 hat sich Ludwigsfelde zur Industriestadt entwickelt, heute unter anderem mit Automobil- und Luftfahrtindustrie. Die Stadtverwaltung gestaltet die Entwicklung einer dynamisch wachsenden Kommune mit moderner Infrastruktur und hoher Lebensqualität aktiv mit und bietet Aufgaben mit großem Handlungs- und Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "29.635",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "109,98 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1965",
+      "icon": "📜"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "11",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Teltow-Fläming",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Vielseitiger und sicherer Arbeitsplatz mit großem Handlungs- und Gestaltungsspielraum und hoher Eigenverantwortung."
+    },
+    {
+      "titel": "Familienfreundlichkeit",
+      "beschreibung": "Flexible Arbeitszeiten ohne Kernzeiten sowie die Möglichkeit des mobilen Arbeitens."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Bezahlung nach TVöD inklusive Jahressonderzahlung, leistungsorientierter Bezahlung und Arbeitgeberzuschuss zur Zusatzversorgung (Betriebsrente)."
+    },
+    {
+      "titel": "Fortbildung und Gesundheit",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten sowie betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub (ab 2027 31 Tage) sowie frei an Heiligabend und Silvester."
+    },
+    {
+      "titel": "Kollegialität und Mobilität",
+      "beschreibung": "Kollegiale Unternehmenskultur mit regelmäßigen Mitarbeiterevents und Fahrradleasing im Rahmen der Entgeltumwandlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Ludwigsfelde · Fachdienst Personal",
+    "email": "bewerbung@ludwigsfelde.de",
+    "telefon": "03378 827-121",
+    "bewerbungsportal": "https://www.ludwigsfelde.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Stadtrecht 1965, Stadtgeschichte, Bürgermeister (Wiederwahl 04.06.2023, Amtszeit acht Jahre): de.wikipedia.org/wiki/Ludwigsfelde (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Stadt Ludwigsfelde, Sachbearbeiter/in Kommunalservice – Haushalt https://interamt.de/koop/app/stelle?id=1495184 und Ingenieur/in Verkehrsanlagen / Tiefbau https://interamt.de/koop/app/stelle?id=1461763 (API api.interamt.de/query/stellenangebot/<id>) (abgerufen 10.10.2026)"
+  ]
+}

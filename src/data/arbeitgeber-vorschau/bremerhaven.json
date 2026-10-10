@@ -1,0 +1,72 @@
+{
+  "slug": "bremerhaven",
+  "name": "Stadt Bremerhaven",
+  "bundesland": "Bremen",
+  "einwohner": 118502,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Martin Günthner",
+  "token": "d81ea7ff28fb1df7",
+  "claim": "Die Seestadt an der Weser als Oberzentrum mit Verantwortung voranbringen.",
+  "beschreibung": "Bremerhaven wurde 1827 gegründet, gehört als Großstadt zum Land Freie Hansestadt Bremen und ist Oberzentrum für den umgebenden Landkreis Cuxhaven. Aus der traditionsreichen Hafen-, Handels- und Industriestadt ist eine Dienstleistungs- und Wissensstadt mit Hochschule, Forschungsinstituten und Tourismus geworden. Der Magistrat verbindet als Stadtgemeinde eines Stadtstaates ein besonders breites Aufgabenspektrum – vom Bürger- und Ordnungsamt bis zum Jobcenter. Beschäftigte erwarten vielseitige, verantwortungsvolle Aufgaben in einem kollegialen Umfeld, eine moderne und bürgerorientierte Verwaltung sowie ein familienfreundliches, nach audit berufundfamilie zertifiziertes Arbeitsumfeld.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "118.502",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "101,41 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1827",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Homeoffice und flexible Arbeitszeiten; die Stellen eignen sich auch für Teilzeitbeschäftigte."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Familienfreundliches Arbeiten, zertifiziert mit dem audit berufundfamilie."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsförderung, unter anderem über Epassi."
+    },
+    {
+      "titel": "Personalentwicklung",
+      "beschreibung": "Lebensphasenorientierte Personalentwicklung und ein breitgefächertes Fort- und Weiterbildungsangebot."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket für den Weg zur Arbeit."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz in einer modernen, bürgerorientierten Verwaltung mit freundlicher und wertschätzender Arbeitsatmosphäre im kollegialen Team."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Bremerhaven · Personalamt",
+    "email": "Jana.Wolff@magistrat.bremerhaven.de",
+    "telefon": "0471 590-2478",
+    "bewerbungsportal": "https://www.stellen.bremerhaven.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (Statistisches Landesamt Bremen, 31.12.2025), Fläche, Gründung 1827, Oberzentrum, Oberbürgermeister: de.wikipedia.org/wiki/Bremerhaven (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Stadt Bremerhaven, Sachgebietsleitung Allgemeine Ordnungsangelegenheiten https://interamt.de/koop/app/stelle?id=1498000 (API api.interamt.de/query/stellenangebot/1498000) und Teamleiter:in Rechtsbehelfsstelle & Unterhalt https://interamt.de/koop/app/stelle?id=1498744 (API api.interamt.de/query/stellenangebot/1498744) (abgerufen 10.10.2026)"
+  ]
+}

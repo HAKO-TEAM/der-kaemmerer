@@ -1,0 +1,74 @@
+{
+  "slug": "bergisch-gladbach",
+  "name": "Stadt Bergisch Gladbach",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 111174,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Marcel Kreutz",
+  "token": "2b49ff55c2a75857",
+  "claim": "Den eigenen Lebensraum am Rand der Bergischen Höhen mit Wirkung gestalten.",
+  "beschreibung": "Bergisch Gladbach ist große kreisangehörige Stadt, Kreisstadt und Mittelzentrum des Rheinisch-Bergischen Kreises und grenzt im Westen unmittelbar an Köln. Die 1271 erstmals urkundlich erwähnte Stadt entstand in ihrer heutigen Form 1975 durch den Zusammenschluss mit Bensberg und Schildgen und ist seit 1977 Großstadt. Die Stadtverwaltung versteht sich als gut funktionierende, überschaubare Gemeinschaft, in der jede Tätigkeit zählt und die Arbeit nach innen wie nach außen sichtbar Wirkung zeigt. Wer hier einsteigt, gestaltet die Stadt und die eigene Tätigkeit aktiv mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "111.174",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "83,09 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1271",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt und Mittelzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Mitarbeitende der Stadtverwaltung",
+      "wert": "1.785",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten von Gleitzeit bis Stundenreduzierung."
+    },
+    {
+      "titel": "Homeoffice",
+      "beschreibung": "Homeoffice für eine bessere Vereinbarkeit von Beruf und Privatleben."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmaßnahmen zu zahlreichen fachlichen und persönlichen Kompetenzen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Kostengünstiges Deutschlandticket für 34 Euro."
+    },
+    {
+      "titel": "Altersvorsorge und Gesundheit",
+      "beschreibung": "Zusatzleistungen zur Altersvorsorge und betriebliches Gesundheitsmanagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Bergisch Gladbach · Bewerbung",
+    "email": "bewerbung@stadt-gl.de",
+    "telefon": "02202 14-2381",
+    "bewerbungsportal": "https://www.arbeiten-fuer-bergischgladbach.de/hr/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1271, Gebietsreform 1975, Kreisstadt/Mittelzentrum, Bürgermeister (seit 2025): de.wikipedia.org/wiki/Bergisch_Gladbach (abgerufen 10.10.2026)",
+    "Benefits: Stellenausschreibung Stadt Bergisch Gladbach, Bilanzbuchhaltung Back Office https://karriere.nrw/stellenausschreibung/d3ceb0c1-a5c5-4ab5-8791-0f0935157247 (API api.karriere.nrw/v1.0/combined-jobs/d3ceb0c1-a5c5-4ab5-8791-0f0935157247/) (abgerufen 10.10.2026)",
+    "Kontakt und Zahl der Mitarbeitenden: Karriereseite www.arbeiten-fuer-bergischgladbach.de/hr/ (abgerufen 10.10.2026)"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "sinn-edingen",
+  "token": "b110ee5a156b899e",
+  "name": "Abwasserverband Mittlere Dill",
+  "bundesland": "Hessen",
+  "einwohner": 32000,
+  "buergermeistertitel": "Verbandsvorsitzender",
+  "buergermeister": "Lukas Winkler",
+  "claim": "Die Finanzen eines kommunalen Zweckverbands für saubere Gewässer an der Dill mitverantworten.",
+  "beschreibung": "Der Abwasserverband Mittlere Dill wurde im Dezember 1970 als Zweckverband gegründet und wird heute von der Stadt Herborn sowie den Gemeinden Sinn und Greifenstein getragen. Er sorgt für die umweltgerechte Entsorgung des Abwassers von rund 32.000 Einwohnerinnen und Einwohnern und betreibt dafür unter anderem rund 260 km Kanalisation sowie die Kläranlagen in Sinn-Edingen und Greifenstein-Nenderoth. Im kompakten Team aus Verwaltung, Kanalüberwachung und Kläranlage reicht die Arbeit im Finanzbereich von der Buchhaltung über Haushaltsplanung und Gebührenkalkulation bis zum Jahresabschluss – mit direktem Bezug zu einer Aufgabe, die für Menschen und Umwelt in der Region unverzichtbar ist.",
+  "kennzahlen": [
+    {
+      "label": "Angeschlossene Einwohner (rund, Stand 09/2026)",
+      "wert": "32.000",
+      "icon": "👥"
+    },
+    {
+      "label": "Kanalnetz",
+      "wert": "rund 260 km",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kläranlagen",
+      "wert": "2",
+      "icon": "💧"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1970",
+      "icon": "📜"
+    },
+    {
+      "label": "Verbandsmitglieder",
+      "wert": "Herborn, Sinn, Greifenstein",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung mit Vergütung nach TVöD-VKA, Zusatzversorgung, Jahressonderzahlung und Leistungsentgelt."
+    },
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "31 Urlaubstage, zusätzlich arbeitsfrei am 24.12. und 31.12. sowie Betriebsruhe an Brückentagen und zwischen Weihnachten und Silvester."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit zwischen 06:30 und 18:30 Uhr, Teilzeit ab 30 Wochenstunden möglich."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobiles Arbeiten an bis zu zwei Tagen pro Woche, ein Laptop wird gestellt."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Helles, klimatisiertes Büro in einem neuen Bürogebäude, kostenlose Parkplätze direkt am Arbeitsplatz und ÖPNV in der Nähe."
+    },
+    {
+      "titel": "Weiterbildung und Mobilität",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten sowie Fahrrad- und E-Bike-Leasing über Gehaltsumwandlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abwasserverband Mittlere Dill · Personalabteilung",
+    "email": "personal@av-md.de",
+    "telefon": "06449 9225-14",
+    "bewerbungsportal": "https://www.av-md.de/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Gründung 1970, Verbandsmitglieder, Verbandsvorsitzender: www.av-md.de/der-verband/struktur/ (abgerufen 10.10.2026)",
+    "Bundesland: de.wikipedia.org/wiki/Sinn_(Hessen) (abgerufen 10.10.2026)",
+    "Angeschlossene Einwohner, Kanalnetz, Kläranlagen, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Finanzen & Buchhaltung, Abwasserverband Mittlere Dill https://interamt.de/koop/app/stelle?id=1496390 (API api.interamt.de/query/stellenangebot/1496390) (abgerufen 10.10.2026)"
+  ]
+}

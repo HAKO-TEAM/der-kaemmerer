@@ -1,0 +1,77 @@
+{
+  "slug": "schenefeld",
+  "name": "Stadt Schenefeld",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 19875,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Christiane Küchenhof",
+  "token": "9972aa97ccd5ab33",
+  "claim": "In einer kompakten Stadt am Hamburger Stadtrand Verwaltung modern weiterentwickeln.",
+  "beschreibung": "Schenefeld im Kreis Pinneberg grenzt unmittelbar an Hamburg, wurde 1256 erstmals urkundlich erwähnt und erhielt 1972 die Stadtrechte. Die Stadtverwaltung arbeitet mit rund 135 Mitarbeiterinnen und Mitarbeitern unter dem Leitgedanken, Schenefeld jeden Tag ein wenig besser zu machen. Beschäftigte gestalten Prozessoptimierung und Digitalisierung mit, betreuen Städtepartnerschaften und Ehrenamt oder erschließen Fördermittel für städtische Projekte – mit flexiblen Arbeitszeiten und attraktiven Zusatzleistungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "19.875",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "9,99 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1256",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1972",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "rund 135",
+      "icon": "🏢"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten, Möglichkeit einer 4-Tage-Woche und Telearbeit nach Absprache."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Jahresurlaub plus bezahlte Freistellung am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Stark bezuschusstes Deutschlandticket, Fahrrad- und Fahrzeugleasing sowie kostenlose Parkplätze direkt am Arbeitsplatz."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge über die VBL."
+    },
+    {
+      "titel": "Fortbildung und Einarbeitung",
+      "beschreibung": "Gute Fort- und Weiterbildungsmöglichkeiten und eine umfangreiche Einarbeitung."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Diverse zusätzliche freiwillige Arbeitgeberleistungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachgebiet Personalangelegenheiten",
+    "email": "nicole.wiese@stadt-schenefeld.de",
+    "telefon": "040 83037-178"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Ersterwähnung 1256, Stadtrechte 1972: de.wikipedia.org/wiki/Schenefeld_(Kreis_Pinneberg) (abgerufen 10.10.2026)",
+    "Bürgermeisterin (seit 2006, im September 2023 bestätigt) und Beschäftigtenzahl: https://www.stadt-schenefeld.de/rathaus/verwaltung/die-buergermeisterin/ (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Stadt Schenefeld, Stabstelle Fördermittelmanagement https://interamt.de/koop/app/stelle?id=1493243 (API api.interamt.de/query/stellenangebot/1493243) und Sachbearbeitung Fachdienst Allgemeine Dienste https://interamt.de/koop/app/stelle?id=1497816 (API api.interamt.de/query/stellenangebot/1497816) (abgerufen 10.10.2026)"
+  ]
+}

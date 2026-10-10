@@ -1,0 +1,71 @@
+{
+  "slug": "schwanfeld",
+  "token": "499ddfdcddda7e58",
+  "name": "Verwaltungsgemeinschaft Schwanfeld",
+  "bundesland": "Bayern",
+  "einwohner": 2717,
+  "claim": "Als Kämmerin oder Kämmerer die Finanzen zweier Gemeinden in Unterfranken eigenverantwortlich führen.",
+  "beschreibung": "In der Verwaltungsgemeinschaft Schwanfeld im unterfränkischen Landkreis Schweinfurt erledigen die Gemeinden Schwanfeld und Wipfeld seit 1980 ihre Verwaltungsgeschäfte gemeinsam; Sitz ist Schwanfeld. Die Leitung der Finanzverwaltung verantwortet Kämmerei, Kasse, Steuern, Abgaben und Gebühren und betreut die Haushalte der beiden Mitgliedsgemeinden, der Verwaltungsgemeinschaft und des Schulverbands. Die kompakte, moderne Verwaltung bietet kurze Wege, direkten Kontakt zu den kommunalen Organen und eine Führungsaufgabe mit großem Gestaltungsspielraum – vom Förderwesen bis zur Gebührenkalkulation.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.717",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "2 (Schwanfeld, Wipfeld)",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "17,33 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1980",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Schweinfurt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Ein sicherer, unbefristeter Arbeitsplatz mit einem anspruchsvollen, interessanten und abwechslungsreichen Aufgabengebiet."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Individuelle Fortbildungsmöglichkeiten zur Förderung der beruflichen Weiterentwicklung."
+    },
+    {
+      "titel": "Familienfreundliche Arbeitszeit",
+      "beschreibung": "Familienfreundliche und flexible Arbeitszeiten in einer modernen Verwaltung."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Leistungsgerechte Vergütung je nach Qualifikation bis EG 11 TVöD bzw. A 12 BayBesG."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Alle üblichen Leistungen des öffentlichen Dienstes, darunter Fahrradleasing und ein Arbeitgeberzuschuss zur Entgeltumwandlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verwaltungsgemeinschaft Schwanfeld · Personalabteilung",
+    "email": "personalabteilung@vg-schwanfeld.de",
+    "telefon": "09384 9730-60",
+    "bewerbungsportal": "https://www.mein-check-in.de/wipfeld/position-pdf/id/375370"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Gründung 1980, Sitz: de.wikipedia.org/wiki/Verwaltungsgemeinschaft_Schwanfeld (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung der Finanzverwaltung, Kämmerer/Kämmerin, Verwaltungsgemeinschaft Schwanfeld https://www.mein-check-in.de/wipfeld/position-pdf/id/375370 (abgerufen 10.10.2026)"
+  ]
+}

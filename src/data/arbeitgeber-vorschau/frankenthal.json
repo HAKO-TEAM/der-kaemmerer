@@ -1,0 +1,78 @@
+{
+  "slug": "frankenthal",
+  "name": "Stadt Frankenthal (Pfalz)",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 48134,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Nicolas Meyer",
+  "token": "01d702baf3b10d66",
+  "claim": "Eine Stadtverwaltung im Wandel bürgernah und digital weiterentwickeln.",
+  "beschreibung": "Frankenthal (Pfalz) ist eine kreisfreie Stadt im Nordosten der Pfalz zwischen Worms und Ludwigshafen und Mittelzentrum für die umliegenden Gemeinden des Rhein-Pfalz-Kreises in der Metropolregion Rhein-Neckar. Die Stadt erhielt 1577 das Stadtrecht und war bis ins 18. Jahrhundert einer der wichtigsten Orte der Kurpfalz. Die Stadtverwaltung zählt zu den größten Arbeitgebern der Region und entwickelt sich im Transformationsprozess FIT konsequent weiter: bürgernah, serviceorientiert, digital und zukunftsfähig. Beschäftigte gestalten in zukunftsorientierten Projekten das Frankenthal von morgen mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "48.134",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "43,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1577",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisfreie Stadt, Mittelzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "5",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Krisensicherer Arbeitsplatz mit abwechslungsreichen, sinnstiftenden Tätigkeiten und fairer, transparenter Bezahlung nach TVöD-VKA bzw. LBesG."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten in Teilzeit oder Vollzeit mit Gleitzeit sowie Telearbeit bei geeigneten Tätigkeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zentrale, gut erreichbare Lage, vergünstigtes Deutschlandticket als Jobticket und Jobrad-Angebot."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Rente für alle Tarifbeschäftigten zusätzlich zur gesetzlichen Rente."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Regelmäßige Veranstaltungen des betrieblichen Gesundheitsmanagements und eine psychosoziale Sprechstunde."
+    },
+    {
+      "titel": "Weiterbildung und Miteinander",
+      "beschreibung": "Individuelle fachliche und persönliche Weiterbildung, gemeinsame Ausflüge, Corporate Benefits und vergünstigte Büchereiausweise."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Frankenthal (Pfalz) · Personal",
+    "email": "anne.wenzel-ries@frankenthal.de",
+    "telefon": "06233 89-479",
+    "bewerbungsportal": "https://www.frankenthal.de/stadt-frankenthal/de/rathaus/verwaltung/ausbildung-karriere/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Stadtrecht 1577, Mittelzentrum, Oberbürgermeister (im Amt seit 01.01.2024): de.wikipedia.org/wiki/Frankenthal_(Pfalz) (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadtverwaltung Frankenthal (Pfalz), Bereichsleitung Bürgerdienste, Ordnung und Umwelt https://interamt.de/koop/app/stelle?id=1480583 (API api.interamt.de/query/stellenangebot/1480583) (abgerufen 10.10.2026)",
+    "Benefits und Arbeitgeberprofil: Karriereseite www.frankenthal.de/benefits (abgerufen 10.10.2026)"
+  ]
+}

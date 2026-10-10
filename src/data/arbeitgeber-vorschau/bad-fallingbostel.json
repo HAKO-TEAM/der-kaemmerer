@@ -1,0 +1,66 @@
+{
+  "slug": "bad-fallingbostel",
+  "name": "Stadt Bad Fallingbostel",
+  "bundesland": "Niedersachsen",
+  "einwohner": 12749,
+  "token": "60995778133bc658",
+  "claim": "In einer familienfreundlichen Kreisstadt der Lüneburger Heide Finanzen und Verwaltung gestalten.",
+  "beschreibung": "Bad Fallingbostel ist die Kreisstadt des Heidekreises und liegt in der südwestlichen Lüneburger Heide an der Böhme, verkehrsgünstig im Dreieck Hannover–Hamburg–Bremen. Kindergärten und Schulen bis zur Oberschule sind am Ort, Natur und Freizeitangebote liegen in unmittelbarer Nähe. Die Stadtverwaltung trägt das FaMi-Siegel 2025–2027 als Zeichen familienfreundlicher Arbeitsbedingungen und bietet fachlich anspruchsvolle Aufgaben in einem kollegialen Umfeld.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "12.749",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "63,7 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "993",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt des Heidekreises",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Abwechslungsreicher und sicherer Arbeitsplatz mit fachlich anspruchsvollen Aufgaben."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Zertifiziert familienfreundlicher Arbeitgeber mit FaMi-Siegel 2025–2027."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiches Fortbildungsangebot für die berufliche und persönliche Weiterentwicklung."
+    },
+    {
+      "titel": "Mitarbeitervorteile",
+      "beschreibung": "Corporate Benefits über das städtische Mitarbeiter-Vorteilsportal."
+    },
+    {
+      "titel": "Team",
+      "beschreibung": "Kollegiale Arbeitsatmosphäre."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Bad Fallingbostel · Auswahlverfahren",
+    "email": "stadt@badfallingbostel.de",
+    "telefon": "05162 401-45",
+    "bewerbungsportal": "https://www.badfallingbostel.de/stellenausschreibungen"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Ersterwähnung 993, Kreisstadt, Lage: de.wikipedia.org/wiki/Bad_Fallingbostel (abgerufen 10.10.2026)",
+    "Benefits, Kontakt, FaMi-Siegel: Stellenausschreibung Stadt Bad Fallingbostel, Sachbearbeitung Finanzen https://interamt.de/koop/app/stelle?id=1491026 (API api.interamt.de/query/stellenangebot/1491026) (abgerufen 10.10.2026)"
+  ]
+}

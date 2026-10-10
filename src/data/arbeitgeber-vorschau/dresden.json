@@ -1,0 +1,77 @@
+{
+  "slug": "dresden",
+  "name": "Landeshauptstadt Dresden",
+  "bundesland": "Sachsen",
+  "einwohner": 562764,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dirk Hilbert",
+  "token": "d0e3205cdeecf970",
+  "claim": "Die Verwaltung der sächsischen Landeshauptstadt verantwortungsvoll mitgestalten.",
+  "beschreibung": "Dresden ist Landeshauptstadt des Freistaates Sachsen, Sitz von Staatsregierung und Landtag und nach Leipzig die zweitgrößte Kommune des Landes. Die 1206 erstmals urkundlich erwähnte Stadt verbindet ein reiches kulturelles Erbe mit einer starken Bildungs- und Wirtschaftslandschaft. Die Stadtverwaltung bietet vielseitige Aufgaben in unterschiedlichsten Bereichen – vom Haupt- und Personalamt mit zentraler Verwaltungsorganisation und strategischer Personalarbeit bis zu den Fachämtern, Regie- und Eigenbetrieben. Wer hier arbeitet, gestaltet die Zukunft einer Großstadt mit hoher Lebensqualität aktiv mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "562.764",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "328,48 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1206",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Landeshauptstadt",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Stadtgliederung",
+      "wert": "10 Stadtbezirke, 9 Ortschaften",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Finanzielle Sicherheit",
+      "beschreibung": "Bezahlung nach TVöD mit transparenter Gehaltsentwicklung, Jahressonderzahlung, leistungsorientierter Bezahlung und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitmodelle und die Möglichkeit zum Homeoffice."
+    },
+    {
+      "titel": "Urlaub und Bildungsurlaub",
+      "beschreibung": "30 Tage Erholungsurlaub bei einer 5-Tage-Woche sowie Bildungsurlaub."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote und Events des Betrieblichen Gesundheitsmanagements für körperliche und mentale Gesundheit."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Persönliche und fachliche Weiterentwicklung über das städtische Fortbildungsprogramm."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket sowie ein attraktives Fahrradleasing-Angebot."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalamt · Fragen zum Bewerbungsprozess",
+    "email": "MKuettner@dresden.de",
+    "telefon": "0351 488-3083",
+    "bewerbungsportal": "https://bewerberportal.dresden.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtgliederung, Ersterwähnung 1206, Landeshauptstadt, Oberbürgermeister: de.wikipedia.org/wiki/Dresden (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landeshauptstadt Dresden, Juristische/-r Referent/-in (m/w/d) im Haupt- und Personalamt https://interamt.de/koop/app/stelle?id=1496682 (API api.interamt.de/query/stellenangebot/1496682) (abgerufen 10.10.2026)"
+  ]
+}

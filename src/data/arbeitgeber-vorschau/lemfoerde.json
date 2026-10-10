@@ -1,0 +1,67 @@
+{
+  "slug": "lemfoerde",
+  "token": "c7c6e322cd52dd2c",
+  "name": "Samtgemeinde Altes Amt Lemförde",
+  "bundesland": "Niedersachsen",
+  "einwohner": 8987,
+  "claim": "Die Finanzen von sieben Gemeinden am Dümmer gemeinsam mit der Kämmerei gestalten.",
+  "beschreibung": "Die Samtgemeinde Altes Amt Lemförde bildet den südlichsten Teil des Landkreises Diepholz und liegt am Ost- und Südufer des Dümmers sowie am Stemweder Berg. Sie entstand 1971 durch einen freiwilligen Zusammenschluss von sieben Gemeinden, deren Verwaltungsgeschäfte sie gemeinsam erledigt; ihr Name geht auf das historische Amt Lemförde zurück. Die bürgernahe Verwaltung bietet in der Finanzverwaltung ein vielseitiges Aufgabenfeld – von Haushaltsplanung und Jahresabschluss bis zur Beratung der Fachbereiche und Mitgliedsgemeinden sowie der Vorbereitung von Vorlagen für die politischen Gremien.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "8.987",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "109,57 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1971",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Diepholz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Verantwortungsvolle Aufgabe",
+      "beschreibung": "Eine verantwortungsvolle und vielseitige Tätigkeit in einer bürgernahen Kommunalverwaltung."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Gründliche Einarbeitung und die Möglichkeit zur fachlichen Fortbildung."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge für Beschäftigte."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Samtgemeinde Altes Amt Lemförde · Hauptamt / Personal",
+    "email": "mareile.schiller@lemfoerde.de",
+    "telefon": "05443 209-36",
+    "bewerbungsportal": "https://www.lemfoerde.de/bewerbung/beschreibung-900000007-21870.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Bildung 1971, Lage am Dümmer: de.wikipedia.org/wiki/Samtgemeinde_Altes_Amt_Lemförde (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stellvertretende Kämmerin / stellvertretender Kämmerer, Samtgemeinde Altes Amt Lemförde https://interamt.de/koop/app/stelle?id=1498464 (API api.interamt.de/query/stellenangebot/1498464) (abgerufen 10.10.2026)"
+  ]
+}

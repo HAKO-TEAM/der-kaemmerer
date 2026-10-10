@@ -1,0 +1,76 @@
+{
+  "slug": "saarburg",
+  "name": "Verbandsgemeinde Saarburg-Kell",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 33540,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Jürgen Dixius",
+  "token": "cb04ce1a0eb0cc78",
+  "claim": "Die Finanzen der größten Verbandsgemeinde im Landkreis Trier-Saarburg mitgestalten.",
+  "beschreibung": "Die Verbandsgemeinde Saarburg-Kell entstand zum 1. Januar 2019 aus dem freiwilligen Zusammenschluss der Verbandsgemeinden Saarburg und Kell am See. Mit 28 Ortsgemeinden und der Stadt Saarburg ist sie die größte Verbandsgemeinde im Landkreis Trier-Saarburg; Hauptverwaltungsort ist Saarburg, in Kell am See bestehen Außenstellen wie ein Bürgerbüro. Der Fachbereich Finanzen stellt Haushaltssatzungen, Haushaltspläne und Jahresabschlüsse für die Verbandsgemeinde auf und begleitet die kommunalen Gremien. Beschäftigte erwartet eine interessante, abwechslungsreiche Tätigkeit mit unbefristeter Perspektive und Gleitzeit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "33.540",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "359,85 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "29",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "2019",
+      "icon": "📜"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Saarburg",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristetes Beschäftigungsverhältnis im öffentlichen Dienst mit tariflicher Vergütung nach TVöD-VKA."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge über die ZVK."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Jahressonderzahlung und vermögenswirksame Leistungen durch den Arbeitgeber."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit; Beschäftigung in Voll- oder Teilzeit."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing."
+    },
+    {
+      "titel": "Mitarbeiterangebote",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Saarburg-Kell · Personal",
+    "email": "bewerbung@saarburg-kell.de",
+    "telefon": "06581 81-129"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (Statistisches Landesamt Rheinland-Pfalz, 31.12.2025), Fläche, Gemeinden, Bildung 2019, Hauptverwaltungsort, Bürgermeister: de.wikipedia.org/wiki/Verbandsgemeinde_Saarburg-Kell (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Verbandsgemeindeverwaltung Saarburg-Kell, Verwaltungsfachkraft Fachbereich 1.2 Finanzen https://interamt.de/koop/app/stelle?id=1496037 (API api.interamt.de/query/stellenangebot/1496037) (abgerufen 10.10.2026)"
+  ]
+}

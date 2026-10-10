@@ -1,0 +1,77 @@
+{
+  "slug": "prichsenstadt",
+  "token": "5ce6e920ac9c34ad",
+  "name": "Stadt Prichsenstadt",
+  "bundesland": "Bayern",
+  "einwohner": 2989,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Roland König",
+  "claim": "Die Stadtkasse einer mittelalterlichen Weinstadt zwischen Main und Steigerwald verantworten.",
+  "beschreibung": "Prichsenstadt liegt im Landkreis Kitzingen im fränkischen Weinland zwischen Main und Steigerwald. Der Ort wurde 1258 erstmals urkundlich erwähnt und erhielt 1367 von Kaiser Karl IV. die Stadtrechte; die Kernstadt besitzt eine nahezu vollständig erhaltene mittelalterliche Altstadt. Heute ist Prichsenstadt Weinbauort im Anbaugebiet Franken und umfasst 18 Gemeindeteile. Die Stadtverwaltung bietet ein anspruchsvolles, abwechslungsreiches Aufgabenfeld mit viel Raum für selbständiges Arbeiten – in der Kasse von den Kassengeschäften über Vollstreckung und Schuldenverwaltung bis zur Jahresrechnung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.989",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1258",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1367",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "18",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "48,87 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Abwechslungsreiche Aufgaben",
+      "beschreibung": "Ein anspruchsvolles, abwechslungsreiches und interessantes Aufgabenfeld in der Stadtverwaltung, in das sich eigene Potenziale einbringen lassen."
+    },
+    {
+      "titel": "Selbständiges Arbeiten",
+      "beschreibung": "Viel Raum für eigenverantwortliches Arbeiten."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Vergütung nach TVöD je nach Qualifikation bis EG 9a sowie eine attraktive Zusatzversorgung des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Arbeitsplatz- und Standortsicherheit in einer unbefristeten Stelle."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten mit Kernzeit und Gleitzeit in Abstimmung im Team."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Regelmäßige Fort- und Weiterbildungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Prichsenstadt · Auskünfte: Frau Müller",
+    "email": "stadt@prichsenstadt.de",
+    "telefon": "09383 9750-10",
+    "bewerbungsportal": "https://prichsenstadt.de/wp-content/uploads/2026/09/260921-Stellenausschreibung-Kassenleitung.pdf"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1258, Stadtrechte 1367, Gemeindeteile, Altstadt, Weinbau, Erster Bürgermeister (seit Kommunalwahl 2026): de.wikipedia.org/wiki/Prichsenstadt (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Kassenleitung / Sachbearbeiter Vollstreckung, Stadt Prichsenstadt https://prichsenstadt.de/wp-content/uploads/2026/09/260921-Stellenausschreibung-Kassenleitung.pdf (abgerufen 10.10.2026)"
+  ]
+}

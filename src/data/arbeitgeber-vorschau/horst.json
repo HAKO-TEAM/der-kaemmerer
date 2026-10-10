@@ -1,0 +1,74 @@
+{
+  "slug": "horst",
+  "name": "Amt Horst-Herzhorn",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 16042,
+  "token": "9f09703cdfe326bf",
+  "claim": "Zwölf Gemeinden im Süden des Kreises Steinburg als moderner Dienstleister begleiten.",
+  "beschreibung": "Das Amt Horst-Herzhorn liegt im Südosten des Kreises Steinburg zwischen Elbe und Kreis Pinneberg und wurde 2008 aus den Ämtern Horst und Herzhorn gebildet. Es erledigt die freiwilligen und gesetzlichen Aufgaben für zwölf Gemeinden und einen Schulverband mit einer Gemeinschaftsschule und zwei Grundschulen; Sitz der Amtsverwaltung ist Horst (Holstein). Das Amt versteht sich als moderner Dienstleistungsbetrieb mit eigenem Klimaschutzkonzept, strukturiertem Onboarding und einem motivierten Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "16.042",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "174,52 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Amtsangehörige Gemeinden",
+      "wert": "12",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "2008",
+      "icon": "📜"
+    },
+    {
+      "label": "Amtsverwaltung",
+      "wert": "Horst (Holstein)",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung und mobiles Arbeiten im Rahmen der Dienstvereinbarung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, zusätzlich frei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Gesicherte Gehaltsentwicklung nach TVöD mit Jahressonderzahlung, vermögenswirksamen Leistungen und Zuschuss zur betrieblichen Altersvorsorge."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, etwa E-Bike-Leasing, Zuschuss zum Sportverein und bewegte Pause."
+    },
+    {
+      "titel": "Onboarding und Fortbildung",
+      "beschreibung": "Strukturiertes, persönliches Onboarding und Fortbildungsmöglichkeiten für die berufliche Perspektive."
+    },
+    {
+      "titel": "Miteinander",
+      "beschreibung": "Moderne Technik, gemeinsame Veranstaltungen wie Betriebsausflug und Weihnachtsfeier sowie Raum für eigene Ideen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amtsverwaltung · Bewerbungsverfahren",
+    "email": "bewerbung@amt-horst-herzhorn.de",
+    "telefon": "04126 3928-470"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, amtsangehörige Gemeinden, Bildung 2008, Lage: de.wikipedia.org/wiki/Amt_Horst-Herzhorn (abgerufen 10.10.2026)",
+    "Benefits, Kontakt, Aufgaben und Schulverband: Stellenausschreibungen Amt Horst-Herzhorn, Sachbearbeiter Umsatzsteuer und Tax Compliance https://interamt.de/koop/app/stelle?id=1495328 (API api.interamt.de/query/stellenangebot/1495328) und Sachgebietsleitung Gemeindeentwicklung https://interamt.de/koop/app/stelle?id=1495336 (API api.interamt.de/query/stellenangebot/1495336) (abgerufen 10.10.2026)"
+  ]
+}

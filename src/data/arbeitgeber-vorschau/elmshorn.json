@@ -1,0 +1,76 @@
+{
+  "slug": "elmshorn",
+  "name": "Kreis Pinneberg",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 325858,
+  "buergermeistertitel": "Landrätin",
+  "buergermeister": "Elfi Heesch",
+  "token": "66bad90e5b1c48ab",
+  "claim": "Den einwohnerstärksten Kreis Schleswig-Holsteins in der Metropolregion Hamburg mitgestalten.",
+  "beschreibung": "Der Kreis Pinneberg ist der flächenkleinste und zugleich bevölkerungsreichste Kreis Schleswig-Holsteins und gehört zur Metropolregion Hamburg. Er entstand 1867, umfasst 49 Gemeinden und gilt als eines der größten geschlossenen Baumschulgebiete der Welt. Die Kreisverwaltung mit Sitz in Elmshorn beschäftigt rund 1.400 Menschen und deckt ein Aufgabenspektrum von der klassischen Verwaltungsarbeit bis zu sozialen und technischen Berufsbildern ab. Als kundennahe Behörde und lösungsorientierter Dienstleister gestaltet sie gemeinsam mit der Politik die Rahmenbedingungen für ein funktionierendes Gemeinwesen – mit guter Infrastruktur und attraktiven Kultur- und Naturangeboten im Umfeld.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "325.858",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "664,27 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "49",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1867",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Elmshorn",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Attraktive Vergütung",
+      "beschreibung": "Vergütung nach TVöD inklusive Jahressonderzahlung, Leistungsentgelt und betrieblicher Altersvorsorge; bei Beamtinnen und Beamten Besoldung nach SHBesG."
+    },
+    {
+      "titel": "Balance im Alltag",
+      "beschreibung": "Flexible Arbeitszeiten, die Möglichkeit zum mobilen Arbeiten und 30 Urlaubstage bei einer Fünf-Tage-Woche."
+    },
+    {
+      "titel": "Arbeitszeitmodelle",
+      "beschreibung": "Persönliche Arbeitszeitwünsche werden im Rahmen einer vollzeitnahen Teilzeitbeschäftigung gerne berücksichtigt."
+    },
+    {
+      "titel": "Führungskräfteentwicklung",
+      "beschreibung": "Interne Schulungen und externe Fortbildungen in verschiedenen fachlichen Bereichen mit Begleitung auf dem beruflichen Weg."
+    },
+    {
+      "titel": "Gesundheit und Bewegung",
+      "beschreibung": "Gesundheitsangebote, Betriebssport und EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket und Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Pinneberg · Personal",
+    "email": "j.voss@kreis-pinneberg.de",
+    "telefon": "04121 4502-1159"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (Statistikamt Nord, 31.12.2025), Fläche, Gemeinden, Entstehung 1867, Verwaltungssitz Elmshorn, Baumschulgebiet, Landrätin: de.wikipedia.org/wiki/Kreis_Pinneberg (abgerufen 10.10.2026)",
+    "Beschäftigte (rund 1.400), Benefits und Kontakt: Stellenausschreibung Kreis Pinneberg, Fachbereichsleiter*in Service und Digitalisierung https://interamt.de/koop/app/stelle?id=1496351 (API api.interamt.de/query/stellenangebot/1496351) (abgerufen 10.10.2026)"
+  ]
+}

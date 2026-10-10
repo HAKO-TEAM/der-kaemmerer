@@ -1,0 +1,76 @@
+{
+  "slug": "dessau-rosslau",
+  "name": "Stadt Dessau-Roßlau",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 75035,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Robert Reck",
+  "token": "498389d76eb5226f",
+  "claim": "Ein Oberzentrum mit Bauhaus-Erbe auf dem Weg zur digitalen Verwaltung mitgestalten.",
+  "beschreibung": "Dessau-Roßlau ist kreisfreie Stadt und eines von drei Oberzentren in Sachsen-Anhalt. Die Stadt entstand 2007 aus der Fusion von Dessau und Roßlau und liegt inmitten der Auenlandschaft von Elbe und Mulde. Das Bauhaus Dessau und das Dessau-Wörlitzer Gartenreich gehören zum UNESCO-Welterbe. Die Stadtverwaltung mit mehr als 1.000 Beschäftigten entwickelt sich zu einer modernen, digitalen und bürgerorientierten Verwaltung und bietet ein breites Aufgabenspektrum von Finanzen und Digitalisierung über Tiefbau und Mobilität bis zur Jugendhilfe. Vielfältige Kita- und Schulangebote, ein reiches Kulturleben und günstige Lebenshaltungskosten machen die Stadt auch für Familien attraktiv.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "75.035",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "244,79 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Bauhaus UNESCO-Welterbe seit",
+      "wert": "1996",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "über 1.000",
+      "icon": "🏢"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stellen mit langfristiger beruflicher Perspektive."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Leistungsorientierte Vergütung, Jahressonderzahlung, vermögenswirksame Leistungen und betriebliche Altersvorsorge nach TVöD."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten für die fachliche Weiterentwicklung."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Aufgaben mit der Möglichkeit, digitale Verwaltungsprozesse aktiv mitzugestalten."
+    },
+    {
+      "titel": "Team",
+      "beschreibung": "Ein kollegiales, motiviertes und engagiertes Arbeitsumfeld."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Haupt- und Personalamt",
+    "email": "bewerbung@dessau-rosslau.de",
+    "telefon": "0340 204-2311"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Oberzentrum, Fusion 2007, UNESCO-Welterbe, Oberbürgermeister (Stichwahl Juni 2021, Amtszeit 7 Jahre): de.wikipedia.org/wiki/Dessau-Roßlau (abgerufen 10.10.2026)",
+    "Benefits, Kontakt, Beschäftigtenzahl, Bauhaus-Welterbe seit 1996: Stellenausschreibungen Stadt Dessau-Roßlau, Informationssicherheitsbeauftragter https://interamt.de/koop/app/stelle?id=1496242 (API api.interamt.de/query/stellenangebot/1496242), Abteilungsleitung Planung und Bau https://interamt.de/koop/app/stelle?id=1496945 (API api.interamt.de/query/stellenangebot/1496945), Sachgebietsleitung Mobilität https://interamt.de/koop/app/stelle?id=1499391 (API api.interamt.de/query/stellenangebot/1499391) (abgerufen 10.10.2026)"
+  ]
+}

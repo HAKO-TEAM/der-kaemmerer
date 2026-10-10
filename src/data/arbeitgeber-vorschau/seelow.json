@@ -1,0 +1,76 @@
+{
+  "slug": "seelow",
+  "name": "Landkreis Märkisch-Oderland",
+  "bundesland": "Brandenburg",
+  "einwohner": 197192,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Gernot Schmidt",
+  "token": "9cf7f3fe958f997e",
+  "claim": "Einen großen Landkreis zwischen Berlin und Oder als Arbeitgeber mitprägen.",
+  "beschreibung": "Der Landkreis Märkisch-Oderland entstand 1993 und reicht von der Berliner Stadtgrenze bis an die Oder an der deutsch-polnischen Grenze. Er umfasst Barnim, das Land Lebus und das Oderbruch sowie 45 Gemeinden, darunter acht Städte. Die Kreisverwaltung mit Sitz in Seelow zählt zu den größten Arbeitgebern der Region. Beschäftigte erwarten anspruchsvolle, vielseitige Aufgaben in erfahrenen Teams, flexible Arbeitszeitmodelle und ein breites Fort- und Weiterbildungsangebot.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "197.192",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.158,65 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "45",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1993",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Seelow",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitregelung und mobiles Arbeiten im Rahmen einer Dienstvereinbarung für Telearbeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub, zusätzlich frei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des Gesundheitsmanagements, etwa Zuschuss zu PC-Brillen, ergonomische Hilfsmittel, Firmenläufe sowie jährlich ein Team- oder Gesundheitstag."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Zahlreiche interne und externe Fort- und Weiterbildungen, längerfristige Entwicklungsqualifizierungen wie „Führung Plus“ und fachbezogene Fortbildungsreihen."
+    },
+    {
+      "titel": "Einstieg",
+      "beschreibung": "Anerkennung der Erfahrungsstufe bei unmittelbarem Wechsel aus dem öffentlichen Dienst und Möglichkeit zur Hospitation."
+    },
+    {
+      "titel": "Ausstattung",
+      "beschreibung": "Nutzung des hauseigenen Fuhrparks für Außendiensttätigkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt für Digitalisierung, Organisation und Personal",
+    "email": "bewerbung@landkreismol.de",
+    "telefon": "03346 850-7708"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Gemeinden, Bildung 1993, Lage, Verwaltungssitz, Landrat (Stichwahl 17.10.2021, Amtszeit acht Jahre): de.wikipedia.org/wiki/Landkreis_Märkisch-Oderland (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landkreis Märkisch-Oderland, Leiter*in Fachdienst Personal https://interamt.de/koop/app/stelle?id=1496178 (API api.interamt.de/query/stellenangebot/1496178) (abgerufen 10.10.2026)"
+  ]
+}

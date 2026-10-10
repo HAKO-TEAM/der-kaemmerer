@@ -1,0 +1,68 @@
+{
+  "slug": "grevenbroich",
+  "name": "Stadt Grevenbroich",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 65605,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Klaus Krützen",
+  "token": "948a7e164afdc066",
+  "claim": "Das Finanzmanagement einer großen kreisangehörigen Stadt zwischen Düsseldorf, Köln und Mönchengladbach mitgestalten.",
+  "beschreibung": "Grevenbroich ist eine große kreisangehörige Stadt im Rhein-Kreis Neuss und liegt im Städtedreieck Düsseldorf – Köln – Mönchengladbach. In ihrer heutigen Struktur als Mittelzentrum entstand die Stadt 1975 aus sieben Städten und Gemeinden des früheren Kreises Grevenbroich. Der Fachbereich Finanzmanagement steuert Haushaltsplanung, Haushaltsbewirtschaftung und Jahresabschluss und berät Dezernate und Fachbereiche in allen finanzwirtschaftlichen Fragen. Beschäftigte finden hier abwechslungsreiche, verantwortungsvolle Querschnittsaufgaben, sichere Arbeitsplätze und familienfreundliche Arbeitszeitregelungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "65.605",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "102,42 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Heutige Stadt seit",
+      "wert": "1975",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Attraktive Bezahlung",
+      "beschreibung": "Bezahlung im Rahmen der tariflichen Bestimmungen bzw. Besoldung, ergänzt um leistungsorientierte Bezahlung nach TVöD."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sichere Arbeitsplätze im öffentlichen Dienst."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Familienfreundliche Arbeitszeitregelungen mit Gleitzeit und Homeoffice im Rahmen der dienstlichen Möglichkeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Regelmäßige Fortbildungen."
+    },
+    {
+      "titel": "Vielseitige Aufgaben",
+      "beschreibung": "Abwechslungsreiche und verantwortungsvolle Tätigkeit im Querschnittsbereich Finanzmanagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Grevenbroich · Personal",
+    "email": "Birgit.Buchsein@grevenbroich.de",
+    "telefon": "02181 608-218",
+    "bewerbungsportal": "https://www.berufe-grevenbroich.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (IT.NRW, 31.12.2025), Fläche, Neugliederung 1975, Mittelzentrum, Bürgermeister: de.wikipedia.org/wiki/Grevenbroich (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Grevenbroich, Sachbearbeitung im Bereich Finanzmanagement https://interamt.de/koop/app/stelle?id=1498126 (API api.interamt.de/query/stellenangebot/1498126) (abgerufen 10.10.2026)"
+  ]
+}

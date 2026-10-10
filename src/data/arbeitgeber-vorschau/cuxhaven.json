@@ -1,0 +1,77 @@
+{
+  "slug": "cuxhaven",
+  "token": "bbf936acf6e66a79",
+  "name": "Landkreis Cuxhaven",
+  "bundesland": "Niedersachsen",
+  "einwohner": 198886,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Thorsten Krüger",
+  "claim": "Steuerliche Kompetenz für einen der flächengrößten Landkreise Niedersachsens an der Nordseeküste einbringen.",
+  "beschreibung": "Der Landkreis Cuxhaven ist der nördlichste Landkreis Niedersachsens, grenzt an die Nordsee und zählt nach seiner Fläche zu den größten Landkreisen des Landes. Er wurde 1977 aus der Stadt Cuxhaven sowie den Landkreisen Land Hadeln und Wesermünde gebildet und umfasst heute 29 Gemeinden. Der Bereich Finanzen mit den Fachbereichen Haushalt, Zentrales Controlling und Beteiligungen sowie Kreiskasse arbeitet als Querschnittsbereich eng mit der gesamten Kreisverwaltung zusammen und bietet einen umfassenden Einblick in deren Aufgaben. Die interne Steuerberatung ist dabei ein Schwerpunkt – mit Themen wie Tax-Compliance-Management und § 2b UStG in einem motivierten, offenen und hilfsbereiten Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "198.886",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.058,96 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "29",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1977",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Cuxhaven",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeitmodelle mit Gleitzeit, Homeoffice und mobiler Arbeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, Heiligabend und Silvester bezahlt frei."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Fünfwöchige Ferienbetreuung sowie die Angebote KIBEFLEX und Kidsbox."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Wechselnde Inhouse-Seminare und bedarfsorientierte Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, Firmenfitness über Wellpass und eine hauseigene Kantine mit wechselnden Angeboten."
+    },
+    {
+      "titel": "Vergütung und Mobilität",
+      "beschreibung": "Tarifliche Jahressonderzahlung, jährliches Leistungsentgelt, betriebliche Altersvorsorge, Dienstradleasing und ausreichend Parkplätze vor Ort."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Cuxhaven · Ansprechpartner Sven Hagedorn",
+    "email": "s.hagedorn@landkreis-cuxhaven.de",
+    "telefon": "04721 66-2198",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1498347"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Bildung 1977, Lage, Landrat: de.wikipedia.org/wiki/Landkreis_Cuxhaven (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Interne Steuerberatung, Landkreis Cuxhaven https://interamt.de/koop/app/stelle?id=1498347 (API api.interamt.de/query/stellenangebot/1498347) (abgerufen 10.10.2026)"
+  ]
+}

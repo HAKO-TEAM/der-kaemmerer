@@ -1,0 +1,77 @@
+{
+  "slug": "altenburg",
+  "name": "Landkreis Altenburger Land",
+  "bundesland": "Thüringen",
+  "einwohner": 87508,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Uwe Melzer",
+  "token": "5ec738c120ce50a7",
+  "claim": "Finanzen und Beteiligungen eines Landkreises im Osten Thüringens verantwortungsvoll steuern.",
+  "beschreibung": "Der Landkreis Altenburger Land liegt im äußersten Osten Thüringens, grenzt an Sachsen und Sachsen-Anhalt und ist nach der Landschaft um die Stadt Altenburg benannt. In seiner heutigen Form entstand er 1994 aus der Vereinigung der Kreise Altenburg und Schmölln; weite Teile sind landwirtschaftlich geprägt. Das Landratsamt in Altenburg betreut 29 Gemeinden. Im Fachbereich Zentrale Steuerung bündeln sich Haushalt, Controlling und Beteiligungsmanagement – mit direktem Bezug zu Kreistag und Beteiligungsunternehmen. Beschäftigte profitieren von familienfreundlichen, flexiblen Arbeitszeiten und den Leistungen des öffentlichen Dienstes.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2024)",
+      "wert": "87.508",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "569,39 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "29",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Heutiger Zuschnitt seit",
+      "wert": "1994",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisverwaltung",
+      "wert": "Altenburg",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Familienfreundliche flexible Arbeitszeiten ohne Kernzeiten."
+    },
+    {
+      "titel": "Arbeitszeitmodelle",
+      "beschreibung": "Verhandelbarer Gestaltungsspielraum bei Arbeitszeit und Arbeitszeitmodell unter Berücksichtigung dienstlicher Belange."
+    },
+    {
+      "titel": "Leistungen des öffentlichen Dienstes",
+      "beschreibung": "Tarifliche Beschäftigung nach TVöD-VKA mit Jahressonderzahlung und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Arbeitstage Urlaub im Jahr."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Altenburger Land · Fachdienst Personal",
+    "email": "personal@altenburgerland.de",
+    "telefon": "03447 586-350",
+    "bewerbungsportal": "https://www.altenburgerland.de/de/landratsamt/stellenangebote-karriere/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (Thüringer Landesamt für Statistik, 31.12.2024), Fläche, Gemeinden, Kreisreform 1994, Verwaltungssitz, Landrat: de.wikipedia.org/wiki/Landkreis_Altenburger_Land (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landratsamt Altenburger Land, Sachbearbeiter Controlling https://interamt.de/koop/app/stelle?id=1496558 (API api.interamt.de/query/stellenangebot/1496558) (abgerufen 10.10.2026)"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "oberhaching",
+  "name": "Gemeinde Oberhaching",
+  "bundesland": "Bayern",
+  "einwohner": 13231,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Stefan Schelle",
+  "token": "350ecacc09bc2a99",
+  "claim": "Eine nahbare Gemeindeverwaltung im Süden Münchens tatkräftig mitgestalten.",
+  "beschreibung": "Oberhaching liegt im Landkreis München südlich der Landeshauptstadt am Gleißental und umfasst neun Gemeindeteile, darunter Deisenhofen und Furth. Die erste urkundliche Erwähnung von Haching stammt aus dem Jahr 806. Die Gemeindeverwaltung versteht sich als Verwaltung, die für Tatkraft, Engagement und Nahbarkeit steht, und arbeitet im direkten Kontakt mit den Bürgerinnen und Bürgern. Neben der Gemeinde betreut sie auch Zweckverbände, ein Kommunalunternehmen und eine gGmbH. Mit S-Bahn, Regionalbus und eigenem Autobahnanschluss ist der Arbeitsort sehr gut erreichbar.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.231",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "33,06 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "9",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung (Haching)",
+      "wert": "806",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "München",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz im öffentlichen Dienst mit interessanten, sinnstiftenden und abwechslungsreichen Tätigkeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Urlaub bei einer 5-Tage-Woche, zusätzlich arbeitsfrei am 24.12. und 31.12."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Leichte Vereinbarkeit von Beruf und Privatleben durch flexible Arbeitszeitgestaltung."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Bezahlung nach TVöD mit Jahressonderzahlung, vermögenswirksamen Leistungen, Leistungsentgelt, betrieblicher Zusatzversorgung und Großraumzulage München."
+    },
+    {
+      "titel": "Arbeiten in Oberhaching",
+      "beschreibung": "Exklusive Mitarbeitervorteile, unter anderem der „Gleißentaler“ als regionale Einkaufswährung (bis zu 48 € im Monat), Fahrtkostenzuschuss ab dem 6. Entfernungskilometer, Fahrradleasing und Mitarbeiterwohnungen nach Verfügbarkeit."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten für die fachliche und persönliche Entwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Oberhaching · Personal",
+    "email": "karriere@oberhaching.de",
+    "telefon": "089 61377-141",
+    "bewerbungsportal": "https://karriere.oberhaching.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindeteile, Ersterwähnung Haching 806, Lage: de.wikipedia.org/wiki/Oberhaching (abgerufen 10.10.2026)",
+    "Erster Bürgermeister: www.oberhaching.de/de/Rathaus-Service/Rathaus/Buergermeister (abgerufen 10.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Gemeinde Oberhaching, Verwaltungsfachangestellter für die Gemeindekasse (m/w/d) als stellvertretende Kassenleitung https://interamt.de/koop/app/stelle?id=1436102 (API api.interamt.de/query/stellenangebot/1436102) (abgerufen 10.10.2026)"
+  ]
+}

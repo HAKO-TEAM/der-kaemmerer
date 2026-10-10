@@ -1,0 +1,78 @@
+{
+  "slug": "idar-oberstein",
+  "token": "801b59b7807ac454",
+  "name": "Stadt Idar-Oberstein",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 30074,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Frank Frühauf",
+  "claim": "Die Edelstein- und Nationalparkstadt an der Nahe mit unabhängiger Prüfung voranbringen.",
+  "beschreibung": "Idar-Oberstein ist die bevölkerungsreichste Kommune des Landkreises Birkenfeld, große kreisangehörige Stadt und Mittelzentrum an der oberen Nahe zwischen Hunsrück und Nahebergland. Als Edelstein- und Schmuckstadt mit langer Tradition im Achatschleifen trägt sie seit 2016 zudem den Titel Nationalparkstadt am Rand des Nationalparks Hunsrück-Hochwald. Mehr als 600 Beschäftigte der Stadtverwaltung gestalten Tag für Tag das Leben in der Stadt mit – von Kitas und Straßen über Kultur und soziale Infrastruktur bis zur Wirtschaftsförderung. Das Rechnungsprüfungsamt sichert dabei mit Prüfungen von Jahresrechnung, Kassen, Vergaben und Eigenbetrieben einen ordnungsgemäßen und wirtschaftlichen Umgang mit städtischen Mitteln.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "30.074",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "91,58 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Stadtrecht für Idar und Oberstein",
+      "wert": "1865",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Krisensicherer Arbeitsplatz mit guten, auf Sicherheit bedachten Arbeitsbedingungen."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Fortgeschrittenes betriebliches Gesundheitsmanagement mit vielfältigen Gesundheitskursen und psychologischen Ersthelfern."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "30 Tage Urlaub im Kalenderjahr und flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Gemeinschaft",
+      "beschreibung": "Respektvoller Umgang, wertschätzende Führung und kollegiale Zusammenarbeit mit offener Kommunikation und Chancengleichheit."
+    },
+    {
+      "titel": "Zukunft",
+      "beschreibung": "Individuelle Fort- und Weiterbildungsmöglichkeiten sowie eine Betriebsrente der Rheinischen Zusatzversorgungskasse für tariflich Beschäftigte."
+    },
+    {
+      "titel": "Faire Leistungen",
+      "beschreibung": "Vergütung nach TVöD bzw. Besoldung nach LBesG mit Jahressonderzahlung, Leistungszulage, vermögenswirksamen Leistungen und kostenlosen Parkmöglichkeiten an diversen Dienststandorten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Idar-Oberstein · Personalwesen",
+    "email": "bewerbung@idar-oberstein.de",
+    "telefon": "06781 64-1200",
+    "bewerbungsportal": "https://www.idar-oberstein.de/jobs-karriere/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Stadtrecht 1865, Mittelzentrum, Nationalparkstadt, Oberbürgermeister (Wiederwahl 2022, Amtszeit ab 01.03.2023): de.wikipedia.org/wiki/Idar-Oberstein (abgerufen 10.10.2026)",
+    "Benefits, Beschäftigtenzahl und Kontakt: Karriereseite www.idar-oberstein.de/jobs-karriere/arbeitgeberin-stadt-idar-oberstein/ und www.idar-oberstein.de/jobs-karriere/bewerbungsverfahren/ (abgerufen 10.10.2026)",
+    "Aufgaben Rechnungsprüfungsamt: Stellenausschreibung Mitarbeiter/in für die Rechnungsprüfung, Stadt Idar-Oberstein https://interamt.de/koop/app/stelle?id=1493231 (API api.interamt.de/query/stellenangebot/1493231) (abgerufen 10.10.2026)"
+  ]
+}

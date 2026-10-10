@@ -1,0 +1,67 @@
+{
+  "slug": "beelen",
+  "name": "Gemeinde Beelen",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 6001,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Rolf Mestekemper",
+  "token": "f8aa36f40c4082d9",
+  "claim": "In einer lebendigen Gemeinde im Ostmünsterland Verantwortung mit kurzen Wegen übernehmen.",
+  "beschreibung": "Beelen liegt im Ostmünsterland zwischen Münster und Bielefeld, zehn Kilometer von der Kreisstadt Warendorf entfernt. Die Gemeinde verfügt über eine Grundschule mit Offener Ganztagsschule und vier Kindertagesstätten, das Vereinsleben hat einen großen Stellenwert. In der kompakten Gemeindeverwaltung tragen Führungskräfte Verantwortung für ein breites Aufgabenspektrum – von Sicherheit und Ordnung über Sozialleistungen und Schulträgeraufgaben bis zu Wahlen sowie Senioren-, Jugend- und Kulturarbeit – und arbeiten eng mit Rat und Fachausschüssen zusammen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "6.001",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "31,35 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Warendorf",
+      "icon": "📍"
+    },
+    {
+      "label": "Region",
+      "wert": "Ostmünsterland",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stellen im öffentlichen Dienst mit interessanten, abwechslungsreichen und verantwortungsvollen Tätigkeiten."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Bezahlung nach TVöD bzw. Besoldung nach LBesG NRW mit zusätzlicher leistungsorientierter Bezahlung."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Zusatzversorgung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Bedarfsorientierte Fortbildungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Dienstradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Zentrale Verwaltung",
+    "email": "prinz@beelen.de",
+    "telefon": "02586 887-38"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Kreis Warendorf: de.wikipedia.org/wiki/Beelen (abgerufen 10.10.2026)",
+    "Benefits, Kontakt, Lage und Bürgermeister Rolf Mestekemper (in der Ausschreibung als Ansprechpartner genannt): Stellenausschreibung Gemeinde Beelen, Fachbereichsleitung Bürgerdienste https://karriere.nrw/stellenausschreibung/d1fe73b3-f414-4e17-b798-2ffb1082094e (API api.karriere.nrw/v1.0/combined-jobs/d1fe73b3-f414-4e17-b798-2ffb1082094e/) (abgerufen 10.10.2026)"
+  ]
+}
