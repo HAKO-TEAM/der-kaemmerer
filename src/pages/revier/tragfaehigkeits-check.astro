@@ -1,0 +1,173 @@
+---
+// Muster-Tragfähigkeits-Check eines Strukturwandelprojekts aus Kämmerersicht (Bürgewald/Morschenich-Alt, Gemeinde Merzenich).
+// Projektdaten aus öffentlichen Quellen, Folgekosten als ausgewiesene Musterannahmen mit Reglern. Nicht verlinkt außer von der Revier-Seite, noindex.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import { personalkosten } from '../../lib/markt/nachbesetzung.mjs';
+
+const g: any = (gemeinden as any[]).find((x) => x.name === 'Merzenich' && x.land === 'NW');
+const H = (hebesaetze as any)[g.ags], S = (schulden as any)[g.ags], st = (STUFEN as any)[(hsNw as any).gemeinden[g.ags].s];
+const P = { volumen: 57_000_000, quote: 0.975 };
+const PK_E11 = Math.round(personalkosten('E 11') / 1000) * 1000;
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+const QUELLEN = [
+  ['Land NRW: Erster Förderbescheid für Morschenich-Alt (Juni 2024)', 'https://www.land.nrw/pressemitteilung/ministerin-scharrenbach-aus-braunkohle-dorf-wird-zukunftsdorf-neustart-fuer'],
+  ['Land NRW: Zukunftstag der sechs Dörfer (November 2025)', 'https://www.land.nrw/node/24274'],
+  ['Gemeinde Merzenich: Förderquote 97,5 %', 'https://www.gemeinde-merzenich.de/'],
+];
+---
+<Base title="Muster: Tragfähigkeits-Check Bürgewald (Morschenich-Alt)" description="Tragfähigkeits-Check eines Strukturwandelprojekts aus Kämmerersicht – Muster mit Annahmen." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.tc { color:#0f172a; } .tc-w { max-width:1080px; margin:0 auto; padding:0 28px; }
+.tc-kopf { background:radial-gradient(900px 360px at 90% -10%, rgba(234,179,8,.22), transparent 60%), #14233a; color:#fff; padding:44px 0 36px; }
+.tc-pfad { font-size:13px; color:rgba(255,255,255,.6); } .tc-pfad a { color:#fcd34d; text-decoration:none; }
+.tc-badge { display:inline-block; margin-left:10px; background:#fcd34d; color:#14233a; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:999px; vertical-align:2px; }
+.tc-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,50px); line-height:1.06; margin:14px 0 12px; }
+.tc-kopf p { color:rgba(255,255,255,.78); font-size:17px; line-height:1.55; max-width:66ch; margin:0; }
+.tc-ab { padding:36px 0 4px; } .tc-ab > h2 { font-family:'Playfair Display',Georgia,serif; font-size:27px; margin:0 0 6px; } .tc-unter { color:#64748b; font-size:14.5px; margin:0 0 16px; line-height:1.55; max-width:74ch; }
+.tc-zwei { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.tc-steck { border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:18px 20px; }
+.tc-steck h3 { margin:0 0 10px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#64748b; }
+.tc-steck dl { display:grid; grid-template-columns:1fr auto; gap:7px 14px; margin:0; font-size:14.5px; } .tc-steck dt { color:#475569; } .tc-steck dd { margin:0; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.tc-steck small { display:block; margin-top:10px; font-size:12px; color:#64748b; line-height:1.5; }
+.tc-urteil { display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:center; border-radius:18px; padding:24px 26px; background:#fff; border:1px solid #e2e8f0; box-shadow:0 22px 50px -38px rgba(15,23,42,.7); }
+.tc-ampel { display:flex; flex-direction:column; gap:8px; background:#14233a; padding:12px; border-radius:16px; } .tc-ampel i { width:34px; height:34px; border-radius:50%; background:#334155; transition:background .3s, box-shadow .3s; }
+.tc-ampel i.an.g { background:#22c55e; box-shadow:0 0 18px #22c55e; } .tc-ampel i.an.y { background:#facc15; box-shadow:0 0 18px #facc15; } .tc-ampel i.an.r { background:#ef4444; box-shadow:0 0 18px #ef4444; }
+.tc-urteil h2 { font-family:'Playfair Display',Georgia,serif; font-size:26px; margin:0 0 6px; } .tc-urteil p { margin:0; color:#334155; line-height:1.6; font-size:15.5px; }
+.tc-felder { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:18px; }
+.tc-feld { border:1px solid #e2e8f0; border-radius:14px; padding:16px; background:#fff; border-top:4px solid var(--f,#94a3b8); }
+.tc-feld span { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#64748b; font-weight:700; } .tc-feld b { display:block; font:700 26px/1.1 'Playfair Display',Georgia,serif; margin:6px 0; color:#14233a; font-variant-numeric:tabular-nums; } .tc-feld small { font-size:12.5px; color:#475569; line-height:1.45; display:block; }
+.tc-regler { display:grid; grid-template-columns:repeat(2,1fr); gap:14px 26px; border:1px solid #e2e8f0; border-radius:14px; background:#f8fafc; padding:18px 20px; }
+.tc-regler label { font-size:13.5px; color:#334155; display:block; } .tc-regler label b { float:right; color:#14233a; font-variant-numeric:tabular-nums; } .tc-regler input { width:100%; accent-color:#ca8a04; margin-top:6px; }
+.tc-regler small { display:block; color:#64748b; font-size:12px; margin-top:2px; }
+.tc-auflagen { counter-reset:a; list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+.tc-auflagen li { counter-increment:a; position:relative; padding:14px 16px 14px 56px; border:1px solid #e2e8f0; border-radius:12px; background:#fff; line-height:1.55; font-size:15px; }
+.tc-auflagen li::before { content:counter(a); position:absolute; left:16px; top:14px; width:26px; height:26px; border-radius:50%; background:#ca8a04; color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:13px; }
+.tc-methode { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .tc-methode div { border-radius:14px; padding:16px 18px; background:#14233a; color:#fff; } .tc-methode b { color:#fcd34d; display:block; margin-bottom:6px; } .tc-methode p { margin:0; color:rgba(255,255,255,.78); font-size:14px; line-height:1.55; }
+.tc-hin { font-size:12px; color:#64748b; line-height:1.6; margin:12px 0 0; } .tc-hin a { color:#2563eb; }
+.tc-zurueck { margin:40px 0 70px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; border-top:1px solid #e2e8f0; padding-top:22px; }
+.tc-zurueck a { color:#14233a; font-weight:700; text-decoration:none; } .tc-zurueck a.btn { background:#14233a; color:#fff; padding:11px 16px; border-radius:8px; }
+@media (max-width:900px){ .tc-w{padding:0 16px} .tc-zwei,.tc-regler,.tc-methode{grid-template-columns:1fr} .tc-felder{grid-template-columns:1fr 1fr} .tc-urteil{grid-template-columns:1fr} .tc-ampel{flex-direction:row; width:max-content} }
+</style>
+<div class="tc">
+  <section class="tc-kopf"><div class="tc-w">
+    <div class="tc-pfad"><a href="/revier/rheinisches-revier/">Rheinisches Revier</a> › Tragfähigkeits-Check <span class="tc-badge">Muster</span></div>
+    <h1>Bürgewald (Morschenich-Alt): Trägt die Gemeinde das Projekt – auch in zehn Jahren?</h1>
+    <p>Selbst bei einer Förderung nahe 100 % bleibt eine Last bei der Kommune: der Betrieb dessen, was gebaut wird. Der Tragfähigkeits-Check legt neben jedes Strukturwandelprojekt die Haushaltslage der Kommune – Eigenanteil, Folgekosten, Abschreibungen und Personal. Dieses Muster nutzt öffentliche Projektdaten und die amtlichen Haushaltsdaten von Merzenich; Folgekosten sind als Annahmen ausgewiesen und mit den Reglern veränderbar.</p>
+  </div></section>
+
+  <div class="tc-w">
+    <section class="tc-ab">
+      <div class="tc-zwei">
+        <div class="tc-steck"><h3>Projekt</h3><dl>
+          <dt>Vorhaben</dt><dd>Wiederbelebung Bürgewald</dd>
+          <dt>Erster Förderbescheid (Juni 2024)</dt><dd>rund 57 Mio. €</dd>
+          <dt>Förderquote</dt><dd>97,5 %</dd>
+          <dt>Programm</dt><dd>Investitionsgesetz Kohleregionen</dd>
+          <dt>Rahmen für Merzenich</dt><dd>rund 90 Mio. €</dd></dl>
+          <small>Quellen: {QUELLEN.map(([t, u], i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener nofollow" style="color:#2563eb">{t}</a></>)}. Die Angaben zum ersten Bescheid schwanken zwischen 56 und 57 Mio. €.</small>
+        </div>
+        <div class="tc-steck"><h3>Kommune: Gemeinde Merzenich</h3><dl>
+          <dt>Einwohner</dt><dd>{z(g.einwohner)}</dd>
+          <dt>Haushaltsstatus (31.12.2025)</dt><dd style={`color:${st.farbe === '#facc15' ? '#a16207' : st.farbe}`}>{st.lang}</dd>
+          <dt>Kassenkredite je Einwohner</dt><dd>{z(S.kassenkredite_je_ew)} € ({(S.kassenkredite_je_ew * g.einwohner / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Mio. €)</dd>
+          <dt>Schulden je Einwohner</dt><dd>{z(S.schulden_je_ew)} €</dd>
+          <dt>Grundsteuer B / Gewerbesteuer</dt><dd>{H.grundsteuer_b} % / {H.gewerbesteuer} %</dd></dl>
+          <small>Quelle: MHKBD NRW (Haushaltsstatus), Statistische Ämter (Schulden 31.12.2025, Hebesätze 2024). <a href="/gemeinden/nordrhein-westfalen/merzenich/">Gemeindeprofil Merzenich →</a></small>
+        </div>
+      </div>
+    </section>
+
+    <section class="tc-ab">
+      <div class="tc-urteil">
+        <div class="tc-ampel" aria-hidden="true"><i class="r" id="a-r"></i><i class="y" id="a-y"></i><i class="g" id="a-g"></i></div>
+        <div><h2 id="u-titel">–</h2><p id="u-text">–</p></div>
+      </div>
+      <div class="tc-felder">
+        <div class="tc-feld" style="--f:#14233a"><span>Eigenanteil</span><b id="f-eigen">–</b><small id="f-eigen-t">–</small></div>
+        <div class="tc-feld" style="--f:#ca8a04"><span>Folgekosten Betrieb</span><b id="f-folge">–</b><small id="f-folge-t">–</small></div>
+        <div class="tc-feld" style="--f:#2563eb"><span>Abschreibungen netto</span><b id="f-afa">–</b><small id="f-afa-t">–</small></div>
+        <div class="tc-feld" style="--f:#7c3aed"><span>Personal Umsetzung</span><b id="f-pers">–</b><small id="f-pers-t">–</small></div>
+      </div>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Annahmen – mit Reglern prüfen</h2>
+      <p class="tc-unter">Im echten Check kommen diese Werte aus Bewilligungsbescheid, Maßnahmenplan und Haushalt der Kommune. Hier stehen Musterwerte; jede Änderung rechnet das Ergebnis sofort neu.</p>
+      <div class="tc-regler" id="regler" data-vol={P.volumen} data-quote={P.quote} data-ew={g.einwohner} data-pk={PK_E11} data-kk={S.kassenkredite_je_ew}>
+        <label>Förderquote <b id="v-quote"></b><input type="range" id="r-quote" min="90" max="100" step="0.5" value="97.5"><small>Bescheid 97,5 %; in der weiteren Umsetzung kann der Eigenanteil gegen null gehen.</small></label>
+        <label>Anteil, der dauerhaft bei der Gemeinde bleibt <b id="v-anteil"></b><input type="range" id="r-anteil" min="20" max="90" step="5" value="50"><small>Straßen, Grün, Gemeinschaftsgebäude – der Rest wird veräußert oder von Dritten betrieben.</small></label>
+        <label>Unterhaltung und Betrieb p. a. <b id="v-unterh"></b><input type="range" id="r-unterh" min="0.5" max="3" step="0.25" value="1.5"><small>in % des bei der Gemeinde verbleibenden Investitionswerts.</small></label>
+        <label>Nutzungsdauer der Anlagen <b id="v-nd"></b><input type="range" id="r-nd" min="20" max="60" step="5" value="40"><small>Abschreibung; zu 97,5 % durch Auflösung der Fördermittel-Sonderposten gedeckt.</small></label>
+        <label>Projektpersonal in der Verwaltung <b id="v-vza"></b><input type="range" id="r-vza" min="0" max="5" step="0.5" value="2"><small>Vollzeitstellen E 11 (KGSt-Personalkosten {z(PK_E11)} € je Jahr), soweit nicht förderfähig.</small></label>
+        <label>Zins für den Eigenanteil <b id="v-zins"></b><input type="range" id="r-zins" min="1" max="6" step="0.25" value="3.5"><small>Finanzierung über Kredit, Annuität 30 Jahre.</small></label>
+        <label>Erlöse und Entgelte p. a. <b id="v-erl"></b><input type="range" id="r-erl" min="0" max="1500000" step="50000" value="250000"><small>Mieten, Pachten, Gebühren, Erbbauzinsen – mindern die laufende Belastung.</small></label>
+      </div>
+      <p class="tc-hin">Ampel-Schwellen im Muster: laufende Nettobelastung unter 25 € je Einwohner und Jahr grün, bis 75 € gelb, darüber rot. Im echten Check richtet sich die Schwelle nach dem Haushaltsstatus und der Rücklagen-Reichweite der Kommune.</p>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Empfehlung aus Kämmerersicht</h2>
+      <ol class="tc-auflagen">
+        <li><b>Folgekosten vor der nächsten Bewilligung verbindlich beziffern.</b> Für jede Teilmaßnahme: was bleibt dauerhaft bei der Gemeinde, was übernimmt ein Betreiber, welche Entgelte decken den Betrieb. Bei genehmigtem Rücklagenverzehr ist das der entscheidende Nachweis gegenüber der Kommunalaufsicht.</li>
+        <li><b>Betrieb und Unterhaltung über ein Trägermodell bündeln.</b> Gemeinschaftsort, Grün und Quartiersinfrastruktur in eine Betreiberlösung mit eigenen Erlösen – oder interkommunal mit Kerpen und dem Kreis Düren.</li>
+        <li><b>Projektpersonal über die Starke Projekte GmbH abbilden.</b> Planung, Vergabe und Abrechnung dort bündeln, damit der Stellenplan von Merzenich nicht dauerhaft wächst.</li>
+      </ol>
+    </section>
+
+    <section class="tc-ab">
+      <h2>So entsteht der Check</h2>
+      <div class="tc-methode">
+        <div><b>1 · Haushaltslage</b><p>Amtlicher Status, Rücklagen, Kassenkredite, Hebesätze und Vollzug der Kommune – aus den Datenbeständen von Der Kämmerer, monatlich fortgeschrieben.</p></div>
+        <div><b>2 · Projekt</b><p>Bewilligung, Maßnahmenplan und Eigentumsverhältnisse; daraus Eigenanteil, Abschreibungen, Sonderposten und Betriebskosten über 20 Jahre.</p></div>
+        <div><b>3 · Urteil</b><p>Ampel und Auflagen aus Kämmerersicht – als Einseiter für Rat, Aufsicht und Agentur. Für alle Projekte einer Förderrunde vergleichbar.</p></div>
+      </div>
+      <p class="tc-hin">Muster zur Veranschaulichung: Projektzahlen aus öffentlichen Quellen, Folgekosten und Personal als Annahmen. Es handelt sich um keine Bewertung der Gemeinde Merzenich oder des Vorhabens.</p>
+    </section>
+
+    <div class="tc-zurueck"><a href="/revier/rheinisches-revier/">← Haushaltslage der 65 Revierkommunen</a><span style="font-size:14px;color:#475569">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de" style="color:#2563eb;font-weight:600">chefredaktion@derkaemmerer.de</a></span></div>
+  </div>
+</div>
+<script>
+  const box = document.getElementById('regler') as HTMLElement;
+  const d = box.dataset, VOL = +d.vol!, EW = +d.ew!, PK = +d.pk!, KK = +d.kk!;
+  const v = (id: string) => +(document.getElementById(id) as HTMLInputElement).value;
+  const setz = (id: string, t: string) => { document.getElementById(id)!.textContent = t; };
+  const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+  const tsd = (x: number) => (x >= 1e6 ? (x / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' Mio. €' : Math.round(x / 1000).toLocaleString('de-DE') + ' T€');
+  const rechne = () => {
+    const QUOTE = v('r-quote') / 100, anteil = v('r-anteil') / 100, unterh = v('r-unterh') / 100, nd = v('r-nd'), vza = v('r-vza'), zins = v('r-zins') / 100, erl = v('r-erl');
+    setz('v-quote', `${(QUOTE * 100).toLocaleString('de-DE')} %`); setz('v-anteil', `${Math.round(anteil * 100)} %`); setz('v-unterh', `${(unterh * 100).toLocaleString('de-DE')} %`); setz('v-nd', `${nd} Jahre`);
+    setz('v-vza', `${vza.toLocaleString('de-DE')} VZÄ`); setz('v-zins', `${(zins * 100).toLocaleString('de-DE')} %`); setz('v-erl', tsd(erl));
+    const eigen = VOL * (1 - QUOTE);
+    const annuitaet = eigen > 0 ? eigen * (zins / (1 - Math.pow(1 + zins, -30))) : 0;
+    const verbleib = VOL * anteil;
+    const betrieb = verbleib * unterh;
+    const afaNetto = (verbleib / nd) * (1 - QUOTE);
+    const personal = vza * PK;
+    const netto = annuitaet + betrieb + afaNetto + personal - erl;
+    const jeEw = netto / EW;
+    setz('f-eigen', tsd(eigen)); setz('f-eigen-t', `${eur(eigen / EW)} je Einwohner · Kredit ${eur(annuitaet)} p. a.`);
+    setz('f-folge', tsd(betrieb) + ' p. a.'); setz('f-folge-t', `${eur(betrieb / EW)} je Einwohner und Jahr, vor Erlösen`);
+    setz('f-afa', tsd(afaNetto) + ' p. a.'); setz('f-afa-t', `brutto ${tsd(verbleib / nd)} – zu ${(QUOTE * 100).toLocaleString('de-DE')} % durch Sonderposten gedeckt`);
+    setz('f-pers', tsd(personal) + ' p. a.'); setz('f-pers-t', `${vza.toLocaleString('de-DE')} Vollzeitstellen E 11 nach KGSt`);
+    const stufe = jeEw < 25 ? 'g' : jeEw < 75 ? 'y' : 'r';
+    ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
+    const titel = { g: 'Tragfähig', y: 'Tragfähig mit Auflagen', r: 'Tragfähigkeit nur mit Gegenfinanzierung' }[stufe];
+    setz('u-titel', `${titel}: ${eur(Math.max(0, netto))} laufende Nettobelastung im Jahr`);
+
+    setz('u-text', `Das entspricht ${eur(Math.max(0, jeEw))} je Einwohner und Jahr. ${eigen < 1 ? 'Der Eigenanteil ist null' : `Der Eigenanteil ist mit ${tsd(eigen)} klein`} – die Last liegt im Betrieb: Was dauerhaft bei der Gemeinde bleibt, kostet Unterhaltung und Personal, Jahr für Jahr, ohne Förderung. Bei genehmigtem Rücklagenverzehr und ${eur(KK)} Kassenkrediten je Einwohner entscheidet diese Größe über die Tragfähigkeit.`);
+  };
+  box.querySelectorAll('input').forEach((i) => i.addEventListener('input', rechne));
+  rechne();
+</script>
+<Footer />
+</Base>

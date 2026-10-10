@@ -15,7 +15,11 @@ const personal = [
   { src: '^/([a-f0-9]{8,32}/?)?$', has: host, dest: '/personal-cockpit/$1', check: true },
 ];
 // revier.derkaemmerer.de → Haushaltslage Rheinisches Revier (übrige Pfade wie auf der Hauptdomain)
-const revier = [{ src: '^/$', has: [{ type: 'host', value: 'revier.derkaemmerer.de' }], dest: '/revier/rheinisches-revier/', check: true }];
+const revierHost = [{ type: 'host', value: 'revier.derkaemmerer.de' }];
+const revier = [
+  { src: '^/$', has: revierHost, dest: '/revier/rheinisches-revier/', check: true },
+  { src: '^/check/?$', has: revierHost, dest: '/revier/tragfaehigkeits-check/', check: true },
+];
 const gleich = (x, r) => x.src === r.src && x.has?.[0]?.value === r.has[0].value;
 for (const r of [...personal, ...revier].reverse()) if (!config.routes.some((x) => gleich(x, r))) config.routes.unshift(r);
 if (!config.routes.some((r) => r.src === regel.src)) {
