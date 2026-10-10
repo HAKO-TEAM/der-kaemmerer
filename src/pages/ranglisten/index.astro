@@ -1,0 +1,68 @@
+---
+// Ranglisten-Übersicht: je Kennzahl die Spitze bundesweit und unter den Städten ab 20.000 Einwohnern.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG } from '../../lib/gemeinden.mjs';
+import { KENNZAHLEN, rangliste, median } from '../../lib/kreise.mjs';
+
+const { pfad } = verzeichnis(gemeinden as any[]);
+const daten = { gemeinden: gemeinden as any[], hebesaetze, schulden };
+const karten = Object.entries(KENNZAHLEN).map(([kz, K]: any) => {
+  const z = rangliste(kz, daten);
+  return { kz, K, med: median(z.map((r: any) => r.wert)), alle: z.slice(0, 5), staedte: z.filter((r: any) => (r.g.einwohner || 0) >= 100000).slice(0, 5) };
+});
+const f = (x: number, e: string) => Math.round(x).toLocaleString('de-DE') + e;
+const laender = Object.keys(LAND_LANG).filter((l) => !['BE', 'HH', 'HB'].includes(l));
+---
+<Base title="Ranglisten der Gemeinden: Grundsteuer, Gewerbesteuer und Schulden je Einwohner"
+  description="Wo ist die Grundsteuer am höchsten, wo die Gewerbesteuer am niedrigsten, welche Städte sind am höchsten verschuldet? Ranglisten aller Gemeinden in Deutschland und je Bundesland, mit amtlichen Daten.">
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.ri { max-width:1100px; margin:0 auto; padding:34px 28px 60px; color:#0f172a; }
+.ri h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,44px); margin:6px 0 10px; line-height:1.1; }
+.ri > p { color:#475569; line-height:1.6; max-width:72ch; }
+.ri-raster { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:18px; margin-top:24px; }
+.ri-k { border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:20px 22px; box-shadow:0 14px 30px -26px rgba(15,23,42,.55); }
+.ri-k h2 { font-family:'Playfair Display',Georgia,serif; font-size:21px; margin:0 0 2px; } .ri-k h2 a { color:#0f172a; text-decoration:none; } .ri-k h2 a:hover { color:#2563eb; }
+.ri-k > span { font-size:12.5px; color:#64748b; }
+.ri-k h3 { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#2563eb; margin:14px 0 4px; }
+.ri-z { display:flex; justify-content:space-between; gap:10px; font-size:14px; padding:5px 0; border-bottom:1px solid #f1f5f9; } .ri-z:last-child { border:0; }
+.ri-z a { color:#0f172a; text-decoration:none; } .ri-z a:hover { color:#2563eb; } .ri-z b { font-variant-numeric:tabular-nums; }
+.ri-mehr { display:inline-block; margin-top:12px; font-size:13.5px; font-weight:700; color:#2563eb; text-decoration:none; }
+.ri-laender { margin-top:34px; } .ri-laender h2 { font-family:'Playfair Display',Georgia,serif; font-size:22px; margin:0 0 10px; }
+.ri-tab { width:100%; border-collapse:collapse; font-size:14px; } .ri-tab td, .ri-tab th { padding:7px 6px; border-bottom:1px solid #f1f5f9; text-align:left; } .ri-tab th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#64748b; }
+.ri-tab a { color:#2563eb; text-decoration:none; margin-right:10px; white-space:nowrap; }
+.ri-scroll { overflow-x:auto; border:1px solid #e2e8f0; border-radius:10px; padding:6px 14px; background:#fff; }
+@media (max-width:700px){ .ri{padding:26px 16px 50px} }
+</style>
+<div class="ri">
+  <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2563eb">Ranglisten · amtliche Daten</div>
+  <h1>Ranglisten der Gemeinden in Deutschland</h1>
+  <p>Hebesätze 2024 und Schulden zum 31.12.2025 für alle Gemeinden – bundesweit und je Bundesland, mit den Städten ab 20.000 Einwohnern gesondert. Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank.</p>
+  <div class="ri-raster">
+    {karten.map(({ kz, K, med, alle, staedte }) => (
+      <article class="ri-k">
+        <h2><a href={`/ranglisten/${kz}/`}>{K.hoch}</a></h2>
+        <span>{K.kurz} · Median {f(med!, K.einheit)}</span>
+        <h3>Alle Gemeinden</h3>
+        {alle.map((r: any, i: number) => <div class="ri-z"><span>{i + 1}. <a href={gemeindeUrl(pfad[r.g.ags])}>{r.g.name}</a></span><b>{f(r.wert, K.einheit)}</b></div>)}
+        <h3>Großstädte</h3>
+        {staedte.map((r: any, i: number) => <div class="ri-z"><span>{i + 1}. <a href={gemeindeUrl(pfad[r.g.ags])}>{r.g.name}</a></span><b>{f(r.wert, K.einheit)}</b></div>)}
+        <a class="ri-mehr" href={`/ranglisten/${kz}/`}>Vollständige Rangliste →</a>
+      </article>
+    ))}
+  </div>
+  <section class="ri-laender">
+    <h2>Ranglisten je Bundesland</h2>
+    <div class="ri-scroll"><table class="ri-tab">
+      <tbody>{laender.map((l) => <tr><th>{(LAND_LANG as any)[l]}</th><td>{Object.entries(KENNZAHLEN).map(([kz, K]: any) => <a href={`/ranglisten/${kz}/${LAND_SLUG[l]}/`}>{K.name}</a>)}</td></tr>)}</tbody>
+    </table></div>
+  </section>
+</div>
+<Footer />
+</Base>

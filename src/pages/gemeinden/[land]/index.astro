@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer.astro';
 import gemeinden from '../../../data/spiegel/gemeinden.json';
 import hebesaetze from '../../../data/spiegel/hebesaetze.json';
 import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../../lib/gemeinden.mjs';
+import { kreise as alleKreise } from '../../../lib/kreise.mjs';
 
 export function getStaticPaths() {
   return Object.entries(LAND_SLUG).filter(([k]) => (gemeinden as any[]).some((g) => g.land === k)).map(([k, s]) => ({ params: { land: s }, props: { land: k } }));
@@ -17,6 +18,7 @@ const kreise = Object.entries(liste.reduce((m: any, g) => ((m[g.kreis || g.name]
   .map(([k, gs]: any) => [k, gs.sort((a: any, b: any) => a.name.localeCompare(b.name, 'de'))] as [string, any[]])
   .sort((a, b) => a[0].localeCompare(b[0], 'de'));
 const name = LAND_LANG[land];
+const kreisLink: Record<string, any> = Object.fromEntries(alleKreise(gemeinden as any[]).filter((x) => x.land === land).map((x) => [x.name, x]));
 const hs = (a: string) => (hebesaetze as any)[a] || {};
 const anker = (k: string) => k.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-');
 ---
@@ -42,7 +44,7 @@ const anker = (k: string) => k.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-')
   {kreise.length > 1 && <div class="gl-kreise">{kreise.map(([k]) => <a href={`#${anker(k)}`}>{k}</a>)}</div>}
   {kreise.map(([k, gs]) => (
     <section class="gl-kreis" id={anker(k)}>
-      <h2>{k}</h2>
+      <h2>{kreisLink[k] ? <a href={kreisLink[k].url} style="color:inherit;text-decoration:none">{kreisLink[k].titel} <span style="font-size:13px;color:#2563eb;font-weight:600">Kreisprofil →</span></a> : k}</h2>
       <table class="gl-tab">
         <thead><tr><th>Gemeinde</th><th>Einwohner</th><th>Grundsteuer B</th><th>Gewerbesteuer</th></tr></thead>
         <tbody>{gs.map((g: any) => <tr><td><a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a></td><td>{(g.einwohner || 0).toLocaleString('de-DE')}</td><td>{hs(g.ags).grundsteuer_b != null ? `${hs(g.ags).grundsteuer_b} %` : '–'}</td><td>{hs(g.ags).gewerbesteuer != null ? `${hs(g.ags).gewerbesteuer} %` : '–'}</td></tr>)}</tbody>

@@ -1,0 +1,6 @@
+---
+import Rangliste from '../../../components/Rangliste.astro';
+import { KENNZAHLEN } from '../../../lib/kreise.mjs';
+export function getStaticPaths() { return Object.keys(KENNZAHLEN).map((kennzahl) => ({ params: { kennzahl } })); }
+---
+<Rangliste kz={Astro.params.kennzahl as string} />

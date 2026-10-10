@@ -1,0 +1,101 @@
+---
+// Rangliste einer Kennzahl (bundesweit oder je Land): höchste und niedrigste Werte, Städte ab 20.000 Einwohnern gesondert.
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import gemeinden from '../data/spiegel/gemeinden.json';
+import hebesaetze from '../data/spiegel/hebesaetze.json';
+import schulden from '../data/spiegel/schulden.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../lib/gemeinden.mjs';
+import { KENNZAHLEN, rangliste, median, kreisVonAgs } from '../lib/kreise.mjs';
+
+interface Props { kz: string; land?: string | null }
+const { kz, land = null } = Astro.props;
+const K = (KENNZAHLEN as any)[kz];
+const { pfad } = verzeichnis(gemeinden as any[]);
+const kreisMap = kreisVonAgs(gemeinden as any[]);
+const daten = { gemeinden: gemeinden as any[], hebesaetze, schulden };
+const zeilen = rangliste(kz, daten, land);
+const staedte = zeilen.filter((r: any) => (r.g.einwohner || 0) >= 20000);
+const med = median(zeilen.map((r: any) => r.wert));
+const wo = land ? imLand((LAND_LANG as any)[land]) : 'in Deutschland';
+const raum = land ? (LAND_LANG as any)[land] : 'Deutschland';
+const z = (x: number | null) => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + K.einheit);
+const N = land ? 50 : 100;
+const titel = `${K.hoch} ${wo}: Rangliste aller Gemeinden ${K.jahr}`;
+const beschreibung = `${K.kurz} ${wo} (${K.jahr}): die ${N} Gemeinden mit den höchsten Werten, die Städte ab 20.000 Einwohnern und die niedrigsten Werte – Median ${z(med)}, ${zeilen.length.toLocaleString('de-DE')} Gemeinden.`;
+const basis = `/ranglisten/${kz}/`;
+const laender = Object.keys(LAND_LANG).filter((l) => !['BE', 'HH', 'HB'].includes(l));
+const ld = { '@context': 'https://schema.org', '@type': 'ItemList', name: titel, itemListOrder: 'https://schema.org/ItemListOrderDescending', numberOfItems: Math.min(N, zeilen.length),
+  itemListElement: zeilen.slice(0, 20).map((r: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: r.g.name, url: `https://derkaemmerer.de${gemeindeUrl(pfad[r.g.ags])}` })) };
+const ort = (g: any) => { const k = kreisMap.get(g.kreis_ags); return k ? k.titel : (g.typ || 'kreisfreie Stadt'); };
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.rl { color:#0f172a; } .rl-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.rl-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
+.rl-pfad { font-size:13px; color:rgba(255,255,255,.6); } .rl-pfad a { color:#93c5fd; text-decoration:none; }
+.rl-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,4vw,42px); line-height:1.12; margin:10px 0 8px; }
+.rl-kopf p { color:rgba(255,255,255,.75); font-size:16px; line-height:1.55; margin:0; max-width:780px; }
+.rl-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; } .rl-tabs a { border:1px solid rgba(255,255,255,.25); color:#e2e8f0; border-radius:999px; padding:6px 12px; font-size:13.5px; text-decoration:none; } .rl-tabs a.an { background:#fff; color:#172840; border-color:#fff; font-weight:700; }
+.rl-ab { padding:30px 0 4px; } .rl-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:0 0 4px; }
+.rl-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.rl-zwei { display:grid; grid-template-columns:1.25fr 1fr; gap:22px; align-items:start; }
+.rl-karte { border:1px solid #e2e8f0; border-radius:10px; padding:6px 18px; background:#fff; }
+.rl-z { display:grid; grid-template-columns:34px 1fr auto; gap:10px; align-items:center; padding:8px 0; border-bottom:1px solid #f1f5f9; font-size:14.5px; } .rl-z:last-child { border:0; }
+.rl-z em { font-style:normal; color:#94a3b8; font-variant-numeric:tabular-nums; font-size:13px; } .rl-z a { color:#0f172a; text-decoration:none; font-weight:600; } .rl-z a:hover { color:#2563eb; }
+.rl-z small { display:block; color:#64748b; font-size:12px; font-weight:400; } .rl-z b { font-variant-numeric:tabular-nums; color:#172840; white-space:nowrap; }
+.rl-bar { height:4px; border-radius:2px; background:linear-gradient(90deg,#2563eb,#93c5fd); margin-top:4px; }
+.rl-chips { display:flex; flex-wrap:wrap; gap:8px; } .rl-chips a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; } .rl-chips a:hover, .rl-chips a.an { border-color:#2563eb; color:#2563eb; }
+.rl-hin { font-size:12px; color:#64748b; margin:12px 0 0; line-height:1.5; } .rl-hin a { color:#2563eb; }
+@media (max-width:860px){ .rl-w{padding:0 16px} .rl-zwei{grid-template-columns:1fr} }
+</style>
+<div class="rl">
+  <section class="rl-kopf"><div class="rl-w">
+    <div class="rl-pfad"><a href="/ranglisten/">Ranglisten</a> › <a href={basis}>{K.name}</a>{land && <> › {raum}</>}</div>
+    <h1>{K.hoch} {wo} – Rangliste {K.jahr}</h1>
+    <p>{K.kurz} aller {zeilen.length.toLocaleString('de-DE')} Gemeinden {wo}. Median: <b>{z(med)}</b>. Jede Gemeinde verlinkt auf ihr Profil mit Vergleich zu Kreis und Land.</p>
+    <nav class="rl-tabs">{Object.entries(KENNZAHLEN).map(([k, v]: any) => <a href={land ? `/ranglisten/${k}/${LAND_SLUG[land]}/` : `/ranglisten/${k}/`} class={k === kz ? 'an' : ''}>{v.name}</a>)}</nav>
+  </div></section>
+
+  <div class="rl-w">
+    <section class="rl-ab">
+      <div class="rl-zwei">
+        <div>
+          <h2>Die {Math.min(N, zeilen.length)} höchsten Werte</h2>
+          <p class="rl-unter">Alle Gemeinden {wo}, bei Gleichstand die größere zuerst.</p>
+          <div class="rl-karte">
+            {zeilen.slice(0, N).map((r: any, i: number) => (
+              <div class="rl-z"><em>{i + 1}.</em><span><a href={gemeindeUrl(pfad[r.g.ags])}>{r.g.name}</a><small>{ort(r.g)}{land ? '' : ` · ${(LAND_LANG as any)[r.g.land]}`} · {Math.round(r.g.einwohner || 0).toLocaleString('de-DE')} EW</small><div class="rl-bar" style={`width:${Math.max(4, r.wert / zeilen[0].wert * 100)}%`}></div></span><b>{z(r.wert)}</b></div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2>Städte ab 20.000 Einwohnern</h2>
+          <p class="rl-unter">{staedte.length} Städte {wo} – die 25 höchsten Werte.</p>
+          <div class="rl-karte">
+            {staedte.slice(0, 25).map((r: any, i: number) => <div class="rl-z"><em>{i + 1}.</em><span><a href={gemeindeUrl(pfad[r.g.ags])}>{r.g.name}</a><small>{Math.round(r.g.einwohner || 0).toLocaleString('de-DE')} EW</small></span><b>{z(r.wert)}</b></div>)}
+          </div>
+          <h2 style="margin-top:26px">{K.niedrig}</h2>
+          <p class="rl-unter">Die 25 niedrigsten Werte {wo}.</p>
+          <div class="rl-karte">
+            {zeilen.slice(-25).reverse().map((r: any, i: number) => <div class="rl-z"><em>{zeilen.length - i}.</em><span><a href={gemeindeUrl(pfad[r.g.ags])}>{r.g.name}</a><small>{ort(r.g)} · {Math.round(r.g.einwohner || 0).toLocaleString('de-DE')} EW</small></span><b>{z(r.wert)}</b></div>)}
+          </div>
+        </div>
+      </div>
+      <p class="rl-hin">{K.quelle === 'hebesaetze' ? `Hebesätze ${K.jahr} nach altem Grundsteuerrecht; die reformierten Sätze ab 2025 liegen amtlich noch nicht vollständig vor.` : `Stand 31.12.${K.jahr}, Kernhaushalt; bei Mitgliedsgemeinden von Ämtern und Verbandsgemeinden ohne deren Anteil am Verband.`} Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0). Auswertung: Der Kämmerer.</p>
+    </section>
+
+    <section class="rl-ab">
+      <h2>{K.name} nach Bundesland</h2>
+      <div class="rl-chips"><a href={basis} class={land ? '' : 'an'}>Deutschland</a>{laender.map((l) => <a href={`${basis}${LAND_SLUG[l]}/`} class={l === land ? 'an' : ''}>{(LAND_LANG as any)[l]}</a>)}</div>
+      <p class="rl-hin">Weitere Auswertungen: <a href="/kreise/">alle Landkreise</a> · <a href="/gemeinden/">Gemeindeverzeichnis</a> · <a href="/haushaltssperren/">Haushaltssperren</a> · <a href="/gehalt/">TVöD-Gehaltsatlas</a></p>
+    </section>
+    <div style="height:60px"></div>
+  </div>
+</div>
+<Footer />
+</Base>

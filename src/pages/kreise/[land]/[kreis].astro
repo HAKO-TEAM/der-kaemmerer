@@ -1,0 +1,207 @@
+---
+// Kreisprofil (statisch, ~300 Landkreise): alle Gemeinden des Kreises mit Hebesätzen, Schulden und Haushaltslage,
+// Karte nach Grundsteuer B, Vergleich mit dem Land, Haushaltssperren und offene Stellen im Kreis.
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import gemeinden from '../../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../../data/spiegel/hebesaetze.json';
+import schulden from '../../../data/spiegel/schulden.json';
+import sperren from '../../../data/haushaltslage/sperren.json';
+import markt from '../../../data/markt/markt.json';
+import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG } from '../../../lib/gemeinden.mjs';
+import { kreise, median, gewichtet, imKreis } from '../../../lib/kreise.mjs';
+import { projiziere, kommunenMitSperre } from '../../../lib/sperren-karte.mjs';
+import { STUFEN } from '../../../lib/haushaltsstatus.mjs';
+import { stellenJeGemeinde } from '../../../lib/stellen-ort.mjs';
+
+export function getStaticPaths() {
+  return kreise(gemeinden as any[]).map((k) => ({ params: { land: LAND_SLUG[k.land], kreis: k.slug }, props: { ags: k.ags } }));
+}
+const alleKreise = kreise(gemeinden as any[]);
+const k: any = alleKreise.find((x) => x.ags === Astro.props.ags);
+const { pfad } = verzeichnis(gemeinden as any[]);
+const landLang = (LAND_LANG as any)[k.land];
+const H = hebesaetze as any, S = schulden as any;
+const gs = [...k.gemeinden].sort((a: any, b: any) => (b.einwohner || 0) - (a.einwohner || 0));
+const imLand = (gemeinden as any[]).filter((g) => g.land === k.land);
+const kenn = (liste: any[]) => ({
+  gb: median(liste.map((g) => H[g.ags]?.grundsteuer_b || null)),
+  gw: median(liste.map((g) => H[g.ags]?.gewerbesteuer || null)),
+  sch: gewichtet(liste, (g) => S[g.ags]?.schulden_je_ew ?? null),
+  kk: gewichtet(liste, (g) => S[g.ags]?.kassenkredite_je_ew ?? null),
+});
+const kr = kenn(gs), la = kenn(imLand);
+// Rang unter den Kreisen des Landes
+const imLandKreise = alleKreise.filter((x) => x.land === k.land).map((x) => ({ x, ...kenn(x.gemeinden) }));
+const rang = (f: 'gb' | 'gw' | 'sch') => {
+  const v = imLandKreise.filter((z) => z[f] != null).sort((a, b) => (b[f] as number) - (a[f] as number));
+  return { platz: v.findIndex((z) => z.x.ags === k.ags) + 1, von: v.length };
+};
+const rGb = rang('gb'), rSch = rang('sch');
+
+const agsSet = new Set(gs.map((g: any) => g.ags));
+const normK = (x = '') => x.toLowerCase().replace(/\(.*?\)|landkreis|kreis|stadt|gemeinde|hansestadt/g, '').replace(/[^a-zäöüß]+/g, ' ').trim();
+const urlAgs = new Map(gs.map((g: any) => [gemeindeUrl(pfad[g.ags]), g.ags]));
+const sperrFaelle = kommunenMitSperre(sperren as any, gemeinden as any[]).filter((f: any) => f.land === k.land
+  && (f.ebene === 'kreis' ? normK(f.faelle[0].kreisname || f.name) === normK(k.name) : urlAgs.has(f.url)));
+const mitSperre = new Set(sperrFaelle.filter((f: any) => f.ebene !== 'kreis').map((f: any) => f.url));
+const stellenMap = stellenJeGemeinde((markt as any).stellen, gemeinden as any[]);
+const stellen = gs.map((g: any) => ({ g, n: (stellenMap.get(g.ags) || []).length })).filter((z) => z.n > 0).sort((a, b) => b.n - a.n);
+const stellenSumme = stellen.reduce((a, z) => a + z.n, 0);
+const hs = k.land === 'NW' ? (hsNw as any).gemeinden : null;
+const hsVerteilung = hs ? Object.entries(gs.reduce((m: any, g: any) => { const s = hs[g.ags]?.s; if (s) m[s] = (m[s] || 0) + 1; return m; }, {})).sort((a, b) => +a[0] - +b[0]) : [];
+
+// Karte: Punkte je Gemeinde, Farbe nach Grundsteuer B gegenüber dem Landesmedian
+const pts = gs.filter((g: any) => g.lat != null).map((g: any) => ({ g, ...projiziere(g.lat, g.lon) }));
+const rand = 6;
+const x0 = Math.min(...pts.map((p) => p.x)) - rand, y0 = Math.min(...pts.map((p) => p.y)) - rand;
+const bw = Math.max(Math.max(...pts.map((p) => p.x)) - x0 + rand, 30), bh = Math.max(Math.max(...pts.map((p) => p.y)) - y0 + rand, 30);
+const umfeld = (gemeinden as any[]).filter((g) => g.lat != null && g.kreis_ags !== k.ags).map((g) => projiziere(g.lat, g.lon))
+  .filter((p) => p.x > x0 - 2 && p.x < x0 + bw + 2 && p.y > y0 - 2 && p.y < y0 + bh + 2);
+const maxEw = Math.max(...gs.map((g: any) => g.einwohner || 1));
+const farbe = (w: number | null) => w == null ? '#cbd5e1' : la.gb == null ? '#2563eb' : w >= la.gb * 1.15 ? '#b91c1c' : w >= la.gb * 1.02 ? '#f97316' : w > la.gb * 0.98 ? '#a3a3a3' : w > la.gb * 0.85 ? '#60a5fa' : '#1d4ed8';
+
+const z = (x: number | null, e = '') => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + e);
+const titel = `${k.titel}: Hebesätze, Schulden und Haushaltslage aller ${gs.length} Gemeinden`;
+const beschreibung = `${k.titel} (${landLang}): ${gs.length} Gemeinden, ${z(k.einwohner)} Einwohner. Grundsteuer B im Median ${z(kr.gb, ' %')}, Gewerbesteuer ${z(kr.gw, ' %')}, Schulden ${z(kr.sch, ' €')} je Einwohner – je Gemeinde im Vergleich, mit Haushaltssperren und offenen Stellen.`;
+const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Kreise', item: 'https://derkaemmerer.de/kreise/' },
+  { '@type': 'ListItem', position: 2, name: landLang, item: `https://derkaemmerer.de/gemeinden/${LAND_SLUG[k.land]}/` },
+  { '@type': 'ListItem', position: 3, name: k.titel, item: `https://derkaemmerer.de${k.url}` } ] };
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.kr { color:#0f172a; } .kr-w { max-width:1080px; margin:0 auto; padding:0 28px; }
+.kr-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
+.kr-pfad { font-size:13px; color:rgba(255,255,255,.6); } .kr-pfad a { color:#93c5fd; text-decoration:none; }
+.kr-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,44px); line-height:1.1; margin:10px 0 6px; }
+.kr-meta { color:rgba(255,255,255,.7); font-size:15px; }
+.kr-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#e2e8f0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin-top:22px; }
+.kr-kpis div { background:#fff; padding:16px; } .kr-kpis b { display:block; font-size:24px; color:#172840; font-variant-numeric:tabular-nums; } .kr-kpis span { font-size:12px; color:#64748b; }
+.kr-ab { padding:32px 0 4px; } .kr-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:0 0 4px; }
+.kr-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.kr-karte { border:1px solid #e2e8f0; border-radius:10px; padding:14px 18px; background:#fff; overflow-x:auto; }
+.kr-zwei { display:grid; grid-template-columns:1.1fr .9fr; gap:20px; align-items:start; }
+.kr-svg { width:100%; height:auto; max-height:520px; display:block; } .kr-svg circle { stroke:#fff; stroke-width:.35; } .kr-svg a:hover circle { stroke:#0f172a; stroke-width:.8; }
+.kr-leg { display:flex; flex-wrap:wrap; gap:10px; font-size:12px; color:#475569; margin-top:8px; } .kr-leg i { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:4px; vertical-align:-1px; }
+.kr-tab { width:100%; border-collapse:collapse; font-size:14px; font-variant-numeric:tabular-nums; min-width:620px; }
+.kr-tab th { text-align:right; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; padding:8px 6px; border-bottom:1px solid #172840; cursor:pointer; white-space:nowrap; user-select:none; }
+.kr-tab th:first-child, .kr-tab td:first-child { text-align:left; } .kr-tab td { padding:7px 6px; border-bottom:1px solid #f1f5f9; text-align:right; }
+.kr-tab a { color:#0f172a; font-weight:600; text-decoration:none; } .kr-tab a:hover { color:#2563eb; }
+.kr-tab .sp { color:#b91c1c; font-size:11px; font-weight:700; margin-left:6px; }
+.kr-zeile { display:flex; justify-content:space-between; gap:12px; font-size:14px; padding:7px 0; border-bottom:1px solid #f1f5f9; } .kr-zeile:last-child { border:0; }
+.kr-zeile small { color:#64748b; white-space:nowrap; } .kr-zeile a { color:#0f172a; text-decoration:none; font-weight:600; } .kr-zeile a:hover { color:#2563eb; }
+.kr-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.5; } .kr-hin a { color:#2563eb; }
+.kr-chips { display:flex; flex-wrap:wrap; gap:8px; } .kr-chips a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; } .kr-chips a:hover { border-color:#2563eb; color:#2563eb; }
+.kr-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.kr-cta h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 8px; font-size:21px; } .kr-cta p { margin:0 0 14px; color:rgba(255,255,255,.72); line-height:1.6; font-size:15px; }
+.kr-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:11px 16px; border-radius:6px; text-decoration:none; } .kr-btn.hell { background:#fff; color:#172840; }
+@media (max-width:860px){ .kr-w{padding:0 16px} .kr-kpis{grid-template-columns:repeat(2,1fr)} .kr-zwei,.kr-cta{grid-template-columns:1fr} }
+</style>
+
+<div class="kr">
+  <section class="kr-kopf"><div class="kr-w">
+    <div class="kr-pfad"><a href="/kreise/">Kreise</a> › <a href={`/gemeinden/${LAND_SLUG[k.land]}/`}>{landLang}</a> › {k.titel}</div>
+    <h1>{k.titel}: Hebesätze, Schulden und Haushaltslage</h1>
+    <div class="kr-meta">{gs.length} Gemeinden · {z(k.einwohner)} Einwohner · {landLang}</div>
+  </div></section>
+
+  <div class="kr-w">
+    <div class="kr-kpis">
+      <div><b>{z(kr.gb, ' %')}</b><span>Grundsteuer B im Median (Land {z(la.gb, ' %')}) · Rang {rGb.platz} von {rGb.von} Kreisen</span></div>
+      <div><b>{z(kr.gw, ' %')}</b><span>Gewerbesteuer im Median (Land {z(la.gw, ' %')})</span></div>
+      <div><b>{z(kr.sch, ' €')}</b><span>Schulden der Gemeinden je Einwohner (Land {z(la.sch, ' €')}) · Rang {rSch.platz} von {rSch.von}</span></div>
+      <div><b>{sperrFaelle.length}</b><span>{sperrFaelle.length === 1 ? 'Haushaltssperre' : 'Haushaltssperren'} im Kreis seit 2025 · {stellenSumme} offene Stellen</span></div>
+    </div>
+
+    <section class="kr-ab">
+      <h2>Grundsteuer B {imKreis(k.titel)}</h2>
+      <p class="kr-unter">Jede Gemeinde als Punkt, Größe nach Einwohnern, Farbe nach dem Hebesatz Grundsteuer B 2024 gegenüber dem Median {landLang === 'Saarland' ? 'im Saarland' : `in ${landLang}`} ({z(la.gb, ' %')}).</p>
+      <div class="kr-zwei">
+        <div class="kr-karte">
+          <svg class="kr-svg" viewBox={`${x0} ${y0} ${bw} ${bh}`} role="img" aria-label={`Karte der Gemeinden ${imKreis(k.titel)}`}>
+            {umfeld.map((p) => <circle cx={p.x} cy={p.y} r={Math.max(bw, bh) / 160} fill="#e2e8f0" style="stroke:none" />)}
+            {pts.sort((a, b) => (b.g.einwohner || 0) - (a.g.einwohner || 0)).map((p) => (
+              <a href={gemeindeUrl(pfad[p.g.ags])}><circle cx={p.x} cy={p.y} r={(0.9 + 3.2 * Math.sqrt((p.g.einwohner || 1) / maxEw)) * Math.max(bw, bh) / 120} fill={farbe(H[p.g.ags]?.grundsteuer_b ?? null)}><title>{p.g.name}: Grundsteuer B {z(H[p.g.ags]?.grundsteuer_b ?? null, ' %')}</title></circle></a>
+            ))}
+          </svg>
+          <div class="kr-leg"><span><i style="background:#b91c1c"></i>15 % und mehr über dem Landesmedian</span><span><i style="background:#f97316"></i>darüber</span><span><i style="background:#a3a3a3"></i>etwa gleich</span><span><i style="background:#60a5fa"></i>darunter</span><span><i style="background:#1d4ed8"></i>15 % und mehr darunter</span></div>
+        </div>
+        <div class="kr-karte">
+          <h3 style="margin:0 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#64748b">Größte Gemeinden</h3>
+          {gs.slice(0, 10).map((g: any) => <div class="kr-zeile"><a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a><small>{z(g.einwohner)} EW · GrSt B {z(H[g.ags]?.grundsteuer_b ?? null, ' %')}</small></div>)}
+          {hsVerteilung.length > 0 && <>
+            <h3 style="margin:18px 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#64748b">Amtlicher Haushaltsstatus (31.12.2025)</h3>
+            {hsVerteilung.map(([s, n]) => <div class="kr-zeile"><span><i style={`display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;background:${(STUFEN as any)[s].farbe}`}></i>{(STUFEN as any)[s].lang}</span><small>{n}</small></div>)}
+            <p class="kr-hin"><a href="/haushaltslage-nrw/">Haushaltslage aller NRW-Gemeinden →</a></p>
+          </>}
+        </div>
+      </div>
+    </section>
+
+    <section class="kr-ab">
+      <h2>Alle {gs.length} Gemeinden {imKreis(k.titel)}</h2>
+      <p class="kr-unter">Hebesätze 2024, Schulden im Kernhaushalt zum 31.12.2025. Spaltenkopf anklicken zum Sortieren.</p>
+      <div class="kr-karte"><table class="kr-tab" id="kr-tab">
+        <thead><tr><th data-t="s">Gemeinde</th><th>Einwohner</th><th>Grundsteuer B</th><th>Gewerbesteuer</th><th>Schulden je EW</th><th>Kassenkredite je EW</th></tr></thead>
+        <tbody>
+          {gs.map((g: any) => { const u = gemeindeUrl(pfad[g.ags]); return (
+            <tr><td><a href={u}>{g.name}</a>{mitSperre.has(u) && <span class="sp" title="Haushaltssperre seit 2025">Sperre</span>}</td>
+              <td data-v={g.einwohner ?? ''}>{z(g.einwohner)}</td><td data-v={H[g.ags]?.grundsteuer_b ?? ''}>{z(H[g.ags]?.grundsteuer_b ?? null, ' %')}</td>
+              <td data-v={H[g.ags]?.gewerbesteuer ?? ''}>{z(H[g.ags]?.gewerbesteuer ?? null, ' %')}</td><td data-v={S[g.ags]?.schulden_je_ew ?? ''}>{z(S[g.ags]?.schulden_je_ew ?? null, ' €')}</td>
+              <td data-v={S[g.ags]?.kassenkredite_je_ew ?? ''}>{z(S[g.ags]?.kassenkredite_je_ew ?? null, ' €')}</td></tr>); })}
+        </tbody>
+      </table>
+      <p class="kr-hin">Schulden bei Mitgliedsgemeinden von Ämtern und Verbandsgemeinden ohne deren Anteil am Verband; Kreisschulden sind nicht enthalten. Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0). <a href="/ranglisten/">Ranglisten aller Gemeinden →</a></p></div>
+    </section>
+
+    {sperrFaelle.length > 0 && (
+    <section class="kr-ab">
+      <h2>Haushaltssperren {imKreis(k.titel)}</h2>
+      <p class="kr-unter">Von der Redaktion mit Quelle belegte Haushaltssperren seit 2025.</p>
+      <div class="kr-karte">
+        {sperrFaelle.map((f: any) => <div class="kr-zeile"><span>{f.url && f.ebene !== 'kreis' ? <a href={f.url}>{f.name}</a> : <b>{f.name}</b>}{f.ebene === 'kreis' ? ' (Kreis)' : ''}<br><small style="white-space:normal">{f.faelle[0].art}</small></span></div>)}
+        <p class="kr-hin"><a href={`/haushaltssperren/${LAND_SLUG[k.land]}/`}>Haushaltssperren {landLang === 'Saarland' ? 'im Saarland' : `in ${landLang}`} auf der Karte →</a></p>
+      </div>
+    </section>)}
+
+    {stellen.length > 0 && (
+    <section class="kr-ab">
+      <h2>Offene Stellen {imKreis(k.titel)}</h2>
+      <p class="kr-unter">{stellenSumme} laufende Ausschreibungen öffentlicher Arbeitgeber mit Dienstort im Kreis.</p>
+      <div class="kr-chips">{stellen.slice(0, 20).map((s) => <a href={`${gemeindeUrl(pfad[s.g.ags])}stellen/`}>Stellenangebote {s.g.name} <b style="color:#2563eb">{s.n}</b></a>)}</div>
+    </section>)}
+
+    <section class="kr-ab">
+      <h2>Weitere Kreise {landLang === 'Saarland' ? 'im Saarland' : `in ${landLang}`}</h2>
+      <div class="kr-chips">{alleKreise.filter((x) => x.land === k.land && x.ags !== k.ags).map((x) => <a href={x.url}>{x.titel}</a>)}</div>
+    </section>
+
+    <div class="kr-cta">
+      <div><h2>Das Briefing für Kämmerer</h2><p>Haushalt, Einnahmen, Personal und Sozialkosten der Kommunen – werbefrei und auf den Punkt, mit dem persönlichen Lagebericht Ihrer Kommune.</p><a class="kr-btn" href="/newsletter/#anmelden">Briefing abonnieren</a></div>
+      <div><h2>Vor der nächsten Nachbesetzung</h2><p>Der Kämmerer prüft die nächsten fünf Ausschreibungen einer Kommune kostenfrei auf ihren Digitalisierungsanteil – je Stelle ein Einseiter mit Empfehlung.</p><a class="kr-btn hell" href="/nachbesetzungs-check/">Nachbesetzungs-Check</a></div>
+    </div>
+  </div>
+</div>
+<script>
+  const t = document.getElementById('kr-tab') as HTMLTableElement | null;
+  t?.querySelectorAll('th').forEach((th, i) => {
+    let ab = true;
+    th.addEventListener('click', () => {
+      const rows = [...t.tBodies[0].rows];
+      rows.sort((a, b) => {
+        if (i === 0) return (ab ? 1 : -1) * a.cells[0].innerText.localeCompare(b.cells[0].innerText, 'de');
+        const x = parseFloat(a.cells[i].dataset.v || 'NaN'), y = parseFloat(b.cells[i].dataset.v || 'NaN');
+        return isNaN(x) ? 1 : isNaN(y) ? -1 : (ab ? y - x : x - y);
+      });
+      ab = !ab; rows.forEach((r) => t.tBodies[0].appendChild(r));
+    });
+  });
+</script>
+<Footer />
+</Base>

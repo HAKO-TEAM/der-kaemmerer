@@ -1,0 +1,11 @@
+---
+import Rangliste from '../../../components/Rangliste.astro';
+import { KENNZAHLEN } from '../../../lib/kreise.mjs';
+import { LAND_SLUG } from '../../../lib/gemeinden.mjs';
+// Stadtstaaten haben nur eine Gemeinde – dort gibt es keine Rangliste.
+export function getStaticPaths() {
+  return Object.keys(KENNZAHLEN).flatMap((kennzahl) => Object.entries(LAND_SLUG).filter(([l]) => !['BE', 'HH', 'HB'].includes(l))
+    .map(([l, land]) => ({ params: { kennzahl, land }, props: { l } })));
+}
+---
+<Rangliste kz={Astro.params.kennzahl as string} land={Astro.props.l} />

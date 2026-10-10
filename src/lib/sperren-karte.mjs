@@ -17,7 +17,9 @@ export function raster(gemeinden) {
 }
 
 /** Fälle je Kommune: {name, land, ebene, url, lat, lon, faelle[]} – sortiert nach Land und Name. */
+const sperrCache = new WeakMap();
 export function kommunenMitSperre(sperren, gemeinden) {
+  if (sperrCache.has(sperren)) return sperrCache.get(sperren);
   const { pfad } = verzeichnis(gemeinden);
   const gruppen = new Map();
   for (const f of sperren.faelle) {
@@ -45,7 +47,9 @@ export function kommunenMitSperre(sperren, gemeinden) {
     }
     gruppen.get(k).faelle.push(f);
   }
-  return [...gruppen.values()].sort((a, b) => a.land.localeCompare(b.land) || a.name.localeCompare(b.name, 'de'));
+  const liste = [...gruppen.values()].sort((a, b) => a.land.localeCompare(b.land) || a.name.localeCompare(b.name, 'de'));
+  sperrCache.set(sperren, liste);
+  return liste;
 }
 
 /** Raster je Bundesland: {land: {pfad, x, y}} – Fläche als Pfad, Schwerpunkt für die Beschriftung. */

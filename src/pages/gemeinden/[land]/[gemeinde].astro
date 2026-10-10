@@ -18,6 +18,7 @@ import { niveauText } from '../../../lib/markt/merkmale.mjs';
 import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
 import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
 import { artikelIndex } from '../../../lib/artikel-index';
+import { kreisVonAgs } from '../../../lib/kreise.mjs';
 import { stellenJeGemeinde } from '../../../lib/stellen-ort.mjs';
 
 const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
@@ -52,6 +53,7 @@ const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
 const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
 const stellenHier = (stellenJeGemeinde((markt as any).stellen, gemeinden as any[]).get(g.ags) || []).length;
+const kreisInfo: any = kreisVonAgs(gemeinden as any[]).get(g.kreis_ags) || null;
 const ai = await artikelIndex(gemeinden as any[]);
 const artikelHier = ai.jeAgs.get(g.ags) || [];
 const artikelListe = artikelHier.length ? artikelHier.slice(0, 8) : ai.neueste;
@@ -102,7 +104,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
 
 <div class="gm">
   <section class="gm-kopf"><div class="gm-w">
-    <div class="gm-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={landUrl}>{g.landLang}</a>{g.kreis && g.kreis !== g.name ? ` › ${g.kreis}` : ''}</div>
+    <div class="gm-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={landUrl}>{g.landLang}</a>{kreisInfo ? <> › <a href={kreisInfo.url}>{kreisInfo.titel}</a></> : ''}</div>
     <h1>{g.name}: Hebesätze, Schulden und Haushaltslage</h1>
     <div class="gm-meta">{zahl(g.einwohner)} Einwohner · {g.typ || 'Gemeinde'}{g.kreis && g.kreis !== g.name ? ` · ${g.kreis}` : ''} · {g.landLang}</div>
     {s.saetze.length > 0 && <div class="gm-saetze">{s.saetze.map((t) => <p>{t.replace('Ihres Kreises', 'des Kreises').replace(' in Saarland', ' im Saarland')}</p>)}</div>}
