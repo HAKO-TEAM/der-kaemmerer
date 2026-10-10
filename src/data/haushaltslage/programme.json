@@ -6435,5 +6435,1766 @@
     "url": "/gemeinden/mecklenburg-vorpommern/schwerin/"
    }
   ]
+ },
+ {
+  "land": "BB",
+  "programm": "Haushaltssicherungskonzept-Pflicht (§ 63 Abs. 5 BbgKVerf) – Haushaltsjahr 2025, Stichtag 07.05.2025",
+  "beschreibung": "Landtagsdrucksache 8/1126 (Antwort MIK auf Kleine Anfrage 415, Noack): Gemeinden, Ämter, Landkreise und kreisfreie Städte mit HSK-Pflicht 2017–2025 nach Zuarbeit der unteren Kommunalaufsichten; hier alle 31 Kommunen mit HSK-Pflicht 2025. Für 61 Kommunen lagen zum Stichtag noch keine Angaben vor (u. a. Frankfurt (Oder), LK Oberspreewald-Lausitz), die Liste ist daher für 2025 unvollständig.",
+  "quelle_url": "https://www.parlamentsdokumentation.brandenburg.de/starweb/LBB/ELVIS/parladoku/w8/drs/ab_1100/1126.pdf",
+  "stand": "2025-05-07",
+  "gemeinden": [
+   {
+    "name": "Landkreis Teltow-Fläming",
+    "url": "/kreise/brandenburg/teltow-flaeming/"
+   },
+   {
+    "name": "Hohenfinow",
+    "url": "/gemeinden/brandenburg/hohenfinow/"
+   },
+   {
+    "name": "Liepe",
+    "url": "/gemeinden/brandenburg/liepe/"
+   },
+   {
+    "name": "Lunow-Stolzenhagen",
+    "url": "/gemeinden/brandenburg/lunow-stolzenhagen/"
+   },
+   {
+    "name": "Schönwald",
+    "url": "/gemeinden/brandenburg/schoenwald/"
+   },
+   {
+    "name": "Tröbitz",
+    "url": "/gemeinden/brandenburg/troebitz/"
+   },
+   {
+    "name": "Stadt Herzberg (Elster)"
+   },
+   {
+    "name": "Sallgast",
+    "url": "/gemeinden/brandenburg/sallgast/"
+   },
+   {
+    "name": "Kremitzaue",
+    "url": "/gemeinden/brandenburg/kremitzaue/"
+   },
+   {
+    "name": "Fichtwald",
+    "url": "/gemeinden/brandenburg/fichtwald/"
+   },
+   {
+    "name": "Lebusa",
+    "url": "/gemeinden/brandenburg/lebusa/"
+   },
+   {
+    "name": "Zechin",
+    "url": "/gemeinden/brandenburg/zechin/"
+   },
+   {
+    "name": "Vierlinden",
+    "url": "/gemeinden/brandenburg/vierlinden/"
+   },
+   {
+    "name": "Gusow-Platkow",
+    "url": "/gemeinden/brandenburg/gusow-platkow/"
+   },
+   {
+    "name": "Neupetershain/Nowe Wiki",
+    "url": "/gemeinden/brandenburg/neupetershain-nowe-wiki/"
+   },
+   {
+    "name": "Friedland",
+    "url": "/gemeinden/brandenburg/friedland/"
+   },
+   {
+    "name": "Rietz-Neuendorf",
+    "url": "/gemeinden/brandenburg/rietz-neuendorf/"
+   },
+   {
+    "name": "Tauche",
+    "url": "/gemeinden/brandenburg/tauche/"
+   },
+   {
+    "name": "Wiesenburg/Mark",
+    "url": "/gemeinden/brandenburg/wiesenburg-mark/"
+   },
+   {
+    "name": "Planebruch",
+    "url": "/gemeinden/brandenburg/planebruch/"
+   },
+   {
+    "name": "Rabenstein/Fläming",
+    "url": "/gemeinden/brandenburg/rabenstein-flaeming/"
+   },
+   {
+    "name": "Wittenberge",
+    "url": "/gemeinden/brandenburg/wittenberge/"
+   },
+   {
+    "name": "Neiße-Malxetal/Dolina Nysa-Małksa",
+    "url": "/gemeinden/brandenburg/neisse-malxetal-dolina-nysa-ma-ksa/"
+   },
+   {
+    "name": "Forst (Lausitz)/Baršć (Łužyca)",
+    "url": "/gemeinden/brandenburg/forst-lausitz-barsc-uzyca/"
+   },
+   {
+    "name": "Heinersbrück/Móst",
+    "url": "/gemeinden/brandenburg/heinersbrueck-most/"
+   },
+   {
+    "name": "Schenkendöbern/Derbno",
+    "url": "/gemeinden/brandenburg/schenkendoebern-derbno/"
+   },
+   {
+    "name": "Am Mellensee",
+    "url": "/gemeinden/brandenburg/am-mellensee/"
+   },
+   {
+    "name": "Dahme/Mark",
+    "url": "/gemeinden/brandenburg/dahme-mark/"
+   },
+   {
+    "name": "Niederer Fläming",
+    "url": "/gemeinden/brandenburg/niederer-flaeming/"
+   },
+   {
+    "name": "Niedergörsdorf",
+    "url": "/gemeinden/brandenburg/niedergoersdorf/"
+   },
+   {
+    "name": "Boitzenburger Land",
+    "url": "/gemeinden/brandenburg/boitzenburger-land/"
+   }
+  ]
+ },
+ {
+  "land": "BB",
+  "programm": "Vorläufige Haushaltsführung 2025 (Stichtag 07.05.2025)",
+  "beschreibung": "Drucksache 8/1126, Anlage: 167 Kommunen befanden sich zum 07.05.2025 ohne bestandskräftige Haushaltssatzung in vorläufiger Haushaltsführung (Gründe laut Anlage u. a. Haushaltssatzung nicht beschlossen, nicht genehmigungsfähiges HSK, laufendes Genehmigungsverfahren). Momentaufnahme, kein Konsolidierungsstatus.",
+  "quelle_url": "https://www.parlamentsdokumentation.brandenburg.de/starweb/LBB/ELVIS/parladoku/w8/drs/ab_1100/1126.pdf",
+  "stand": "2025-05-07",
+  "gemeinden": [
+   {
+    "name": "Frankfurt (Oder)",
+    "url": "/gemeinden/brandenburg/frankfurt-oder/"
+   },
+   {
+    "name": "Landkreis Dahme-Spreewald",
+    "url": "/kreise/brandenburg/dahme-spreewald/"
+   },
+   {
+    "name": "Landkreis Märkisch-Oderland",
+    "url": "/kreise/brandenburg/maerkisch-oderland/"
+   },
+   {
+    "name": "Landkreis Oberspreewald-Lausitz",
+    "url": "/kreise/brandenburg/oberspreewald-lausitz/"
+   },
+   {
+    "name": "Landkreis Spree-Neiße",
+    "url": "/kreise/brandenburg/spree-neisse/"
+   },
+   {
+    "name": "Landkreis Teltow-Fläming",
+    "url": "/kreise/brandenburg/teltow-flaeming/"
+   },
+   {
+    "name": "Hohenfinow",
+    "url": "/gemeinden/brandenburg/hohenfinow/"
+   },
+   {
+    "name": "Liepe",
+    "url": "/gemeinden/brandenburg/liepe/"
+   },
+   {
+    "name": "Amt Lieberose/Oberspreewald"
+   },
+   {
+    "name": "Byhleguhre-Byhlen/Beła Góra-Bělin",
+    "url": "/gemeinden/brandenburg/byhleguhre-byhlen-be-a-gora-belin/"
+   },
+   {
+    "name": "Jamlitz",
+    "url": "/gemeinden/brandenburg/jamlitz/"
+   },
+   {
+    "name": "Neu Zauche/Nowa Niwa",
+    "url": "/gemeinden/brandenburg/neu-zauche-nowa-niwa/"
+   },
+   {
+    "name": "Spreewaldheide/Błośańska Góla",
+    "url": "/gemeinden/brandenburg/spreewaldheide-b-osanska-gola/"
+   },
+   {
+    "name": "Straupitz (Spreewald)/Tšupc (Błota)",
+    "url": "/gemeinden/brandenburg/straupitz-spreewald-tsupc-b-ota/"
+   },
+   {
+    "name": "Märkische Heide/Markojska Góla",
+    "url": "/gemeinden/brandenburg/maerkische-heide-markojska-gola/"
+   },
+   {
+    "name": "Groß Köris",
+    "url": "/gemeinden/brandenburg/gross-koeris/"
+   },
+   {
+    "name": "Halbe",
+    "url": "/gemeinden/brandenburg/halbe/"
+   },
+   {
+    "name": "Märkisch Buchholz",
+    "url": "/gemeinden/brandenburg/maerkisch-buchholz/"
+   },
+   {
+    "name": "Münchehofe",
+    "url": "/gemeinden/brandenburg/muenchehofe/"
+   },
+   {
+    "name": "Schwerin",
+    "url": "/gemeinden/brandenburg/schwerin/"
+   },
+   {
+    "name": "Teupitz",
+    "url": "/gemeinden/brandenburg/teupitz/"
+   },
+   {
+    "name": "Schulzendorf",
+    "url": "/gemeinden/brandenburg/schulzendorf/"
+   },
+   {
+    "name": "Bersteland",
+    "url": "/gemeinden/brandenburg/bersteland/"
+   },
+   {
+    "name": "Drahnsdorf",
+    "url": "/gemeinden/brandenburg/drahnsdorf/"
+   },
+   {
+    "name": "Kasel-Golzig",
+    "url": "/gemeinden/brandenburg/kasel-golzig/"
+   },
+   {
+    "name": "Krausnick-Groß Wasserburg",
+    "url": "/gemeinden/brandenburg/krausnick-gross-wasserburg/"
+   },
+   {
+    "name": "Rietzneuendorf-Staakow",
+    "url": "/gemeinden/brandenburg/rietzneuendorf-staakow/"
+   },
+   {
+    "name": "Schlepzig/Słopišća",
+    "url": "/gemeinden/brandenburg/schlepzig-s-opisca/"
+   },
+   {
+    "name": "Schönwald",
+    "url": "/gemeinden/brandenburg/schoenwald/"
+   },
+   {
+    "name": "Steinreich",
+    "url": "/gemeinden/brandenburg/steinreich/"
+   },
+   {
+    "name": "Unterspreewald",
+    "url": "/gemeinden/brandenburg/unterspreewald/"
+   },
+   {
+    "name": "Tröbitz",
+    "url": "/gemeinden/brandenburg/troebitz/"
+   },
+   {
+    "name": "Elsterwerda",
+    "url": "/gemeinden/brandenburg/elsterwerda/"
+   },
+   {
+    "name": "Stadt Herzberg (Elster)"
+   },
+   {
+    "name": "Amt Kleine Elster (Niederlausitz)"
+   },
+   {
+    "name": "Massen-Niederlausitz",
+    "url": "/gemeinden/brandenburg/massen-niederlausitz/"
+   },
+   {
+    "name": "Crinitz",
+    "url": "/gemeinden/brandenburg/crinitz/"
+   },
+   {
+    "name": "Lichterfeld-Schacksdorf",
+    "url": "/gemeinden/brandenburg/lichterfeld-schacksdorf/"
+   },
+   {
+    "name": "Sallgast",
+    "url": "/gemeinden/brandenburg/sallgast/"
+   },
+   {
+    "name": "Gorden-Staupitz",
+    "url": "/gemeinden/brandenburg/gorden-staupitz/"
+   },
+   {
+    "name": "Hohenleipisch",
+    "url": "/gemeinden/brandenburg/hohenleipisch/"
+   },
+   {
+    "name": "Plessa",
+    "url": "/gemeinden/brandenburg/plessa/"
+   },
+   {
+    "name": "Schraden",
+    "url": "/gemeinden/brandenburg/schraden/"
+   },
+   {
+    "name": "Schlieben",
+    "url": "/gemeinden/brandenburg/schlieben/"
+   },
+   {
+    "name": "Kremitzaue",
+    "url": "/gemeinden/brandenburg/kremitzaue/"
+   },
+   {
+    "name": "Fichtwald",
+    "url": "/gemeinden/brandenburg/fichtwald/"
+   },
+   {
+    "name": "Lebusa",
+    "url": "/gemeinden/brandenburg/lebusa/"
+   },
+   {
+    "name": "Schönewalde",
+    "url": "/gemeinden/brandenburg/schoenewalde/"
+   },
+   {
+    "name": "Sonnewalde",
+    "url": "/gemeinden/brandenburg/sonnewalde/"
+   },
+   {
+    "name": "Verbandsgemeinde Liebenwerda"
+   },
+   {
+    "name": "Bad Liebenwerda",
+    "url": "/gemeinden/brandenburg/bad-liebenwerda/"
+   },
+   {
+    "name": "Falkenberg/Elster",
+    "url": "/gemeinden/brandenburg/falkenberg-elster/"
+   },
+   {
+    "name": "Mühlberg/Elbe",
+    "url": "/gemeinden/brandenburg/muehlberg-elbe/"
+   },
+   {
+    "name": "Uebigau-Wahrenbrück",
+    "url": "/gemeinden/brandenburg/uebigau-wahrenbrueck/"
+   },
+   {
+    "name": "Kotzen",
+    "url": "/gemeinden/brandenburg/kotzen/"
+   },
+   {
+    "name": "Märkisch Luch",
+    "url": "/gemeinden/brandenburg/maerkisch-luch/"
+   },
+   {
+    "name": "Stechow-Ferchesar",
+    "url": "/gemeinden/brandenburg/stechow-ferchesar/"
+   },
+   {
+    "name": "Rhinow",
+    "url": "/gemeinden/brandenburg/rhinow/"
+   },
+   {
+    "name": "Kleßen-Görne",
+    "url": "/gemeinden/brandenburg/klessen-goerne/"
+   },
+   {
+    "name": "Brieselang",
+    "url": "/gemeinden/brandenburg/brieselang/"
+   },
+   {
+    "name": "Dallgow-Döberitz",
+    "url": "/gemeinden/brandenburg/dallgow-doeberitz/"
+   },
+   {
+    "name": "Premnitz",
+    "url": "/gemeinden/brandenburg/premnitz/"
+   },
+   {
+    "name": "Altlandsberg",
+    "url": "/gemeinden/brandenburg/altlandsberg/"
+   },
+   {
+    "name": "Zechin",
+    "url": "/gemeinden/brandenburg/zechin/"
+   },
+   {
+    "name": "Hoppegarten",
+    "url": "/gemeinden/brandenburg/hoppegarten/"
+   },
+   {
+    "name": "Lebus",
+    "url": "/gemeinden/brandenburg/lebus/"
+   },
+   {
+    "name": "Podelzig",
+    "url": "/gemeinden/brandenburg/podelzig/"
+   },
+   {
+    "name": "Reitwein",
+    "url": "/gemeinden/brandenburg/reitwein/"
+   },
+   {
+    "name": "Treplin",
+    "url": "/gemeinden/brandenburg/treplin/"
+   },
+   {
+    "name": "Zeschdorf",
+    "url": "/gemeinden/brandenburg/zeschdorf/"
+   },
+   {
+    "name": "Lindendorf",
+    "url": "/gemeinden/brandenburg/lindendorf/"
+   },
+   {
+    "name": "Vierlinden",
+    "url": "/gemeinden/brandenburg/vierlinden/"
+   },
+   {
+    "name": "Gusow-Platkow",
+    "url": "/gemeinden/brandenburg/gusow-platkow/"
+   },
+   {
+    "name": "Oranienburg",
+    "url": "/gemeinden/brandenburg/oranienburg/"
+   },
+   {
+    "name": "Altdöbern",
+    "url": "/gemeinden/brandenburg/altdoebern/"
+   },
+   {
+    "name": "Neupetershain/Nowe Wiki",
+    "url": "/gemeinden/brandenburg/neupetershain-nowe-wiki/"
+   },
+   {
+    "name": "Lauchhammer",
+    "url": "/gemeinden/brandenburg/lauchhammer/"
+   },
+   {
+    "name": "Kroppen",
+    "url": "/gemeinden/brandenburg/kroppen/"
+   },
+   {
+    "name": "Ruhland",
+    "url": "/gemeinden/brandenburg/ruhland/"
+   },
+   {
+    "name": "Grünewald",
+    "url": "/gemeinden/brandenburg/gruenewald/"
+   },
+   {
+    "name": "Guteborn",
+    "url": "/gemeinden/brandenburg/guteborn/"
+   },
+   {
+    "name": "Hermsdorf",
+    "url": "/gemeinden/brandenburg/hermsdorf/"
+   },
+   {
+    "name": "Hohenbocka",
+    "url": "/gemeinden/brandenburg/hohenbocka/"
+   },
+   {
+    "name": "Schwarzbach",
+    "url": "/gemeinden/brandenburg/schwarzbach/"
+   },
+   {
+    "name": "Schwarzheide",
+    "url": "/gemeinden/brandenburg/schwarzheide/"
+   },
+   {
+    "name": "Beeskow",
+    "url": "/gemeinden/brandenburg/beeskow/"
+   },
+   {
+    "name": "Brieskow-Finkenheerd",
+    "url": "/gemeinden/brandenburg/brieskow-finkenheerd/"
+   },
+   {
+    "name": "Groß Lindow",
+    "url": "/gemeinden/brandenburg/gross-lindow/"
+   },
+   {
+    "name": "Vogelsang",
+    "url": "/gemeinden/brandenburg/vogelsang/"
+   },
+   {
+    "name": "Wiesenau",
+    "url": "/gemeinden/brandenburg/wiesenau/"
+   },
+   {
+    "name": "Ziltendorf",
+    "url": "/gemeinden/brandenburg/ziltendorf/"
+   },
+   {
+    "name": "Eisenhüttenstadt",
+    "url": "/gemeinden/brandenburg/eisenhuettenstadt/"
+   },
+   {
+    "name": "Friedland",
+    "url": "/gemeinden/brandenburg/friedland/"
+   },
+   {
+    "name": "Neuzelle",
+    "url": "/gemeinden/brandenburg/neuzelle/"
+   },
+   {
+    "name": "Lawitz",
+    "url": "/gemeinden/brandenburg/lawitz/"
+   },
+   {
+    "name": "Neißemünde",
+    "url": "/gemeinden/brandenburg/neissemuende/"
+   },
+   {
+    "name": "Rietz-Neuendorf",
+    "url": "/gemeinden/brandenburg/rietz-neuendorf/"
+   },
+   {
+    "name": "Amt Scharmützelsee"
+   },
+   {
+    "name": "Diensdorf-Radlow",
+    "url": "/gemeinden/brandenburg/diensdorf-radlow/"
+   },
+   {
+    "name": "Reichenwalde",
+    "url": "/gemeinden/brandenburg/reichenwalde/"
+   },
+   {
+    "name": "Wendisch Rietz",
+    "url": "/gemeinden/brandenburg/wendisch-rietz/"
+   },
+   {
+    "name": "Tauche",
+    "url": "/gemeinden/brandenburg/tauche/"
+   },
+   {
+    "name": "Kyritz",
+    "url": "/gemeinden/brandenburg/kyritz/"
+   },
+   {
+    "name": "Schwielowsee",
+    "url": "/gemeinden/brandenburg/schwielowsee/"
+   },
+   {
+    "name": "Stahnsdorf",
+    "url": "/gemeinden/brandenburg/stahnsdorf/"
+   },
+   {
+    "name": "Seddiner See",
+    "url": "/gemeinden/brandenburg/seddiner-see/"
+   },
+   {
+    "name": "Wiesenburg/Mark",
+    "url": "/gemeinden/brandenburg/wiesenburg-mark/"
+   },
+   {
+    "name": "Brück",
+    "url": "/gemeinden/brandenburg/brueck/"
+   },
+   {
+    "name": "Mühlenfließ",
+    "url": "/gemeinden/brandenburg/muehlenfliess/"
+   },
+   {
+    "name": "Niemegk",
+    "url": "/gemeinden/brandenburg/niemegk/"
+   },
+   {
+    "name": "Planetal",
+    "url": "/gemeinden/brandenburg/planetal/"
+   },
+   {
+    "name": "Rabenstein/Fläming",
+    "url": "/gemeinden/brandenburg/rabenstein-flaeming/"
+   },
+   {
+    "name": "Ziesar",
+    "url": "/gemeinden/brandenburg/ziesar/"
+   },
+   {
+    "name": "Buckautal",
+    "url": "/gemeinden/brandenburg/buckautal/"
+   },
+   {
+    "name": "Görzke",
+    "url": "/gemeinden/brandenburg/goerzke/"
+   },
+   {
+    "name": "Gräben",
+    "url": "/gemeinden/brandenburg/graeben/"
+   },
+   {
+    "name": "Wenzlow",
+    "url": "/gemeinden/brandenburg/wenzlow/"
+   },
+   {
+    "name": "Wollin",
+    "url": "/gemeinden/brandenburg/wollin/"
+   },
+   {
+    "name": "Karstädt",
+    "url": "/gemeinden/brandenburg/karstaedt/"
+   },
+   {
+    "name": "Amt Lenzen-Elbtalaue"
+   },
+   {
+    "name": "Cumlosen",
+    "url": "/gemeinden/brandenburg/cumlosen/"
+   },
+   {
+    "name": "Lanz",
+    "url": "/gemeinden/brandenburg/lanz/"
+   },
+   {
+    "name": "Lenzen (Elbe)",
+    "url": "/gemeinden/brandenburg/lenzen-elbe/"
+   },
+   {
+    "name": "Lenzerwische",
+    "url": "/gemeinden/brandenburg/lenzerwische/"
+   },
+   {
+    "name": "Plattenburg",
+    "url": "/gemeinden/brandenburg/plattenburg/"
+   },
+   {
+    "name": "Berge",
+    "url": "/gemeinden/brandenburg/berge/"
+   },
+   {
+    "name": "Gülitz-Reetz",
+    "url": "/gemeinden/brandenburg/guelitz-reetz/"
+   },
+   {
+    "name": "Pirow",
+    "url": "/gemeinden/brandenburg/pirow/"
+   },
+   {
+    "name": "Putlitz",
+    "url": "/gemeinden/brandenburg/putlitz/"
+   },
+   {
+    "name": "Triglitz",
+    "url": "/gemeinden/brandenburg/triglitz/"
+   },
+   {
+    "name": "Wittenberge",
+    "url": "/gemeinden/brandenburg/wittenberge/"
+   },
+   {
+    "name": "Gemeinde Briesen"
+   },
+   {
+    "name": "Burg (Spreewald)/Bórkowy (Błota)",
+    "url": "/gemeinden/brandenburg/burg-spreewald-borkowy-b-ota/"
+   },
+   {
+    "name": "Dissen-Striesow/Dešno-Strjažow",
+    "url": "/gemeinden/brandenburg/dissen-striesow-desno-strjazow/"
+   },
+   {
+    "name": "Schmogrow-Fehrow/Smogorjow-Prjawoz",
+    "url": "/gemeinden/brandenburg/schmogrow-fehrow-smogorjow-prjawoz/"
+   },
+   {
+    "name": "Werben/Wjerbno",
+    "url": "/gemeinden/brandenburg/werben-wjerbno/"
+   },
+   {
+    "name": "Döbern/Derbno",
+    "url": "/gemeinden/brandenburg/doebern-derbno/"
+   },
+   {
+    "name": "Felixsee/Feliksowy Jazor",
+    "url": "/gemeinden/brandenburg/felixsee-feliksowy-jazor/"
+   },
+   {
+    "name": "Jämlitz-Klein Düben",
+    "url": "/gemeinden/brandenburg/jaemlitz-klein-dueben/"
+   },
+   {
+    "name": "Neiße-Malxetal/Dolina Nysa-Małksa",
+    "url": "/gemeinden/brandenburg/neisse-malxetal-dolina-nysa-ma-ksa/"
+   },
+   {
+    "name": "Tschernitz/Cersk",
+    "url": "/gemeinden/brandenburg/tschernitz-cersk/"
+   },
+   {
+    "name": "Wiesengrund/Łukojce",
+    "url": "/gemeinden/brandenburg/wiesengrund-ukojce/"
+   },
+   {
+    "name": "Forst (Lausitz)/Baršć (Łužyca)",
+    "url": "/gemeinden/brandenburg/forst-lausitz-barsc-uzyca/"
+   },
+   {
+    "name": "Heinersbrück/Móst",
+    "url": "/gemeinden/brandenburg/heinersbrueck-most/"
+   },
+   {
+    "name": "Schenkendöbern/Derbno",
+    "url": "/gemeinden/brandenburg/schenkendoebern-derbno/"
+   },
+   {
+    "name": "Spremberg/Grodk",
+    "url": "/gemeinden/brandenburg/spremberg-grodk/"
+   },
+   {
+    "name": "Am Mellensee",
+    "url": "/gemeinden/brandenburg/am-mellensee/"
+   },
+   {
+    "name": "Boitzenburger Land",
+    "url": "/gemeinden/brandenburg/boitzenburger-land/"
+   },
+   {
+    "name": "Gartz (Oder)",
+    "url": "/gemeinden/brandenburg/gartz-oder/"
+   },
+   {
+    "name": "Casekow",
+    "url": "/gemeinden/brandenburg/casekow/"
+   },
+   {
+    "name": "Hohenselchow-Groß Pinnow",
+    "url": "/gemeinden/brandenburg/hohenselchow-gross-pinnow/"
+   },
+   {
+    "name": "Mescherin",
+    "url": "/gemeinden/brandenburg/mescherin/"
+   },
+   {
+    "name": "Tantow",
+    "url": "/gemeinden/brandenburg/tantow/"
+   },
+   {
+    "name": "Gramzow",
+    "url": "/gemeinden/brandenburg/gramzow/"
+   },
+   {
+    "name": "Grünow",
+    "url": "/gemeinden/brandenburg/gruenow/"
+   },
+   {
+    "name": "Oberuckersee",
+    "url": "/gemeinden/brandenburg/oberuckersee/"
+   },
+   {
+    "name": "Randowtal",
+    "url": "/gemeinden/brandenburg/randowtal/"
+   },
+   {
+    "name": "Zichow",
+    "url": "/gemeinden/brandenburg/zichow/"
+   },
+   {
+    "name": "Prenzlau",
+    "url": "/gemeinden/brandenburg/prenzlau/"
+   }
+  ]
+ },
+ {
+  "land": "BB",
+  "programm": "Haushaltssicherungskonzept-Pflicht 2026 – seit 2023 neu hinzugekommene Kommunen",
+  "beschreibung": "Drucksache 8/2794 (Antwort MIK auf Kleine Anfrage 977, Stand 04/2026): 2026 sind 56 Kommunen HSK-pflichtig (51 Städte/Gemeinden, 1 kreisfreie Stadt, 4 Landkreise). Namentlich genannt werden nur die 26 Kommunen, die 2023 noch nicht, 2026 aber HSK-pflichtig sind (Frage 4); eine vollständige Namensliste aller 56 enthält die Drucksache nicht.",
+  "quelle_url": "https://www.parlamentsdokumentation.brandenburg.de/starweb/LBB/ELVIS/parladoku/w8/drs/ab_2700/2794.pdf",
+  "stand": "2026-04",
+  "gemeinden": [
+   {
+    "name": "Landkreis Dahme-Spreewald",
+    "url": "/kreise/brandenburg/dahme-spreewald/"
+   },
+   {
+    "name": "Landkreis Oberspreewald-Lausitz",
+    "url": "/kreise/brandenburg/oberspreewald-lausitz/"
+   },
+   {
+    "name": "Landkreis Spree-Neiße",
+    "url": "/kreise/brandenburg/spree-neisse/"
+   },
+   {
+    "name": "Landkreis Teltow-Fläming",
+    "url": "/kreise/brandenburg/teltow-flaeming/"
+   },
+   {
+    "name": "Bersteland",
+    "url": "/gemeinden/brandenburg/bersteland/"
+   },
+   {
+    "name": "Rietzneuendorf-Staakow",
+    "url": "/gemeinden/brandenburg/rietzneuendorf-staakow/"
+   },
+   {
+    "name": "Gemeinde Schlepzig/Slopišća"
+   },
+   {
+    "name": "Steinreich",
+    "url": "/gemeinden/brandenburg/steinreich/"
+   },
+   {
+    "name": "Rückersdorf",
+    "url": "/gemeinden/brandenburg/rueckersdorf/"
+   },
+   {
+    "name": "Küstriner Vorland",
+    "url": "/gemeinden/brandenburg/kuestriner-vorland/"
+   },
+   {
+    "name": "Zechin",
+    "url": "/gemeinden/brandenburg/zechin/"
+   },
+   {
+    "name": "Lebus",
+    "url": "/gemeinden/brandenburg/lebus/"
+   },
+   {
+    "name": "Vierlinden",
+    "url": "/gemeinden/brandenburg/vierlinden/"
+   },
+   {
+    "name": "Neuhardenberg",
+    "url": "/gemeinden/brandenburg/neuhardenberg/"
+   },
+   {
+    "name": "Altdöbern",
+    "url": "/gemeinden/brandenburg/altdoebern/"
+   },
+   {
+    "name": "Neupetershain/Nowe Wiki",
+    "url": "/gemeinden/brandenburg/neupetershain-nowe-wiki/"
+   },
+   {
+    "name": "Kroppen",
+    "url": "/gemeinden/brandenburg/kroppen/"
+   },
+   {
+    "name": "Borkwalde",
+    "url": "/gemeinden/brandenburg/borkwalde/"
+   },
+   {
+    "name": "Mühlenfließ",
+    "url": "/gemeinden/brandenburg/muehlenfliess/"
+   },
+   {
+    "name": "Planetal",
+    "url": "/gemeinden/brandenburg/planetal/"
+   },
+   {
+    "name": "Rabenstein/Fläming",
+    "url": "/gemeinden/brandenburg/rabenstein-flaeming/"
+   },
+   {
+    "name": "Werben/Wjerbno",
+    "url": "/gemeinden/brandenburg/werben-wjerbno/"
+   },
+   {
+    "name": "Forst (Lausitz)/Baršć (Łužyca)",
+    "url": "/gemeinden/brandenburg/forst-lausitz-barsc-uzyca/"
+   },
+   {
+    "name": "Drachhausen/Hochoza",
+    "url": "/gemeinden/brandenburg/drachhausen-hochoza/"
+   },
+   {
+    "name": "Am Mellensee",
+    "url": "/gemeinden/brandenburg/am-mellensee/"
+   },
+   {
+    "name": "Zossen",
+    "url": "/gemeinden/brandenburg/zossen/"
+   }
+  ]
+ },
+ {
+  "land": "BB",
+  "programm": "Haushaltssicherung beendet (HSK-Pflicht 2023, keine HSK-Pflicht 2026)",
+  "beschreibung": "Drucksache 8/2794, Frage 3: 14 Kommunen, die 2023 HSK-pflichtig waren und 2026 nicht mehr. Laut Nordkurier (15.05.2026) bestreitet Wittenberge dies und ist nach eigener Aussage wieder in Haushaltssicherung.",
+  "quelle_url": "https://www.parlamentsdokumentation.brandenburg.de/starweb/LBB/ELVIS/parladoku/w8/drs/ab_2700/2794.pdf",
+  "stand": "2026-04",
+  "gemeinden": [
+   {
+    "name": "Lunow-Stolzenhagen",
+    "url": "/gemeinden/brandenburg/lunow-stolzenhagen/"
+   },
+   {
+    "name": "Oderberg",
+    "url": "/gemeinden/brandenburg/oderberg/"
+   },
+   {
+    "name": "Lieberose",
+    "url": "/gemeinden/brandenburg/lieberose/"
+   },
+   {
+    "name": "Kremitzaue",
+    "url": "/gemeinden/brandenburg/kremitzaue/"
+   },
+   {
+    "name": "Hohenbucko",
+    "url": "/gemeinden/brandenburg/hohenbucko/"
+   },
+   {
+    "name": "Schwarzheide",
+    "url": "/gemeinden/brandenburg/schwarzheide/"
+   },
+   {
+    "name": "Cumlosen",
+    "url": "/gemeinden/brandenburg/cumlosen/"
+   },
+   {
+    "name": "Lanz",
+    "url": "/gemeinden/brandenburg/lanz/"
+   },
+   {
+    "name": "Lenzen (Elbe)",
+    "url": "/gemeinden/brandenburg/lenzen-elbe/"
+   },
+   {
+    "name": "Lenzerwische",
+    "url": "/gemeinden/brandenburg/lenzerwische/"
+   },
+   {
+    "name": "Wittenberge",
+    "url": "/gemeinden/brandenburg/wittenberge/"
+   },
+   {
+    "name": "Teichland/Gatojce",
+    "url": "/gemeinden/brandenburg/teichland-gatojce/"
+   },
+   {
+    "name": "Schenkendöbern/Derbno",
+    "url": "/gemeinden/brandenburg/schenkendoebern-derbno/"
+   },
+   {
+    "name": "Trebbin",
+    "url": "/gemeinden/brandenburg/trebbin/"
+   }
+  ]
+ },
+ {
+  "land": "BB",
+  "programm": "Teilentschuldung der kreisfreien Städte (RL Teilentschuldung KFS)",
+  "beschreibung": "Richtlinie des MIK vom 04.12.2018: Landeszuweisungen 2019–2023 von insgesamt bis zu 211,2 Mio. EUR (40 % der Bemessungsgrundlage) zur Halbierung der Kassenkredite gegenüber 31.12.2016, gekoppelt an Konsolidierungsvereinbarungen; Beträge je Stadt nennt die Richtlinie nicht.",
+  "quelle_url": "https://bravors.brandenburg.de/verwaltungsvorschriften/kfs_2018",
+  "stand": "2018-12-04",
+  "gemeinden": [
+   {
+    "name": "Brandenburg an der Havel",
+    "url": "/gemeinden/brandenburg/brandenburg-an-der-havel/"
+   },
+   {
+    "name": "Cottbus/Chóśebuz",
+    "url": "/gemeinden/brandenburg/cottbus-chosebuz/"
+   },
+   {
+    "name": "Frankfurt (Oder)",
+    "url": "/gemeinden/brandenburg/frankfurt-oder/"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Haushaltssicherungskonzept-Pflicht (§ 53a ThürKO / § 4 ThürKDG) – Stand 31.12.2024",
+  "beschreibung": "Drucksache 8/1361 (Antwort TFM auf Kleine Anfrage 8/761, Bilay), Anlage 1: Landkreise, kreisfreie Städte und Gemeinden mit Pflicht zur Erstellung bzw. Fortschreibung eines HSK laut Quartalsmeldung der Rechtsaufsichten zum 31.12.2024 (93 Kommunen). Kreiszuordnung aus dem Gemeindeschlüssel abgeleitet.",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/102636",
+  "stand": "2024-12-31",
+  "gemeinden": [
+   {
+    "name": "Landkreis Nordhausen",
+    "url": "/kreise/thueringen/nordhausen/"
+   },
+   {
+    "name": "Unstrut-Hainich-Kreis",
+    "url": "/kreise/thueringen/unstrut-hainich-kreis/"
+   },
+   {
+    "name": "Suhl",
+    "url": "/gemeinden/thueringen/suhl/"
+   },
+   {
+    "name": "Bodenrode-Westhausen",
+    "url": "/gemeinden/thueringen/bodenrode-westhausen/"
+   },
+   {
+    "name": "Gerbershausen",
+    "url": "/gemeinden/thueringen/gerbershausen/"
+   },
+   {
+    "name": "Heuthen",
+    "url": "/gemeinden/thueringen/heuthen/"
+   },
+   {
+    "name": "Kella",
+    "url": "/gemeinden/thueringen/kella/"
+   },
+   {
+    "name": "Marth",
+    "url": "/gemeinden/thueringen/marth/"
+   },
+   {
+    "name": "Rustenfelde",
+    "url": "/gemeinden/thueringen/rustenfelde/"
+   },
+   {
+    "name": "Schwobfeld",
+    "url": "/gemeinden/thueringen/schwobfeld/"
+   },
+   {
+    "name": "Wiesenfeld",
+    "url": "/gemeinden/thueringen/wiesenfeld/"
+   },
+   {
+    "name": "Werther",
+    "url": "/gemeinden/thueringen/werther/"
+   },
+   {
+    "name": "Bleicherode",
+    "url": "/gemeinden/thueringen/bleicherode/"
+   },
+   {
+    "name": "Bischofroda",
+    "url": "/gemeinden/thueringen/bischofroda/"
+   },
+   {
+    "name": "Ballhausen",
+    "url": "/gemeinden/thueringen/ballhausen/"
+   },
+   {
+    "name": "Urleben",
+    "url": "/gemeinden/thueringen/urleben/"
+   },
+   {
+    "name": "Nottertal-Heilinger Höhen",
+    "url": "/gemeinden/thueringen/nottertal-heilinger-hoehen/"
+   },
+   {
+    "name": "Kalbsrieth",
+    "url": "/gemeinden/thueringen/kalbsrieth/"
+   },
+   {
+    "name": "Birx",
+    "url": "/gemeinden/thueringen/birx/"
+   },
+   {
+    "name": "Oberweid",
+    "url": "/gemeinden/thueringen/oberweid/"
+   },
+   {
+    "name": "Brotterode-Trusetal",
+    "url": "/gemeinden/thueringen/brotterode-trusetal/"
+   },
+   {
+    "name": "Vachdorf",
+    "url": "/gemeinden/thueringen/vachdorf/"
+   },
+   {
+    "name": "Emleben",
+    "url": "/gemeinden/thueringen/emleben/"
+   },
+   {
+    "name": "Sonneborn",
+    "url": "/gemeinden/thueringen/sonneborn/"
+   },
+   {
+    "name": "Bad Tabarz",
+    "url": "/gemeinden/thueringen/bad-tabarz/"
+   },
+   {
+    "name": "Alperstedt",
+    "url": "/gemeinden/thueringen/alperstedt/"
+   },
+   {
+    "name": "Griefstedt",
+    "url": "/gemeinden/thueringen/griefstedt/"
+   },
+   {
+    "name": "Auengrund",
+    "url": "/gemeinden/thueringen/auengrund/"
+   },
+   {
+    "name": "Römhild",
+    "url": "/gemeinden/thueringen/roemhild/"
+   },
+   {
+    "name": "Elgersburg",
+    "url": "/gemeinden/thueringen/elgersburg/"
+   },
+   {
+    "name": "Blankenhain",
+    "url": "/gemeinden/thueringen/blankenhain/"
+   },
+   {
+    "name": "Döbritschen",
+    "url": "/gemeinden/thueringen/doebritschen/"
+   },
+   {
+    "name": "Eberstedt",
+    "url": "/gemeinden/thueringen/eberstedt/"
+   },
+   {
+    "name": "Frankendorf",
+    "url": "/gemeinden/thueringen/frankendorf/"
+   },
+   {
+    "name": "Kleinschwabhausen"
+   },
+   {
+    "name": "Magdala",
+    "url": "/gemeinden/thueringen/magdala/"
+   },
+   {
+    "name": "Allendorf",
+    "url": "/gemeinden/thueringen/allendorf/"
+   },
+   {
+    "name": "Bad Blankenburg",
+    "url": "/gemeinden/thueringen/bad-blankenburg/"
+   },
+   {
+    "name": "Cursdorf",
+    "url": "/gemeinden/thueringen/cursdorf/"
+   },
+   {
+    "name": "Gräfenthal",
+    "url": "/gemeinden/thueringen/graefenthal/"
+   },
+   {
+    "name": "Katzhütte",
+    "url": "/gemeinden/thueringen/katzhuette/"
+   },
+   {
+    "name": "Probstzella",
+    "url": "/gemeinden/thueringen/probstzella/"
+   },
+   {
+    "name": "Uhlstädt-Kirchhasel",
+    "url": "/gemeinden/thueringen/uhlstaedt-kirchhasel/"
+   },
+   {
+    "name": "Unterwellenborn",
+    "url": "/gemeinden/thueringen/unterwellenborn/"
+   },
+   {
+    "name": "Bremsnitz",
+    "url": "/gemeinden/thueringen/bremsnitz/"
+   },
+   {
+    "name": "Bürgel",
+    "url": "/gemeinden/thueringen/buergel/"
+   },
+   {
+    "name": "Dornburg-Camburg",
+    "url": "/gemeinden/thueringen/dornburg-camburg/"
+   },
+   {
+    "name": "Crossen an der Elster",
+    "url": "/gemeinden/thueringen/crossen-an-der-elster/"
+   },
+   {
+    "name": "Frauenprießnitz",
+    "url": "/gemeinden/thueringen/frauenpriessnitz/"
+   },
+   {
+    "name": "Golmsdorf",
+    "url": "/gemeinden/thueringen/golmsdorf/"
+   },
+   {
+    "name": "Graitschen b. Bürgel",
+    "url": "/gemeinden/thueringen/graitschen-b-buergel/"
+   },
+   {
+    "name": "Großeutersdorf",
+    "url": "/gemeinden/thueringen/grosseutersdorf/"
+   },
+   {
+    "name": "Großpürschütz",
+    "url": "/gemeinden/thueringen/grosspuerschuetz/"
+   },
+   {
+    "name": "Hainichen",
+    "url": "/gemeinden/thueringen/hainichen/"
+   },
+   {
+    "name": "Hartmannsdorf",
+    "url": "/gemeinden/thueringen/hartmannsdorf/"
+   },
+   {
+    "name": "Hummelshain",
+    "url": "/gemeinden/thueringen/hummelshain/"
+   },
+   {
+    "name": "Karlsdorf",
+    "url": "/gemeinden/thueringen/karlsdorf/"
+   },
+   {
+    "name": "Kleinbockedra",
+    "url": "/gemeinden/thueringen/kleinbockedra/"
+   },
+   {
+    "name": "Laasdorf",
+    "url": "/gemeinden/thueringen/laasdorf/"
+   },
+   {
+    "name": "Lehesten",
+    "url": "/gemeinden/thueringen/lehesten-saale-holzland-kreis/"
+   },
+   {
+    "name": "Lindig",
+    "url": "/gemeinden/thueringen/lindig/"
+   },
+   {
+    "name": "Lippersdorf-Erdmannsdorf",
+    "url": "/gemeinden/thueringen/lippersdorf-erdmannsdorf/"
+   },
+   {
+    "name": "Löberschütz",
+    "url": "/gemeinden/thueringen/loeberschuetz/"
+   },
+   {
+    "name": "Meusebach",
+    "url": "/gemeinden/thueringen/meusebach/"
+   },
+   {
+    "name": "Poxdorf",
+    "url": "/gemeinden/thueringen/poxdorf/"
+   },
+   {
+    "name": "Rattelsdorf",
+    "url": "/gemeinden/thueringen/rattelsdorf/"
+   },
+   {
+    "name": "Renthendorf",
+    "url": "/gemeinden/thueringen/renthendorf/"
+   },
+   {
+    "name": "Rothenstein",
+    "url": "/gemeinden/thueringen/rothenstein/"
+   },
+   {
+    "name": "Schöngleina",
+    "url": "/gemeinden/thueringen/schoengleina/"
+   },
+   {
+    "name": "Silbitz",
+    "url": "/gemeinden/thueringen/silbitz/"
+   },
+   {
+    "name": "St.Gangloff",
+    "url": "/gemeinden/thueringen/st-gangloff/"
+   },
+   {
+    "name": "Stadtroda",
+    "url": "/gemeinden/thueringen/stadtroda/"
+   },
+   {
+    "name": "Hirschberg",
+    "url": "/gemeinden/thueringen/hirschberg/"
+   },
+   {
+    "name": "Bad Lobenstein",
+    "url": "/gemeinden/thueringen/bad-lobenstein/"
+   },
+   {
+    "name": "Oettersdorf",
+    "url": "/gemeinden/thueringen/oettersdorf/"
+   },
+   {
+    "name": "Ranis",
+    "url": "/gemeinden/thueringen/ranis/"
+   },
+   {
+    "name": "Solkwitz",
+    "url": "/gemeinden/thueringen/solkwitz/"
+   },
+   {
+    "name": "Triptis",
+    "url": "/gemeinden/thueringen/triptis/"
+   },
+   {
+    "name": "Ziegenrück",
+    "url": "/gemeinden/thueringen/ziegenrueck/"
+   },
+   {
+    "name": "Krölpa",
+    "url": "/gemeinden/thueringen/kroelpa/"
+   },
+   {
+    "name": "Gefell",
+    "url": "/gemeinden/thueringen/gefell/"
+   },
+   {
+    "name": "Wurzbach",
+    "url": "/gemeinden/thueringen/wurzbach/"
+   },
+   {
+    "name": "Bad Köstritz",
+    "url": "/gemeinden/thueringen/bad-koestritz/"
+   },
+   {
+    "name": "Braunichswalde",
+    "url": "/gemeinden/thueringen/braunichswalde/"
+   },
+   {
+    "name": "Langenwetzendorf",
+    "url": "/gemeinden/thueringen/langenwetzendorf/"
+   },
+   {
+    "name": "Linda b. Weida",
+    "url": "/gemeinden/thueringen/linda-b-weida/"
+   },
+   {
+    "name": "Paitzdorf",
+    "url": "/gemeinden/thueringen/paitzdorf/"
+   },
+   {
+    "name": "Weißendorf",
+    "url": "/gemeinden/thueringen/weissendorf/"
+   },
+   {
+    "name": "Zeulenroda-Triebes",
+    "url": "/gemeinden/thueringen/zeulenroda-triebes/"
+   },
+   {
+    "name": "Fockendorf",
+    "url": "/gemeinden/thueringen/fockendorf/"
+   },
+   {
+    "name": "Kriebitzsch",
+    "url": "/gemeinden/thueringen/kriebitzsch/"
+   },
+   {
+    "name": "Posterstein",
+    "url": "/gemeinden/thueringen/posterstein/"
+   },
+   {
+    "name": "Thonhausen",
+    "url": "/gemeinden/thueringen/thonhausen/"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Bedarfszuweisungen zur Haushaltskonsolidierung aus dem Landesausgleichsstock (§ 24 Abs. 2 ThürFAG) 2022–2024",
+  "beschreibung": "Drucksache 8/1361, Anlage 2: bewilligte Bedarfszuweisungen zur Haushaltskonsolidierung je Kommune und Jahr (Summen 2022: 18,88 Mio., 2023: 23,50 Mio., 2024: 21,78 Mio. EUR). Voraussetzung ist ein genehmigtes Haushaltssicherungskonzept.",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/102636",
+  "stand": "2025-06-17",
+  "gemeinden": [
+   {
+    "name": "Landkreis Nordhausen",
+    "url": "/kreise/thueringen/nordhausen/"
+   },
+   {
+    "name": "Unstrut-Hainich-Kreis",
+    "url": "/kreise/thueringen/unstrut-hainich-kreis/"
+   },
+   {
+    "name": "Berga/Elster"
+   },
+   {
+    "name": "Paitzdorf",
+    "url": "/gemeinden/thueringen/paitzdorf/"
+   },
+   {
+    "name": "Langenwetzendorf",
+    "url": "/gemeinden/thueringen/langenwetzendorf/"
+   },
+   {
+    "name": "Elgersburg",
+    "url": "/gemeinden/thueringen/elgersburg/"
+   },
+   {
+    "name": "Nordhausen",
+    "url": "/gemeinden/thueringen/nordhausen/"
+   },
+   {
+    "name": "Werther",
+    "url": "/gemeinden/thueringen/werther/"
+   },
+   {
+    "name": "Bleicherode",
+    "url": "/gemeinden/thueringen/bleicherode/"
+   },
+   {
+    "name": "Bürgel",
+    "url": "/gemeinden/thueringen/buergel/"
+   },
+   {
+    "name": "Crossen an der Elster",
+    "url": "/gemeinden/thueringen/crossen-an-der-elster/"
+   },
+   {
+    "name": "Dornburg-Camburg",
+    "url": "/gemeinden/thueringen/dornburg-camburg/"
+   },
+   {
+    "name": "Probstzella",
+    "url": "/gemeinden/thueringen/probstzella/"
+   },
+   {
+    "name": "Bad Blankenburg",
+    "url": "/gemeinden/thueringen/bad-blankenburg/"
+   },
+   {
+    "name": "Cursdorf",
+    "url": "/gemeinden/thueringen/cursdorf/"
+   },
+   {
+    "name": "Allendorf",
+    "url": "/gemeinden/thueringen/allendorf/"
+   },
+   {
+    "name": "Gefell",
+    "url": "/gemeinden/thueringen/gefell/"
+   },
+   {
+    "name": "Alperstedt",
+    "url": "/gemeinden/thueringen/alperstedt/"
+   },
+   {
+    "name": "Anrode"
+   },
+   {
+    "name": "Dünwald"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Bedarfszuweisungen aus dem Landesausgleichsstock (§ 24 Abs. 2 Satz 1 Nr. 1–3 ThürFAG) 2025",
+  "beschreibung": "Drucksache 8/2942 (Antwort TFM auf Kleine Anfrage 8/1796, 16.02.2026), Anlage 1: Bewilligungs- und Auszahlungsbeträge 2025. Suhl: Nachbewilligung einer Bedarfszuweisung aus 2021 nach Ende eines Rechtsstreits.",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/106177",
+  "stand": "2026-02-16",
+  "gemeinden": [
+   {
+    "name": "Bürgel",
+    "url": "/gemeinden/thueringen/buergel/"
+   },
+   {
+    "name": "Dornburg-Camburg",
+    "url": "/gemeinden/thueringen/dornburg-camburg/"
+   },
+   {
+    "name": "Golmsdorf",
+    "url": "/gemeinden/thueringen/golmsdorf/"
+   },
+   {
+    "name": "Hirschberg",
+    "url": "/gemeinden/thueringen/hirschberg/"
+   },
+   {
+    "name": "Paitzdorf",
+    "url": "/gemeinden/thueringen/paitzdorf/"
+   },
+   {
+    "name": "Landkreis Saalfeld-Rudolstadt",
+    "url": "/kreise/thueringen/saalfeld-rudolstadt/"
+   },
+   {
+    "name": "Suhl",
+    "url": "/gemeinden/thueringen/suhl/"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Rückzahlbare Überbrückungshilfen (Liquiditätssicherung) aus dem Landesausgleichsstock 2022–2025",
+  "beschreibung": "Drucksache 8/1361 Anlage 3 (2022–2024) und Drucksache 8/2942 Anlage 2 (2025): rückzahlbare Überbrückungshilfen nach § 24 Abs. 1 ThürFAG als Kassenverstärkungsmittel; eine Zeile je Bewilligung (Mehrfachnennungen möglich).",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/102636",
+  "stand": "2026-02-16",
+  "gemeinden": [
+   {
+    "name": "Berlingerode",
+    "url": "/gemeinden/thueringen/berlingerode/"
+   },
+   {
+    "name": "Werther",
+    "url": "/gemeinden/thueringen/werther/"
+   },
+   {
+    "name": "Crossen an der Elster",
+    "url": "/gemeinden/thueringen/crossen-an-der-elster/"
+   },
+   {
+    "name": "Eberstedt",
+    "url": "/gemeinden/thueringen/eberstedt/"
+   },
+   {
+    "name": "Dornburg-Camburg",
+    "url": "/gemeinden/thueringen/dornburg-camburg/"
+   },
+   {
+    "name": "Auengrund",
+    "url": "/gemeinden/thueringen/auengrund/"
+   },
+   {
+    "name": "Hirschberg",
+    "url": "/gemeinden/thueringen/hirschberg/"
+   },
+   {
+    "name": "Rothenstein",
+    "url": "/gemeinden/thueringen/rothenstein/"
+   },
+   {
+    "name": "St.Gangloff",
+    "url": "/gemeinden/thueringen/st-gangloff/"
+   },
+   {
+    "name": "Tröbnitz",
+    "url": "/gemeinden/thueringen/troebnitz/"
+   },
+   {
+    "name": "Werningshausen",
+    "url": "/gemeinden/thueringen/werningshausen/"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Gemeinden ohne bekanntgemachte Haushaltssatzung zum 31.12.2025 (vorläufige Haushaltsführung)",
+  "beschreibung": "Drucksache 8/2886 (Antwort TFM auf Kleine Anfrage 8/1797, 06.02.2026): kreisangehörige Gemeinden ohne in Kraft getretene Haushaltssatzung 2025 zum Jahresende; alle Landkreise und kreisfreien Städte hatten eine Haushaltssatzung.",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/106106",
+  "stand": "2025-12-31",
+  "gemeinden": [
+   {
+    "name": "Wiesenfeld",
+    "url": "/gemeinden/thueringen/wiesenfeld/"
+   },
+   {
+    "name": "Bleicherode",
+    "url": "/gemeinden/thueringen/bleicherode/"
+   },
+   {
+    "name": "Niedergebra",
+    "url": "/gemeinden/thueringen/niedergebra/"
+   },
+   {
+    "name": "Werther",
+    "url": "/gemeinden/thueringen/werther/"
+   },
+   {
+    "name": "Bad Langensalza",
+    "url": "/gemeinden/thueringen/bad-langensalza/"
+   },
+   {
+    "name": "Ellingshausen",
+    "url": "/gemeinden/thueringen/ellingshausen/"
+   },
+   {
+    "name": "Rhönblick",
+    "url": "/gemeinden/thueringen/rhoenblick/"
+   },
+   {
+    "name": "Elxleben",
+    "url": "/gemeinden/thueringen/elxleben-soemmerda/"
+   },
+   {
+    "name": "Griefstedt",
+    "url": "/gemeinden/thueringen/griefstedt/"
+   },
+   {
+    "name": "Straußfurt",
+    "url": "/gemeinden/thueringen/straussfurt/"
+   },
+   {
+    "name": "Werningshausen",
+    "url": "/gemeinden/thueringen/werningshausen/"
+   },
+   {
+    "name": "Auengrund",
+    "url": "/gemeinden/thueringen/auengrund/"
+   },
+   {
+    "name": "Elgersburg",
+    "url": "/gemeinden/thueringen/elgersburg/"
+   },
+   {
+    "name": "Allendorf",
+    "url": "/gemeinden/thueringen/allendorf/"
+   },
+   {
+    "name": "Cursdorf",
+    "url": "/gemeinden/thueringen/cursdorf/"
+   },
+   {
+    "name": "Golmsdorf",
+    "url": "/gemeinden/thueringen/golmsdorf/"
+   },
+   {
+    "name": "Großbockedra",
+    "url": "/gemeinden/thueringen/grossbockedra/"
+   },
+   {
+    "name": "Lippersdorf-Erdmannsdorf",
+    "url": "/gemeinden/thueringen/lippersdorf-erdmannsdorf/"
+   },
+   {
+    "name": "Milda",
+    "url": "/gemeinden/thueringen/milda/"
+   },
+   {
+    "name": "Orlamünde",
+    "url": "/gemeinden/thueringen/orlamuende/"
+   },
+   {
+    "name": "Rothenstein",
+    "url": "/gemeinden/thueringen/rothenstein/"
+   },
+   {
+    "name": "Stadtroda",
+    "url": "/gemeinden/thueringen/stadtroda/"
+   },
+   {
+    "name": "Tröbnitz",
+    "url": "/gemeinden/thueringen/troebnitz/"
+   },
+   {
+    "name": "Weißbach",
+    "url": "/gemeinden/thueringen/weissbach/"
+   },
+   {
+    "name": "Hirschberg",
+    "url": "/gemeinden/thueringen/hirschberg/"
+   },
+   {
+    "name": "Wurzbach",
+    "url": "/gemeinden/thueringen/wurzbach/"
+   }
+  ]
+ },
+ {
+  "land": "TH",
+  "programm": "Bedarfszuweisungen und Überbrückungshilfen aus dem Landesausgleichsstock – 1. Halbjahr 2026",
+  "beschreibung": "Drucksache 8/4137 (Antwort TFM auf Kleine Anfrage 8/2844, 14.08.2026): Bedarfszuweisungen nach § 24 Abs. 1 und 2 ThürFAG im 1. Halbjahr 2026 an vier Gemeinden (Landkreise beantragten keine); dazu eine rückzahlbare Überbrückungshilfe an Orlamünde (137.630 EUR, Rückzahlung ab 2027).",
+  "quelle_url": "https://parldok.thueringer-landtag.de/ParlDok/dokument/108890",
+  "stand": "2026-08-14",
+  "gemeinden": [
+   {
+    "name": "Cursdorf",
+    "url": "/gemeinden/thueringen/cursdorf/"
+   },
+   {
+    "name": "Dornburg-Camburg",
+    "url": "/gemeinden/thueringen/dornburg-camburg/"
+   },
+   {
+    "name": "Golmsdorf",
+    "url": "/gemeinden/thueringen/golmsdorf/"
+   },
+   {
+    "name": "Hirschberg",
+    "url": "/gemeinden/thueringen/hirschberg/"
+   },
+   {
+    "name": "Orlamünde",
+    "url": "/gemeinden/thueringen/orlamuende/"
+   }
+  ]
+ },
+ {
+  "land": "ST",
+  "programm": "Haushaltskonsolidierungskonzept / Haushaltssperre als kommunalaufsichtliche Auflage (Landkreise, LVwA)",
+  "beschreibung": "Pressemitteilungen des Landesverwaltungsamts Sachsen-Anhalt 2024–2026 zu Haushaltsgenehmigungen der Landkreise mit Konsolidierungsauflagen (§ 100 Abs. 3 KVG LSA) bzw. Haushaltssperre. Keine landesweite Liste; die rund 200 kreisangehörigen Gemeinden sind nicht erfasst (Rechtsaufsicht dort bei den Landkreisen). Eine Zeile je Pressemitteilung.",
+  "quelle_url": "https://presse.sachsen-anhalt.de/wp-content/uploads/pdf/lvwa_03_09_2025_Pressemitteilung_haushalt-des-landkreises-jerichower-land-fuer-2025-genehmigt-konsolidierung-gefordert.pdf",
+  "stand": "2026-05-12",
+  "gemeinden": [
+   {
+    "name": "Salzlandkreis",
+    "url": "/kreise/sachsen-anhalt/salzlandkreis/"
+   },
+   {
+    "name": "Landkreis Mansfeld-Südharz",
+    "url": "/kreise/sachsen-anhalt/mansfeld-suedharz/"
+   },
+   {
+    "name": "Landkreis Börde",
+    "url": "/kreise/sachsen-anhalt/boerde/"
+   },
+   {
+    "name": "Altmarkkreis Salzwedel",
+    "url": "/kreise/sachsen-anhalt/altmarkkreis-salzwedel/"
+   },
+   {
+    "name": "Landkreis Jerichower Land",
+    "url": "/kreise/sachsen-anhalt/jerichower-land/"
+   },
+   {
+    "name": "Landkreis Harz",
+    "url": "/kreise/sachsen-anhalt/harz/"
+   },
+   {
+    "name": "Landkreis Wittenberg",
+    "url": "/kreise/sachsen-anhalt/wittenberg/"
+   },
+   {
+    "name": "Landkreis Anhalt-Bitterfeld",
+    "url": "/kreise/sachsen-anhalt/anhalt-bitterfeld/"
+   },
+   {
+    "name": "Burgenlandkreis",
+    "url": "/kreise/sachsen-anhalt/burgenlandkreis/"
+   }
+  ]
+ },
+ {
+  "land": "ST",
+  "programm": "Ausgleichsstock nach § 17 FAG (Bedarfszuweisungen/Liquiditätshilfen) – Einzelbewilligung",
+  "beschreibung": "Aus dem Ausgleichsstock (40 Mio. EUR jährlich) erhalten Kommunen in Notlagen Bedarfszuweisungen oder rückzahlbare Liquiditätshilfen gegen Konsolidierungsauflagen. Eine Gesamtliste der Empfänger wird nicht veröffentlicht; hier nur der in einer gelesenen MF-Pressemitteilung genannte Fall.",
+  "quelle_url": "https://presse.sachsen-anhalt.de/wp-content/uploads/pdf/ministerium-der-finanzen_26_06_2023_Pressemitteilung_gut-57-millionen-euro-fuer-calbe-saale.pdf",
+  "stand": "2023-06-26",
+  "gemeinden": [
+   {
+    "name": "Calbe (Saale)",
+    "url": "/gemeinden/sachsen-anhalt/calbe-saale/"
+   }
+  ]
+ },
+ {
+  "land": "SN",
+  "programm": "Haushaltsstrukturkonzept als Auflage der Landesdirektion Sachsen (Landkreise/Kreisfreie Städte)",
+  "beschreibung": "Pressemitteilungen der Landesdirektion Sachsen 2025–2026: Haushaltsgenehmigungen nur unter Auflagen bzw. auf Grundlage des SMI-Erlasses vom 21.07.2025 zu außergewöhnlichen Haushaltslagen, mit Pflicht zur Aufstellung/Anpassung eines Haushaltsstrukturkonzepts (§ 72 SächsGemO). Keine landesweite Gemeindeliste gefunden. Eine Zeile je Pressemitteilung.",
+  "quelle_url": "https://www.medienservice.sachsen.de/medien/news/1092764",
+  "stand": "2026-07-24",
+  "gemeinden": [
+   {
+    "name": "Erzgebirgskreis",
+    "url": "/kreise/sachsen/erzgebirgskreis/"
+   },
+   {
+    "name": "Landkreis Mittelsachsen",
+    "url": "/kreise/sachsen/mittelsachsen/"
+   },
+   {
+    "name": "Landkreis Leipzig",
+    "url": "/kreise/sachsen/leipzig/"
+   },
+   {
+    "name": "Landkreis Meißen",
+    "url": "/kreise/sachsen/meissen/"
+   },
+   {
+    "name": "Landkreis Görlitz",
+    "url": "/kreise/sachsen/goerlitz/"
+   },
+   {
+    "name": "Leipzig",
+    "url": "/gemeinden/sachsen/leipzig/"
+   },
+   {
+    "name": "Landkreis Nordsachsen",
+    "url": "/kreise/sachsen/nordsachsen/"
+   }
+  ]
  }
 ]
