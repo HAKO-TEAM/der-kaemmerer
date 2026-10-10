@@ -2,7 +2,7 @@
 title: "Haushaltssperre 2026: Welche Städte betroffen sind – Liste, Rechtsgrundlagen, Folgen"
 beschreibung: "36 belegte Haushaltssperren 2025/2026 von Dortmund bis Dresden, dazu acht Landkreise: was gesperrt wird, was weiterläuft und was Kämmereien jetzt tun."
 ressort: haushalt
-datum: "2026-10-08"
+datum: "2026-10-10"
 minuten: 11
 autor: Redaktion
 featured: true
@@ -76,6 +76,8 @@ Aufgenommen sind nur Fälle, die eine Haushaltssperre, Ausgabensperre oder haush
 | Potsdam | BB | 01.10.2026, viertes Quartal; 5 % der Sach- und Dienstleistungen | Defizit 2024 von 45,55 Mio. €, liquide Mittel Mitte September rund 32,7 Mio. € | [8][9] |
 | Grevenbroich | NRW | Anfang Oktober 2026; Teilsperre bereits seit Ende Juli | Defizit 2026 knapp 11 statt 3,9 Mio. € | [16] |
 | Bad Sooden-Allendorf | HE | Oktober 2026 bis Jahresende | Personalkosten 105.000 € über Plan | [24] |
+| Aschaffenburg | BY | gemeldet 06.10.2026; alle Ausgaben auf dem Prüfstand | rund 16 Mio. € weniger Gewerbesteuer, Defizit rund 13,4 Mio. € | [46] |
+| Pöttmes | BY | Oktober 2026, vom Bürgermeister im Marktgemeinderat bekanntgegeben | angespannte Haushaltslage | [47] |
 
 ### Landkreise 2026
 
@@ -216,3 +218,5 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 43. [Dramatische Steuerprognose bringt Haushaltssperre für Bielefeld](https://www.radiobielefeld.de/nachrichten/am-puls-der-stadt/dramatische-steuerprognose-bringt-haushaltssperre-fuer-bielefeld.html) – Radio Bielefeld – 08.05.2026
 44. [Lob für schnelle Haushaltssperre in Monheim](https://steuerzahler.de/aktuelles/detail/lob-fuer-schnelle-haushaltssperre-in-monheim/) – Bund der Steuerzahler NRW – 01.07.2026
 45. [Eisernes Sparen ab sofort: Unnas Kämmerer verhängt Haushaltssperre](https://rundblick-unna.de/2026/09/09/eisernes-sparen-ab-sofort-unnas-kaemmerer-verhaengt-haushaltssperre/) – Rundblick Unna – 09.09.2026
+46. [Haushaltssperre in Aschaffenburg: Stadt fehlen Millionen](https://www.primavera24.de/aktuelles/news/haushaltssperre-in-aschaffenburg-stadt-fehlen-millionen) – Radio Primavera – 06.10.2026
+47. [Haushaltssperre in Pöttmes: Bürgermeister zieht bei den Finanzen die Notbremse](https://www.augsburger-allgemeine.de/aichach/haushaltssperre-in-poettmes-buergermeister-zieht-bei-den-finanzen-die-notbremse-115467169) – Augsburger Allgemeine – 09.10.2026
