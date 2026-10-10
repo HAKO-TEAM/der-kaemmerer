@@ -1,0 +1,163 @@
+---
+// Stellenangebote je Gemeinde (für Suchen wie „Stadt X Stellenangebote“): alle laufenden Ausschreibungen öffentlicher
+// Arbeitgeber mit Dienstort in der Gemeinde, nach Arbeitgeber gruppiert, dazu der Umkreis. Ausgeliefert per Funktion.
+export const prerender = false;
+import Base from '../../../../layouts/Base.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import markt from '../../../../data/markt/markt.json';
+import gemeinden from '../../../../data/spiegel/gemeinden.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../../../lib/gemeinden.mjs';
+import { stellenJeGemeinde } from '../../../../lib/stellen-ort.mjs';
+import { km, niveauText, FELD_NAMEN } from '../../../../lib/markt/benchmark.mjs';
+
+const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
+const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
+const ags = agsVon[p];
+const g: any = ags && (gemeinden as any[]).find((x) => x.ags === ags);
+if (!g) return new Response('Nicht gefunden', { status: 404 });
+Astro.response.headers.set('Cache-Control', 'public, max-age=3600');
+Astro.response.headers.set('CDN-Cache-Control', 'public, s-maxage=43200, stale-while-revalidate=86400');
+
+const jeOrt = stellenJeGemeinde((markt as any).stellen, gemeinden as any[]);
+const hier: any[] = [...(jeOrt.get(ags) || [])].sort((a, b) => (b.v || '').localeCompare(a.v || ''));
+const ort = { la: g.lat, lo: g.lon };
+const umkreis: any[] = g.lat == null ? [] : (markt as any).stellen
+  .filter((s: any) => s.la != null && !hier.includes(s) && (!s.s || s.s >= new Date().toISOString().slice(0, 10)))
+  .map((s: any) => ({ ...s, d: Math.round(km(ort, { la: s.la, lo: s.lo })) })).filter((s: any) => s.d <= 30)
+  .sort((a: any, b: any) => a.d - b.d).slice(0, 20);
+
+// nach Arbeitgeber gruppieren, größte zuerst
+const gruppen = Object.entries(hier.reduce((acc: any, s: any) => ((acc[s.o] ||= []).push(s), acc), {}))
+  .sort((a: any, b: any) => b[1].length - a[1].length) as [string, any[]][];
+const felder = Object.entries(hier.reduce((acc: any, s: any) => ((acc[s.f] = (acc[s.f] || 0) + 1), acc), {}))
+  .sort((a: any, b: any) => b[1] - a[1]) as [string, number][];
+const niveaus = hier.map((s) => s.n).filter((n) => n != null).sort((a, b) => a - b);
+const median = niveaus.length ? niveaus[Math.floor(niveaus.length / 2)] : null;
+const datum = (d?: string) => (d ? d.split('-').reverse().join('.') : '');
+const landLang = (LAND_LANG as any)[g.land];
+const nachbarn = (gemeinden as any[]).filter((x) => x.ags !== ags && x.land === g.land && x.lat != null && jeOrt.has(x.ags))
+  .map((x) => ({ ...x, d: km(ort, { la: x.lat, lo: x.lon }), n: jeOrt.get(x.ags)!.length })).sort((a, b) => a.d - b.d).slice(0, 12);
+
+const n = hier.length;
+const titel = n ? `Stellenangebote ${g.name}: ${n} ${n === 1 ? 'offene Stelle' : 'offene Stellen'} im öffentlichen Dienst` : `Stellenangebote ${g.name} und Umgebung – öffentlicher Dienst`;
+const beschreibung = n
+  ? `${n} aktuelle Stellenangebote öffentlicher Arbeitgeber in ${g.name}${gruppen.length > 1 ? ` bei ${gruppen.length} Arbeitgebern` : ''}: ${felder.slice(0, 3).map(([f]) => (FELD_NAMEN as any)[f]).filter(Boolean).join(', ')}. Mit Entgeltgruppe und Bewerbungsschluss, täglich aktualisiert.`
+  : `Stellenangebote im öffentlichen Dienst rund um ${g.name} (${landLang}) – täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`;
+const url = `https://derkaemmerer.de${gemeindeUrl(p)}stellen/`;
+const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
+  { '@type': 'ListItem', position: 2, name: landLang, item: `https://derkaemmerer.de/gemeinden/${LAND_SLUG[g.land]}/` },
+  { '@type': 'ListItem', position: 3, name: g.name, item: `https://derkaemmerer.de${gemeindeUrl(p)}` },
+  { '@type': 'ListItem', position: 4, name: 'Stellenangebote', item: url } ] };
+---
+<Base title={titel} description={beschreibung} noindex={n === 0} canonical={url}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.st { color:#0f172a; } .st-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.st-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
+.st-pfad { font-size:13px; color:rgba(255,255,255,.6); } .st-pfad a { color:#93c5fd; text-decoration:none; }
+.st-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,4vw,40px); line-height:1.12; margin:10px 0 8px; }
+.st-kopf p { color:rgba(255,255,255,.72); font-size:15px; line-height:1.55; margin:0; max-width:760px; }
+.st-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#e2e8f0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin-top:22px; }
+.st-kpis div { background:#fff; padding:16px; } .st-kpis b { display:block; font-size:24px; color:#172840; } .st-kpis span { font-size:12px; color:#64748b; }
+.st-ab { padding:32px 0 4px; } .st-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:0 0 4px; }
+.st-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.st-ag { border:1px solid #e2e8f0; border-radius:10px; background:#fff; padding:14px 18px; margin-bottom:14px; }
+.st-ag h3 { margin:0 0 6px; font-size:16px; color:#172840; } .st-ag h3 small { font-weight:400; color:#64748b; font-size:13px; }
+.st-z { display:flex; justify-content:space-between; gap:14px; padding:9px 0; border-top:1px solid #f1f5f9; font-size:14px; }
+.st-z a { color:#0f172a; text-decoration:none; font-weight:600; line-height:1.4; } .st-z a:hover { color:#2563eb; }
+.st-z small { color:#64748b; white-space:nowrap; text-align:right; line-height:1.4; } .st-z .f { display:block; font-weight:400; color:#64748b; font-size:12.5px; }
+.st-chips { display:flex; flex-wrap:wrap; gap:8px; } .st-chips span, .st-chips a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; background:#fff; color:#0f172a; text-decoration:none; }
+.st-chips a:hover { border-color:#2563eb; color:#2563eb; } .st-chips b { color:#2563eb; }
+.st-leer { background:#f8fafc; border:1px dashed #cbd5e1; border-radius:10px; padding:18px; color:#334155; line-height:1.6; }
+.st-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.st-cta h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 8px; font-size:21px; } .st-cta p { margin:0 0 14px; color:rgba(255,255,255,.72); line-height:1.6; font-size:15px; }
+.st-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:11px 16px; border-radius:6px; text-decoration:none; } .st-btn.hell { background:#fff; color:#172840; }
+@media (max-width:820px){ .st-w{padding:0 16px} .st-kpis{grid-template-columns:repeat(2,1fr)} .st-cta{grid-template-columns:1fr} .st-z{flex-direction:column; gap:2px} .st-z small{text-align:left} }
+</style>
+
+<div class="st">
+  <section class="st-kopf"><div class="st-w">
+    <div class="st-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={`/gemeinden/${LAND_SLUG[g.land]}/`}>{landLang}</a> › <a href={gemeindeUrl(p)}>{g.name}</a> › Stellenangebote</div>
+    <h1>Stellenangebote {g.name}{n ? `: ${n} offene ${n === 1 ? 'Stelle' : 'Stellen'}` : ''}</h1>
+    <p>{n
+      ? `Alle laufenden Ausschreibungen öffentlicher Arbeitgeber mit Dienstort ${g.name} – Stadt- und Gemeindeverwaltung, Kreis, Zweckverbände und kommunale Einrichtungen. Täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`
+      : `Öffentliche Arbeitgeber rund um ${g.name} mit laufenden Ausschreibungen – täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`}</p>
+  </div></section>
+
+  <div class="st-w">
+    {n > 0 && (
+      <div class="st-kpis">
+        <div><b>{n}</b><span>offene {n === 1 ? 'Stelle' : 'Stellen'} in {g.name}</span></div>
+        <div><b>{gruppen.length}</b><span>{gruppen.length === 1 ? 'Arbeitgeber' : 'Arbeitgeber mit Ausschreibungen'}</span></div>
+        <div><b>{median != null ? niveauText(median) : '–'}</b><span>mittleres Entgelt der Ausschreibungen</span></div>
+        <div><b>{umkreis.length}{umkreis.length === 20 ? '+' : ''}</b><span>weitere Stellen im Umkreis von 30 km</span></div>
+      </div>
+    )}
+
+    {n > 0 && (
+      <section class="st-ab">
+        <h2>Offene Stellen in {g.name} nach Arbeitgeber</h2>
+        <p class="st-unter">Stand {datum((markt as any).kopf.stand?.slice?.(0, 10))} · neueste Ausschreibungen zuerst. Die Bewerbung läuft direkt beim Arbeitgeber.</p>
+        {gruppen.map(([org, liste]) => (
+          <div class="st-ag">
+            <h3>{org} <small>· {liste.length} {liste.length === 1 ? 'Stelle' : 'Stellen'}</small></h3>
+            {liste.map((s) => (
+              <div class="st-z">
+                <a href={s.u} target="_blank" rel="noopener nofollow">{s.t}<span class="f">{(FELD_NAMEN as any)[s.f] || 'Verwaltung'}{s.ort && s.ort !== g.name ? ` · ${s.ort}` : ''}</span></a>
+                <small>{s.n != null ? niveauText(s.n) : ''}{s.s && s.s < '2099' ? <><br>Bewerbung bis {datum(s.s)}</> : ''}</small>
+              </div>
+            ))}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {felder.length > 1 && (
+      <section class="st-ab">
+        <h2>Gesuchte Berufsfelder in {g.name}</h2>
+        <div class="st-chips">{felder.map(([f, z]) => <span>{(FELD_NAMEN as any)[f] || f} <b>{z}</b></span>)}</div>
+      </section>
+    )}
+
+    <section class="st-ab">
+      <h2>{n ? `Weitere Stellen rund um ${g.name}` : `Stellen im öffentlichen Dienst rund um ${g.name}`}</h2>
+      <p class="st-unter">Laufende Ausschreibungen kommunaler und öffentlicher Arbeitgeber im Umkreis von 30 km, nächstgelegene zuerst.</p>
+      {umkreis.length ? (
+        <div class="st-ag">
+          {umkreis.map((s) => (
+            <div class="st-z">
+              <a href={s.u} target="_blank" rel="noopener nofollow">{s.t}<span class="f">{s.o} · {s.ort}</span></a>
+              <small>{s.d} km{s.n != null ? ` · ${niveauText(s.n)}` : ''}{s.s && s.s < '2099' ? <><br>bis {datum(s.s)}</> : ''}</small>
+            </div>
+          ))}
+        </div>
+      ) : <div class="st-leer">Im Umkreis von 30 km sind derzeit keine Ausschreibungen erfasst. Alle Stellen bundesweit finden Sie in der <a href="/stellen/">Stellenbörse von Der Kämmerer</a>.</div>}
+    </section>
+
+    {nachbarn.length > 0 && (
+      <section class="st-ab">
+        <h2>Stellenangebote in der Nähe</h2>
+        <div class="st-chips">
+          {nachbarn.map((x) => <a href={`${gemeindeUrl(pfad[x.ags])}stellen/`}>{x.name} <b>{x.n}</b></a>)}
+          <a href="/stellen/">Stellenbörse {imLand(landLang)} und bundesweit →</a>
+        </div>
+      </section>
+    )}
+
+    <section class="st-ab">
+      <h2>{g.name} als Kommune</h2>
+      <p class="st-unter">Hebesätze, Verschuldung je Einwohner und Haushaltslage von {g.name} im Vergleich mit Kreis und Land: <a href={gemeindeUrl(p)} style="color:#2563eb">Gemeindeprofil {g.name} →</a></p>
+    </section>
+
+    <div class="st-cta">
+      <div><h2>Stellen ausschreiben</h2><p>Kommunen erreichen über die Stellenbörse von Der Kämmerer Fach- und Führungskräfte aus Verwaltung und Finanzwesen – mit der KommunalFlat unbegrenzt viele Anzeigen für 249 € im Monat.</p><a class="st-btn" href="/anzeige-aufgeben/">Anzeige aufgeben</a></div>
+      <div><h2>Vor der nächsten Nachbesetzung</h2><p>Der Kämmerer prüft die nächsten fünf Ausschreibungen einer Kommune kostenfrei auf ihren Digitalisierungsanteil – je Stelle ein Einseiter mit Empfehlung.</p><a class="st-btn hell" href="/nachbesetzungs-check/">Nachbesetzungs-Check</a></div>
+    </div>
+  </div>
+</div>
+<Footer />
+</Base>

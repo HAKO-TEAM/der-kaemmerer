@@ -18,6 +18,7 @@ import { niveauText } from '../../../lib/markt/merkmale.mjs';
 import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
 import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
 import { artikelIndex } from '../../../lib/artikel-index';
+import { stellenJeGemeinde } from '../../../lib/stellen-ort.mjs';
 
 const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
 const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
@@ -41,7 +42,7 @@ const beschreibung = [
   `${g.name} (${g.kreis && g.kreis !== g.name ? `${g.kreis}, ` : ''}${g.landLang})`,
   gb.wert != null ? `Grundsteuer B ${gb.wert} %` : '', gw.wert != null ? `Gewerbesteuer ${gw.wert} %` : '',
   sch.wert != null ? `Schulden ${zahl(sch.wert)} € je Einwohner` : '',
-].filter(Boolean).join(' · ') + ' – im Vergleich mit Kreis, Land und gleich großen Gemeinden. Dazu offene kommunale Stellen im Umkreis.';
+].filter(Boolean).join(' · ') + ' – im Vergleich mit Kreis, Land und gleich großen Gemeinden. Mit Gewerbesteuer-Rechner und offenen Stellen.';
 const zeilen = [['Grundsteuer A (Hebesatz)', f.grundsteuerA, ' %'], ['Grundsteuer B (Hebesatz)', gb, ' %'], ['Gewerbesteuer (Hebesatz)', gw, ' %'],
   ['Schulden Kernhaushalt je Einwohner', sch, ' €'], ['davon Kassenkredite je Einwohner', f.kassenkredite, ' €'], ['Schulden der 100-%-Beteiligungen je Einwohner', f.beteiligungen, ' €']]
   .filter(([, v]: any) => v.wert != null) as [string, any, string][];
@@ -50,6 +51,7 @@ const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
 const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
 const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
+const stellenHier = (stellenJeGemeinde((markt as any).stellen, gemeinden as any[]).get(g.ags) || []).length;
 const ai = await artikelIndex(gemeinden as any[]);
 const artikelHier = ai.jeAgs.get(g.ags) || [];
 const artikelListe = artikelHier.length ? artikelHier.slice(0, 8) : ai.neueste;
@@ -88,6 +90,8 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
 .gm-hs { margin:6px 0; font-size:15px; line-height:1.55; }
 .gm-akt { margin:10px 0 4px; padding:10px 12px; background:#fff7ed; border-left:4px solid #ea580c; border-radius:6px; font-size:14px; line-height:1.55; color:#7c2d12; } .gm-akt a { color:#c2410c; }
 @media (max-width:640px){ .gm-skala{grid-template-columns:repeat(4,1fr)} }
+.gm-rechner label { display:block; font-size:13px; color:#334155; margin:0 0 10px; } .gm-rechner input, .gm-rechner select { display:block; width:100%; margin-top:4px; padding:9px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:inherit; box-sizing:border-box; }
+.gm-erg { background:#f1f5f9; border-radius:8px; padding:12px 14px; margin-top:6px; font-size:14px; line-height:1.6; } .gm-erg :global(b) { font-size:22px; color:#172840; display:block; } .gm-erg :global(small) { color:#64748b; }
 .gm-nachbarn { display:flex; flex-wrap:wrap; gap:8px; } .gm-nachbarn a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
 .gm-nachbarn a:hover { border-color:#2563eb; color:#2563eb; }
 .gm-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
@@ -109,7 +113,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
       <div><b>{zahl(gb.wert, ' %')}</b><span>Grundsteuer B {gb.rangLand ? `· Platz ${gb.rangLand.platz} von ${gb.rangLand.von}` : ''}</span></div>
       <div><b>{zahl(gw.wert, ' %')}</b><span>Gewerbesteuer {gw.rangLand ? `· Platz ${gw.rangLand.platz} von ${gw.rangLand.von}` : ''}</span></div>
       <div><b>{zahl(sch.wert, ' €')}</b><span>Schulden je Einwohner (Kernhaushalt)</span></div>
-      <div><b>{pm.anzahl}</b><span>offene kommunale Stellen im Umkreis von 50 km</span></div>
+      <div><b>{pm.anzahl}</b><span>offene kommunale Stellen im Umkreis von 50 km · <a href={`${gemeindeUrl(p)}stellen/`} style="color:#2563eb">Stellenangebote {g.name}</a></span></div>
     </div>
 
     {zeilen.length > 0 && (
@@ -125,6 +129,27 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         </tbody>
       </table>
       <p class="gm-hin">Hebesätze 2024 nach altem Grundsteuerrecht (die reformierten Sätze ab 2025 liegen amtlich noch nicht vollständig vor). Schulden zum 31.12.2025; bei Mitgliedsgemeinden von Ämtern und Verbandsgemeinden ohne deren Anteil am Verband. ▲ über / ▼ unter dem Kreismedian. Rang 1 = höchster Wert im Land. Quelle: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0).</p></div>
+    </section>)}
+
+    {(gw.wert != null || gb.wert != null) && (
+    <section class="gm-ab" id="rechner">
+      <h2>Gewerbesteuer- und Grundsteuer-Rechner für {g.name}</h2>
+      <p class="gm-unter">Mit dem Hebesatz von {g.name} vorbelegt – der Satz lässt sich überschreiben. Die Rechnung läuft vollständig im Browser.</p>
+      <div class="gm-zwei gm-rechner" data-gw={gw.wert ?? ''} data-gwk={gw.kreis ?? ''} data-gwl={gw.land ?? ''} data-gb={gb.wert ?? ''} data-gbk={gb.kreis ?? ''} data-name={g.name} data-kreis={f.kreisLabel === 'Kreis' ? 'im Kreis' : 'der kreisfreien Städte'}>
+        <div class="gm-karte"><h3>Gewerbesteuer</h3>
+          <label>Gewerbeertrag (Gewinn zzgl. Hinzurechnungen), €<input type="number" min="0" step="1000" id="r-ertrag" value="100000"></label>
+          <label>Rechtsform<select id="r-form"><option value="p">Einzelunternehmen / Personengesellschaft</option><option value="k">Kapitalgesellschaft (GmbH, AG)</option></select></label>
+          <label>Hebesatz, %<input type="number" min="200" max="1200" step="5" id="r-gw" value={gw.wert ?? 400}></label>
+          <div class="gm-erg" id="r-gw-erg"></div>
+        </div>
+        <div class="gm-karte"><h3>Grundsteuer B</h3>
+          <label>Grundsteuermessbetrag laut Bescheid des Finanzamts, €<input type="number" min="0" step="1" id="r-mess" value="100"></label>
+          <label>Hebesatz, %<input type="number" min="0" max="3000" step="5" id="r-gb" value={gb.wert ?? 500}></label>
+          <div class="gm-erg" id="r-gb-erg"></div>
+          <p class="gm-hin">Vorbelegt ist der Hebesatz 2024. Seit der Grundsteuerreform 2025 setzt {g.name} einen neuen Hebesatz fest – den geltenden Wert nennt der Grundsteuerbescheid der Gemeinde.</p>
+        </div>
+      </div>
+      <p class="gm-hin">Gewerbesteuer = (Gewerbeertrag − Freibetrag 24.500 € bei Personenunternehmen) × 3,5 % Steuermesszahl × Hebesatz. Bei Personenunternehmen mindert das 4,0-Fache des Messbetrags die Einkommensteuer (§ 35 EStG), höchstens bis zur tatsächlich gezahlten Gewerbesteuer und zur anteiligen Einkommensteuer. Grundsteuer = Messbetrag × Hebesatz. Orientierungswerte, keine Steuerberatung.</p>
     </section>)}
 
     {hsStufe && (
@@ -146,7 +171,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
       <div class="gm-zwei">
         <div class="gm-karte"><h3>Finanzstellen im Umkreis</h3>
           {pm.finanzStellen.length ? pm.finanzStellen.slice(0, 8).map((x) => <div class="gm-zeile"><a href={x.u} target="_blank" rel="noopener nofollow">{x.t}<br><small style="font-weight:400">{x.o}</small></a><small>{niveauText(x.n)} · {x.km} km</small></div>) : <p class="gm-hin">Aktuell sind im Umkreis keine Finanzstellen anderer Kommunen ausgeschrieben.</p>}
-          <p class="gm-hin"><a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
+          <p class="gm-hin"><a href={`${gemeindeUrl(p)}stellen/`}>{stellenHier ? `${stellenHier} Stellenangebote in ${g.name}` : `Stellenangebote rund um ${g.name}`}</a> · <a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
         </div>
         <div class="gm-karte"><h3>Gesuchte Berufsfelder im Umkreis</h3>
           {pm.felder.map((x) => <div class="gm-zeile"><span>{x.name}</span><small>{x.n} Stellen</small></div>)}
@@ -183,5 +208,26 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
     </div>
   </div>
 </div>
+<script>
+  const box = document.querySelector('.gm-rechner') as HTMLElement | null;
+  if (box) {
+    const d = box.dataset, euro = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+    const v = (id: string) => Number((document.getElementById(id) as HTMLInputElement).value) || 0;
+    const rechne = () => {
+      const pers = (document.getElementById('r-form') as HTMLSelectElement).value === 'p';
+      const ertrag = Math.floor(Math.max(0, v('r-ertrag') - (pers ? 24500 : 0)) / 100) * 100;
+      const mess = ertrag * 0.035, hs = v('r-gw'), gst = mess * hs / 100;
+      let t = `<b>${euro(gst)}</b>Gewerbesteuer im Jahr (Messbetrag ${euro(mess)})`;
+      if (pers && gst > 0) t += `<br><small>nach Anrechnung auf die Einkommensteuer (§ 35 EStG) verbleiben rund ${euro(Math.max(0, gst - Math.min(4 * mess, gst)))}</small>`;
+      const vgl = (w: string, wo: string) => (w ? `<br><small>bei ${Number(w).toLocaleString('de-DE')} % (Median ${wo}): ${euro(mess * Number(w) / 100)}</small>` : '');
+      t += vgl(d.gwk || '', d.kreis || '') + vgl(d.gwl || '', 'im Land');
+      document.getElementById('r-gw-erg')!.innerHTML = t;
+      const gb = v('r-mess') * v('r-gb') / 100;
+      document.getElementById('r-gb-erg')!.innerHTML = `<b>${euro(gb)}</b>Grundsteuer im Jahr · ${euro(gb / 4)} je Quartal`;
+    };
+    box.querySelectorAll('input,select').forEach((e) => e.addEventListener('input', rechne));
+    rechne();
+  }
+</script>
 <Footer />
 </Base>
