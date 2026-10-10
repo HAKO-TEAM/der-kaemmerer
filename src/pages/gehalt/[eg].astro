@@ -1,0 +1,168 @@
+---
+// Gehaltsatlas je Entgeltgruppe (/gehalt/tvoed-e9b/): Tabellenwerte TVöD VKA je Stufe, Jahresbrutto, Stundenentgelt,
+// Vollkosten für die Kommune (KGSt) und die laufenden Ausschreibungen dieser Entgeltgruppe aus dem Stellenmarkt.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import markt from '../../data/markt/markt.json';
+import { TARIF, GRUPPEN, egName, egSlug, jahr, stunde, jahreBisStufe, egVonNiveau, euro } from '../../lib/tvoed.mjs';
+import { FELD_NAMEN, LAENDER } from '../../lib/markt/benchmark.mjs';
+import { personalkosten, STUNDENSATZ } from '../../lib/markt/nachbesetzung.mjs';
+
+export function getStaticPaths() {
+  return GRUPPEN.map((k) => ({ params: { eg: egSlug(k) }, props: { k } }));
+}
+const { k } = Astro.props as { k: string };
+const name = egName(k);
+const werte: (number | null)[] = (TARIF.tabelle as any)[k];
+const i = GRUPPEN.indexOf(k);
+const unten = GRUPPEN[i - 1], oben = GRUPPEN[i + 1];
+const ab = TARIF.gueltig_ab.split('-').reverse().join('.');
+const jsz = Math.round(TARIF.jahressonderzahlung * 100);
+
+const heute = new Date().toISOString().slice(0, 10);
+const stellen = (markt as any).stellen.filter((s: any) => egVonNiveau(s.n) === k && (!s.s || s.s >= heute));
+const zaehle = (f: (s: any) => string) => Object.entries(stellen.reduce((a: any, s: any) => ((a[f(s)] = (a[f(s)] || 0) + 1), a), {}))
+  .sort((a: any, b: any) => b[1] - a[1]) as [string, number][];
+const felder = zaehle((s) => s.f).slice(0, 8);
+const laender = zaehle((s) => s.l).filter(([l]) => (LAENDER as any)[l]);
+const neueste = [...stellen].sort((a: any, b: any) => (b.v || '').localeCompare(a.v || '')).slice(0, 25);
+const anteil = Math.round(stellen.length / (markt as any).stellen.length * 1000) / 10;
+
+const erste = werte.findIndex((w) => w != null);
+const ein = werte[erste], end = werte[5];
+const s3 = werte[2] ?? ein;
+const kostenKey = k.replace(/^E(\d)/, 'E $1');
+const vollkosten = (STUNDENSATZ as any)[kostenKey] ? personalkosten(kostenKey) : null;
+const kostenSatz = (STUNDENSATZ as any)[kostenKey] ?? null;
+
+const titel = `TVöD ${name} 2026: Gehalt, Stufen, Jahresbrutto und offene Stellen`;
+const beschreibung = `TVöD VKA ${name} ab ${ab}: ${euro(ein, 2)} bis ${euro(end, 2)} brutto im Monat, Jahresbrutto in Stufe ${erste + 1} rund ${euro(jahr(ein))} inkl. Jahressonderzahlung. Dazu ${stellen.length} offene Stellen in ${name} im kommunalen Stellenmarkt.`;
+
+const faq = [
+  [`Wie viel verdient man in TVöD ${name}?`, `Nach der Entgelttabelle TVöD VKA ab ${ab} beträgt das Monatsentgelt in ${name} zwischen ${euro(ein, 2)} (Stufe ${erste + 1}) und ${euro(end, 2)} (Stufe 6) brutto bei ${TARIF.wochenstunden} Wochenstunden. Mit der Jahressonderzahlung von ${jsz} % ergibt das rund ${euro(jahr(ein))} bis ${euro(jahr(end))} im Jahr.`],
+  [`Wie lange dauert es bis zur Endstufe in ${name}?`, `Die Stufen steigen nach Beschäftigungszeit beim Arbeitgeber: Stufe 2 nach einem Jahr, Stufe 3 nach drei, Stufe 4 nach sechs, Stufe 5 nach zehn und Stufe 6 nach fünfzehn Jahren. Einschlägige Berufserfahrung kann bei der Einstellung angerechnet werden, sodass der Einstieg in einer höheren Stufe möglich ist.`],
+  [`Wie hoch ist die Jahressonderzahlung in ${name}?`, `Ab 2026 beträgt die Jahressonderzahlung im Bereich der Kommunen (VKA) einheitlich ${jsz} % des durchschnittlichen Monatsentgelts der Monate Juli bis September. Ein Teil davon lässt sich in bis zu drei freie Tage umwandeln.`],
+  ...(vollkosten ? [[`Was kostet eine Stelle in ${name} die Kommune?`, `Nach dem KGSt-Bericht 8/2025 „Kosten eines Arbeitsplatzes“ liegen die Personalkosten einer Vollzeitstelle in ${name} bei rund ${euro(Math.round(vollkosten / 100) * 100)} im Jahr. Mit Sach- und Gemeinkosten setzt die KGSt ${euro(kostenSatz, 2)} je Arbeitsstunde an.`]] : []),
+];
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Gehaltsatlas', item: 'https://derkaemmerer.de/gehalt/' },
+    { '@type': 'ListItem', position: 2, name: `TVöD ${name}`, item: `https://derkaemmerer.de/gehalt/${egSlug(k)}/` } ] },
+];
+const datum = (d?: string) => (d ? d.split('-').reverse().join('.') : '');
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.ga { color:#0f172a; } .ga-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.ga-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
+.ga-pfad { font-size:13px; color:rgba(255,255,255,.6); } .ga-pfad a { color:#93c5fd; text-decoration:none; }
+.ga-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,4vw,42px); line-height:1.12; margin:10px 0 8px; }
+.ga-kopf p { color:rgba(255,255,255,.75); font-size:16px; line-height:1.55; margin:0; max-width:780px; }
+.ga-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#e2e8f0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin-top:22px; }
+.ga-kpis div { background:#fff; padding:16px; } .ga-kpis b { display:block; font-size:24px; color:#172840; font-variant-numeric:tabular-nums; } .ga-kpis span { font-size:12px; color:#64748b; }
+.ga-ab { padding:32px 0 4px; } .ga-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:0 0 4px; }
+.ga-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.ga-karte { border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px; background:#fff; overflow-x:auto; }
+.ga-tab { width:100%; border-collapse:collapse; font-size:15px; font-variant-numeric:tabular-nums; }
+.ga-tab th { text-align:right; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; padding:8px; border-bottom:1px solid #e2e8f0; } .ga-tab th:first-child, .ga-tab td:first-child { text-align:left; }
+.ga-tab td { padding:10px 8px; border-bottom:1px solid #f1f5f9; text-align:right; } .ga-tab td b { color:#172840; }
+.ga-zwei { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.ga-zeile { display:flex; justify-content:space-between; gap:12px; font-size:14px; padding:7px 0; border-bottom:1px solid #f1f5f9; } .ga-zeile:last-child { border:0; }
+.ga-zeile small { color:#64748b; white-space:nowrap; text-align:right; } .ga-zeile a { color:#0f172a; text-decoration:none; font-weight:600; line-height:1.4; } .ga-zeile a:hover { color:#2563eb; }
+.ga-zeile .o { display:block; font-weight:400; color:#64748b; font-size:12.5px; }
+.ga-balken { height:8px; background:#2563eb; border-radius:4px; margin-top:4px; }
+.ga-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.5; } .ga-hin a { color:#2563eb; }
+.ga-nav { display:flex; flex-wrap:wrap; gap:8px; } .ga-nav a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; }
+.ga-nav a.aktiv { background:#172840; color:#fff; border-color:#172840; } .ga-nav a:hover { border-color:#2563eb; }
+.ga-faq details { border-bottom:1px solid #e2e8f0; padding:12px 0; } .ga-faq summary { font-weight:700; cursor:pointer; font-size:16px; } .ga-faq p { margin:8px 0 0; line-height:1.6; color:#334155; }
+.ga-cta { margin:38px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.ga-cta h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 8px; font-size:21px; } .ga-cta p { margin:0 0 14px; color:rgba(255,255,255,.72); line-height:1.6; font-size:15px; }
+.ga-btn { display:inline-block; background:#2563eb; color:#fff; font-weight:700; padding:11px 16px; border-radius:6px; text-decoration:none; } .ga-btn.hell { background:#fff; color:#172840; }
+@media (max-width:820px){ .ga-w{padding:0 16px} .ga-kpis{grid-template-columns:repeat(2,1fr)} .ga-zwei,.ga-cta{grid-template-columns:1fr} .ga-tab{font-size:13px} }
+</style>
+
+<div class="ga">
+  <section class="ga-kopf"><div class="ga-w">
+    <div class="ga-pfad"><a href="/gehalt/">TVöD-Gehaltsatlas</a> › {name}</div>
+    <h1>TVöD {name} 2026: Gehalt, Stufen und offene Stellen</h1>
+    <p>Entgelttabelle TVöD für Kommunen (VKA), gültig ab {ab}: {euro(ein, 2)} bis {euro(end, 2)} brutto im Monat. Dazu die Kosten einer Stelle für die Kommune und alle laufenden Ausschreibungen in {name}.</p>
+  </div></section>
+
+  <div class="ga-w">
+    <div class="ga-kpis">
+      <div><b>{euro(ein)}</b><span>Einstieg Stufe {erste + 1} im Monat</span></div>
+      <div><b>{euro(end)}</b><span>Endstufe 6 im Monat</span></div>
+      <div><b>{euro(jahr(s3))}</b><span>Jahresbrutto Stufe {s3 === ein ? erste + 1 : 3} inkl. Jahressonderzahlung</span></div>
+      <div><b>{stellen.length}</b><span>offene Stellen in {name} ({anteil.toLocaleString('de-DE')} % des Markts)</span></div>
+    </div>
+
+    <section class="ga-ab">
+      <h2>Entgelttabelle TVöD {name} nach Stufen</h2>
+      <p class="ga-unter">Monatsentgelt brutto bei {TARIF.wochenstunden} Wochenstunden, gültig {ab} bis {TARIF.gueltig_bis.split('-').reverse().join('.')} ({TARIF.erhoehung}). Jahresbrutto = zwölf Monatsentgelte plus Jahressonderzahlung von {jsz} %.</p>
+      <div class="ga-karte"><table class="ga-tab">
+        <thead><tr><th>Stufe</th><th>erreicht nach</th><th>Monat</th><th>Jahr</th><th>Stunde</th></tr></thead>
+        <tbody>
+          {werte.map((w, s) => w != null && (
+            <tr><td><b>Stufe {s + 1}</b></td><td>{s === erste ? 'Einstieg' : `${jahreBisStufe(s + 1)} ${jahreBisStufe(s + 1) === 1 ? 'Jahr' : 'Jahren'}`}</td><td><b>{euro(w, 2)}</b></td><td>{euro(jahr(w))}</td><td>{euro(stunde(w), 2)}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="ga-hin">Stufenlaufzeiten nach § 16 TVöD VKA. Einschlägige Berufserfahrung kann bei der Einstellung angerechnet werden. Stundenentgelt nach § 24 Abs. 3 TVöD (Monatsentgelt ÷ 4,348 ÷ {TARIF.wochenstunden}). Quelle: {TARIF.quelle}.</p></div>
+    </section>
+
+    {vollkosten && (
+    <section class="ga-ab">
+      <h2>Was eine Stelle in {name} die Kommune kostet</h2>
+      <p class="ga-unter">Für Kämmerei und Personalamt: Arbeitgeberkosten einer Vollzeitstelle nach dem KGSt-Bericht 8/2025 „Kosten eines Arbeitsplatzes (2025/2026)“.</p>
+      <div class="ga-zwei">
+        <div class="ga-karte"><div class="ga-zeile"><span>Personalkosten je Vollzeitstelle und Jahr</span><b>{euro(Math.round(vollkosten / 100) * 100)}</b></div>
+          <div class="ga-zeile"><span>Vollkosten je Arbeitsstunde (mit Sach- und Gemeinkosten)</span><b>{euro(kostenSatz, 2)}</b></div>
+          <div class="ga-zeile"><span>Über zehn Jahre, ohne Tarifsteigerung</span><b>{euro(Math.round(vollkosten * 10 / 1000) * 1000)}</b></div></div>
+        <div class="ga-karte"><p style="margin:0;line-height:1.6;font-size:15px">Jede Nachbesetzung bindet diese Summe auf Jahre. Der <a href="/nachbesetzungs-check/" style="color:#2563eb">Nachbesetzungs-Check</a> zeigt vorher, welcher Anteil der Tätigkeiten heute schon über Fachverfahren läuft – je Stelle ein Einseiter mit Empfehlung, für die nächsten fünf Ausschreibungen kostenfrei.</p></div>
+      </div>
+    </section>)}
+
+    {stellen.length > 0 && (
+    <section class="ga-ab">
+      <h2>Offene Stellen in TVöD {name}</h2>
+      <p class="ga-unter">{stellen.length} laufende Ausschreibungen kommunaler und öffentlicher Arbeitgeber auf dem Niveau {name} (TVöD oder vergleichbare Besoldung), neueste zuerst. Erfasst täglich aus {(markt as any).stellen.length.toLocaleString('de-DE')} Stellen bundesweit.</p>
+      <div class="ga-zwei">
+        <div class="ga-karte">
+          {neueste.map((s: any) => <div class="ga-zeile"><a href={s.u} target="_blank" rel="noopener nofollow">{s.t}<span class="o">{s.o} · {s.ort}</span></a><small>{s.s && s.s < '2099' ? `bis ${datum(s.s)}` : ''}</small></div>)}
+          <p class="ga-hin"><a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
+        </div>
+        <div>
+          <div class="ga-karte"><h3 style="margin:0 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#64748b">Berufsfelder in {name}</h3>
+            {felder.map(([f, z]) => <div class="ga-zeile"><span>{(FELD_NAMEN as any)[f] || 'Sonstige'}</span><small>{z}</small></div>)}
+          </div>
+          <div class="ga-karte" style="margin-top:16px"><h3 style="margin:0 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#64748b">Nach Bundesland</h3>
+            {laender.map(([l, z]) => <div class="ga-zeile"><span style="flex:1">{(LAENDER as any)[l]}<div class="ga-balken" style={`width:${Math.max(3, z / laender[0][1] * 100)}%`}></div></span><small>{z}</small></div>)}
+          </div>
+        </div>
+      </div>
+    </section>)}
+
+    <section class="ga-ab ga-faq">
+      <h2>Häufige Fragen zu TVöD {name}</h2>
+      {faq.map(([q, a]) => <details open><summary>{q}</summary><p>{a}</p></details>)}
+    </section>
+
+    <section class="ga-ab">
+      <h2>Weitere Entgeltgruppen</h2>
+      <div class="ga-nav">{GRUPPEN.map((g) => <a href={`/gehalt/${egSlug(g)}/`} class={g === k ? 'aktiv' : ''}>{egName(g)}</a>)}<a href="/gehalt/">Gesamttabelle →</a></div>
+      <p class="ga-hin">{unten && <a href={`/gehalt/${egSlug(unten)}/`}>← TVöD {egName(unten)}</a>}{unten && oben && ' · '}{oben && <a href={`/gehalt/${egSlug(oben)}/`}>TVöD {egName(oben)} →</a>}</p>
+    </section>
+
+    <div class="ga-cta">
+      <div><h2>Stellen ausschreiben</h2><p>Kommunen erreichen über die Stellenbörse von Der Kämmerer Fach- und Führungskräfte aus Verwaltung und Finanzwesen – mit der KommunalFlat unbegrenzt viele Anzeigen für 249 € im Monat.</p><a class="ga-btn" href="/anzeige-aufgeben/">Anzeige aufgeben</a></div>
+      <div><h2>Das Briefing für Kämmerer</h2><p>Haushalt, Einnahmen, Personal und Sozialkosten der Kommunen – werbefrei und auf den Punkt, mit dem persönlichen Lagebericht Ihrer Kommune.</p><a class="ga-btn hell" href="/newsletter/#anmelden">Briefing abonnieren</a></div>
+    </div>
+  </div>
+</div>
+<Footer />
+</Base>

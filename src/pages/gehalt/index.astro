@@ -1,0 +1,110 @@
+---
+// TVöD-Gehaltsatlas: Gesamttabelle TVöD VKA 2026 (Monat/Jahr umschaltbar) und Stellenmarkt je Entgeltgruppe.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import markt from '../../data/markt/markt.json';
+import { TARIF, GRUPPEN, egName, egSlug, jahr, egVonNiveau, euro } from '../../lib/tvoed.mjs';
+
+const ab = TARIF.gueltig_ab.split('-').reverse().join('.');
+const bis = TARIF.gueltig_bis.split('-').reverse().join('.');
+const jsz = Math.round(TARIF.jahressonderzahlung * 100);
+const heute = new Date().toISOString().slice(0, 10);
+const laufend = (markt as any).stellen.filter((s: any) => !s.s || s.s >= heute);
+const jeEg: Record<string, number> = {};
+for (const s of laufend) { const e = egVonNiveau(s.n); if (e) jeEg[e] = (jeEg[e] || 0) + 1; }
+const max = Math.max(...Object.values(jeEg));
+const zeilen = Object.keys(TARIF.tabelle);   // inkl. Ü-Gruppen, von oben nach unten
+const haeufig = Object.entries(jeEg).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([e]) => egName(e));
+
+const titel = `TVöD-Tabelle 2026 (VKA): Gehaltsatlas mit Entgelttabelle und offenen Stellen`;
+const beschreibung = `Entgelttabelle TVöD VKA ab ${ab} (+2,8 %) für alle Entgeltgruppen E 1 bis E 15 und Stufen 1 bis 6 – Monat und Jahr, Jahressonderzahlung ${jsz} %. Mit ${laufend.length.toLocaleString('de-DE')} offenen kommunalen Stellen je Entgeltgruppe.`;
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Entgelttabelle TVöD VKA 2026 mit Stellenmarkt je Entgeltgruppe',
+  description: beschreibung, url: 'https://derkaemmerer.de/gehalt/', temporalCoverage: `${TARIF.gueltig_ab}/${TARIF.gueltig_bis}`,
+  creator: { '@type': 'Organization', name: 'Der Kämmerer', url: 'https://derkaemmerer.de/' }, isAccessibleForFree: true };
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.ga { color:#0f172a; } .ga-w { max-width:1100px; margin:0 auto; padding:0 28px; }
+.ga-kopf { background:#172840; color:#fff; padding:38px 0 32px; border-bottom:3px solid #2563eb; }
+.ga-kicker { font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#93c5fd; }
+.ga-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4.4vw,46px); line-height:1.1; margin:10px 0 10px; }
+.ga-kopf p { color:rgba(255,255,255,.75); font-size:16px; line-height:1.55; margin:0; max-width:800px; }
+.ga-ab { padding:32px 0 4px; } .ga-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:0 0 4px; }
+.ga-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.ga-karte { border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; background:#fff; overflow-x:auto; }
+.ga-schalter { display:inline-flex; border:1px solid #cbd5e1; border-radius:8px; overflow:hidden; margin-bottom:12px; }
+.ga-schalter button { border:0; background:#fff; padding:8px 16px; font:inherit; font-size:14px; cursor:pointer; color:#334155; } .ga-schalter button.an { background:#172840; color:#fff; }
+.ga-tab { width:100%; border-collapse:collapse; font-size:14.5px; font-variant-numeric:tabular-nums; min-width:640px; }
+.ga-tab th { text-align:right; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; padding:8px; border-bottom:1px solid #172840; }
+.ga-tab td { padding:8px; border-bottom:1px solid #f1f5f9; text-align:right; } .ga-tab th:first-child, .ga-tab td:first-child { text-align:left; white-space:nowrap; }
+.ga-tab td:first-child a { color:#1d4ed8; font-weight:700; text-decoration:none; } .ga-tab tr:hover td { background:#f8fafc; }
+.ga-tab tr.ue td { color:#64748b; font-size:13px; }
+.ga-markt { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+.ga-markt a { border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px; background:#fff; text-decoration:none; color:#0f172a; }
+.ga-markt a:hover { border-color:#2563eb; } .ga-markt b { display:block; font-size:18px; color:#172840; } .ga-markt span { font-size:12.5px; color:#64748b; }
+.ga-balken { height:6px; background:#2563eb; border-radius:3px; margin-top:8px; }
+.ga-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.55; } .ga-hin a { color:#2563eb; }
+.ga-text p { font-size:15.5px; line-height:1.7; color:#334155; max-width:820px; }
+@media (max-width:820px){ .ga-w{padding:0 16px} }
+</style>
+
+<div class="ga">
+  <section class="ga-kopf"><div class="ga-w">
+    <div class="ga-kicker">TVöD-Gehaltsatlas · Kommunen (VKA)</div>
+    <h1>TVöD-Tabelle 2026 mit offenen Stellen je Entgeltgruppe</h1>
+    <p>Die Entgelttabelle des TVöD für Kommunen, gültig ab {ab} ({TARIF.erhoehung}), verbunden mit dem kommunalen Stellenmarkt: {laufend.length.toLocaleString('de-DE')} laufende Ausschreibungen, am häufigsten in {haeufig.join(', ')}.</p>
+  </div></section>
+
+  <div class="ga-w">
+    <section class="ga-ab">
+      <h2>Entgelttabelle TVöD VKA 2026</h2>
+      <p class="ga-unter">Brutto bei {TARIF.wochenstunden} Wochenstunden, gültig {ab} bis {bis}. Jahreswerte: zwölf Monatsentgelte plus Jahressonderzahlung von {jsz} %. Ein Klick auf die Entgeltgruppe zeigt Stufen, Stundenentgelt, Kosten für die Kommune und offene Stellen.</p>
+      <div class="ga-schalter" role="group" aria-label="Darstellung"><button type="button" class="an" data-modus="m">Monat</button><button type="button" data-modus="j">Jahr</button></div>
+      <div class="ga-karte"><table class="ga-tab" id="ga-tabelle">
+        <thead><tr><th>Entgeltgruppe</th>{[1, 2, 3, 4, 5, 6].map((s) => <th>Stufe {s}</th>)}</tr></thead>
+        <tbody>
+          {zeilen.map((z) => (
+            <tr class={z.includes('Ü') ? 'ue' : ''}>
+              <td>{GRUPPEN.includes(z) ? <a href={`/gehalt/${egSlug(z)}/`}>{egName(z)}</a> : egName(z)}</td>
+              {(TARIF.tabelle as any)[z].map((w: number | null) => <td data-m={w ?? ''} data-j={w != null ? Math.round(jahr(w)!) : ''}>{w != null ? euro(w, 2) : ''}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="ga-hin">E 15 Ü und E 2 Ü: Überleitungsgruppen für Beschäftigte aus dem BAT/BMT-G. Quelle: {TARIF.quelle}. Stufenlaufzeiten § 16 TVöD VKA: Stufe 2 nach einem Jahr, Stufe 3 nach drei, Stufe 4 nach sechs, Stufe 5 nach zehn, Stufe 6 nach fünfzehn Jahren.</p></div>
+    </section>
+
+    <section class="ga-ab">
+      <h2>Offene Stellen je Entgeltgruppe</h2>
+      <p class="ga-unter">Laufende Ausschreibungen kommunaler und öffentlicher Arbeitgeber nach Entgeltniveau (TVöD oder vergleichbare Besoldung), täglich aktualisiert.</p>
+      <div class="ga-markt">
+        {GRUPPEN.slice().reverse().map((g) => (
+          <a href={`/gehalt/${egSlug(g)}/`}><b>{egName(g)}</b><span>{(jeEg[g] || 0).toLocaleString('de-DE')} offene Stellen</span><div class="ga-balken" style={`width:${Math.max(2, (jeEg[g] || 0) / max * 100)}%`}></div></a>
+        ))}
+      </div>
+    </section>
+
+    <section class="ga-ab ga-text">
+      <h2>So liest man die TVöD-Tabelle</h2>
+      <p>Die <b>Entgeltgruppe</b> richtet sich nach der Tätigkeit: E 1 bis E 4 für einfache Tätigkeiten, E 5 bis E 8 für Tätigkeiten mit Berufsausbildung, E 9a bis E 12 für den gehobenen Dienst mit Bachelor oder Verwaltungsfachwirt, E 13 bis E 15 für Tätigkeiten mit Master oder Diplom und Leitungsfunktionen. Die <b>Stufe</b> steigt mit der Beschäftigungszeit; einschlägige Berufserfahrung kann bei der Einstellung angerechnet werden.</p>
+      <p>Für Kommunen zählt neben dem Tabellenentgelt die Summe, die eine Stelle über die Jahre bindet. Jede Entgeltgruppe zeigt deshalb auch die <b>Vollkosten je Stelle</b> nach dem KGSt-Bericht 8/2025 – als Grundlage für die Entscheidung, ob eine Stelle unverändert nachbesetzt wird. Dabei hilft der <a href="/nachbesetzungs-check/" style="color:#2563eb">Nachbesetzungs-Check</a>.</p>
+    </section>
+    <div style="height:60px"></div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.ga-schalter button').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.ga-schalter button').forEach((x) => x.classList.toggle('an', x === b));
+    const m = b.dataset.modus === 'j';
+    document.querySelectorAll<HTMLTableCellElement>('#ga-tabelle td[data-m]').forEach((td) => {
+      const v = td.dataset[m ? 'j' : 'm'];
+      td.textContent = v ? Number(v).toLocaleString('de-DE', { minimumFractionDigits: m ? 0 : 2, maximumFractionDigits: m ? 0 : 2 }) + ' €' : '';
+    });
+  }));
+</script>
+<Footer />
+</Base>

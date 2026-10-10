@@ -52,6 +52,9 @@ function mdToHtml(md: string) {
   if (inList) out.push('</ul>');
   return out.join('');
 }
+// Link in den Gehaltsatlas, wenn die Vergütung eine TVöD-Entgeltgruppe nennt (EG 9b, E 11 …)
+const egTreffer = /TVöD/i.test(d.entgelt || '') && String(d.entgelt).match(/\bE(?:G)?\s?(\d{1,2})\s?([abc])?\b/i);
+const gehaltLink = egTreffer && +egTreffer[1] >= 1 && +egTreffer[1] <= 15 ? `/gehalt/tvoed-e${+egTreffer[1]}${+egTreffer[1] === 9 ? (egTreffer[2] || 'a').toLowerCase() : ''}/` : null;
 const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${esc(d.ort)} (${esc(d.bundesland)}). Vergütung: ${esc(d.entgelt)} · ${esc(d.beschaeftigung)} · ${esc(d.befristung)}.</p>` + mdToHtml(job.body || '');
 ---
 <Base
@@ -246,7 +249,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
           <div class="sj-detail-row"><span class="key">Typ</span><span class="val">{d.orgtyp}</span></div>
           <div class="sj-detail-row"><span class="key">Ort</span><span class="val">{d.ort}, {d.bundesland}</span></div>
           <div class="sj-detail-row"><span class="key">Umfang</span><span class="val">{d.beschaeftigung}</span></div>
-          <div class="sj-detail-row"><span class="key">Vergütung</span><span class="val">{d.entgelt}</span></div>
+          <div class="sj-detail-row"><span class="key">Vergütung</span><span class="val">{d.entgelt}{gehaltLink && <> · <a href={gehaltLink} style="color:#2563eb">Gehaltstabelle</a></>}</span></div>
           <div class="sj-detail-row"><span class="key">Befristung</span><span class="val">{d.befristung}</span></div>
           {d.startdatum && <div class="sj-detail-row"><span class="key">Start</span><span class="val">{d.startdatum}</span></div>}
           <div class="sj-detail-row"><span class="key">Online seit</span><span class="val">{formatDatum(d.datum)}</span></div>
