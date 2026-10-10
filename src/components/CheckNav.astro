@@ -6,6 +6,7 @@ const CHECKS = [
   { id: 'buergewald', name: 'Bürgewald · Merzenich', url: '/revier/tragfaehigkeits-check/' },
   { id: 'erkelenz', name: 'Fünf Dörfer · Erkelenz', url: '/revier/check-erkelenz/' },
   { id: 'brainergy', name: 'Brainergy Park · Jülich', url: '/revier/check-brainergy-park/' },
+  { id: 'gesundheit', name: 'Gesundheitszentrum · Bürgewald', url: '/revier/check-gesundheitszentrum/' },
 ];
 ---
 <nav class="tc-nav" aria-label="Muster-Checks">{CHECKS.map((c) => <a href={c.url} class={c.id === aktiv ? 'an' : ''}>{c.name}</a>)}<a href="/revier/rheinisches-revier/">Alle 65 Kommunen →</a></nav>

@@ -1,0 +1,159 @@
+---
+// Muster-Tragfähigkeits-Check: Gesundheitszentrum im Gemeinschaftsort Bürgewald (Merzenich) – Gebäude der Kommune (förderfähig)
+// und Praxisbetrieb (nicht förderfähig). Branchenkennzahlen: Fallwert KV ≤ 70 €, HZV 75–90 €, ≤ 800 Fälle je Arzt und Quartal.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CheckNav from '../../components/CheckNav.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import schulden from '../../data/spiegel/schulden.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import '../../styles/revier-check.css';
+
+const g: any = (gemeinden as any[]).find((x) => x.name === 'Merzenich' && x.land === 'NW');
+const S = (schulden as any)[g.ags], st = (STUFEN as any)[(hsNw as any).gemeinden[g.ags].s];
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+---
+<Base title="Muster: Tragfähigkeits-Check Gesundheitszentrum Bürgewald" description="Tragfähigkeits-Check einer Gesundheitseinrichtung im Strukturwandel – Muster mit Annahmen." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.gz-zwei { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+.gz-block { border:1px solid #e2e8f0; border-radius:16px; background:#fff; padding:18px 20px; }
+.gz-block h3 { margin:0 0 4px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; } .gz-block > p { margin:0 0 12px; font-size:13.5px; color:#64748b; }
+.gz-z { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px solid #f1f5f9; font-size:14.5px; } .gz-z b { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.gz-z.summe { border-top:2px solid #14233a; border-bottom:0; margin-top:4px; padding-top:10px; font-weight:700; } .gz-plus { color:#15803d; } .gz-minus { color:#b91c1c; }
+.gz-schalter { display:flex; gap:10px; align-items:center; font-size:14px; color:#334155; margin-top:12px; } .gz-schalter input { width:18px; height:18px; accent-color:#ca8a04; }
+.gz-partner { margin-top:34px; display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:center; border-radius:16px; padding:20px 22px; background:#f8fafc; border:1px solid #e2e8f0; }
+.gz-partner b.logo { font:700 18px/1.2 'Playfair Display',Georgia,serif; color:#1d6494; white-space:nowrap; } .gz-partner p { margin:0; font-size:14.5px; line-height:1.6; color:#334155; }
+@media (max-width:900px){ .gz-zwei,.gz-partner{grid-template-columns:1fr} }
+</style>
+<div class="tc">
+  <section class="tc-kopf"><div class="tc-w">
+    <div class="tc-pfad"><a href="/revier/rheinisches-revier/">Rheinisches Revier</a> › Tragfähigkeits-Check <span class="tc-badge">Muster</span></div>
+    <h1>Gesundheitszentrum Bürgewald: Was kostet Versorgung – und wer trägt sie?</h1>
+    <p>Das Investitionsgesetz Kohleregionen fördert ausdrücklich Investitionen in Gesundheitseinrichtungen. Gefördert wird der Bau – der Betrieb einer Praxis nicht. Der Check rechnet beides zusammen: die Räume als Teil des Gemeinschaftsorts in Bürgewald und den hausärztlichen Betrieb darin. Branchenkennzahlen aus der ambulanten Versorgung, Folgekosten und Betrieb als Annahmen mit Reglern.</p>
+    <CheckNav aktiv="gesundheit" />
+  </div></section>
+
+  <div class="tc-w">
+    <section class="tc-ab">
+      <div class="tc-zwei">
+        <div class="tc-steck"><h3>Vorhaben (Muster)</h3><dl>
+          <dt>Ort</dt><dd>Gemeinschaftsort Bürgewald</dd>
+          <dt>Nutzung</dt><dd>Hausärztliche Praxis, z. B. Zweigpraxis eines MVZ</dd>
+          <dt>Förderrahmen Bau</dt><dd>§ 4 Abs. 1 Nr. 3 InvKG</dd>
+          <dt>Förderquote Dorfentwicklung Bürgewald</dt><dd>97,5 %</dd>
+          <dt>Betrieb</dt><dd>nicht förderfähig</dd></dl>
+          <small>Quellen: <a href="https://www.gesetze-im-internet.de/invkg/__4.html" target="_blank" rel="noopener nofollow" style="color:#2563eb">§ 4 InvKG – Investitionen in Gesundheitseinrichtungen</a> · <a href="https://www.land.nrw/pressemitteilung/ministerin-scharrenbach-aus-braunkohle-dorf-wird-zukunftsdorf-neustart-fuer" target="_blank" rel="noopener nofollow" style="color:#2563eb">Land NRW: Förderbescheid Morschenich-Alt</a>. Ob die Praxisräume im Einzelfall als Gesundheitseinrichtung anerkannt werden, entscheidet die Bewilligungsbehörde (Bezirksregierung Köln).</small>
+        </div>
+        <div class="tc-steck"><h3>Kommune: Gemeinde Merzenich</h3><dl>
+          <dt>Einwohner</dt><dd>{z(g.einwohner)}</dd>
+          <dt>Haushaltsstatus (31.12.2025)</dt><dd style={`color:${st.farbe === '#facc15' ? '#a16207' : st.farbe}`}>{st.lang}</dd>
+          <dt>Kassenkredite je Einwohner</dt><dd>{z(S.kassenkredite_je_ew)} €</dd>
+          <dt>Branchenkennzahlen</dt><dd>KV-Fallwert unter 70 € · HZV 75–90 € · höchstens 800 Fälle je Arzt und Quartal</dd></dl>
+          <small>Die Fallzahl je Arzt lässt sich kaum steigern – der Erlöshebel einer hausärztlichen Praxis ist der Anteil der Patientinnen und Patienten in der hausarztzentrierten Versorgung (HZV).</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="tc-ab">
+      <div class="tc-urteil">
+        <div class="tc-ampel" aria-hidden="true"><i class="r" id="a-r"></i><i class="y" id="a-y"></i><i class="g" id="a-g"></i></div>
+        <div><h2 id="u-titel">–</h2><p id="u-text">–</p></div>
+      </div>
+      <div class="gz-zwei">
+        <div class="gz-block"><h3 style="color:#14233a">Gebäude · Haushalt der Gemeinde</h3><p>Räume im Gemeinschaftsort, gebaut mit Fördermitteln, vermietet an den Praxisbetreiber.</p>
+          <div class="gz-z"><span>Investition Praxisräume</span><b id="g-inv">–</b></div>
+          <div class="gz-z"><span>davon Eigenanteil</span><b id="g-eigen">–</b></div>
+          <div class="gz-z"><span>Unterhaltung und Betrieb des Gebäudes</span><b class="gz-minus" id="g-unt">–</b></div>
+          <div class="gz-z"><span>Abschreibung netto (nach Sonderposten)</span><b class="gz-minus" id="g-afa">–</b></div>
+          <div class="gz-z"><span>Mieteinnahmen von der Praxis</span><b class="gz-plus" id="g-miete">–</b></div>
+          <div class="gz-z summe"><span>Saldo Gebäude für die Gemeinde p. a.</span><b id="g-saldo">–</b></div>
+        </div>
+        <div class="gz-block"><h3 style="color:#1d6494">Praxisbetrieb · Betreiber</h3><p>Hausärztliche Versorgung mit angestellten Ärztinnen und Ärzten, abgerechnet über KV und HZV.</p>
+          <div class="gz-z"><span>Erlöse KV und HZV</span><b class="gz-plus" id="p-erl">–</b></div>
+          <div class="gz-z"><span>Ärztinnen und Ärzte (Arbeitgeberkosten)</span><b class="gz-minus" id="p-arzt">–</b></div>
+          <div class="gz-z"><span>Medizinische Fachangestellte</span><b class="gz-minus" id="p-mfa">–</b></div>
+          <div class="gz-z"><span>Sachkosten, IT, Labor</span><b class="gz-minus" id="p-sach">–</b></div>
+          <div class="gz-z"><span>Miete an die Gemeinde</span><b class="gz-minus" id="p-miete">–</b></div>
+          <div class="gz-z summe"><span>Ergebnis der Praxis p. a.</span><b id="p-saldo">–</b></div>
+        </div>
+      </div>
+      <label class="gz-schalter"><input type="checkbox" id="r-sicher" checked> Gemeinde sichert die Versorgung ab und gleicht ein Defizit der Praxis aus (Sicherstellungsbeitrag)</label>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Annahmen – mit Reglern prüfen</h2>
+      <p class="tc-unter">Musterwerte; im echten Check aus Bauplanung, Bedarfsplanung der KV und Wirtschaftsplan des Betreibers. Jede Änderung rechnet sofort neu.</p>
+      <div class="tc-regler" id="regler" data-ew={g.einwohner}>
+        <label>Ärztinnen und Ärzte (Vollzeit) <b id="v-arzt"></b><input type="range" id="r-arzt" min="0.5" max="3" step="0.5" value="1.5"><small>z. B. 1,5 = eine Vollzeit- und eine Teilzeitstelle.</small></label>
+        <label>Fälle je Arzt und Quartal <b id="v-faelle"></b><input type="range" id="r-faelle" min="400" max="800" step="25" value="700"><small>Branchenwert: höchstens 800, eher weniger.</small></label>
+        <label>Anteil HZV-Patienten <b id="v-hzv"></b><input type="range" id="r-hzv" min="0" max="90" step="5" value="50"><small>Ziel in gut geführten Praxen: 80 %.</small></label>
+        <label>Fallwert HZV / KV <b id="v-fw"></b><input type="range" id="r-hzvwert" min="75" max="90" step="1" value="80"><small>HZV 75–90 € je Fall und Quartal; KV-Fallwert fest 62 € im Muster.</small></label>
+        <label>Praxisfläche <b id="v-flaeche"></b><input type="range" id="r-flaeche" min="120" max="500" step="10" value="250"><small>Baukosten im Muster 4.000 € je m² inkl. Ausstattung.</small></label>
+        <label>Miete je m² und Monat <b id="v-miete"></b><input type="range" id="r-miete" min="0" max="16" step="0.5" value="11"><small>0 € = mietfreie Anlaufphase als Unterstützung der Gemeinde.</small></label>
+        <label>Förderquote Bau <b id="v-quote"></b><input type="range" id="r-quote" min="0" max="100" step="2.5" value="97.5"><small>0 % = keine Anerkennung als Gesundheitseinrichtung.</small></label>
+      </div>
+      <p class="tc-hin">Kosten im Muster je Arzt-Vollzeitstelle: 130.000 € Arbeitgeberkosten Ärztin/Arzt, 2,5 MFA zu je 45.000 €, Sachkosten 40.000 €. Gebäude: Unterhaltung 1,5 % der Investition, Nutzungsdauer 40 Jahre. Ampel nach der Belastung der Gemeinde je Einwohner: bei Rücklagenverzehr unter 10 € grün, bis 40 € gelb, darüber rot.</p>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Empfehlung aus Kämmerersicht</h2>
+      <ol class="tc-auflagen">
+        <li><b>Praxisräume in die laufende Dorfentwicklung aufnehmen.</b> Die Räume entstehen ohnehin im Gemeinschaftsort – die Anerkennung als Gesundheitseinrichtung früh mit der Bezirksregierung klären, dann kosten sie die Gemeinde fast nichts.</li>
+        <li><b>Den Betrieb an die HZV koppeln.</b> Ab etwa 80 % HZV-Anteil trägt sich eine hausärztliche Praxis deutlich besser. Ein Betreiber mit Erfahrung in Selektivverträgen ist die Voraussetzung, damit die Gemeinde nicht dauerhaft zuschießt.</li>
+        <li><b>Unterstützung befristen statt verstetigen.</b> Eine mietfreie Anlaufphase von zwei bis drei Jahren sichert die Ansiedlung; danach Kostenmiete. So trägt die Gemeinde den Anlauf, nicht den Dauerbetrieb.</li>
+      </ol>
+    </section>
+
+    <div class="gz-partner">
+      <b class="logo">DerArztPlus AG</b>
+      <p>Versorgungskonzept und Branchenkennzahlen der ambulanten Versorgung in diesem Muster: DerArztPlus AG, Dresden – Betriebsführung, Abrechnung und Selektivverträge für Praxen und MVZ. Ansprechpartner: Oliver Krenzer, Vorstand.</p>
+    </div>
+
+    <section class="tc-ab">
+      <p class="tc-hin">Muster zur Veranschaulichung: Förderrahmen aus öffentlichen Quellen; Fläche, Kosten, Fallzahlen und Erlöse als Annahmen auf Basis von Branchenkennzahlen. Es handelt sich um keine Planung der Gemeinde Merzenich und keine Aussage über die tatsächliche Versorgungslage.</p>
+    </section>
+
+    <div class="tc-zurueck"><a href="/revier/rheinisches-revier/">← Haushaltslage der 65 Revierkommunen</a><span style="font-size:14px;color:#475569">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de" style="color:#2563eb;font-weight:600">chefredaktion@derkaemmerer.de</a></span></div>
+  </div>
+</div>
+<script>
+  const EW = +(document.getElementById('regler') as HTMLElement).dataset.ew!;
+  const KV = 62, BAU_M2 = 4000, ARZT = 130000, MFA = 45000, MFA_JE = 2.5, SACH = 40000, UNT = 0.015, ND = 40;
+  const v = (id: string) => +(document.getElementById(id) as HTMLInputElement).value;
+  const setz = (id: string, t: string) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+  const vz = (x: number) => (x >= 0 ? '+ ' : '− ') + eur(Math.abs(x));
+  const rechne = () => {
+    const aerzte = v('r-arzt'), faelle = v('r-faelle'), hzv = v('r-hzv') / 100, hzvWert = v('r-hzvwert'), flaeche = v('r-flaeche'), mieteM2 = v('r-miete'), quote = v('r-quote') / 100;
+    const sicher = (document.getElementById('r-sicher') as HTMLInputElement).checked;
+    setz('v-arzt', `${aerzte.toLocaleString('de-DE')} VZÄ`); setz('v-faelle', String(faelle)); setz('v-hzv', `${Math.round(hzv * 100)} %`);
+    setz('v-fw', `${hzvWert} € / ${KV} €`); setz('v-flaeche', `${flaeche} m²`); setz('v-miete', `${mieteM2.toLocaleString('de-DE')} €`); setz('v-quote', `${(quote * 100).toLocaleString('de-DE')} %`);
+    // Gebäude
+    const inv = flaeche * BAU_M2, eigen = inv * (1 - quote), annu = eigen > 0 ? eigen * (0.035 / (1 - Math.pow(1.035, -30))) : 0;
+    const unt = inv * UNT, afa = (inv / ND) * (1 - quote), miete = flaeche * mieteM2 * 12;
+    const saldoG = miete - unt - afa - annu;
+    setz('g-inv', eur(inv)); setz('g-eigen', `${eur(eigen)}${annu ? ` (Kredit ${eur(annu)} p. a.)` : ''}`); setz('g-unt', '− ' + eur(unt)); setz('g-afa', '− ' + eur(afa));
+    setz('g-miete', '+ ' + eur(miete)); setz('g-saldo', vz(saldoG));
+    // Praxis
+    const fallwert = hzv * hzvWert + (1 - hzv) * KV, erl = aerzte * faelle * 4 * fallwert;
+    const kArzt = aerzte * ARZT, kMfa = aerzte * MFA_JE * MFA, kSach = aerzte * SACH;
+    const saldoP = erl - kArzt - kMfa - kSach - miete;
+    setz('p-erl', '+ ' + eur(erl)); setz('p-arzt', '− ' + eur(kArzt)); setz('p-mfa', '− ' + eur(kMfa)); setz('p-sach', '− ' + eur(kSach)); setz('p-miete', '− ' + eur(miete)); setz('p-saldo', vz(saldoP));
+    // Gemeinde gesamt
+    const zuschuss = sicher && saldoP < 0 ? -saldoP : 0, belastung = Math.max(0, -saldoG) + zuschuss - Math.max(0, saldoG), jeEw = belastung / EW;
+    const stufe = jeEw < 10 ? 'g' : jeEw < 40 ? 'y' : 'r';
+    ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
+    const hebel = aerzte * faelle * 4 * (hzvWert - KV) * 0.1;
+    const titel = { g: 'Tragfähig', y: 'Tragfähig mit Auflagen', r: 'Tragfähigkeit nur mit Gegenfinanzierung' }[stufe];
+    setz('u-titel', belastung <= 0 ? `Tragfähig: Die Gemeinde erzielt ${eur(-belastung)} im Jahr` : `${titel}: ${eur(belastung)} Belastung der Gemeinde im Jahr`);
+    setz('u-text', `${belastung > 0 ? `Das sind ${eur(jeEw)} je Einwohner. ` : ''}Die Räume sind dank Förderung günstig – entscheidend ist der Praxisbetrieb: Bei ${Math.round(hzv * 100)} % HZV-Anteil ${saldoP >= 0 ? `erwirtschaftet die Praxis ${eur(saldoP)}` : `fehlen der Praxis ${eur(-saldoP)}`} im Jahr. Jede zehn Prozentpunkte mehr HZV bringen ${eur(hebel)} – der Hebel, der über einen dauerhaften Zuschuss der Gemeinde entscheidet.`);
+  };
+  document.querySelectorAll('#regler input, #r-sicher').forEach((i) => i.addEventListener('input', rechne));
+  rechne();
+</script>
+<Footer />
+</Base>
