@@ -1,0 +1,183 @@
+---
+// Haushaltslage der Kommunen je Flächenland (statisch): Karte der Kassenkredite, höchste Verschuldung, Kreise im Vergleich,
+// Haushaltssperren und amtliche Landesprogramme (src/data/haushaltslage/programme.json).
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import sperren from '../../data/haushaltslage/sperren.json';
+import programme from '../../data/haushaltslage/programme.json';
+import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../lib/gemeinden.mjs';
+import { kreise, median, gewichtet, imKreis } from '../../lib/kreise.mjs';
+import { projiziere, ausschnitt, kommunenMitSperre } from '../../lib/sperren-karte.mjs';
+
+const FLAECHE = Object.keys(LAND_LANG).filter((l) => !['BE', 'HH', 'HB'].includes(l));
+export function getStaticPaths() {
+  return Object.keys(LAND_LANG).filter((l) => !['BE', 'HH', 'HB'].includes(l)).map((l) => ({ params: { land: LAND_SLUG[l] }, props: { land: l } }));
+}
+const { land } = Astro.props as { land: string };
+const name = (LAND_LANG as any)[land];
+const H = hebesaetze as any, S = schulden as any;
+const { pfad } = verzeichnis(gemeinden as any[]);
+const gs = (gemeinden as any[]).filter((g) => g.land === land);
+const ew = gs.reduce((a, g) => a + (g.einwohner || 0), 0);
+const sch = gewichtet(gs, (g) => S[g.ags]?.schulden_je_ew ?? null);
+const kk = gewichtet(gs, (g) => S[g.ags]?.kassenkredite_je_ew ?? null);
+const mitKk = gs.filter((g) => (S[g.ags]?.kassenkredite_je_ew || 0) >= 1000);
+const gb = median(gs.map((g) => H[g.ags]?.grundsteuer_b || null));
+// Vergleich der Länder (Kassenkredite je Einwohner, gewichtet)
+const laender = FLAECHE.map((l) => { const x = (gemeinden as any[]).filter((g) => g.land === l); return { l, kk: gewichtet(x, (g) => S[g.ags]?.kassenkredite_je_ew ?? null) || 0, sch: gewichtet(x, (g) => S[g.ags]?.schulden_je_ew ?? null) || 0 }; })
+  .sort((a, b) => b.kk - a.kk);
+const rangKk = laender.findIndex((x) => x.l === land) + 1;
+const maxKkLand = laender[0].kk;
+
+const sperrFaelle = kommunenMitSperre(sperren as any, gemeinden as any[]).filter((k: any) => k.land === land);
+const groessere = gs.filter((g) => (g.einwohner || 0) >= 5000);
+const top = (feld: string) => groessere.filter((g) => S[g.ags]?.[feld] != null).sort((a, b) => S[b.ags][feld] - S[a.ags][feld]).slice(0, 12);
+const topSch = top('schulden_je_ew'), topKk = top('kassenkredite_je_ew').filter((g) => S[g.ags].kassenkredite_je_ew > 0);
+const kreisListe = kreise(gemeinden as any[]).filter((k: any) => k.land === land).map((k: any) => ({ k,
+  sch: gewichtet(k.gemeinden, (g: any) => S[g.ags]?.schulden_je_ew ?? null), kk: gewichtet(k.gemeinden, (g: any) => S[g.ags]?.kassenkredite_je_ew ?? null),
+  gb: median(k.gemeinden.map((g: any) => H[g.ags]?.grundsteuer_b || null)),
+  sp: sperrFaelle.filter((f: any) => f.ebene !== 'kreis' && k.gemeinden.some((g: any) => `/gemeinden/${pfad[g.ags]}/` === f.url)).length }))
+  .sort((a: any, b: any) => (b.kk || 0) - (a.kk || 0));
+const prog = (programme as any[]).filter((p) => p.land === land);
+
+// Karte: Punkt je Gemeinde, Farbe nach Kassenkrediten je Einwohner
+const box = ausschnitt(gemeinden as any[], land, 8);
+const STUFE = [[0, '#e2e8f0', 'keine'], [1, '#fde68a', 'unter 250 €'], [250, '#fb923c', '250 bis 999 €'], [1000, '#dc2626', '1.000 bis 2.499 €'], [2500, '#7f1d1d', '2.500 € und mehr']] as const;
+const farbe = (v: number | null) => v == null ? '#f1f5f9' : v <= 0 ? '#e2e8f0' : v < 250 ? '#fde68a' : v < 1000 ? '#fb923c' : v < 2500 ? '#dc2626' : '#7f1d1d';
+const punkte = gs.filter((g) => g.lat != null).map((g) => ({ g, ...projiziere(g.lat, g.lon), v: S[g.ags]?.kassenkredite_je_ew ?? null }))
+  .sort((a, b) => (a.v || 0) - (b.v || 0));
+const rFaktor = Math.max(box.b, box.h) / 420;
+const z = (x: number | null, e = '') => (x == null ? '–' : Math.round(x).toLocaleString('de-DE') + e);
+const titel = `Haushaltslage der Kommunen ${imLand(name)} 2026: Schulden, Kassenkredite, Haushaltssperren`;
+const beschreibung = `${gs.length.toLocaleString('de-DE')} Gemeinden ${imLand(name)}: Schulden ${z(sch, ' €')} und Kassenkredite ${z(kk, ' €')} je Einwohner, ${mitKk.length} Gemeinden mit mehr als 1.000 € Kassenkrediten je Einwohner, ${sperrFaelle.length} belegte Haushaltssperren – Karte, Ranglisten und Kreise.`;
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: `Haushaltslage der Kommunen ${imLand(name)}`, description: beschreibung,
+  url: `https://derkaemmerer.de/haushaltslage/${LAND_SLUG[land]}/`, spatialCoverage: name, isAccessibleForFree: true,
+  creator: { '@type': 'Organization', name: 'Der Kämmerer' }, license: 'https://www.govdata.de/dl-de/by-2-0' };
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.hl { color:#0f172a; } .hl-w { max-width:1100px; margin:0 auto; padding:0 28px; }
+.hl-kopf { background:radial-gradient(900px 340px at 90% -10%, rgba(220,38,38,.28), transparent 60%), #172840; color:#fff; padding:40px 0 34px; border-bottom:3px solid #dc2626; }
+.hl-k { font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#fca5a5; }
+.hl-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4.2vw,46px); line-height:1.1; margin:10px 0 12px; max-width:22ch; }
+.hl-kopf p { color:rgba(255,255,255,.75); font-size:16.5px; max-width:68ch; line-height:1.55; margin:0; }
+.hl-zahlen { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.12); border-radius:12px; overflow:hidden; margin-top:24px; }
+.hl-zahlen div { background:#1d3150; padding:16px 18px; } .hl-zahlen b { display:block; font:700 30px/1.1 'Playfair Display',Georgia,serif; } .hl-zahlen span { font-size:12.5px; color:rgba(255,255,255,.65); }
+.hl-ab { padding:34px 0 4px; } .hl-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:0 0 4px; }
+.hl-unter { color:#64748b; font-size:14px; margin:0 0 14px; line-height:1.5; }
+.hl-zwei { display:grid; grid-template-columns:1.15fr .85fr; gap:24px; align-items:start; }
+.hl-karte { border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:14px; }
+.hl-karte svg { width:100%; height:auto; display:block; max-height:640px; } .hl-karte circle { stroke:#fff; stroke-width:.25; } .hl-karte a:hover circle { stroke:#0f172a; stroke-width:.8; }
+.hl-leg { display:flex; flex-wrap:wrap; gap:12px; font-size:12px; color:#475569; margin-top:8px; } .hl-leg i { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; vertical-align:-1px; }
+.hl-box { border:1px solid #e2e8f0; border-radius:12px; background:#fff; padding:6px 16px; }
+.hl-z { display:flex; justify-content:space-between; gap:12px; font-size:14px; padding:8px 0; border-bottom:1px solid #f1f5f9; } .hl-z:last-child { border:0; }
+.hl-z a { color:#0f172a; text-decoration:none; font-weight:600; } .hl-z a:hover { color:#2563eb; } .hl-z small { color:#64748b; font-weight:400; display:block; font-size:12px; } .hl-z b { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.hl-bz { display:grid; grid-template-columns:170px 1fr 70px; gap:10px; align-items:center; font-size:13.5px; padding:4px 6px; border-radius:6px; text-decoration:none; color:#0f172a; }
+.hl-bz.an { background:#fef2f2; font-weight:700; } .hl-bz i { display:block; height:10px; border-radius:3px; background:linear-gradient(90deg,#fb923c,#b91c1c); } .hl-bz b { text-align:right; font-variant-numeric:tabular-nums; }
+.hl-tab { width:100%; border-collapse:collapse; font-size:14px; font-variant-numeric:tabular-nums; min-width:640px; }
+.hl-tab th { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; text-align:right; padding:8px 6px; border-bottom:1px solid #172840; } .hl-tab th:first-child, .hl-tab td:first-child { text-align:left; }
+.hl-tab td { padding:8px 6px; border-bottom:1px solid #f1f5f9; text-align:right; } .hl-tab a { color:#0f172a; font-weight:600; text-decoration:none; } .hl-tab a:hover { color:#2563eb; }
+.hl-scroll { overflow-x:auto; border:1px solid #e2e8f0; border-radius:12px; padding:6px 14px; background:#fff; }
+.hl-prog { border:1px solid #e2e8f0; border-left:4px solid #2563eb; border-radius:10px; padding:16px 18px; background:#fff; margin-bottom:14px; }
+.hl-prog h3 { margin:0 0 4px; font-size:17px; } .hl-prog p { margin:0 0 10px; color:#334155; font-size:14.5px; line-height:1.55; }
+.hl-prog .namen { font-size:13.5px; color:#334155; line-height:1.7; } .hl-prog .namen a { color:#0f172a; text-decoration:none; border-bottom:1px dotted #94a3b8; } .hl-prog .namen a:hover { color:#2563eb; }
+.hl-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.55; } .hl-hin a { color:#2563eb; }
+.hl-chips { display:flex; flex-wrap:wrap; gap:8px; } .hl-chips a { border:1px solid #e2e8f0; border-radius:999px; padding:6px 12px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; } .hl-chips a:hover, .hl-chips a.an { border-color:#2563eb; color:#2563eb; }
+@media (max-width:900px){ .hl-w{padding:0 16px} .hl-zwei{grid-template-columns:1fr} .hl-zahlen{grid-template-columns:repeat(2,1fr)} .hl-bz{grid-template-columns:120px 1fr 60px} }
+</style>
+<div class="hl">
+  <section class="hl-kopf"><div class="hl-w">
+    <div class="hl-k">Haushaltslage der Kommunen · {name}</div>
+    <h1>Wie es um die Kommunen {imLand(name)} steht</h1>
+    <p>Schulden und Kassenkredite aller {gs.length.toLocaleString('de-DE')} Gemeinden {imLand(name)} zum 31.12.2025, die von der Redaktion belegten Haushaltssperren und die Kreise im Vergleich.{land === 'NW' && ' Die amtliche Einstufung jeder Gemeinde zeigt die Seite zur Haushaltslage NRW.'}</p>
+    <div class="hl-zahlen">
+      <div><b>{z(sch, ' €')}</b><span>Schulden der Gemeinden je Einwohner (Kernhaushalt)</span></div>
+      <div><b>{z(kk, ' €')}</b><span>Kassenkredite je Einwohner · Rang {rangKk} von {laender.length} Flächenländern</span></div>
+      <div><b>{mitKk.length}</b><span>Gemeinden mit mehr als 1.000 € Kassenkrediten je Einwohner</span></div>
+      <div><b>{sperrFaelle.length}</b><span>Kommunen mit belegter Haushaltssperre seit 2025</span></div>
+    </div>
+  </div></section>
+
+  <div class="hl-w">
+    {land === 'NW' && <p class="hl-hin" style="font-size:14px;margin-top:18px"><a href="/haushaltslage-nrw/">Amtlicher Haushaltsstatus aller 396 NRW-Gemeinden: nur 8 mit ausgeglichenem Haushalt →</a></p>}
+    <section class="hl-ab">
+      <h2>Kassenkredite je Einwohner – jede Gemeinde {imLand(name)}</h2>
+      <p class="hl-unter">Kassen- bzw. Liquiditätskredite finanzieren laufende Ausgaben. Hohe Werte zeigen, wo Haushalte dauerhaft nicht ausgeglichen sind. Punktgröße nach Einwohnern.</p>
+      <div class="hl-zwei">
+        <div class="hl-karte">
+          <svg viewBox={`${box.x} ${box.y} ${box.b} ${box.h}`} role="img" aria-label={`Karte der Kassenkredite je Einwohner ${imLand(name)}`}>
+            {punkte.map((p) => <a href={gemeindeUrl(pfad[p.g.ags])}><circle cx={p.x} cy={p.y} r={(0.55 + Math.min(4.2, Math.sqrt((p.g.einwohner || 1) / 6000))) * rFaktor} fill={farbe(p.v)}><title>{p.g.name}: {z(p.v, ' €')} Kassenkredite je Einwohner</title></circle></a>)}
+          </svg>
+          <div class="hl-leg">{STUFE.map(([, c, t]) => <span><i style={`background:${c}`}></i>{t}</span>)}</div>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#64748b">Kassenkredite je Einwohner nach Land</h3>
+          {laender.map((x) => <a class={`hl-bz ${x.l === land ? 'an' : ''}`} href={`/haushaltslage/${LAND_SLUG[x.l]}/`}><span>{(LAND_LANG as any)[x.l]}</span><i style={`width:${Math.max(1, x.kk / maxKkLand * 100)}%`}></i><b>{z(x.kk, ' €')}</b></a>)}
+          <p class="hl-hin">Einwohnergewichtet über alle Gemeinden, ohne Kreise und Stadtstaaten. Quelle: Statistische Ämter des Bundes und der Länder, Schulden der öffentlichen Haushalte zum 31.12.2025.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hl-ab">
+      <div class="hl-zwei">
+        <div>
+          <h2>Höchste Verschuldung je Einwohner</h2>
+          <p class="hl-unter">Gemeinden ab 5.000 Einwohnern, Kernhaushalt.</p>
+          <div class="hl-box">{topSch.map((g, i) => <div class="hl-z"><span>{i + 1}. <a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a><small>{g.kreis && g.kreis !== g.name ? g.kreis : 'kreisfrei'} · {z(g.einwohner)} EW</small></span><b>{z(S[g.ags].schulden_je_ew, ' €')}</b></div>)}</div>
+          <p class="hl-hin"><a href={`/ranglisten/schulden/${LAND_SLUG[land]}/`}>Vollständige Rangliste Schulden {name} →</a></p>
+        </div>
+        <div>
+          <h2>Höchste Kassenkredite</h2>
+          <p class="hl-unter">Gemeinden ab 5.000 Einwohnern.</p>
+          <div class="hl-box">{topKk.length ? topKk.map((g, i) => <div class="hl-z"><span>{i + 1}. <a href={gemeindeUrl(pfad[g.ags])}>{g.name}</a><small>{z(g.einwohner)} EW</small></span><b>{z(S[g.ags].kassenkredite_je_ew, ' €')}</b></div>) : <p class="hl-hin">Keine Gemeinde ab 5.000 Einwohnern weist Kassenkredite aus.</p>}</div>
+          <p class="hl-hin"><a href={`/ranglisten/kassenkredite/${LAND_SLUG[land]}/`}>Vollständige Rangliste Kassenkredite {name} →</a></p>
+        </div>
+      </div>
+    </section>
+
+    {prog.length > 0 && (
+    <section class="hl-ab">
+      <h2>Landesprogramme zur Konsolidierung und Entschuldung</h2>
+      <p class="hl-unter">Amtlich veröffentlichte Teilnehmer- und Empfängerlisten, jeweils mit Quelle.</p>
+      {prog.map((pr: any) => (
+        <div class="hl-prog">
+          <h3>{pr.programm}</h3>
+          <p>{pr.beschreibung} <a href={pr.quelle_url} target="_blank" rel="noopener nofollow" style="color:#2563eb">Quelle ↗</a></p>
+          <div class="namen">{pr.gemeinden.length} Kommunen: {pr.gemeinden.map((x: any, i: number) => <>{i > 0 && ' · '}{x.url ? <a href={x.url}>{x.name}</a> : x.name}</>)}</div>
+        </div>
+      ))}
+    </section>)}
+
+    <section class="hl-ab">
+      <h2>Die Kreise {imLand(name)} im Vergleich</h2>
+      <p class="hl-unter">Kassenkredite und Schulden der kreisangehörigen Gemeinden je Einwohner, Grundsteuer B im Median, Haushaltssperren seit 2025.</p>
+      <div class="hl-scroll"><table class="hl-tab">
+        <thead><tr><th>Kreis</th><th>Gemeinden</th><th>Kassenkredite je EW</th><th>Schulden je EW</th><th>Grundsteuer B</th><th>Sperren</th></tr></thead>
+        <tbody>{kreisListe.map((x: any) => <tr><td><a href={x.k.url}>{x.k.titel}</a></td><td>{x.k.gemeinden.length}</td><td>{z(x.kk, ' €')}</td><td>{z(x.sch, ' €')}</td><td>{z(x.gb, ' %')}</td><td>{x.sp || ''}</td></tr>)}</tbody>
+      </table></div>
+    </section>
+
+    {sperrFaelle.length > 0 && (
+    <section class="hl-ab">
+      <h2>Haushaltssperren {imLand(name)}</h2>
+      <div class="hl-chips">{sperrFaelle.map((f: any) => <a href={f.url && f.ebene !== 'kreis' ? f.url : `/haushaltssperren/${LAND_SLUG[land]}/`}>{f.name}{f.ebene === 'kreis' ? ' (Kreis)' : ''}</a>)}</div>
+      <p class="hl-hin"><a href={`/haushaltssperren/${LAND_SLUG[land]}/`}>Alle Fälle mit Datum, Umfang und Quelle auf der Karte →</a></p>
+    </section>)}
+
+    <section class="hl-ab">
+      <h2>Haushaltslage in anderen Ländern</h2>
+      <div class="hl-chips">{FLAECHE.map((l) => <a href={`/haushaltslage/${LAND_SLUG[l]}/`} class={l === land ? 'an' : ''}>{(LAND_LANG as any)[l]}</a>)}</div>
+      <p class="hl-hin">Daten: Statistische Ämter des Bundes und der Länder, Regionaldatenbank (Datenlizenz Deutschland – Namensnennung 2.0); Haushaltssperren: Recherche der Redaktion. Grafiken zum Einbinden: <a href="/einbetten/">derkaemmerer.de/einbetten</a>.</p>
+    </section>
+    <div style="height:60px"></div>
+  </div>
+</div>
+<Footer />
+</Base>
