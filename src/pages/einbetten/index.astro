@@ -1,0 +1,97 @@
+---
+// Grafiken für Redaktionen und Kommunen: Datenkarte je Gemeinde und Karte der Haushaltssperren zum Einbinden (iframe + Quellenlink).
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+const KARTE_CODE = `<iframe src="https://derkaemmerer.de/einbetten/haushaltssperren/" width="100%" height="470" style="border:0;max-width:760px" loading="lazy" title="Haushaltssperren in Deutschland – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/haushaltssperren/">Verzeichnis der Haushaltssperren – Der Kämmerer</a></p>\n<script>addEventListener('message',function(e){if(e.origin==='https://derkaemmerer.de'&&e.data&&e.data.dkHoehe)document.querySelectorAll('iframe').forEach(function(f){if(f.contentWindow===e.source)f.style.height=e.data.dkHoehe+'px'})})</script>`;
+---
+<Base title="Grafiken zum Einbinden: Haushaltsdaten jeder Gemeinde und Karte der Haushaltssperren"
+  description="Kostenfrei für Redaktionen, Kommunen und Ratsfraktionen: Datenkarte mit Hebesätzen, Schulden und Haushaltslage für jede der 10.747 Gemeinden sowie die Karte der Haushaltssperren – mit einer Zeile Code einbinden, täglich aktuell.">
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.ei { color:#0f172a; } .ei-w { max-width:980px; margin:0 auto; padding:0 28px; }
+.ei-kopf { background:#172840; color:#fff; padding:40px 0 34px; border-bottom:3px solid #2563eb; }
+.ei-k { font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#93c5fd; }
+.ei-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,44px); line-height:1.1; margin:10px 0 10px; }
+.ei-kopf p { color:rgba(255,255,255,.75); font-size:16.5px; line-height:1.55; margin:0; max-width:66ch; }
+.ei-ab { padding:34px 0 6px; } .ei-ab h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:0 0 6px; }
+.ei-unter { color:#64748b; font-size:14.5px; margin:0 0 16px; line-height:1.55; }
+.ei-such { position:relative; max-width:460px; } .ei-such input { width:100%; padding:12px 14px; font:inherit; font-size:16px; border:1px solid #cbd5e1; border-radius:8px; box-sizing:border-box; }
+.ei-treffer { position:absolute; z-index:5; left:0; right:0; top:100%; background:#fff; border:1px solid #e2e8f0; border-radius:8px; box-shadow:0 18px 40px -20px rgba(15,23,42,.5); margin-top:4px; overflow:hidden; }
+.ei-treffer button { display:block; width:100%; text-align:left; border:0; background:#fff; padding:9px 14px; font:inherit; font-size:14.5px; cursor:pointer; } .ei-treffer button:hover { background:#eff6ff; }
+.ei-treffer small { color:#64748b; }
+.ei-vorschau { margin:18px 0 10px; padding:18px; background:repeating-linear-gradient(45deg,#f8fafc 0 10px,#f1f5f9 10px 20px); border-radius:12px; border:1px solid #e2e8f0; }
+.ei-vorschau iframe { width:100%; border:0; display:block; }
+.ei-code { position:relative; } .ei-code textarea { width:100%; min-height:118px; font:12.5px/1.5 ui-monospace,Menlo,monospace; padding:12px 14px; border:1px solid #cbd5e1; border-radius:8px; background:#0f172a; color:#e2e8f0; box-sizing:border-box; resize:vertical; }
+.ei-kopieren { position:absolute; right:10px; top:10px; border:0; background:#2563eb; color:#fff; font-weight:700; padding:7px 12px; border-radius:6px; cursor:pointer; font-size:13px; }
+.ei-regeln { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px; }
+.ei-regeln div { border:1px solid #e2e8f0; border-radius:12px; padding:16px; background:#fff; } .ei-regeln b { display:block; margin-bottom:4px; } .ei-regeln p { margin:0; font-size:14px; color:#475569; line-height:1.55; }
+@media (max-width:760px){ .ei-w{padding:0 16px} .ei-regeln{grid-template-columns:1fr} }
+</style>
+<div class="ei">
+  <section class="ei-kopf"><div class="ei-w">
+    <div class="ei-k">Für Redaktionen, Kommunen und Fraktionen</div>
+    <h1>Grafiken zum Einbinden – kostenfrei und täglich aktuell</h1>
+    <p>Die Haushaltsdaten jeder Gemeinde und die Karte der Haushaltssperren lassen sich mit einer Zeile Code in Artikel, Ratsinformationen oder die eigene Website übernehmen. Die Zahlen aktualisieren sich von selbst.</p>
+  </div></section>
+
+  <div class="ei-w">
+    <section class="ei-ab">
+      <h2>Datenkarte einer Gemeinde</h2>
+      <p class="ei-unter">Grundsteuer B, Gewerbesteuer und Schulden je Einwohner mit Rang im Land, dazu die Haushaltslage. Gemeinde wählen, Code kopieren, im Redaktionssystem als HTML einfügen.</p>
+      <div class="ei-such"><input id="ei-q" type="search" placeholder="Gemeinde suchen, z. B. Unna" autocomplete="off" aria-label="Gemeinde suchen"><div class="ei-treffer" id="ei-t" hidden></div></div>
+      <div class="ei-vorschau"><iframe id="ei-f" src="/einbetten/gemeinde/nordrhein-westfalen/unna/" height="200" title="Vorschau Datenkarte" loading="lazy"></iframe></div>
+      <div class="ei-code"><textarea id="ei-c" readonly></textarea><button class="ei-kopieren" type="button" data-ziel="ei-c">Code kopieren</button></div>
+    </section>
+
+    <section class="ei-ab">
+      <h2>Karte der Haushaltssperren</h2>
+      <p class="ei-unter">Alle von der Redaktion belegten Haushaltssperren seit 2025 je Bundesland – wächst mit jedem neuen Fall.</p>
+      <div class="ei-vorschau"><iframe src="/einbetten/haushaltssperren/" height="470" title="Vorschau Karte der Haushaltssperren" loading="lazy"></iframe></div>
+      <div class="ei-code"><textarea id="ei-c2" readonly>{KARTE_CODE}</textarea><button class="ei-kopieren" type="button" data-ziel="ei-c2">Code kopieren</button></div>
+    </section>
+
+    <section class="ei-ab">
+      <h2>So funktioniert es</h2>
+      <div class="ei-regeln">
+        <div><b>Kostenfrei</b><p>Für Redaktionen, Kommunen, Fraktionen und Vereine – auch in kommerziellen Medien.</p></div>
+        <div><b>Mit Quellenangabe</b><p>Der Code enthält die Quellenzeile mit Link auf Der Kämmerer. Sie bleibt bitte sichtbar unter der Grafik.</p></div>
+        <div><b>Immer aktuell</b><p>Neue Haushaltssperren und Datenstände erscheinen automatisch. Fragen an <a href="mailto:chefredaktion@derkaemmerer.de" style="color:#2563eb">chefredaktion@derkaemmerer.de</a>.</p></div>
+      </div>
+    </section>
+    <div style="height:60px"></div>
+  </div>
+</div>
+<script>
+  addEventListener('message', (e) => { if (e.data?.dkHoehe) document.querySelectorAll<HTMLIFrameElement>('.ei-vorschau iframe').forEach((f) => { if (f.contentWindow === e.source) f.style.height = e.data.dkHoehe + 'px'; }); });
+  const q = document.getElementById('ei-q') as HTMLInputElement, t = document.getElementById('ei-t') as HTMLDivElement;
+  const f = document.getElementById('ei-f') as HTMLIFrameElement, c = document.getElementById('ei-c') as HTMLTextAreaElement;
+  let liste: any[] | null = null;
+  const code = (pfad: string, name: string) => `<iframe src="https://derkaemmerer.de/einbetten/gemeinde/${pfad}/" width="100%" height="200" style="border:0;max-width:760px" loading="lazy" title="Haushaltsdaten ${name} – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/gemeinden/${pfad}/">Haushaltsdaten ${name} – Der Kämmerer</a></p>\n<script>addEventListener(\'message\',function(e){if(e.origin===\'https://derkaemmerer.de\'&&e.data&&e.data.dkHoehe)document.querySelectorAll(\'iframe\').forEach(function(f){if(f.contentWindow===e.source)f.style.height=e.data.dkHoehe+\'px\'})})<\/script>`;
+  const waehle = (pfad: string, name: string) => { f.src = `/einbetten/gemeinde/${pfad}/`; c.value = code(pfad, name); t.hidden = true; q.value = name; history.replaceState(null, '', `?g=${pfad}`); };
+  const laden = async () => (liste ??= await (await fetch('/gemeinden/suche.json')).json());
+  q.addEventListener('input', async () => {
+    const s = q.value.trim().toLowerCase();
+    if (s.length < 2) { t.hidden = true; return; }
+    const l = await laden();
+    const tr = l.filter((x: any) => x[0].toLowerCase().startsWith(s)).sort((a: any, b: any) => b[4] - a[4]).slice(0, 8);
+    t.innerHTML = '';
+    for (const x of tr) {
+      const b = document.createElement('button'); b.type = 'button';
+      b.innerHTML = `${x[0]} <small>${x[1] ? x[1] + ' · ' : ''}${x[2]}</small>`;
+      b.addEventListener('click', () => waehle(x[3], x[0])); t.appendChild(b);
+    }
+    t.hidden = !tr.length;
+  });
+  const start = new URLSearchParams(location.search).get('g');
+  if (start) laden().then((l) => { const x = l.find((y: any) => y[3] === start); if (x) waehle(x[3], x[0]); });
+  else c.value = code('nordrhein-westfalen/unna', 'Unna');
+  document.querySelectorAll<HTMLButtonElement>('.ei-kopieren').forEach((b) => b.addEventListener('click', async () => {
+    const ta = document.getElementById(b.dataset.ziel!) as HTMLTextAreaElement;
+    try { await navigator.clipboard.writeText(ta.value); } catch { ta.select(); document.execCommand('copy'); }
+    b.textContent = 'Kopiert ✓'; setTimeout(() => (b.textContent = 'Code kopieren'), 1800);
+  }));
+</script>
+<Footer />
+</Base>
