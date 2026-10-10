@@ -22,6 +22,7 @@ const revier = [
   { src: '^/check/erkelenz/?$', has: revierHost, dest: '/revier/check-erkelenz/', check: true },
   { src: '^/check/juelich/?$', has: revierHost, dest: '/revier/check-brainergy-park/', check: true },
   { src: '^/check/gesundheit/?$', has: revierHost, dest: '/revier/check-gesundheitszentrum/', check: true },
+  { src: '^/foerdermonitor/?$', has: revierHost, dest: '/revier/foerdermonitor/', check: true },
 ];
 const gleich = (x, r) => x.src === r.src && x.has?.[0]?.value === r.has[0].value;
 for (const r of [...personal, ...revier].reverse()) if (!config.routes.some((x) => gleich(x, r))) config.routes.unshift(r);

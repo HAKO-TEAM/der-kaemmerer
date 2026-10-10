@@ -88,6 +88,9 @@ const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
 .rr-tab th { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; text-align:right; padding:9px 6px; border-bottom:1px solid #14233a; cursor:pointer; white-space:nowrap; user-select:none; } .rr-tab th:nth-child(-n+3), .rr-tab td:nth-child(-n+3) { text-align:left; }
 .rr-tab td { padding:8px 6px; border-bottom:1px solid #f1f5f9; text-align:right; } .rr-tab a { color:#0f172a; font-weight:600; text-decoration:none; } .rr-tab a:hover { color:#2563eb; }
 .rr-tab .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:11.5px; font-weight:700; color:#fff; white-space:nowrap; } .rr-tab .sp { color:#b91c1c; font-weight:700; }
+.rr-fm { display:flex; gap:22px; align-items:center; justify-content:space-between; margin:44px 0 0; padding:26px 28px; border-radius:18px; text-decoration:none; color:#fff; background:radial-gradient(600px 240px at 90% 0%, rgba(99,102,241,.45), transparent 60%), #111a2e; }
+.rr-fm span { font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#a5b4fc; } .rr-fm h2 { font-family:'Playfair Display',Georgia,serif; font-size:25px; margin:6px 0 8px; line-height:1.2; } .rr-fm p { margin:0; color:rgba(255,255,255,.78); line-height:1.55; max-width:70ch; }
+.rr-fm b { white-space:nowrap; background:#fcd34d; color:#111a2e; padding:12px 18px; border-radius:10px; } @media (max-width:900px){ .rr-fm{flex-direction:column; align-items:flex-start} }
 .rr-checks { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .rr-check { display:flex; flex-direction:column; padding:22px; border-radius:18px; text-decoration:none; color:#0f172a; background:linear-gradient(160deg,#fffbeb,#fef3c7); border:1px solid #fcd34d; box-shadow:0 22px 50px -40px rgba(202,138,4,.9); transition:transform .2s; }
 .rr-check:hover { transform:translateY(-3px); } .rr-check span { font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:#a16207; }
@@ -176,6 +179,8 @@ const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
       </table></div>
       <p class="rr-hin">Gesuchte Berufsfelder im Revier: {felder.map(([f, c]) => `${(FELD_NAMEN as any)[f] || 'Sonstige'} ${c}`).join(' · ')}. Schulden der Revierkommunen im Kernhaushalt insgesamt rund {mio(schSumme)} Mio. €. Quellen: Statistische Ämter des Bundes und der Länder (Regionaldatenbank), MHKBD NRW (Haushaltsstatus), Stellenmarkt Der Kämmerer.</p>
     </section>
+
+    <a class="rr-fm" href="/revier/foerdermonitor/"><div><span>Neu · KI-gestützt</span><h2>Revier-Fördermonitor: 214 Projekte, 2,5 Mrd. € – jede Zahl belegt</h2><p>Ein KI-Modell hat alle bewilligten Projekte der Projektdatenbank gelesen. Wohin das Geld fließt, was fehlt, was bis 2027 abzurechnen ist – abgeglichen mit der Haushaltslage.</p></div><b>Monitor öffnen →</b></a>
 
     <section class="rr-ab">
       <h2>Tragfähigkeits-Checks: vier Vorhaben aus Kämmerersicht</h2>

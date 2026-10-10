@@ -1,0 +1,196 @@
+---
+// Revier-Fördermonitor: alle bewilligten Projekte der Projektdatenbank der Zukunftsagentur Rheinisches Revier,
+// per KI gelesen (Belege wörtlich geprüft), deterministisch summiert und mit der Haushaltslage der Kommunen abgeglichen.
+// Gesprächsgrundlage – nicht verlinkt, noindex. Daten: src/data/revier/foerdermonitor.json (~/revier-foerdermonitor).
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import daten from '../../data/revier/foerdermonitor.json';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import schulden from '../../data/spiegel/schulden.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { verzeichnis, gemeindeUrl } from '../../lib/gemeinden.mjs';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import { projiziere } from '../../lib/sperren-karte.mjs';
+
+const P = daten as any[];
+const S = schulden as any, HS = (hsNw as any).gemeinden;
+const { pfad } = verzeichnis(gemeinden as any[]);
+const KREIS = { 'Rhein-Erft Kreis': 'Rhein-Erft-Kreis', 'Kreis Düren': 'Düren', 'Kreis Euskirchen': 'Euskirchen', 'Städteregion Aachen': 'Städteregion Aachen', 'Rhein-Kreis Neuss': 'Rhein-Kreis Neuss', 'Kreis Heinsberg': 'Heinsberg', 'Stadt Mönchengladbach': 'Mönchengladbach' } as Record<string, string>;
+const rev = (gemeinden as any[]).filter((g) => g.land === 'NW' && (Object.values(KREIS).includes(g.kreis) || g.name === 'Mönchengladbach'));
+const gebiet = (g: any) => (g.name === 'Mönchengladbach' ? 'Stadt Mönchengladbach' : Object.keys(KREIS).find((k) => KREIS[k] === g.kreis)!);
+
+const mitSumme = P.filter((e) => e.foerdervolumen_eur);
+const summe = mitSumme.reduce((a, e) => a + e.foerdervolumen_eur, 0);
+const ohneSumme = P.filter((e) => !e.foerdervolumen_eur);
+const anlagen = P.filter((e) => e.dauerhafte_anlage);
+const anlagenSumme = anlagen.reduce((a, e) => a + (e.foerdervolumen_eur || 0), 0);
+const bald = P.filter((e) => e.ende && e.ende >= '2026-10' && e.ende <= '2027-12').sort((a, b) => a.ende.localeCompare(b.ende));
+const auffaellig = P.filter((e) => e.auffaellig);
+const ohneTraeger = P.filter((e) => !e.traeger);
+
+// Förderung je Gemeinde: Projekt auf seine Orte verteilt; je Gebiet: Projekte mit genau einer Region
+const jeAgs: Record<string, number> = {};
+for (const e of mitSumme) if (e.ags?.length) for (const a of e.ags) jeAgs[a] = (jeAgs[a] || 0) + e.foerdervolumen_eur / e.ags.length;
+const gebiete = Object.keys(KREIS).map((r) => {
+  const gs = rev.filter((g) => gebiet(g) === r), ew = gs.reduce((a, g) => a + (g.einwohner || 0), 0);
+  const eigen = mitSumme.filter((e) => e.region.length === 1 && e.region[0] === r);
+  const f = eigen.reduce((a, e) => a + e.foerdervolumen_eur, 0);
+  const kk = gs.reduce((a, g) => a + (S[g.ags]?.kassenkredite_je_ew || 0) * (g.einwohner || 0), 0) / ew;
+  const verzehr = gs.filter((g) => (HS[g.ags]?.s ?? 0) >= 3).length;
+  return { r, ew, n: eigen.length, f, jeEw: f / ew, kk, verzehr, gem: gs.length };
+}).sort((a, b) => b.jeEw - a.jeEw);
+const maxJeEw = Math.max(...gebiete.map((x) => x.jeEw));
+const ueberregional = mitSumme.filter((e) => e.region.length !== 1);
+
+// Karte
+const pts = rev.filter((g) => g.lat != null).map((g) => ({ g, ...projiziere(g.lat, g.lon), f: jeAgs[g.ags] || 0, s: HS[g.ags]?.s ?? null }));
+const x0 = Math.min(...pts.map((p) => p.x)) - 8, y0 = Math.min(...pts.map((p) => p.y)) - 8;
+const bw = Math.max(...pts.map((p) => p.x)) - x0 + 8, bh = Math.max(...pts.map((p) => p.y)) - y0 + 8;
+const kf = Math.max(bw, bh) / 220, maxF = Math.max(...pts.map((p) => p.f));
+const r = (f: number) => kf * (f ? 1.6 + 9 * Math.sqrt(f / maxF) : 1.1);
+
+const mio = (x: number, d = 1) => (x / 1e6).toLocaleString('de-DE', { minimumFractionDigits: d, maximumFractionDigits: d }) + ' Mio. €';
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+const datum = (s?: string) => (s ? s.split('-').reverse().join('/') : '–');
+const tabelle = [...P].sort((a, b) => (b.foerdervolumen_eur || 0) - (a.foerdervolumen_eur || 0));
+---
+<Base title="Revier-Fördermonitor: 214 Strukturwandelprojekte, KI-gelesen und belegt" description="Alle bewilligten Projekte der Projektdatenbank Rheinisches Revier – per KI gelesen, jede Zahl belegt, abgeglichen mit der Haushaltslage der Kommunen." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.fm { color:#0f172a; } .fm-w { max-width:1140px; margin:0 auto; padding:0 28px; }
+.fm-kopf { background:radial-gradient(900px 380px at 88% -10%, rgba(99,102,241,.35), transparent 60%), radial-gradient(700px 300px at 0% 120%, rgba(234,179,8,.18), transparent 60%), #111a2e; color:#fff; padding:50px 0 40px; }
+.fm-k { font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#a5b4fc; }
+.fm-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.6vw,54px); line-height:1.06; margin:12px 0 16px; max-width:20ch; }
+.fm-kopf p { color:rgba(255,255,255,.78); font-size:17.5px; line-height:1.55; max-width:66ch; margin:0; }
+.fm-kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:rgba(255,255,255,.12); border-radius:14px; overflow:hidden; margin-top:28px; }
+.fm-kpis div { background:rgba(17,26,46,.92); padding:18px; } .fm-kpis b { display:block; font:700 30px/1.05 'Playfair Display',Georgia,serif; } .fm-kpis span { font-size:12.5px; color:rgba(255,255,255,.66); line-height:1.4; display:block; margin-top:4px; }
+.fm-kpis .a b { color:#a5b4fc; } .fm-kpis .g b { color:#fcd34d; } .fm-kpis .r b { color:#fca5a5; }
+.fm-ab { padding:42px 0 6px; } .fm-ab > h2 { font-family:'Playfair Display',Georgia,serif; font-size:29px; margin:0 0 6px; } .fm-unter { color:#64748b; font-size:15px; margin:0 0 18px; line-height:1.55; max-width:76ch; }
+.fm-zwei { display:grid; grid-template-columns:1.1fr .9fr; gap:26px; align-items:start; }
+.fm-karte { background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:14px; } .fm-karte svg { width:100%; height:auto; display:block; }
+.fm-karte a:hover circle { stroke:#4f46e5 !important; stroke-width:1.4 !important; }
+.fm-bz { display:grid; grid-template-columns:170px 1fr 92px; gap:10px; align-items:center; padding:7px 0; border-bottom:1px solid #f1f5f9; font-size:14px; }
+.fm-bz i { display:block; height:12px; border-radius:4px; background:linear-gradient(90deg,#818cf8,#4338ca); } .fm-bz b { text-align:right; font-variant-numeric:tabular-nums; }
+.fm-bz small { grid-column:1 / -1; color:#64748b; font-size:12px; margin-top:-3px; }
+.fm-box { border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:6px 18px; }
+.fm-z { display:flex; justify-content:space-between; gap:14px; padding:9px 0; border-bottom:1px solid #f1f5f9; font-size:14px; line-height:1.45; } .fm-z:last-child { border:0; }
+.fm-z a { color:#0f172a; font-weight:600; text-decoration:none; } .fm-z a:hover { color:#4f46e5; } .fm-z small { display:block; color:#64748b; font-weight:400; } .fm-z b { white-space:nowrap; font-variant-numeric:tabular-nums; }
+.fm-auf { border-left:4px solid #f59e0b; background:#fffbeb; border-radius:10px; padding:10px 14px; margin-bottom:10px; font-size:14px; line-height:1.5; } .fm-auf a { color:#92400e; font-weight:700; text-decoration:none; }
+.fm-methode { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .fm-methode div { border-radius:14px; padding:18px; background:#111a2e; color:#fff; } .fm-methode b { color:#a5b4fc; display:block; margin-bottom:6px; font-size:15px; } .fm-methode p { margin:0; color:rgba(255,255,255,.78); font-size:14px; line-height:1.55; }
+.fm-such { width:100%; max-width:420px; padding:11px 14px; font:inherit; font-size:15px; border:1px solid #cbd5e1; border-radius:8px; margin-bottom:12px; box-sizing:border-box; }
+.fm-scroll { overflow-x:auto; border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:4px 14px; max-height:640px; overflow-y:auto; }
+.fm-tab { width:100%; border-collapse:collapse; font-size:13px; min-width:900px; } .fm-tab th { position:sticky; top:0; background:#fff; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; text-align:left; padding:9px 6px; border-bottom:1px solid #111a2e; }
+.fm-tab td { padding:8px 6px; border-bottom:1px solid #f1f5f9; vertical-align:top; } .fm-tab td.z { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; font-weight:700; }
+.fm-tab a { color:#0f172a; text-decoration:none; font-weight:600; } .fm-tab a:hover { color:#4f46e5; } .fm-tab .bel { color:#64748b; font-size:11.5px; display:block; margin-top:2px; font-style:italic; }
+.fm-tag { display:inline-block; font-size:10.5px; font-weight:700; border-radius:999px; padding:1px 7px; margin:1px 2px 0 0; background:#eef2ff; color:#4338ca; } .fm-tag.w { background:#fef3c7; color:#92400e; } .fm-tag.a { background:#dcfce7; color:#166534; }
+.fm-hin { font-size:12px; color:#64748b; margin:10px 0 0; line-height:1.55; } .fm-hin a { color:#4f46e5; }
+.fm-ende { margin:46px 0 70px; border-radius:18px; background:linear-gradient(135deg,#111a2e,#1e293b); color:#fff; padding:30px 32px; display:grid; grid-template-columns:1.2fr .8fr; gap:26px; align-items:center; }
+.fm-ende h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 10px; font-size:26px; } .fm-ende p { margin:0; color:rgba(255,255,255,.78); line-height:1.6; font-size:15px; } .fm-ende a { color:#fcd34d; }
+@media (max-width:900px){ .fm-w{padding:0 16px} .fm-kpis{grid-template-columns:repeat(2,1fr)} .fm-zwei,.fm-methode,.fm-ende{grid-template-columns:1fr} .fm-bz{grid-template-columns:110px 1fr 80px} }
+</style>
+<div class="fm">
+  <section class="fm-kopf"><div class="fm-w">
+    <div class="fm-k">Revier-Fördermonitor · KI-gestützt · Stand {new Date().toLocaleDateString('de-DE')}</div>
+    <h1>214 Projekte, 2,5 Milliarden Euro – jede Zahl belegt</h1>
+    <p>Ein KI-Modell hat alle bewilligten Projekte der Projektdatenbank Rheinisches Revier gelesen und in eine Datenbank übertragen: Träger, Orte, Fördersummen, Laufzeiten, Teilprojekte. Jede Zahl ist mit der wörtlichen Fundstelle hinterlegt, gerechnet wird deterministisch. Abgeglichen mit der Haushaltslage der 65 Revierkommunen.</p>
+    <div class="fm-kpis">
+      <div class="a"><b>{P.length}</b><span>bewilligte Projekte in der Datenbank gelesen</span></div>
+      <div class="g"><b>{(summe / 1e9).toLocaleString('de-DE', { maximumFractionDigits: 2 })} Mrd. €</b><span>Förderung mit Fundstelle belegt ({mitSumme.length} Projekte)</span></div>
+      <div class="r"><b>{ohneSumme.length}</b><span>Projekte ohne Fördersumme in der Datenbank</span></div>
+      <div><b>{anlagen.length}</b><span>Projekte schaffen dauerhafte Anlagen – mit Folgekosten</span></div>
+      <div><b>{bald.length}</b><span>Projekte enden bis Ende 2027 – Abrechnung und Verwendungsnachweis</span></div>
+    </div>
+  </div></section>
+
+  <div class="fm-w">
+    <section class="fm-ab">
+      <h2>Wohin das Geld fließt – und wie es um die Haushalte steht</h2>
+      <p class="fm-unter">Förderung je Einwohner nach Gebiet (Projekte, die einem Gebiet zugeordnet sind) neben den Kassenkrediten der Gemeinden und der Zahl der Gemeinden mit Rücklagenverzehr oder Haushaltssicherung. Die Karte zeigt die Förderung je Gemeinde, die Farbe den amtlichen Haushaltsstatus.</p>
+      <div class="fm-zwei">
+        <div class="fm-karte">
+          <svg viewBox={`${x0} ${y0} ${bw + 30 * kf} ${bh}`} role="img" aria-label="Karte: Förderung je Gemeinde im Rheinischen Revier">
+            {pts.sort((a, b) => b.f - a.f).map((p) => (
+              <a href={gemeindeUrl(pfad[p.g.ags])}><circle cx={p.x} cy={p.y} r={r(p.f)} style={`fill:${p.s ? (STUFEN as any)[p.s].farbe : '#cbd5e1'};fill-opacity:${p.f ? .85 : .35};stroke:#fff;stroke-width:${.5 * kf}`}><title>{p.g.name}: {p.f ? mio(p.f) : 'keine zugeordnete Förderung'} · {p.s ? (STUFEN as any)[p.s].lang : ''}</title></circle></a>
+            ))}
+            {[...pts].sort((a, b) => b.f - a.f).slice(0, 7).map((p) => <text x={p.x + r(p.f) + kf * 1.5} y={p.y + kf * 2.2} style={`font:600 ${kf * 6}px Arial,sans-serif;fill:#0f172a;paint-order:stroke;stroke:#f8fafc;stroke-width:${kf * 1.6}px`}>{p.g.name} {(p.f / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 0 })} Mio.</text>)}
+          </svg>
+          <p class="fm-hin">Kreisgröße nach Förderung je Gemeinde (Projekte mit mehreren Orten anteilig verteilt), Farbe nach amtlichem Haushaltsstatus 31.12.2025. Jülich enthält Forschungsprojekte am Forschungszentrum, darunter HC-H2 mit 860 Mio. €.</p>
+        </div>
+        <div>
+          {gebiete.map((x) => <div class="fm-bz"><span>{x.r.replace('Stadt ', '')}</span><i style={`width:${Math.max(2, x.jeEw / maxJeEw * 100)}%`}></i><b>{z(x.jeEw)} €/EW</b><small>{mio(x.f)} in {x.n} Projekten · Kassenkredite {z(x.kk)} €/EW · {x.verzehr} von {x.gem} Gemeinden mit Rücklagenverzehr oder HSK</small></div>)}
+          <p class="fm-hin">Dazu {ueberregional.length} Projekte mit {mio(ueberregional.reduce((a, e) => a + e.foerdervolumen_eur, 0), 0)} für mehrere Gebiete oder das ganze Revier – darunter HC-H2 mit 860 Mio. €.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-ab">
+      <h2>Was die KI gefunden hat</h2>
+      <p class="fm-unter">Unstimmigkeiten in der Projektdatenbank, die bei einer systematischen Prüfung auffallen – Grundlage für Rückfragen, nicht für Urteile.</p>
+      <div class="fm-zwei">
+        <div>
+          {auffaellig.map((e) => <div class="fm-auf"><a href={e.url} target="_blank" rel="noopener nofollow">{e.titel} ↗</a><br>{e.auffaellig}</div>)}
+        </div>
+        <div class="fm-box">
+          <div class="fm-z"><span>Projekte ohne Fördersumme</span><b>{ohneSumme.length}</b></div>
+          <div class="fm-z"><span>Projekte ohne benannten Zuwendungsempfänger</span><b>{ohneTraeger.length}</b></div>
+          <div class="fm-z"><span>Projekte ohne Laufzeit</span><b>{P.filter((e) => !e.ende).length}</b></div>
+          <div class="fm-z"><span>Belegte Förderung in der Datenbank</span><b>{mio(summe, 0)}</b></div>
+          <div class="fm-z"><span>Von der Landesregierung genannt: angestoßen in der ersten Förderphase</span><b>rund 3,4 Mrd. €</b></div>
+          <p class="fm-hin">Die Datenbank bildet einen Teil der über 950 angestoßenen Projekte ab. Die Differenz ist kein Fehlbetrag, sondern zeigt, wie viel Förderung öffentlich noch nicht projektgenau nachvollziehbar ist.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-ab">
+      <h2>Fällig bis Ende 2027: Abrechnung und Verwendungsnachweis</h2>
+      <p class="fm-unter">{bald.length} Projekte enden zwischen Oktober 2026 und Dezember 2027 – zusammen {mio(bald.reduce((a, e) => a + (e.foerdervolumen_eur || 0), 0), 0)}. Hier entscheidet sich, ob bewilligte Mittel vollständig abgerufen und sauber nachgewiesen werden.</p>
+      <div class="fm-box">
+        {bald.slice(0, 24).map((e) => <div class="fm-z"><span><a href={e.url} target="_blank" rel="noopener nofollow">{e.titel}</a><small>{e.traeger || 'Träger nicht benannt'} · {(e.orte || []).slice(0, 3).join(', ') || e.region.join(', ')}</small></span><b>{datum(e.ende)} · {e.foerdervolumen_eur ? mio(e.foerdervolumen_eur, 2) : '–'}</b></div>)}
+      </div>
+    </section>
+
+    <section class="fm-ab">
+      <h2>Folgekosten: {anlagen.length} Projekte schaffen dauerhafte Anlagen</h2>
+      <p class="fm-unter">Gebäude, Straßen, Netze, Grünanlagen und Geräte, die eine öffentliche Stelle danach betreiben muss – zusammen {mio(anlagenSumme, 0)} Förderung. Für diese Projekte zeigt der <a href="/revier/tragfaehigkeits-check/" style="color:#4f46e5">Tragfähigkeits-Check</a>, was nach der Förderung im Haushalt bleibt.</p>
+    </section>
+
+    <section class="fm-ab">
+      <h2>Alle {P.length} Projekte</h2>
+      <p class="fm-unter">Suche nach Titel, Träger, Ort oder Themenfeld. Kursiv: die wörtliche Fundstelle der Fördersumme.</p>
+      <input class="fm-such" id="fm-q" type="search" placeholder="z. B. Jülich, Wasserstoff, Klimaanpassung" aria-label="Projekte durchsuchen">
+      <div class="fm-scroll"><table class="fm-tab" id="fm-tab">
+        <thead><tr><th>Projekt</th><th>Träger · Ort</th><th>Laufzeit</th><th style="text-align:right">Förderung</th></tr></thead>
+        <tbody>{tabelle.map((e) => (
+          <tr data-s={`${e.titel} ${e.traeger || ''} ${(e.orte || []).join(' ')} ${e.region.join(' ')} ${e.thema.join(' ')} ${e.kategorie}`.toLowerCase()}>
+            <td><a href={e.url} target="_blank" rel="noopener nofollow">{e.titel}</a><br>{e.thema.slice(0, 2).map((t: string) => <span class="fm-tag">{t}</span>)}{e.dauerhafte_anlage && <span class="fm-tag a">dauerhafte Anlage</span>}{e.auffaellig && <span class="fm-tag w">Auffälligkeit</span>}</td>
+            <td>{e.traeger || <em style="color:#94a3b8">nicht benannt</em>}<br><small style="color:#64748b">{(e.orte || []).slice(0, 4).join(', ') || e.region.join(', ')}</small></td>
+            <td style="white-space:nowrap">{datum(e.beginn)} – {datum(e.ende)}</td>
+            <td class="z">{e.foerdervolumen_eur ? mio(e.foerdervolumen_eur, 2) : '–'}{e.beleg_foerderung && <span class="bel">„{e.beleg_foerderung.slice(0, 70)}{e.beleg_foerderung.length > 70 ? '…' : ''}“</span>}</td>
+          </tr>))}</tbody>
+      </table></div>
+    </section>
+
+    <section class="fm-ab">
+      <h2>So arbeitet der Monitor</h2>
+      <div class="fm-methode">
+        <div><b>1 · KI liest</b><p>Ein Sprachmodell überträgt jede Projektseite in feste Felder – Träger, Orte, Teilprojekte, Summen, Laufzeiten – und markiert, was fehlt.</p></div>
+        <div><b>2 · Belege prüfen</b><p>Jede Zahl muss wörtlich im Originaltext stehen; sonst wird sie verworfen. Summen und Abgleiche rechnet ein Programm, nicht die KI.</p></div>
+        <div><b>3 · Abgleichen</b><p>Verknüpfung mit amtlicher Haushaltslage, Kassenkrediten und Folgekosten – monatlich fortgeschrieben, jede Änderung nachvollziehbar.</p></div>
+      </div>
+      <p class="fm-hin">Quelle: Projektdatenbank der Zukunftsagentur Rheinisches Revier, <a href="https://projekte.rheinisches-revier.de/bewilligte-projekte/" target="_blank" rel="noopener nofollow">projekte.rheinisches-revier.de</a>, abgerufen am 10.10.2026. Fördervolumen wie auf den Projektseiten angegeben; einzelne Angaben enthalten Projekt- statt Fördervolumen (markiert). Haushaltsdaten: MHKBD NRW, Statistische Ämter des Bundes und der Länder. Automatisierte Auswertung – Fehler im Einzelfall möglich, jede Zahl ist über die Fundstelle prüfbar.</p>
+    </section>
+
+    <div class="fm-ende">
+      <div><h2>Transparenz für 14,8 Milliarden Euro</h2><p>Der Monitor lässt sich auf alle Förderprogramme des Strukturwandels ausweiten – mit Abrufstand, Fristen, Verwendungsnachweisen und Folgekosten je Kommune, als monatlicher Bericht für Agentur, Kreise und Räte.</p></div>
+      <p>Michael G. Kosel · Chefredakteur Der Kämmerer<br><a href="mailto:chefredaktion@derkaemmerer.de">chefredaktion@derkaemmerer.de</a><br><a href="/revier/rheinisches-revier/">Haushaltslage der 65 Revierkommunen →</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  const q = document.getElementById('fm-q') as HTMLInputElement;
+  q.addEventListener('input', () => { const s = q.value.trim().toLowerCase(); document.querySelectorAll<HTMLTableRowElement>('#fm-tab tbody tr').forEach((tr) => { tr.hidden = !!s && !tr.dataset.s!.includes(s); }); });
+</script>
+<Footer />
+</Base>
