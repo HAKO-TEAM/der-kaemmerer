@@ -3,7 +3,7 @@
 .tc-kopf { background:radial-gradient(900px 360px at 90% -10%, rgba(234,179,8,.22), transparent 60%), #14233a; color:#fff; padding:44px 0 36px; }
 .tc-pfad { font-size:13px; color:rgba(255,255,255,.6); } .tc-pfad a { color:#fcd34d; text-decoration:none; }
 .tc-badge { display:inline-block; margin-left:10px; background:#fcd34d; color:#14233a; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:999px; vertical-align:2px; }
-.tc-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,50px); line-height:1.06; margin:14px 0 12px; }
+.tc-kopf h1 { overflow-wrap:break-word; hyphens:auto; font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,50px); line-height:1.06; margin:14px 0 12px; }
 .tc-kopf p { color:rgba(255,255,255,.78); font-size:17px; line-height:1.55; max-width:66ch; margin:0; }
 .tc-ab { padding:36px 0 4px; } .tc-ab > h2 { font-family:'Playfair Display',Georgia,serif; font-size:27px; margin:0 0 6px; } .tc-unter { color:#64748b; font-size:14.5px; margin:0 0 16px; line-height:1.55; max-width:74ch; }
 .tc-zwei { display:grid; grid-template-columns:1fr 1fr; gap:20px; }

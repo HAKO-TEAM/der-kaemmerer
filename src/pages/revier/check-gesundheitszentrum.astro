@@ -20,6 +20,10 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 .gz-zwei { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+.gz-drei { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px; }
+.gz-modell { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px; }
+.gz-modell fieldset { border:1px solid #e2e8f0; border-radius:14px; padding:12px 16px; background:#fff; margin:0; } .gz-modell legend { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#64748b; font-weight:700; padding:0 6px; }
+.gz-modell label { display:flex; gap:10px; align-items:flex-start; font-size:14.5px; padding:6px 0; cursor:pointer; line-height:1.4; } .gz-modell input { accent-color:#ca8a04; margin-top:3px; }
 .gz-block { border:1px solid #e2e8f0; border-radius:16px; background:#fff; padding:18px 20px; }
 .gz-block h3 { margin:0 0 4px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; } .gz-block > p { margin:0 0 12px; font-size:13.5px; color:#64748b; }
 .gz-z { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px solid #f1f5f9; font-size:14.5px; } .gz-z b { font-variant-numeric:tabular-nums; white-space:nowrap; }
@@ -27,13 +31,13 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
 .gz-schalter { display:flex; gap:10px; align-items:center; font-size:14px; color:#334155; margin-top:12px; } .gz-schalter input { width:18px; height:18px; accent-color:#ca8a04; }
 .gz-partner { margin-top:34px; display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:center; border-radius:16px; padding:20px 22px; background:#f8fafc; border:1px solid #e2e8f0; }
 .gz-partner b.logo { font:700 18px/1.2 'Playfair Display',Georgia,serif; color:#1d6494; white-space:nowrap; } .gz-partner p { margin:0; font-size:14.5px; line-height:1.6; color:#334155; }
-@media (max-width:900px){ .gz-zwei,.gz-partner{grid-template-columns:1fr} }
+@media (max-width:900px){ .gz-zwei,.gz-partner,.gz-drei,.gz-modell{grid-template-columns:1fr} }
 </style>
 <div class="tc">
   <section class="tc-kopf"><div class="tc-w">
     <div class="tc-pfad"><a href="/revier/rheinisches-revier/">Rheinisches Revier</a> › Tragfähigkeits-Check <span class="tc-badge">Muster</span></div>
-    <h1>Gesundheitszentrum Bürgewald: Was kostet Versorgung – und wer trägt sie?</h1>
-    <p>Das Investitionsgesetz Kohleregionen fördert ausdrücklich Investitionen in Gesundheitseinrichtungen. Gefördert wird der Bau – der Betrieb einer Praxis nicht. Der Check rechnet beides zusammen: die Räume als Teil des Gemeinschaftsorts in Bürgewald und den hausärztlichen Betrieb darin. Branchenkennzahlen aus der ambulanten Versorgung, Folgekosten und Betrieb als Annahmen mit Reglern.</p>
+    <h1>Gesundheitszentrum Bürgewald: Versorgung sichern – mit dem kommunalen MVZ</h1>
+    <p>Das Investitionsgesetz Kohleregionen fördert ausdrücklich Investitionen in Gesundheitseinrichtungen. Gefördert wird der Bau – der Betrieb einer Praxis nicht. Kommunen dürfen seit 2015 selbst MVZ tragen und halten damit die Zulassungen im Ort. Der Check rechnet Räume, Praxisbetrieb und die Gegenrechnung aus dem Zuzug zusammen – für das kommunale MVZ und als Vergleich für einen privaten Betreiber. Branchenkennzahlen aus der ambulanten Versorgung, Folgekosten und Betrieb als Annahmen mit Reglern.</p>
     <CheckNav aktiv="gesundheit" />
   </div></section>
 
@@ -63,48 +67,72 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
         <div class="tc-ampel" aria-hidden="true"><i class="r" id="a-r"></i><i class="y" id="a-y"></i><i class="g" id="a-g"></i></div>
         <div><h2 id="u-titel">–</h2><p id="u-text">–</p></div>
       </div>
-      <div class="gz-zwei">
-        <div class="gz-block"><h3 style="color:#14233a">Gebäude · Haushalt der Gemeinde</h3><p>Räume im Gemeinschaftsort, gebaut mit Fördermitteln, vermietet an den Praxisbetreiber.</p>
+      <div class="gz-modell">
+        <fieldset><legend>Trägermodell</legend>
+          <label><input type="radio" name="traeger" value="k" checked> Kommunales MVZ – die Gemeinde ist Träger, ein Dienstleister führt den Betrieb</label>
+          <label><input type="radio" name="traeger" value="p"> Privater Betreiber – die Gemeinde vermietet die Räume</label>
+        </fieldset>
+        <fieldset><legend>Versorgungsform</legend>
+          <label><input type="radio" name="form" value="voll" checked> Eigenständige Praxis in Bürgewald</label>
+          <label><input type="radio" name="form" value="zweig"> Zweigpraxis eines MVZ mit festen Sprechtagen</label>
+        </fieldset>
+      </div>
+      <div class="gz-drei">
+        <div class="gz-block"><h3 style="color:#14233a">Gebäude</h3><p>Räume im Gemeinschaftsort, gebaut mit Fördermitteln.</p>
           <div class="gz-z"><span>Investition Praxisräume</span><b id="g-inv">–</b></div>
           <div class="gz-z"><span>davon Eigenanteil</span><b id="g-eigen">–</b></div>
-          <div class="gz-z"><span>Unterhaltung und Betrieb des Gebäudes</span><b class="gz-minus" id="g-unt">–</b></div>
-          <div class="gz-z"><span>Abschreibung netto (nach Sonderposten)</span><b class="gz-minus" id="g-afa">–</b></div>
-          <div class="gz-z"><span>Mieteinnahmen von der Praxis</span><b class="gz-plus" id="g-miete">–</b></div>
-          <div class="gz-z summe"><span>Saldo Gebäude für die Gemeinde p. a.</span><b id="g-saldo">–</b></div>
+          <div class="gz-z"><span>Unterhaltung des Gebäudes</span><b class="gz-minus" id="g-unt">–</b></div>
+          <div class="gz-z"><span>Abschreibung netto</span><b class="gz-minus" id="g-afa">–</b></div>
+          <div class="gz-z" id="z-miete"><span>Miete vom Betreiber</span><b class="gz-plus" id="g-miete">–</b></div>
+          <div class="gz-z summe"><span>Saldo Gebäude p. a.</span><b id="g-saldo">–</b></div>
         </div>
-        <div class="gz-block"><h3 style="color:#1d6494">Praxisbetrieb · Betreiber</h3><p>Hausärztliche Versorgung mit angestellten Ärztinnen und Ärzten, abgerechnet über KV und HZV.</p>
+        <div class="gz-block"><h3 style="color:#1d6494" id="p-titel">Praxisbetrieb</h3><p id="p-unter">–</p>
           <div class="gz-z"><span>Erlöse KV und HZV</span><b class="gz-plus" id="p-erl">–</b></div>
-          <div class="gz-z"><span>Ärztinnen und Ärzte (Arbeitgeberkosten)</span><b class="gz-minus" id="p-arzt">–</b></div>
+          <div class="gz-z"><span>Ärztinnen und Ärzte</span><b class="gz-minus" id="p-arzt">–</b></div>
           <div class="gz-z"><span>Medizinische Fachangestellte</span><b class="gz-minus" id="p-mfa">–</b></div>
           <div class="gz-z"><span>Sachkosten, IT, Labor</span><b class="gz-minus" id="p-sach">–</b></div>
-          <div class="gz-z"><span>Miete an die Gemeinde</span><b class="gz-minus" id="p-miete">–</b></div>
+          <div class="gz-z" id="z-bf"><span>Betriebsführung durch Dienstleister</span><b class="gz-minus" id="p-bf">–</b></div>
+          <div class="gz-z" id="z-pmiete"><span>Miete an die Gemeinde</span><b class="gz-minus" id="p-miete">–</b></div>
           <div class="gz-z summe"><span>Ergebnis der Praxis p. a.</span><b id="p-saldo">–</b></div>
         </div>
+        <div class="gz-block" style="border-color:#fcd34d;background:#fffdf5"><h3 style="color:#a16207">Gemeinde Merzenich</h3><p>Was am Ende im Haushalt ankommt.</p>
+          <div class="gz-z"><span>Saldo Gebäude</span><b id="m-geb">–</b></div>
+          <div class="gz-z"><span id="m-praxis-t">Anteil am Praxisergebnis</span><b id="m-praxis">–</b></div>
+          <div class="gz-z"><span>Nachbargemeinden und Kreis tragen</span><b class="gz-plus" id="m-teil">–</b></div>
+          <div class="gz-z"><span>Einnahmen aus Zuzug</span><b class="gz-plus" id="m-zuzug">–</b></div>
+          <div class="gz-z summe"><span>Ergebnis für Merzenich p. a.</span><b id="m-saldo">–</b></div>
+          <p style="margin:10px 0 0;font-size:12.5px;color:#64748b" id="m-break">–</p>
+        </div>
       </div>
-      <label class="gz-schalter"><input type="checkbox" id="r-sicher" checked> Gemeinde sichert die Versorgung ab und gleicht ein Defizit der Praxis aus (Sicherstellungsbeitrag)</label>
     </section>
 
     <section class="tc-ab">
       <h2>Annahmen – mit Reglern prüfen</h2>
-      <p class="tc-unter">Musterwerte; im echten Check aus Bauplanung, Bedarfsplanung der KV und Wirtschaftsplan des Betreibers. Jede Änderung rechnet sofort neu.</p>
+      <p class="tc-unter">Musterwerte; im echten Check aus Bauplanung, Bedarfsplanung der KV, Wirtschaftsplan des MVZ und Haushalt der Gemeinde. Jede Änderung rechnet sofort neu.</p>
       <div class="tc-regler" id="regler" data-ew={g.einwohner}>
-        <label>Ärztinnen und Ärzte (Vollzeit) <b id="v-arzt"></b><input type="range" id="r-arzt" min="0.5" max="3" step="0.5" value="1.5"><small>z. B. 1,5 = eine Vollzeit- und eine Teilzeitstelle.</small></label>
+        <label id="l-arzt">Ärztinnen und Ärzte (Vollzeit) <b id="v-arzt"></b><input type="range" id="r-arzt" min="0.5" max="3" step="0.5" value="1.5"><small>z. B. 1,5 = eine Vollzeit- und eine Teilzeitstelle.</small></label>
+        <label id="l-tage" hidden>Sprechtage je Woche <b id="v-tage"></b><input type="range" id="r-tage" min="1" max="4" step="0.5" value="2.5"><small>Ärztin oder Arzt des MVZ; Anmeldung, Labor und Verwaltung am Hauptstandort.</small></label>
         <label>Fälle je Arzt und Quartal <b id="v-faelle"></b><input type="range" id="r-faelle" min="400" max="800" step="25" value="700"><small>Branchenwert: höchstens 800, eher weniger.</small></label>
-        <label>Anteil HZV-Patienten <b id="v-hzv"></b><input type="range" id="r-hzv" min="0" max="90" step="5" value="50"><small>Ziel in gut geführten Praxen: 80 %.</small></label>
-        <label>Fallwert HZV / KV <b id="v-fw"></b><input type="range" id="r-hzvwert" min="75" max="90" step="1" value="80"><small>HZV 75–90 € je Fall und Quartal; KV-Fallwert fest 62 € im Muster.</small></label>
-        <label>Praxisfläche <b id="v-flaeche"></b><input type="range" id="r-flaeche" min="120" max="500" step="10" value="250"><small>Baukosten im Muster 4.000 € je m² inkl. Ausstattung.</small></label>
-        <label>Miete je m² und Monat <b id="v-miete"></b><input type="range" id="r-miete" min="0" max="16" step="0.5" value="11"><small>0 € = mietfreie Anlaufphase als Unterstützung der Gemeinde.</small></label>
+        <label>Anteil HZV-Patienten <b id="v-hzv"></b><input type="range" id="r-hzv" min="0" max="90" step="5" value="70"><small>Ziel in gut geführten Praxen: 80 %.</small></label>
+        <label>Fallwert HZV / KV <b id="v-fw"></b><input type="range" id="r-hzvwert" min="75" max="90" step="1" value="82"><small>HZV 75–90 € je Fall und Quartal; KV-Fallwert fest 62 € im Muster.</small></label>
+        <label>Betriebsführung <b id="v-bf"></b><input type="range" id="r-bf" min="0" max="15" step="0.5" value="6"><small>Annahme in % der Erlöse für Abrechnung, HZV, Personal und Controlling – keine Preisangabe.</small></label>
+        <label>Praxisfläche <b id="v-flaeche"></b><input type="range" id="r-flaeche" min="80" max="500" step="10" value="250"><small>Baukosten im Muster 4.000 € je m² inkl. Ausstattung.</small></label>
+        <label id="l-miete">Miete je m² und Monat <b id="v-miete"></b><input type="range" id="r-miete" min="0" max="16" step="0.5" value="11"><small>Nur bei privatem Betreiber; 0 € = mietfreie Anlaufphase.</small></label>
         <label>Förderquote Bau <b id="v-quote"></b><input type="range" id="r-quote" min="0" max="100" step="2.5" value="97.5"><small>0 % = keine Anerkennung als Gesundheitseinrichtung.</small></label>
+        <label>Anteil Merzenichs am Praxisdefizit <b id="v-teil"></b><input type="range" id="r-teil" min="25" max="100" step="5" value="50"><small>Rest tragen Nachbargemeinden und Kreis Düren, die mitversorgt werden.</small></label>
+        <label>Neue Einwohner durch die Dorfentwicklung <b id="v-zuzug"></b><input type="range" id="r-zuzug" min="0" max="800" step="25" value="300"><small>Zuzug nach Bürgewald, den eine ärztliche Versorgung vor Ort erst möglich macht.</small></label>
+        <label>Einnahmen je neuem Einwohner p. a. <b id="v-jeew"></b><input type="range" id="r-jeew" min="200" max="900" step="25" value="500"><small>Annahme: Gemeindeanteil an der Einkommensteuer und Schlüsselzuweisungen.</small></label>
       </div>
-      <p class="tc-hin">Kosten im Muster je Arzt-Vollzeitstelle: 130.000 € Arbeitgeberkosten Ärztin/Arzt, 2,5 MFA zu je 45.000 €, Sachkosten 40.000 €. Gebäude: Unterhaltung 1,5 % der Investition, Nutzungsdauer 40 Jahre. Ampel nach der Belastung der Gemeinde je Einwohner: bei Rücklagenverzehr unter 10 € grün, bis 40 € gelb, darüber rot.</p>
+      <p class="tc-hin">Kosten im Muster je Arzt-Vollzeitstelle: 130.000 € Arbeitgeberkosten, 2,5 MFA zu je 45.000 € (Zweigpraxis 1,5), Sachkosten 40.000 € (Zweigpraxis 20.000 €). Gebäude: Unterhaltung 1,5 % der Investition, Nutzungsdauer 40 Jahre. Ampel nach dem Ergebnis für Merzenich je Einwohner: bei Rücklagenverzehr unter 10 € Belastung grün, bis 40 € gelb, darüber rot.</p>
     </section>
 
     <section class="tc-ab">
       <h2>Empfehlung aus Kämmerersicht</h2>
       <ol class="tc-auflagen">
-        <li><b>Praxisräume in die laufende Dorfentwicklung aufnehmen.</b> Die Räume entstehen ohnehin im Gemeinschaftsort – die Anerkennung als Gesundheitseinrichtung früh mit der Bezirksregierung klären, dann kosten sie die Gemeinde fast nichts.</li>
-        <li><b>Den Betrieb an die HZV koppeln.</b> Ab etwa 80 % HZV-Anteil trägt sich eine hausärztliche Praxis deutlich besser. Ein Betreiber mit Erfahrung in Selektivverträgen ist die Voraussetzung, damit die Gemeinde nicht dauerhaft zuschießt.</li>
-        <li><b>Unterstützung befristen statt verstetigen.</b> Eine mietfreie Anlaufphase von zwei bis drei Jahren sichert die Ansiedlung; danach Kostenmiete. So trägt die Gemeinde den Anlauf, nicht den Dauerbetrieb.</li>
+        <li><b>Kommunales MVZ gründen, Betrieb vergeben.</b> Seit 2015 dürfen Kommunen MVZ tragen (§ 95 Abs. 1a SGB V). Die Gemeinde – oder gemeinsam mit Nachbarn und Kreis – hält die Zulassungen; Abrechnung, HZV und Personal führt ein Dienstleister im Auftrag. So bleibt der Versorgungsauftrag dauerhaft im Ort.</li>
+        <li><b>Praxisräume in die laufende Dorfentwicklung aufnehmen.</b> Die Anerkennung als Gesundheitseinrichtung früh mit der Bezirksregierung Köln klären – dann kosten die Räume die Gemeinde fast nichts.</li>
+        <li><b>Mit einer Zweigpraxis beginnen, an die HZV koppeln.</b> Feste Sprechtage eines MVZ halten die Kosten klein; ein HZV-Anteil von 80 % ist das Ziel. Ausbau zur eigenständigen Praxis, wenn der Zuzug kommt.</li>
+        <li><b>Defizit teilen und befristen.</b> Nachbargemeinden und Kreis Düren werden mitversorgt und tragen anteilig; ein gedeckelter Beitrag für drei Jahre, danach Überprüfung – gegenüber Rat und Aufsicht sauber darstellbar.</li>
       </ol>
     </section>
 
@@ -122,37 +150,51 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
 </div>
 <script>
   const EW = +(document.getElementById('regler') as HTMLElement).dataset.ew!;
-  const KV = 62, BAU_M2 = 4000, ARZT = 130000, MFA = 45000, MFA_JE = 2.5, SACH = 40000, UNT = 0.015, ND = 40;
+  const KV = 62, BAU_M2 = 4000, ARZT = 130000, MFA = 45000, UNT = 0.015, ND = 40;
   const v = (id: string) => +(document.getElementById(id) as HTMLInputElement).value;
+  const wahl = (n: string) => (document.querySelector(`input[name="${n}"]:checked`) as HTMLInputElement).value;
   const setz = (id: string, t: string) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  const zeig = (id: string, an: boolean) => { const e = document.getElementById(id); if (e) e.hidden = !an; };
   const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
-  const vz = (x: number) => (x >= 0 ? '+ ' : '− ') + eur(Math.abs(x));
+  const vz = (x: number) => (Math.round(x) >= 0 ? '+ ' : '− ') + eur(Math.abs(x));
   const rechne = () => {
-    const aerzte = v('r-arzt'), faelle = v('r-faelle'), hzv = v('r-hzv') / 100, hzvWert = v('r-hzvwert'), flaeche = v('r-flaeche'), mieteM2 = v('r-miete'), quote = v('r-quote') / 100;
-    const sicher = (document.getElementById('r-sicher') as HTMLInputElement).checked;
-    setz('v-arzt', `${aerzte.toLocaleString('de-DE')} VZÄ`); setz('v-faelle', String(faelle)); setz('v-hzv', `${Math.round(hzv * 100)} %`);
-    setz('v-fw', `${hzvWert} € / ${KV} €`); setz('v-flaeche', `${flaeche} m²`); setz('v-miete', `${mieteM2.toLocaleString('de-DE')} €`); setz('v-quote', `${(quote * 100).toLocaleString('de-DE')} %`);
+    const kommunal = wahl('traeger') === 'k', zweig = wahl('form') === 'zweig';
+    const tage = v('r-tage'), aerzte = zweig ? tage / 5 : v('r-arzt'), faelle = v('r-faelle'), hzv = v('r-hzv') / 100, hzvWert = v('r-hzvwert');
+    const bfQuote = kommunal ? v('r-bf') / 100 : 0, flaeche = v('r-flaeche'), mieteM2 = kommunal ? 0 : v('r-miete'), quote = v('r-quote') / 100;
+    const teil = v('r-teil') / 100, zuzug = v('r-zuzug'), jeEwZ = v('r-jeew');
+    zeig('l-arzt', !zweig); zeig('l-tage', zweig); zeig('l-miete', !kommunal); zeig('z-miete', !kommunal); zeig('z-pmiete', !kommunal); zeig('z-bf', kommunal);
+    setz('v-arzt', `${v('r-arzt').toLocaleString('de-DE')} VZÄ`); setz('v-tage', `${tage.toLocaleString('de-DE')} Tage`); setz('v-faelle', String(faelle));
+    setz('v-hzv', `${Math.round(hzv * 100)} %`); setz('v-fw', `${hzvWert} € / ${KV} €`); setz('v-bf', `${(v('r-bf')).toLocaleString('de-DE')} %`);
+    setz('v-flaeche', `${flaeche} m²`); setz('v-miete', `${v('r-miete').toLocaleString('de-DE')} €`); setz('v-quote', `${(quote * 100).toLocaleString('de-DE')} %`);
+    setz('v-teil', `${Math.round(teil * 100)} %`); setz('v-zuzug', `${zuzug}`); setz('v-jeew', eur(jeEwZ));
+    setz('p-titel', kommunal ? 'Praxisbetrieb · kommunales MVZ' : 'Praxisbetrieb · privater Betreiber');
+    setz('p-unter', kommunal ? 'Die Gemeinde hält die Zulassung, Erlöse und Kosten laufen über ihr MVZ.' : 'Der Betreiber trägt Erlöse und Kosten und zahlt Miete.');
     // Gebäude
     const inv = flaeche * BAU_M2, eigen = inv * (1 - quote), annu = eigen > 0 ? eigen * (0.035 / (1 - Math.pow(1.035, -30))) : 0;
-    const unt = inv * UNT, afa = (inv / ND) * (1 - quote), miete = flaeche * mieteM2 * 12;
-    const saldoG = miete - unt - afa - annu;
+    const unt = inv * UNT, afa = (inv / ND) * (1 - quote), miete = flaeche * mieteM2 * 12, saldoG = miete - unt - afa - annu;
     setz('g-inv', eur(inv)); setz('g-eigen', `${eur(eigen)}${annu ? ` (Kredit ${eur(annu)} p. a.)` : ''}`); setz('g-unt', '− ' + eur(unt)); setz('g-afa', '− ' + eur(afa));
     setz('g-miete', '+ ' + eur(miete)); setz('g-saldo', vz(saldoG));
     // Praxis
     const fallwert = hzv * hzvWert + (1 - hzv) * KV, erl = aerzte * faelle * 4 * fallwert;
-    const kArzt = aerzte * ARZT, kMfa = aerzte * MFA_JE * MFA, kSach = aerzte * SACH;
-    const saldoP = erl - kArzt - kMfa - kSach - miete;
-    setz('p-erl', '+ ' + eur(erl)); setz('p-arzt', '− ' + eur(kArzt)); setz('p-mfa', '− ' + eur(kMfa)); setz('p-sach', '− ' + eur(kSach)); setz('p-miete', '− ' + eur(miete)); setz('p-saldo', vz(saldoP));
-    // Gemeinde gesamt
-    const zuschuss = sicher && saldoP < 0 ? -saldoP : 0, belastung = Math.max(0, -saldoG) + zuschuss - Math.max(0, saldoG), jeEw = belastung / EW;
-    const stufe = jeEw < 10 ? 'g' : jeEw < 40 ? 'y' : 'r';
+    const kArzt = aerzte * ARZT, kMfa = aerzte * (zweig ? 1.5 : 2.5) * MFA, kSach = aerzte * (zweig ? 20000 : 40000), kBf = erl * bfQuote;
+    const saldoP = erl - kArzt - kMfa - kSach - kBf - miete;
+    setz('p-erl', '+ ' + eur(erl)); setz('p-arzt', '− ' + eur(kArzt)); setz('p-mfa', '− ' + eur(kMfa)); setz('p-sach', '− ' + eur(kSach)); setz('p-bf', '− ' + eur(kBf)); setz('p-miete', '− ' + eur(miete)); setz('p-saldo', vz(saldoP));
+    // Gemeinde: Überschuss eines kommunalen MVZ bleibt voll bei Merzenich, ein Defizit wird geteilt
+    const praxisVoll = saldoP < 0 ? saldoP : (kommunal ? saldoP : 0);
+    const praxisM = saldoP < 0 ? saldoP * teil : praxisVoll, getragen = saldoP < 0 ? -saldoP * (1 - teil) : 0, zuzugE = zuzug * jeEwZ;
+    const ergebnis = saldoG + praxisM + zuzugE;
+    setz('m-geb', vz(saldoG)); setz('m-praxis-t', saldoP < 0 ? `Anteil am Praxisdefizit (${Math.round(teil * 100)} %)` : (kommunal ? 'Überschuss des kommunalen MVZ' : 'Praxisergebnis (beim Betreiber)'));
+    setz('m-praxis', vz(praxisM)); setz('m-teil', getragen ? eur(getragen) : '–'); setz('m-zuzug', '+ ' + eur(zuzugE)); setz('m-saldo', vz(ergebnis));
+    const ohneZuzug = saldoG + praxisM, noetig = ohneZuzug < 0 ? Math.ceil(-ohneZuzug / jeEwZ) : 0;
+    setz('m-break', ohneZuzug < 0 ? `Ab ${noetig} neuen Einwohnern trägt sich die Versorgung für Merzenich selbst.` : 'Die Versorgung trägt sich schon ohne Zuzug.');
+    const jeEw = -ergebnis / EW, stufe = ergebnis >= 0 ? 'g' : jeEw < 10 ? 'g' : jeEw < 40 ? 'y' : 'r';
     ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
-    const hebel = aerzte * faelle * 4 * (hzvWert - KV) * 0.1;
     const titel = { g: 'Tragfähig', y: 'Tragfähig mit Auflagen', r: 'Tragfähigkeit nur mit Gegenfinanzierung' }[stufe];
-    setz('u-titel', belastung <= 0 ? `Tragfähig: Die Gemeinde erzielt ${eur(-belastung)} im Jahr` : `${titel}: ${eur(belastung)} Belastung der Gemeinde im Jahr`);
-    setz('u-text', `${belastung > 0 ? `Das sind ${eur(jeEw)} je Einwohner. ` : ''}Die Räume sind dank Förderung günstig – entscheidend ist der Praxisbetrieb: Bei ${Math.round(hzv * 100)} % HZV-Anteil ${saldoP >= 0 ? `erwirtschaftet die Praxis ${eur(saldoP)}` : `fehlen der Praxis ${eur(-saldoP)}`} im Jahr. Jede zehn Prozentpunkte mehr HZV bringen ${eur(hebel)} – der Hebel, der über einen dauerhaften Zuschuss der Gemeinde entscheidet.`);
+    setz('u-titel', ergebnis >= 0 ? `Tragfähig: ${eur(ergebnis)} Überschuss für Merzenich im Jahr` : `${titel}: ${eur(-ergebnis)} Belastung für Merzenich im Jahr`);
+    setz('u-text', `${kommunal ? 'Als Träger des MVZ hält die Gemeinde die Zulassung im Ort – die Versorgung bleibt, auch wenn Ärzte wechseln.' : 'Der Betreiber hält die Zulassung; die Gemeinde stellt Räume.'} ${zweig ? `Die Zweigpraxis mit ${tage.toLocaleString('de-DE')} Sprechtagen nutzt die Strukturen des Hauptstandorts.` : ''} Praxisergebnis ${vz(saldoP)}; ${saldoP < 0 ? `davon trägt Merzenich ${Math.round(teil * 100)} %, ` : ''}${zuzug} neue Einwohner bringen ${eur(zuzugE)} im Jahr. ${ohneZuzug < 0 ? `Ab ${noetig} Zuzüglern trägt sich die Versorgung selbst.` : ''}`);
   };
-  document.querySelectorAll('#regler input, #r-sicher').forEach((i) => i.addEventListener('input', rechne));
+  document.querySelectorAll('#regler input, input[name="traeger"], input[name="form"]').forEach((i) => i.addEventListener('input', rechne));
+  document.querySelectorAll('input[name="traeger"], input[name="form"]').forEach((i) => i.addEventListener('change', rechne));
   rechne();
 </script>
 <Footer />
