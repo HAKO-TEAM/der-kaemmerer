@@ -1,0 +1,148 @@
+---
+// Muster-Tragfähigkeits-Check: Brainergy Park Jülich – Betrieb des Brainergy Hub und Verlustausgleich durch die kommunalen Gesellschafter.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CheckNav from '../../components/CheckNav.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import schulden from '../../data/spiegel/schulden.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import '../../styles/revier-check.css';
+
+const NAMEN = ['Jülich', 'Niederzier', 'Titz'];
+const gs = NAMEN.map((n) => (gemeinden as any[]).find((x) => x.name === n && x.land === 'NW'));
+const S = schulden as any, HS = (hsNw as any).gemeinden;
+const daten = gs.map((g) => ({ s: HS[g.ags].s, name: g.name, ew: g.einwohner, kk: S[g.ags].kassenkredite_je_ew, sch: S[g.ags].schulden_je_ew, st: (STUFEN as any)[HS[g.ags].s] }));
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+const QUELLEN = [
+  ['Wirtschaft.NRW: 67,5 Mio. € für den Brainergy Park', 'https://www.wirtschaft.nrw/energiewende-durch-transfer-und-gruendungsgeist-land-foerdert-brainergy-park-juelich-mit-weiteren'],
+  ['Spatenstich Brainergy Hub (November 2024)', 'https://wirtschaft.eifel.info/2024/11/28/spatenstich-fuer-den-brainergy-hub-im-brainergy-park-juelich-startschuss-fuer-eines-der-groessten-strukturwandelprojekte-der-region/'],
+  ['Land NRW: 6,3 Mio. € StartUp Village', 'https://www.land.nrw/pressemitteilung/brainergy-park-juelich-gmbh-erhaelt-foerderung-ueber-63-millionen-euro-fuer-den'],
+  ['Projektdatenbank Rheinisches Revier', 'https://projekte.rheinisches-revier.de/bewilligte-projekte/projektdetails/brainergy-park-juelich-1'],
+];
+---
+<Base title="Muster: Tragfähigkeits-Check Brainergy Park Jülich" description="Tragfähigkeits-Check eines Strukturwandelprojekts aus Kämmerersicht – Muster mit Annahmen." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<div class="tc">
+  <section class="tc-kopf"><div class="tc-w">
+    <div class="tc-pfad"><a href="/revier/rheinisches-revier/">Rheinisches Revier</a> › Tragfähigkeits-Check <span class="tc-badge">Muster</span></div>
+    <h1>Brainergy Park Jülich: Wer trägt den Betrieb, wenn der Hub steht?</h1>
+    <p>Drei Kommunen und der Kreis Düren entwickeln gemeinsam einen Technologiepark auf 52 Hektar. Der Bau des Brainergy Hub ist mit 67,5 Mio. € Landesförderung gesichert. Die Frage aus Kämmerersicht: Was kostet der Betrieb ab 2027 – und was landet über den Verlustausgleich der Gesellschaft in den Haushalten von Jülich, Niederzier und Titz?</p>
+    <CheckNav aktiv="brainergy" />
+  </div></section>
+
+  <div class="tc-w">
+    <section class="tc-ab">
+      <div class="tc-zwei">
+        <div class="tc-steck"><h3>Projekt</h3><dl>
+          <dt>Fläche</dt><dd>52 ha, ehemaliges Gelände der Deutschen Welle</dd>
+          <dt>Brainergy Hub (Landesförderung)</dt><dd>67,5 Mio. €</dd>
+          <dt>Fertigstellung / Bezug</dt><dd>Ende 2026 / 2027</dd>
+          <dt>Energiesystem (mit E.ON, 50 : 50)</dt><dd>Förderung 19,3 Mio. €</dd>
+          <dt>StartUp Village (STARK)</dt><dd>6,3 Mio. €</dd>
+          <dt>Gesellschafter</dt><dd>Jülich, Niederzier, Titz, Kreis Düren</dd></dl>
+          <small>Quellen: {QUELLEN.map(([t, u], i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener nofollow" style="color:#2563eb">{t}</a></>)}.</small>
+        </div>
+        <div class="tc-steck"><h3>Die drei Gesellschafter-Kommunen</h3>
+          <dl>{daten.map((d) => <><dt>{d.name} · {z(d.ew)} EW</dt><dd style={`color:${d.st.farbe === '#facc15' ? '#a16207' : d.st.farbe}`}>{d.st.kurz} · {z(d.kk)} € KK/EW</dd></>)}</dl>
+          <small>KK = Kassenkredite je Einwohner zum 31.12.2025; Einstufung der Kommunalaufsicht NRW zum 31.12.2025. <a href="/gemeinden/nordrhein-westfalen/juelich/">Gemeindeprofil Jülich →</a></small>
+        </div>
+      </div>
+    </section>
+
+    <section class="tc-ab">
+      <div class="tc-urteil">
+        <div class="tc-ampel" aria-hidden="true"><i class="r" id="a-r"></i><i class="y" id="a-y"></i><i class="g" id="a-g"></i></div>
+        <div><h2 id="u-titel">–</h2><p id="u-text">–</p></div>
+      </div>
+      <div class="tc-felder">
+        <div class="tc-feld" style="--f:#ca8a04"><span>Bewirtschaftung Hub</span><b id="f-bew">–</b><small id="f-bew-t">–</small></div>
+        <div class="tc-feld" style="--f:#2563eb"><span>Abschreibungen netto</span><b id="f-afa">–</b><small id="f-afa-t">–</small></div>
+        <div class="tc-feld" style="--f:#7c3aed"><span>Betriebsgesellschaft</span><b id="f-ov">–</b><small>Geschäftsführung, Vermarktung, Community-Management</small></div>
+        <div class="tc-feld" style="--f:#15803d"><span>Mieterlöse</span><b id="f-erl">–</b><small id="f-erl-t">–</small></div>
+      </div>
+      <div class="tc-steck" style="margin-top:16px"><h3>Verlustausgleich je Kommune (Annahme: nach Einwohnern verteilt)</h3>
+        <dl id="aufteilung"></dl>
+        <small>Die tatsächlichen Gesellschafteranteile und Ausgleichsregeln stehen im Gesellschaftsvertrag; im echten Check werden sie von dort übernommen.</small>
+      </div>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Annahmen – mit Reglern prüfen</h2>
+      <p class="tc-unter">Musterwerte für den Betrieb des Hub. Jede Änderung rechnet das Ergebnis sofort neu.</p>
+      <div class="tc-regler" id="regler" data-gs={JSON.stringify(daten.map((d) => ({ name: d.name, ew: d.ew, kk: d.kk, s: d.s })))}>
+        <label>Förderquote Bau <b id="v-quote"></b><input type="range" id="r-quote" min="80" max="100" step="1" value="90"><small>67,5 Mio. € Förderung; Gesamtkosten im Muster daraus abgeleitet.</small></label>
+        <label>Bewirtschaftung p. a. <b id="v-bew"></b><input type="range" id="r-bew" min="1" max="4" step="0.25" value="2"><small>Energie, Reinigung, Wartung, Instandhaltung in % der Baukosten.</small></label>
+        <label>Auslastung der Flächen <b id="v-ausl"></b><input type="range" id="r-ausl" min="20" max="100" step="5" value="70"><small>Anteil vermieteter Labor-, Büro- und Werkstattflächen.</small></label>
+        <label>Mieterlöse bei Vollvermietung p. a. <b id="v-miete"></b><input type="range" id="r-miete" min="500000" max="4000000" step="100000" value="2000000"><small>Gründer- und Forschungsmieten liegen meist unter Marktniveau.</small></label>
+        <label>Betriebsgesellschaft p. a. <b id="v-ov"></b><input type="range" id="r-ov" min="200000" max="1500000" step="50000" value="600000"><small>Personal und Sachkosten der Betreibergesellschaft.</small></label>
+        <label>Anteil der drei Kommunen am Ausgleich <b id="v-komm"></b><input type="range" id="r-komm" min="40" max="100" step="5" value="75"><small>Rest beim Kreis Düren; Verteilung unter den Kommunen nach Einwohnern.</small></label>
+      </div>
+      <p class="tc-hin">Ampel nach der am stärksten belasteten Kommune. Musterschwellen je Einwohner und Jahr: bei ausgeglichenem oder fiktiv ausgeglichenem Haushalt unter 25 € grün, bis 75 € gelb; bei Rücklagenverzehr oder Fehlbetragsvortrag unter 10 € grün, bis 40 € gelb, darüber rot. Gewerbesteuer aus Ansiedlungen fließt an die Standortgemeinde und ist hier nicht gegengerechnet – sie ist das Argument, das den Park trägt.</p>
+    </section>
+
+    <section class="tc-ab">
+      <h2>Empfehlung aus Kämmerersicht</h2>
+      <ol class="tc-auflagen">
+        <li><b>Betriebskonzept vor Bezug mit einer Mindestauslastung hinterlegen.</b> Vorvermietungen und Ankermieter aus der Forschung (Forschungszentrum Jülich, Hochschulen) sichern die ersten Jahre; ab welcher Auslastung der Hub sich trägt, gehört in jeden Wirtschaftsplan.</li>
+        <li><b>Den Verlustausgleich deckeln und im Haushalt einplanen.</b> Ein jährlicher Höchstbetrag je Gesellschafter schafft Planbarkeit – gerade für Kommunen mit Fehlbetragsvortrag und hohen Kassenkrediten.</li>
+        <li><b>Gewerbesteuer und Ausgleich gemeinsam betrachten.</b> Eine interkommunale Vereinbarung über die Aufteilung künftiger Gewerbesteuer aus dem Park verbindet Last und Ertrag – dann trägt nicht eine Kommune allein das Risiko des Standorts.</li>
+      </ol>
+    </section>
+
+    <section class="tc-ab">
+      <h2>So entsteht der Check</h2>
+      <div class="tc-methode">
+        <div><b>1 · Haushaltslage</b><p>Status, Rücklagen und Kassenkredite aller Gesellschafter – aus den Datenbeständen von Der Kämmerer, monatlich fortgeschrieben.</p></div>
+        <div><b>2 · Betrieb</b><p>Wirtschaftsplan der Gesellschaft, Flächen, Mieten, Auslastung und Abschreibungen; daraus der jährliche Ausgleichsbedarf über 20 Jahre.</p></div>
+        <div><b>3 · Urteil</b><p>Ampel und Auflagen je Gesellschafter – als Einseiter für Räte, Aufsicht und Agentur.</p></div>
+      </div>
+      <p class="tc-hin">Muster zur Veranschaulichung: Projektzahlen aus öffentlichen Quellen, Betrieb, Mieten und Anteile als Annahmen. Es handelt sich um keine Bewertung der Brainergy Park Jülich GmbH, ihrer Gesellschafter oder des Vorhabens.</p>
+    </section>
+
+    <div class="tc-zurueck"><a href="/revier/rheinisches-revier/">← Haushaltslage der 65 Revierkommunen</a><span style="font-size:14px;color:#475569">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de" style="color:#2563eb;font-weight:600">chefredaktion@derkaemmerer.de</a></span></div>
+  </div>
+</div>
+<script>
+  const box = document.getElementById('regler') as HTMLElement;
+  const GS: { name: string; ew: number; kk: number; s: number }[] = JSON.parse(box.dataset.gs!);
+  const FOERDER = 67_500_000, ND = 40;
+  const v = (id: string) => +(document.getElementById(id) as HTMLInputElement).value;
+  const setz = (id: string, t: string) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+  const tsd = (x: number) => (Math.abs(x) >= 1e6 ? (x / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' Mio. €' : Math.round(x / 1000).toLocaleString('de-DE') + ' T€');
+  const rechne = () => {
+    const q = v('r-quote') / 100, bew = v('r-bew') / 100, ausl = v('r-ausl') / 100, miete = v('r-miete'), ov = v('r-ov'), komm = v('r-komm') / 100;
+    setz('v-quote', `${Math.round(q * 100)} %`); setz('v-bew', `${(bew * 100).toLocaleString('de-DE')} %`); setz('v-ausl', `${Math.round(ausl * 100)} %`);
+    setz('v-miete', tsd(miete)); setz('v-ov', tsd(ov)); setz('v-komm', `${Math.round(komm * 100)} %`);
+    const bau = FOERDER / q, bewirt = bau * bew, afa = (bau / ND) * (1 - q), erl = miete * ausl;
+    const verlust = bewirt + afa + ov - erl;
+    setz('f-bew', tsd(bewirt) + ' p. a.'); setz('f-bew-t', `${bew * 100 > 0 ? (bew * 100).toLocaleString('de-DE') : 0} % von ${tsd(bau)} Baukosten`);
+    setz('f-afa', tsd(afa) + ' p. a.'); setz('f-afa-t', `brutto ${tsd(bau / ND)} – zu ${Math.round(q * 100)} % durch Fördermittel gedeckt`);
+    setz('f-ov', tsd(ov) + ' p. a.'); setz('f-erl', tsd(erl) + ' p. a.'); setz('f-erl-t', `${Math.round(ausl * 100)} % Auslastung von ${tsd(miete)}`);
+    const ewSumme = GS.reduce((a, g) => a + g.ew, 0);
+    const teile = GS.map((g) => { const betrag = Math.max(0, verlust) * komm * (g.ew / ewSumme); return { ...g, betrag, jeEw: betrag / g.ew }; });
+    // Schwellen je Kommune nach Haushaltslage: mit Rücklagenverzehr oder Fehlbetragsvortrag (Stufe 3+) strenger
+    const ampelVon = (t: any) => { const [gr, ge] = t.s >= 3 ? [10, 40] : [25, 75]; return t.jeEw < gr ? 0 : t.jeEw < ge ? 1 : 2; };
+    const schlimmste = Math.max(...teile.map(ampelVon));
+    const dl = document.getElementById('aufteilung')!;
+    dl.innerHTML = teile.map((t) => `<dt>${t.name} · ${t.kk.toLocaleString('de-DE')} € Kassenkredite je EW</dt><dd>${eur(t.betrag)} p. a. · ${eur(t.jeEw)} je EW</dd>`).join('') + `<dt>Kreis Düren</dt><dd>${eur(Math.max(0, verlust) * (1 - komm))} p. a.</dd>`;
+    const stufe = verlust <= 0 ? 'g' : (['g', 'y', 'r'] as const)[schlimmste];
+    ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
+    if (verlust <= 0) {
+      setz('u-titel', `Tragfähig: Der Hub trägt sich mit ${eur(-verlust)} Überschuss im Jahr`);
+      setz('u-text', 'Bei dieser Auslastung decken die Mieterlöse Bewirtschaftung, Abschreibungen und Betriebsgesellschaft. Entscheidend ist, wie schnell der Hub diese Auslastung erreicht.');
+    } else {
+      const titel = { g: 'Tragfähig', y: 'Tragfähig mit Auflagen', r: 'Tragfähigkeit nur mit Gegenfinanzierung' }[stufe];
+      const jl = teile[0];
+      setz('u-titel', `${titel}: ${eur(verlust)} Ausgleichsbedarf im Jahr`);
+      setz('u-text', `Davon tragen die drei Kommunen ${eur(verlust * komm)}, Jülich allein ${eur(jl.betrag)} – ${eur(jl.jeEw)} je Einwohner, bei ${jl.kk.toLocaleString('de-DE')} € Kassenkrediten je Einwohner und genehmigtem Fehlbetragsvortrag. Die Auslastung ist der stärkste Hebel: Jeder Prozentpunkt mehr senkt den Ausgleich um ${eur(miete / 100)}.`);
+    }
+  };
+  box.querySelectorAll('input').forEach((i) => i.addEventListener('input', rechne));
+  rechne();
+</script>
+<Footer />
+</Base>

@@ -1,0 +1,11 @@
+---
+// Navigation zwischen den Muster-Tragfähigkeits-Checks im Rheinischen Revier.
+interface Props { aktiv: string }
+const { aktiv } = Astro.props;
+const CHECKS = [
+  { id: 'buergewald', name: 'Bürgewald · Merzenich', url: '/revier/tragfaehigkeits-check/' },
+  { id: 'erkelenz', name: 'Fünf Dörfer · Erkelenz', url: '/revier/check-erkelenz/' },
+  { id: 'brainergy', name: 'Brainergy Park · Jülich', url: '/revier/check-brainergy-park/' },
+];
+---
+<nav class="tc-nav" aria-label="Muster-Checks">{CHECKS.map((c) => <a href={c.url} class={c.id === aktiv ? 'an' : ''}>{c.name}</a>)}<a href="/revier/rheinisches-revier/">Alle 65 Kommunen →</a></nav>

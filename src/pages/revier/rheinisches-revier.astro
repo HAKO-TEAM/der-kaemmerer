@@ -88,11 +88,12 @@ const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
 .rr-tab th { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#64748b; text-align:right; padding:9px 6px; border-bottom:1px solid #14233a; cursor:pointer; white-space:nowrap; user-select:none; } .rr-tab th:nth-child(-n+3), .rr-tab td:nth-child(-n+3) { text-align:left; }
 .rr-tab td { padding:8px 6px; border-bottom:1px solid #f1f5f9; text-align:right; } .rr-tab a { color:#0f172a; font-weight:600; text-decoration:none; } .rr-tab a:hover { color:#2563eb; }
 .rr-tab .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:11.5px; font-weight:700; color:#fff; white-space:nowrap; } .rr-tab .sp { color:#b91c1c; font-weight:700; }
-.rr-check { display:flex; gap:24px; align-items:center; justify-content:space-between; margin:44px 0 0; padding:26px 28px; border-radius:18px; text-decoration:none; color:#0f172a; background:linear-gradient(135deg,#fffbeb,#fef3c7); border:1px solid #fcd34d; box-shadow:0 22px 50px -40px rgba(202,138,4,.9); transition:transform .2s; }
-.rr-check:hover { transform:translateY(-2px); } .rr-check span { font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#a16207; }
-.rr-check h2 { font-family:'Playfair Display',Georgia,serif; font-size:24px; margin:6px 0 8px; line-height:1.2; } .rr-check p { margin:0; color:#422006; line-height:1.6; font-size:15px; max-width:70ch; }
-.rr-check b { white-space:nowrap; background:#14233a; color:#fff; padding:12px 18px; border-radius:10px; }
-@media (max-width:900px){ .rr-check{flex-direction:column; align-items:flex-start} }
+.rr-checks { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.rr-check { display:flex; flex-direction:column; padding:22px; border-radius:18px; text-decoration:none; color:#0f172a; background:linear-gradient(160deg,#fffbeb,#fef3c7); border:1px solid #fcd34d; box-shadow:0 22px 50px -40px rgba(202,138,4,.9); transition:transform .2s; }
+.rr-check:hover { transform:translateY(-3px); } .rr-check span { font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:#a16207; }
+.rr-check h3 { font-family:'Playfair Display',Georgia,serif; font-size:22px; margin:8px 0 8px; line-height:1.2; } .rr-check p { margin:0 0 16px; color:#422006; line-height:1.55; font-size:14.5px; flex:1; }
+.rr-check b { align-self:flex-start; background:#14233a; color:#fff; padding:10px 15px; border-radius:10px; font-size:14px; }
+@media (max-width:900px){ .rr-checks{grid-template-columns:1fr} }
 .rr-weiter { margin:48px 0 70px; border-radius:18px; background:linear-gradient(135deg,#14233a,#1e3a5f); color:#fff; padding:34px; display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center; }
 .rr-weiter h2 { font-family:'Playfair Display',Georgia,serif; font-size:28px; margin:0 0 10px; } .rr-weiter p { color:rgba(255,255,255,.78); line-height:1.65; margin:0 0 10px; font-size:15.5px; }
 .rr-weiter ul { margin:0; padding:0; list-style:none; } .rr-weiter li { padding:10px 0 10px 28px; position:relative; border-bottom:1px solid rgba(255,255,255,.12); font-size:15px; line-height:1.5; } .rr-weiter li::before { content:'→'; position:absolute; left:0; color:#fcd34d; font-weight:700; }
@@ -176,11 +177,15 @@ const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
       <p class="rr-hin">Gesuchte Berufsfelder im Revier: {felder.map(([f, c]) => `${(FELD_NAMEN as any)[f] || 'Sonstige'} ${c}`).join(' · ')}. Schulden der Revierkommunen im Kernhaushalt insgesamt rund {mio(schSumme)} Mio. €. Quellen: Statistische Ämter des Bundes und der Länder (Regionaldatenbank), MHKBD NRW (Haushaltsstatus), Stellenmarkt Der Kämmerer.</p>
     </section>
 
-    <a class="rr-check" href="/revier/tragfaehigkeits-check/">
-      <div><span>Muster · Tragfähigkeits-Check</span><h2>Bürgewald (Morschenich-Alt): Trägt die Gemeinde das Projekt – auch in zehn Jahren?</h2>
-      <p>Rund 57 Mio. € Förderung bei 97,5 % Förderquote – der Eigenanteil geht gegen null, die Folgekosten bleiben. Der Check legt Eigenanteil, Betrieb, Abschreibungen und Personal neben die Haushaltslage von Merzenich, mit Reglern zum Durchrechnen.</p></div>
-      <b>Check ansehen →</b>
-    </a>
+    <section class="rr-ab">
+      <h2>Tragfähigkeits-Checks: drei Projekte, drei Lagen</h2>
+      <p class="rr-unter">Muster aus Kämmerersicht – öffentliche Projektdaten, amtliche Haushaltslage, Folgekosten als Annahmen mit Reglern zum Durchrechnen.</p>
+      <div class="rr-checks">
+        <a class="rr-check" href="/revier/tragfaehigkeits-check/"><span>Merzenich · Rücklagenverzehr</span><h3>Bürgewald (Morschenich-Alt)</h3><p>Rund 57 Mio. € bei 97,5 % Förderung – der Eigenanteil geht gegen null, der Betrieb bleibt.</p><b>Check ansehen →</b></a>
+        <a class="rr-check" href="/revier/check-erkelenz/"><span>Erkelenz · solide aufgestellt</span><h3>Fünf Dörfer am Tagebau</h3><p>14,3 Mio. € bewilligt, 168 Mio. € beantragt – wie viel bindet das Vorhaben dauerhaft?</p><b>Check ansehen →</b></a>
+        <a class="rr-check" href="/revier/check-brainergy-park/"><span>Jülich, Niederzier, Titz · Gesellschafter</span><h3>Brainergy Park Jülich</h3><p>67,5 Mio. € für den Hub – wer trägt den Betrieb ab 2027 über den Verlustausgleich?</p><b>Check ansehen →</b></a>
+      </div>
+    </section>
 
     <div class="rr-weiter">
       <div>
@@ -189,7 +194,7 @@ const tab = [...gs].sort((a, b) => (b.einwohner || 0) - (a.einwohner || 0));
         <div class="rr-sign">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de">chefredaktion@derkaemmerer.de</a></div>
       </div>
       <ul>
-        <li><b><a href="/revier/tragfaehigkeits-check/" style="color:#fff">Tragfähigkeits-Check je Projekt</a></b><br><span>Eigenanteil, Folgekosten, Abschreibungen und Personal neben der Haushaltslage – als Einseiter für Rat, Aufsicht und Agentur.</span></li>
+        <li><b>Tragfähigkeits-Check je Projekt</b><br><span>Eigenanteil, Folgekosten, Abschreibungen und Personal neben der Haushaltslage – als Einseiter für Rat, Aufsicht und Agentur.</span></li>
         <li><b>Revier-Lagebericht, monatlich</b><br><span>Haushaltslage, Sperren und Personalmarkt aller 65 Kommunen mit Veränderung zum Vormonat – für die Agentur, die Kreise und die Räte.</span></li>
         <li><b>Kämmerer-Cockpit für die Kommunen</b><br><span>Haushaltsvollzug wochenaktuell, Hochrechnung als Korridor – damit Eigenanteile früh gesichert sind.</span></li>
         <li><b>Personal für die Umsetzung</b><br><span>Nachbesetzungs-Check: welche Stellen über Fachverfahren laufen und Kapazität für Strukturwandelprojekte freigeben.</span></li>

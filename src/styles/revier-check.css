@@ -1,0 +1,33 @@
+
+.tc { color:#0f172a; } .tc-w { max-width:1080px; margin:0 auto; padding:0 28px; }
+.tc-kopf { background:radial-gradient(900px 360px at 90% -10%, rgba(234,179,8,.22), transparent 60%), #14233a; color:#fff; padding:44px 0 36px; }
+.tc-pfad { font-size:13px; color:rgba(255,255,255,.6); } .tc-pfad a { color:#fcd34d; text-decoration:none; }
+.tc-badge { display:inline-block; margin-left:10px; background:#fcd34d; color:#14233a; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; border-radius:999px; vertical-align:2px; }
+.tc-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,50px); line-height:1.06; margin:14px 0 12px; }
+.tc-kopf p { color:rgba(255,255,255,.78); font-size:17px; line-height:1.55; max-width:66ch; margin:0; }
+.tc-ab { padding:36px 0 4px; } .tc-ab > h2 { font-family:'Playfair Display',Georgia,serif; font-size:27px; margin:0 0 6px; } .tc-unter { color:#64748b; font-size:14.5px; margin:0 0 16px; line-height:1.55; max-width:74ch; }
+.tc-zwei { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.tc-steck { border:1px solid #e2e8f0; border-radius:14px; background:#fff; padding:18px 20px; }
+.tc-steck h3 { margin:0 0 10px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#64748b; }
+.tc-steck dl { display:grid; grid-template-columns:1fr auto; gap:7px 14px; margin:0; font-size:14.5px; } .tc-steck dt { color:#475569; } .tc-steck dd { margin:0; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.tc-steck small { display:block; margin-top:10px; font-size:12px; color:#64748b; line-height:1.5; }
+.tc-urteil { display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:center; border-radius:18px; padding:24px 26px; background:#fff; border:1px solid #e2e8f0; box-shadow:0 22px 50px -38px rgba(15,23,42,.7); }
+.tc-ampel { display:flex; flex-direction:column; gap:8px; background:#14233a; padding:12px; border-radius:16px; } .tc-ampel i { width:34px; height:34px; border-radius:50%; background:#334155; transition:background .3s, box-shadow .3s; }
+.tc-ampel i.an.g { background:#22c55e; box-shadow:0 0 18px #22c55e; } .tc-ampel i.an.y { background:#facc15; box-shadow:0 0 18px #facc15; } .tc-ampel i.an.r { background:#ef4444; box-shadow:0 0 18px #ef4444; }
+.tc-urteil h2 { font-family:'Playfair Display',Georgia,serif; font-size:26px; margin:0 0 6px; } .tc-urteil p { margin:0; color:#334155; line-height:1.6; font-size:15.5px; }
+.tc-felder { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:18px; }
+.tc-feld { border:1px solid #e2e8f0; border-radius:14px; padding:16px; background:#fff; border-top:4px solid var(--f,#94a3b8); }
+.tc-feld span { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#64748b; font-weight:700; } .tc-feld b { display:block; font:700 26px/1.1 'Playfair Display',Georgia,serif; margin:6px 0; color:#14233a; font-variant-numeric:tabular-nums; } .tc-feld small { font-size:12.5px; color:#475569; line-height:1.45; display:block; }
+.tc-regler { display:grid; grid-template-columns:repeat(2,1fr); gap:14px 26px; border:1px solid #e2e8f0; border-radius:14px; background:#f8fafc; padding:18px 20px; }
+.tc-regler label { font-size:13.5px; color:#334155; display:block; } .tc-regler label b { float:right; color:#14233a; font-variant-numeric:tabular-nums; } .tc-regler input { width:100%; accent-color:#ca8a04; margin-top:6px; }
+.tc-regler small { display:block; color:#64748b; font-size:12px; margin-top:2px; }
+.tc-auflagen { counter-reset:a; list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+.tc-auflagen li { counter-increment:a; position:relative; padding:14px 16px 14px 56px; border:1px solid #e2e8f0; border-radius:12px; background:#fff; line-height:1.55; font-size:15px; }
+.tc-auflagen li::before { content:counter(a); position:absolute; left:16px; top:14px; width:26px; height:26px; border-radius:50%; background:#ca8a04; color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:13px; }
+.tc-methode { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .tc-methode div { border-radius:14px; padding:16px 18px; background:#14233a; color:#fff; } .tc-methode b { color:#fcd34d; display:block; margin-bottom:6px; } .tc-methode p { margin:0; color:rgba(255,255,255,.78); font-size:14px; line-height:1.55; }
+.tc-hin { font-size:12px; color:#64748b; line-height:1.6; margin:12px 0 0; } .tc-hin a { color:#2563eb; }
+.tc-zurueck { margin:40px 0 70px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; border-top:1px solid #e2e8f0; padding-top:22px; }
+.tc-zurueck a { color:#14233a; font-weight:700; text-decoration:none; } .tc-zurueck a.btn { background:#14233a; color:#fff; padding:11px 16px; border-radius:8px; }
+@media (max-width:900px){ .tc-w{padding:0 16px} .tc-zwei,.tc-regler,.tc-methode{grid-template-columns:1fr} .tc-felder{grid-template-columns:1fr 1fr} .tc-urteil{grid-template-columns:1fr} .tc-ampel{flex-direction:row; width:max-content} }
+
+.tc-nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; } .tc-nav a { font-size:13px; color:#fcd34d; border:1px solid rgba(252,211,77,.4); border-radius:999px; padding:5px 12px; text-decoration:none; } .tc-nav a.an { background:#fcd34d; color:#14233a; font-weight:700; }

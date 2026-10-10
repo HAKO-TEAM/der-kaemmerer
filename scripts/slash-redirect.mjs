@@ -19,6 +19,8 @@ const revierHost = [{ type: 'host', value: 'revier.derkaemmerer.de' }];
 const revier = [
   { src: '^/$', has: revierHost, dest: '/revier/rheinisches-revier/', check: true },
   { src: '^/check/?$', has: revierHost, dest: '/revier/tragfaehigkeits-check/', check: true },
+  { src: '^/check/erkelenz/?$', has: revierHost, dest: '/revier/check-erkelenz/', check: true },
+  { src: '^/check/juelich/?$', has: revierHost, dest: '/revier/check-brainergy-park/', check: true },
 ];
 const gleich = (x, r) => x.src === r.src && x.has?.[0]?.value === r.has[0].value;
 for (const r of [...personal, ...revier].reverse()) if (!config.routes.some((x) => gleich(x, r))) config.routes.unshift(r);

@@ -1,0 +1,73 @@
+---
+// Rechner des Tragfähigkeits-Checks (Revier): Ampel, vier Prüffelder, Regler. Folgekostenmodell für Vorhaben,
+// deren Anlagen teilweise dauerhaft bei der Kommune bleiben. Alle Annahmen als Regler, Startwerte je Fall.
+import { personalkosten } from '../lib/markt/nachbesetzung.mjs';
+interface Props {
+  volumen: number; volMin?: number; volMax?: number; volHinweis?: string;
+  quote: number; quoteHinweis: string; ew: number; kk: number; lage: string;
+  anteil?: number; unterh?: number; nd?: number; vza?: number; zins?: number; erl?: number; erlMax?: number;
+}
+const p = Astro.props;
+const PK = Math.round(personalkosten('E 11') / 1000) * 1000;
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+const mio = (x: number) => (x / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 1 });
+---
+<section class="tc-ab">
+  <div class="tc-urteil">
+    <div class="tc-ampel" aria-hidden="true"><i class="r" id="a-r"></i><i class="y" id="a-y"></i><i class="g" id="a-g"></i></div>
+    <div><h2 id="u-titel">–</h2><p id="u-text">–</p></div>
+  </div>
+  <div class="tc-felder">
+    <div class="tc-feld" style="--f:#14233a"><span>Eigenanteil</span><b id="f-eigen">–</b><small id="f-eigen-t">–</small></div>
+    <div class="tc-feld" style="--f:#ca8a04"><span>Folgekosten Betrieb</span><b id="f-folge">–</b><small id="f-folge-t">–</small></div>
+    <div class="tc-feld" style="--f:#2563eb"><span>Abschreibungen netto</span><b id="f-afa">–</b><small id="f-afa-t">–</small></div>
+    <div class="tc-feld" style="--f:#7c3aed"><span>Personal Umsetzung</span><b id="f-pers">–</b><small id="f-pers-t">–</small></div>
+  </div>
+</section>
+
+<section class="tc-ab">
+  <h2>Annahmen – mit Reglern prüfen</h2>
+  <p class="tc-unter">Im echten Check kommen diese Werte aus Bewilligungsbescheid, Maßnahmenplan und Haushalt der Kommune. Hier stehen Musterwerte; jede Änderung rechnet das Ergebnis sofort neu.</p>
+  <div class="tc-regler" id="regler" data-ew={p.ew} data-pk={PK} data-kk={p.kk} data-lage={p.lage}>
+    {p.volMin != null
+      ? <label>Investitionsvolumen <b id="v-vol"></b><input type="range" id="r-vol" min={p.volMin} max={p.volMax} step="500000" value={p.volumen}><small>{p.volHinweis}</small></label>
+      : <input type="hidden" id="r-vol" value={p.volumen} />}
+    <label>Förderquote <b id="v-quote"></b><input type="range" id="r-quote" min="90" max="100" step="0.5" value={p.quote * 100}><small>{p.quoteHinweis}</small></label>
+    <label>Anteil, der dauerhaft bei der Kommune bleibt <b id="v-anteil"></b><input type="range" id="r-anteil" min="20" max="90" step="5" value={p.anteil ?? 50}><small>Straßen, Grün, Gemeinschaftsgebäude – der Rest wird veräußert oder von Dritten betrieben.</small></label>
+    <label>Unterhaltung und Betrieb p. a. <b id="v-unterh"></b><input type="range" id="r-unterh" min="0.5" max="3" step="0.25" value={p.unterh ?? 1.5}><small>in % des bei der Kommune verbleibenden Investitionswerts.</small></label>
+    <label>Nutzungsdauer der Anlagen <b id="v-nd"></b><input type="range" id="r-nd" min="20" max="60" step="5" value={p.nd ?? 40}><small>Abschreibung; in Höhe der Förderquote durch Auflösung der Sonderposten gedeckt.</small></label>
+    <label>Projektpersonal in der Verwaltung <b id="v-vza"></b><input type="range" id="r-vza" min="0" max="6" step="0.5" value={p.vza ?? 2}><small>Vollzeitstellen E 11 (KGSt-Personalkosten {z(PK)} € je Jahr), soweit nicht förderfähig.</small></label>
+    <label>Zins für den Eigenanteil <b id="v-zins"></b><input type="range" id="r-zins" min="1" max="6" step="0.25" value={p.zins ?? 3.5}><small>Finanzierung über Kredit, Annuität 30 Jahre.</small></label>
+    <label>Erlöse und Entgelte p. a. <b id="v-erl"></b><input type="range" id="r-erl" min="0" max={p.erlMax ?? 1500000} step="50000" value={p.erl ?? 250000}><small>Mieten, Pachten, Gebühren, Erbbauzinsen – mindern die laufende Belastung.</small></label>
+  </div>
+  <p class="tc-hin">Ampel-Schwellen im Muster: laufende Nettobelastung unter 25 € je Einwohner und Jahr grün, bis 75 € gelb, darüber rot. Im echten Check richtet sich die Schwelle nach Haushaltsstatus und Rücklagen-Reichweite der Kommune.</p>
+</section>
+<script>
+  const box = document.getElementById('regler') as HTMLElement;
+  const d = box.dataset, EW = +d.ew!, PK = +d.pk!, KK = +d.kk!, LAGE = d.lage!;
+  const v = (id: string) => +(document.getElementById(id) as HTMLInputElement).value;
+  const setz = (id: string, t: string) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  const eur = (x: number) => Math.round(x).toLocaleString('de-DE') + ' €';
+  const tsd = (x: number) => (Math.abs(x) >= 1e6 ? (x / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' Mio. €' : Math.round(x / 1000).toLocaleString('de-DE') + ' T€');
+  const rechne = () => {
+    const VOL = v('r-vol'), QUOTE = v('r-quote') / 100, anteil = v('r-anteil') / 100, unterh = v('r-unterh') / 100, nd = v('r-nd'), vza = v('r-vza'), zins = v('r-zins') / 100, erl = v('r-erl');
+    setz('v-vol', tsd(VOL)); setz('v-quote', `${(QUOTE * 100).toLocaleString('de-DE')} %`); setz('v-anteil', `${Math.round(anteil * 100)} %`);
+    setz('v-unterh', `${(unterh * 100).toLocaleString('de-DE')} %`); setz('v-nd', `${nd} Jahre`); setz('v-vza', `${vza.toLocaleString('de-DE')} VZÄ`);
+    setz('v-zins', `${(zins * 100).toLocaleString('de-DE')} %`); setz('v-erl', tsd(erl));
+    const eigen = VOL * (1 - QUOTE);
+    const annuitaet = eigen > 0 ? eigen * (zins / (1 - Math.pow(1 + zins, -30))) : 0;
+    const verbleib = VOL * anteil, betrieb = verbleib * unterh, afaNetto = (verbleib / nd) * (1 - QUOTE), personal = vza * PK;
+    const netto = annuitaet + betrieb + afaNetto + personal - erl, jeEw = netto / EW;
+    setz('f-eigen', tsd(eigen)); setz('f-eigen-t', `${eur(eigen / EW)} je Einwohner · Kredit ${eur(annuitaet)} p. a.`);
+    setz('f-folge', tsd(betrieb) + ' p. a.'); setz('f-folge-t', `${eur(betrieb / EW)} je Einwohner und Jahr, vor Erlösen`);
+    setz('f-afa', tsd(afaNetto) + ' p. a.'); setz('f-afa-t', `brutto ${tsd(verbleib / nd)} – zu ${(QUOTE * 100).toLocaleString('de-DE')} % durch Sonderposten gedeckt`);
+    setz('f-pers', tsd(personal) + ' p. a.'); setz('f-pers-t', `${vza.toLocaleString('de-DE')} Vollzeitstellen E 11 nach KGSt`);
+    const stufe = jeEw < 25 ? 'g' : jeEw < 75 ? 'y' : 'r';
+    ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
+    const titel = { g: 'Tragfähig', y: 'Tragfähig mit Auflagen', r: 'Tragfähigkeit nur mit Gegenfinanzierung' }[stufe];
+    setz('u-titel', `${titel}: ${eur(Math.max(0, netto))} laufende Nettobelastung im Jahr`);
+    setz('u-text', `Das entspricht ${eur(Math.max(0, jeEw))} je Einwohner und Jahr. ${eigen < 1 ? 'Der Eigenanteil ist null' : `Der Eigenanteil ist mit ${tsd(eigen)} klein`} – die Last liegt im Betrieb: Was dauerhaft bei der Kommune bleibt, kostet Unterhaltung und Personal, Jahr für Jahr, ohne Förderung. ${LAGE} ${KK > 0 ? `Bei ${eur(KK)} Kassenkrediten je Einwohner entscheidet diese Größe über die Tragfähigkeit.` : 'Ohne nennenswerte Kassenkredite hat die Kommune Spielraum – der Check zeigt, wie viel davon das Vorhaben dauerhaft bindet.'}`);
+  };
+  box.querySelectorAll('input').forEach((i) => i.addEventListener('input', rechne));
+  rechne();
+</script>

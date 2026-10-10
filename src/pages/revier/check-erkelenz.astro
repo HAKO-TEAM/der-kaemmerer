@@ -1,0 +1,85 @@
+---
+// Muster-Tragfähigkeits-Check: städtebauliche Entwicklung der fünf Erkelenzer Dörfer am Tagebau Garzweiler.
+// Projektdaten aus öffentlichen Quellen, Folgekosten als ausgewiesene Musterannahmen mit Reglern. Nicht verlinkt außer von der Revier-Seite, noindex.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import gemeinden from '../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN } from '../../lib/haushaltsstatus.mjs';
+import FolgekostenCheck from '../../components/FolgekostenCheck.astro';
+import CheckNav from '../../components/CheckNav.astro';
+import '../../styles/revier-check.css';
+
+const g: any = (gemeinden as any[]).find((x) => x.name === 'Erkelenz' && x.land === 'NW');
+const H = (hebesaetze as any)[g.ags], S = (schulden as any)[g.ags], st = (STUFEN as any)[(hsNw as any).gemeinden[g.ags].s];
+const P = { volumen: 168_000_000, quote: 0.975 };
+const z = (x: number) => Math.round(x).toLocaleString('de-DE');
+const QUELLEN = [
+  ['Perspektive.Struktur.Wandel: 14,3 Mio. € für die Erkelenzer Dörfer (November 2025)', 'https://perspektive-struktur-wandel.nrw/2025/11/11/zukunftsdoerfer_erkelenz_entwicklung-2/'],
+  ['MHKBD NRW: Verkaufsprozess für erste Immobilien', 'https://www.mhkbd.nrw/presse-und-medien/pressemitteilungen/neues-zuhause-fuer-alte-heimat-verkaufsprozess-fuer-erste-immobilien-erkelenzer-doerfer-keyenberg-kuckum-oberwestrich-unterwestrich-und-berverath-startet'],
+];
+---
+<Base title="Muster: Tragfähigkeits-Check Erkelenzer Dörfer" description="Tragfähigkeits-Check eines Strukturwandelprojekts aus Kämmerersicht – Muster mit Annahmen." noindex={true}>
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<div class="tc">
+  <section class="tc-kopf"><div class="tc-w">
+    <div class="tc-pfad"><a href="/revier/rheinisches-revier/">Rheinisches Revier</a> › Tragfähigkeits-Check <span class="tc-badge">Muster</span></div>
+    <h1>Fünf Dörfer am Tagebau: Wie viel Erkelenz dauerhaft bindet</h1>
+    <p>Keyenberg, Kuckum, Ober- und Unterwestrich und Berverath sollen wieder belebt werden – beantragt sind insgesamt 168 Mio. €. Erkelenz steht finanziell solide da. Gerade deshalb lohnt der Blick nach vorn: Fünf Dörfer bedeuten dauerhaft Straßen, Grün, Gemeinschaftsorte und Personal. Projektdaten aus öffentlichen Quellen, Folgekosten als Annahmen mit Reglern.</p>
+    <CheckNav aktiv="erkelenz" />
+  </div></section>
+
+  <div class="tc-w">
+    <section class="tc-ab">
+      <div class="tc-zwei">
+        <div class="tc-steck"><h3>Projekt</h3><dl>
+          <dt>Vorhaben</dt><dd>Städtebauliche Entwicklung, fünf Dörfer</dd>
+          <dt>Erster Förderbescheid (10.11.2025)</dt><dd>rund 14,3 Mio. €</dd>
+          <dt>Beantragt insgesamt</dt><dd>168 Mio. €</dd>
+          <dt>Erste Schritte</dt><dd>Infrastruktur, Grunderwerb, Dorfgemeinschaftshaus</dd>
+          <dt>Förderquote</dt><dd>Annahme 97,5 % wie Bürgewald</dd></dl>
+          <small>Quellen: {QUELLEN.map(([t, u], i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener nofollow" style="color:#2563eb">{t}</a></>)}. Die Immobilien aus dem Bestand von RWE Power werden in Abstimmung mit Land und Stadt verkauft; ihre Erlöse sind im Muster nicht der Stadt zugerechnet.</small>
+        </div>
+        <div class="tc-steck"><h3>Kommune: Stadt Erkelenz</h3><dl>
+          <dt>Einwohner</dt><dd>{z(g.einwohner)}</dd>
+          <dt>Haushaltsstatus (31.12.2025)</dt><dd style={`color:${st.farbe === '#facc15' ? '#a16207' : st.farbe}`}>{st.lang}</dd>
+          <dt>Kassenkredite je Einwohner</dt><dd>{z(S.kassenkredite_je_ew)} € ({(S.kassenkredite_je_ew * g.einwohner / 1e6).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Mio. €)</dd>
+          <dt>Schulden je Einwohner</dt><dd>{z(S.schulden_je_ew)} €</dd>
+          <dt>Grundsteuer B / Gewerbesteuer</dt><dd>{H.grundsteuer_b} % / {H.gewerbesteuer} %</dd></dl>
+          <small>Quelle: MHKBD NRW (Haushaltsstatus), Statistische Ämter (Schulden 31.12.2025, Hebesätze 2024). <a href="/gemeinden/nordrhein-westfalen/erkelenz/">Gemeindeprofil Erkelenz →</a></small>
+        </div>
+      </div>
+    </section>
+
+    <FolgekostenCheck volumen={P.volumen} volMin={14_300_000} volMax={200_000_000} volHinweis="Erster Bescheid 14,3 Mio. €, beantragt 168 Mio. € in mehreren Abschnitten." quote={P.quote} quoteHinweis="Annahme wie beim Programm für Bürgewald; der Eigenanteil kann gegen null gehen." ew={g.einwohner} kk={S.kassenkredite_je_ew} lage="Erkelenz gleicht seinen Haushalt derzeit über die Ausgleichsrücklage aus." anteil={45} vza={3} erl={400000} erlMax={3000000} />
+
+    <section class="tc-ab">
+      <h2>Empfehlung aus Kämmerersicht</h2>
+      <ol class="tc-auflagen">
+        <li><b>Folgekosten je Dorf und Abschnitt beziffern.</b> Bei fünf Dörfern und mehreren Förderabschnitten entsteht die Last schrittweise – ein Folgekostenplan je Abschnitt hält sie im Blick, bevor die Ausgleichsrücklage sie trägt.</li>
+        <li><b>Gemeinschaftsorte bündeln und mit Trägern betreiben.</b> Ein Dorfgemeinschaftshaus je Dorf oder ein gemeinsamer Ort mit Vereinen und Kirche als Betreiber – das entscheidet über Jahrzehnte Betriebskosten.</li>
+        <li><b>Rückfluss aus der Wertsteigerung sichern.</b> Wenn die Immobilien verkauft werden, steigt der Bodenwert durch die öffentliche Infrastruktur. Erschließungsbeiträge, städtebauliche Verträge oder Erbbaurecht holen einen Teil davon für den Betrieb zurück.</li>
+      </ol>
+    </section>
+
+    <section class="tc-ab">
+      <h2>So entsteht der Check</h2>
+      <div class="tc-methode">
+        <div><b>1 · Haushaltslage</b><p>Amtlicher Status, Rücklagen, Kassenkredite, Hebesätze und Vollzug der Kommune – aus den Datenbeständen von Der Kämmerer, monatlich fortgeschrieben.</p></div>
+        <div><b>2 · Projekt</b><p>Bewilligung, Maßnahmenplan und Eigentumsverhältnisse; daraus Eigenanteil, Abschreibungen, Sonderposten und Betriebskosten über 20 Jahre.</p></div>
+        <div><b>3 · Urteil</b><p>Ampel und Auflagen aus Kämmerersicht – als Einseiter für Rat, Aufsicht und Agentur. Für alle Projekte einer Förderrunde vergleichbar.</p></div>
+      </div>
+      <p class="tc-hin">Muster zur Veranschaulichung: Projektzahlen aus öffentlichen Quellen, Folgekosten und Personal als Annahmen. Es handelt sich um keine Bewertung der Stadt Erkelenz oder des Vorhabens.</p>
+    </section>
+
+    <div class="tc-zurueck"><a href="/revier/rheinisches-revier/">← Haushaltslage der 65 Revierkommunen</a><span style="font-size:14px;color:#475569">Michael G. Kosel · Chefredakteur Der Kämmerer · <a href="mailto:chefredaktion@derkaemmerer.de" style="color:#2563eb;font-weight:600">chefredaktion@derkaemmerer.de</a></span></div>
+  </div>
+</div>
+
+<Footer />
+</Base>
