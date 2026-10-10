@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 import { verzeichnis } from './src/lib/gemeinden.mjs';
 import { rehypeGemeindeLinks } from './src/lib/gemeinde-links.mjs';
 import { stellenJeGemeinde } from './src/lib/stellen-ort.mjs';
+import { rehypeLexikonLinks } from './src/lib/lexikon.mjs';
 
 // Gemeindeprofile werden per Funktion ausgeliefert – für die Sitemap hier alle Adressen aufzählen.
 const gemeinden = JSON.parse(readFileSync(new URL('./src/data/spiegel/gemeinden.json', import.meta.url), 'utf8'));
@@ -19,7 +20,7 @@ export default defineConfig({
   integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/vorschau/'), customPages: gemeindeSeiten })],
   site: 'https://derkaemmerer.de',
   // Erste Nennung einer Gemeinde in Fachartikeln verlinkt auf ihr Profil
-  markdown: { rehypePlugins: [rehypeGemeindeLinks({ gemeinden })] },
+  markdown: { rehypePlugins: [rehypeLexikonLinks(), rehypeGemeindeLinks({ gemeinden })] },
   output: 'static',
   security: { checkOrigin: false },
   adapter: vercel({ maxDuration: 60 }),

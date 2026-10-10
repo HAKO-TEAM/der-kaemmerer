@@ -1,0 +1,66 @@
+---
+// Lexikon Kommunalfinanzen: ein Begriff je Seite mit Definition, Live-Zahl aus den Datenbeständen und verwandten Begriffen.
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import sperren from '../../data/haushaltslage/sperren.json';
+import hsNw from '../../data/spiegel/haushaltsstatus_nw.json';
+import hebesaetze from '../../data/spiegel/hebesaetze.json';
+import schulden from '../../data/spiegel/schulden.json';
+import markt from '../../data/markt/markt.json';
+import { LEXIKON, lexikonUrl, liveZahlen } from '../../lib/lexikon.mjs';
+
+export function getStaticPaths() { return LEXIKON.map((e) => ({ params: { begriff: e.slug }, props: { e } })); }
+const { e } = Astro.props as any;
+const live = e.live ? (liveZahlen({ sperren, hsNw, hebesaetze, schulden, markt } as any) as any)[e.live] : null;
+const verwandt = e.verwandt.map((s: string) => LEXIKON.find((x) => x.slug === s)).filter(Boolean);
+const gleicheKat = LEXIKON.filter((x) => x.kategorie === e.kategorie && x.slug !== e.slug && !e.verwandt.includes(x.slug));
+const kurzName = e.begriff.replace(/\s*\(.*?\)\s*/g, '');
+const titel = `${e.begriff}: Definition und Bedeutung für Kommunen`;
+const url = `https://derkaemmerer.de${lexikonUrl(e.slug)}`;
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: e.begriff, description: e.kurz, url,
+    inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Lexikon Kommunalfinanzen', url: 'https://derkaemmerer.de/lexikon/' } },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: `Was bedeutet „${kurzName}“?`, acceptedAnswer: { '@type': 'Answer', text: `${e.kurz} ${e.text[0]}` } }] },
+];
+---
+<Base title={titel} description={e.kurz.slice(0, 158)}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+.lx { color:#0f172a; } .lx-w { max-width:820px; margin:0 auto; padding:0 28px; }
+.lx-kopf { background:#172840; color:#fff; padding:38px 0 34px; border-bottom:3px solid #2563eb; }
+.lx-pfad { font-size:13px; color:rgba(255,255,255,.6); } .lx-pfad a { color:#93c5fd; text-decoration:none; }
+.lx-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(30px,4.4vw,46px); line-height:1.08; margin:12px 0 14px; }
+.lx-kurz { font-size:18.5px; line-height:1.55; color:#e2e8f0; margin:0; border-left:3px solid #60a5fa; padding-left:16px; }
+.lx-text { padding:30px 0 6px; } .lx-text p { font-size:16.5px; line-height:1.75; color:#1e293b; margin:0 0 16px; }
+.lx-live { display:flex; gap:18px; align-items:center; margin:8px 0 24px; padding:18px 20px; border-radius:12px; background:linear-gradient(135deg,#eff6ff,#f8fafc); border:1px solid #bfdbfe; text-decoration:none; color:#0f172a; }
+.lx-live b { font-family:'Playfair Display',Georgia,serif; font-size:38px; color:#1d4ed8; line-height:1; white-space:nowrap; } .lx-live span { font-size:14.5px; line-height:1.5; color:#334155; }
+.lx-live small { display:block; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#2563eb; font-weight:700; margin-bottom:3px; }
+.lx-ab { padding:18px 0 4px; } .lx-ab h2 { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#64748b; margin:0 0 10px; }
+.lx-chips { display:flex; flex-wrap:wrap; gap:8px; } .lx-chips a { border:1px solid #e2e8f0; border-radius:999px; padding:7px 13px; font-size:14px; color:#0f172a; text-decoration:none; background:#fff; } .lx-chips a:hover { border-color:#2563eb; color:#2563eb; }
+.lx-links a { display:block; padding:9px 0; border-bottom:1px solid #f1f5f9; color:#1d4ed8; text-decoration:none; font-weight:600; font-size:15px; } .lx-links a:hover { text-decoration:underline; }
+.lx-cta { margin:34px 0 60px; background:#172840; color:#fff; border-radius:12px; padding:24px 26px; display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.lx-cta p { margin:0; color:rgba(255,255,255,.78); line-height:1.55; max-width:52ch; } .lx-cta a { background:#2563eb; color:#fff; font-weight:700; padding:11px 16px; border-radius:6px; text-decoration:none; white-space:nowrap; }
+@media (max-width:700px){ .lx-w{padding:0 16px} .lx-live{flex-direction:column; align-items:flex-start} }
+</style>
+<div class="lx">
+  <section class="lx-kopf"><div class="lx-w">
+    <div class="lx-pfad"><a href="/lexikon/">Lexikon Kommunalfinanzen</a> › {e.kategorie}</div>
+    <h1>{e.begriff}</h1>
+    <p class="lx-kurz">{e.kurz}</p>
+  </div></section>
+  <div class="lx-w">
+    <section class="lx-text">
+      {e.text.map((t: string) => <p>{t}</p>)}
+    </section>
+    {live && <a class="lx-live" href={live.link}><b>{live.wert}</b><span><small>Aktuell bei Der Kämmerer</small>{live.text} →</span></a>}
+    {e.links.length > 0 && <section class="lx-ab lx-links"><h2>Weiterlesen</h2>{e.links.map(([l, u]: [string, string]) => <a href={u}>{l} →</a>)}</section>}
+    {verwandt.length > 0 && <section class="lx-ab"><h2>Verwandte Begriffe</h2><div class="lx-chips">{verwandt.map((v: any) => <a href={lexikonUrl(v.slug)}>{v.begriff}</a>)}</div></section>}
+    {gleicheKat.length > 0 && <section class="lx-ab"><h2>Mehr zu {e.kategorie}</h2><div class="lx-chips">{gleicheKat.map((v: any) => <a href={lexikonUrl(v.slug)}>{v.begriff}</a>)}</div></section>}
+    <div class="lx-cta"><p>Das Briefing für Kämmerer: Haushalt, Einnahmen, Personal und Sozialkosten der Kommunen – werbefrei, mit dem persönlichen Lagebericht Ihrer Kommune.</p><a href="/newsletter/#anmelden">Briefing abonnieren</a></div>
+  </div>
+</div>
+<Footer />
+</Base>
