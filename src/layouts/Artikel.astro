@@ -45,6 +45,8 @@ const ressortLabels: Record<string,string> = {
     article p { margin-bottom:16px; }
     article ul, article ol { margin:0 0 16px 20px; }
     article li { margin-bottom:6px; }
+    article :global(a.gemeinde-link) { color:var(--navy); text-decoration:underline; text-decoration-color:#93c5fd; text-underline-offset:3px; }
+    article :global(a.gemeinde-link:hover) { color:#2563eb; }
     article strong { color:var(--navy); font-weight:700; }
     article blockquote { border-left:3px solid var(--blue); padding:12px 16px; margin:20px 0; background:var(--blue-bg); border-radius:0 4px 4px 0; font-style:italic; color:var(--mid); }
     article blockquote p { margin:0; }

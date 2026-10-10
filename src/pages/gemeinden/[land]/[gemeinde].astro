@@ -17,6 +17,7 @@ import { km } from '../../../lib/markt/benchmark.mjs';
 import { niveauText } from '../../../lib/markt/merkmale.mjs';
 import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
 import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
+import { artikelIndex } from '../../../lib/artikel-index';
 
 const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
 const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
@@ -49,6 +50,9 @@ const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
 const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
 const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
+const ai = await artikelIndex(gemeinden as any[]);
+const artikelHier = ai.jeAgs.get(g.ags) || [];
+const artikelListe = artikelHier.length ? artikelHier.slice(0, 8) : ai.neueste;
 const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
   { '@type': 'ListItem', position: 2, name: g.landLang, item: `https://derkaemmerer.de${landUrl}` },
@@ -157,6 +161,14 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
       <div class="gm-karte">
         {h.naechste.map((x: any) => <div class="gm-zeile"><span><a href={`/haushaltssperren/#fall-${x.land}-${x.kommune}`.toLowerCase().replace(/[^a-z0-9äöüß/#]+/g, '-')}>{x.kommune}</a></span><small>{x.km} km</small></div>)}
         <p class="gm-hin">Alle Fälle auf der Karte, mit Quellen: <a href="/haushaltssperren/">Verzeichnis der Haushaltssperren</a> · Hintergrund: <a href="/haushalt/haushaltssperre-2026-stadte/">Haushaltssperre 2026 – Rechtsgrundlagen und Folgen</a></p>
+      </div>
+    </section>
+
+    <section class="gm-ab">
+      <h2>{artikelHier.length ? `${g.name} in den Fachbeiträgen von Der Kämmerer` : 'Aktuelle Fachbeiträge'}</h2>
+      <p class="gm-unter">{artikelHier.length ? `${artikelHier.length} ${artikelHier.length === 1 ? 'Beitrag nennt' : 'Beiträge nennen'} ${g.name}.` : 'Analysen zu Haushalt, Einnahmen und Sozialkosten der Kommunen.'}</p>
+      <div class="gm-karte">
+        {artikelListe.map((a) => <div class="gm-zeile"><a href={a.url}>{a.titel}</a><small>{a.datum.split('-').reverse().join('.')}</small></div>)}
       </div>
     </section>
 

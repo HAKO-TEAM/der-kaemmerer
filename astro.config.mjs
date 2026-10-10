@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 import { readFileSync } from 'node:fs';
 import { verzeichnis } from './src/lib/gemeinden.mjs';
+import { rehypeGemeindeLinks } from './src/lib/gemeinde-links.mjs';
 
 // Gemeindeprofile werden per Funktion ausgeliefert – für die Sitemap hier alle Adressen aufzählen.
 const gemeinden = JSON.parse(readFileSync(new URL('./src/data/spiegel/gemeinden.json', import.meta.url), 'utf8'));
@@ -12,6 +13,8 @@ const gemeindeSeiten = Object.values(verzeichnis(gemeinden).pfad).map((p) => `ht
 export default defineConfig({
   integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/vorschau/'), customPages: gemeindeSeiten })],
   site: 'https://derkaemmerer.de',
+  // Erste Nennung einer Gemeinde in Fachartikeln verlinkt auf ihr Profil
+  markdown: { rehypePlugins: [rehypeGemeindeLinks({ gemeinden })] },
   output: 'static',
   security: { checkOrigin: false },
   adapter: vercel({ maxDuration: 60 }),
