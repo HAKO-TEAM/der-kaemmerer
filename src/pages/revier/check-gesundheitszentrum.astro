@@ -97,6 +97,7 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
         </div>
         <div class="gz-block" style="border-color:#fcd34d;background:#fffdf5"><h3 style="color:#a16207">Gemeinde Merzenich</h3><p>Was am Ende im Haushalt ankommt.</p>
           <div class="gz-z"><span>Saldo Gebäude</span><b id="m-geb">–</b></div>
+          <div class="gz-z" id="z-gr"><span>Gründungsprojekt (verteilt auf 5 Jahre)</span><b class="gz-minus" id="m-gr">–</b></div>
           <div class="gz-z"><span id="m-praxis-t">Anteil am Praxisergebnis</span><b id="m-praxis">–</b></div>
           <div class="gz-z"><span>Nachbargemeinden und Kreis tragen</span><b class="gz-plus" id="m-teil">–</b></div>
           <div class="gz-z"><span>Einnahmen aus Zuzug</span><b class="gz-plus" id="m-zuzug">–</b></div>
@@ -115,7 +116,8 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
         <label>Fälle je Arzt und Quartal <b id="v-faelle"></b><input type="range" id="r-faelle" min="400" max="800" step="25" value="700"><small>Branchenwert: höchstens 800, eher weniger.</small></label>
         <label>Anteil HZV-Patienten <b id="v-hzv"></b><input type="range" id="r-hzv" min="0" max="90" step="5" value="70"><small>Ziel in gut geführten Praxen: 80 %.</small></label>
         <label>Fallwert HZV / KV <b id="v-fw"></b><input type="range" id="r-hzvwert" min="75" max="90" step="1" value="82"><small>HZV 75–90 € je Fall und Quartal; KV-Fallwert fest 62 € im Muster.</small></label>
-        <label>Betriebsführung <b id="v-bf"></b><input type="range" id="r-bf" min="0" max="15" step="0.5" value="6"><small>Annahme in % der Erlöse für Abrechnung, HZV, Personal und Controlling – keine Preisangabe.</small></label>
+        <label>Betriebsführung je Monat <b id="v-bf"></b><input type="range" id="r-bf" min="0" max="9000" step="250" value="4500"><small>Fester Betrag für Abrechnung, HZV, Personal und Controlling. Annahme: 15 Std. × 300 € je Standort, bei Zweigpraxis anteilig nach Sprechtagen – vor einem Angebot zu bestätigen.</small></label>
+        <label>Gründungsprojekt MVZ (einmalig) <b id="v-gr"></b><input type="range" id="r-gr" min="0" max="60000" step="2000" value="30000"><small>Versorgungskonzept, Rechtsform, Zulassung bei der KV, Personalgewinnung; auf fünf Jahre verteilt.</small></label>
         <label>Praxisfläche <b id="v-flaeche"></b><input type="range" id="r-flaeche" min="80" max="500" step="10" value="250"><small>Baukosten im Muster 4.000 € je m² inkl. Ausstattung.</small></label>
         <label id="l-miete">Miete je m² und Monat <b id="v-miete"></b><input type="range" id="r-miete" min="0" max="16" step="0.5" value="11"><small>Nur bei privatem Betreiber; 0 € = mietfreie Anlaufphase.</small></label>
         <label>Förderquote Bau <b id="v-quote"></b><input type="range" id="r-quote" min="0" max="100" step="2.5" value="97.5"><small>0 % = keine Anerkennung als Gesundheitseinrichtung.</small></label>
@@ -123,7 +125,7 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
         <label>Neue Einwohner durch die Dorfentwicklung <b id="v-zuzug"></b><input type="range" id="r-zuzug" min="0" max="800" step="25" value="300"><small>Zuzug nach Bürgewald, den eine ärztliche Versorgung vor Ort erst möglich macht.</small></label>
         <label>Einnahmen je neuem Einwohner p. a. <b id="v-jeew"></b><input type="range" id="r-jeew" min="200" max="900" step="25" value="500"><small>Annahme: Gemeindeanteil an der Einkommensteuer und Schlüsselzuweisungen.</small></label>
       </div>
-      <p class="tc-hin">Kosten im Muster je Arzt-Vollzeitstelle: 130.000 € Arbeitgeberkosten, 2,5 MFA zu je 45.000 € (Zweigpraxis 1,5), Sachkosten 40.000 € (Zweigpraxis 20.000 €). Gebäude: Unterhaltung 1,5 % der Investition, Nutzungsdauer 40 Jahre. Ampel nach dem Ergebnis für Merzenich je Einwohner: bei Rücklagenverzehr unter 10 € Belastung grün, bis 40 € gelb, darüber rot.</p>
+      <p class="tc-hin">Kosten im Muster je Arzt-Vollzeitstelle: 130.000 € Arbeitgeberkosten, 2,5 MFA zu je 45.000 € (Zweigpraxis 1,5), Sachkosten 40.000 € (Zweigpraxis 20.000 €). Betriebsführung und Gründungsprojekt als feste Beträge (Annahme). Gebäude: Unterhaltung 1,5 % der Investition, Nutzungsdauer 40 Jahre. Ampel nach dem Ergebnis für Merzenich je Einwohner: bei Rücklagenverzehr unter 10 € Belastung grün, bis 40 € gelb, darüber rot.</p>
     </section>
 
     <section class="tc-ab">
@@ -160,11 +162,11 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
   const rechne = () => {
     const kommunal = wahl('traeger') === 'k', zweig = wahl('form') === 'zweig';
     const tage = v('r-tage'), aerzte = zweig ? tage / 5 : v('r-arzt'), faelle = v('r-faelle'), hzv = v('r-hzv') / 100, hzvWert = v('r-hzvwert');
-    const bfQuote = kommunal ? v('r-bf') / 100 : 0, flaeche = v('r-flaeche'), mieteM2 = kommunal ? 0 : v('r-miete'), quote = v('r-quote') / 100;
+    const bfMonat = kommunal ? v('r-bf') : 0, grJahr = kommunal ? v('r-gr') / 5 : 0, flaeche = v('r-flaeche'), mieteM2 = kommunal ? 0 : v('r-miete'), quote = v('r-quote') / 100;
     const teil = v('r-teil') / 100, zuzug = v('r-zuzug'), jeEwZ = v('r-jeew');
     zeig('l-arzt', !zweig); zeig('l-tage', zweig); zeig('l-miete', !kommunal); zeig('z-miete', !kommunal); zeig('z-pmiete', !kommunal); zeig('z-bf', kommunal);
     setz('v-arzt', `${v('r-arzt').toLocaleString('de-DE')} VZÄ`); setz('v-tage', `${tage.toLocaleString('de-DE')} Tage`); setz('v-faelle', String(faelle));
-    setz('v-hzv', `${Math.round(hzv * 100)} %`); setz('v-fw', `${hzvWert} € / ${KV} €`); setz('v-bf', `${(v('r-bf')).toLocaleString('de-DE')} %`);
+    setz('v-hzv', `${Math.round(hzv * 100)} %`); setz('v-fw', `${hzvWert} € / ${KV} €`); setz('v-bf', eur(v('r-bf'))); setz('v-gr', eur(v('r-gr'))); zeig('z-gr', kommunal);
     setz('v-flaeche', `${flaeche} m²`); setz('v-miete', `${v('r-miete').toLocaleString('de-DE')} €`); setz('v-quote', `${(quote * 100).toLocaleString('de-DE')} %`);
     setz('v-teil', `${Math.round(teil * 100)} %`); setz('v-zuzug', `${zuzug}`); setz('v-jeew', eur(jeEwZ));
     setz('p-titel', kommunal ? 'Praxisbetrieb · kommunales MVZ' : 'Praxisbetrieb · privater Betreiber');
@@ -176,16 +178,16 @@ const z = (x: number) => Math.round(x).toLocaleString('de-DE');
     setz('g-miete', '+ ' + eur(miete)); setz('g-saldo', vz(saldoG));
     // Praxis
     const fallwert = hzv * hzvWert + (1 - hzv) * KV, erl = aerzte * faelle * 4 * fallwert;
-    const kArzt = aerzte * ARZT, kMfa = aerzte * (zweig ? 1.5 : 2.5) * MFA, kSach = aerzte * (zweig ? 20000 : 40000), kBf = erl * bfQuote;
+    const kArzt = aerzte * ARZT, kMfa = aerzte * (zweig ? 1.5 : 2.5) * MFA, kSach = aerzte * (zweig ? 20000 : 40000), kBf = bfMonat * 12 * (zweig ? tage / 5 : 1);
     const saldoP = erl - kArzt - kMfa - kSach - kBf - miete;
     setz('p-erl', '+ ' + eur(erl)); setz('p-arzt', '− ' + eur(kArzt)); setz('p-mfa', '− ' + eur(kMfa)); setz('p-sach', '− ' + eur(kSach)); setz('p-bf', '− ' + eur(kBf)); setz('p-miete', '− ' + eur(miete)); setz('p-saldo', vz(saldoP));
     // Gemeinde: Überschuss eines kommunalen MVZ bleibt voll bei Merzenich, ein Defizit wird geteilt
     const praxisVoll = saldoP < 0 ? saldoP : (kommunal ? saldoP : 0);
     const praxisM = saldoP < 0 ? saldoP * teil : praxisVoll, getragen = saldoP < 0 ? -saldoP * (1 - teil) : 0, zuzugE = zuzug * jeEwZ;
-    const ergebnis = saldoG + praxisM + zuzugE;
-    setz('m-geb', vz(saldoG)); setz('m-praxis-t', saldoP < 0 ? `Anteil am Praxisdefizit (${Math.round(teil * 100)} %)` : (kommunal ? 'Überschuss des kommunalen MVZ' : 'Praxisergebnis (beim Betreiber)'));
+    const ergebnis = saldoG - grJahr + praxisM + zuzugE;
+    setz('m-geb', vz(saldoG)); setz('m-gr', '− ' + eur(grJahr)); setz('m-praxis-t', saldoP < 0 ? `Anteil am Praxisdefizit (${Math.round(teil * 100)} %)` : (kommunal ? 'Überschuss des kommunalen MVZ' : 'Praxisergebnis (beim Betreiber)'));
     setz('m-praxis', vz(praxisM)); setz('m-teil', getragen ? eur(getragen) : '–'); setz('m-zuzug', '+ ' + eur(zuzugE)); setz('m-saldo', vz(ergebnis));
-    const ohneZuzug = saldoG + praxisM, noetig = ohneZuzug < 0 ? Math.ceil(-ohneZuzug / jeEwZ) : 0;
+    const ohneZuzug = saldoG - grJahr + praxisM, noetig = ohneZuzug < 0 ? Math.ceil(-ohneZuzug / jeEwZ) : 0;
     setz('m-break', ohneZuzug < 0 ? `Ab ${noetig} neuen Einwohnern trägt sich die Versorgung für Merzenich selbst.` : 'Die Versorgung trägt sich schon ohne Zuzug.');
     const jeEw = -ergebnis / EW, stufe = ergebnis >= 0 ? 'g' : jeEw < 10 ? 'g' : jeEw < 40 ? 'y' : 'r';
     ['r', 'y', 'g'].forEach((k) => document.getElementById(`a-${k}`)!.classList.toggle('an', k === stufe));
