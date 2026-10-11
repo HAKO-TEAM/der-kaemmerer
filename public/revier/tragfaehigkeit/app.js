@@ -227,17 +227,49 @@ function vMassnahmen(r) {
 }
 
 function vVotum(r) {
-  const rm = rechne(mitMassnahmen(st)), heute = new Date().toLocaleDateString('de-DE');
-  return `<div class="votum"><div class="nichtdruck" style="float:right"><button class="knopf" onclick="window.print()">Drucken / als PDF</button></div>
-  <span class="badge">Musterfall · fiktive Gemeinde</span><h1>Kämmerer-Votum zur Tragfähigkeit</h1><div class="meta">${st.kommune.name} · ${st.antrag.aktenzeichen} · ${st.antrag.programm} · Stand ${heute}</div>
-  <p><b>Vorhaben:</b> ${st.projekt.titel}. ${st.antrag.ziele}</p>
-  <p><b>Investition:</b> ${mio(r.gesamt)} Gesamtkosten, Förderung ${mio(r.foerderung)} (${pct(st.projekt.foerderquote)} der förderfähigen Kosten), Eigenanteil ${mio(r.eigenanteil)}, davon ${mio(r.kredit)} kreditfinanziert. Zweckbindung ${st.projekt.zweckbindung} Jahre ab ${st.projekt.inbetriebnahme}.</p>
-  <p><b>Ergebnis:</b> <span class="pill ${r.ampel}">${AMPEL[r.ampel]}</span> Das Vorhaben belastet den Ergebnishaushalt in den ersten zehn vollen Betriebsjahren mit durchschnittlich <b>${eur(r.oeBelastung)}</b> im Jahr (${eur(r.jeEw)} je Einwohner, ${de(r.hebesatzPunkte)} Hebesatzpunkte Grundsteuer B). Der Barwert der Folgelast über die Zweckbindung beträgt ${mio(r.barwert, 1)}. Die Erlöse decken ${pct(r.deckung)} der Betriebskosten.
-  ${r.mit.ersterTrigger && !r.ohne.ersterTrigger ? ` Bei unveränderter Planung löst das Vorhaben ${r.mit.ersterTrigger.jahr} die Pflicht zum Haushaltssicherungskonzept aus (§ 76 Abs. 1 GO NRW).` : ''}</p>
-  <p><b>Auflagen:</b></p><ol>${r.auflagen.map((a) => `<li>${a.text}</li>`).join('')}</ol>
-  <p><b>Mit Maßnahmen</b> (${MASSNAHMEN.filter((m) => aktiv.has(m.id)).map((m) => m.titel).join(', ') || 'keine gewählt'}): Ø Belastung ${eur(rm.oeBelastung)} im Jahr, ${eur(rm.jeEw)} je Einwohner – <span class="pill ${rm.ampel}">${AMPEL[rm.ampel]}</span>${rm.mit.ersterTrigger && !rm.ohne.ersterTrigger ? `; HSK-Pflicht ${rm.mit.ersterTrigger.jahr}` : '; keine HSK-Pflicht im Planungszeitraum'}.</p>
-  <p><b>Empfehlung:</b> ${rm.ampel === 'rot' ? 'Bewilligung erst nach Vorlage eines tragfähigen Betriebs- und Finanzierungskonzepts.' : rm.ampel === 'gelb' ? 'Bewilligung mit den genannten Auflagen; Folgekosten im Haushalt verbindlich veranschlagen und jährlich berichten.' : 'Bewilligung ohne zusätzliche haushaltsrechtliche Auflagen.'}</p>
-  <p class="hinweis">Rechenweg: Abschreibung je Kostengruppe abzüglich Auflösung der Sonderposten, Zins und Tilgung des Eigenanteils, Betriebs- und Personalkosten (KGSt-Bericht 8/2025) mit Preissteigerung, Ersatzinvestitionen, Erlöse. Haushaltswirkung auf Basis der mittelfristigen Ergebnisplanung. Erstellt mit dem Tragfähigkeits-Cockpit von Der Kämmerer.</p></div>`;
+  const rm = rechne(mitMassnahmen(st)), heute = new Date().toLocaleDateString('de-DE'), z = r.betriebsjahre[0];
+  const plan = r.mit.reihe.filter((o) => o.imPlan), ohne = r.ohne.reihe;
+  const hsk = r.mit.ersterTrigger && !r.ohne.ersterTrigger;
+  const empf = rm.ampel === 'rot' ? 'Bewilligung erst nach Vorlage eines tragfähigen Betriebs- und Finanzierungskonzepts.' : rm.ampel === 'gelb' ? 'Bewilligung mit den genannten Auflagen; Folgekosten im Haushalt verbindlich veranschlagen und jährlich berichten.' : 'Bewilligung ohne zusätzliche haushaltsrechtliche Auflagen.';
+  return `<p class="nichtdruck"><button class="knopf" onclick="window.print()">Drucken / als PDF (eine Seite A4)</button><span class="hinweis" style="margin-left:8px">Im Druckdialog „Kopf- und Fußzeilen“ ausschalten.</span></p>
+  <div class="va">
+    <div class="va-kopf"><div><div class="va-marke">Der <span>Kämmerer</span><small>KÄMMERER-VOTUM ZUR TRAGFÄHIGKEIT</small></div></div>
+      <div class="va-meta"><b>MUSTERFALL · FIKTIVE GEMEINDE</b><br>${st.kommune.name} · ${de(st.kommune.einwohner)} Einwohner<br>${st.antrag.aktenzeichen} · Stand ${heute}</div></div>
+    <div class="va-inhalt">
+      <h1 class="va-h1">${st.projekt.titel}</h1>
+      <p class="va-sub">${st.antrag.programm} · Zweckbindung ${st.projekt.zweckbindung} Jahre ab ${st.projekt.inbetriebnahme} · Haushaltsstatus: ${st.kommune.statusText}</p>
+      <div class="va-urteil ${r.ampel}"><div class="va-ampel"><i class="rot ${r.ampel === 'rot' ? 'an' : ''}"></i><i class="gelb ${r.ampel === 'gelb' ? 'an' : ''}"></i><i class="gruen ${r.ampel === 'gruen' ? 'an' : ''}"></i></div>
+        <div><b>${AMPEL[r.ampel]}</b><p>Ø ${eur(r.oeBelastung)} Belastung des Ergebnishaushalts je Jahr in den ersten zehn Betriebsjahren${hsk ? ` – das Vorhaben <strong>löst ${r.mit.ersterTrigger.jahr} die Pflicht zum Haushaltssicherungskonzept aus</strong> (§ 76 Abs. 1 GO NRW)` : ''}. Mit Maßnahmen: ${eur(rm.oeBelastung)} (${AMPEL[rm.ampel]}${rm.mit.ersterTrigger && !rm.ohne.ersterTrigger ? '' : ', keine HSK-Pflicht'}).</p></div></div>
+      <div class="va-kpis">
+        <div><span>Gesamtkosten</span><b>${mio(r.gesamt)}</b><small>Förderung ${mio(r.foerderung)} (${pct(st.projekt.foerderquote)})</small></div>
+        <div><span>Eigenanteil</span><b>${mio(r.eigenanteil)}</b><small>${pct(st.projekt.finanzierung.kreditanteil)} Kredit, ${pct(st.projekt.finanzierung.zins, 1)}</small></div>
+        <div><span>Belastung je Einwohner</span><b>${eur(r.jeEw)}</b><small>je Jahr, Ø Jahre 1–10</small></div>
+        <div><span>Grundsteuer B</span><b>${de(r.hebesatzPunkte)} Punkte</b><small>1 Punkt = ${eur(r.punktwert)}</small></div>
+        <div><span>Barwert Folgelast</span><b>${mio(r.barwert, 1)}</b><small>über ${st.projekt.zweckbindung} Jahre</small></div>
+      </div>
+      <div class="va-zwei">
+        <div><h2>Folgekosten im ersten vollen Betriebsjahr ${z.jahr}</h2><table>
+          <tr><td>Betrieb, Bewirtschaftung, Unterhaltung</td><td class="z">${eur(z.betrieb - z.personal)}</td></tr>
+          <tr><td>Personal (KGSt-Vollkosten)</td><td class="z">${eur(z.personal)}</td></tr>
+          <tr><td>Abschreibungen brutto</td><td class="z">${eur(z.afa)}</td></tr>
+          <tr><td>− Auflösung Sonderposten (Förderung)</td><td class="z pos">− ${eur(z.sp)}</td></tr>
+          <tr><td>Zinsen auf den Eigenanteil</td><td class="z">${eur(z.zinsen)}</td></tr>
+          <tr><td>− Erlöse (Mieten, Pacht, Entgelte)</td><td class="z pos">− ${eur(z.erloese)}</td></tr>
+          <tr class="summe"><td>Belastung des Ergebnishaushalts</td><td class="z neg">${eur(-z.ergebnis)}</td></tr></table>
+          <p class="va-klein">Kostendeckung durch Erlöse ${pct(r.deckung)}; Ersatzinvestitionen in der Zweckbindung ${mio(r.ersatz.reduce((a, e) => a + e.wert, 0), 1)}, nicht gefördert.</p></div>
+        <div><h2>Allgemeine Rücklage – Prüfung § 76 GO NRW</h2><table>
+          <tr><th>Jahr</th><th class="z">Ergebnis mit</th><th class="z">Rücklage</th><th class="z">Verringerung</th></tr>
+          ${plan.map((o, i) => `<tr><td>${o.jahr}</td><td class="z">${teur(o.ergebnis)}</td><td class="z">${mio(o.allg, 1)}</td><td class="z ${o.quote > 0.05 ? 'neg' : ''}">${pct(o.quote, 1)}${o.quote > 0.05 ? ' ▲' : ''}</td></tr>`).join('')}</table>
+          <p class="va-klein">Ohne Vorhaben höchstens ${pct(Math.max(...ohne.filter((o) => o.imPlan).map((o) => o.quote)), 1)} je Jahr. Schwelle: zwei Folgejahre über 5 % oder ein Jahr über 25 %.</p></div>
+      </div>
+      <h2>Auflagen vor der Bewilligung</h2><ol class="va-auflagen">${r.auflagen.map((a) => `<li class="p${a.prio}">${a.text}</li>`).join('')}</ol>
+      <div class="va-zwei va-schluss">
+        <div class="va-box"><h2>Mit Maßnahmen</h2><p>${MASSNAHMEN.filter((m) => aktiv.has(m.id)).map((m) => m.titel).join(' · ') || 'keine gewählt'}</p><p><b>${eur(rm.oeBelastung)} je Jahr · ${eur(rm.jeEw)} je Einwohner</b> – ${AMPEL[rm.ampel]}${rm.mit.ersterTrigger && !rm.ohne.ersterTrigger ? `, HSK-Pflicht ${rm.mit.ersterTrigger.jahr}` : ', keine HSK-Pflicht im Planungszeitraum'}.</p></div>
+        <div class="va-box va-empf"><h2>Empfehlung</h2><p>${empf}</p></div>
+      </div>
+    </div>
+    <div class="va-fuss"><span>Rechenweg: Abschreibung je Kostengruppe abzüglich Sonderposten, Zins des Eigenanteils, Betrieb und Personal (KGSt 8/2025) mit Preissteigerung, Ersatzinvestitionen, Erlöse; Haushaltswirkung auf Basis der mittelfristigen Ergebnisplanung.</span><span>Der Kämmerer · HAKO Beteiligungsgesellschaft mbH · Dresden · revier.derkaemmerer.de/tragfaehigkeit</span></div>
+  </div>`;
 }
 
 function rechenweg() {
