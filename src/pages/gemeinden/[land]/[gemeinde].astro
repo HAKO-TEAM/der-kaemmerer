@@ -125,7 +125,7 @@ if (g.lat && g.lon) gebiet.geo = { '@type': 'GeoCoordinates', latitude: g.lat, l
       <div><b>{zahl(gb.wert, ' %')}</b><span>Grundsteuer B {gb.rangLand ? `· Platz ${gb.rangLand.platz} von ${gb.rangLand.von}` : ''}</span></div>
       <div><b>{zahl(gw.wert, ' %')}</b><span>Gewerbesteuer {gw.rangLand ? `· Platz ${gw.rangLand.platz} von ${gw.rangLand.von}` : ''}</span></div>
       <div><b>{zahl(sch.wert, ' €')}</b><span>Schulden je Einwohner (Kernhaushalt)</span></div>
-      <div><b>{pm.anzahl}</b><span>offene kommunale Stellen im Umkreis von 50 km · <a href={`${gemeindeUrl(p)}stellen/`} style="color:#2563eb">Stellenangebote {g.name}</a></span></div>
+      <div><b>{pm.anzahl}</b><span>offene kommunale Stellen im Umkreis von 50 km · <a href={`${gemeindeUrl(p)}stellen/`} style="color:#2563eb">Arbeiten bei {g.name}</a></span></div>
     </div>
 
     {zeilen.length > 0 && (
@@ -183,7 +183,7 @@ if (g.lat && g.lon) gebiet.geo = { '@type': 'GeoCoordinates', latitude: g.lat, l
       <div class="gm-zwei">
         <div class="gm-karte"><h3>Finanzstellen im Umkreis</h3>
           {pm.finanzStellen.length ? pm.finanzStellen.slice(0, 8).map((x) => <div class="gm-zeile"><a href={x.u} target="_blank" rel="noopener nofollow">{x.t}<br><small style="font-weight:400">{x.o}</small></a><small>{niveauText(x.n)} · {x.km} km</small></div>) : <p class="gm-hin">Aktuell sind im Umkreis keine Finanzstellen anderer Kommunen ausgeschrieben.</p>}
-          <p class="gm-hin"><a href={`${gemeindeUrl(p)}stellen/`}>{stellenHier ? `${stellenHier} Stellenangebote in ${g.name}` : `Stellenangebote rund um ${g.name}`}</a> · <a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
+          <p class="gm-hin"><a href={`${gemeindeUrl(p)}stellen/`}>{stellenHier ? `Arbeiten bei ${g.name}: ${stellenHier} Stellenangebote` : `Arbeiten bei ${g.name}: Stellenangebote im Umkreis`}</a> · <a href="/stellen/">Alle Stellen in der Stellenbörse von Der Kämmerer</a></p>
         </div>
         <div class="gm-karte"><h3>Gesuchte Berufsfelder im Umkreis</h3>
           {pm.felder.map((x) => <div class="gm-zeile"><span>{x.name}</span><small>{x.n} Stellen</small></div>)}

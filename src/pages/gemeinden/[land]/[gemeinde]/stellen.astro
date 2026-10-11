@@ -1,12 +1,18 @@
 ---
-// Stellenangebote je Gemeinde (für Suchen wie „Stadt X Stellenangebote“): alle laufenden Ausschreibungen öffentlicher
-// Arbeitgeber mit Dienstort in der Gemeinde, nach Arbeitgeber gruppiert, dazu der Umkreis. Ausgeliefert per Funktion.
+// Arbeitgeber-Ansicht je Gemeinde (Runbook 5.1, „Arbeiten bei X“): die Stellen der Kommune selbst zuerst, dann die übrigen
+// öffentlichen Arbeitgeber am Ort und der Umkreis; dazu Entgelt, Berufsfelder, Einwohner und Haushaltslage als Stabilitätsangabe.
+// JobPosting bleibt auf den Detailseiten, hier nur GovernmentOrganization + BreadcrumbList. Ausgeliefert per Funktion.
 export const prerender = false;
 import Base from '../../../../layouts/Base.astro';
 import Header from '../../../../components/Header.astro';
 import Footer from '../../../../components/Footer.astro';
 import markt from '../../../../data/markt/markt.json';
 import gemeinden from '../../../../data/spiegel/gemeinden.json';
+import sperren from '../../../../data/haushaltslage/sperren.json';
+import hsNw from '../../../../data/spiegel/haushaltsstatus_nw.json';
+import schulden from '../../../../data/spiegel/schulden.json';
+import { STUFEN, UEBERSCHULDUNG } from '../../../../lib/haushaltsstatus.mjs';
+import { kommunenMitSperre } from '../../../../lib/sperren-karte.mjs';
 import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../../../lib/gemeinden.mjs';
 import { stellenJeGemeinde } from '../../../../lib/stellen-ort.mjs';
 import { km, niveauText, FELD_NAMEN } from '../../../../lib/markt/benchmark.mjs';
@@ -27,9 +33,17 @@ const umkreis: any[] = g.lat == null ? [] : (markt as any).stellen
   .map((s: any) => ({ ...s, d: Math.round(km(ort, { la: s.la, lo: s.lo })) })).filter((s: any) => s.d <= 30)
   .sort((a: any, b: any) => a.d - b.d).slice(0, 20);
 
-// nach Arbeitgeber gruppieren, größte zuerst
-const gruppen = Object.entries(hier.reduce((acc: any, s: any) => ((acc[s.o] ||= []).push(s), acc), {}))
-  .sort((a: any, b: any) => b[1].length - a[1].length) as [string, any[]][];
+// nach Arbeitgeber gruppieren: die Kommune selbst zuerst, danach die größten
+const nrm = (x: string) => (x || '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const kern = nrm(g.name.split(',')[0].replace(/\s*\(.*\)$/, ''));
+const istEigen = (o: string) => {
+  const x = nrm(o);
+  return (` ${x} `).includes(` ${kern} `) && /^(stadt|gemeinde|markt|landeshauptstadt|hansestadt|kreisstadt|grosse kreisstadt|universitatsstadt|universitaetsstadt|stadtverwaltung|gemeindeverwaltung|magistrat|burgermeister|buergermeister|ortsgemeinde|verbandsgemeinde|samtgemeinde|amt|bundesstadt|wissenschaftsstadt|klingenstadt|kreisfreie stadt|freie|der oberburgermeister|der oberbuergermeister)\b/.test(x)
+    && !/(kreis(?!stadt|freie)|sparkasse|stadtwerke|klinik|krankenhaus|universitat|universitaet|hochschule|zweckverband|gmbh|ag$|eigenbetrieb|jobcenter)/.test(x.replace(/^(grosse )?kreisstadt/, '').replace(/kreisfreie stadt/, ''));
+};
+const gruppen = (Object.entries(hier.reduce((acc: any, s: any) => ((acc[s.o] ||= []).push(s), acc), {})) as [string, any[]][])
+  .sort((a, b) => Number(istEigen(b[0])) - Number(istEigen(a[0])) || b[1].length - a[1].length);
+const eigene = gruppen.filter(([o]) => istEigen(o)).reduce((z, [, l]) => z + l.length, 0);
 const felder = Object.entries(hier.reduce((acc: any, s: any) => ((acc[s.f] = (acc[s.f] || 0) + 1), acc), {}))
   .sort((a: any, b: any) => b[1] - a[1]) as [string, number][];
 const niveaus = hier.map((s) => s.n).filter((n) => n != null).sort((a, b) => a - b);
@@ -40,23 +54,46 @@ const nachbarn = (gemeinden as any[]).filter((x) => x.ags !== ags && x.land === 
   .map((x) => ({ ...x, d: km(ort, { la: x.lat, lo: x.lon }), n: jeOrt.get(x.ags)!.length })).sort((a, b) => a.d - b.d).slice(0, 12);
 
 const n = hier.length;
-const titel = n ? `Stellenangebote ${g.name}: ${n} ${n === 1 ? 'offene Stelle' : 'offene Stellen'} im öffentlichen Dienst` : `Stellenangebote ${g.name} und Umgebung – öffentlicher Dienst`;
+// Haushaltslage als Stabilitätsangabe: amtlicher Status (NRW), belegte Haushaltssperren, Schulden je Einwohner
+const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
+const hsStufe: any = hs ? (STUFEN as any)[hs.s] : null;
+const hsUeber = hs ? (UEBERSCHULDUNG as any)[hs.u] : null;
+const sperre: any = kommunenMitSperre(sperren as any, gemeinden as any[]).find((k: any) => k.ebene !== 'kreis' && k.url === gemeindeUrl(p)) || null;
+const sperrStand = datum((sperren as any).stand);
+const schuldenEw: number | null = (schulden as any)[g.ags]?.schulden_je_ew ?? null;
+const orgName = /^(Stadt|Gemeinde|Markt|Hansestadt|Landeshauptstadt|Universitätsstadt|Bundesstadt)\b/.test(g.name) ? g.name
+  : `${g.typ === 'Gemeinde' ? 'Gemeinde' : g.typ === 'Markt' ? 'Markt' : 'Stadt'} ${g.name}`;
+const eigenOrg = gruppen.find(([o]) => istEigen(o))?.[0] || orgName;
+const beiEigen = `${/^Markt\b/.test(eigenOrg) ? 'beim' : 'bei der'} ${eigenOrg}`;
+const einwohner = g.einwohner ? Number(g.einwohner).toLocaleString('de-DE') : null;
+const titel = `Arbeiten bei ${g.name} – Stellenangebote, Gehalt, Arbeitgeber`;
 const beschreibung = n
-  ? `${n} aktuelle Stellenangebote öffentlicher Arbeitgeber in ${g.name}${gruppen.length > 1 ? ` bei ${gruppen.length} Arbeitgebern` : ''}: ${felder.slice(0, 3).map(([f]) => (FELD_NAMEN as any)[f]).filter(Boolean).join(', ')}. Mit Entgeltgruppe und Bewerbungsschluss, täglich aktualisiert.`
-  : `Stellenangebote im öffentlichen Dienst rund um ${g.name} (${landLang}) – täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`;
+  ? `Arbeiten bei ${g.name}: ${n} aktuelle ${n === 1 ? 'Stelle' : 'Stellen'} öffentlicher Arbeitgeber${eigene ? `, davon ${eigene} bei der ${g.typ === 'Gemeinde' ? 'Gemeinde' : g.typ === 'Markt' ? 'Marktgemeinde' : 'Stadt'} selbst` : ''}${median != null ? `, mittleres Entgelt ${niveauText(median)}` : ''}. Berufsfelder, Haushaltslage und Stellen im Umkreis – täglich aktualisiert.`
+  : `Arbeiten bei ${g.name} (${landLang}): Stellen im öffentlichen Dienst im Umkreis, Haushaltslage und Gehalt nach TVöD – täglich aktualisiert.`;
 const url = `https://derkaemmerer.de${gemeindeUrl(p)}stellen/`;
 const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Gemeinden', item: 'https://derkaemmerer.de/gemeinden/' },
   { '@type': 'ListItem', position: 2, name: landLang, item: `https://derkaemmerer.de/gemeinden/${LAND_SLUG[g.land]}/` },
   { '@type': 'ListItem', position: 3, name: g.name, item: `https://derkaemmerer.de${gemeindeUrl(p)}` },
-  { '@type': 'ListItem', position: 4, name: 'Stellenangebote', item: url } ] };
+  { '@type': 'ListItem', position: 4, name: `Arbeiten bei ${g.name}`, item: url } ] };
+const org = { '@context': 'https://schema.org', '@type': 'GovernmentOrganization', '@id': `${url}#arbeitgeber`, name: eigenOrg,
+  address: { '@type': 'PostalAddress', addressLocality: g.name, addressRegion: landLang, addressCountry: 'DE' },
+  ...(g.lat != null ? { location: { '@type': 'Place', geo: { '@type': 'GeoCoordinates', latitude: g.lat, longitude: g.lon } } } : {}),
+  areaServed: { '@type': 'AdministrativeArea', name: g.name } };
 ---
 <Base title={titel} description={beschreibung} noindex={n === 0} canonical={url}>
 <Header />
 <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<script type="application/ld+json" set:html={JSON.stringify(org)} />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 .st { color:#0f172a; } .st-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.st-fakten { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin:14px 0 16px; }
+.st-fakten > div { border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px; background:#fff; display:flex; flex-direction:column; gap:3px; }
+.st-fakten span { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.04em; }
+.st-fakten b { font-size:17px; } .st-fakten small { font-size:12.5px; color:#475569; line-height:1.45; } .st-fakten a { color:#2563eb; }
+.st-eigen { font-style:normal; font-size:11px; font-weight:600; background:#dbeafe; color:#1e40af; border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:middle; }
+.st-cta.st-cta-ag { grid-template-columns:1fr; margin:28px 0 0; }
 .st-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
 .st-pfad { font-size:13px; color:rgba(255,255,255,.6); } .st-pfad a { color:#93c5fd; text-decoration:none; }
 .st-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,4vw,40px); line-height:1.12; margin:10px 0 8px; }
@@ -81,11 +118,11 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
 
 <div class="st">
   <section class="st-kopf"><div class="st-w">
-    <div class="st-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={`/gemeinden/${LAND_SLUG[g.land]}/`}>{landLang}</a> › <a href={gemeindeUrl(p)}>{g.name}</a> › Stellenangebote</div>
-    <h1>Stellenangebote {g.name}{n ? `: ${n} offene ${n === 1 ? 'Stelle' : 'Stellen'}` : ''}</h1>
+    <div class="st-pfad"><a href="/gemeinden/">Gemeinden</a> › <a href={`/gemeinden/${LAND_SLUG[g.land]}/`}>{landLang}</a> › <a href={gemeindeUrl(p)}>{g.name}</a> › Arbeiten bei {g.name}</div>
+    <h1>Arbeiten bei {g.name} – Stellenangebote, Gehalt, Arbeitgeber</h1>
     <p>{n
-      ? `Alle laufenden Ausschreibungen öffentlicher Arbeitgeber mit Dienstort ${g.name} – Stadt- und Gemeindeverwaltung, Kreis, Zweckverbände und kommunale Einrichtungen. Täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`
-      : `Öffentliche Arbeitgeber rund um ${g.name} mit laufenden Ausschreibungen – täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`}</p>
+      ? `${n} laufende ${n === 1 ? 'Ausschreibung' : 'Ausschreibungen'} öffentlicher Arbeitgeber mit Dienstort ${g.name}${eigene ? ` – ${eigene} davon ${beiEigen} selbst` : ''}. Dazu Entgelt, gesuchte Berufsfelder und die Haushaltslage der Kommune. Täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`
+      : `Öffentliche Arbeitgeber rund um ${g.name} mit laufenden Ausschreibungen, dazu Haushaltslage und Gehalt nach TVöD – täglich aktualisiert, mit Entgeltgruppe und Bewerbungsschluss.`}</p>
   </div></section>
 
   <div class="st-w">
@@ -104,10 +141,10 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         <p class="st-unter">Stand {datum((markt as any).kopf.stand?.slice?.(0, 10))} · neueste Ausschreibungen zuerst. Die Bewerbung läuft direkt beim Arbeitgeber.</p>
         {gruppen.map(([org, liste]) => (
           <div class="st-ag">
-            <h3>{org} <small>· {liste.length} {liste.length === 1 ? 'Stelle' : 'Stellen'}</small></h3>
+            <h3>{org} <small>· {liste.length} {liste.length === 1 ? 'Stelle' : 'Stellen'}</small>{istEigen(org) && <em class="st-eigen">Arbeitgeber {g.name}</em>}</h3>
             {liste.map((s) => (
               <div class="st-z">
-                <a href={s.u} target="_blank" rel="noopener nofollow">{s.t}<span class="f">{(FELD_NAMEN as any)[s.f] || 'Verwaltung'}{s.ort && s.ort !== g.name ? ` · ${s.ort}` : ''}</span></a>
+                <a href={s.u} target="_blank" rel="noopener nofollow" data-bewerbung={s.id}>{s.t}<span class="f">{(FELD_NAMEN as any)[s.f] || 'Verwaltung'}{s.ort && s.ort !== g.name ? ` · ${s.ort}` : ''}</span></a>
                 <small>{s.n != null ? niveauText(s.n) : ''}{s.s && s.s < '2099' ? <><br>Bewerbung bis {datum(s.s)}</> : ''}</small>
               </div>
             ))}
@@ -130,7 +167,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
         <div class="st-ag">
           {umkreis.map((s) => (
             <div class="st-z">
-              <a href={s.u} target="_blank" rel="noopener nofollow">{s.t}<span class="f">{s.o} · {s.ort}</span></a>
+              <a href={s.u} target="_blank" rel="noopener nofollow" data-bewerbung={s.id}>{s.t}<span class="f">{s.o} · {s.ort}</span></a>
               <small>{s.d} km{s.n != null ? ` · ${niveauText(s.n)}` : ''}{s.s && s.s < '2099' ? <><br>bis {datum(s.s)}</> : ''}</small>
             </div>
           ))}
@@ -149,9 +186,28 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
     )}
 
     <section class="st-ab">
-      <h2>{g.name} als Kommune</h2>
-      <p class="st-unter">Hebesätze, Verschuldung je Einwohner und Haushaltslage von {g.name} im Vergleich mit Kreis und Land: <a href={gemeindeUrl(p)} style="color:#2563eb">Gemeindeprofil {g.name} →</a></p>
+      <h2>{eigenOrg} als Arbeitgeber</h2>
+      <p class="st-unter">Eckdaten zur Kommune und ihrer Haushaltslage – die finanzielle Stabilität eines öffentlichen Arbeitgebers.</p>
+      <div class="st-fakten">
+        {einwohner && <div><span>Einwohner</span><b>{einwohner}</b><small>{g.kreis && g.kreis !== g.name ? `${g.kreis}, ` : ''}{landLang}</small></div>}
+        {hsStufe && <div><span>Haushaltsstatus (NRW, 31.12.2025)</span><b style={`color:${hsStufe.farbe}`}>{hsStufe.lang}</b><small>{hsUeber ? `${hsUeber}. ` : ''}Amtliche Einstufung der Kommunalaufsicht</small></div>}
+        <div><span>Haushaltssperre</span>{sperre
+          ? <><b style="color:#b45309">belegt</b><small>{sperre.faelle[sperre.faelle.length - 1].art} · <a href="/haushaltssperren/">Verzeichnis</a></small></>
+          : <><b>ohne Eintrag</b><small>im <a href="/haushaltssperren/">Verzeichnis der Haushaltssperren</a>, Stand {sperrStand}</small></>}</div>
+        {schuldenEw != null && <div><span>Schulden Kernhaushalt je Einwohner</span><b>{Math.round(schuldenEw).toLocaleString('de-DE')} €</b><small>Vergleich mit Kreis und Land im Gemeindeprofil</small></div>}
+        {median != null && <div><span>Mittleres Entgelt der Ausschreibungen</span><b>{niveauText(median)}</b><small>alle Arbeitgeber am Ort</small></div>}
+      </div>
+      <div class="st-chips st-links">
+        <a href={gemeindeUrl(p)}>Gemeindeprofil {g.name}: Hebesätze, Schulden, Haushaltslage →</a>
+        <a href="/dienst-karriere/rechner/tvoed-netto/">TVöD-Nettorechner →</a>
+        <a href="/dienst-karriere/rechner/tvoed-brutto/">TVöD-Bruttorechner →</a>
+        <a href="/gehalt/">TVöD-Tabelle 2026 →</a>
+      </div>
     </section>
+
+    <div class="st-cta st-cta-ag">
+      <div><h2>Stellen {g.typ === 'Gemeinde' ? 'der Gemeinde' : g.typ === 'Markt' ? 'des Marktes' : 'der Stadt'} {g.name} hier veröffentlichen</h2><p>Personalverantwortliche {eigenOrg.startsWith("Markt") ? "des" : "der"} {eigenOrg} veröffentlichen ihre Ausschreibungen in der Stellenbörse von Der Kämmerer – mit Entgeltgruppe und Bewerbungsschluss, für Fach- und Führungskräfte aus Verwaltung und Finanzwesen.</p><a class="st-btn" href="/arbeitgeberservice/">Zum Arbeitgeberservice</a></div>
+    </div>
 
     <div class="st-cta">
       <div><h2>Stellen ausschreiben</h2><p>Kommunen erreichen über die Stellenbörse von Der Kämmerer Fach- und Führungskräfte aus Verwaltung und Finanzwesen – mit der KommunalFlat unbegrenzt viele Anzeigen für 249 € im Monat.</p><a class="st-btn" href="/anzeige-aufgeben/">Anzeige aufgeben</a></div>
