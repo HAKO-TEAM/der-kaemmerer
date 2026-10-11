@@ -8,6 +8,7 @@ import hebesaetze from '../data/spiegel/hebesaetze.json';
 import schulden from '../data/spiegel/schulden.json';
 import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../lib/gemeinden.mjs';
 import { KENNZAHLEN, rangliste, median, kreisVonAgs } from '../lib/kreise.mjs';
+import { datensatz, LIZENZ_DL_BY, REGIONALSTATISTIK } from '../lib/datensatz.mjs';
 
 interface Props { kz: string; land?: string | null }
 const { kz, land = null } = Astro.props;
@@ -28,11 +29,14 @@ const basis = `/ranglisten/${kz}/`;
 const laender = Object.keys(LAND_LANG).filter((l) => !['BE', 'HH', 'HB'].includes(l));
 const ld = { '@context': 'https://schema.org', '@type': 'ItemList', name: titel, itemListOrder: 'https://schema.org/ItemListOrderDescending', numberOfItems: Math.min(N, zeilen.length),
   itemListElement: zeilen.slice(0, 20).map((r: any, i: number) => ({ '@type': 'ListItem', position: i + 1, name: r.g.name, url: `https://derkaemmerer.de${gemeindeUrl(pfad[r.g.ags])}` })) };
+const ds = datensatz({ name: titel, description: beschreibung, url: `https://derkaemmerer.de${basis}${land ? (LAND_SLUG as any)[land] + '/' : ''}`, raum,
+  zeitraum: K.jahr === 2024 ? '2024' : '2025-12-31', quelle: REGIONALSTATISTIK, lizenz: LIZENZ_DL_BY });
 const ort = (g: any) => { const k = kreisMap.get(g.kreis_ags); return k ? k.titel : (g.typ || 'kreisfreie Stadt'); };
 ---
 <Base title={titel} description={beschreibung}>
 <Header />
 <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<script type="application/ld+json" set:html={JSON.stringify(ds)} />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 .rl { color:#0f172a; } .rl-w { max-width:1040px; margin:0 auto; padding:0 28px; }

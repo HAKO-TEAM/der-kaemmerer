@@ -1,4 +1,5 @@
 ---
+import StructuredData from '../components/StructuredData.astro';
 export interface Props {
   title: string;
   description?: string;
@@ -67,39 +68,8 @@ const isoZeit = (d?: string) => (d ? `${d}T06:00:00+02:00` : undefined);
 <meta name="twitter:description" content={description}>
 <meta name="twitter:image" content={ogImage}>
 
-<!-- JSON-LD -->
-{ogType === 'article' ? (
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
-    "description": description,
-    "url": url,
-    "datePublished": datum,
-    "author": { "@type": "Organization", "name": "HAKO Beteiligungsgesellschaft mbH", "url": "https://derkaemmerer.de" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Der Kämmerer",
-      "url": "https://derkaemmerer.de",
-      "logo": { "@type": "ImageObject", "url": "https://derkaemmerer.de/favicon.svg" }
-    },
-    "image": ogImage,
-    "inLanguage": "de-DE"
-  })} />
-) : (
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Der Kämmerer",
-    "url": "https://derkaemmerer.de",
-    "description": description,
-    "publisher": {
-      "@type": "Organization",
-      "name": "HAKO Beteiligungsgesellschaft mbH",
-      "url": "https://www.hako.team"
-    }
-  })} />
-)}
+<!-- JSON-LD (Runbook 2.3) -->
+<StructuredData url={url} title={title} description={description} image={ogImage} ogType={ogType} datum={datum} updated={updated} section={section} sectionUrl={sectionUrl} />
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml">

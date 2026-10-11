@@ -101,6 +101,7 @@ const ressortLabels: Record<string,string> = {
       <p class="art-desc">{beschreibung}</p>
       <div class="art-meta">
         {autor} &nbsp;·&nbsp; {datum} &nbsp;·&nbsp; {minuten} Minuten Lesezeit
+        {updated && updated !== datum && <span> &nbsp;·&nbsp; Aktualisiert am {updated.split('-').reverse().join('.')}</span>}
       </div>
     </div>
   </div>

@@ -56,7 +56,8 @@ const titel = `Haushaltslage der Kommunen ${imLand(name)} 2026: Schulden, Kassen
 const beschreibung = `${gs.length.toLocaleString('de-DE')} Gemeinden ${imLand(name)}: Schulden ${z(sch, ' €')} und Kassenkredite ${z(kk, ' €')} je Einwohner, ${mitKk.length} Gemeinden mit mehr als 1.000 € Kassenkrediten je Einwohner, ${sperrFaelle.length} belegte Haushaltssperren – Karte, Ranglisten und Kreise.`;
 const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: `Haushaltslage der Kommunen ${imLand(name)}`, description: beschreibung,
   url: `https://derkaemmerer.de/haushaltslage/${LAND_SLUG[land]}/`, spatialCoverage: name, isAccessibleForFree: true,
-  creator: { '@type': 'Organization', name: 'Der Kämmerer' }, license: 'https://www.govdata.de/dl-de/by-2-0' };
+  creator: { '@type': 'Organization', name: 'Der Kämmerer' }, license: 'https://www.govdata.de/dl-de/by-2-0',
+  temporalCoverage: '2025-12-31', isBasedOn: 'https://www.regionalstatistik.de/', inLanguage: 'de-DE' };
 ---
 <Base title={titel} description={beschreibung}>
 <Header />

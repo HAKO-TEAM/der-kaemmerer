@@ -1,0 +1,69 @@
+---
+// Zentrale strukturierte Daten je Seitentyp (Runbook 2.3).
+// WebSite + Organization nur auf der Startseite · Artikel → NewsArticle (+ BreadcrumbList) · sonst WebPage.
+// Seitenspezifische Typen (JobPosting, Dataset, DefinedTerm, BreadcrumbList …) setzen die Seiten selbst zusätzlich.
+export interface Props {
+  url: string;
+  title: string;
+  description: string;
+  image: string;
+  ogType: 'website' | 'article';
+  datum?: string;        // YYYY-MM-DD
+  updated?: string;      // YYYY-MM-DD, optional
+  section?: string;      // Ressort-Label
+  sectionUrl?: string;   // Ressort-URL
+}
+const { url, title, description, image, ogType, datum, updated, section, sectionUrl } = Astro.props;
+
+const SITE = 'https://derkaemmerer.de';
+const LOGO = `${SITE}/logo-512.png`;
+const HAKO = {
+  '@type': 'Organization',
+  '@id': `${SITE}/#organisation`,
+  name: 'HAKO Beteiligungsgesellschaft mbH',
+  url: 'https://www.hako.team',
+  logo: { '@type': 'ImageObject', url: LOGO, width: 512, height: 512 },
+  address: { '@type': 'PostalAddress', streetAddress: 'Hertha-Lindner-Str. 10–12', postalCode: '01067', addressLocality: 'Dresden', addressCountry: 'DE' },
+};
+const VERLAG = {
+  '@type': 'NewsMediaOrganization',
+  '@id': `${SITE}/#verlag`,
+  name: 'Der Kämmerer',
+  url: `${SITE}/`,
+  logo: { '@type': 'ImageObject', url: LOGO, width: 512, height: 512 },
+  parentOrganization: { '@id': `${SITE}/#organisation` },
+  publishingPrinciples: `${SITE}/ueber-uns/`,
+};
+const iso = (d?: string) => (d ? `${d}T06:00:00+02:00` : undefined);
+
+let objekte: any[];
+if (url === `${SITE}/`) {  // nur die Startseite von derkaemmerer.de (Subdomains haben eigene Canonicals)
+  objekte = [
+    { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Der Kämmerer', url: `${SITE}/`, description, inLanguage: 'de-DE', publisher: { '@id': `${SITE}/#verlag` } },
+    { '@context': 'https://schema.org', ...HAKO },
+    { '@context': 'https://schema.org', ...VERLAG },
+  ];
+} else if (ogType === 'article') {
+  const artikel: any = {
+    '@context': 'https://schema.org', '@type': 'NewsArticle',
+    headline: title.slice(0, 110), description, image: [image],
+    datePublished: iso(datum), dateModified: iso(updated || datum),
+    author: { '@type': 'Organization', name: 'Redaktion Der Kämmerer', url: `${SITE}/ueber-uns/` },
+    publisher: VERLAG, mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage: 'de-DE', isAccessibleForFree: true,
+  };
+  if (section) artikel.articleSection = section;
+  objekte = [artikel];
+  if (section && sectionUrl) objekte.push({
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Der Kämmerer', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: section, item: sectionUrl },
+      { '@type': 'ListItem', position: 3, name: title, item: url },
+    ],
+  });
+} else {
+  objekte = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url, inLanguage: 'de-DE', isPartOf: { '@id': `${SITE}/#website` }, publisher: VERLAG }];
+}
+---
+{objekte.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}

@@ -70,10 +70,16 @@ const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemLi
   { '@type': 'ListItem', position: 1, name: 'Kreise', item: 'https://derkaemmerer.de/kreise/' },
   { '@type': 'ListItem', position: 2, name: landLang, item: `https://derkaemmerer.de/gemeinden/${LAND_SLUG[k.land]}/` },
   { '@type': 'ListItem', position: 3, name: k.titel, item: `https://derkaemmerer.de${k.url}` } ] };
+// AdministrativeArea nur aus vorhandenen Daten (Runbook 2.3)
+const gebiet = { '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: k.titel, url: `https://derkaemmerer.de${k.url}`,
+  identifier: { '@type': 'PropertyValue', propertyID: 'AGS', value: k.ags },
+  containedInPlace: { '@type': 'AdministrativeArea', name: landLang },
+  containsPlace: gs.slice(0, 50).map((x: any) => ({ '@type': 'AdministrativeArea', name: x.name })) };
 ---
 <Base title={titel} description={beschreibung}>
 <Header />
 <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<script type="application/ld+json" set:html={JSON.stringify(gebiet)} />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 .kr { color:#0f172a; } .kr-w { max-width:1080px; margin:0 auto; padding:0 28px; }
