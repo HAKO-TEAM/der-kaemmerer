@@ -12,7 +12,7 @@ featured: false
 
 Kaum ist eine Haushaltssperre verkündet, klingeln in Kämmerei und Fachämtern die Telefone. Sportvereine, Kulturinitiativen, Wohlfahrtsverbände und Jugendhilfeträger wollen wissen, ob ihr Zuschuss noch kommt. Die ehrliche Antwort lautet fast immer: Das hängt davon ab, was schon unterschrieben ist.
 
-Dieser Beitrag beschreibt die Rechtslage, wie sie sich aus Gemeindeordnungen, Haushaltsverordnungen und Verwaltungsverfahrensrecht ergibt, und zeigt an Fällen aus 2025 und 2026, wie unterschiedlich Kommunen mit freien Trägern umgehen. Er ersetzt keine Rechtsberatung im Einzelfall. Welche Städte derzeit unter Sperre stehen, zeigt unser Überblick [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte); die Rechtsgrundlagen der einzelnen Länder vergleicht der Beitrag [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen).
+Dieser Beitrag beschreibt die Rechtslage, wie sie sich aus Gemeindeordnungen, Haushaltsverordnungen und Verwaltungsverfahrensrecht ergibt, und zeigt an Fällen aus 2025 und 2026, wie unterschiedlich Kommunen mit freien Trägern umgehen. Er ersetzt keine Rechtsberatung im Einzelfall. Welche Städte derzeit unter Sperre stehen, zeigt unser Überblick [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte/); die Rechtsgrundlagen der einzelnen Länder vergleicht der Beitrag [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/).
 
 ---
 
@@ -64,7 +64,7 @@ Gesperrt werden also **Haushaltsansätze**, nicht Verträge oder Bescheide. Das 
 
 ## Was die Fälle zeigen
 
-Die Kommunen haben in allen Fällen dieselbe Rechtsgrundlage, aber sehr unterschiedliche Spielräume genutzt. Münster und Köln haben politisch entschieden, Strukturen zu halten. Dresden hat mit einer Freigabequote gearbeitet, die der Stadtrat später korrigieren wollte. Lörrach stellt alle nicht gesetzlich vorgegebenen Leistungen auf den Prüfstand, der Landkreis Leipzig bremst direkt im Jugendamt, wo die Mehrkosten entstanden sind [9][11]. Wie viel Druck noch kommt, zeigt unser Beitrag zu den Städten, die bereits für [2027 vor einer Haushaltssperre warnen](/haushalt/haushaltssperre-2027-staedte-warnen).
+Die Kommunen haben in allen Fällen dieselbe Rechtsgrundlage, aber sehr unterschiedliche Spielräume genutzt. Münster und Köln haben politisch entschieden, Strukturen zu halten. Dresden hat mit einer Freigabequote gearbeitet, die der Stadtrat später korrigieren wollte. Lörrach stellt alle nicht gesetzlich vorgegebenen Leistungen auf den Prüfstand, der Landkreis Leipzig bremst direkt im Jugendamt, wo die Mehrkosten entstanden sind [9][11]. Wie viel Druck noch kommt, zeigt unser Beitrag zu den Städten, die bereits für [2027 vor einer Haushaltssperre warnen](/haushalt/haushaltssperre-2027-staedte-warnen/).
 
 Für Träger ist weniger die Kürzung selbst das Problem als die Unsicherheit. Die Kämmerei in Leonberg beschrieb 2025 eine Budgetdrosselung auf 75 % als „das mildeste Mittel" und warnte, im Fall einer Sperre wären Zuschüsse an Vereine nicht mehr möglich [13]. Im Landkreis Leipzig kündigten nach Darstellung der Trägerarbeitsgemeinschaft viele freie Träger an, noch vor Weihnachten Arbeitsverhältnisse zu beenden [11]. Ist Personal einmal weg, lässt sich ein Angebot nicht einfach wieder einschalten.
 
@@ -84,7 +84,7 @@ Für Träger ist weniger die Kürzung selbst das Problem als die Unsicherheit. D
 
 6. **Jugendhilfe gesondert behandeln.** Die Trägerförderung nach § 74 SGB VIII erfolgt im Rahmen der verfügbaren Haushaltsmittel [19], die Hilfe zur Erziehung ist dagegen als Anspruch formuliert [18]. Eine Sperre, die beides gleich behandelt, provoziert Konflikte wie im Landkreis Leipzig [11]. Für Leistungen in Einrichtungen regelt § 78b SGB VIII die Entgeltübernahme über Vereinbarungen mit den Trägern [21].
 
-7. **Den Rat einbinden.** Die Sperre spricht in der Regel die Verwaltung aus, der Rat kann sie aber aufheben [15][16]. Dresdens Fraktionen haben eine engmaschige Berichtspflicht verlangt [3]. Regelmäßige Berichte über Freigaben verhindern, dass Förderentscheidungen zum Streit zwischen Verwaltung und Politik werden. Wo eine Sperre in ein Haushaltssicherungskonzept mündet, beschreibt unser Beitrag zum [Haushaltssicherungskonzept in der Praxis](/haushalt/haushaltssicherungskonzept-praxis), wie die Konsolidierung freiwilliger Leistungen planbar wird.
+7. **Den Rat einbinden.** Die Sperre spricht in der Regel die Verwaltung aus, der Rat kann sie aber aufheben [15][16]. Dresdens Fraktionen haben eine engmaschige Berichtspflicht verlangt [3]. Regelmäßige Berichte über Freigaben verhindern, dass Förderentscheidungen zum Streit zwischen Verwaltung und Politik werden. Wo eine Sperre in ein Haushaltssicherungskonzept mündet, beschreibt unser Beitrag zum [Haushaltssicherungskonzept in der Praxis](/haushalt/haushaltssicherungskonzept-praxis/), wie die Konsolidierung freiwilliger Leistungen planbar wird.
 
 ---
 

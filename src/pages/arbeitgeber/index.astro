@@ -87,7 +87,7 @@ const staedte = files.map(f => JSON.parse(readFileSync(join(dataDir, f), 'utf-8'
     <div class="ag-section-label">Partnerstädte ({staedte.length} Dossiers verfügbar)</div>
     <div class="ag-grid">
       {staedte.map(stadt => (
-        <a href={`/arbeitgeber/${stadt.slug}`} class="ag-card">
+        <a href={`/arbeitgeber/${stadt.slug}/`} class="ag-card">
           <div class="ag-card-top">
             {stadt.kommunalflat && <div class="ag-kommunalflat-badge">★ KommunalFlat-Partner</div>}
             <div class="ag-card-bundesland">{stadt.bundesland}</div>
@@ -116,7 +116,7 @@ const staedte = files.map(f => JSON.parse(readFileSync(join(dataDir, f), 'utf-8'
         <h3>Ihre Stadt noch nicht dabei?</h3>
         <p>Mit KommunalFlat schalten Sie unbegrenzt Stellenanzeigen und erhalten ein vollständiges Arbeitgeber-Dossier.</p>
       </div>
-      <a href="/anzeige-aufgeben?paket=kommunalflat" class="ag-cta-btn">KommunalFlat anfragen →</a>
+      <a href="/anzeige-aufgeben/?paket=kommunalflat" class="ag-cta-btn">KommunalFlat anfragen →</a>
     </div>
   </div>
 </div>

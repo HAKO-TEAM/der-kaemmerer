@@ -1,4 +1,5 @@
 ---
+import { href } from '../lib/href';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -45,7 +46,7 @@ const rotationPool = rotationQuelle.map(a => ({
   title: a.data.title,
   beschreibung: a.data.beschreibung,
   datum: a.data.datum,
-  href: `/${a.collection}/${(a.id as string).split('/').pop()!.replace('.md','')}`,
+  href: href(`/${a.collection}/${(a.id as string).split('/').pop()!.replace('.md','')}`),
 }));
 
 const catColor: Record<string,string> = {
@@ -99,7 +100,7 @@ const catLabel: Record<string,string> = {
         {featured.data.title}
       </h1>
       <p id="hero-desc" style="font-size:14px;color:#93c5fd;line-height:1.7;margin-bottom:14px;">{featured.data.beschreibung}</p>
-      <a id="hero-link" href={`/${featured.collection}/${(featured.id as string).split("/").pop()!.replace(".md","")}`}
+      <a id="hero-link" href={`/${featured.collection}/${(featured.id as string).split("/").pop()!.replace(".md","")}/`}
          style="display:inline-block;background:#3b82f6;color:#fff;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 16px;border-radius:3px;">
         Weiterlesen →
       </a>
@@ -115,7 +116,7 @@ const catLabel: Record<string,string> = {
         <div style={`font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6ee7b7;margin-bottom:3px;`}>
           {catLabel[a.collection]}
         </div>
-        <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}`}
+        <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}/`}
            style="font-size:12px;font-weight:500;color:#e2e8f0;line-height:1.4;display:block;">
           {a.data.title}
         </a>
@@ -262,14 +263,14 @@ const catLabel: Record<string,string> = {
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:8px;border-bottom:3px solid #1a2744;">
         <span style={`font-size:13px;font-weight:800;color:#1a2744;`}>{catLabel[key]}</span>
         <span style="flex:1;height:1px;background:#e2e8f0;"></span>
-        <a href={`/${key}`} style={`font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:${catColor[key]};`}>
+        <a href={`/${key}/`} style={`font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:${catColor[key]};`}>
           Alle {sorted.length} Artikel →
         </a>
       </div>
       <div class="art-grid">
         {sorted.slice(0,3).map(a => (
         <div style="background:#fff;border:1px solid #e2e8f0;border-top:3px solid #e2e8f0;border-radius:4px;padding:18px;transition:box-shadow .15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,.08)'" onmouseout="this.style.boxShadow=''">
-          <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}`}>
+          <a href={`/${a.collection}/${(a.id as string).split("/").pop()!.replace(".md","")}/`}>
             <h3 style={`font-size:14px;font-weight:700;line-height:1.35;color:#1a2744;margin-bottom:8px;letter-spacing:-.01em;border-top:3px solid ${catColor[key]};padding-top:10px;margin-top:-3px;`}>{a.data.title}</h3>
           </a>
           <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:10px;">{a.data.beschreibung}</p>

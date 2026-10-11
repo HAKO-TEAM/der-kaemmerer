@@ -66,7 +66,7 @@ Die gründlichste öffentlich zugängliche Kosten-Nutzen-Prüfung stammt nicht a
 
 **Drittens: Das Aufkommen schrumpft planmäßig.** Wer die Steuer im Ergebnishaushalt als feste Einnahme fortschreibt, plant gegen ihre eigene Wirkung. Gütersloh kommt zu dem Schluss, die Steuer sei nicht geeignet, strukturelle Haushaltsdefizite auszugleichen, und rät angesichts der Haushaltslage ab [6].
 
-Ein vereinfachtes Rechenbeispiel (eigene Schätzung, keine Prognose für eine bestimmte Stadt): Bringt die Steuer im ersten vollen Jahr eine Million Euro und kostet die Erhebung 15 Prozent, bleiben 850.000 Euro. Fließen davon wie in Freiburg mehrere Hunderttausend Euro in Mehrwegförderung und Kommunikation, schrumpft der Beitrag zum Haushaltsausgleich schnell auf einen niedrigen sechsstelligen Betrag. Bei Defiziten im dreistelligen Millionenbereich, wie sie mehrere Großstädte für 2027 planen (siehe unsere Analyse zu den [Hebesatzerhöhungen 2027](/einnahmen/grundsteuer-hebesatz-erhoehungen-2027)), ist das kein Konsolidierungshebel.
+Ein vereinfachtes Rechenbeispiel (eigene Schätzung, keine Prognose für eine bestimmte Stadt): Bringt die Steuer im ersten vollen Jahr eine Million Euro und kostet die Erhebung 15 Prozent, bleiben 850.000 Euro. Fließen davon wie in Freiburg mehrere Hunderttausend Euro in Mehrwegförderung und Kommunikation, schrumpft der Beitrag zum Haushaltsausgleich schnell auf einen niedrigen sechsstelligen Betrag. Bei Defiziten im dreistelligen Millionenbereich, wie sie mehrere Großstädte für 2027 planen (siehe unsere Analyse zu den [Hebesatzerhöhungen 2027](/einnahmen/grundsteuer-hebesatz-erhoehungen-2027/)), ist das kein Konsolidierungshebel.
 
 ---
 
@@ -83,7 +83,7 @@ Auf der anderen Seite argumentiert die Deutsche Umwelthilfe mit den Entsorgungsk
 1. **Landesrecht zuerst prüfen.** In Bayern ist die Steuer verboten, in NRW braucht die erste Satzung zwei Ministerien. Ohne geklärte Genehmigungsfrage keine Planung im Haushalt.
 2. **Netto rechnen, nicht brutto.** Personal, Software, Kontrolle, Förderprogramme und Kommunikation gehören in dieselbe Vorlage wie die erwarteten Einnahmen. Freiburg zeigt, wie schnell die Begleitkosten in die Größenordnung des Aufkommens wachsen.
 3. **Sinkende Erträge einplanen.** Die mittelfristige Finanzplanung sollte das Aufkommen nach dem Einführungsjahr fallen lassen. Tübingen ist der Beleg.
-4. **Gebühren- und Haushaltswirkung trennen.** Einsparungen bei Papierkörben und Straßenreinigung wirken überwiegend in den Gebührenhaushalten. Wie sich das sauber abgrenzen lässt, beschreibt unser Beitrag zu [Gebühren und Kostendeckung](/einnahmen/gebuehren-kostendeckung-optimieren).
+4. **Gebühren- und Haushaltswirkung trennen.** Einsparungen bei Papierkörben und Straßenreinigung wirken überwiegend in den Gebührenhaushalten. Wie sich das sauber abgrenzen lässt, beschreibt unser Beitrag zu [Gebühren und Kostendeckung](/einnahmen/gebuehren-kostendeckung-optimieren/).
 5. **Zweck klar benennen.** Die Steuer ist ein Lenkungsinstrument. Wer sie als Konsolidierungsbeitrag verkauft, liefert Kritikern das stärkste Argument.
 6. **Satzung nach Tübinger Vorbild, Erfahrungen der Nachbarn einholen.** Konstanz, Freiburg und Potsdam haben ihre Satzungen unterschiedlich weit gefasst; die Freiburger Fassung erfasst nach der GVM-Studie mehr Verpackungen als die Tübinger [13]. Das verändert Aufkommen und Aufwand.
 7. **Betriebe früh einbinden.** Die kommunalen Spitzenverbände in NRW haben im Januar 2026 eine frühzeitige Beteiligung der Betroffenen angemahnt [6]. Potsdam musste den Start verschieben.
@@ -92,7 +92,7 @@ Auf der anderen Seite argumentiert die Deutsche Umwelthilfe mit den Entsorgungsk
 
 ## Fazit
 
-Die Verpackungssteuer ist rechtlich gesichert, politisch umstritten und finanziell klein. Für eine Stadt mit hohem Defizit (zur Gesamtlage siehe [Kommunales Defizit 2026](/analyse/kommunales-defizit-rekord-2026)) entscheidet sie nicht über den Haushaltsausgleich. Wer sie einführt, sollte das aus umweltpolitischen Gründen tun und die Kosten offenlegen. Wer sie ablehnt, hat in der Gütersloher Vorlage eine sauber begründete Vorlage dafür.
+Die Verpackungssteuer ist rechtlich gesichert, politisch umstritten und finanziell klein. Für eine Stadt mit hohem Defizit (zur Gesamtlage siehe [Kommunales Defizit 2026](/analyse/kommunales-defizit-rekord-2026/)) entscheidet sie nicht über den Haushaltsausgleich. Wer sie einführt, sollte das aus umweltpolitischen Gründen tun und die Kosten offenlegen. Wer sie ablehnt, hat in der Gütersloher Vorlage eine sauber begründete Vorlage dafür.
 
 ---
 

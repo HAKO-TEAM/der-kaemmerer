@@ -24,7 +24,7 @@ Wenn die Haushaltssperre Sachkosten und Investitionen bremst, folgt oft der zwei
 
 **Riedstadt** (Hessen) hat die Sperre direkt in den Haushalt geschrieben: Eine Stellenbesetzungssperre kann nur im Einzelfall und auf Antrag vom Haupt-, Finanz- und Wirtschaftsausschuss aufgehoben werden, ausgenommen ist allein die Kinderbetreuung. Der Haushalt 2026 wurde inzwischen von der Kommunalaufsicht genehmigt [8].
 
-Eine Übersicht aller belegten Haushaltssperren 2026 bietet unser [Pillar-Artikel zur Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte) und das Verzeichnis [Haushaltssperren auf der Karte](/haushaltssperren/).
+Eine Übersicht aller belegten Haushaltssperren 2026 bietet unser [Pillar-Artikel zur Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte/) und das Verzeichnis [Haushaltssperren auf der Karte](/haushaltssperren/).
 
 ---
 
@@ -48,7 +48,7 @@ Drei strukturelle Risiken sollten Kämmereien mitdenken:
 - **Fachkräfte kommen nicht zurück.** Eine Stelle, die ein halbes Jahr leer stand, ist in Mangelberufen (IT, Bau, Sozialarbeit) danach nicht schneller zu besetzen.
 - **Der Spareffekt verpufft im Folgejahr.** Eine Sperre spart einmalig. Dauerhaft wirkt nur, was Aufgaben streicht oder Stellen tatsächlich wegfallen lässt – wie es auch in der Karlsruher Debatte gefordert wurde [2].
 
-Wie demografisch bedingte Abgänge den Personalbestand ohnehin verändern, beschreibt unser Beitrag zu [Demografie und kommunalen Finanzen bis 2035](/analyse/demografie-kommunale-finanzen-2035).
+Wie demografisch bedingte Abgänge den Personalbestand ohnehin verändern, beschreibt unser Beitrag zu [Demografie und kommunalen Finanzen bis 2035](/analyse/demografie-kommunale-finanzen-2035/).
 
 ---
 
@@ -68,7 +68,7 @@ Wie demografisch bedingte Abgänge den Personalbestand ohnehin verändern, besch
 
 Bergisch Gladbach zeigt, dass die Sperre selten allein steht. Zum Paket gehören die Überprüfung befristeter Verträge (85 befristet Beschäftigte, davon 13 Werkstudierende), Beförderungen nur noch zu zwei Stichtagen im Jahr, der Verzicht auf neue Altersteilzeitvereinbarungen (aktuell 33 Fälle mit 236.000 € Aufstockung pro Jahr) und ab 2027 keine Urlaubsübertragungen außerhalb gesetzlicher oder tariflicher Fälle; bei vollständiger Umsetzung wäre das eine einmalige Ersparnis von rund 1,7 Mio. €, vor allem über geringere Urlaubsrückstellungen [5]. Eine belastbare Gesamtbezifferung hält die Verwaltung selbst noch nicht für möglich [5].
 
-Für die Rechtsgrundlagen der zugrunde liegenden haushaltswirtschaftlichen Sperre nach Land siehe unseren Überblick [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen); wie sich Sperren 2027 abzeichnen, zeigt [Haushaltssperre 2027: Welche Städte jetzt schon warnen](/haushalt/haushaltssperre-2027-staedte-warnen).
+Für die Rechtsgrundlagen der zugrunde liegenden haushaltswirtschaftlichen Sperre nach Land siehe unseren Überblick [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/); wie sich Sperren 2027 abzeichnen, zeigt [Haushaltssperre 2027: Welche Städte jetzt schon warnen](/haushalt/haushaltssperre-2027-staedte-warnen/).
 
 ---
 
@@ -86,7 +86,7 @@ Für die Rechtsgrundlagen der zugrunde liegenden haushaltswirtschaftlichen Sperr
 
 ## Fazit
 
-Die Wiederbesetzungssperre ist das schnellste Personalinstrument, das eine Kämmerei hat – und das am meisten überschätzte. Sie bringt einmalig Liquidität, bezahlt mit Belastung der Beschäftigten und Leistungseinbußen. Wirksam wird sie erst, wenn aus der befristeten Sperre eine dauerhafte Entscheidung über Aufgaben und Stellen wird. Weitere Fälle aus Nordrhein-Westfalen finden sich in [Haushaltssperre in NRW 2026](/haushalt/haushaltssperre-nrw-2026-staedte).
+Die Wiederbesetzungssperre ist das schnellste Personalinstrument, das eine Kämmerei hat – und das am meisten überschätzte. Sie bringt einmalig Liquidität, bezahlt mit Belastung der Beschäftigten und Leistungseinbußen. Wirksam wird sie erst, wenn aus der befristeten Sperre eine dauerhafte Entscheidung über Aufgaben und Stellen wird. Weitere Fälle aus Nordrhein-Westfalen finden sich in [Haushaltssperre in NRW 2026](/haushalt/haushaltssperre-nrw-2026-staedte/).
 
 ---
 

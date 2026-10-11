@@ -14,7 +14,7 @@ Lange galt die Haushaltssperre als nordrhein-westfälisches Phänomen. 2026 hat 
 
 Der Hintergrund ist bekannt, aber in Bayern besonders scharf. Die bayerischen Kommunen haben 2025 nach der Kassenstatistik des Landesamts für Statistik ein Defizit von 4,7 Mrd. € verbucht, obwohl die Steuereinnahmen um 6,1 % stiegen [22]. Die vier kommunalen Spitzenverbände rechnen vor, dass sich die Finanzierungssalden 2024 und 2025 auf mehr als 10 Mrd. € Defizit summieren. Allein die Sozialausgaben stiegen 2024 um mehr als 1,1 Mrd. €, die Steuereinnahmen nur um rund 340 Mio. € [21].
 
-Die bundesweite Übersicht mit allen Ländern führt unser Pillar-Beitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte). Alle Fälle auf Karte und Liste zeigt das Verzeichnis [Haushaltssperren](/haushaltssperren/), die bayerischen Kommunen gesondert die Länderseite [Haushaltssperren in Bayern](/haushaltssperren/bayern/).
+Die bundesweite Übersicht mit allen Ländern führt unser Pillar-Beitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte/). Alle Fälle auf Karte und Liste zeigt das Verzeichnis [Haushaltssperren](/haushaltssperren/), die bayerischen Kommunen gesondert die Länderseite [Haushaltssperren in Bayern](/haushaltssperren/bayern/).
 
 ---
 
@@ -42,11 +42,11 @@ Die bundesweite Übersicht mit allen Ländern führt unser Pillar-Beitrag [Haush
 
 ## Was die Fälle gemeinsam haben
 
-**Die Gewerbesteuer bricht schnell und konzentriert weg.** In Germering haben acht größere Unternehmen ihre Vorauszahlungen gesenkt [10]. Höhenkirchen-Siegertsbrunn bemerkte den Einbruch erst, als sich Anfang Juli die Messbescheide änderten [14]. Wer die Gewerbesteuer nur quartalsweise beobachtet, reagiert zu spät. Welche Städte schon für das kommende Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027](/haushalt/haushaltssperre-2027-staedte-warnen).
+**Die Gewerbesteuer bricht schnell und konzentriert weg.** In Germering haben acht größere Unternehmen ihre Vorauszahlungen gesenkt [10]. Höhenkirchen-Siegertsbrunn bemerkte den Einbruch erst, als sich Anfang Juli die Messbescheide änderten [14]. Wer die Gewerbesteuer nur quartalsweise beobachtet, reagiert zu spät. Welche Städte schon für das kommende Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027](/haushalt/haushaltssperre-2027-staedte-warnen/).
 
 **Die Liquidität wird zum eigentlichen Engpass.** Forchheim ohne eigene liquide Mittel [7], Geretsried knapp unter dem Kassenkreditrahmen [12], Germering mit drohender Zahlungsunfähigkeit laut Oberbürgermeister [10]: In mehreren Fällen ist die Sperre weniger ein Sparinstrument als eine Sicherung der Zahlungsfähigkeit.
 
-**Die Ausnahmen ähneln sich.** Pflichtleistungen, vertragliche Bindungen und begonnene Bauprojekte laufen fast überall weiter. Ebersberg nimmt laufende Zuschüsse an Vereine und Ehrenamt ausdrücklich aus [6], Germering vorerst ebenfalls [10]. Puchheim schützt Personal, Kreisumlage und Kinderbetreuung nach BayKiBiG [11]. Was Zuwendungsempfänger daraus ableiten können, steht in unserem Beitrag für [Vereine und freie Träger](/praxis/haushaltssperre-vereine-freie-traeger).
+**Die Ausnahmen ähneln sich.** Pflichtleistungen, vertragliche Bindungen und begonnene Bauprojekte laufen fast überall weiter. Ebersberg nimmt laufende Zuschüsse an Vereine und Ehrenamt ausdrücklich aus [6], Germering vorerst ebenfalls [10]. Puchheim schützt Personal, Kreisumlage und Kinderbetreuung nach BayKiBiG [11]. Was Zuwendungsempfänger daraus ableiten können, steht in unserem Beitrag für [Vereine und freie Träger](/praxis/haushaltssperre-vereine-freie-traeger/).
 
 **Das Personal wird zum Sparhebel.** Nürnberg schreibt nicht mehr extern aus [1], Augsburg sperrt Wiederbesetzungen [2], Starnberg stoppt laufende Bewerbungsverfahren [8].
 
@@ -56,7 +56,7 @@ Die bundesweite Übersicht mit allen Ländern führt unser Pillar-Beitrag [Haush
 
 Bayern formuliert die Sperre als Pflicht. Nach § 28 KommHV-Doppik ist die Inanspruchnahme von Ansätzen für Aufwendungen, Auszahlungen und Verpflichtungsermächtigungen zu sperren, wenn die Entwicklung der Erträge oder Aufwendungen es erfordert [19]. Kameral buchende Kommunen wie Augsburg stützen sich auf den entsprechenden § 28 KommHV-Kameralistik [2]; auch Cadolzburg beruft sich ausdrücklich auf § 28 KommHV-Doppik [18]. Wer sperrt, sagt die Verordnung nicht.
 
-In der Praxis entscheidet die Verwaltungsspitze, teils der Rat. Starnberg und Geretsried nutzten die dringliche Anordnung [8][12]. Nach Art. 37 Abs. 3 GO darf die erste Bürgermeisterin oder der erste Bürgermeister an Stelle des Gemeinderats dringliche Anordnungen treffen und muss dem Gremium in der nächsten Sitzung Kenntnis geben [20]. In Germering beschloss dagegen der Hauptausschuss einstimmig [10], in Weilheim-Schongau der Kreisausschuss [9]. Den Ländervergleich enthält unser Beitrag [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen).
+In der Praxis entscheidet die Verwaltungsspitze, teils der Rat. Starnberg und Geretsried nutzten die dringliche Anordnung [8][12]. Nach Art. 37 Abs. 3 GO darf die erste Bürgermeisterin oder der erste Bürgermeister an Stelle des Gemeinderats dringliche Anordnungen treffen und muss dem Gremium in der nächsten Sitzung Kenntnis geben [20]. In Germering beschloss dagegen der Hauptausschuss einstimmig [10], in Weilheim-Schongau der Kreisausschuss [9]. Den Ländervergleich enthält unser Beitrag [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/).
 
 Die Rechtsaufsicht spielt eine wachsende Rolle. Erlangen sperrt auf Auflage der Regierung von Mittelfranken [3], Bad Aibling stimmt sich nach eigenen Angaben eng mit dem Landratsamt Rosenheim ab [13].
 

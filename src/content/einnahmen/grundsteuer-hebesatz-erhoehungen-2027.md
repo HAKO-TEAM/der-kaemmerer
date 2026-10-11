@@ -78,7 +78,7 @@ Der letzte Satz ist wichtig: Unna plant mit 19,38 Millionen Euro bei 1.052 Proze
 
 Für den einzelnen Haushalt sind die Beträge oft überschaubar. In Göttingen steigt die Last für ein Einfamilienhaus um 2,82 Euro im Monat, für ein Geschäftsgrundstück um 22,60 Euro [9]. In Ludwigsburg zahlt, wer bisher 400 Euro im Jahr zahlte, rund 35 Euro mehr [6]. Anders sieht es beim Wechsel zum Einheitssatz aus: In Unna steigt die Jahreslast eines Beispielhauses von etwa 825 auf 1.030 Euro [10].
 
-Die Grundsteuer wird über die Nebenkosten auf Mieter umgelegt, sie erreicht also fast jeden Haushalt. Für Unternehmen kommt sie selten allein. Mainz hebt gleichzeitig die Gewerbesteuer von 460 auf 470 Punkte an [1], Kamen von 470 auf 490 [11]. Wie sich die Gewerbesteuersätze im Vergleich entwickeln, zeigt unser [Gewerbesteuer-Benchmark 2026](/einnahmen/gewerbesteuer-benchmark-2026). Die Kombination aus beidem ist das eigentliche Standortsignal.
+Die Grundsteuer wird über die Nebenkosten auf Mieter umgelegt, sie erreicht also fast jeden Haushalt. Für Unternehmen kommt sie selten allein. Mainz hebt gleichzeitig die Gewerbesteuer von 460 auf 470 Punkte an [1], Kamen von 470 auf 490 [11]. Wie sich die Gewerbesteuersätze im Vergleich entwickeln, zeigt unser [Gewerbesteuer-Benchmark 2026](/einnahmen/gewerbesteuer-benchmark-2026/). Die Kombination aus beidem ist das eigentliche Standortsignal.
 
 ---
 
@@ -92,7 +92,7 @@ Die Grundsteuer wird über die Nebenkosten auf Mieter umgelegt, sie erreicht als
 
 **4. Die Rechtslage vorher klären.** Wer in NRW differenziert, muss die sachliche Rechtfertigung gerichtsfest dokumentieren. Sonst droht eine Korrektur unter Zeitdruck, wie 2026 in mehreren Städten [11][13].
 
-**5. Die Erhöhung in ein Konsolidierungspaket einbetten.** Mainz will über 42 Millionen Euro einsparen [2], Dresden plant Strukturentlastungen von rund 780 Millionen Euro bis 2031 [4]. Eine Steuererhöhung ohne erkennbare Ausgabendisziplin ist politisch kaum zu vermitteln. Wo der Haushalt bereits unter Bewirtschaftung steht, hilft der Blick auf unsere Übersicht zur [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte).
+**5. Die Erhöhung in ein Konsolidierungspaket einbetten.** Mainz will über 42 Millionen Euro einsparen [2], Dresden plant Strukturentlastungen von rund 780 Millionen Euro bis 2031 [4]. Eine Steuererhöhung ohne erkennbare Ausgabendisziplin ist politisch kaum zu vermitteln. Wo der Haushalt bereits unter Bewirtschaftung steht, hilft der Blick auf unsere Übersicht zur [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte/).
 
 **6. Rückwirkung sparsam einsetzen.** Göttingen und Unna haben rückwirkend zum 1. Januar 2026 erhöht [9][10]. Das ist zulässig, kostet aber Vertrauen. Ein Beschluss im Herbst für das Folgejahr ist die sauberere Lösung.
 
@@ -100,7 +100,7 @@ Die Grundsteuer wird über die Nebenkosten auf Mieter umgelegt, sie erreicht als
 
 ## Fazit
 
-Die Grundsteuer wird zum Ausgleichsposten der Kommunalhaushalte, und 2027 wird das Jahr, in dem das auch die Großstädte offen aussprechen. Wer erhöht, sollte das mit Zahlen begründen, die jeder Bürger nachrechnen kann. Welche Spielräume die Reform jenseits des Hebesatzes bietet, beschreibt unser Beitrag zu den [Chancen der Grundsteuerreform](/einnahmen/grundsteuerreform-chancen-kommunen).
+Die Grundsteuer wird zum Ausgleichsposten der Kommunalhaushalte, und 2027 wird das Jahr, in dem das auch die Großstädte offen aussprechen. Wer erhöht, sollte das mit Zahlen begründen, die jeder Bürger nachrechnen kann. Welche Spielräume die Reform jenseits des Hebesatzes bietet, beschreibt unser Beitrag zu den [Chancen der Grundsteuerreform](/einnahmen/grundsteuerreform-chancen-kommunen/).
 
 ---
 

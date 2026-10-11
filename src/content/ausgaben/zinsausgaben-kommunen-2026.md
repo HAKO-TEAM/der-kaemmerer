@@ -78,7 +78,7 @@ Der Finanzreport bleibt skeptisch: Die zugesagten Mittel des NRW-Gesetzes reicht
 
 Investitionskredite galten lange als unproblematisch, weil ihnen Vermögen gegenübersteht. Der Finanzreport fordert ausdrücklich eine Neujustierung: Auch diese Kredite führten zu Zins- und Tilgungsverpflichtungen, die in vielen Kommunen auf absehbare Zeit nicht finanziert werden könnten [3].
 
-Der Druck nimmt zu. Laut KfW-Kommunalpanel planen die Kommunen für 2026 Sachinvestitionen von rund 50 Milliarden Euro, 14,8 Prozent mehr als im Vorjahr; den wahrgenommenen Investitionsrückstand beziffert die KfW auf den Rekordwert von 231,2 Milliarden Euro [8]. Wer Sondervermögen-Projekte mit kommunalem Eigenanteil kofinanziert, muss die Folgekosten aus Zins und Tilgung in die mittelfristige Planung aufnehmen, bevor der Spatenstich erfolgt. Wie die Länder die Mittel verteilen, zeigt unsere Übersicht zum [Sondervermögen Infrastruktur](/haushalt/sondervermoegen-infrastruktur-kommunen-laenderquote).
+Der Druck nimmt zu. Laut KfW-Kommunalpanel planen die Kommunen für 2026 Sachinvestitionen von rund 50 Milliarden Euro, 14,8 Prozent mehr als im Vorjahr; den wahrgenommenen Investitionsrückstand beziffert die KfW auf den Rekordwert von 231,2 Milliarden Euro [8]. Wer Sondervermögen-Projekte mit kommunalem Eigenanteil kofinanziert, muss die Folgekosten aus Zins und Tilgung in die mittelfristige Planung aufnehmen, bevor der Spatenstich erfolgt. Wie die Länder die Mittel verteilen, zeigt unsere Übersicht zum [Sondervermögen Infrastruktur](/haushalt/sondervermoegen-infrastruktur-kommunen-laenderquote/).
 
 ---
 
@@ -86,17 +86,17 @@ Der Druck nimmt zu. Laut KfW-Kommunalpanel planen die Kommunen für 2026 Sachinv
 
 1. **Zinsänderungsrisiko beziffern.** Für das gesamte Kreditportfolio ausweisen, welche Volumina bis 2029 aus der Zinsbindung laufen und was ein Prozentpunkt mehr im Ergebnishaushalt kostet. Diese Zahl gehört in jeden Haushaltsvorbericht.
 2. **Kassenkredite langfristig absichern, wo das Landesrecht es zulässt.** Der Finanzreport verweist darauf, dass in NRW Kassenkredite inzwischen auch längerfristig in Zins und Tilgung vertraglich abgesichert werden können [3].
-3. **Prolongationskalender führen.** Anschlussfinanzierungen nicht erst bei Fälligkeit verhandeln, sondern zwölf bis 18 Monate vorher Angebote einholen und Forward-Konditionen prüfen. Mehr dazu im Leitfaden [Kommunale Schulden aktiv managen](/haushalt/kommunale-schulden-strategien).
+3. **Prolongationskalender führen.** Anschlussfinanzierungen nicht erst bei Fälligkeit verhandeln, sondern zwölf bis 18 Monate vorher Angebote einholen und Forward-Konditionen prüfen. Mehr dazu im Leitfaden [Kommunale Schulden aktiv managen](/haushalt/kommunale-schulden-strategien/).
 4. **LKEG-Mittel konsequent zur Tilgung nutzen.** Die Bundesmittel sind für Zins und Tilgung gebunden [6]. Wer sie vorrangig in die Tilgung der teuersten kurzfristigen Kredite lenkt, senkt die Zinsbasis dauerhaft.
 5. **Eigenbetriebe und Beteiligungen einbeziehen.** Die BdSt-Auswertung zählt Kernhaushalt und Eigenbetriebe zusammen [4]. Eine Zinsstrategie, die nur den Kernhaushalt betrachtet, übersieht einen Teil der Last.
 6. **Folgekosten jeder Kreditaufnahme im Beschluss ausweisen.** Jede Kreditermächtigung sollte die jährliche Zins- und Tilgungslast über die Laufzeit offenlegen, damit Räte die Dauerwirkung sehen.
-7. **Strukturdefizit vor Zinsfrage lösen.** Solange laufende Defizite über Kassenkredite gedeckt werden, wächst die Zinslast weiter. Warum das Problem strukturell ist, zeigt unsere Analyse [Kassenkredite als Normalzustand](/haushalt/kassenkredite-als-normalzustand).
+7. **Strukturdefizit vor Zinsfrage lösen.** Solange laufende Defizite über Kassenkredite gedeckt werden, wächst die Zinslast weiter. Warum das Problem strukturell ist, zeigt unsere Analyse [Kassenkredite als Normalzustand](/haushalt/kassenkredite-als-normalzustand/).
 
 ---
 
 ## Fazit
 
-Mit 2,4 Milliarden Euro im Halbjahr sind die Zinsen noch kein dominanter Kostenblock. Ihr Wachstum ist jedoch das deutlichste Warnsignal im kommunalen Ausgabenbild: Sie steigen fast fünfmal so schnell wie der Gesamthaushalt und nicht mehr nur in den bekannten Altschuldenkommunen, sondern auch in wirtschaftsstarken Städten wie Stuttgart. Das Rekorddefizit von heute ist die Zinslast von morgen, wie auch unsere Analyse zum [kommunalen Defizit 2026](/analyse/kommunales-defizit-rekord-2026) zeigt. Kämmereien, die ihr Zinsrisiko jetzt beziffern und steuern, gewinnen Spielraum zurück, den die Bundeshilfe allein nicht schafft.
+Mit 2,4 Milliarden Euro im Halbjahr sind die Zinsen noch kein dominanter Kostenblock. Ihr Wachstum ist jedoch das deutlichste Warnsignal im kommunalen Ausgabenbild: Sie steigen fast fünfmal so schnell wie der Gesamthaushalt und nicht mehr nur in den bekannten Altschuldenkommunen, sondern auch in wirtschaftsstarken Städten wie Stuttgart. Das Rekorddefizit von heute ist die Zinslast von morgen, wie auch unsere Analyse zum [kommunalen Defizit 2026](/analyse/kommunales-defizit-rekord-2026/) zeigt. Kämmereien, die ihr Zinsrisiko jetzt beziffern und steuern, gewinnen Spielraum zurück, den die Bundeshilfe allein nicht schafft.
 
 ---
 

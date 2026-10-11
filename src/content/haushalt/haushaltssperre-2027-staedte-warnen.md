@@ -12,7 +12,7 @@ featured: false
 
 Bisher folgte die Haushaltssperre meist dem Jahresabschluss oder einem schlechten Quartalsbericht. Im Herbst 2026 zeigt sich ein anderes Muster: Kämmereien sperren Mittel im laufenden Jahr, weil die Zahlen für 2027 sich eintrüben. Münster reagiert auf sinkende Schlüsselzuweisungen im Jahr 2027 [1], Unna auf die erwartete Kreisumlage [2], Dortmund will verhindern, dass die Stadt ins Haushaltssicherungskonzept rutscht [3]. Die Sperre im vierten Quartal soll Rücklagen und Liquidität für ein Jahr sichern, dessen Haushalt in vielen Räten noch gar nicht beschlossen ist.
 
-Wie sich die Haushaltssperren 2026 entwickelt haben, zeigt unser Hauptbeitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte). Die Höhe der Defizite in den Entwürfen für 2027 haben wir in [Haushalt 2027: Diese Städte schaffen keinen Ausgleich mehr](/haushalt/haushalt-2027-staedte-defizite) zusammengestellt. In diesem Beitrag geht es um einen anderen Punkt: Wo wird bereits gesperrt, gekürzt oder per Aufsicht eingegriffen, und warum steht dabei 2027 im Mittelpunkt?
+Wie sich die Haushaltssperren 2026 entwickelt haben, zeigt unser Hauptbeitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte/). Die Höhe der Defizite in den Entwürfen für 2027 haben wir in [Haushalt 2027: Diese Städte schaffen keinen Ausgleich mehr](/haushalt/haushalt-2027-staedte-defizite/) zusammengestellt. In diesem Beitrag geht es um einen anderen Punkt: Wo wird bereits gesperrt, gekürzt oder per Aufsicht eingegriffen, und warum steht dabei 2027 im Mittelpunkt?
 
 ---
 
@@ -45,7 +45,7 @@ Drei Muster lassen sich unterscheiden.
 
 **Die Schwelle zum HSK wird zum Auslöser.** In Nordrhein-Westfalen sperren Städte, um das Haushaltssicherungskonzept zu vermeiden. Dortmund rechnet nach dem Bericht der Nordstadtblogger mit einem Fehlbetrag von 206 bis 228 Mio. €. Damit droht der Rückgriff auf die allgemeine Rücklage die Fünf-Prozent-Grenze zu überschreiten, und das würde das HSK auslösen [3]. Radio 91.2 nennt fast 230 Mio. € [4]. In beiden Berichten liegt der Fehlbetrag damit beim Vierfachen des Plans. Bochum legt mit dem Entwurf für 2027 bereits ein HSK vor. Der jährliche Konsolidierungsbeitrag soll bis 2035 schrittweise auf 165 Mio. € steigen, das strukturelle Defizit liegt nach Angaben der Stadt bei über 200 Mio. € pro Jahr [5].
 
-Einen Sonderfall bildet der Burgenlandkreis. Dort hat nicht die Verwaltung, sondern das Landesverwaltungsamt Sachsen-Anhalt die Sperre angeordnet, als Auflage zur Genehmigung des Haushalts 2026 [15]. Wer einen nicht genehmigungsfähigen Haushalt vorlegt, verliert also auch die Entscheidung darüber, wann und wie gesperrt wird. Welche Regeln in den einzelnen Ländern gelten, erläutert unser Beitrag [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen).
+Einen Sonderfall bildet der Burgenlandkreis. Dort hat nicht die Verwaltung, sondern das Landesverwaltungsamt Sachsen-Anhalt die Sperre angeordnet, als Auflage zur Genehmigung des Haushalts 2026 [15]. Wer einen nicht genehmigungsfähigen Haushalt vorlegt, verliert also auch die Entscheidung darüber, wann und wie gesperrt wird. Welche Regeln in den einzelnen Ländern gelten, erläutert unser Beitrag [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/).
 
 ---
 
@@ -85,7 +85,7 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 4. **Abgestufte Bewirtschaftung vor der Sperre.** Bochum und Potsdam arbeiten mit festen Quoten (10 % der Budgets, 5 % bestimmter Sachaufwendungen) statt mit einer vollständigen Sperre [5][8]. Wer früh mit Quoten steuert, braucht später seltener eine Totalsperre.
 5. **Freigabegrenzen definieren.** Nürnberg legt eine Wertgrenze von 50.000 € fest, oberhalb derer das Finanzreferat zustimmen muss [12]. Eine solche Grenze sollte vorbereitet sein, bevor sie gebraucht wird.
 6. **Tarifrisiko 2027 eigens ausweisen.** Weil der TVöD-Abschluss am 31.03.2027 ausläuft [18], gehört eine Risikovorsorge für die neue Tarifrunde als eigene Position in den Entwurf.
-7. **Zuwendungsempfänger früh informieren.** Vereine und freie Träger planen ihre Angebote für 2027 jetzt. Welche Folgen eine Sperre für sie hat und wie Kommunen das kommunizieren, beschreibt unser Beitrag [Haushaltssperre: Was Vereine und freie Träger wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger).
+7. **Zuwendungsempfänger früh informieren.** Vereine und freie Träger planen ihre Angebote für 2027 jetzt. Welche Folgen eine Sperre für sie hat und wie Kommunen das kommunizieren, beschreibt unser Beitrag [Haushaltssperre: Was Vereine und freie Träger wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger/).
 
 ---
 

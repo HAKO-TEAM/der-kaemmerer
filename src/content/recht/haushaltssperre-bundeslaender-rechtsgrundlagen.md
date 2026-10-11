@@ -12,7 +12,7 @@ featured: false
 
 Die haushaltswirtschaftliche Sperre gibt es in jedem Flächenland. Bei den Details unterscheiden sich die Länder aber deutlich. In Nordrhein-Westfalen sperrt die Kämmerin oder der Kämmerer, in Hessen der Gemeindevorstand als Kollegialorgan, in Sachsen der Fachbedienstete für das Finanzwesen. Mal ist die Sperre eine Kann-Vorschrift, mal eine Pflicht. Mal steht sie in der Gemeindeordnung, mal nur in der Haushaltsverordnung. Wer eine Sperre verfügt oder vor dem Rat vertreten muss, sollte deshalb die eigene Landesnorm genau kennen.
 
-Warum das Thema gerade drängt, zeigen unser Überblick zur [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte) und die Fälle, in denen Städte [schon jetzt für 2027 warnen](/haushalt/haushaltssperre-2027-staedte-warnen). Dieser Beitrag ordnet die Rechtsgrundlagen. Alle Normen wurden am 06.10.2026 in den Landesrechtsportalen geprüft. Der Text gibt den Wortlaut wieder und ersetzt keine Rechtsberatung.
+Warum das Thema gerade drängt, zeigen unser Überblick zur [Haushaltssperre 2026](/haushalt/haushaltssperre-2026-stadte/) und die Fälle, in denen Städte [schon jetzt für 2027 warnen](/haushalt/haushaltssperre-2027-staedte-warnen/). Dieser Beitrag ordnet die Rechtsgrundlagen. Alle Normen wurden am 06.10.2026 in den Landesrechtsportalen geprüft. Der Text gibt den Wortlaut wieder und ersetzt keine Rechtsberatung.
 
 ---
 
@@ -82,7 +82,7 @@ Die Unterschiede liegen in drei Punkten:
 - **Zuständigkeit.** Kämmerei (Brandenburg, Nordrhein-Westfalen, Sachsen), Verwaltungsspitze (Mecklenburg-Vorpommern, Niedersachsen, Rheinland-Pfalz, Saarland, Sachsen-Anhalt, Schleswig-Holstein, Thüringen-Doppik) oder Kollegialorgan (Hessen). In Baden-Württemberg und Bayern nennt die Norm kein Organ.
 - **Rolle des Rates.** Ein eigenes Sperr- oder Aufhebungsrecht des Rates steht ausdrücklich in Brandenburg, Nordrhein-Westfalen, Sachsen und Thüringen (Doppik) [2][5][13][16]. In Mecklenburg-Vorpommern braucht die Freigabe in den Fällen der Ersatz-Nachtragssatzung das Einvernehmen der Gemeindevertretung [8].
 
-**Bezug zur vorläufigen Haushaltsführung.** Die Sperre setzt einen geltenden Haushalt voraus. Ist die Haushaltssatzung zu Jahresbeginn noch nicht bekannt gemacht, gilt ohnehin das engere Regime der vorläufigen Haushaltsführung. In Nordrhein-Westfalen dürfen dann nach § 82 Abs. 1 GO NRW nur rechtlich verpflichtende oder unaufschiebbare Aufwendungen entstehen [2]. Für Gemeinden, die ein Haushaltssicherungskonzept aufstellen müssen, gelten nach § 82 Abs. 3 und 4 GO NRW bis zur Genehmigung des Konzepts weitere Beschränkungen, etwa bei der Besetzung von Stellen [2]. Wie ein Haushaltssicherungskonzept in der Praxis trägt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept in der Praxis](/haushalt/haushaltssicherungskonzept-praxis).
+**Bezug zur vorläufigen Haushaltsführung.** Die Sperre setzt einen geltenden Haushalt voraus. Ist die Haushaltssatzung zu Jahresbeginn noch nicht bekannt gemacht, gilt ohnehin das engere Regime der vorläufigen Haushaltsführung. In Nordrhein-Westfalen dürfen dann nach § 82 Abs. 1 GO NRW nur rechtlich verpflichtende oder unaufschiebbare Aufwendungen entstehen [2]. Für Gemeinden, die ein Haushaltssicherungskonzept aufstellen müssen, gelten nach § 82 Abs. 3 und 4 GO NRW bis zur Genehmigung des Konzepts weitere Beschränkungen, etwa bei der Besetzung von Stellen [2]. Wie ein Haushaltssicherungskonzept in der Praxis trägt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept in der Praxis](/haushalt/haushaltssicherungskonzept-praxis/).
 
 **Bezug zur Nachtragssatzung.** Zwei Länder verknüpfen Sperre und Nachtrag ausdrücklich: Mecklenburg-Vorpommern lässt die Sperre im Einvernehmen mit der Vertretung an die Stelle der Nachtragssatzung treten [8], Schleswig-Holstein lässt sie mit dem Nachtrag enden [15].
 
@@ -96,7 +96,7 @@ Die Unterschiede liegen in drei Punkten:
 4. **Sperre statt Nachtrag.** Die Sperre ersetzt eine Nachtragssatzung grundsätzlich nicht. Nur Mecklenburg-Vorpommern sieht das ausdrücklich vor und knüpft es an das Einvernehmen der Vertretung und eine Anzeige an die Rechtsaufsicht [8].
 5. **Pflicht übersehen.** Wo die Norm eine Pflicht formuliert, etwa in Bayern, Sachsen oder in Schleswig-Holstein bei verfehlter pauschaler Kürzung, ist das Abwarten selbst ein Risiko [3][13][15].
 
-Was eine Sperre für Zuschüsse und bereits erlassene Bescheide bedeutet, behandeln wir gesondert in unserem Beitrag für [Vereine und freie Träger](/praxis/haushaltssperre-vereine-freie-traeger).
+Was eine Sperre für Zuschüsse und bereits erlassene Bescheide bedeutet, behandeln wir gesondert in unserem Beitrag für [Vereine und freie Träger](/praxis/haushaltssperre-vereine-freie-traeger/).
 
 ---
 

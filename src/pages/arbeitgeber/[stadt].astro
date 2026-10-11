@@ -140,12 +140,12 @@ function formatDatum(s: string) {
 {vorschau && (
   <div style="background:#fef3c7;border-bottom:1px solid #f59e0b;padding:12px 20px;text-align:center;font-size:13px;color:#78350f;font-family:Arial,sans-serif">
     <strong>Vorschau für {d.name}</strong> – so erscheint Ihr Arbeitgeberprofil mit der KommunalFlat. Diese Seite ist nur über Ihren persönlichen Link erreichbar.
-    <a href="/stellenanzeigen" style="color:#1d4ed8;font-weight:700;margin-left:8px">KommunalFlat ansehen →</a>
+    <a href="/stellenanzeigen/" style="color:#1d4ed8;font-weight:700;margin-left:8px">KommunalFlat ansehen →</a>
   </div>
 )}
 <div class="dos-hero">
   <div class="dos-container">
-    <a href="/arbeitgeber" class="dos-back">← Alle Arbeitgeber</a>
+    <a href="/arbeitgeber/" class="dos-back">← Alle Arbeitgeber</a>
     {d.kommunalflat && <div class="dos-kf-badge">★ KommunalFlat-Partner</div>}
     <div class="dos-hero-bundesland">{d.bundesland}</div>
     <h1 class="dos-hero-title">{d.name}</h1>
@@ -216,7 +216,7 @@ function formatDatum(s: string) {
           {stadtJobs.length > 0 ? (
             <div class="dos-jobs">
               {stadtJobs.map(job => (
-                <a href={`/stellen/${job.id}`} class="dos-job-card">
+                <a href={`/stellen/${job.id}/`} class="dos-job-card">
                   <span class={`dos-job-badge ${job.data.paket.toLowerCase()}`}>{job.data.paket}</span>
                   <div>
                     <div class="dos-job-title">{job.data.title}</div>
@@ -236,7 +236,7 @@ function formatDatum(s: string) {
             <h3>Unbegrenzt Stellen schalten mit KommunalFlat</h3>
             <p>{d.name} ist KommunalFlat-Partner. Das bedeutet: alle Stellenanzeigen erscheinen hier gebündelt im Arbeitgeberprofil.</p>
           </div>
-          <a href="/anzeige-aufgeben?paket=kommunalflat" class="dos-bottom-btn">KommunalFlat anfragen →</a>
+          <a href="/anzeige-aufgeben/?paket=kommunalflat" class="dos-bottom-btn">KommunalFlat anfragen →</a>
         </div>
 
       </div>
@@ -304,7 +304,7 @@ function formatDatum(s: string) {
           <div class="dos-kf-box-label">KommunalFlat</div>
           <div class="dos-kf-box-title">Ihre Stadt im Dossier?</div>
           <p class="dos-kf-box-text">Kommunen mit KommunalFlat erhalten ein vollständiges Dossier und unbegrenzte Stellenanzeigen.</p>
-          <a href="/anzeige-aufgeben?paket=kommunalflat" class="dos-kf-box-btn">Jetzt informieren →</a>
+          <a href="/anzeige-aufgeben/?paket=kommunalflat" class="dos-kf-box-btn">Jetzt informieren →</a>
         </div>
 
       </div>

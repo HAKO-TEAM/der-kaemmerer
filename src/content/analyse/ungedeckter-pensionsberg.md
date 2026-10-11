@@ -39,7 +39,7 @@ Die Verpflichtung ist nicht statisch, sie nimmt zu — aus drei Gründen gleichz
 
 ## Die Doppelfalle mit der Rentenreform
 
-Hier schließt sich der Kreis zu einem Thema, das Kämmereien ohnehin beschäftigt: Wird — wie in der [Rentenreform](/analyse/rentenreform-kommunale-kostenfallen) angelegt — die Zahl der Verbeamtungen reduziert und werden Funktionen ins Tarifrecht überführt, entsteht sofort der volle Arbeitgeberanteil zur Sozialversicherung. Die **Altverpflichtungen** der bereits verbeamteten Jahrgänge verschwinden dadurch aber nicht. Für eine Übergangszeit trägt der Haushalt beides: die neuen laufenden Sozialabgaben *und* den alten Pensionsberg.
+Hier schließt sich der Kreis zu einem Thema, das Kämmereien ohnehin beschäftigt: Wird — wie in der [Rentenreform](/analyse/rentenreform-kommunale-kostenfallen/) angelegt — die Zahl der Verbeamtungen reduziert und werden Funktionen ins Tarifrecht überführt, entsteht sofort der volle Arbeitgeberanteil zur Sozialversicherung. Die **Altverpflichtungen** der bereits verbeamteten Jahrgänge verschwinden dadurch aber nicht. Für eine Übergangszeit trägt der Haushalt beides: die neuen laufenden Sozialabgaben *und* den alten Pensionsberg.
 
 ## Was Kämmereien und Dienstherren tun müssen
 

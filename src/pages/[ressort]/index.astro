@@ -79,13 +79,13 @@ function getSlug(entry: any) {
                 {a.data.tag}
               </span>
             )}
-            <a href={`/${ressort}/${getSlug(a)}`}>
+            <a href={`/${ressort}/${getSlug(a)}/`}>
               <h2 style="font-size:15px;font-weight:700;line-height:1.35;color:#1a2744;margin-bottom:8px;letter-spacing:-.01em;">{a.data.title}</h2>
             </a>
             <p style="font-size:12px;color:#374151;line-height:1.6;margin-bottom:12px;">{a.data.beschreibung}</p>
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <span style="font-size:10px;color:#9ca3af;">{a.data.datum} · {a.data.minuten} Min.</span>
-              <a href={`/${ressort}/${getSlug(a)}`} style={`font-size:10px;font-weight:700;color:${color};letter-spacing:.05em;`}>Lesen →</a>
+              <a href={`/${ressort}/${getSlug(a)}/`} style={`font-size:10px;font-weight:700;color:${color};letter-spacing:.05em;`}>Lesen →</a>
             </div>
           </div>
         ))}

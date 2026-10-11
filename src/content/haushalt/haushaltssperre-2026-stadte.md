@@ -10,7 +10,7 @@ featured: true
 
 ## Die Haushaltssperre ist 2026 vom Ausnahme- zum Regelinstrument geworden
 
-Im Jahr 2025 lag das Finanzierungsdefizit der Kommunen nach Angaben des Statistischen Bundesamts bei 31,9 Mrd. € – der höchste Wert seit der Wiedervereinigung, nach 24,8 Mrd. € im Jahr 2024 [1]. Im ersten Halbjahr 2026 wiesen die Kern- und Extrahaushalte der Gemeinden und Gemeindeverbände (ohne Stadtstaaten) erneut ein Defizit von 20,1 Mrd. € aus, obwohl die Ausgaben nur noch um 2,7 % stiegen; die Gewerbesteuer ging im Halbjahr um 2,0 % zurück [2]. Die Hintergründe analysieren wir im Beitrag zum [Rekorddefizit der Kommunen](/analyse/kommunales-defizit-rekord-2026).
+Im Jahr 2025 lag das Finanzierungsdefizit der Kommunen nach Angaben des Statistischen Bundesamts bei 31,9 Mrd. € – der höchste Wert seit der Wiedervereinigung, nach 24,8 Mrd. € im Jahr 2024 [1]. Im ersten Halbjahr 2026 wiesen die Kern- und Extrahaushalte der Gemeinden und Gemeindeverbände (ohne Stadtstaaten) erneut ein Defizit von 20,1 Mrd. € aus, obwohl die Ausgaben nur noch um 2,7 % stiegen; die Gewerbesteuer ging im Halbjahr um 2,0 % zurück [2]. Die Hintergründe analysieren wir im Beitrag zum [Rekorddefizit der Kommunen](/analyse/kommunales-defizit-rekord-2026/).
 
 Wie sich diese Zahlen im laufenden Haushaltsvollzug niederschlagen, zeigt die Liste unten: Zwischen März und Anfang Oktober 2026 haben Großstädte wie Dortmund, Nürnberg, Bonn, Münster, Augsburg und Potsdam Haushaltssperren verhängt, dazu mittlere und kleine Städte sowie mehrere Landkreise. In Sachsen-Anhalt hat die Kommunalaufsicht Sperren sogar selbst angeordnet.
 
@@ -39,7 +39,7 @@ Eine Haushaltssperre (im Haushaltsrecht meist „haushaltswirtschaftliche Sperre
 | **Vorläufige Haushaltsführung** | Haushaltssatzung zu Jahresbeginn nicht bekannt gemacht | gesetzlich | nur rechtlich verpflichtende oder unaufschiebbare Ausgaben, begonnene Investitionen dürfen fortgesetzt werden [40] |
 | **„Nothaushalt“** | kein Gesetzesbegriff | – | umgangssprachlich für die vorläufige Haushaltsführung, oft bei fehlender Genehmigung |
 
-Die Haushaltssperre steht häufig vor einem HSK. Dortmund begründet seine Sperre ausdrücklich damit, die Haushaltssicherung zu vermeiden [6]; Grevenbroich verweist auf die Grenze von fünf Prozent Verzehr der allgemeinen Rücklage, die ohne Gegensteuern mit annähernd zehn Prozent deutlich überschritten würde [16]. Lage dagegen hat bereits ein beschlossenes HSK und sperrt zusätzlich [17]. Wie ein HSK in der Praxis trägt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept](/haushalt/haushaltssicherungskonzept-praxis).
+Die Haushaltssperre steht häufig vor einem HSK. Dortmund begründet seine Sperre ausdrücklich damit, die Haushaltssicherung zu vermeiden [6]; Grevenbroich verweist auf die Grenze von fünf Prozent Verzehr der allgemeinen Rücklage, die ohne Gegensteuern mit annähernd zehn Prozent deutlich überschritten würde [16]. Lage dagegen hat bereits ein beschlossenes HSK und sperrt zusätzlich [17]. Wie ein HSK in der Praxis trägt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept](/haushalt/haushaltssicherungskonzept-praxis/).
 
 ---
 
@@ -123,7 +123,7 @@ Die Haushaltssperre ist Landesrecht und steht meist nicht in der Gemeindeordnung
 - **Nordrhein-Westfalen:** § 25 Abs. 2 KomHVO NRW (Willich beruft sich auf § 25 KomHVO) [39], ergänzt durch § 81 Abs. 4 GO NRW: Danach kann der Rat die Inanspruchnahme von Ermächtigungen sperren, wenn die Entwicklung der Erträge oder Aufwendungen oder die Erhaltung der Liquidität es erfordert, und er kann seine Sperre sowie die des Kämmerers oder des Bürgermeisters aufheben [41]
 - **Sachsen:** § 30 SächsKomHVO (Dresden) [26]
 
-Nicht zu verwechseln ist die Sperre mit § 82 GO NRW: Diese Vorschrift regelt die vorläufige Haushaltsführung ohne bekannt gemachte Haushaltssatzung [40]. Wie die Länder Zuständigkeit, Unterrichtungspflichten und Aufhebung im Einzelnen regeln, zeigt unser Überblick [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen).
+Nicht zu verwechseln ist die Sperre mit § 82 GO NRW: Diese Vorschrift regelt die vorläufige Haushaltsführung ohne bekannt gemachte Haushaltssatzung [40]. Wie die Länder Zuständigkeit, Unterrichtungspflichten und Aufhebung im Einzelnen regeln, zeigt unser Überblick [Haushaltssperre: Rechtsgrundlagen in den Bundesländern](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/).
 
 Eine Sperre ersetzt keine Nachtragssatzung. In NRW muss die Gemeinde nach § 81 Abs. 2 GO NRW unverzüglich eine Nachtragssatzung erlassen, wenn sich ein erheblicher Jahresfehlbetrag abzeichnet und sich dies nicht durch andere Maßnahmen vermeiden lässt [41]. Schwerte rechnet ausdrücklich mit einem Nachtrag [13], Gießen will die Sperre bis zum Nachtragshaushalt im November überbrücken [21].
 
@@ -133,13 +133,13 @@ Eine Sperre ersetzt keine Nachtragssatzung. In NRW muss die Gemeinde nach § 81 
 
 Für Bürger bleibt der Kern der Verwaltung erreichbar. Der Landkreis Breisgau-Hochschwarzwald betont, dass Anträge weiter bearbeitet, Sozialleistungen ausgezahlt, Autos zugelassen und Müll abgeholt werden [28]. Spürbar wird die Sperre über längere Bearbeitungszeiten und reduzierte Pflege; Karlsruhes Oberbürgermeister nannte etwa die Grünflächenpflege [18].
 
-Für Vereine und freie Träger hängt viel an der Ausgestaltung. Dresden hat die Förderung Dritter in Bildung, Kultur, Jugend und Sport zu 75 % freigegeben, um Planungssicherheit zu schaffen [26]. Münster nimmt bereits bewilligte Zuschüsse an gemeinnützige Organisationen aus [12], Arnsberg im Haushalt bereits zugesagte Mittel für Vereine [15], Ebersberg laufende Zuschüsse an Vereine und Kultur [32]. Grevenbroich hat freiwillige Zuschüsse dagegen zunächst gestrichen [16], Chemnitz Zuwendungen an freie Träger in die Sperre einbezogen [27]. Welche Rechte Zuwendungsempfänger haben und wie sie sich vorbereiten, beschreibt unser Praxisbeitrag [Haushaltssperre: Was Vereine und freie Träger jetzt wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger).
+Für Vereine und freie Träger hängt viel an der Ausgestaltung. Dresden hat die Förderung Dritter in Bildung, Kultur, Jugend und Sport zu 75 % freigegeben, um Planungssicherheit zu schaffen [26]. Münster nimmt bereits bewilligte Zuschüsse an gemeinnützige Organisationen aus [12], Arnsberg im Haushalt bereits zugesagte Mittel für Vereine [15], Ebersberg laufende Zuschüsse an Vereine und Kultur [32]. Grevenbroich hat freiwillige Zuschüsse dagegen zunächst gestrichen [16], Chemnitz Zuwendungen an freie Träger in die Sperre einbezogen [27]. Welche Rechte Zuwendungsempfänger haben und wie sie sich vorbereiten, beschreibt unser Praxisbeitrag [Haushaltssperre: Was Vereine und freie Träger jetzt wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger/).
 
 ---
 
 ## Ausblick 2027
 
-Die meisten Sperren laufen zum 31. Dezember 2026 aus. Die Ursachen bleiben. Münsters Sperre ist bereits eine Reaktion auf Zahlen für 2027 [12], und die Einbringungen der Haushaltsentwürfe zeigen dreistellige Millionendefizite in Köln, Düsseldorf, Stuttgart und weiteren Großstädten (siehe [Haushalt 2027: Diese Städte schaffen keinen Ausgleich mehr](/haushalt/haushalt-2027-staedte-defizite)). Köln hat nach Auslaufen seiner Sperre Ende 2025 bewusst keine neue förmliche Sperre verhängt, sondern ist zu einer restriktiven Haushaltsbewirtschaftung übergegangen [37]. Welche Städte schon jetzt vor Sperren im kommenden Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027: Diese Städte warnen bereits](/haushalt/haushaltssperre-2027-staedte-warnen).
+Die meisten Sperren laufen zum 31. Dezember 2026 aus. Die Ursachen bleiben. Münsters Sperre ist bereits eine Reaktion auf Zahlen für 2027 [12], und die Einbringungen der Haushaltsentwürfe zeigen dreistellige Millionendefizite in Köln, Düsseldorf, Stuttgart und weiteren Großstädten (siehe [Haushalt 2027: Diese Städte schaffen keinen Ausgleich mehr](/haushalt/haushalt-2027-staedte-defizite/)). Köln hat nach Auslaufen seiner Sperre Ende 2025 bewusst keine neue förmliche Sperre verhängt, sondern ist zu einer restriktiven Haushaltsbewirtschaftung übergegangen [37]. Welche Städte schon jetzt vor Sperren im kommenden Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027: Diese Städte warnen bereits](/haushalt/haushaltssperre-2027-staedte-warnen/).
 
 ---
 

@@ -12,7 +12,7 @@ featured: false
 
 In keinem Land hat die Redaktion 2026 so viele Haushaltssperren dokumentiert wie in Nordrhein-Westfalen. Die Ursache steht in der Haushaltsumfrage, die Städtetag NRW und Städte- und Gemeindebund NRW am 22. September 2026 unter allen 396 Städten und Gemeinden vorgelegt haben: Nur noch sieben Kommunen können 2026 ihre laufenden Aufwendungen durch Erträge decken, mehr als 98 Prozent gelingt kein struktureller Haushaltsausgleich mehr [1]. 300 Kommunen führen ihren Haushalt 2026 mit Verlustvortrag oder zehren Rücklagen auf. 89 Städte und Gemeinden sind in die Pflicht zur Haushaltssicherung gerutscht, 68 Prozent mehr als 2025. Bis 2029 erwarten die Verbände 219 Kommunen in der Haushaltssicherung, mehr als jede zweite [1]. Das kommunale Defizit in NRW beziffern die Verbände auf 9 Mrd. € [1].
 
-Im laufenden Vollzug greifen die Kämmereien deshalb zu einem Instrument, das ohne Ratsbeschluss sofort wirkt. Die bundesweite Liste aller belegten Fälle führt unser Hauptbeitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte). Dieser Beitrag konzentriert sich auf NRW: auf die Fälle, die Rechtsgrundlage und die Rolle der HSK-Schwelle.
+Im laufenden Vollzug greifen die Kämmereien deshalb zu einem Instrument, das ohne Ratsbeschluss sofort wirkt. Die bundesweite Liste aller belegten Fälle führt unser Hauptbeitrag [Haushaltssperre 2026: Welche Städte betroffen sind](/haushalt/haushaltssperre-2026-stadte/). Dieser Beitrag konzentriert sich auf NRW: auf die Fälle, die Rechtsgrundlage und die Rolle der HSK-Schwelle.
 
 ---
 
@@ -44,7 +44,7 @@ Zum Vergleich: Köln hatte seine Sperre Ende 2025 auslaufen lassen und bewirtsch
 
 Die haushaltswirtschaftliche Sperre steht in NRW nicht in der Gemeindeordnung, sondern in § 25 Abs. 2 der Kommunalhaushaltsverordnung (KomHVO NRW). Danach kann die Kämmerin oder der Kämmerer die Inanspruchnahme von Ansätzen für Aufwendungen und Auszahlungen sowie von Verpflichtungsermächtigungen sperren, „soweit und solange“ die Entwicklung der Erträge und Einzahlungen oder der Aufwendungen und Auszahlungen es erfordert [2]. Nach § 25 Abs. 1 ist der Rat unverzüglich zu unterrichten, wenn eine Sperre ausgesprochen wird oder sich das Ergebnis wesentlich verschlechtert [2]. Unna etwa informierte die Fraktionsvorsitzenden vorab, der Rat wurde in seiner Sitzung am 24. September unterrichtet [18].
 
-Der Rat behält das letzte Wort. Nach § 81 Abs. 4 GO NRW kann er selbst sperren, wenn die Entwicklung der Erträge oder Aufwendungen oder die Erhaltung der Liquidität es erfordert, und er kann die Sperre des Kämmerers oder des Bürgermeisters aufheben [3]. Eine Sperre ersetzt keinen Nachtrag: Zeichnet sich ein erheblicher Jahresfehlbetrag ab, der sich nicht durch andere Maßnahmen vermeiden lässt, muss die Gemeinde nach § 81 Abs. 2 GO NRW unverzüglich eine Nachtragssatzung erlassen [3]. Schwerte hat das bei Verhängung der Sperre bereits angekündigt [11]. Wie die übrigen Länder Zuständigkeit und Aufhebung regeln, zeigt unser Überblick [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen).
+Der Rat behält das letzte Wort. Nach § 81 Abs. 4 GO NRW kann er selbst sperren, wenn die Entwicklung der Erträge oder Aufwendungen oder die Erhaltung der Liquidität es erfordert, und er kann die Sperre des Kämmerers oder des Bürgermeisters aufheben [3]. Eine Sperre ersetzt keinen Nachtrag: Zeichnet sich ein erheblicher Jahresfehlbetrag ab, der sich nicht durch andere Maßnahmen vermeiden lässt, muss die Gemeinde nach § 81 Abs. 2 GO NRW unverzüglich eine Nachtragssatzung erlassen [3]. Schwerte hat das bei Verhängung der Sperre bereits angekündigt [11]. Wie die übrigen Länder Zuständigkeit und Aufhebung regeln, zeigt unser Überblick [Haushaltssperre nach Bundesland](/recht/haushaltssperre-bundeslaender-rechtsgrundlagen/).
 
 ---
 
@@ -54,7 +54,7 @@ Der entscheidende Unterschied zu anderen Ländern liegt in § 76 GO NRW. Eine Ge
 
 Dortmund rechnet das offen vor: Nach der letzten Prognose überschreitet die Stadt die Grenze bei der allgemeinen Rücklage um rund 4,4 Mio. €, im dritten Managementbericht waren es noch rund 26,8 Mio. € [8]. Die zweite Sperre soll die Lücke schließen und das HSK verhindern [7]. Grevenbroich droht ein Verzehr von annähernd zehn Prozent, das Minus darf 5,5 Mio. € nicht überschreiten [20]. Monheim, bereits im HSK, sichert mit der Sperre dessen Ziele ab [12].
 
-In diesen Fällen geht es weniger um die Kasse als um eine Rechtsfolge, die vermieden werden soll. Ein HSK bedarf der Genehmigung der Aufsicht und muss den Ausgleich spätestens im zehnten Folgejahr erreichen [4]. Wie ein HSK in der Praxis wirkt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept](/haushalt/haushaltssicherungskonzept-praxis).
+In diesen Fällen geht es weniger um die Kasse als um eine Rechtsfolge, die vermieden werden soll. Ein HSK bedarf der Genehmigung der Aufsicht und muss den Ausgleich spätestens im zehnten Folgejahr erreichen [4]. Wie ein HSK in der Praxis wirkt, beschreibt unser Beitrag zum [Haushaltssicherungskonzept](/haushalt/haushaltssicherungskonzept-praxis/).
 
 ---
 
@@ -78,7 +78,7 @@ Die Ausgestaltung reicht von pauschal bis fein gestuft:
 - **Ausnahmekatalog:** Münster nimmt unter anderem bereits bewilligte Zuschüsse an freie Träger, begonnene Bauten und unaufschiebbare Einzelposten unter 1.000 € brutto aus [16].
 - **Fördermittel schützen:** Arnsberg nimmt geförderte Investitionen aus, wenn ein Aufschub zum Verlust der Fördermittel führen würde [14].
 
-Für Vereine und Träger ist diese Ausgestaltung entscheidend. Arnsberg hält die im Haushalt und im HSK berücksichtigten Leistungen an Vereine in voller Höhe [14], Grevenbroich hat freiwillige Zuschüsse zunächst gestrichen [20]. Was Zuwendungsempfänger tun können, steht im Praxisbeitrag [Haushaltssperre: Was Vereine und freie Träger wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger).
+Für Vereine und Träger ist diese Ausgestaltung entscheidend. Arnsberg hält die im Haushalt und im HSK berücksichtigten Leistungen an Vereine in voller Höhe [14], Grevenbroich hat freiwillige Zuschüsse zunächst gestrichen [20]. Was Zuwendungsempfänger tun können, steht im Praxisbeitrag [Haushaltssperre: Was Vereine und freie Träger wissen müssen](/praxis/haushaltssperre-vereine-freie-traeger/).
 
 ---
 
@@ -106,7 +106,7 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 6. **Den Nachtrag parallel vorbereiten.** Die Sperre überbrückt nur. Bei einem erheblichen Fehlbetrag verlangt § 81 Abs. 2 GO NRW unverzüglich eine Nachtragssatzung [3].
 7. **Rat und Träger früh einbinden.** Der Rat kann die Sperre nach § 81 Abs. 4 GO NRW aufheben [3]. Wer die Ausnahmen vorher erklärt, vermeidet, dass sie politisch gekippt wird.
 
-Welche Städte bereits vor Sperren im kommenden Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027: Welche Städte jetzt schon warnen](/haushalt/haushaltssperre-2027-staedte-warnen).
+Welche Städte bereits vor Sperren im kommenden Jahr warnen, zeigt unser Beitrag [Haushaltssperre 2027: Welche Städte jetzt schon warnen](/haushalt/haushaltssperre-2027-staedte-warnen/).
 
 ---
 

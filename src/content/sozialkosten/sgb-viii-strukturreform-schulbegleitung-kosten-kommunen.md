@@ -79,7 +79,7 @@ Für die Kämmerei sind drei Punkte entscheidend.
 
 **Die Kosten kommen zuerst.** Personal für Planung, Träger-Ausschreibungen, Abstimmung mit Schulamt und Schulträgern: Diese Ausgaben fallen an, bevor ein Euro Zuwachs gebremst ist. Die Bundesrechnung für die Bildungsassistenz beginnt 2028 bei 33 Millionen Euro – für ganz Deutschland. Je Jugendamt ist das im ersten Jahr ein kleiner Betrag, die Aufbaukosten fallen dagegen überall an.
 
-**Die Einzelfallkosten sind die eigentliche Stellschraube.** Aus den Angaben des Entwurfs ergeben sich bundesweit rechnerisch rund 29.000 Euro je Fall Kita- oder Schulassistenz (1,8 Mrd. € geteilt durch 61.816 Fälle, eigene Rechnung). Wer weiß, wie viele Begleitungen im eigenen Kreis an derselben Schule laufen, kennt sein Pooling-Potenzial. Wer es nicht weiß, budgetiert blind. Wie solche Fallanalysen aufgebaut sind, zeigt unser Beitrag zu den [Steuerungshebeln in der Hilfe zur Erziehung](/sozialkosten/hze-steuerung-was-kommunen-koennen).
+**Die Einzelfallkosten sind die eigentliche Stellschraube.** Aus den Angaben des Entwurfs ergeben sich bundesweit rechnerisch rund 29.000 Euro je Fall Kita- oder Schulassistenz (1,8 Mrd. € geteilt durch 61.816 Fälle, eigene Rechnung). Wer weiß, wie viele Begleitungen im eigenen Kreis an derselben Schule laufen, kennt sein Pooling-Potenzial. Wer es nicht weiß, budgetiert blind. Wie solche Fallanalysen aufgebaut sind, zeigt unser Beitrag zu den [Steuerungshebeln in der Hilfe zur Erziehung](/sozialkosten/hze-steuerung-was-kommunen-koennen/).
 
 ---
 
@@ -97,9 +97,9 @@ Für die Kämmerei sind drei Punkte entscheidend.
 
 ## Einordnung
 
-Die Strukturreform ist der erste Versuch des Bundes, den Kostenanstieg in der Kinder- und Jugendhilfe gesetzlich zu bremsen. Die Kommunen haben 2025 ein Rekorddefizit von 31,9 Milliarden Euro verbucht, die Ausgaben für Jugendhilfe nach SGB VIII stiegen um 8,8 Prozent auf 20,0 Milliarden Euro [5] – mehr zu den Ursachen in unserer [Analyse des kommunalen Rekorddefizits](/analyse/kommunales-defizit-rekord-2026).
+Die Strukturreform ist der erste Versuch des Bundes, den Kostenanstieg in der Kinder- und Jugendhilfe gesetzlich zu bremsen. Die Kommunen haben 2025 ein Rekorddefizit von 31,9 Milliarden Euro verbucht, die Ausgaben für Jugendhilfe nach SGB VIII stiegen um 8,8 Prozent auf 20,0 Milliarden Euro [5] – mehr zu den Ursachen in unserer [Analyse des kommunalen Rekorddefizits](/analyse/kommunales-defizit-rekord-2026/).
 
-Das Problem ist die Bilanzierung. Der Bund verbucht die Entlastung im Gesetz, die Kosten ihrer Herstellung bleiben vor Ort. Ob am Ende eine Milliarde gespart wird, entscheidet sich nicht in Berlin, sondern in jedem einzelnen Jugendamt – und an der Frage, ob die Kämmerei die Fallzahlen kennt, bevor der Haushalt beschlossen wird. Warum gerade diese Datengrundlage in vielen Kommunen fehlt, beschreibt unser Beitrag zur [Sozialkosten-Explosion](/sozialkosten/sozialkosten-explosion-ursachen).
+Das Problem ist die Bilanzierung. Der Bund verbucht die Entlastung im Gesetz, die Kosten ihrer Herstellung bleiben vor Ort. Ob am Ende eine Milliarde gespart wird, entscheidet sich nicht in Berlin, sondern in jedem einzelnen Jugendamt – und an der Frage, ob die Kämmerei die Fallzahlen kennt, bevor der Haushalt beschlossen wird. Warum gerade diese Datengrundlage in vielen Kommunen fehlt, beschreibt unser Beitrag zur [Sozialkosten-Explosion](/sozialkosten/sozialkosten-explosion-ursachen/).
 
 ---
 

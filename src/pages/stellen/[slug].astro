@@ -193,7 +193,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
 <!-- HERO -->
 <div class="sj-hero">
   <div class="sj-container">
-    <a href="/stellen" class="sj-back">← Alle Stellen</a>
+    <a href="/stellen/" class="sj-back">← Alle Stellen</a>
     {paketLower !== 'basis' && <div class={badgeClass}>{d.paket}</div>}
     <div class="sj-org">{d.organisation} · {d.orgtyp}</div>
     <h1 class="sj-title">{d.title}</h1>
@@ -275,14 +275,14 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
           <div class="sj-upgrade-label">Redaktionell ausgewählt</div>
           <p class="sj-upgrade-text">Diese Ausschreibung hat die Redaktion von Der Kämmerer für kommunale Fach- und Führungskräfte aufgenommen – kostenfrei für {d.organisation}.</p>
           <p class="sj-upgrade-text"><strong>Sie sind der Arbeitgeber?</strong> Mit der KommunalFlat stehen Ihre Stellen ganz oben, Ihr Arbeitgeberprofil kommt dazu, und jede neue Ausschreibung ist am selben Tag online.</p>
-          <a href="/stellenanzeigen" class="sj-upgrade-btn">KommunalFlat ansehen — 249 €/Monat</a>
+          <a href="/stellenanzeigen/" class="sj-upgrade-btn">KommunalFlat ansehen — 249 €/Monat</a>
           <a href={`mailto:anzeigen@derkaemmerer.de?subject=${encodeURIComponent('KommunalFlat – ' + d.organisation)}`} class="sj-upgrade-link">oder direkt anfragen →</a>
         </div>
         ) : (
         <div class="sj-upgrade-box">
           <div class="sj-upgrade-label">KommunalFlat-Partner</div>
           <p class="sj-upgrade-text">{d.organisation} veröffentlicht ihre Stellen als Partner von Der Kämmerer.</p>
-          {dossier && <a href={`/arbeitgeber/${stadtSlug}`} class="sj-upgrade-btn">{d.organisation} als Arbeitgeber →</a>}
+          {dossier && <a href={`/arbeitgeber/${stadtSlug}/`} class="sj-upgrade-btn">{d.organisation} als Arbeitgeber →</a>}
         </div>
         )}
 

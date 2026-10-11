@@ -224,7 +224,7 @@ const jobs = rawJobs.map(job => {
         </div>
       ) : jobs.map(job => (
           <a class={job.cardClass}
-             href={'/stellen/' + job.id}
+             href={'/stellen/' + job.id + '/'}
              data-bundesland={job.data.bundesland}
              data-paket={job.data.paket}
              data-orgtyp={job.data.orgtyp}>

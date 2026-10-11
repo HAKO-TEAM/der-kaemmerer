@@ -66,7 +66,7 @@ Die Bertelsmann Stiftung formuliert es ohne Umschweife: Die Haushaltskrise müss
 
 Wo das Geld fehlt, sieht man an zwei Stellen.
 
-**Liquidität:** Die Kassenkredite der Kommunen stiegen 2025 laut Finanzreport auf 38,6 Milliarden Euro – ein Zuwachs von 6,8 Milliarden Euro und damit der größte Anstieg ihrer Geschichte. Die Gesamtverschuldung wuchs um 27 Milliarden Euro auf annähernd 200 Milliarden Euro; knapp 85 Prozent des Defizits wurden mit neuen Schulden gedeckt. Die Reserven sind aufgebraucht, der Dispo ist zurück. Wie schnell aus Überbrückung Dauerzustand wird, haben wir in [Kassenkredite als Normalzustand](/haushalt/kassenkredite-als-normalzustand) beschrieben. Die Zinsausgaben, plus 13,1 Prozent im ersten Halbjahr 2026, sind der Preis dafür.
+**Liquidität:** Die Kassenkredite der Kommunen stiegen 2025 laut Finanzreport auf 38,6 Milliarden Euro – ein Zuwachs von 6,8 Milliarden Euro und damit der größte Anstieg ihrer Geschichte. Die Gesamtverschuldung wuchs um 27 Milliarden Euro auf annähernd 200 Milliarden Euro; knapp 85 Prozent des Defizits wurden mit neuen Schulden gedeckt. Die Reserven sind aufgebraucht, der Dispo ist zurück. Wie schnell aus Überbrückung Dauerzustand wird, haben wir in [Kassenkredite als Normalzustand](/haushalt/kassenkredite-als-normalzustand/) beschrieben. Die Zinsausgaben, plus 13,1 Prozent im ersten Halbjahr 2026, sind der Preis dafür.
 
 **Substanz:** Das KfW-Kommunalpanel 2026 beziffert den wahrgenommenen Investitionsrückstand auf **231,2 Milliarden Euro**, 7,2 Prozent mehr als im Vorjahr (215,7 Milliarden Euro). Allein die Schulen stehen für 68,9 Milliarden Euro, die Straßen für 53,7 Milliarden Euro. Für 2026 planten die Kommunen laut KfW Sachinvestitionen von rund 50 Milliarden Euro, 14,8 Prozent mehr als für 2025 geplant – getragen von Erwartungen an das Sondervermögen des Bundes. Die Kassenstatistik zeigt für das erste Halbjahr das Gegenteil: Sachinvestitionen minus 4,5 Prozent, Baumaßnahmen minus 2,4 Prozent. Geplant wird mit dem Sondervermögen, gespart wird an der Baustelle.
 
@@ -78,13 +78,13 @@ Die Halbjahreszahl ist die wichtigste Planungsgröße für die Etats, die gerade
 
 Daraus folgen sieben Punkte für die Kämmerei:
 
-1. **Sozialansätze aus der Fallentwicklung rechnen, nicht aus dem Vorjahr.** Eingliederungshilfe und Jugendhilfe wachsen um 9 bis 11 Prozent. Ein Ansatz mit pauschal plus drei Prozent ist kein Konsolidierungsbeitrag, sondern ein Nachtragshaushalt mit Ansage. Mehr dazu in [Die Lüge im Haushaltsplan](/haushalt/luege-im-haushaltsplan).
+1. **Sozialansätze aus der Fallentwicklung rechnen, nicht aus dem Vorjahr.** Eingliederungshilfe und Jugendhilfe wachsen um 9 bis 11 Prozent. Ein Ansatz mit pauschal plus drei Prozent ist kein Konsolidierungsbeitrag, sondern ein Nachtragshaushalt mit Ansage. Mehr dazu in [Die Lüge im Haushaltsplan](/haushalt/luege-im-haushaltsplan/).
 2. **Gewerbesteuer vorsichtig ansetzen.** Minus 2,0 Prozent im Halbjahr bundesweit, in exportstarken Regionen mehr. Vorauszahlungen und Anpassungsanträge der großen Zahler monatlich auswerten.
 3. **Personalbudget über die Stellenzahl steuern.** Tarifsteigerungen sind gesetzt, der Stellenplan nicht. Jede altersbedingt frei werdende Stelle vor der Wiederbesetzung auf Aufgabe und Digitalisierbarkeit prüfen.
 4. **Liquiditätsplanung wöchentlich führen.** Wer Kassenkredite aufnimmt, braucht eine rollierende 13-Wochen-Vorschau und eine Zinsbindungsstrategie, keine Jahresplanung.
 5. **Investitionen priorisieren statt strecken.** Pauschales Verschieben vergrößert den Rückstand und verteuert ihn. Besser: wenige Maßnahmen mit Substanzerhalt (Schulen, Brücken) durchfinanzieren, den Rest offen zurückstellen.
 6. **Mittel aus dem Sondervermögen erst einplanen, wenn der Landesrahmen steht.** Zuweisungen, die noch nicht beschieden sind, gehören nicht in die Deckung.
-7. **Die Aufsicht früh einbinden.** Ein Haushalt ohne Ausgleich wird 2027 die Regel sein. Wer der Kommunalaufsicht ein ehrliches Konsolidierungspfad-Papier vorlegt, verhandelt besser als jemand, der eine Genehmigung erzwingen muss – warum die Aufsicht selbst kaum Hebel hat, zeigt [Kommunalaufsicht: zahnloser Tiger](/analyse/kommunalaufsicht-zahnloser-tiger).
+7. **Die Aufsicht früh einbinden.** Ein Haushalt ohne Ausgleich wird 2027 die Regel sein. Wer der Kommunalaufsicht ein ehrliches Konsolidierungspfad-Papier vorlegt, verhandelt besser als jemand, der eine Genehmigung erzwingen muss – warum die Aufsicht selbst kaum Hebel hat, zeigt [Kommunalaufsicht: zahnloser Tiger](/analyse/kommunalaufsicht-zahnloser-tiger/).
 
 ---
 

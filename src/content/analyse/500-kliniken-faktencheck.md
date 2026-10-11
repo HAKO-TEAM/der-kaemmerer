@@ -48,7 +48,7 @@ Auch der Begriff „Insolvenz" trägt mehr Drama, als die Realität meist hergib
 
 ## Die kommunale Perspektive
 
-Für kommunale Träger ist ohnehin nicht die Schlagzeile das Problem, sondern die Rechnung dahinter. Wo die Kommune Trägerin ist, schlägt das Defizit als **Verlustausgleich** direkt in den Haushalt durch — die Klinik als teuerste Zeile der [zweiten Bilanz](/haushalt/schattenhaushalte-versteckte-verschuldung). Der eigentliche Konstruktionsfehler liegt in der [dualen Finanzierung](/haushalt/kommunale-kliniken-milliardengraeber): Betriebskosten über die Kassen, Investitionen über die Länder — letztere seit Jahren unter Bedarf. Die Krankenhausreform beschleunigt die Konsolidierung; für Trägerkommunen kommt die Rechnung zuerst und die Entlastung später.
+Für kommunale Träger ist ohnehin nicht die Schlagzeile das Problem, sondern die Rechnung dahinter. Wo die Kommune Trägerin ist, schlägt das Defizit als **Verlustausgleich** direkt in den Haushalt durch — die Klinik als teuerste Zeile der [zweiten Bilanz](/haushalt/schattenhaushalte-versteckte-verschuldung/). Der eigentliche Konstruktionsfehler liegt in der [dualen Finanzierung](/haushalt/kommunale-kliniken-milliardengraeber/): Betriebskosten über die Kassen, Investitionen über die Länder — letztere seit Jahren unter Bedarf. Die Krankenhausreform beschleunigt die Konsolidierung; für Trägerkommunen kommt die Rechnung zuerst und die Entlastung später.
 
 ## Fazit
 
