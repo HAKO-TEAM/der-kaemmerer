@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-12-01"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1466915"
 schlagwoerter: ["IT-Beschaffung", "Haushaltsüberwachung", "Vergabe", "Lizenzmanagement", "Controlling"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-11"
 featured: false
 ---
