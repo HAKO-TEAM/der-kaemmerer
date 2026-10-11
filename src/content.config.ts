@@ -10,6 +10,7 @@ const artikel = z.object({
   autor: z.string().optional(),
   tag: z.string().optional(),
   featured: z.boolean().optional(),
+  updated: z.string().optional(),   // YYYY-MM-DD, letzte inhaltliche Aktualisierung (Fallback: datum)
 });
 
 export const collections = {

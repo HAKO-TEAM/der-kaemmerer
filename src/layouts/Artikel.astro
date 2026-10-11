@@ -11,8 +11,9 @@ export interface Props {
   minuten: number;
   autor: string;
   tag?: string;
+  updated?: string;
 }
-const { title, beschreibung, ressort, datum, minuten, autor, tag } = Astro.props;
+const { title, beschreibung, ressort, datum, minuten, autor, tag, updated } = Astro.props;
 
 const ressortLabels: Record<string,string> = {
   haushalt:'Haushalt & Finanzen', einnahmen:'Einnahmen erschließen',
@@ -21,7 +22,7 @@ const ressortLabels: Record<string,string> = {
   sozialkosten:'Sozialkosten'
 };
 ---
-<Base title={title} description={beschreibung} ogType="article" datum={datum} autor={autor}>
+<Base title={title} description={beschreibung} ogType="article" datum={datum} updated={updated} section={ressortLabels[ressort]} sectionUrl={`https://derkaemmerer.de/${ressort}/`} autor={autor}>
   <Header />
 
   <style>

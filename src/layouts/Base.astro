@@ -7,6 +7,9 @@ export interface Props {
   noindex?: boolean;
   ogImage?: string;
   datum?: string;
+  updated?: string;
+  section?: string;
+  sectionUrl?: string;
   autor?: string;
 }
 const {
@@ -15,12 +18,17 @@ const {
   canonical,
   ogType = 'website',
   noindex = false,
-  ogImage = 'https://derkaemmerer.de/og-default.svg',
+  ogImage = 'https://derkaemmerer.de/og-default.png',
   datum,
+  updated,
+  section,
+  sectionUrl,
   autor = 'Redaktion Der Kämmerer',
 } = Astro.props;
 const url = canonical || `https://derkaemmerer.de${Astro.url.pathname}`;
-const fullTitle = `${title} — Der Kämmerer`;
+// Kein Suffix, wenn der Titel die Marke schon enthält (Runbook 2.2)
+const fullTitle = /Der Kämmerer/.test(title) ? title : `${title} — Der Kämmerer`;
+const isoZeit = (d?: string) => (d ? `${d}T06:00:00+02:00` : undefined);
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -30,7 +38,7 @@ const fullTitle = `${title} — Der Kämmerer`;
 <title>{fullTitle}</title>
 <meta name="description" content={description}>
 <link rel="canonical" href={url}>
-<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"}>
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}>
 <meta name="author" content={autor}>
 
 <!-- Favicon -->
@@ -47,7 +55,9 @@ const fullTitle = `${title} — Der Kämmerer`;
 <meta property="og:image" content={ogImage}>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-{ogType === 'article' && datum && <meta property="article:published_time" content={datum}>}
+{ogType === 'article' && datum && <meta property="article:published_time" content={isoZeit(datum)}>}
+{ogType === 'article' && datum && <meta property="article:modified_time" content={isoZeit(updated || datum)}>}
+{ogType === 'article' && section && <meta property="article:section" content={section}>}
 {ogType === 'article' && <meta property="article:author" content={autor}>}
 {ogType === 'article' && <meta property="article:publisher" content="https://derkaemmerer.de">}
 
