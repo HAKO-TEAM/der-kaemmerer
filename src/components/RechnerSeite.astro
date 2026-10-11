@@ -1,0 +1,62 @@
+---
+// Gemeinsamer Rahmen der Rechner (Runbook 4.2): Formular, Ergebnis, Rechenweg, Hinweis, Quellen, passende Stellen.
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import DkKopf from './DkKopf.astro';
+import { RECHNER } from '../data/dienst-karriere.mjs';
+interface Props { slug: string; titel: string; beschreibung: string; einleitung: string; quellen: { name: string; url?: string }[] }
+const { slug, titel, beschreibung, einleitung, quellen } = Astro.props;
+const url = `https://derkaemmerer.de/dienst-karriere/rechner/${slug}/`;
+const app = { '@context': 'https://schema.org', '@type': 'WebApplication', name: titel, description: beschreibung, url,
+  applicationCategory: 'FinanceApplication', operatingSystem: 'Browser', inLanguage: 'de-DE', isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: 0, priceCurrency: 'EUR' }, publisher: { '@id': 'https://derkaemmerer.de/#verlag' } };
+const pfad = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Dienst & Karriere', item: 'https://derkaemmerer.de/dienst-karriere/' },
+  { '@type': 'ListItem', position: 2, name: 'Rechner', item: 'https://derkaemmerer.de/dienst-karriere/rechner/' },
+  { '@type': 'ListItem', position: 3, name: titel, item: url } ] };
+const andere = RECHNER.filter((r) => r.slug !== slug);
+---
+<Base title={titel} description={beschreibung}>
+<Header />
+<script type="application/ld+json" set:html={JSON.stringify(app)} />
+<script type="application/ld+json" set:html={JSON.stringify(pfad)} />
+<DkKopf aktiv="rechner" titel={titel} text={einleitung} pfad={[{ name: 'Rechner', url: '/dienst-karriere/rechner/' }]} />
+<main class="rs-w">
+  <div class="rs-grid">
+    <section class="rs-karte rs-eingabe"><h2>Eingaben</h2><slot name="formular" /></section>
+    <section class="rs-karte rs-ergebnis" aria-live="polite"><h2>Ergebnis</h2><slot name="ergebnis" /></section>
+  </div>
+  <section class="rs-karte"><h2>Rechenweg</h2><div id="rechenweg" class="rs-weg"><slot name="rechenweg" /></div></section>
+  <p class="rs-hinweis"><b>Orientierungswert, keine Rechtsberatung.</b> Maßgeblich sind Tarifvertrag, Arbeitsvertrag und die Abrechnung des Arbeitgebers. Eingaben werden ausschließlich im Browser verarbeitet und nicht gespeichert.</p>
+  <section class="rs-karte rs-quellen"><h2>Quellen und Stand</h2><ul>{quellen.map((q) => <li>{q.url ? <a href={q.url} rel="noopener" target="_blank">{q.name}</a> : q.name}</li>)}</ul></section>
+  <section class="rs-mehr">
+    <div><h2>Passende Stellen</h2><p>Offene Stellen kommunaler Arbeitgeber – mit Entgeltgruppe und Bewerbungsfrist.</p><a class="rs-btn" href="/stellen/">Zur Stellenbörse →</a> <a class="rs-link" href="/gehalt/">TVöD-Tabelle 2026</a></div>
+    <div><h2>Weitere Rechner</h2><ul>{andere.map((r) => <li><a href={`/dienst-karriere/rechner/${r.slug}/`}>{r.name}</a></li>)}</ul></div>
+  </section>
+</main>
+<Footer />
+</Base>
+<style is:global>
+.rs-w [hidden] { display:none !important; }
+.rs-w { max-width:1040px; margin:0 auto; padding:28px 28px 64px; color:#0f172a; }
+.rs-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
+.rs-karte { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:20px 22px; margin-bottom:18px; }
+.rs-grid .rs-karte { margin:0; }
+.rs-karte h2 { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#15803d; margin:0 0 14px; }
+.rs-feld { display:grid; gap:5px; margin-bottom:12px; font-size:14px; }
+.rs-feld label { font-weight:600; color:#334155; }
+.rs-feld input, .rs-feld select { padding:9px 11px; border:1.5px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:inherit; background:#fff; }
+.rs-feld small { color:#64748b; font-size:12px; }
+.rs-zwei { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.rs-gross { font-family:'Playfair Display',Georgia,serif; font-size:40px; font-weight:700; color:#14532d; line-height:1.1; }
+.rs-unter { color:#475569; font-size:14px; margin-top:4px; }
+.rs-tab { width:100%; border-collapse:collapse; font-size:14px; margin-top:14px; } .rs-tab td { padding:6px 0; border-bottom:1px solid #f1f5f9; } .rs-tab td:last-child { text-align:right; font-variant-numeric:tabular-nums; } .rs-tab tr.sum td { font-weight:700; border-top:2px solid #cbd5e1; }
+.rs-weg { font-size:14px; line-height:1.6; color:#334155; } .rs-weg ol { margin:0; padding-left:20px; } .rs-weg li { margin-bottom:4px; }
+.rs-fehler { color:#b91c1c; font-weight:600; font-size:14px; }
+.rs-hinweis { font-size:13px; color:#475569; background:#f8fafc; border-left:3px solid #15803d; padding:12px 16px; border-radius:0 6px 6px 0; margin:0 0 18px; }
+.rs-quellen ul { margin:0; padding-left:18px; font-size:13px; line-height:1.6; color:#475569; }
+.rs-mehr { display:grid; grid-template-columns:1fr 1fr; gap:18px; } .rs-mehr h2 { font-size:18px; margin:0 0 6px; color:#14532d; } .rs-mehr p { font-size:14px; color:#475569; } .rs-mehr ul { padding-left:18px; font-size:14px; line-height:1.8; }
+.rs-btn { display:inline-block; background:#15803d; color:#fff; font-weight:700; text-decoration:none; padding:10px 16px; border-radius:6px; font-size:14px; } .rs-link { color:#15803d; font-weight:600; margin-left:10px; font-size:14px; }
+@media (max-width:760px) { .rs-grid, .rs-mehr, .rs-zwei { grid-template-columns:1fr; } .rs-w { padding:20px 16px 48px; } .rs-gross { font-size:32px; } }
+</style>

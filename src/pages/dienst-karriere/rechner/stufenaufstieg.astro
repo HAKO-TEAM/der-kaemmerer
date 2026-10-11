@@ -1,0 +1,38 @@
+---
+import RechnerSeite from '../../../components/RechnerSeite.astro';
+import { GRUPPEN } from '../../../lib/rechner/tvoed-rechner.mjs';
+const gruppen = GRUPPEN.filter((g) => !g.endsWith('Ü'));
+---
+<RechnerSeite slug="stufenaufstieg" titel="Stufenaufstieg im TVöD berechnen"
+  beschreibung="Wann kommt die nächste Stufe? Termin des Stufenaufstiegs im TVöD-VKA nach Entgeltgruppe und Stufenbeginn – mit Gehaltsverlauf bis zur Endstufe."
+  einleitung="Termin der nächsten Stufe und Verlauf bis zur Endstufe – nach den Regel-Stufenlaufzeiten des § 16 TVöD (VKA)."
+  quellen={[
+    { name: '§ 16 Abs. 3 TVöD (VKA): Stufenlaufzeiten 1 / 2 / 3 / 4 / 5 Jahre; Abs. 4: Entgeltgruppe 1 jeweils vier Jahre', url: 'https://tv-oed.de/tvoed_paragraf_16_vka' },
+    { name: 'TVöD-VKA Entgelttabelle ab 01.05.2026', url: '/gehalt/' },
+  ]}>
+  <form slot="formular" id="f">
+    <div class="rs-zwei">
+      <div class="rs-feld"><label for="eg">Entgeltgruppe</label><select id="eg">{gruppen.map((g) => <option value={g} selected={g === 'E9a'}>{g.replace('E', 'E ')}</option>)}</select></div>
+      <div class="rs-feld"><label for="st">Aktuelle Stufe</label><select id="st">{[1,2,3,4,5,6].map((s) => <option value={s} selected={s === 2}>{s}</option>)}</select></div>
+    </div>
+    <div class="rs-feld"><label for="seit">In dieser Stufe seit</label><input id="seit" type="date" value="2026-01-01" /><small>Beginn der aktuellen Stufe laut Abrechnung bzw. Stufenmitteilung</small></div>
+  </form>
+  <div slot="ergebnis" id="erg"></div>
+</RechnerSeite>
+<script>
+import { stufenaufstieg } from '../../../lib/rechner/tvoed-rechner.mjs';
+const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+const eur = (x: number) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+const dat = (s: string) => s.split('-').reverse().join('.');
+function rechne() {
+  try {
+    const e = stufenaufstieg({ eg: $('eg').value, stufe: +$('st').value, seit: $('seit').value });
+    $('erg').innerHTML = e.naechste
+      ? `<div class="rs-gross">${dat(e.naechste.ab)}</div><div class="rs-unter">Aufstieg in Stufe ${e.naechste.stufe}: ${eur(e.naechste.monat)} statt ${eur(e.verlauf[0].monat)} (+ ${eur(e.naechste.monat - e.verlauf[0].monat)} im Monat)</div>`
+      : `<div class="rs-gross">Endstufe</div><div class="rs-unter">Stufe ${e.verlauf[0].stufe} ist die höchste Stufe dieser Entgeltgruppe.</div>`;
+    document.getElementById('rechenweg')!.innerHTML = `<table class="rs-tab"><tr><td><b>Stufe</b></td><td><b>ab</b></td><td><b>Monatsbrutto</b></td></tr>${e.verlauf.map((v) => `<tr><td>${v.stufe}</td><td>${dat(v.ab)}</td><td>${eur(v.monat)}</td></tr>`).join('')}</table>
+      <p style="margin-top:8px">Regel-Laufzeiten bei ununterbrochener Tätigkeit in derselben Entgeltgruppe bei demselben Arbeitgeber. Ab Stufe 3 kann der Aufstieg nach § 17 Abs. 2 bei besonderer Leistung verkürzt oder bei erheblich unterdurchschnittlicher Leistung verlängert werden. Unterbrechungen der Tätigkeit sind im Rechner nicht berücksichtigt.</p>`;
+  } catch (err) { $('erg').innerHTML = `<p class="rs-fehler">${(err as Error).message}</p>`; document.getElementById('rechenweg')!.innerHTML = ''; }
+}
+document.getElementById('f')!.addEventListener('input', rechne); rechne();
+</script>

@@ -1,0 +1,65 @@
+---
+import RechnerSeite from '../../../components/RechnerSeite.astro';
+import { GRUPPEN } from '../../../lib/rechner/tvoed-rechner.mjs';
+const LAENDER = ['Baden-Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg', 'Hessen', 'Mecklenburg-Vorpommern', 'Niedersachsen', 'Nordrhein-Westfalen', 'Rheinland-Pfalz', 'Saarland', 'Sachsen', 'Sachsen-Anhalt', 'Schleswig-Holstein', 'Thüringen'];
+---
+<RechnerSeite slug="tvoed-netto" titel="TVöD-Nettorechner 2026"
+  beschreibung="Netto im TVöD 2026: Lohnsteuer nach amtlichem Programmablaufplan, Solidaritätszuschlag, Kirchensteuer und Sozialversicherung – je Steuerklasse, mit Rechenweg."
+  einleitung="Vom Brutto zum Netto: Lohnsteuer nach dem amtlichen Programmablaufplan 2026 des BMF, Sozialversicherung nach den Rechengrößen 2026."
+  quellen={[
+    { name: 'Programmablaufplan Lohnsteuer 2026 (BMF/ITZBund, XML-Pseudocode, Stand 23.10.2025) – Ergebnis je Testfall centgenau mit der externen Schnittstelle des BMF-Lohnsteuerrechners abgeglichen', url: 'https://www.bmf-steuerrechner.de' },
+    { name: 'Beitragsbemessungsgrenzen 2026: SV-Rechengrößenverordnung 2026', url: 'https://www.tk.de/firmenkunden/service/fachthemen/fachthema-beitraege/sozialversicherungs-rechengroessen-2026-2203234' },
+    { name: 'Beitragssätze 2026 (KV 14,6 %, RV 18,6 %, AV 2,6 %)', url: 'https://www.haufe.de/personal/entgelt/beitragssaetze-zur-sozialversicherung_78_493770.html' },
+    { name: 'Pflegeversicherung 2026 (3,6 %, Sachsen, Zuschlag, Abschläge)', url: 'https://sozialversicherung-kompetent.de/pflegeversicherung/versicherungsrecht/1636-beitragssatz-pflegeversicherung-2026.html' },
+  ]}>
+  <form slot="formular" id="f">
+    <div class="rs-feld"><label for="quelle">Brutto</label>
+      <select id="quelle"><option value="tab">aus TVöD-Tabelle</option><option value="frei">Betrag eingeben</option></select></div>
+    <div class="rs-zwei" id="tabWahl">
+      <div class="rs-feld"><label for="eg">Entgeltgruppe</label><select id="eg">{GRUPPEN.map((g) => <option value={g} selected={g === 'E9a'}>{g.replace('E', 'E ')}</option>)}</select></div>
+      <div class="rs-feld"><label for="st">Stufe</label><select id="st">{[1,2,3,4,5,6].map((s) => <option value={s} selected={s === 3}>{s}</option>)}</select></div>
+      <div class="rs-feld"><label for="tz">Arbeitszeit %</label><input id="tz" type="number" min="1" max="100" step="0.5" value="100" /></div>
+    </div>
+    <div class="rs-feld" id="freiWahl" hidden><label for="br">Monatsbrutto in €</label><input id="br" type="number" min="0" step="0.01" value="4000" /></div>
+    <div class="rs-zwei">
+      <div class="rs-feld"><label for="stkl">Steuerklasse</label><select id="stkl">{[1,2,3,4,5,6].map((s) => <option value={s}>{['I','II','III','IV','V','VI'][s-1]}</option>)}</select></div>
+      <div class="rs-feld"><label for="zkf">Kinderfreibeträge</label><select id="zkf">{[0,0.5,1,1.5,2,2.5,3,3.5,4].map((k) => <option value={k}>{k.toLocaleString('de-DE')}</option>)}</select><small>laut Lohnsteuerabzugsmerkmalen</small></div>
+      <div class="rs-feld"><label for="land">Bundesland</label><select id="land">{LAENDER.map((l) => <option value={l} selected={l === 'Nordrhein-Westfalen'}>{l}</option>)}</select></div>
+      <div class="rs-feld"><label for="ki">Kirchensteuer</label><select id="ki"><option value="0">nein</option><option value="1">ja</option></select><small>8 % in Bayern und Baden-Württemberg, sonst 9 %</small></div>
+      <div class="rs-feld"><label for="kvz">Zusatzbeitrag Krankenkasse %</label><input id="kvz" type="number" min="0" max="6" step="0.01" value="2.9" /><small>Durchschnitt 2026: 2,9 %</small></div>
+      <div class="rs-feld"><label for="kinder">Kinder unter 25 (Pflegeversicherung)</label><select id="kinder">{[0,1,2,3,4,5].map((k) => <option value={k}>{k}{k === 5 ? ' oder mehr' : ''}</option>)}</select></div>
+    </div>
+    <div class="rs-feld"><label><input id="ab23" type="checkbox" checked /> 23 Jahre oder älter</label></div>
+  </form>
+  <div slot="ergebnis" id="erg"></div>
+</RechnerSeite>
+<script>
+import { brutto, netto } from '../../../lib/rechner/tvoed-rechner.mjs';
+const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+const eur = (x: number) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+const pz = (x: number) => x.toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' %';
+function rechne() {
+  const frei = $('quelle').value === 'frei';
+  $('tabWahl').hidden = frei; $('freiWahl').hidden = !frei;
+  try {
+    const b = frei ? +$('br').value : brutto({ eg: $('eg').value, stufe: +$('st').value, anteil: +$('tz').value / 100 }).monat;
+    const land = $('land').value;
+    const kiSatz = $('ki').value === '1' ? (['Bayern', 'Baden-Württemberg'].includes(land) ? 8 : 9) : 0;
+    const e = netto({ brutto: b, stkl: +$('stkl').value, kinderfreibetraege: +$('zkf').value, kirchensteuer: kiSatz, sachsen: land === 'Sachsen',
+      zusatzbeitrag: +$('kvz').value, kinder: +$('kinder').value, ab23: $('ab23').checked });
+    $('erg').innerHTML = `<div class="rs-gross">${eur(e.netto)}</div><div class="rs-unter">netto im Monat bei ${eur(e.brutto)} brutto</div>
+      <table class="rs-tab"><tr><td>Lohnsteuer</td><td>− ${eur(e.lohnsteuer)}</td></tr><tr><td>Solidaritätszuschlag</td><td>− ${eur(e.soli)}</td></tr><tr><td>Kirchensteuer</td><td>− ${eur(e.kirchensteuer)}</td></tr>
+      <tr><td>Krankenversicherung</td><td>− ${eur(e.kv)}</td></tr><tr><td>Pflegeversicherung</td><td>− ${eur(e.pv)}</td></tr><tr><td>Rentenversicherung</td><td>− ${eur(e.rv)}</td></tr><tr><td>Arbeitslosenversicherung</td><td>− ${eur(e.av)}</td></tr>
+      <tr class="sum"><td>Netto</td><td>${eur(e.netto)}</td></tr></table>`;
+    document.getElementById('rechenweg')!.innerHTML = `<ol>
+      <li>Lohnsteuer, Solidaritätszuschlag und Bemessungsgrundlage der Kirchensteuer nach dem amtlichen Programmablaufplan 2026 (Monatstabelle, Steuerklasse ${['I','II','III','IV','V','VI'][+$('stkl').value-1]}, Kinderfreibeträge ${(+$('zkf').value).toLocaleString('de-DE')}).</li>
+      <li>Kirchensteuer: ${kiSatz ? kiSatz + ' % der Bemessungsgrundlage' : 'keine'} = ${eur(e.kirchensteuer)}.</li>
+      <li>Krankenversicherung: ${eur(e.bemessung.kvPv)} × ${pz(e.saetze.kv)} (7,3 % + halber Zusatzbeitrag) = ${eur(e.kv)}${e.brutto > e.bemessung.kvPv ? ' – Beitragsbemessungsgrenze 5.812,50 €' : ''}.</li>
+      <li>Pflegeversicherung: ${eur(e.bemessung.kvPv)} × ${pz(e.saetze.pv)} = ${eur(e.pv)}.</li>
+      <li>Rentenversicherung: ${eur(e.bemessung.rvAv)} × 9,3 % = ${eur(e.rv)}; Arbeitslosenversicherung: × 1,3 % = ${eur(e.av)}${e.brutto > e.bemessung.rvAv ? ' – Beitragsbemessungsgrenze 8.450 €' : ''}.</li>
+      <li>Netto = ${eur(e.brutto)} − Steuern ${eur(e.steuern)} − Sozialversicherung ${eur(e.sv)} = <b>${eur(e.netto)}</b>.</li></ol>
+      <p style="margin-top:8px">Nicht berücksichtigt: Zusatzversorgung (ZVK/VBL), Zulagen, vermögenswirksame Leistungen, Freibeträge aus den Lohnsteuerabzugsmerkmalen, Übergangsbereich bis 2.000 €.</p>`;
+  } catch (err) { $('erg').innerHTML = `<p class="rs-fehler">${(err as Error).message}</p>`; document.getElementById('rechenweg')!.innerHTML = ''; }
+}
+document.getElementById('f')!.addEventListener('input', rechne); rechne();
+</script>

@@ -1,0 +1,31 @@
+---
+import RechnerSeite from '../../../components/RechnerSeite.astro';
+import { GRUPPEN } from '../../../lib/rechner/tvoed-rechner.mjs';
+---
+<RechnerSeite slug="tvoed-brutto" titel="TVöD-Bruttorechner 2026"
+  beschreibung="Monatsbrutto im TVöD-VKA 2026 nach Entgeltgruppe, Stufe und Teilzeitanteil – mit Jahressonderzahlung und Jahresbetrag."
+  einleitung="Monatsbrutto nach Entgeltgruppe, Stufe und Teilzeit – auf Basis der Entgelttabelle TVöD-VKA ab 1. Mai 2026."
+  quellen={[{ name: "TVöD-VKA Entgelttabelle ab 01.05.2026 (Tarifeinigung Bund/VKA vom 06.04.2025)", url: "/gehalt/" }, { name: '§ 20 TVöD (VKA): Jahressonderzahlung ab 2026 85 %', url: 'https://oeffentlicher-dienst.info/tvoed/vka/jahressonderzahlung/' }]}>
+  <form slot="formular" id="f">
+    <div class="rs-zwei">
+      <div class="rs-feld"><label for="eg">Entgeltgruppe</label><select id="eg">{GRUPPEN.map((g) => <option value={g} selected={g === 'E9a'}>{g.replace('E', 'E ')}</option>)}</select></div>
+      <div class="rs-feld"><label for="st">Stufe</label><select id="st">{[1,2,3,4,5,6].map((s) => <option value={s} selected={s === 3}>{s}</option>)}</select></div>
+    </div>
+    <div class="rs-feld"><label for="tz">Arbeitszeit in % von Vollzeit (39 Std.)</label><input id="tz" type="number" min="1" max="100" step="0.5" value="100" /></div>
+  </form>
+  <div slot="ergebnis" id="erg"></div>
+</RechnerSeite>
+<script>
+import { brutto } from '../../../lib/rechner/tvoed-rechner.mjs';
+const $ = (id) => document.getElementById(id) as HTMLInputElement;
+const eur = (x) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+function rechne() {
+  try {
+    const e = brutto({ eg: $('eg').value, stufe: +$('st').value, anteil: +$('tz').value / 100 });
+    $('erg').innerHTML = `<div class="rs-gross">${eur(e.monat)}</div><div class="rs-unter">brutto im Monat · ${e.eg.replace('E','E ')}, Stufe ${e.stufe}${e.anteil < 1 ? ', ' + (e.anteil*100).toLocaleString('de-DE') + ' %' : ''}</div>
+      <table class="rs-tab"><tr><td>12 Monatsentgelte</td><td>${eur(e.monat*12)}</td></tr><tr><td>Jahressonderzahlung (85 %)</td><td>${eur(e.jsz)}</td></tr><tr class="sum"><td>Jahresbrutto</td><td>${eur(e.jahr)}</td></tr></table>`;
+    document.getElementById('rechenweg').innerHTML = `<ol><li>Tabellenentgelt ${e.eg.replace('E','E ')} Stufe ${e.stufe} (Vollzeit): ${eur(e.vollzeit)}</li><li>× Arbeitszeitanteil ${(e.anteil*100).toLocaleString('de-DE')} % = ${eur(e.monat)}</li><li>Jahressonderzahlung: ${eur(e.monat)} × 85 % = ${eur(e.jsz)} (vereinfachend auf Basis desselben Monatsentgelts)</li><li>Jahresbrutto: 12 × ${eur(e.monat)} + ${eur(e.jsz)} = ${eur(e.jahr)}</li></ol>`;
+  } catch (err) { $('erg').innerHTML = `<p class="rs-fehler">${(err as Error).message}</p>`; document.getElementById('rechenweg').innerHTML = ''; }
+}
+document.getElementById('f')!.addEventListener('input', rechne); rechne();
+</script>

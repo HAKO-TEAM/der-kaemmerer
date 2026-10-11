@@ -1,0 +1,36 @@
+---
+import RechnerSeite from '../../../components/RechnerSeite.astro';
+import { GRUPPEN } from '../../../lib/rechner/tvoed-rechner.mjs';
+---
+<RechnerSeite slug="jahressonderzahlung" titel="Jahressonderzahlung TVöD 2026 berechnen"
+  beschreibung="Wie hoch ist die Jahressonderzahlung 2026 im TVöD-VKA? 85 % des Durchschnittsentgelts Juli bis September, anteilig bei unterjährigem Eintritt – mit Rechenweg."
+  einleitung="Höhe der Jahressonderzahlung 2026 im TVöD-VKA – voll oder anteilig, mit Rechenweg."
+  quellen={[
+    { name: '§ 20 TVöD (VKA): ab 2026 einheitlich 85 % (Besondere Teile B und K, EG 1–8: 90 %); Bemessung Juli–September; Stichtag 1. Dezember; Kürzung um 1/12 je Monat ohne Entgelt', url: 'https://oeffentlicher-dienst.info/tvoed/vka/jahressonderzahlung/' },
+    { name: 'Tarifeinigung TVöD Bund/VKA vom 06.04.2025' },
+  ]}>
+  <form slot="formular" id="f">
+    <div class="rs-zwei">
+      <div class="rs-feld"><label for="eg">Entgeltgruppe am 1. September</label><select id="eg">{GRUPPEN.map((g) => <option value={g} selected={g === 'E9a'}>{g.replace('E', 'E ')}</option>)}</select></div>
+      <div class="rs-feld"><label for="d">Durchschnittliches Monatsentgelt Juli–September in €</label><input id="d" type="number" min="0" step="0.01" value="4097.67" /></div>
+      <div class="rs-feld"><label for="m">Kalendermonate 2026 ohne Entgeltanspruch</label><input id="m" type="number" min="0" max="12" step="1" value="0" /><small>z. B. Monate vor dem Eintritt; Elternzeit und Mutterschutz zählen nicht</small></div>
+      <div class="rs-feld"><label for="bk">Bereich</label><select id="bk"><option value="0">Verwaltung und übrige Bereiche</option><option value="1">Pflege/Betreuung oder Krankenhaus (BT B/K)</option></select></div>
+    </div>
+    <div class="rs-feld"><label><input id="dez" type="checkbox" checked /> Am 1. Dezember im Arbeitsverhältnis</label></div>
+  </form>
+  <div slot="ergebnis" id="erg"></div>
+</RechnerSeite>
+<script>
+import { jahressonderzahlung } from '../../../lib/rechner/tvoed-rechner.mjs';
+const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+const eur = (x: number) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+function rechne() {
+  try {
+    const e: any = jahressonderzahlung({ eg: $('eg').value, durchschnittJulSep: +$('d').value, monateOhneEntgelt: +$('m').value, besondererTeilBK: $('bk').value === '1', imArbeitsverhaeltnisAm1Dez: $('dez').checked });
+    $('erg').innerHTML = `<div class="rs-gross">${eur(e.betrag)}</div><div class="rs-unter">${e.hinweis || `brutto, ausgezahlt mit dem Novemberentgelt${e.anteil < 1 ? ` · anteilig ${Math.round(e.anteil * 12)}/12` : ''}`}</div>`;
+    document.getElementById('rechenweg')!.innerHTML = e.hinweis ? `<p>${e.hinweis}</p>` : `<ol><li>Bemessungsgrundlage: Durchschnitt Juli–September = ${eur(+$('d').value)}.</li><li>Bemessungssatz ${(e.satz * 100).toLocaleString('de-DE')} % = ${eur(e.voll)}.</li>${e.anteil < 1 ? `<li>Kürzung um ${12 - Math.round(e.anteil * 12)}/12 für Monate ohne Entgeltanspruch = ${eur(e.betrag)}.</li>` : ''}</ol>
+      <p style="margin-top:8px">Beginnt das Arbeitsverhältnis am 1. Oktober oder später, tritt der erste volle Kalendermonat an die Stelle von Juli–September. Steuerlich ist die Zahlung ein sonstiger Bezug.</p>`;
+  } catch (err) { $('erg').innerHTML = `<p class="rs-fehler">${(err as Error).message}</p>`; }
+}
+document.getElementById('f')!.addEventListener('input', rechne); rechne();
+</script>

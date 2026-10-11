@@ -1,0 +1,35 @@
+---
+import RechnerSeite from '../../../components/RechnerSeite.astro';
+import { GRUPPEN } from '../../../lib/rechner/tvoed-rechner.mjs';
+const gruppen = GRUPPEN.filter((g) => !g.endsWith('Ü'));
+---
+<RechnerSeite slug="stufe-bei-wechsel" titel="Stufe bei Einstellung und Wechsel im TVöD"
+  beschreibung="In welche Stufe komme ich bei Einstellung oder Wechsel zu einer anderen Kommune? Stufenzuordnung nach § 16 TVöD (VKA) – mit den Spielräumen des Arbeitgebers."
+  einleitung="Stufenzuordnung bei Einstellung nach einschlägiger Berufserfahrung – und wo der neue Arbeitgeber zusätzlich entgegenkommen kann."
+  quellen={[
+    { name: '§ 16 Abs. 2 TVöD (VKA): Stufe 1 / 2 / in der Regel 3; Satz 3 förderliche Zeiten; Abs. 4 Entgeltgruppe 1', url: 'https://tv-oed.de/tvoed_paragraf_16_vka' },
+    { name: '§ 16 Abs. 2a TVöD (VKA): Berücksichtigung der Stufe bei Wechsel im unmittelbaren Anschluss an ein Arbeitsverhältnis im öffentlichen Dienst (Kann-Regel)' },
+  ]}>
+  <form slot="formular" id="f">
+    <div class="rs-feld"><label for="eg">Entgeltgruppe der neuen Stelle</label><select id="eg">{gruppen.map((g) => <option value={g} selected={g === 'E11'}>{g.replace('E', 'E ')}</option>)}</select></div>
+    <div class="rs-feld"><label for="ein">Einschlägige Berufserfahrung in Jahren</label><input id="ein" type="number" min="0" max="50" step="0.5" value="2" /><small>Erfahrung in der übertragenen oder einer gleichartigen Tätigkeit</small></div>
+    <div class="rs-feld"><label for="foe">Förderliche Berufserfahrung in Jahren</label><input id="foe" type="number" min="0" max="50" step="0.5" value="0" /><small>für die Tätigkeit nützlich, aber nicht gleichartig</small></div>
+    <div class="rs-feld"><label for="oed">Bisherige Stufe im öffentlichen Dienst (bei direktem Wechsel)</label><select id="oed"><option value="">kein direkter Wechsel</option>{[1,2,3,4,5,6].map((s) => <option value={s}>Stufe {s}</option>)}</select></div>
+  </form>
+  <div slot="ergebnis" id="erg"></div>
+</RechnerSeite>
+<script>
+import { stufeBeiEinstellung } from '../../../lib/rechner/tvoed-rechner.mjs';
+const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+const eur = (x: number) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+function rechne() {
+  try {
+    const e = stufeBeiEinstellung({ eg: $('eg').value, jahreEinschlaegig: +$('ein').value, foerderlicheJahre: +$('foe').value, bisherigeStufeOeD: $('oed').value ? +$('oed').value : null });
+    $('erg').innerHTML = `<div class="rs-gross">Stufe ${e.stufe}</div><div class="rs-unter">${e.eg.replace('E','E ')}, Stufe ${e.stufe}: ${eur(e.monat)} brutto im Monat (Vollzeit)</div>`
+      + (e.hinweise.length ? `<p style="font-size:14px;margin-top:12px"><b>Verhandlungsspielraum:</b> ${e.hinweise.length === 1 ? 'Eine Regel erlaubt' : 'Zwei Regeln erlauben'} dem Arbeitgeber eine höhere Stufe – siehe Rechenweg.</p>` : '');
+    document.getElementById('rechenweg')!.innerHTML = `<ol><li>${e.regel}.</li>${e.hinweise.map((h) => `<li>${h}</li>`).join('')}</ol>
+      <p style="margin-top:8px">Ob Berufserfahrung „einschlägig“ ist, entscheidet sich an der konkreten Tätigkeit; im Zweifel lohnt die Klärung vor der Vertragsunterschrift.</p>`;
+  } catch (err) { $('erg').innerHTML = `<p class="rs-fehler">${(err as Error).message}</p>`; document.getElementById('rechenweg')!.innerHTML = ''; }
+}
+document.getElementById('f')!.addEventListener('input', rechne); rechne();
+</script>

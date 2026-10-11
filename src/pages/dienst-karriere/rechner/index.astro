@@ -1,0 +1,22 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import DkKopf from '../../../components/DkKopf.astro';
+import { RECHNER } from '../../../data/dienst-karriere.mjs';
+---
+<Base title="TVöD-Rechner 2026: Brutto, Netto, Stufenaufstieg, Jahressonderzahlung"
+  description="Fünf kostenlose Rechner für Beschäftigte im kommunalen Dienst: TVöD-Brutto und -Netto 2026, Stufenaufstieg, Stufe bei Einstellung und Jahressonderzahlung – mit Rechenweg und Quellen.">
+<Header />
+<DkKopf aktiv="rechner" titel="Rechner für den kommunalen Dienst" text="Brutto, Netto, Stufen und Jahressonderzahlung im TVöD-VKA 2026 – jeweils mit Rechenweg und Quellen, Eingaben bleiben im Browser." pfad={[{ name: 'Rechner', url: '/dienst-karriere/rechner/' }]} />
+<main class="dk-main">
+  <div class="dk-karten">{RECHNER.map((r) => <a class="dk-karte" href={`/dienst-karriere/rechner/${r.slug}/`}><b>{r.name}</b><span>{r.kurz}</span></a>)}</div>
+</main>
+<Footer />
+</Base>
+<style is:global>
+.dk-main { max-width:1040px; margin:0 auto; padding:30px 28px 64px; }
+.dk-karten { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.dk-karte { display:block; background:#fff; border:1px solid #e2e8f0; border-left:4px solid #15803d; border-radius:8px; padding:16px 18px; text-decoration:none; color:#0f172a; }
+.dk-karte:hover { border-color:#15803d; } .dk-karte b { display:block; font-size:16px; margin-bottom:6px; } .dk-karte span { font-size:13.5px; color:#475569; line-height:1.5; }
+</style>
