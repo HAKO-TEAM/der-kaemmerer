@@ -3,6 +3,11 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import sperrenDaten from '../data/haushaltslage/sperren.json';
+import gemeindenDaten from '../data/spiegel/gemeinden.json';
+import marktDaten from '../data/markt/markt.json';
+import { kreise as alleKreise } from '../lib/kreise.mjs';
+import { LEXIKON } from '../lib/lexikon.mjs';
 
 const haushalt  = await getCollection('haushalt');
 const einnahmen = await getCollection('einnahmen');
@@ -14,6 +19,20 @@ const sozialkosten = await getCollection('sozialkosten');
 
 const alle = [...haushalt,...einnahmen,...ausgaben,...praxis,...recht,...analyse,...sozialkosten]
   .sort((a,b) => new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime());
+
+// Daten & Verzeichnisse: sichtbar auf der Startseite verlinkt (interne Verlinkung der Datenseiten)
+const sperrKommunen = new Set((sperrenDaten as any).faelle.map((f: any) => `${f.land}|${f.anzeige || f.kommune}`)).size;
+const DATEN = [
+  { href: '/gemeinden/', titel: 'Gemeindeverzeichnis', zahl: (gemeindenDaten as any[]).length.toLocaleString('de-DE'), text: 'Hebesätze, Schulden und Haushaltslage jeder Gemeinde – mit Steuer-Rechner' },
+  { href: '/haushaltssperren/', titel: 'Haushaltssperren', zahl: String(sperrKommunen), text: 'Kommunen mit belegter Haushaltssperre seit 2025 – Karte je Bundesland' },
+  { href: '/haushaltslage/', titel: 'Haushaltslage je Land', zahl: '13', text: 'Kassenkredite, Schulden und Landesprogramme aller Flächenländer' },
+  { href: '/haushaltslage-nrw/', titel: 'Haushaltslage NRW', zahl: '8 von 396', text: 'Gemeinden mit echtem Haushaltsausgleich – amtliche Einstufung' },
+  { href: '/kreise/', titel: 'Landkreise', zahl: String(alleKreise(gemeindenDaten as any[]).length), text: 'Alle Gemeinden je Kreis im Vergleich, mit Karte' },
+  { href: '/ranglisten/', titel: 'Ranglisten', zahl: '70', text: 'Höchste Grundsteuer, Gewerbesteuer und Schulden – bundesweit und je Land' },
+  { href: '/gehalt/', titel: 'TVöD-Tabelle 2026', zahl: '17', text: 'Entgeltgruppen mit Stufen, Kosten je Stelle und offenen Stellen' },
+  { href: '/stellen/', titel: 'Stellenmarkt', zahl: (marktDaten as any).stellen.length.toLocaleString('de-DE'), text: 'Offene Stellen kommunaler Arbeitgeber, täglich aktualisiert' },
+  { href: '/lexikon/', titel: 'Lexikon Kommunalfinanzen', zahl: String(LEXIKON.length), text: 'Von Ausgleichsrücklage bis Kreisumlage – mit aktuellen Zahlen' },
+];
 
 const featured  = alle.find(a => a.data.featured) || alle[0];
 const neueste   = alle.filter(a => a.id !== featured?.id).slice(0, 8);
@@ -201,6 +220,28 @@ const catLabel: Record<string,string> = {
     </div>
   </div>
 </div>
+
+<!-- Daten & Verzeichnisse -->
+<section class="dv">
+  <div class="main-inner" style="padding-top:0;padding-bottom:0;">
+    <div class="dv-kopf"><h2>Daten &amp; Verzeichnisse</h2><span>Amtliche Daten zu jeder Kommune – täglich gepflegt, frei zugänglich</span></div>
+    <div class="dv-raster">
+      {DATEN.map((d) => <a class="dv-karte" href={d.href}><b>{d.zahl}</b><strong>{d.titel}</strong><span>{d.text}</span></a>)}
+    </div>
+  </div>
+</section>
+<style>
+  .dv { background:#f1f5f9; border-bottom:1px solid #e2e8f0; padding:26px 0 28px; }
+  .dv-kopf { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
+  .dv-kopf h2 { font-size:20px; font-weight:800; color:#1a2744; margin:0; letter-spacing:-.01em; } .dv-kopf span { font-size:12.5px; color:#64748b; }
+  .dv-raster { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .dv-karte { display:grid; grid-template-columns:auto 1fr; grid-template-rows:auto auto; column-gap:12px; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px; text-decoration:none; transition:border-color .15s, box-shadow .15s; }
+  .dv-karte:hover { border-color:#3b82f6; box-shadow:0 10px 24px -18px rgba(37,99,235,.7); }
+  .dv-karte b { grid-row:1 / span 2; align-self:center; min-width:62px; font-size:18px; font-weight:800; color:#2563eb; white-space:nowrap; }
+  .dv-karte strong { font-size:14px; color:#1a2744; } .dv-karte span { font-size:12px; color:#64748b; line-height:1.4; }
+  @media (max-width:1024px) { .dv-raster { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:640px) { .dv-raster { grid-template-columns:1fr; } .dv-karte b { min-width:54px; font-size:16px; } }
+</style>
 
 <!-- Hauptinhalt -->
 <main class="main-inner">
