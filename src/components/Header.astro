@@ -1,8 +1,8 @@
 ---
 const nav = [
   { href: '/haushalt/',     label: 'Haushalt & Finanzen' },
-  { href: '/einnahmen/',    label: 'Einnahmen erschließen' },
-  { href: '/ausgaben/',     label: 'Ausgaben steuern' },
+  { href: '/einnahmen/',    label: 'Einnahmen' },
+  { href: '/ausgaben/',     label: 'Ausgaben' },
   { href: '/praxis/',       label: 'Best Practice' },
   { href: '/daten/',        label: 'Daten & Rankings' },
   { href: '/recht/',        label: 'Recht & Vergabe' },
@@ -10,7 +10,7 @@ const nav = [
   { href: '/sozialkosten/', label: 'Sozialkosten' },
   { href: '/dienst-karriere/', label: 'Dienst & Karriere' },
   { href: '/stellen/', label: 'Stellenbörse' },
-  { href: '/arbeitgeberservice/', label: 'Arbeitgeberservice' },
+  { href: '/arbeitgeberservice/', label: 'Für Arbeitgeber' },
 ];
 const currentPath = Astro.url.pathname;
 
@@ -86,6 +86,11 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
   .mobile-menu .m-btn:hover{background:#0f3460;border-left-color:transparent!important}
 
   /* ── Responsive ── */
+  /* Menüzeile passt erst ab ~1200 px in eine Zeile – darunter Hamburger-Menü */
+  @media(max-width:1199px){
+    nav{display:none}
+    .burger{display:flex}
+  }
   @media(max-width:768px){
     .topbar{font-size:10px;padding:6px 12px}
     .topbar span{margin:0 6px}
