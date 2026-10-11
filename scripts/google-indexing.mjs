@@ -79,7 +79,7 @@ if (nur) {
 } else {
   const neu = [...aktiv].filter(([u]) => !stand.gemeldet[u]).sort((a, b) => b[1].localeCompare(a[1])).map(([url]) => ({ url, type: 'URL_UPDATED' }));
   const weg = Object.keys(stand.gemeldet).filter((u) => !aktiv.has(u)).map((url) => ({ url, type: 'URL_DELETED' }));
-  auftraege = [...neu, ...weg].slice(0, max);
+  auftraege = [...weg, ...neu].slice(0, max);   // Runbook 3.2: gelöschte zuerst
   console.log(`aktiv ${aktiv.size} · bereits gemeldet ${Object.keys(stand.gemeldet).length} · neu ${neu.length} · abgelaufen ${weg.length} · dieser Lauf ${auftraege.length}`);
 }
 if (dry) { for (const a of auftraege.slice(0, 10)) console.log(a.type, a.url); process.exit(0); }

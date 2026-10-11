@@ -1,0 +1,19 @@
+---
+// Zielseite für abgelaufene Stellen: Vercel liefert sie mit HTTP 410 aus (scripts/stellen-410.mjs, Runbook 3.1).
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Diese Stelle ist nicht mehr ausgeschrieben" description="Die Bewerbungsfrist dieser Stellenanzeige ist abgelaufen. Aktuelle Stellen kommunaler Arbeitgeber finden Sie in der Stellenbörse." noindex={true}>
+<Header />
+<main style="max-width:720px;margin:0 auto;padding:64px 24px 80px;font-family:inherit;">
+  <p style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#64748b;margin:0 0 10px;">Stellenbörse</p>
+  <h1 style="font-size:30px;line-height:1.2;color:#172840;margin:0 0 14px;">Die Bewerbungsfrist dieser Stelle ist abgelaufen</h1>
+  <p style="font-size:16px;line-height:1.6;color:#334155;margin:0 0 26px;">Die Anzeige ist deshalb nicht mehr online. In der Stellenbörse stehen täglich neue Ausschreibungen kommunaler Arbeitgeber – nach Bundesland und Berufsfeld sortiert.</p>
+  <p style="display:flex;gap:12px;flex-wrap:wrap;margin:0;">
+    <a href="/stellen/" style="background:#2563eb;color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:6px;">Zur Stellenbörse →</a>
+    <a href="/gehalt/" style="color:#2563eb;text-decoration:none;font-weight:700;padding:12px 4px;">TVöD-Tabelle 2026</a>
+  </p>
+</main>
+<Footer />
+</Base>
