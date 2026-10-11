@@ -46,5 +46,5 @@ export default async function handler(req, res) {
     });
     if (!(vorher.listIds || []).includes(LIST_ID)) await melden(KEY, email, LIST_ID === DK);
   } catch (e) { console.error(e); }
-  return res.redirect(302, '/danke/');
+  return res.redirect(302, LIST_ID === DK ? '/dienst-karriere/danke/' : '/danke/');
 }

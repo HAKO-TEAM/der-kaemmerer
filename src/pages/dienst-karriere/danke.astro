@@ -1,0 +1,21 @@
+---
+// Bestätigungsseite für den Newsletter „Dienst & Karriere“ (Ziel von /api/confirm bei Liste BREVO_LIST_ID_DK)
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Base title="Anmeldung bestätigt – Newsletter Dienst & Karriere" noindex={true}>
+<Header />
+<div style="background:linear-gradient(135deg,#0f3b2e 0%,#14532d 55%,#1a4d3a 100%);padding:80px 0;text-align:center;">
+  <div style="max-width:620px;margin:0 auto;padding:0 32px;">
+    <div style="font-size:48px;margin-bottom:16px;color:#fff;">✓</div>
+    <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;">Anmeldung bestätigt</h1>
+    <p style="font-size:15px;color:#d1fae5;line-height:1.7;margin-bottom:24px;">
+      Sie erhalten den Newsletter <strong style="color:#fff;">Dienst &amp; Karriere</strong> ab der nächsten Ausgabe direkt ins Postfach – mit neuen Stellen nach Region, Neuigkeiten zu Tarif und Laufbahn und einem Rechner oder Ratgeber.
+    </p>
+    <a href="/dienst-karriere/" style="display:inline-block;background:#86efac;color:#14532d;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 20px;border-radius:3px;text-decoration:none;">Zu Dienst &amp; Karriere</a>
+    <a href="/dienst-karriere/rechner/" style="display:inline-block;color:#d1fae5;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 14px;text-decoration:none;">Zu den Rechnern</a>
+  </div>
+</div>
+<Footer />
+</Base>
