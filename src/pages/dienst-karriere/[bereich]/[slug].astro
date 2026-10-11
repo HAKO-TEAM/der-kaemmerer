@@ -3,13 +3,20 @@
 import { render } from 'astro:content';
 import Artikel from '../../../layouts/Artikel.astro';
 import { dkArtikel } from '../../../lib/dienst-karriere';
+import Tarifrunde from '../../../components/Tarifrunde.astro';
+import { TARIFRUNDE } from '../../../data/tarif/tarifrunde.mjs';
 export async function getStaticPaths() {
-  return (await dkArtikel()).filter((a: any) => a.data.cluster).map((a: any) => ({ params: { bereich: a.data.cluster, slug: a.id }, props: { entry: a } }));
+  const pfade = (await dkArtikel()).filter((a: any) => a.data.cluster).map((a: any) => ({ params: { bereich: a.data.cluster, slug: a.id }, props: { entry: a } }));
+  // Tarifrunden-Hub (Runbook 4.3) erst nach Aktivierung
+  if (TARIFRUNDE.aktiv) pfade.push({ params: { bereich: 'tarif', slug: 'tarifrunde-tvoed' }, props: { entry: null } } as any);
+  return pfade;
 }
 const { entry } = Astro.props as any;
-const { Content } = await render(entry);
+const Content = entry ? (await render(entry)).Content : null;
 ---
+{!entry ? <Tarifrunde /> : (
 <Artikel title={entry.data.title} beschreibung={entry.data.beschreibung} ressort="dienst-karriere" datum={entry.data.datum}
   minuten={entry.data.minuten} autor={entry.data.autor} tag={entry.data.tag} updated={entry.data.updated}>
   <Content />
 </Artikel>
+)}

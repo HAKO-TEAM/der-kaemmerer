@@ -11,7 +11,7 @@ export function getStaticPaths() { return BEREICHE.map((b) => ({ params: { berei
 const { b } = Astro.props as { b: (typeof BEREICHE)[number] };
 const artikel = (await dkArtikel()).filter((a: any) => a.data.cluster === b.slug);
 const rechner = RECHNER.filter((r) => b.rechner.includes(r.slug));
-const indexierbar = artikel.length > 0 || b.links.length > 0;
+const indexierbar = artikel.length > 0;   // Bereiche ohne eigene Beiträge bleiben noindex (dünne Seiten)
 ---
 <Base title={`${b.name} im kommunalen Dienst – Dienst & Karriere`} description={b.text} noindex={!indexierbar}>
 <Header />
