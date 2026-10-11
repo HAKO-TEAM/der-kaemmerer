@@ -149,6 +149,7 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
           <input type="email" id="sp-mail" required placeholder="Ihre dienstliche E-Mail">
           <button class="sp-btn hell" type="submit">Briefing abonnieren</button>
         </form>
+        <p id="sp-fehler" class="sp-ok" role="alert" hidden style="color:#fca5a5">Die Anmeldung ist gerade fehlgeschlagen. Bitte erneut versuchen oder eine kurze Nachricht an redaktion@derkaemmerer.de senden.</p>
         <p id="sp-ok" class="sp-ok" hidden>Fast geschafft: Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail, die wir Ihnen gerade geschickt haben.</p>
         <a class="sp-mini" href="/kaemmerer-cockpit/">Kämmerer-Cockpit ansehen →</a>
       </div>
@@ -161,10 +162,11 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
     const email = document.getElementById('sp-mail').value;
     const btn = e.target.querySelector('button'); btn.disabled = true;
     try {
-      await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const r = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, lagebericht: token, kommune, ags }) });
-      e.target.hidden = true; document.getElementById('sp-ok').hidden = false;
-    } catch { btn.disabled = false; }
+      if (!r.ok) throw new Error(String(r.status));
+      e.target.hidden = true; document.getElementById('sp-fehler').hidden = true; document.getElementById('sp-ok').hidden = false;
+    } catch { btn.disabled = false; document.getElementById('sp-fehler').hidden = false; }
   });
 </script>
 <Footer />

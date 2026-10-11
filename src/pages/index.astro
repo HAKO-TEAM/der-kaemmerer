@@ -295,7 +295,10 @@ const catLabel: Record<string,string> = {
       </button>
     </form>
     <div id="nl-success" style="display:none;font-size:13px;color:#065f46;font-weight:600;padding:9px 0;">
-      ✓ Anmeldung erfolgreich! Sie erhalten das nächste Briefing direkt ins Postfach.
+      ✓ Fast geschafft: Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail, die gerade an Sie unterwegs ist.
+    </div>
+    <div id="nl-fehler" role="alert" style="display:none;font-size:12px;color:#b91c1c;font-weight:600;padding:6px 0;">
+      Die Anmeldung ist gerade fehlgeschlagen. Bitte erneut versuchen oder eine kurze Nachricht an redaktion@derkaemmerer.de senden.
     </div>
     <script is:inline>
     async function handleSubscribe(e) {
@@ -310,13 +313,15 @@ const catLabel: Record<string,string> = {
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({email})
         });
-        if (r.ok) {
-          document.getElementById('nl-form').style.display = 'none';
-          document.getElementById('nl-success').style.display = 'block';
-        } else { throw new Error(); }
-      } catch {
+        if (!r.ok) throw new Error(String(r.status));
         document.getElementById('nl-form').style.display = 'none';
+        document.getElementById('nl-fehler').style.display = 'none';
         document.getElementById('nl-success').style.display = 'block';
+      } catch {
+        // Formular bleibt sichtbar, Button wieder aktiv
+        btn.textContent = 'Abonnieren';
+        btn.disabled = false;
+        document.getElementById('nl-fehler').style.display = 'block';
       }
     }
     </script>

@@ -27,18 +27,28 @@ async function kontaktSchreiben(KEY, email, attributes) {
     headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
     body: JSON.stringify({ email, attributes, updateEnabled: true }),
   });
-  if (!r.ok && r.status !== 204) console.error('Brevo contact error:', r.status, await r.text());
+  if (!r.ok && r.status !== 204) {
+    const t = await r.text();
+    console.error('Brevo contact error:', r.status, t);
+    throw new Error('Kontakt nicht gespeichert (' + r.status + ')');
+  }
 }
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { email, lagebericht, kommune, ags } = req.body || {};
+  const { email, lagebericht, kommune, ags, liste = 'kaemmerer' } = req.body || {};
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ error: 'Ungültige E-Mail' });
 
   const KEY     = process.env.BREVO_API_KEY;
-  const LIST_ID = parseInt(process.env.BREVO_LIST_ID || '2');
+  // Listen: kaemmerer = Kämmerer-Briefing (Standard); dienst-karriere = Ressort-Newsletter (Phase 4.5, Env BREVO_LIST_ID_DK)
+  const LISTEN = { kaemmerer: process.env.BREVO_LIST_ID || '2', 'dienst-karriere': process.env.BREVO_LIST_ID_DK };
+  if (!(liste in LISTEN)) return res.status(400).json({ error: 'Unbekannte Liste' });
+  const LIST_ID = parseInt(LISTEN[liste] || '');
   const TPL_ID  = parseInt(process.env.BREVO_DOI_TEMPLATE || '1');
-  if (!KEY) return res.status(200).json({ success: true });
+  if (!KEY || !LIST_ID) {
+    console.error('Newsletter nicht konfiguriert:', { key: !!KEY, liste, LIST_ID });
+    return res.status(503).json({ error: 'Anmeldung derzeit nicht möglich' });
+  }
 
   const token = /^[a-f0-9]{16}$/.test(lagebericht || '') ? lagebericht : null;
   const attributes = { QUELLE: token ? 'Lagebericht' : 'Website' };
@@ -62,8 +72,11 @@ export default async function handler(req, res) {
         params: { CONFIRM_URL: `https://derkaemmerer.de/api/confirm?email=${encodeURIComponent(email)}&list=${LIST_ID}&sig=${sig}` },
       }),
     });
-    if (!r.ok) console.error('Brevo send error:', await r.json());
-  } catch (e) { console.error('Fehler:', e); }
+    if (!r.ok) throw new Error('Bestätigungsmail nicht versendet: ' + r.status + ' ' + JSON.stringify(await r.json().catch(() => ({}))));
+  } catch (e) {
+    console.error('Newsletter-Anmeldung fehlgeschlagen:', email.replace(/^(.).*@/, '$1…@'), e.message || e);
+    return res.status(502).json({ error: 'Anmeldung fehlgeschlagen' });
+  }
 
   return res.status(200).json({ success: true });
 }
