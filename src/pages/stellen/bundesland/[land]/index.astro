@@ -1,0 +1,24 @@
+---
+// Landingpage je Bundesland (Runbook 3.3); unter 5 Stellen noindex
+import StellenSeite from '../../../../components/StellenSeite.astro';
+import { aktiveStellen, LAENDER, einleitung, MIN_INDEX } from '../../../../lib/stellen';
+export async function getStaticPaths() {
+  const alle = await aktiveStellen();
+  return LAENDER(alle).map(([land, name]) => ({ params: { land }, props: { name } }));
+}
+const { land } = Astro.params; const { name } = Astro.props as { name: string };
+const alle = await aktiveStellen();
+const liste = alle.filter((s) => s.landSlug === land);
+const finanzen = liste.filter((s) => s.feld.slug === 'finanzen').length;
+const inLand = ['Saarland'].includes(name) ? `im ${name}` : `in ${name}`;
+---
+<StellenSeite
+  seoTitel={`Stellenangebote ${name}: ${liste.length} Stellen im öffentlichen Dienst der Kommunen`}
+  beschreibung={`${liste.length} aktuelle Stellen kommunaler Arbeitgeber ${inLand} – Kämmerei, Verwaltung, Technik, IT und Führung, mit Entgeltgruppe und Bewerbungsfrist.`}
+  noindex={liste.length < MIN_INDEX}
+  label={`Stellenbörse · ${name}`} titel={`Stellen im öffentlichen Dienst ${inLand}`}
+  untertitel={finanzen >= 1 ? `Davon ${finanzen} in Finanzen & Kämmerei.` : undefined}
+  einleitung={einleitung(liste, `Bei Kommunen ${inLand}`)}
+  pfad={[{ name: 'Stellenbörse', url: '/stellen/' }, ...(finanzen >= 1 ? [{ name: `Finanzen ${inLand}`, url: `/stellen/bundesland/${land}/finanzen/` }] : [])]}
+  alle={alle} liste={liste} gesamt={liste.length} aktivLand={land}
+/>

@@ -1,0 +1,25 @@
+---
+// Folgeseiten je Berufsfeld (Runbook 3.3)
+import StellenSeite from '../../../../../components/StellenSeite.astro';
+import { aktiveStellen, FELDER, JE_SEITE } from '../../../../../lib/stellen';
+export async function getStaticPaths() {
+  const alle = await aktiveStellen();
+  return FELDER.flatMap((f) => {
+    const n = alle.filter((s) => s.feld.slug === f.slug).length;
+    const seiten = Math.ceil(n / JE_SEITE);
+    return Array.from({ length: Math.max(0, seiten - 1) }, (_, i) => ({ params: { feld: f.slug, n: String(i + 2) }, props: { name: f.name, seite: i + 2, seiten } }));
+  });
+}
+const { feld } = Astro.params;
+const { name, seite, seiten } = Astro.props as { name: string; seite: number; seiten: number };
+const alle = await aktiveStellen();
+const liste = alle.filter((s) => s.feld.slug === feld);
+---
+<StellenSeite
+  seoTitel={`Stellen ${name} – Seite ${seite}`}
+  beschreibung={`Seite ${seite} von ${seiten}: Stellen im Bereich ${name} bei Kommunen.`}
+  label={`Stellenbörse · ${name} · Seite ${seite} von ${seiten}`} titel={name}
+  pfad={[{ name: 'Stellenbörse', url: '/stellen/' }, { name, url: `/stellen/berufsfeld/${feld}/` }]}
+  alle={alle} liste={liste.slice((seite - 1) * JE_SEITE, seite * JE_SEITE)} gesamt={liste.length} aktivFeld={feld}
+  seite={seite} seiten={seiten} basis={`/stellen/berufsfeld/${feld}/`}
+/>

@@ -1,0 +1,237 @@
+---
+// Darstellung einer Stellenliste (Übersicht, Folgeseiten, Landingpages) – Runbook 3.3.
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import markt from '../data/markt/markt.json';
+import { ueberblick, niveauText } from '../lib/markt/benchmark.mjs';
+import { FELDER, LAENDER, type Stelle } from '../lib/stellen';
+
+interface Props {
+  seoTitel: string; beschreibung: string; noindex?: boolean;
+  label: string; titel: string; untertitel?: string; einleitung?: string;
+  pfad?: { name: string; url: string }[];
+  alle: Stelle[];            // alle laufenden Stellen (für Navigation und Zähler)
+  liste: Stelle[];           // auf dieser Seite angezeigt
+  gesamt: number;            // Treffer dieser Auswahl
+  seite?: number; seiten?: number; basis?: string;   // Paginierung
+  aktivLand?: string; aktivFeld?: string;
+  marktZahlen?: boolean;
+}
+const { seoTitel, beschreibung, noindex = false, label, titel, untertitel, einleitung, pfad = [], alle, liste, gesamt,
+  seite = 1, seiten = 1, basis = '/stellen/', aktivLand, aktivFeld, marktZahlen = false } = Astro.props;
+const mu = ueberblick(markt.stellen);
+const mpz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
+const laender = LAENDER(alle).map(([slug, name]) => ({ slug, name, n: alle.filter((s) => s.landSlug === slug).length }));
+const felder = FELDER.map((f) => ({ ...f, n: alle.filter((s) => s.feld.slug === f.slug).length })).filter((f) => f.n > 0);
+const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
+---
+<Base title={seoTitel} description={beschreibung} noindex={noindex}>
+<Header />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+.st-container { max-width: 1000px; margin: 0 auto; padding: 0 48px; }
+
+/* HERO */
+.st-hero { background: linear-gradient(135deg, #1a2744 0%, #0f3460 60%, #1a3a5c 100%); padding: 56px 0; }
+.st-hero-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 10px; }
+.st-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+.st-hero p { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 560px; }
+.st-hero-stats { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+.st-hero-stat .n { font-size: 28px; font-weight: 700; color: #93c5fd; font-family: 'Playfair Display', serif; display: block; }
+.st-hero-stat .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+/* FILTER */
+.st-filter { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 16px 0; position: sticky; top: 0; z-index: 40; }
+.st-filter-inner { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.st-filter select { padding: 8px 28px 8px 12px; border: 1.5px solid #e2e8f0; border-radius: 5px; font-size: 13px; color: #374151; background: #f8fafc; cursor: pointer; font-family: inherit; }
+.st-filter select:focus { outline: none; border-color: #3b82f6; }
+.st-filter-label { font-size: 12px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; }
+
+/* MAIN */
+.st-main { padding: 48px 0 80px; background: #f1f5f9; }
+.st-count { font-size: 12px; color: #6b7280; margin-bottom: 24px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+/* JOB CARD */
+.st-card {
+  background: #fff; border: 1.5px solid #e2e8f0; border-radius: 8px;
+  margin-bottom: 16px; overflow: hidden;
+  transition: transform .15s, box-shadow .15s;
+  display: block; text-decoration: none; color: inherit;
+}
+.st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(26,39,68,.1); border-color: #bfdbfe; }
+.st-card.premium { border-left: 4px solid #3b82f6; }
+.st-card.exklusiv { border-left: 4px solid #1a2744; background: linear-gradient(to right, #f8faff 0%, #fff 60%); }
+
+.st-card-inner { padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+
+.st-card-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+.st-card-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.st-card-badge.exklusiv { background: #1a2744; color: #93c5fd; }
+
+.st-card-org { font-size: 12px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+.st-card-title { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #1a2744; line-height: 1.25; margin-bottom: 12px; }
+.st-card-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.st-card-meta-item { font-size: 12px; color: #374151; display: flex; align-items: center; gap: 5px; }
+.st-card-meta-item::before { content: ''; width: 5px; height: 5px; background: #3b82f6; border-radius: 50%; flex-shrink: 0; }
+
+.st-card-right { text-align: right; flex-shrink: 0; }
+.st-card-deadline { font-size: 11px; color: #6b7280; margin-bottom: 8px; white-space: nowrap; }
+.st-card-deadline.urgent { color: #dc2626; font-weight: 700; }
+.st-card-btn {
+  display: inline-block; padding: 10px 20px;
+  background: #1a2744; color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  border-radius: 4px; text-decoration: none; white-space: nowrap;
+  transition: background .15s;
+}
+.st-card-btn:hover { background: #0f3460; }
+
+/* TAGS */
+.st-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.st-tag { background: #f1f5f9; border: 1px solid #e2e8f0; color: #374151; font-size: 10px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+
+/* LEER */
+.st-empty { text-align: center; padding: 64px 0; color: #6b7280; }
+.st-empty h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: #1a2744; margin-bottom: 10px; }
+
+/* DOSSIER TEASER */
+.st-dossier { background: #172840; border-bottom: 2px solid #2563eb; padding: 12px 0; }
+.st-dossier-inner { display: flex; align-items: center; gap: 12px; }
+.st-dossier-badge { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: rgba(37,99,235,.3); border: 1px solid rgba(96,165,250,.4); color: #93c5fd; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.st-dossier-text { font-size: 13px; color: rgba(255,255,255,.65); flex: 1; }
+.st-dossier-text strong { color: #fff; }
+.st-dossier-link { font-size: 12px; font-weight: 700; color: #60a5fa; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: color .15s; }
+.st-dossier-link:hover { color: #fff; }
+
+/* CTA */
+.st-cta { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 32px; }
+.st-cta p { font-size: 14px; color: #374151; line-height: 1.6; max-width: 500px; }
+.st-cta p strong { color: #1a2744; }
+.st-cta-btn { background: #1a2744; color: #fff; padding: 13px 28px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 4px; white-space: nowrap; transition: background .15s; }
+.st-cta-btn:hover { background: #0f3460; }
+
+@media (max-width: 768px) {
+  .st-container { padding: 0 20px; }
+  .st-card-inner { grid-template-columns: 1fr; }
+  .st-card-right { text-align: left; }
+  .st-filter-inner { gap: 8px; }
+}
+
+/* Landingpage-Navigation (Runbook 3.3) */
+.st-nav { display:flex; flex-direction:column; gap:10px; }
+.st-chips { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.st-chips a { font-size:12.5px; padding:5px 11px; border:1.5px solid #e2e8f0; border-radius:999px; color:#374151; text-decoration:none; background:#f8fafc; white-space:nowrap; }
+.st-chips a:hover { border-color:#3b82f6; color:#1d4ed8; }
+.st-chips a.an { background:#1a2744; border-color:#1a2744; color:#fff; font-weight:700; }
+.st-chips a small { color:#94a3b8; margin-left:3px; } .st-chips a.an small { color:#93c5fd; }
+.st-intro { font-size:14.5px; line-height:1.65; color:#334155; background:#f8fafc; border-left:3px solid #3b82f6; padding:14px 18px; margin:0 0 20px; border-radius:0 6px 6px 0; }
+.st-pfad { font-size:12px; color:rgba(255,255,255,.55); margin-bottom:10px; } .st-pfad a { color:#93c5fd; text-decoration:none; }
+.st-filter { position:static; }
+@media (max-width:768px){ .st-chips { flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; -webkit-overflow-scrolling:touch; } }
+.st-seiten { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin:28px 0 8px; }
+.st-seiten a, .st-seiten span { min-width:38px; text-align:center; padding:8px 12px; border:1.5px solid #e2e8f0; border-radius:6px; font-size:13px; text-decoration:none; color:#374151; }
+.st-seiten span.an { background:#1a2744; color:#fff; border-color:#1a2744; font-weight:700; }
+</style>
+
+<!-- HERO -->
+<div class="st-hero">
+  <div class="st-container">
+    {pfad.length > 0 && <div class="st-pfad">{pfad.map((p, i) => <>{i > 0 && ' › '}<a href={p.url}>{p.name}</a></>)}</div>}
+    <div class="st-hero-label">{label}</div>
+    <h1 set:html={titel} />
+    {untertitel && <p>{untertitel}</p>}
+    {marktZahlen && (
+      <div class="st-hero-stats">
+        <div class="st-hero-stat"><span class="n">{alle.length.toLocaleString('de-DE')}</span><span class="l">ausgewählte Stellen · täglich neue</span></div>
+        <div class="st-hero-stat"><span class="n">{mu.anzahl.toLocaleString('de-DE')}</span><span class="l">kommunale Stellen im Marktvergleich</span></div>
+        <div class="st-hero-stat"><span class="n">{mpz(mu.kz.homeoffice)}</span><span class="l">mit Homeoffice · Median {niveauText(mu.kz.niveau.median)}</span></div>
+      </div>
+    )}
+  </div>
+</div>
+
+<!-- NAVIGATION: Bundesland und Berufsfeld -->
+<div class="st-filter">
+  <div class="st-container st-nav">
+    <div class="st-chips"><span class="st-filter-label">Bundesland:</span>
+      <a href="/stellen/" class={!aktivLand && !aktivFeld ? 'an' : ''}>Alle<small>{alle.length}</small></a>
+      {laender.map((l) => <a href={`/stellen/bundesland/${l.slug}/`} class={aktivLand === l.slug ? 'an' : ''}>{l.name}<small>{l.n}</small></a>)}
+    </div>
+    <div class="st-chips"><span class="st-filter-label">Berufsfeld:</span>
+      {felder.map((f) => <a href={`/stellen/berufsfeld/${f.slug}/`} class={aktivFeld === f.slug ? 'an' : ''}>{f.name}<small>{f.n}</small></a>)}
+    </div>
+  </div>
+</div>
+
+<!-- LISTE -->
+<div class="st-main">
+  <div class="st-container">
+    {einleitung && <p class="st-intro">{einleitung}</p>}
+
+    <div class="st-cta">
+      <div>
+        <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b82f6;margin-bottom:6px">Für Arbeitgeber</p>
+        <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Stellen veröffentlichen, mit dem Personal-Cockpit gegen den Markt vergleichen, als Arbeitgeber sichtbar werden – im Arbeitgeberservice.</p>
+      </div>
+      <a href="/arbeitgeberservice/" class="st-cta-btn">Zum Arbeitgeberservice →</a>
+    </div>
+
+    <div class="st-count">{gesamt} {gesamt === 1 ? 'Stelle' : 'Stellen'}{seiten > 1 ? ` · Seite ${seite} von ${seiten}` : ''}</div>
+
+    <div id="jobList">
+      {liste.length === 0 ? (
+        <div class="st-empty">
+          <div style="font-size:40px;margin-bottom:16px">📋</div>
+          <h3>Aktuell keine offenen Stellen in dieser Auswahl</h3>
+          <p>Neue Anzeigen erscheinen täglich – alle Stellen stehen in der <a href="/stellen/">Übersicht</a>.</p>
+        </div>
+      ) : liste.map((job) => (
+        <a class={job.cardClass} href={'/stellen/' + job.id + '/'} data-stelle={job.id} data-arbeitgeber={job.data.organisation}>
+          <div class="st-card-inner">
+            <div>
+              {job.paketLower !== 'basis' && <div class={job.badgeClass}>{job.data.paket}</div>}
+              <div class="st-card-org">{job.data.organisation} · {job.data.orgtyp}</div>
+              <div class="st-card-title">{job.data.title}</div>
+              <div class="st-card-meta">
+                <span class="st-card-meta-item">{job.data.ort}, {job.data.bundesland}</span>
+                <span class="st-card-meta-item">{job.data.beschaeftigung}</span>
+                <span class="st-card-meta-item">{job.data.entgelt}</span>
+                <span class="st-card-meta-item">{job.data.befristung}</span>
+              </div>
+              {job.data.schlagwoerter && (
+                <div class="st-tags">{job.data.schlagwoerter.slice(0, 4).map((tag) => <span class="st-tag">{tag}</span>)}</div>
+              )}
+            </div>
+            <div class="st-card-right">
+              <div class={job.deadlineClass}>{job.deadlineTxt}</div>
+              <span class="st-card-btn">Zur Stelle →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {seiten > 1 && (
+      <nav class="st-seiten" aria-label="Seiten">
+        {seite > 1 && <a href={seitenUrl(seite - 1)} rel="prev">← Zurück</a>}
+        {Array.from({ length: seiten }, (_, i) => i + 1).map((n) => n === seite ? <span class="an">{n}</span> : <a href={seitenUrl(n)}>{n}</a>)}
+        {seite < seiten && <a href={seitenUrl(seite + 1)} rel="next">Weiter →</a>}
+      </nav>
+    )}
+
+    <div class="st-cta">
+      <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Mit der KommunalFlat sind alle Ihre Ausschreibungen sofort online – inklusive Personal-Cockpit und Arbeitgeberprofil.</p>
+      <a href="/arbeitgeberservice/" class="st-cta-btn">Arbeitgeberservice →</a>
+    </div>
+  </div>
+</div>
+
+<Footer />
+</Base>

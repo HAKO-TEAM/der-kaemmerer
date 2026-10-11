@@ -1,0 +1,19 @@
+---
+// Folgeseiten der Stellenbörse (Runbook 3.3)
+import StellenSeite from '../../../components/StellenSeite.astro';
+import { aktiveStellen, JE_SEITE } from '../../../lib/stellen';
+export async function getStaticPaths() {
+  const alle = await aktiveStellen();
+  const seiten = Math.ceil(alle.length / JE_SEITE);
+  return Array.from({ length: Math.max(0, seiten - 1) }, (_, i) => ({ params: { n: String(i + 2) }, props: { seite: i + 2, seiten } }));
+}
+const { seite, seiten } = Astro.props as { seite: number; seiten: number };
+const alle = await aktiveStellen();
+---
+<StellenSeite
+  seoTitel={`Stellenbörse – Seite ${seite}: Stellenangebote im öffentlichen Dienst`}
+  beschreibung={`Seite ${seite} von ${seiten}: aktuelle Stellen kommunaler Arbeitgeber, sortiert nach Veröffentlichung.`}
+  label={`Stellenbörse · Seite ${seite} von ${seiten}`} titel="Stellen im öffentlichen Dienst"
+  pfad={[{ name: 'Stellenbörse', url: '/stellen/' }]}
+  alle={alle} liste={alle.slice((seite - 1) * JE_SEITE, seite * JE_SEITE)} gesamt={alle.length} seite={seite} seiten={seiten}
+/>

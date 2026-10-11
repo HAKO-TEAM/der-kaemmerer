@@ -1,0 +1,23 @@
+---
+// Landingpage je Berufsfeld (Runbook 3.3); unter 5 Stellen noindex
+import StellenSeite from '../../../../components/StellenSeite.astro';
+import { aktiveStellen, FELDER, einleitung, MIN_INDEX, JE_SEITE } from '../../../../lib/stellen';
+export async function getStaticPaths() {
+  const alle = await aktiveStellen();
+  return FELDER.filter((f) => alle.some((s) => s.feld.slug === f.slug)).map((f) => ({ params: { feld: f.slug }, props: { name: f.name } }));
+}
+const { feld } = Astro.params; const { name } = Astro.props as { name: string };
+const alle = await aktiveStellen();
+const liste = alle.filter((s) => s.feld.slug === feld);
+const seiten = Math.max(1, Math.ceil(liste.length / JE_SEITE));
+---
+<StellenSeite
+  seoTitel={`Stellen ${name}: ${liste.length} Stellenangebote bei Kommunen`}
+  beschreibung={`${liste.length} aktuelle Stellen im Bereich ${name} bei Städten, Gemeinden, Kreisen und Zweckverbänden – mit Entgeltgruppe und Bewerbungsfrist.`}
+  noindex={liste.length < MIN_INDEX}
+  label={`Stellenbörse · Berufsfeld`} titel={name}
+  einleitung={einleitung(liste, `Im Berufsfeld ${name}`)}
+  pfad={[{ name: 'Stellenbörse', url: '/stellen/' }]}
+  alle={alle} liste={liste.slice(0, JE_SEITE)} gesamt={liste.length} aktivFeld={feld}
+  seite={1} seiten={seiten} basis={`/stellen/berufsfeld/${feld}/`}
+/>
