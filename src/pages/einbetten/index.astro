@@ -3,7 +3,7 @@
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-const KARTE_CODE = `<iframe src="https://derkaemmerer.de/einbetten/haushaltssperren/" width="100%" height="470" style="border:0;max-width:760px" loading="lazy" title="Haushaltssperren in Deutschland – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/haushaltssperren/">Verzeichnis der Haushaltssperren – Der Kämmerer</a></p>\n<script>addEventListener('message',function(e){if(e.origin==='https://derkaemmerer.de'&&e.data&&e.data.dkHoehe)document.querySelectorAll('iframe').forEach(function(f){if(f.contentWindow===e.source)f.style.height=e.data.dkHoehe+'px'})})</script>`;
+const KARTE_CODE = `<iframe src="https://derkaemmerer.de/einbetten/haushaltssperren/" width="100%" height="470" style="border:0;max-width:760px" loading="lazy" title="Haushaltssperren in Deutschland – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/haushaltssperren/">Verzeichnis der Haushaltssperren – Der Kämmerer</a></p>\n<script src="https://derkaemmerer.de/einbetten/hoehe.js" async></script>`;
 ---
 <Base title="Grafiken zum Einbinden: Haushaltsdaten jeder Gemeinde und Karte der Haushaltssperren"
   description="Kostenfrei für Redaktionen, Kommunen und Ratsfraktionen: Datenkarte mit Hebesätzen, Schulden und Haushaltslage für jede der 10.747 Gemeinden sowie die Karte der Haushaltssperren – mit einer Zeile Code einbinden, täglich aktuell.">
@@ -68,7 +68,7 @@ const KARTE_CODE = `<iframe src="https://derkaemmerer.de/einbetten/haushaltssper
   const q = document.getElementById('ei-q') as HTMLInputElement, t = document.getElementById('ei-t') as HTMLDivElement;
   const f = document.getElementById('ei-f') as HTMLIFrameElement, c = document.getElementById('ei-c') as HTMLTextAreaElement;
   let liste: any[] | null = null;
-  const code = (pfad: string, name: string) => `<iframe src="https://derkaemmerer.de/einbetten/gemeinde/${pfad}/" width="100%" height="200" style="border:0;max-width:760px" loading="lazy" title="Haushaltsdaten ${name} – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/gemeinden/${pfad}/">Haushaltsdaten ${name} – Der Kämmerer</a></p>\n<script>addEventListener(\'message\',function(e){if(e.origin===\'https://derkaemmerer.de\'&&e.data&&e.data.dkHoehe)document.querySelectorAll(\'iframe\').forEach(function(f){if(f.contentWindow===e.source)f.style.height=e.data.dkHoehe+\'px\'})})<\/script>`;
+  const code = (pfad: string, name: string) => `<iframe src="https://derkaemmerer.de/einbetten/gemeinde/${pfad}/" width="100%" height="200" style="border:0;max-width:760px" loading="lazy" title="Haushaltsdaten ${name} – Der Kämmerer"></iframe>\n<p style="font:12px Arial,sans-serif;margin:4px 0 0">Quelle: <a href="https://derkaemmerer.de/gemeinden/${pfad}/">Haushaltsdaten ${name} – Der Kämmerer</a></p>\n<script src="https://derkaemmerer.de/einbetten/hoehe.js" async><\/script>`;
   const waehle = (pfad: string, name: string) => { f.src = `/einbetten/gemeinde/${pfad}/`; c.value = code(pfad, name); t.hidden = true; q.value = name; history.replaceState(null, '', `?g=${pfad}`); };
   const laden = async () => (liste ??= await (await fetch('/gemeinden/suche.json')).json());
   q.addEventListener('input', async () => {

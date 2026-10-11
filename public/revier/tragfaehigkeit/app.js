@@ -231,7 +231,7 @@ function vVotum(r) {
   const plan = r.mit.reihe.filter((o) => o.imPlan), ohne = r.ohne.reihe;
   const hsk = r.mit.ersterTrigger && !r.ohne.ersterTrigger;
   const empf = rm.ampel === 'rot' ? 'Bewilligung erst nach Vorlage eines tragfähigen Betriebs- und Finanzierungskonzepts.' : rm.ampel === 'gelb' ? 'Bewilligung mit den genannten Auflagen; Folgekosten im Haushalt verbindlich veranschlagen und jährlich berichten.' : 'Bewilligung ohne zusätzliche haushaltsrechtliche Auflagen.';
-  return `<p class="nichtdruck"><button class="knopf" onclick="window.print()">Drucken / als PDF (eine Seite A4)</button><span class="hinweis" style="margin-left:8px">Im Druckdialog „Kopf- und Fußzeilen“ ausschalten.</span></p>
+  return `<p class="nichtdruck"><button class="knopf" id="pdf">PDF herunterladen (eine Seite A4)</button><button class="knopf hell" onclick="window.print()">Drucken</button></p>
   <div class="va">
     <div class="va-kopf"><div><div class="va-marke">Der <span>Kämmerer</span><small>KÄMMERER-VOTUM ZUR TRAGFÄHIGKEIT</small></div></div>
       <div class="va-meta"><b>MUSTERFALL · FIKTIVE GEMEINDE</b><br>${st.kommune.name} · ${de(st.kommune.einwohner)} Einwohner<br>${st.antrag.aktenzeichen} · Stand ${heute}</div></div>
@@ -304,6 +304,27 @@ function vMethodik() {
   <p class="hinweis">Musterfall „Gemeinde Musterbach“: fiktive Kommune mit realistischen Größenordnungen. Für einen echten Antrag werden die Felder in der Ansicht „Antrag“ aus Antrag, Kostenberechnung und Haushaltsplan übernommen.</p></div>`;
 }
 
+// ── PDF ohne Druckdialog: Votum als Bild auf genau eine A4-Seite
+const skript = (src) => new Promise((ok, fehl) => { if (document.querySelector(`script[src="${src}"]`)) return ok(); const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = fehl; document.head.appendChild(t); });
+async function pdfLaden(knopf) {
+  const alt = knopf.textContent; knopf.textContent = 'PDF wird erstellt …'; knopf.disabled = true;
+  try {
+    await skript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    await skript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+    const el = document.querySelector('.va'); el.classList.add('va-fix');
+    // html2canvas scheitert an CSS-Großschreibung mit „ß“ (wird zu „SS“): Text vorher selbst groß schreiben
+    el.querySelectorAll('*').forEach((n) => { if (getComputedStyle(n).textTransform === 'uppercase') { n.childNodes.forEach((c) => { if (c.nodeType === 3) c.nodeValue = c.nodeValue.toUpperCase(); }); n.style.textTransform = 'none'; } });
+    const bild = await window.html2canvas(el, { scale: 2.5, backgroundColor: '#ffffff', useCORS: true, windowWidth: 1200 });
+    el.classList.remove('va-fix');
+    const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', compress: true });
+    let b = 210, h = bild.height / bild.width * 210; if (h > 297) { h = 297; b = bild.width / bild.height * 297; }
+    pdf.addImage(bild.toDataURL('image/jpeg', 0.92), 'JPEG', (210 - b) / 2, 0, b, h);
+    pdf.setProperties({ title: `Kämmerer-Votum ${st.antrag.aktenzeichen}`, author: 'Der Kämmerer' });
+    pdf.save(`Kaemmerer-Votum-${st.antrag.aktenzeichen}.pdf`);
+  } catch (err) { alert('Das PDF konnte nicht erstellt werden – bitte „Drucken“ verwenden.'); }
+  zeigen();
+}
+
 // ── Steuerung
 function zeigen() {
   const r = rechne(st);
@@ -315,6 +336,7 @@ function zeigen() {
 document.addEventListener('click', (e) => {
   const b = e.target.closest('nav button'); if (b) { ansicht = b.dataset.a; zeigen(); window.scrollTo({ top: 0 }); return; }
   if (e.target.id === 'muster') { st = klon(MUSTER); aktiv.clear(); START_MASSNAHMEN.forEach((m) => aktiv.add(m)); zeigen(); }
+  if (e.target.id === 'pdf') { pdfLaden(e.target); return; }
   if (e.target.id === 'export') { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(st, null, 1)], { type: 'application/json' })); a.download = `tragfaehigkeit-${st.antrag.aktenzeichen}.json`; a.click(); }
 });
 document.addEventListener('change', (e) => {

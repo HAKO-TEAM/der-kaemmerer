@@ -31,7 +31,7 @@ const { title, kanonisch } = Astro.props;
 <script is:inline>
   // Höhe an die einbettende Seite melden (optionales Snippet dort passt das iframe an)
   (function () {
-    var melde = function () { try { parent.postMessage({ dkHoehe: document.documentElement.scrollHeight }, '*'); } catch (e) {} };
+    var melde = function () { try { var k = document.querySelector('.eb'); parent.postMessage({ dkHoehe: Math.ceil(k ? k.getBoundingClientRect().height + 2 : document.body.scrollHeight) }, '*'); } catch (e) {} };
     addEventListener('load', melde); addEventListener('resize', melde); setTimeout(melde, 300);
   })();
 </script>

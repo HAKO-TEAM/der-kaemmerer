@@ -82,8 +82,11 @@ svg text{font-family:inherit}
 .va-box{border-radius:2.5mm;padding:2.4mm 3.5mm;background:#eff6ff;border:1px solid #bfdbfe} .va-box h2{margin-top:0;border:0} .va-box p{margin:0 0 1mm;font-size:8.4pt;line-height:1.42}
 .va-empf{background:#fffbeb;border-color:#fde68a} .va-schluss{margin-top:2.5mm}
 .va-fuss{padding:2mm 12mm 5mm;border-top:1px solid #e2e8f0;margin:3mm 12mm 0;padding-left:0;padding-right:0;display:flex;justify-content:space-between;gap:6mm;font-size:6.4pt;color:#555;line-height:1.4} .va-fuss span:last-child{text-align:right;white-space:nowrap}
-@page{size:A4;margin:0}
-@media print{nav,.topbar,header,.nichtdruck{display:none!important}body{background:#fff}main{padding:0}.w{padding:0;max-width:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.va{box-shadow:none;width:210mm;height:296.8mm;min-height:0;overflow:hidden}}
+/* Druck: auf 90 % verkleinert und mit Rand – passt mit und ohne Kopf-/Fußzeilen des Browsers auf eine Seite */
+@page{size:A4;margin:10mm}
+@media print{nav,.topbar,header,.nichtdruck{display:none!important}body{background:#fff}main{padding:0}.w{padding:0;max-width:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.va{box-shadow:none;width:210mm;height:296.8mm;min-height:0;overflow:hidden;zoom:.9;page-break-after:avoid;break-after:avoid}}
+.va.va-fix{width:210mm!important;height:296.8mm!important;min-height:0!important;box-shadow:none!important}
+.va.va-fix .va-kpis{grid-template-columns:repeat(5,1fr)!important}.va.va-fix .va-zwei{grid-template-columns:1fr 1fr!important}.va.va-fix .va-kopf,.va.va-fix .va-inhalt{padding-left:12mm!important;padding-right:12mm!important}
 @media screen and (max-width:860px){.va{width:100%;min-height:0}.va-kpis{grid-template-columns:repeat(2,1fr)}.va-zwei{grid-template-columns:1fr}.va-kopf,.va-inhalt{padding-left:5mm;padding-right:5mm}}
 </style>
 </head>
