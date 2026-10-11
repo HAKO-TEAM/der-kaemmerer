@@ -36,6 +36,7 @@ def markdown(j):
         f"orgtyp: {q(j.get('orgtyp') or 'Kommune')}",
         f"ort: {q(j['ort'])}",
         f"bundesland: {q(j['bundesland'])}",
+        *([f"strasse: {q(j['strasse'])}", f"plz: {q(j['plz'])}"] if j.get('strasse') and j.get('plz') else []),
         f"entgelt: {q(j.get('entgelt') or 'nach TVöD')}",
         f"beschaeftigung: {q(j.get('beschaeftigung') or 'Vollzeit')}",
         f"befristung: {q(j.get('befristung') or 'Unbefristet')}",

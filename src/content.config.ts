@@ -31,6 +31,8 @@ export const collections = {
       orgtyp:            z.string(),
       ort:               z.string(),
       bundesland:        z.string(),
+      strasse:           z.string().optional(),   // Dienstanschrift (Ausschreibung oder Impressum), für JobPosting
+      plz:               z.string().optional(),
       entgelt:           z.string(),
       beschaeftigung:    z.string().default('Vollzeit'),
       befristung:        z.string().default('Unbefristet'),

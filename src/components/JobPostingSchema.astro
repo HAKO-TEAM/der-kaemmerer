@@ -7,6 +7,8 @@ interface Props {
   employerName: string;
   jobLocation: string;
   jobRegion?: string;
+  strasse?: string;
+  plz?: string;
   employmentType?: string;
   entgelt?: string;
   applicationUrl?: string;
@@ -22,6 +24,8 @@ const {
   employerName,
   jobLocation,
   jobRegion = 'Deutschland',
+  strasse,
+  plz,
   employmentType = 'FULL_TIME',
   entgelt,
   applicationUrl,
@@ -47,6 +51,8 @@ const schema = {
     '@type': 'Place',
     address: {
       '@type': 'PostalAddress',
+      ...(strasse && { streetAddress: strasse }),
+      ...(plz && { postalCode: plz }),
       addressLocality: jobLocation,
       addressRegion: jobRegion,
       addressCountry: 'DE',
