@@ -105,5 +105,18 @@ const isoZeit = (d?: string) => (d ? `${d}T06:00:00+02:00` : undefined);
 <body>
   <slot />
   <script defer src="https://cdn.vercel-insights.com/v1/script.js" data-endpoint="/_vercel/insights"></script>
+  <script is:inline>
+    // Klick-Messung Stellen (Runbook 3.4): nur Stellen-Kennung und Herkunftsseite, keine personenbezogenen Daten.
+    // Arbeitgeber und Ressort ergeben sich aus der Stellen-Kennung bzw. der Herkunftsseite (Auswertung über die Vercel-API).
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var herkunft = location.pathname;
+      if (a.dataset.bewerbung) { window.va('event', { name: 'Zur Bewerbung', data: { stelle: a.dataset.bewerbung, herkunft: herkunft } }); return; }
+      var m = (a.getAttribute('href') || '').match(/^\/stellen\/(?!seite\/|bundesland\/|berufsfeld\/)([a-z0-9-]+)\/?$/);
+      if (m) window.va('event', { name: 'Stelle geöffnet', data: { stelle: m[1], herkunft: herkunft } });
+    }, true);
+  </script>
 </body>
 </html>

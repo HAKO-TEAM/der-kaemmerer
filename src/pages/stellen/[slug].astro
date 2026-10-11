@@ -227,7 +227,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
             <div class="sj-interamt-box">
               <div class="sj-apply-label">Ähnliche Stellen</div>
               <p class="sj-interamt-hint">Vergleichbare Ausschreibungen finden Sie direkt auf <strong>interamt.de</strong> — dem offiziellen Karriereportal des öffentlichen Dienstes.</p>
-              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
+              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn" data-bewerbung={job.id}>
                 Auf interamt.de →
               </a>
             </div>
@@ -239,7 +239,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
                 <strong>{formatDatum(d.bewerbungsschluss)}</strong>
               </div>
               <div class={daysClass}>{daysText}</div>
-              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn">
+              <a href={d.bewerbungslink} target="_blank" rel="noopener" class="sj-apply-btn" data-bewerbung={job.id}>
                 Jetzt bewerben →
               </a>
             </Fragment>
