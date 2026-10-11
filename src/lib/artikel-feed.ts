@@ -12,7 +12,11 @@ export async function alleArtikel() {
     url: `${SITE}/${r}/${a.id}/`,
     ressort: r,
   }))));
-  return listen.flat().filter((a) => a.datum).sort((a, b) => b.datum.localeCompare(a.datum) || a.titel.localeCompare(b.titel));
+  const dk = (await getCollection('dienstKarriere', (a: any) => !a.data.draft && a.data.cluster)).map((a: any) => ({
+    titel: a.data.title as string, beschreibung: (a.data.beschreibung || '') as string, datum: (a.data.datum || '') as string,
+    url: `${SITE}/dienst-karriere/${a.data.cluster}/${a.id}/`, ressort: 'dienst-karriere',
+  }));
+  return [...listen.flat(), ...dk].filter((a) => a.datum).sort((a, b) => b.datum.localeCompare(a.datum) || a.titel.localeCompare(b.titel));
 }
 
 export const xml = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

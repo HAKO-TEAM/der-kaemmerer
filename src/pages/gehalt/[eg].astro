@@ -48,8 +48,9 @@ const faq = [
 const ld = [
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Gehaltsatlas', item: 'https://derkaemmerer.de/gehalt/' },
-    { '@type': 'ListItem', position: 2, name: `TVöD ${name}`, item: `https://derkaemmerer.de/gehalt/${egSlug(k)}/` } ] },
+    { '@type': 'ListItem', position: 1, name: 'Dienst & Karriere', item: 'https://derkaemmerer.de/dienst-karriere/' },
+    { '@type': 'ListItem', position: 2, name: 'Gehaltsatlas', item: 'https://derkaemmerer.de/gehalt/' },
+    { '@type': 'ListItem', position: 3, name: `TVöD ${name}`, item: `https://derkaemmerer.de/gehalt/${egSlug(k)}/` } ] },
 ];
 const datum = (d?: string) => (d ? d.split('-').reverse().join('.') : '');
 ---
@@ -88,7 +89,7 @@ const datum = (d?: string) => (d ? d.split('-').reverse().join('.') : '');
 
 <div class="ga">
   <section class="ga-kopf"><div class="ga-w">
-    <div class="ga-pfad"><a href="/gehalt/">TVöD-Gehaltsatlas</a> › {name}</div>
+    <div class="ga-pfad"><a href="/dienst-karriere/">Dienst & Karriere</a> › <a href="/gehalt/">TVöD-Gehaltsatlas</a> › {name}</div>
     <h1>TVöD {name} 2026: Gehalt, Stufen und offene Stellen</h1>
     <p>Entgelttabelle TVöD für Kommunen (VKA), gültig ab {ab}: {euro(ein, 2)} bis {euro(end, 2)} brutto im Monat. Dazu die Kosten einer Stelle für die Kommune und alle laufenden Ausschreibungen in {name}.</p>
   </div></section>

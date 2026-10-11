@@ -1,0 +1,42 @@
+---
+// Hub-Seiten des Ressorts (Runbook 4.1): Teaserliste der Beiträge, passende Rechner und Links. Ohne veröffentlichte Beiträge: noindex.
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import DkKopf from '../../../components/DkKopf.astro';
+import DkNewsletter from '../../../components/DkNewsletter.astro';
+import { BEREICHE, RECHNER } from '../../../data/dienst-karriere.mjs';
+import { dkArtikel } from '../../../lib/dienst-karriere';
+export function getStaticPaths() { return BEREICHE.map((b) => ({ params: { bereich: b.slug }, props: { b } })); }
+const { b } = Astro.props as { b: (typeof BEREICHE)[number] };
+const artikel = (await dkArtikel()).filter((a: any) => a.data.cluster === b.slug);
+const rechner = RECHNER.filter((r) => b.rechner.includes(r.slug));
+const indexierbar = artikel.length > 0 || b.links.length > 0;
+---
+<Base title={`${b.name} im kommunalen Dienst – Dienst & Karriere`} description={b.text} noindex={!indexierbar}>
+<Header />
+<DkKopf aktiv={b.slug} titel={b.name} text={b.text} pfad={[{ name: b.name, url: `/dienst-karriere/${b.slug}/` }]} />
+<main class="dk-main">
+  {b.links.length > 0 && <section class="dk-sek"><div class="dk-karten">{b.links.map((l) => <a class="dk-karte" href={l.url}><b>{l.name}</b><span>Zur Seite →</span></a>)}</div></section>}
+  {artikel.length > 0 && (
+    <section class="dk-sek"><h2>Beiträge</h2>
+      <ul class="dk-stellen">{artikel.map((a: any) => <li><a href={`/dienst-karriere/${b.slug}/${a.id}/`}><b>{a.data.title}</b><span>{a.data.beschreibung}</span></a></li>)}</ul>
+    </section>
+  )}
+  <section class="dk-sek"><h2>Passende Rechner</h2>
+    <div class="dk-karten">{rechner.map((r) => <a class="dk-karte" href={`/dienst-karriere/rechner/${r.slug}/`}><b>{r.name}</b><span>{r.kurz}</span></a>)}</div>
+  </section>
+  <section class="dk-sek"><h2>Stellen</h2><p><a class="dk-mehr" href="/stellen/">Aktuelle Stellen kommunaler Arbeitgeber →</a></p></section>
+  <DkNewsletter />
+</main>
+<Footer />
+</Base>
+<style is:global>
+.dk-main { max-width:1040px; margin:0 auto; padding:30px 28px 64px; color:#0f172a; }
+.dk-sek { margin-bottom:30px; } .dk-sek h2 { font-family:'Playfair Display',Georgia,serif; font-size:22px; color:#14532d; margin:0 0 12px; }
+.dk-karten { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+.dk-karte { display:block; background:#fff; border:1px solid #e2e8f0; border-left:4px solid #15803d; border-radius:8px; padding:14px 16px; text-decoration:none; color:#0f172a; }
+.dk-karte b { display:block; font-size:15.5px; margin-bottom:4px; } .dk-karte span { font-size:13px; color:#475569; line-height:1.5; }
+.dk-stellen { list-style:none; padding:0; } .dk-stellen a { display:block; padding:9px 0; text-decoration:none; color:#0f172a; border-bottom:1px solid #f1f5f9; } .dk-stellen b { display:block; } .dk-stellen span { font-size:13px; color:#64748b; }
+.dk-mehr { color:#15803d; font-weight:700; text-decoration:none; }
+</style>

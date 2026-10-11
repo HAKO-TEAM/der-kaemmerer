@@ -43,7 +43,7 @@ const gem = Object.entries(gPfad).map(([ags, p]) => ({ url: `${SITE}/gemeinden/$
 const gemStellen = [...stellenJeGemeinde(markt.stellen, gemeinden).keys()].map((ags) => ({ url: `${SITE}/gemeinden/${gPfad[ags]}/stellen/`, lastmod: STAND_MARKT }));
 
 // 3. Zuordnung zu Gruppen
-const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten'];
+const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten', 'dienst-karriere'];
 const DATEN = { kreise: STAND_SPERREN, haushaltssperren: STAND_SPERREN, haushaltslage: STAND_SPERREN, 'haushaltslage-nrw': STAND_SPERREN, gehalt: STAND_MARKT, gemeinden: STAND_MARKT };
 const gruppen = new Map();
 const rein = (name, e) => { if (!gruppen.has(name)) gruppen.set(name, []); gruppen.get(name).push(e); };

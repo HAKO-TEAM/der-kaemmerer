@@ -11,6 +11,9 @@ const artikel = z.object({
   tag: z.string().optional(),
   featured: z.boolean().optional(),
   updated: z.string().optional(),   // YYYY-MM-DD, letzte inhaltliche Aktualisierung (Fallback: datum)
+  draft: z.boolean().optional(),    // Runbook C.6: Entwürfe werden nicht veröffentlicht
+  cluster: z.string().optional(),   // Ressort Dienst & Karriere: gehalt | tarif | laufbahn | arbeitsrecht | ausbildung
+  suchintention: z.string().optional(),
 });
 
 export const collections = {
@@ -22,6 +25,7 @@ export const collections = {
   recht:        defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/recht' }),        schema: artikel }),
   analyse:      defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/analyse' }),      schema: artikel }),
   sozialkosten: defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/sozialkosten' }), schema: artikel }),
+  dienstKarriere: defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/dienst-karriere' }), schema: artikel }),
 
   // ── Stellenbörse ────────────────────────────────────────
   jobs: defineCollection({

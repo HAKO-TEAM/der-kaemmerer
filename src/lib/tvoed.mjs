@@ -1,6 +1,6 @@
 // TVöD-Gehaltsatlas: Entgelttabelle VKA plus Stellenmarkt je Entgeltgruppe.
 // Niveauwerte in markt.json sind E-Äquivalente (9.0/9.3/9.6 = 9a/9b/9c, ab 16 Besoldung B).
-import tarif from '../data/tarif/tvoed_vka_2026.json';
+import tarif from '../data/tarif/tvoed_vka_2026.json' with { type: 'json' };
 
 export const TARIF = tarif;
 /** Reihenfolge von unten nach oben; Ü-Gruppen nur in der Gesamttabelle. */

@@ -1,0 +1,30 @@
+---
+// Kopf des Ressorts „Dienst & Karriere“ mit Unternavigation (Runbook 4.1)
+import { RESSORT, BEREICHE } from '../data/dienst-karriere.mjs';
+interface Props { aktiv?: string; titel?: string; text?: string; pfad?: { name: string; url: string }[] }
+const { aktiv, titel, text, pfad = [] } = Astro.props;
+const punkte = [...BEREICHE.map((b) => ({ slug: b.slug, name: b.name, url: `/dienst-karriere/${b.slug}/` })), { slug: 'rechner', name: 'Rechner', url: '/dienst-karriere/rechner/' }, { slug: 'stellen', name: 'Stellen', url: '/stellen/' }];
+---
+<div class="dk-kopf">
+  <div class="dk-w">
+    <div class="dk-pfad"><a href={RESSORT.url}>{RESSORT.titel}</a>{pfad.map((p) => <> › <a href={p.url}>{p.name}</a></>)}</div>
+    {titel ? <h1>{titel}</h1> : <h1>{RESSORT.titel}</h1>}
+    <p>{text || RESSORT.unterzeile}</p>
+  </div>
+  <nav class="dk-nav" aria-label="Dienst & Karriere">
+    <div class="dk-w">{punkte.map((p) => <a href={p.url} class={aktiv === p.slug ? 'an' : ''}>{p.name}</a>)}</div>
+  </nav>
+</div>
+<style>
+.dk-kopf { background:linear-gradient(135deg,#0f3b2e 0%,#14532d 55%,#1a4d3a 100%); color:#fff; }
+.dk-w { max-width:1040px; margin:0 auto; padding:0 28px; }
+.dk-kopf > .dk-w { padding-top:34px; padding-bottom:26px; }
+.dk-pfad { font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:#86efac; } .dk-pfad a { color:#86efac; text-decoration:none; }
+.dk-kopf h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,42px); line-height:1.12; margin:10px 0 8px; }
+.dk-kopf p { color:rgba(255,255,255,.78); font-size:16px; line-height:1.55; margin:0; max-width:760px; }
+.dk-nav { background:rgba(0,0,0,.18); border-top:1px solid rgba(255,255,255,.12); }
+.dk-nav .dk-w { display:flex; gap:4px; overflow-x:auto; }
+.dk-nav a { color:#d1fae5; text-decoration:none; font-size:13.5px; font-weight:600; padding:11px 12px; white-space:nowrap; border-bottom:3px solid transparent; }
+.dk-nav a:hover, .dk-nav a.an { color:#fff; border-bottom-color:#86efac; }
+@media (max-width:640px) { .dk-w { padding:0 16px; } }
+</style>

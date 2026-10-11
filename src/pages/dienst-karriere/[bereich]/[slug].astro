@@ -1,0 +1,15 @@
+---
+// Beiträge des Ressorts unter /dienst-karriere/<bereich>/<slug>/ – nur veröffentlichte (draft ≠ true)
+import { render } from 'astro:content';
+import Artikel from '../../../layouts/Artikel.astro';
+import { dkArtikel } from '../../../lib/dienst-karriere';
+export async function getStaticPaths() {
+  return (await dkArtikel()).filter((a: any) => a.data.cluster).map((a: any) => ({ params: { bereich: a.data.cluster, slug: a.id }, props: { entry: a } }));
+}
+const { entry } = Astro.props as any;
+const { Content } = await render(entry);
+---
+<Artikel title={entry.data.title} beschreibung={entry.data.beschreibung} ressort="dienst-karriere" datum={entry.data.datum}
+  minuten={entry.data.minuten} autor={entry.data.autor} tag={entry.data.tag} updated={entry.data.updated}>
+  <Content />
+</Artikel>
