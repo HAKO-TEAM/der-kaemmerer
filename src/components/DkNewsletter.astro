@@ -1,0 +1,31 @@
+---
+// Newsletter „Dienst & Karriere“ (Runbook 4.5): eigene Brevo-Liste (Env BREVO_LIST_ID_DK).
+// Das Formular erscheint erst, wenn die Liste beim Build konfiguriert ist – vorher wird nichts angezeigt.
+const aktiv = Boolean(process.env.BREVO_LIST_ID_DK || import.meta.env.BREVO_LIST_ID_DK);
+---
+{aktiv && (
+  <section class="dkn">
+    <div><h2>Newsletter Dienst & Karriere</h2><p>Wöchentlich: neue Stellen nach Region, Neuigkeiten zu Tarif und Laufbahn, ein Rechner oder Ratgeber.</p></div>
+    <form id="dknForm"><input type="email" id="dknMail" required placeholder="E-Mail-Adresse" /><button type="submit">Abonnieren</button></form>
+    <p id="dknOk" hidden>Fast geschafft: Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail.</p>
+    <p id="dknFehler" role="alert" hidden>Die Anmeldung ist gerade fehlgeschlagen. Bitte erneut versuchen oder eine kurze Nachricht an redaktion@derkaemmerer.de senden.</p>
+  </section>
+)}
+<script>
+document.getElementById('dknForm')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const f = e.target as HTMLFormElement; const btn = f.querySelector('button')!; btn.disabled = true;
+  try {
+    const r = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: (document.getElementById('dknMail') as HTMLInputElement).value, liste: 'dienst-karriere' }) });
+    if (!r.ok) throw new Error(String(r.status));
+    f.hidden = true; document.getElementById('dknFehler')!.hidden = true; document.getElementById('dknOk')!.hidden = false;
+  } catch { btn.disabled = false; document.getElementById('dknFehler')!.hidden = false; }
+});
+</script>
+<style>
+.dkn { background:#14532d; color:#fff; border-radius:10px; padding:22px 24px; display:grid; gap:10px; }
+.dkn h2 { font-family:'Playfair Display',Georgia,serif; margin:0 0 4px; font-size:22px; color:#fff; } .dkn p { margin:0; color:#d1fae5; font-size:14px; }
+.dkn form { display:flex; gap:8px; flex-wrap:wrap; } .dkn input { flex:1; min-width:200px; padding:10px 12px; border-radius:6px; border:0; font-size:15px; }
+.dkn button { background:#86efac; color:#14532d; font-weight:700; border:0; border-radius:6px; padding:10px 16px; cursor:pointer; }
+</style>
