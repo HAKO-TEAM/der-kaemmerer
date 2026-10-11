@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tragfähigkeitsanalyse – Der Kämmerer</title>
+<link rel="icon" href="/favicon.svg">
+<style>
+:root{--navy:#172840;--blue:#2563eb;--bluelt:#60a5fa;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--bg:#f6f8fb;--card:#fff;--green:#16a34a;--amber:#d97706;--red:#dc2626;--gold:#ca8a04}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--navy);color:#93c5fd;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 0}
+.topbar b{color:#fff}
+header{background:#fff;border-bottom:3px solid var(--navy);padding:14px 0}
+.kopfzeile{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.marke{font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--navy);line-height:1;text-decoration:none}
+.marke span{color:var(--blue)} .marke small{display:block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.fall{text-align:right;font-size:12.5px;color:var(--muted)} .fall b{color:var(--navy);font-size:14.5px}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-top:4px}
+.pill.rot{background:#fee2e2;color:#991b1b}.pill.gelb{background:#fef3c7;color:#92400e}.pill.gruen{background:#dcfce7;color:#166534}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav .w{display:flex;gap:2px;overflow-x:auto}
+nav button{background:none;border:0;border-bottom:2.5px solid transparent;padding:13px 12px 11px;font:600 11.5px/1 inherit;letter-spacing:.04em;text-transform:uppercase;color:#374151;cursor:pointer;white-space:nowrap}
+nav button:hover{color:var(--blue)} nav button.an{color:var(--blue);border-bottom-color:var(--blue);font-weight:800}
+main{padding:22px 0 60px}
+h2{font-size:20px;margin:0 0 4px;color:var(--navy)} .unter{color:var(--muted);margin:0 0 16px;font-size:13.5px;max-width:90ch}
+h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.raster{display:grid;gap:16px} .r2{grid-template-columns:1fr 1fr} .r3{grid-template-columns:repeat(3,1fr)} .r4{grid-template-columns:repeat(4,1fr)} .r5{grid-template-columns:repeat(5,1fr)} .r21{grid-template-columns:2fr 1fr} .r12{grid-template-columns:1fr 2fr}
+.karte{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 10px 30px -28px rgba(15,23,42,.5)}
+.kpi{border-top:3px solid var(--blue)} .kpi span{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.kpi b{display:block;font-size:24px;color:var(--navy);margin:4px 0 2px;font-variant-numeric:tabular-nums} .kpi small{color:var(--muted);font-size:12px}
+.kpi.rot{border-top-color:var(--red)} .kpi.gelb{border-top-color:var(--amber)} .kpi.gruen{border-top-color:var(--green)}
+.urteil{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-bottom:16px}
+.ampel{display:flex;flex-direction:column;gap:7px;background:var(--navy);padding:11px;border-radius:14px} .ampel i{width:30px;height:30px;border-radius:50%;background:#334155}
+.ampel i.rot.an{background:#ef4444;box-shadow:0 0 16px #ef4444}.ampel i.gelb.an{background:#facc15;box-shadow:0 0 16px #facc15}.ampel i.gruen.an{background:#22c55e;box-shadow:0 0 16px #22c55e}
+.urteil h2{font-size:22px} .urteil p{margin:4px 0 0;color:#334155;font-size:14.5px}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:7px 6px;border-bottom:1px solid var(--navy);white-space:nowrap}
+td{padding:6px;border-bottom:1px solid #f1f5f9} td.z,th.z{text-align:right;white-space:nowrap} tr.summe td{font-weight:800;border-top:2px solid var(--navy)}
+.scroll{overflow-x:auto}
+.neg{color:var(--red)} .pos{color:var(--green)}
+.auflage{border-left:4px solid var(--amber);background:#fffbeb;border-radius:8px;padding:10px 12px;margin-bottom:8px;font-size:13.5px}
+.auflage.p1{border-left-color:var(--red);background:#fef2f2}
+.hinweis{font-size:12px;color:var(--muted);margin:8px 0 0}
+.feld{display:grid;grid-template-columns:1fr 170px;gap:10px;align-items:center;padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:13.5px}
+.feld input,.feld select,.tabin input,.tabin select{width:100%;padding:6px 8px;border:1px solid #cbd5e1;border-radius:6px;font:inherit;font-size:13px;text-align:right;background:#fff}
+.feld input[type=text]{text-align:left} .feld.lang{grid-template-columns:1fr} .feld.lang input,.feld.lang textarea{text-align:left;width:100%;font:inherit;font-size:13px;padding:6px 8px;border:1px solid #cbd5e1;border-radius:6px}
+.tabin td{padding:4px} .tabin input[type=text]{text-align:left}
+.knopf{display:inline-block;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:9px 14px;font:700 13px inherit;cursor:pointer;margin:0 6px 6px 0;text-decoration:none}
+.knopf.hell{background:#fff;color:var(--navy);border:1px solid #cbd5e1} .knopf.klein{padding:4px 9px;font-size:12px}
+.mass{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:10px;cursor:pointer}
+.mass input{width:20px;height:20px;accent-color:var(--blue)} .mass b{display:block} .mass span{color:var(--muted);font-size:13px} .mass em{font-style:normal;font-weight:800;white-space:nowrap}
+svg text{font-family:inherit}
+.leg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#475569;margin-top:8px} .leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.votum{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 32px;max-width:900px}
+.votum h1{font-size:24px;margin:6px 0 4px;color:var(--navy)} .votum .meta{color:var(--muted);font-size:12.5px}
+.votum p,.votum li{font-size:14px;line-height:1.6}
+.methode p,.methode li{font-size:14px;line-height:1.65;max-width:95ch}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:3px 9px}
+@media (max-width:980px){.r2,.r3,.r4,.r5,.r21,.r12{grid-template-columns:1fr 1fr}.urteil{grid-template-columns:1fr}.ampel{flex-direction:row;width:max-content}}
+@media (max-width:640px){.w{padding:0 14px}.r2,.r3,.r4,.r5,.r21,.r12{grid-template-columns:1fr}.feld{grid-template-columns:1fr 130px}}
+@media print{nav,.topbar,header,.nichtdruck{display:none!important}body{background:#fff}.votum{border:0;padding:0;max-width:none}main{padding:0}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="w"><b>Der Kämmerer</b> · Tragfähigkeitsanalyse für Förderprojekte · <span class="badge" style="background:#1e3a5f;color:#fcd34d">Musterfall, fiktive Gemeinde</span></div></div>
+<header><div class="w kopfzeile">
+  <a class="marke" href="/revier/rheinisches-revier/">Der <span>Kämmerer</span><small>Tragfähigkeitsanalyse · Förderprojekte aus Kämmerersicht</small></a>
+  <div class="fall" id="fall"></div>
+</div></header>
+<nav><div class="w" id="nav"></div></nav>
+<main><div class="w" id="ansicht"></div></main>
+<script type="module" src="/revier/tragfaehigkeit/app.js"></script>
+</body>
+</html>

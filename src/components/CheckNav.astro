@@ -9,4 +9,4 @@ const CHECKS = [
   { id: 'gesundheit', name: 'Gesundheitszentrum · Bürgewald', url: '/revier/check-gesundheitszentrum/' },
 ];
 ---
-<nav class="tc-nav" aria-label="Muster-Checks">{CHECKS.map((c) => <a href={c.url} class={c.id === aktiv ? 'an' : ''}>{c.name}</a>)}<a href="/revier/rheinisches-revier/">Alle 65 Kommunen →</a></nav>
+<nav class="tc-nav" aria-label="Muster-Checks">{CHECKS.map((c) => <a href={c.url} class={c.id === aktiv ? 'an' : ''}>{c.name}</a>)}<a href="/revier/tragfaehigkeit/">Tragfähigkeits-Cockpit →</a><a href="/revier/rheinisches-revier/">Alle 65 Kommunen →</a></nav>
