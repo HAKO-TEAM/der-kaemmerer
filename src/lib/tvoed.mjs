@@ -26,3 +26,21 @@ export function egVonNiveau(n) {
 }
 
 export const euro = (x, d = 0) => (x == null ? '–' : x.toLocaleString('de-DE', { minimumFractionDigits: d, maximumFractionDigits: d }) + ' €');
+
+/**
+ * Monatliche Gehaltsspanne (Stufe 1 bis 6 laut TVöD-VKA-Tabelle) aus dem Entgelt-Text einer Anzeige,
+ * z. B. „EG 11 TVöD“, „TVöD E 9c“, „EG 10–11 TVöD“, „EG 11 TVoeD / A 12 LBesGBW“.
+ * Nur bei eindeutiger TVöD-Entgeltgruppe; „bis EG …“, nur Besoldung, AT und Sonderverträge → null.
+ */
+export function gehaltsSpanne(entgelt) {
+  const t = String(entgelt || '');
+  if (!/TV[öo]e?D/i.test(t)) return null;
+  const m = t.match(/\b(?:Entgeltgruppe|EG|E)\s?(\d{1,2})\s?([abc])?\b(?:\s?(?:[–-]|bis)\s?(?:Entgeltgruppe|EG|E)?\s?(\d{1,2})\s?([abc])?\b)?/i);
+  if (!m || /\bbis\s*$/i.test(t.slice(0, m.index))) return null; // „bis EG …“: Untergrenze offen
+  const k1 = `E${m[1]}${(m[2] || '').toLowerCase()}`;
+  const k2 = m[3] ? `E${m[3]}${(m[4] || '').toLowerCase()}` : k1;
+  const z1 = tarif.tabelle[k1], z2 = tarif.tabelle[k2];
+  if (!z1 || !z2) return null;
+  const werte = (z) => z.filter((x) => x != null);
+  return { min: Math.min(...werte(z1)), max: Math.max(...werte(z2)), gruppe: k1 === k2 ? k1 : `${k1}–${k2}` };
+}
