@@ -45,7 +45,7 @@ function getSlug(entry: any) {
   return (entry.id as string).split('/').pop()!.replace('.md','');
 }
 ---
-<Base title={label}>
+<Base title={`${label} – Fachbeiträge für Kämmerer`} description={`${label}: ${sub}. ${entries.length} quellengesicherte Fachbeiträge für Kämmerer, Finanzdezernenten und Verwaltungsspitzen – werbefrei und mit Zahlen je Kommune.`}>
 <Header />
 <style>
   .res-hero-inner{max-width:1200px;margin:0 auto;padding:0 32px}
