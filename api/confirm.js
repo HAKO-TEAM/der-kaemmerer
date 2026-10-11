@@ -5,7 +5,7 @@ import { signatur } from './subscribe.js';
 const MELDUNG_AN = 'chefredaktion@derkaemmerer.de';
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-async function melden(KEY, email) {
+async function melden(KEY, email, dk = false) {
   const h = { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' };
   const k = await fetch(`https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`, { headers: h }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
   const a = k.attributes || {};
@@ -16,7 +16,8 @@ async function melden(KEY, email) {
     body: JSON.stringify({
       sender: { email: 'redaktion@derkaemmerer.de', name: 'Der Kämmerer – Anmeldungen' },
       to: [{ email: MELDUNG_AN }],
-      subject: `Neue Briefing-Anmeldung: ${wer} – ${email}`,
+      // Betreff „Neue Briefing-Anmeldung“ wertet die Lagebericht-Routine aus – Dienst & Karriere bewusst mit eigenem Betreff
+      subject: dk ? `Neue Anmeldung Dienst & Karriere: ${email}` : `Neue Briefing-Anmeldung: ${wer} – ${email}`,
       textContent: zeilen.map(([n, w]) => `${n}: ${w || '–'}`).join('\n'),
       htmlContent: `<p>Neue bestätigte Briefing-Anmeldung:</p><table>${zeilen.map(([n, w]) => `<tr><td><b>${n}</b></td><td>${esc(w || '–')}</td></tr>`).join('')}</table>`,
     }),
@@ -27,10 +28,12 @@ async function melden(KEY, email) {
 export default async function handler(req, res) {
   const { email, list, sig } = req.query;
   const KEY = process.env.BREVO_API_KEY;
-  const LIST_ID = parseInt(process.env.BREVO_LIST_ID || '2');
+  const BRIEFING = parseInt(process.env.BREVO_LIST_ID || '2');
+  const DK = parseInt(process.env.BREVO_LIST_ID_DK || '');   // Newsletter Dienst & Karriere (Runbook 4.5)
+  const LIST_ID = parseInt(list || String(BRIEFING));
 
-  if (!email || !KEY) return res.redirect(302, '/danke');
-  if (String(list || LIST_ID) !== String(LIST_ID) || sig !== signatur(email, LIST_ID, KEY)) {
+  if (!email || !KEY) return res.redirect(302, '/danke/');
+  if (![BRIEFING, DK].includes(LIST_ID) || sig !== signatur(email, LIST_ID, KEY)) {
     return res.redirect(302, '/newsletter/?bestaetigung=ungueltig#anmelden');
   }
   try {
@@ -41,7 +44,7 @@ export default async function handler(req, res) {
       method: 'POST', headers: h,
       body: JSON.stringify({ email, listIds: [LIST_ID], updateEnabled: true }),
     });
-    if (!(vorher.listIds || []).includes(LIST_ID)) await melden(KEY, email);
+    if (!(vorher.listIds || []).includes(LIST_ID)) await melden(KEY, email, LIST_ID === DK);
   } catch (e) { console.error(e); }
-  return res.redirect(302, '/danke');
+  return res.redirect(302, '/danke/');
 }
