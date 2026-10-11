@@ -1,0 +1,67 @@
+{
+  "slug": "trittau",
+  "name": "Gemeinde Trittau",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 9057,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Patrick Marsian",
+  "token": "06f4244400a4edd6",
+  "claim": "Hauptamtliche Verwaltung für zehn Gemeinden in der Metropolregion Hamburg.",
+  "beschreibung": "Trittau im Kreis Stormarn wurde 1167 erstmals urkundlich erwähnt und liegt rund 30 Kilometer östlich von Hamburg zwischen Hamburg und Lübeck, am Rand des Naturschutzgebiets Hahnheide. Die hauptamtlich verwaltete Gemeinde führt als amtsangehörige Gemeinde die Geschäfte des Amtes Trittau mit neun weiteren Gemeinden und rund 19.000 Einwohnerinnen und Einwohnern. Dazu kommen die Verwaltungsgeschäfte der Schulverbände Trittau und Lütjensee. Für Beschäftigte bedeutet das ein breites kommunales Aufgabenfeld mit kurzen Wegen zu Verwaltungsleitung und Ehrenamt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "9.057",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1167",
+      "icon": "📜"
+    },
+    {
+      "label": "Gemeinden im Amt Trittau",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Einwohner im Amtsgebiet (lt. Ausschreibung)",
+      "wert": "rd. 19.000",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung und betriebliche Altersvorsorge im Rahmen der VBL."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und nach Dienstvereinbarung verschiedene Formen von Telearbeit und mobilem Arbeiten."
+    },
+    {
+      "titel": "Fahrrad-Leasing",
+      "beschreibung": "Fahrrad-Leasing für Beschäftigte."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Individuelle Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Familie",
+      "beschreibung": "Familienfreundliches Umfeld mit vielen Kitas und allen Schularten, Notfallbetreuung für Kinder und pflegebedürftige Angehörige; Mitglied im Verein „Beruf und Familie im HanseBelt“."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Trittau · Personalbüro",
+    "email": "Bewerbung@Trittau.de",
+    "telefon": "04154 8079-64",
+    "bewerbungsportal": "https://www.trittau.de"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Ersterwähnung 1167, Lage, Bürgermeister: https://de.wikipedia.org/wiki/Trittau (abgerufen 11.10.2026)",
+    "Amt Trittau, Schulverbände, Benefits und Kontakt: Stellenausschreibung Leitung Fachbereich Innere Verwaltung und IT https://interamt.de/koop/app/stelle?id=1490603 (API api.interamt.de/query/stellenangebot/1490603) (abgerufen 11.10.2026)"
+  ]
+}

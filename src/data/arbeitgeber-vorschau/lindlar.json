@@ -1,0 +1,74 @@
+{
+  "slug": "lindlar",
+  "name": "Gemeinde Lindlar",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 21521,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Sven Engelmann",
+  "token": "e0bfb2a9141209f6",
+  "claim": "Bergische Gemeinde mit über 900 Jahren Geschichte – und Verantwortung, die man sieht.",
+  "beschreibung": "Lindlar liegt im Westen des Oberbergischen Kreises, etwa 30 Kilometer östlich von Köln. Die Gemeinde wurde 1109 erstmals urkundlich erwähnt und ist bis heute stark ländlich geprägt. Die Gemeindeverwaltung in der Borromäusstraße bietet Führungsstellen mit Personal-, Organisations- und Finanzverantwortung, etwa in den Fachbereichen Schule und Kultur oder Sicherheit und Ordnung. Zu den Angeboten für Beschäftigte gehören unter anderem mobiles Arbeiten, Gesundheitsförderung und die Nutzung des Hallenbades.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.521",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1109",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "85,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Oberbergischer Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz im öffentlichen Dienst mit interessantem, verantwortungsvollem Aufgabengebiet."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung, leistungsorientierte Bezahlung (LOB) und betriebliche Zusatzversorgung (Betriebsrente)."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und geregelte Arbeitszeitmodelle sowie ein Arbeitsplatz, der auch für mobiles Arbeiten zugänglich ist."
+    },
+    {
+      "titel": "Gesundheitsförderung",
+      "beschreibung": "Gesundheitsschecks für private Vorsorgemaßnahmen, Nutzung des Hallenbades und psychosoziale Beratung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrrad-Leasing und kostenfreie Parkplätze."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildung, inklusive Führungskräfteschulungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Lindlar · Personal",
+    "email": "dana.brass@lindlar.de",
+    "telefon": "02266 96-401",
+    "bewerbungsportal": "https://karriere.lindlar.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Bürgermeister, Lage: https://de.wikipedia.org/wiki/Lindlar (abgerufen 11.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachleitung Schule und Kultur https://karriere.nrw/stellenausschreibung/6a687bb5-c805-4f8b-bcd7-f9ff409372c2 (API api.karriere.nrw/v1.0/combined-jobs/6a687bb5-c805-4f8b-bcd7-f9ff409372c2/) (abgerufen 11.10.2026)",
+    "Benefits: Stellenausschreibung Fachleitung Sicherheit und Ordnung https://karriere.nrw/stellenausschreibung/473a576a-84c2-4f53-a8db-ffccbb1d9298 (abgerufen 11.10.2026)",
+    "Bewerbungsportal: https://karriere.lindlar.de/eawe4 (Online-Bewerbung laut Ausschreibung) (abgerufen 11.10.2026)"
+  ]
+}

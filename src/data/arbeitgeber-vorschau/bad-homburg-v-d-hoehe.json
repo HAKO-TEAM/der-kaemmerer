@@ -1,0 +1,71 @@
+{
+  "slug": "bad-homburg-v-d-hoehe",
+  "name": "Stadt Bad Homburg v. d. Höhe",
+  "bundesland": "Hessen",
+  "einwohner": 56938,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Alexander Hetjes",
+  "token": "a6f9fc8547ca7df3",
+  "claim": "Kurstadt, Kongressstadt, Sonderstatusstadt – und eine Verwaltung, die konsequent digital wird.",
+  "beschreibung": "Bad Homburg vor der Höhe ist Kreisstadt des Hochtaunuskreises und liegt am Rand des Taunus in der Metropolregion Frankfurt/Rhein-Main. Bekannt wurde die Stadt durch ihre Heilquellen als Kur- und später Kongressort. Als Sonderstatusstadt nimmt sie ein besonders breites Aufgabenspektrum wahr; in der Stadtverwaltung arbeiten rund 1.000 Menschen. Die Verwaltung setzt auf Digitalisierung, vernetztes Arbeiten und schlanke Prozesse und versteht sich als moderne, bürgernahe Dienstleisterin.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "56.938",
+      "icon": "👥"
+    },
+    {
+      "label": "Beschäftigte Stadtverwaltung (lt. Ausschreibung)",
+      "wert": "rund 1.000",
+      "icon": "🏢"
+    },
+    {
+      "label": "Status",
+      "wert": "Sonderstatusstadt",
+      "icon": "⭐"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt Hochtaunuskreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen der Dienstvereinbarung und mobiles Arbeiten."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Unterstützung bei der Vereinbarkeit von Sorgearbeit und Beruf; Vollzeitstellen grundsätzlich teilbar."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Individuelle Fort- und Weiterentwicklung, insbesondere in Digitalisierung und Führung."
+    },
+    {
+      "titel": "Digitale Transformation",
+      "beschreibung": "Aktive Mitgestaltung der digitalen Weiterentwicklung der Verwaltung."
+    },
+    {
+      "titel": "Jobticket",
+      "beschreibung": "Jobticket des Rhein-Main-Verkehrsverbundes (RMV)."
+    },
+    {
+      "titel": "Verbeamtung möglich",
+      "beschreibung": "Je nach Stelle Planstellen nach HBesG oder Eingruppierung nach TVöD."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Bad Homburg v. d. Höhe · Personalservice",
+    "email": "Bewerbung@bad-homburg.de",
+    "telefon": "06172 100-1106"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Kreisstadt, Kur- und Kongressort, Oberbürgermeister: https://de.wikipedia.org/wiki/Bad_Homburg_vor_der_H%C3%B6he (abgerufen 11.10.2026)",
+    "Beschäftigte, Sonderstatusstadt, Benefits, Kontakt: Stellenausschreibung Leitung Finanzbuchhaltung https://interamt.de/koop/app/stelle?id=1493691 (API api.interamt.de/query/stellenangebot/1493691) (abgerufen 11.10.2026)"
+  ]
+}

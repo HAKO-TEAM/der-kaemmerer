@@ -1,0 +1,72 @@
+{
+  "slug": "stuttgart",
+  "name": "Landeshauptstadt Stuttgart",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 609365,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Frank Nopper",
+  "token": "8b4cd98daeea2850",
+  "claim": "Die Landeshauptstadt Baden-Württembergs mit 23 Stadtbezirken gestalten.",
+  "beschreibung": "Stuttgart ist die Landeshauptstadt Baden-Württembergs und mit rund 609.000 Einwohnerinnen und Einwohnern in 23 Stadtbezirken die größte Stadt des Landes. Die Stadtverwaltung deckt ein entsprechend großes Spektrum ab: Allein das Baurechtsamt zählt rund 190 Mitarbeitende und bearbeitet bedeutende Investitionsvorhaben aus Gesundheitswesen, Automobilindustrie und Hochschulen. Die Branddirektion beschäftigt über 720 hauptamtliche und rund 2.100 ehrenamtliche Feuerwehrangehörige und führt die Finanzen ihrer 24 Abteilungen der Freiwilligen Feuerwehr. Mit dem BildungsCampus und eigenen Personalwohnungen investiert die Stadt gezielt in ihre Beschäftigten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "609.365",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtbezirke",
+      "wert": "23",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "207,32 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Landeshauptstadt",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit und Zulage",
+      "beschreibung": "Zukunftssicherer Arbeitsplatz, betriebliche Altersvorsorge, Jahressonderzahlung und Stuttgart-Zulage für Tarifbeschäftigte (70 € brutto pro Monat in Vollzeit)."
+    },
+    {
+      "titel": "Personalwohnungen",
+      "beschreibung": "Attraktive Personalwohnungen im Stadtgebiet Stuttgart."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Flexible Arbeitszeitmodelle, teilweise mobiles Arbeiten bzw. Homeoffice, Gesundheitsmanagement und Sportangebote."
+    },
+    {
+      "titel": "BildungsCampus",
+      "beschreibung": "Persönliche und fachliche Weiterentwicklung über den städtischen BildungsCampus."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket und Fahrradleasing-Angebot „StuttRad“."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Vergünstigtes Mittagessen sowie Rabatte über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landeshauptstadt Stuttgart · Haupt- und Personalamt",
+    "email": "hannah.wedekind@stuttgart.de",
+    "telefon": "0711 216-98756",
+    "bewerbungsportal": "https://www.stuttgart.de/jobs"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtbezirke, Oberbürgermeister: https://de.wikipedia.org/wiki/Stuttgart (abgerufen 11.10.2026)",
+    "Baurechtsamt, Benefits, Kontakt: Stellenausschreibung Leitung Sachgebiet Investitionsvorhaben https://interamt.de/koop/app/stelle?id=1500148 (abgerufen 11.10.2026)",
+    "Branddirektion: Stellenausschreibung Sachbearbeiter/-in Finanzwesen / Steuer (§ 2b UStG) https://stuttgart.bewerbung.dvvbw.de/35435-sachbearbeiter-in-finanzwesen-steuer-2b-ustg-m-w-d/job (abgerufen 11.10.2026)"
+  ]
+}

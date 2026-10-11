@@ -1,0 +1,69 @@
+{
+  "slug": "wedel",
+  "name": "Stadt Wedel",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 34939,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Julia Fisauli-Aalto",
+  "token": "86bf4c64fb041eb0",
+  "claim": "Die maritime Stadt an der Elbe mit frischem Wind in Verwaltung und Digitalisierung.",
+  "beschreibung": "Wedel liegt im Kreis Pinneberg direkt an der Elbe und gehört zur Metropolregion Hamburg. Die Stadt wurde 1212 erstmals erwähnt; ihr Wahrzeichen ist der Wedeler Roland, bekannt ist sie zudem für die Schiffsbegrüßungsanlage Willkomm-Höft. Die Stadtverwaltung am Rathausplatz treibt Organisationsentwicklung und Digitalisierung aktiv voran und arbeitet dabei mit dem IT-Zweckverband kommunit zusammen. Der S-Bahnhof Wedel liegt in unmittelbarer Nähe des Rathauses.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "34.939",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "1212",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "33,81 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Pinneberg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Flexible Arbeitszeiten sowie die Möglichkeit zu Homeoffice und mobilem Arbeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub und zusätzlich frei am 24.12. und 31.12."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Regelmäßige Fortbildungsmöglichkeiten zur fachlichen und persönlichen Weiterentwicklung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und ein gut ausgestatteter Arbeitsplatz."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bezuschusstes Deutschlandticket (hvv Jobticket Premium), Mobilitätszuschuss für den Fahrradkauf und S-Bahnhof in unmittelbarer Nähe."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Wedel · Fachdienst Personal",
+    "email": "p.koerner@stadt.wedel.de",
+    "telefon": "04103 707-420",
+    "bewerbungsportal": "https://karriere.wedel.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Bürgermeisterin, Kreis: https://de.wikipedia.org/wiki/Wedel (abgerufen 11.10.2026)",
+    "Benefits, Kontakt, IT-Zweckverband kommunit: Stellenausschreibung Leitung Fachdienst Interner Dienstbetrieb https://interamt.de/koop/app/stelle?id=1466647 (API api.interamt.de/query/stellenangebot/1466647) (abgerufen 11.10.2026)",
+    "Bewerbungsportal: https://karriere.wedel.de/bewerber/landingpage.php?prj=186P4544&oid=4&qid=0&b=0&ie=1 (abgerufen 11.10.2026)"
+  ]
+}

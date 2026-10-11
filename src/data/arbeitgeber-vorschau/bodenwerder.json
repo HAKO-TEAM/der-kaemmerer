@@ -1,0 +1,64 @@
+{
+  "slug": "bodenwerder",
+  "name": "Samtgemeinde Bodenwerder-Polle",
+  "bundesland": "Niedersachsen",
+  "einwohner": 13193,
+  "buergermeistertitel": "Samtgemeindebürgermeister",
+  "buergermeister": "Sebastian Rode",
+  "token": "9ebcf49c1682283e",
+  "claim": "Elf Gemeinden, eine Verwaltung – an der Weser im Weserbergland.",
+  "beschreibung": "Die Samtgemeinde Bodenwerder-Polle im Landkreis Holzminden entstand am 1. Januar 2010 aus der Fusion der Samtgemeinden Bodenwerder und Polle. Verwaltungssitz ist die Münchhausenstadt Bodenwerder, in Polle besteht eine Außenstelle mit Bürgerbüro. Rund 13.200 Menschen leben in den elf Mitgliedsgemeinden beiderseits der Weser. Das Sachgebiet Finanzmanagement arbeitet als interner Service- und Steuerungsbereich und erledigt die Kassengeschäfte für die Samtgemeinde und ihre Mitgliedsgemeinden.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.193",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "11",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "215,37 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2010",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Flexible Arbeitszeiten (Gleitzeit) und familienfreundliche Gestaltung der Arbeitsbedingungen."
+    },
+    {
+      "titel": "Teilzeit möglich",
+      "beschreibung": "Vollzeitstellen sind unter bestimmten Voraussetzungen teilzeitgeeignet."
+    },
+    {
+      "titel": "Tarifliche Bezahlung",
+      "beschreibung": "Bezahlung nach TVöD; einschlägige Berufserfahrung kann bei der Stufenzuordnung anerkannt werden."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung in der Samtgemeindeverwaltung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Samtgemeinde Bodenwerder-Polle · Samtgemeindeverwaltung",
+    "email": "j.ende@bodenwerder-polle.de",
+    "telefon": "05533 405-95"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Fusion 2010, Verwaltungssitz: https://de.wikipedia.org/wiki/Samtgemeinde_Bodenwerder-Polle (abgerufen 11.10.2026)",
+    "Samtgemeindebürgermeister: https://www.muenchhausenland.de/verwaltung-politik/verwaltung/der-samtgemeindebuergermeister/ und leinetal24 (Wiederwahl 13.09.2026, 54,9 %) (abgerufen 11.10.2026)",
+    "Benefits, Finanzmanagement, Kontakt: Stellenausschreibung Sachbearbeiter*in für die Samtgemeindekasse https://interamt.de/koop/app/stelle?id=1493374 (API api.interamt.de/query/stellenangebot/1493374) (abgerufen 11.10.2026)"
+  ]
+}

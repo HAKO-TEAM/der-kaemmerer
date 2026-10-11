@@ -1,0 +1,73 @@
+{
+  "slug": "koblenz",
+  "name": "Kreisverwaltung Mayen-Koblenz",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 216796,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Marko Boos",
+  "token": "6a4645dbf8487767",
+  "claim": "Kreisverwaltung für 87 Gemeinden mit rund 217.000 Menschen.",
+  "beschreibung": "Der Landkreis Mayen-Koblenz in Rheinland-Pfalz umfasst 87 Gemeinden mit rund 217.000 Einwohnerinnen und Einwohnern; die Kreisverwaltung hat ihren Sitz in der kreisfreien Stadt Koblenz. Das Gesundheitsamt ist zugleich für die Stadt Koblenz zuständig und betreut damit rund 330.000 Menschen. Mit der neu geschaffenen Abteilung „Digitales“ bündelt die Verwaltung IT, Verwaltungsdigitalisierung, Smart Cities, Poststelle und Archivierung. Das Rechnungs- und Gemeindeprüfungsamt prüft innerhalb der Kreisverwaltung und bei den Kommunen im Kreis.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "216.796",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "87",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "817,67 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Koblenz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen attraktiver Gleitzeitmodelle und ein hohes Maß an Selbstverantwortung."
+    },
+    {
+      "titel": "Personalentwicklung",
+      "beschreibung": "Fortschrittliche Personalentwicklung und digitale Lernplattform für persönliche und fachliche Weiterbildung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Attraktives betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Gezielte Einarbeitung und Fortbildung im neuen Aufgabengebiet."
+    },
+    {
+      "titel": "Vorteile und Jobrad",
+      "beschreibung": "Corporate Benefits und die Möglichkeit eines Jobrads."
+    },
+    {
+      "titel": "Teilzeit",
+      "beschreibung": "Bewerbungen in Teilzeit sind unabhängig vom Teilzeitfaktor ausdrücklich erwünscht."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Mayen-Koblenz · Personal (Auswahlverfahren)",
+    "email": "karriere@kvmyk.de",
+    "telefon": "0261 108-111",
+    "bewerbungsportal": "https://karriere.kvmyk.de"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Verwaltungssitz, Landrat: https://de.wikipedia.org/wiki/Landkreis_Mayen-Koblenz (abgerufen 11.10.2026)",
+    "Abteilung Digitales, Benefits, Kontakt: Stellenausschreibung Leitung der Abteilung Digitales https://interamt.de/koop/app/stelle?id=1500814 (abgerufen 11.10.2026)",
+    "Rechnungs- und Gemeindeprüfungsamt: Stellenausschreibung Sachbearbeiter / Prüfer https://interamt.de/koop/app/stelle?id=1500153 (abgerufen 11.10.2026)",
+    "Gesundheitsamt (ca. 330.000 Einwohner): Stellenausschreibung stellv. Verwaltungsleitung Gesundheitsamt https://interamt.de/koop/app/stelle?id=1497580 (abgerufen 11.10.2026)"
+  ]
+}

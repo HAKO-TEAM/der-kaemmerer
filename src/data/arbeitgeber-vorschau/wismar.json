@@ -1,0 +1,72 @@
+{
+  "slug": "wismar",
+  "name": "Landkreis Nordwestmecklenburg",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 155869,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Tino Schomann",
+  "token": "81285c71d869793b",
+  "claim": "Kreisverwaltung für 83 Gemeinden mit Sitz in der Hansestadt Wismar.",
+  "beschreibung": "Der Landkreis Nordwestmecklenburg besteht in seiner heutigen Form seit 1994 und hat seinen Verwaltungssitz in der Hansestadt Wismar. In 83 Gemeinden leben rund 156.000 Menschen auf gut 2.100 Quadratkilometern. Die Kreisverwaltung beschäftigt rund 1.000 Mitarbeitende in vielfältigen Berufsfeldern und will Verwaltung bürgernah, serviceorientiert und digital aufstellen. Zum Kreis gehört auch der Eigenbetrieb Abfallwirtschaftsbetrieb mit Sitz in Gadebusch.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "155.869",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "83",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.127,06 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Hansestadt Wismar",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarif und Vorsorge",
+      "beschreibung": "Entgelt nach TVöD (VKA) mit jährlicher Sonderzahlung, zusätzlicher Betriebsrente (ZMV) und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Sachbezugskarte",
+      "beschreibung": "Sachbezugskarte mit jährlich bis zu 816 € steuer- und sozialversicherungsfrei sowie Corporate Benefits."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und die Möglichkeit, mobil zu arbeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Urlaubstage sowie arbeitsfreie Tage am 24.12. und 31.12."
+    },
+    {
+      "titel": "Entwicklung und Gesundheit",
+      "beschreibung": "Gelebte Personalentwicklung, individuelle Fort- und Weiterbildung, betriebliche Gesundheitsförderung und jährliche Teamevents."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing sowie kostenfreie, ortsnahe Stellplätze für Fahrrad und Auto."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Nordwestmecklenburg · Fachgebiet Personal",
+    "email": "Bewerbung@nordwestmecklenburg.de",
+    "telefon": "03841 3040-1012",
+    "bewerbungsportal": "https://www.nordwestmecklenburg.de"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Verwaltungssitz, Bestand seit 1994, Landrat: https://de.wikipedia.org/wiki/Landkreis_Nordwestmecklenburg (abgerufen 11.10.2026)",
+    "Mitarbeitende, Benefits, Kontakt: Stellenausschreibung Betriebsleiter/-in Eigenbetrieb Abfallwirtschaftsbetrieb https://interamt.de/koop/app/stelle?id=1464817 (abgerufen 11.10.2026)",
+    "Stellenausschreibung Hauptamtliche/-r Beigeordnete/-r https://interamt.de/koop/app/stelle?id=1472816 (abgerufen 11.10.2026)"
+  ]
+}

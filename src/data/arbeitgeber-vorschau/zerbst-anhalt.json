@@ -1,0 +1,68 @@
+{
+  "slug": "zerbst-anhalt",
+  "name": "Stadt Zerbst/Anhalt",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 20779,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Andreas Dittmann",
+  "token": "0c8093f8e4d39091",
+  "claim": "Kurze Wege und flache Hierarchien in einer der flächengrößten Gemeinden Deutschlands.",
+  "beschreibung": "Die Einheitsgemeinde Zerbst/Anhalt im Landkreis Anhalt-Bitterfeld ist mit 468,4 km² die fünftgrößte Flächengemeinde Deutschlands. Zerbst wurde 948 als slawischer Verwaltungsbezirk Ciervisti erstmals erwähnt und ist eng mit der Geschichte Katharinas der Großen verbunden, die als Prinzessin von Anhalt-Zerbst aufwuchs. Die Stadt liegt zwischen Elbe und Fläming in der WelterbeRegion Anhalt-Dessau-Wittenberg. In der Kernverwaltung arbeiten 85 Beschäftigte mit modernen Arbeitsbedingungen, kurzen Wegen und flachen Hierarchien; zu den städtischen Einrichtungen zählen Grundschulen, eine eigene Kita, Sportstätten, Museum, Bibliothek und Stadthalle.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "20.779",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "468,4 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "948",
+      "icon": "📜"
+    },
+    {
+      "label": "Beschäftigte Kernverwaltung",
+      "wert": "85",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Verbeamtung",
+      "beschreibung": "Anstellung im Beamtenverhältnis (je nach Stelle, z. B. bis Besoldungsgruppe A 12)."
+    },
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Interessante, vielseitige und eigenverantwortliche Tätigkeit."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Parken",
+      "beschreibung": "Kostenlose Parkmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Arbeitsmedizinische Vorsorge und betriebliches Gesundheitsmanagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Zerbst/Anhalt · Amt für Zentrale Dienste",
+    "email": "personal@stadt-zerbst.de",
+    "telefon": "03923 754-152",
+    "bewerbungsportal": "https://www.stadt-zerbst.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Katharina II., Bürgermeister: https://de.wikipedia.org/wiki/Zerbst/Anhalt (abgerufen 11.10.2026)",
+    "Beschäftigte Kernverwaltung, Benefits, Kontakt, Bewerberportal: Stellenausschreibung Leiter/in des Rechnungsprüfungsamtes https://interamt.de/koop/app/stelle?id=1449550 (API api.interamt.de/query/stellenangebot/1449550) (abgerufen 11.10.2026)"
+  ]
+}

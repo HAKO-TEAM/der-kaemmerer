@@ -1,0 +1,68 @@
+{
+  "slug": "zell",
+  "name": "Verbandsgemeindeverwaltung Zell (Mosel)",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 15382,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Jürgen Hoffmann",
+  "token": "8cfe31e3eadb25ed",
+  "claim": "24 Gemeinden an der Mosel – betreut aus einem neuen Verwaltungsgebäude.",
+  "beschreibung": "Die Verbandsgemeinde Zell (Mosel) liegt im Landkreis Cochem-Zell. Zu ihr gehören die Stadt Zell (Mosel) und 23 weitere Ortsgemeinden. Die Verwaltung betreut die Gemeinden in einem breiten Aufgabenspektrum bis hin zur Besteuerung der Ortsgemeinden und arbeitet dabei mit Wirtschaftsprüfern, Steuerberatern und der Finanzverwaltung zusammen. Gearbeitet wird in einem neuen Verwaltungsgebäude an der Schloßstraße in Zell.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "15.382",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "24",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "193,74 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Cochem-Zell",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz mit guten Entwicklungsperspektiven."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten, ggf. mit Homeoffice-Möglichkeit."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Zusatzversorgung nach TVöD und betriebliche Krankenversicherung."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Fahrradleasing-Vertrag."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Moderner Arbeitsplatz in einem neuen Verwaltungsgebäude."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Zell (Mosel) · Personalbüro",
+    "email": "bewerbungen@vg-zell.de",
+    "telefon": "06542 701-240",
+    "bewerbungsportal": "https://www.zell-mosel.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Landkreis: https://de.wikipedia.org/wiki/Verbandsgemeinde_Zell_(Mosel) (abgerufen 11.10.2026)",
+    "Benefits, Kontakt, Bürgermeister (Unterzeichnung 23.09.2026): Stellenausschreibung Finanzen / Besteuerung der Gemeinden https://interamt.de/koop/app/stelle?id=1484904 (API api.interamt.de/query/stellenangebot/1484904) (abgerufen 11.10.2026)"
+  ]
+}

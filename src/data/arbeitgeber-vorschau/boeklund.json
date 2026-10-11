@@ -1,0 +1,66 @@
+{
+  "slug": "boeklund",
+  "name": "Amt Südangeln",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 13457,
+  "token": "ba9cda7abf3ab65d",
+  "claim": "Überschaubar und kollegial: Verwaltung für 15 Gemeinden zwischen Schlei, Nord- und Ostsee.",
+  "beschreibung": "Das Amt Südangeln im Kreis Schleswig-Flensburg wurde zum 1. Januar 2007 gebildet und hat seinen Sitz in Böklund. Es verwaltet 15 amtsangehörige Gemeinden im Südosten der Landschaft Angeln sowie mehrere Zweckverbände. Mit rund 75 Kolleginnen und Kollegen ist das Amt ein überschaubarer, kollegialer Arbeitgeber. Böklund liegt in unmittelbarer Nähe zur Schlei inmitten der Urlaubsregion zwischen Nord- und Ostsee.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.457",
+      "icon": "👥"
+    },
+    {
+      "label": "Amtsangehörige Gemeinden",
+      "wert": "15",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Beschäftigte",
+      "wert": "rund 75",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "2007",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Abwechslungsreiches Aufgabengebiet mit Eigenverantwortung und Gestaltungsspielraum in einem motivierten Team."
+    },
+    {
+      "titel": "Gleitzeit und Telearbeit",
+      "beschreibung": "Gleitende Arbeitszeit mit der Möglichkeit zur alternierenden Telearbeit."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Fahrradleasing für Beschäftigte."
+    },
+    {
+      "titel": "Betriebsklima",
+      "beschreibung": "Gutes Arbeits- und Betriebsklima in einem modernen Verwaltungsgebäude."
+    },
+    {
+      "titel": "Einarbeitung und Weiterbildung",
+      "beschreibung": "Intensive Einarbeitung und Möglichkeiten zur persönlichen und fachlichen Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt Südangeln · Personalwirtschaft",
+    "email": "jutta.greve@amt-suedangeln.de",
+    "telefon": "04623 78-414",
+    "bewerbungsportal": "https://www.amt-suedangeln.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Gemeinden, Bildung 2007, Amtssitz: https://de.wikipedia.org/wiki/Amt_Südangeln (abgerufen 11.10.2026)",
+    "Beschäftigte, Benefits, Kontakt: Stellenausschreibung Sachbearbeiter Haushaltswirtschaft und Stellvertretung der Aufgabenbereichsleitung Finanzen https://interamt.de/koop/app/stelle?id=1497781 (API api.interamt.de/query/stellenangebot/1497781) inkl. PDF-Ausschreibung (abgerufen 11.10.2026)"
+  ]
+}

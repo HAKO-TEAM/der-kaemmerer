@@ -1,0 +1,64 @@
+{
+  "slug": "fuerstenberg-havel",
+  "name": "Stadt Fürstenberg/Havel",
+  "bundesland": "Brandenburg",
+  "einwohner": 5715,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Robert Philipp",
+  "token": "f7659ac6e6a31396",
+  "claim": "Arbeiten in der Wasserstadt – zwischen Seen, Havel und Naturschutzgebieten.",
+  "beschreibung": "Fürstenberg/Havel liegt an der Oberhavel im Norden Brandenburgs im Landkreis Oberhavel. Wegen der vielen Seen, Flüsse und Bäche führt die Stadt die Zusatzbezeichnung Wasserstadt. Zur Stadt gehören acht Ortsteile, darunter der staatlich anerkannte Erholungsort Himmelpfort. Die Stadtverwaltung am Markt ist per Regionalexpress gut erreichbar und bietet ein vielseitiges Aufgabenfeld in einem engagierten Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.715",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "213,85 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "8",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Beiname",
+      "wert": "Wasserstadt",
+      "icon": "🌊"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD-V zuzüglich Jahressonderzahlung, Altersvorsorge und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub im Jahr sowie freie Tage am 24.12. und 31.12."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gute Erreichbarkeit",
+      "beschreibung": "Arbeitsort per Regionalexpress aus nördlicher und südlicher Richtung schnell erreichbar."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Fürstenberg/Havel",
+    "email": "bewerbung@fuerstenberg-havel.de",
+    "telefon": "033093 346-21"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Wasserstadt, Himmelpfort: https://de.wikipedia.org/wiki/F%C3%BCrstenberg/Havel (abgerufen 11.10.2026)",
+    "Bürgermeister: Impressum https://www.fuerstenberg-havel.de/impressum (abgerufen 11.10.2026)",
+    "Benefits, Erreichbarkeit, Kontakt: Stellenausschreibung Amtsleiter*in Kämmerei, EDV, Liegenschaften https://interamt.de/koop/app/stelle?id=1492742 (API api.interamt.de/query/stellenangebot/1492742) (abgerufen 11.10.2026)"
+  ]
+}

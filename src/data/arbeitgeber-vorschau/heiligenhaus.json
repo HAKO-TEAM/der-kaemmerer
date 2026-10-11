@@ -1,0 +1,71 @@
+{
+  "slug": "heiligenhaus",
+  "name": "Stadt Heiligenhaus",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 25844,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Björn Kerkmann",
+  "token": "b4af3aeac6c67750",
+  "claim": "Familienfreundlich arbeiten im Städtedreieck Düsseldorf – Essen – Wuppertal.",
+  "beschreibung": "Heiligenhaus ist eine mittlere kreisangehörige Stadt im Kreis Mettmann und liegt im Niederbergischen Land, verkehrsgünstig im Städtedreieck Düsseldorf – Essen – Wuppertal. Bildungsangebote, Kultur und Naherholung prägen den Wohn- und Arbeitsort. Die Stadtverwaltung ist seit 2024 nach dem audit berufundfamilie zertifiziert und legt Wert auf Familienfreundlichkeit und das Zusammenleben der Generationen. Wer hier Verantwortung übernimmt, arbeitet in überschaubaren Strukturen mit kurzen Wegen zur Verwaltungsspitze.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "25.844",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "27,52 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "audit berufundfamilie seit",
+      "wert": "2024",
+      "icon": "👨‍👩‍👧"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Mettmann",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Seit 2024 nach dem audit berufundfamilie zertifiziert; Belegplätze für Kinder von Mitarbeitenden in einer örtlichen Großtagespflege (U3)."
+    },
+    {
+      "titel": "Flexibles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und anteilige mobile Arbeit nach der Einarbeitung."
+    },
+    {
+      "titel": "Leistungsorientierte Bezahlung",
+      "beschreibung": "Leistungsorientierte Bezahlung (LOB) nach TVöD bzw. Besoldung nach LBesG NRW."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit Gesundheits-, Sport- und Massageangeboten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing nach TV Fahrradleasing, auch für Beamtinnen und Beamte, sowie kostenlose Parkplätze am Rathaus."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Heiligenhaus · Personal (Auswahlverfahren)",
+    "telefon": "02056 13-205",
+    "bewerbungsportal": "https://jobportal.heiligenhaus.de/stellenangebote.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kreis, Lage, Bürgermeister (seit 2025): https://de.wikipedia.org/wiki/Heiligenhaus (abgerufen 11.10.2026)",
+    "Benefits, audit berufundfamilie, Kontakt, Bewerbungsportal: Stellenausschreibung Fachbereichsleitung Bildung und Sport https://interamt.de/koop/app/stelle?id=1492418 (API api.interamt.de/query/stellenangebot/1492418) (abgerufen 11.10.2026)"
+  ]
+}

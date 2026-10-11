@@ -1,0 +1,68 @@
+{
+  "slug": "soest",
+  "name": "Stadt Soest",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 47752,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Marcus Schiffer",
+  "token": "f20e67d9f3309970",
+  "claim": "Sinnvolles tun, sozial handeln, Sicherheit spüren – bei der Stadt Soest.",
+  "beschreibung": "Soest ist Kreisstadt des gleichnamigen Kreises im Regierungsbezirk Arnsberg und besteht aus der Kernstadt und 18 Stadtteilen. In der Stadtverwaltung gestalten rund 540 Mitarbeitende die Zukunft der Stadt: Sie greifen neue Themen wie Klimaneutralität und Smart City auf und behalten zugleich die klassischen kommunalen Aufgaben im Blick. Familienfreundliche Arbeitsbedingungen und umfangreiche Fortbildungsangebote gehören zum Selbstverständnis als Arbeitgeberin.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "47.752",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung (lt. Ausschreibung)",
+      "wert": "rund 540",
+      "icon": "🏢"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "Kernstadt + 18",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "85,81 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicheres Beschäftigungsverhältnis bei der Stadtverwaltung."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Familienfreundliche Arbeitsbedingungen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildungsangebote."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Corporate Benefits",
+      "beschreibung": "Vergünstigungen über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Soest · Personalauswahl",
+    "telefon": "02921 103-5225",
+    "bewerbungsportal": "https://www.karriere-soest.de/home"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Kreis: https://de.wikipedia.org/wiki/Soest (abgerufen 11.10.2026)",
+    "Bürgermeister: Stichwahl 28.09.2025, https://www.wahlergebnisse.nrw/kommunalwahlen/2025/aktuell/pdf/b974040kw25.pdf (abgerufen 11.10.2026)",
+    "Mitarbeitende, Benefits, Kontakt: Stellenausschreibung Sachbearbeiter für die Einziehung von Elternbeiträgen https://karriere.nrw/stellenausschreibung/297ef67a-955d-43d2-a25f-882c969001f7 (abgerufen 11.10.2026)"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "neuwied",
+  "name": "Stadtverwaltung Neuwied",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 67201,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Jan Einig",
+  "token": "6f4c2bf1c46b65c9",
+  "claim": "Die größte kreisangehörige Stadt in Rheinland-Pfalz mitgestalten – am Rhein, mit Tradition seit 1653.",
+  "beschreibung": "Neuwied liegt am rechten Rheinufer nordwestlich von Koblenz und ist Sitz der Kreisverwaltung des Landkreises Neuwied. 1653 als Planstadt gegründet, wurde die Stadt früh zu einer Freistätte für Religionsflüchtlinge und zu einem der ersten Industriestandorte des Landes. Heute ist Neuwied die siebtgrößte Stadt in Rheinland-Pfalz, größte kreisangehörige Stadt des Landes und als „Stadt der Schulen“ bekannt. Allein die Stadtkämmerei zählt über 30 Mitarbeitende in Kämmerei- und Steuerabteilung sowie Stadtkasse.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "67.201",
+      "icon": "👥"
+    },
+    {
+      "label": "Gegründet als Planstadt",
+      "wert": "1653",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "86,5 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum, Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz und unbefristetes Arbeitsverhältnis."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Gestaltung der Arbeitszeit, Vollzeit oder Teilzeit je nach Stelle."
+    },
+    {
+      "titel": "Leistungsentgelt",
+      "beschreibung": "Jährliches Leistungsentgelt für Beschäftigte sowie attraktive Mitarbeitervergünstigungen."
+    },
+    {
+      "titel": "Gesundheit und Work-Life-Balance",
+      "beschreibung": "Aktiv gelebtes betriebliches Gesundheitsmanagement mit Work-Life-Balance-Programmen und ergonomischen Arbeitsplätzen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Dienstrad-Leasing, Jobticket, kostenfreie Pkw- und Fahrradstellplätze und innenstadtnahe Lage."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Jährliche Fortbildungsangebote und Gestaltungsspielräume für die persönliche und fachliche Weiterentwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Neuwied · Personal",
+    "email": "kbuchinger@neuwied.de",
+    "telefon": "02631 802-260",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1495322"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gründung 1653, Kreisstadt, Mittelzentrum, Oberbürgermeister: https://de.wikipedia.org/wiki/Neuwied (abgerufen 11.10.2026)",
+    "Benefits, Stadtkämmerei, Kontakt, Bewerbung über Interamt: Stellenausschreibung Leitung der Buchhaltung und Grundsatzsachbearbeitung Finanzwesen https://interamt.de/koop/app/stelle?id=1495322 (API api.interamt.de/query/stellenangebot/1495322) (abgerufen 11.10.2026)"
+  ]
+}

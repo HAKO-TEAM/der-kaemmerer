@@ -1,0 +1,69 @@
+{
+  "slug": "landsberg-am-lech",
+  "name": "Stadt Landsberg am Lech",
+  "bundesland": "Bayern",
+  "einwohner": 29230,
+  "buergermeistertitel": "Oberbürgermeisterin",
+  "buergermeister": "Doris Baumgartl",
+  "token": "679af8cbca24e6d9",
+  "claim": "Große Kreisstadt am Lech – Haushalt, Stiftungen und Stadtentwicklung aus einer Hand.",
+  "beschreibung": "Landsberg am Lech ist Große Kreisstadt und Verwaltungssitz des gleichnamigen Landkreises in Oberbayern. Die Stadt liegt am Lech und gliedert sich in zehn Gemeindeteile. Die Stadtverwaltung verwaltet neben dem städtischen Haushalt auch mehrere Stiftungen und arbeitet mit doppischem, produktorientiertem Haushalt. Beschäftigte finden hier einen krisensicheren Arbeitsplatz in einem etablierten Team mit umfangreichen Arbeitgeberleistungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "29.230",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "57,91 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Große Kreisstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung, betriebliche Altersvorsorge und Leistungszulagen nach § 18 TVöD."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Umfangreiches Gesundheitsmanagement und Firmenfitness mit EGYM Wellpass."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Krisensicherer Arbeitsplatz in einem etablierten und engagierten Team."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Landsberg am Lech · Personalreferat",
+    "email": "bewerbung@landsberg.de",
+    "telefon": "08191 128-279",
+    "bewerbungsportal": "https://www.mein-check-in.de/landsberg"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindeteile, Große Kreisstadt: https://de.wikipedia.org/wiki/Landsberg_am_Lech (abgerufen 11.10.2026)",
+    "Oberbürgermeisterin: Pressemitteilungen 2026 auf https://www.landsberg.de/rathaus/ (abgerufen 11.10.2026)",
+    "Benefits, Stiftungen, Kontakt: Stellenausschreibung Referatsleitung Haushaltswirtschaft https://interamt.de/koop/app/stelle?id=1497913 (API api.interamt.de/query/stellenangebot/1497913) und https://www.mein-check-in.de/landsberg/position-538390 (abgerufen 11.10.2026)"
+  ]
+}

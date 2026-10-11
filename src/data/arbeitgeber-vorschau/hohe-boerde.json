@@ -1,0 +1,71 @@
+{
+  "slug": "hohe-boerde",
+  "name": "Gemeinde Hohe Börde",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 18648,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Andreas Burger",
+  "token": "a14ec4266894c1f7",
+  "claim": "18 Ortsteile, eine Verwaltung: Gemeindefinanzen in der Börde vor den Toren Magdeburgs.",
+  "beschreibung": "Die Gemeinde Hohe Börde im Landkreis Börde entstand am 1. Januar 2010 aus der gleichnamigen Verwaltungsgemeinschaft. Heute gehören 18 Ortsteile mit zusammen rund 18.600 Einwohnerinnen und Einwohnern dazu, der Verwaltungssitz liegt im Ortsteil Irxleben. Die Lage an den Autobahnen A2 und A14 macht die Gemeinde gut erreichbar. Die Verwaltung bündelt Kasse, Haushalt und Bürgerdienste für eine Flächengemeinde von gut 170 Quadratkilometern.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.648",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "18",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "171,75 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Einheitsgemeinde seit",
+      "wert": "2010",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Sicherheit",
+      "beschreibung": "Unbefristete Beschäftigung nach TVöD-VKA mit Jahressonderzahlung und tarifvertraglichem Leistungsentgelt."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Geregelte Arbeitszeiten mit Gleitzeit und Ausgleich von Mehrarbeit durch Freizeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub bei einer Fünf-Tage-Woche, dazu 24.12. und 31.12. bezahlt frei."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten im jeweiligen Aufgabenbereich."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Angebote zur Gesundheitsförderung, unter anderem Massagen, sowie Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Hohe Börde · Personalamt",
+    "email": "bewerbung@hohe-boerde.de",
+    "telefon": "039204 781-125",
+    "bewerbungsportal": "https://www.hoheboerde.de"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Fläche, Bildung 2010, Bürgermeister: https://de.wikipedia.org/wiki/Hohe_B%C3%B6rde (abgerufen 11.10.2026)",
+    "Ortsteile, Verwaltungssitz Irxleben, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/-in Kasse https://interamt.de/koop/app/stelle?id=1495627 (API api.interamt.de/query/stellenangebot/1495627) (abgerufen 11.10.2026)"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "neustadt-an-der-weinstrasse",
+  "name": "Stadt Neustadt an der Weinstraße",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 52882,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Marc Weigel",
+  "token": "a34628f143c6e71d",
+  "claim": "Kreisfreie Stadt an der Deutschen Weinstraße – mit Verantwortung von der Kämmerei bis zur Mobilität.",
+  "beschreibung": "Neustadt an der Weinstraße ist eine kreisfreie Stadt in Rheinland-Pfalz, Teil der Metropolregion Rhein-Neckar und eines der Zentren des deutschen Weinbaus. Jährlich findet hier das Deutsche Weinlesefest statt. Als kreisfreie Stadt erledigt die Verwaltung das volle Aufgabenspektrum, von Haushalt, Jahres- und Konzernabschluss über die Stadtkasse bis zur Verkehrsplanung als örtliche Straßenverkehrsbehörde. Die Stadt besteht aus der Kernstadt und neun Stadtteilen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "52.882",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "117,09 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "Kernstadt + 9",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "kreisfreie Stadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Krisensicherer Arbeitsplatz mit den im öffentlichen Dienst üblichen Sozialleistungen."
+    },
+    {
+      "titel": "Personalentwicklung",
+      "beschreibung": "Weiter- und Fortbildungsmöglichkeiten sowie Personalentwicklungsmaßnahmen."
+    },
+    {
+      "titel": "Vorteilsportal",
+      "beschreibung": "Vorteilsportal mit vergünstigten Angeboten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bezuschusstes Jobticket, Jobrad-Angebot und gute Anbindung an den ÖPNV."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Neustadt an der Weinstraße · Personalabteilung",
+    "email": "personalabteilung@neustadt.eu",
+    "telefon": "06321 855-1229",
+    "bewerbungsportal": "https://www.neustadt.eu/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, kreisfrei, Weinlesefest, Metropolregion: https://de.wikipedia.org/wiki/Neustadt_an_der_Weinstra%C3%9Fe (abgerufen 11.10.2026)",
+    "Oberbürgermeister: Wiederwahl 15.06.2025 mit 79,7 % (wochenblatt-reporter.de, rheinpfalz.de) (abgerufen 11.10.2026)",
+    "Benefits, Aufgaben, Kontakt: Stellenausschreibungen Abteilungsleitung Kämmerei https://interamt.de/koop/app/stelle?id=1500342 (API api.interamt.de/query/stellenangebot/1500342), Abteilungsleitung Verkehrsplanung https://interamt.de/koop/app/stelle?id=1500345 (API api.interamt.de/query/stellenangebot/1500345), Sachbearbeiter Forderungsüberwachung https://interamt.de/koop/app/stelle?id=1495180 (API api.interamt.de/query/stellenangebot/1495180) (abgerufen 11.10.2026)"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "schluesselfeld",
+  "name": "Stadt Schlüsselfeld",
+  "bundesland": "Bayern",
+  "einwohner": 5895,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Johannes Krapp",
+  "token": "163bc8e88d6fa50d",
+  "claim": "Kleine Stadt im Dreifrankeneck – mit kurzen Entscheidungswegen und unmittelbarer Gestaltungskraft.",
+  "beschreibung": "Schlüsselfeld liegt am südwestlichen Rand des oberfränkischen Landkreises Bamberg im Dreifrankeneck und gehört zur Metropolregion Nürnberg. Zur Stadt gehören 22 Gemeindeteile. Die Stadtverwaltung am Marktplatz ist überschaubar organisiert: Entscheidungswege sind kurz, die Kommunikation direkt, und Führungskräfte haben unmittelbaren Einfluss auf die Entwicklung der Stadt. Eigenverantwortliches Arbeiten und kollegiale Zusammenarbeit prägen das Verwaltungsteam.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.895",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "70,24 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "22",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Bamberg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen der Gleitzeitregelung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Urlaub pro Jahr plus arbeitsfreie Tage an Heiligabend und Silvester."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD mit Zusatzversorgung und Jahressonderzahlung."
+    },
+    {
+      "titel": "Kurze Wege",
+      "beschreibung": "Kurze Entscheidungswege, direkte Kommunikation und selbstständiges, eigenverantwortliches Arbeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Möglichkeit zum Fahrradleasing und kostenfreie Parkplätze direkt am Rathaus."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Schlüsselfeld · Stadtverwaltung",
+    "email": "stadt@schluesselfeld.de",
+    "telefon": "09552 92 22 20"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindeteile, Lage: https://de.wikipedia.org/wiki/Schl%C3%BCsselfeld (abgerufen 11.10.2026)",
+    "Erster Bürgermeister: Startseite https://www.schluesselfeld.de/ (abgerufen 11.10.2026)",
+    "Benefits, Kontakt: Stellenausschreibung Leitung der Finanzverwaltung / Kämmerei https://www.schluesselfeld.de/nachrichten/artikel/stellenausschreibung-leitung-der-finanzverwaltung-kaemmerei-m-w-d (abgerufen 11.10.2026)"
+  ]
+}

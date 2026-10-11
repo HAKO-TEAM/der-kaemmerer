@@ -1,0 +1,62 @@
+{
+  "slug": "eichstaett",
+  "name": "Landratsamt Eichstätt",
+  "bundesland": "Bayern",
+  "einwohner": 135982,
+  "token": "3445c8b59db61d12",
+  "claim": "Kommunale und staatliche Leistungen aus einer Hand – mitten im Naturpark Altmühltal.",
+  "beschreibung": "Das Landratsamt Eichstätt mit Sitz am Residenzplatz in Eichstätt ist die Verwaltung des nördlichsten Landkreises Oberbayerns. Es betreut rund 136.000 Menschen in 30 Gemeinden und verbindet kommunale und staatliche Aufgaben unter einem Dach. Das Kreisgebiet umfasst im Wesentlichen die Eichstätter Alb mit dem Kernbereich des Altmühltals. Allein das Amt für Familie und Jugend mit seinen sechs Fachbereichen zählt annähernd 100 Mitarbeitende und steuert die öffentliche Jugendhilfe im gesamten Landkreis.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "135.982",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.213,84 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "30",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Eichstätt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Bezahlung",
+      "beschreibung": "Leistungsgerechte Bezahlung nach TVöD mit regelmäßigen Tariferhöhungen und Jahressonderzahlung bzw. Besoldung nach BayBesG."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Modern ausgerichteter Arbeitsplatz und flexible Arbeitszeiten zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Kurze Wege",
+      "beschreibung": "Flache Hierarchien und schnelle Entscheidungsprozesse, um neue Impulse in die Praxis umzusetzen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiche Fortbildungsmöglichkeiten für die fachliche und persönliche Weiterentwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Eichstätt · Haupt- und Personalverwaltung",
+    "telefon": "08421 70-1041",
+    "bewerbungsportal": "https://www.mein-check-in.de/landkreis-eichstaett"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz, Lage: https://de.wikipedia.org/wiki/Landkreis_Eichst%C3%A4tt (abgerufen 11.10.2026)",
+    "Benefits, Aufgaben Amt für Familie und Jugend, Kontakt: Stellenausschreibung Leitung des Amtes für Familie und Jugend https://www.mein-check-in.de/landkreis-eichstaett/position-537370 (abgerufen 11.10.2026)",
+    "Landrat nicht angegeben: Stichwahl 22.03.2026 lt. Bekanntmachung Endergebnis Landratswahl (landkreis-eichstaett.de, Kommunalwahl 2026), Ergebnis nicht verifiziert (abgerufen 11.10.2026)"
+  ]
+}

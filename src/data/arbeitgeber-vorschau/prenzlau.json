@@ -1,0 +1,71 @@
+{
+  "slug": "prenzlau",
+  "name": "Landkreis Uckermark",
+  "bundesland": "Brandenburg",
+  "einwohner": 116422,
+  "buergermeistertitel": "Landrätin",
+  "buergermeister": "Karina Dörk",
+  "token": "1dd86c6af62ca75a",
+  "claim": "Über 3.000 km² Uckermark – Strukturwandel mit EU-Mitteln aktiv steuern.",
+  "beschreibung": "Der Landkreis Uckermark im Nordosten Brandenburgs besteht seit 1993 und hat seinen Verwaltungssitz in Prenzlau. Auf gut 3.000 Quadratkilometern leben rund 116.000 Menschen in 30 Gemeinden. Im Amt für Kreisentwicklung und Beteiligungsmanagement steuert die Kreisverwaltung unter anderem Projekte aus dem Just Transition Fund der EU, der den Strukturwandel in der Region begleitet. Beschäftigte arbeiten mit der hauseigenen KI-Anwendung „UM-GPT“ als Arbeitsmittel.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "116.422",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "3.077,03 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "30",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Prenzlau",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarif und Vorsorge",
+      "beschreibung": "Vergütung nach TVöD-VKA, betriebliche Altersvorsorge (ZVK) und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Jahressonderzahlung",
+      "beschreibung": "Leistungsorientierte Bezahlung und Jahressonderzahlung, teilweise in freie Tage umwandelbar."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Kollegiales, wertschätzendes Arbeitsumfeld mit flexiblen Arbeitszeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub bei einer Fünf-Tage-Woche (31 Tage ab 2027) sowie freie Tage am 24.12. und 31.12."
+    },
+    {
+      "titel": "Digitales Arbeiten",
+      "beschreibung": "Zugang zur hauseigenen KI-Anwendung „UM-GPT“, gezielte Einarbeitung und Fortbildung zur Stärkung digitaler Kompetenzen."
+    },
+    {
+      "titel": "Fahrrad-Leasing",
+      "beschreibung": "Fahrrad-Leasing mit Rundum-Schutz über Entgeltumwandlung nach TV-Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Uckermark · Personalamt",
+    "email": "personal@uckermark.de",
+    "telefon": "03984 70-3211",
+    "bewerbungsportal": "https://www.uckermark.de"
+  },
+  "kommunalflat": true,
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Verwaltungssitz, Bestand seit 1993, Landrätin: https://de.wikipedia.org/wiki/Landkreis_Uckermark (abgerufen 11.10.2026)",
+    "JTF, UM-GPT, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter Controlling JTF https://www.uckermark.de/output/download.php?fid=3615.7741.1..PDF (abgerufen 11.10.2026)"
+  ]
+}
