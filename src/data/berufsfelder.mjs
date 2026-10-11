@@ -1,7 +1,7 @@
 // Berufsfelder der Stellenbörse (Runbook 3.3). Zuordnung deterministisch über Stichwörter in Titel und Schlagwörtern,
 // erste passende Gruppe in dieser Reihenfolge gewinnt; sonst „Allgemeine Verwaltung“.
 export const BERUFSFELDER = [
-  { slug: 'finanzen', name: 'Finanzen & Kämmerei', woerter: ['kämmer', 'finanz', 'haushalt', 'steuer', 'kasse', 'rechnungswesen', 'rechnungsprüf', 'controlling', 'buchhalt', 'beteiligung', 'abgaben', 'vollstreck', 'kalkulation', 'doppik', 'anlagenbuchhalt', 'fördermittel'] },
+  { slug: 'finanzen', name: 'Finanzen & Kämmerei', woerter: ['kämmer', 'finanz', 'haushalt', /(^|[\s(\-–\/])steuer/, /(gewerbe|grund|hunde|vergnügungs|zweitwohnungs|verpackungs)steuer/, 'steueramt', 'kasse', 'rechnungswesen', 'rechnungsprüf', 'controlling', 'buchhalt', 'beteiligung', 'abgaben', 'vollstreck', 'kalkulation', 'doppik', 'anlagenbuchhalt', 'fördermittel'] },
   { slug: 'it-digitalisierung', name: 'IT & Digitalisierung', woerter: ['informatik', /\bit\b/, 'digital', 'software', 'netzwerk', 'e-government', 'datenschutz', 'informationssicherheit', 'systemadmin', 'anwendungsbetreu', 'smart city', 'cyber'] },
   { slug: 'bau-technik', name: 'Bau, Planung & Technik', woerter: ['bau', 'ingenieur', 'planung', 'architekt', 'gebäude', 'liegenschaft', 'vermess', 'straßen', 'tiefbau', 'hochbau', 'umwelt', 'klimaschutz', 'stadtentwicklung', 'techni', 'abwasser', 'wasserwirtschaft', 'verkehr', 'grünflächen', 'energie'] },
   { slug: 'soziales-jugend', name: 'Soziales, Jugend & Bildung', woerter: ['jugend', 'sozial', 'kita', 'kindertages', 'eingliederung', 'teilhabe', 'familie', 'schul', 'bildung', 'pflege', 'gesundheit', 'senioren', 'integration', 'asyl', 'jobcenter', 'erzieh'] },
