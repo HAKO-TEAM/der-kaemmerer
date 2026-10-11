@@ -4,6 +4,8 @@ organisation: "Eigenbetrieb Bau, Vermögen und Informationstechnik Rhein-Neckar-
 orgtyp: "Eigenbetrieb"
 ort: "Heidelberg"
 bundesland: "Baden-Württemberg"
+strasse: "Im Breitspiel 5"
+plz: "69126"
 entgelt: "EG 13 TVöD"
 beschaeftigung: "Vollzeit"
 befristung: "unbefristet"

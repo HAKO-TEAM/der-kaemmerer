@@ -4,6 +4,8 @@ organisation: "Stadt Neustadt an der Weinstraße – Eigenbetrieb Stadtentsorgun
 orgtyp: "Eigenbetrieb"
 ort: "Neustadt an der Weinstraße"
 bundesland: "Rheinland-Pfalz"
+strasse: "Marktplatz 1"
+plz: "67433"
 entgelt: "EG 9a TVöD"
 beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "unbefristet"

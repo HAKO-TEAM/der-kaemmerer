@@ -4,6 +4,8 @@ organisation: "Landschaftsverband Westfalen-Lippe – Kommunale Versorgungskasse
 orgtyp: "Kommunalverband"
 ort: "Münster"
 bundesland: "Nordrhein-Westfalen"
+strasse: "Zumsandestraße 12"
+plz: "48145"
 entgelt: "A 9 / A 10 LBesG NRW bzw. EG 9c TVöD VKA"
 beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "unbefristet"

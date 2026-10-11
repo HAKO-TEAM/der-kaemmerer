@@ -4,6 +4,8 @@ organisation: "DA-Di-Werk – Eigenbetrieb für Gebäudemanagement des Landkreis
 orgtyp: "Eigenbetrieb"
 ort: "Darmstadt"
 bundesland: "Hessen"
+strasse: "Rheinstraße 91"
+plz: "64295"
 entgelt: "EG 10 TVöD-VKA"
 beschaeftigung: "Vollzeit"
 befristung: "Befristet (2 Jahre)"

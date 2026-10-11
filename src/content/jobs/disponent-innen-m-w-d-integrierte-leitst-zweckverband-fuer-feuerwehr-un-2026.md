@@ -4,6 +4,8 @@ organisation: "Zweckverband für Feuerwehr- und Rettungsdienstalarmierung Bamber
 orgtyp: "Zweckverband"
 ort: "Bamberg"
 bundesland: "Bayern"
+strasse: "Paradiesweg 1"
+plz: "96049"
 entgelt: "Vergütung nach Haustarifvertrag (Portalangabe 3.000–5.000 € brutto/Monat)"
 beschaeftigung: "Vollzeit (39 Std.)"
 befristung: "Unbefristet"

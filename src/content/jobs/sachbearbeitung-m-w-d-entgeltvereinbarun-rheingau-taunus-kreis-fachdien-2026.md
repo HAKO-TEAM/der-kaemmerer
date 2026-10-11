@@ -4,6 +4,8 @@ organisation: "Rheingau-Taunus-Kreis – Fachdienst Planung, Verhandlung, Aufsic
 orgtyp: "Landkreis"
 ort: "Bad Schwalbach"
 bundesland: "Hessen"
+strasse: "Heimbacher Straße 7"
+plz: "65307"
 entgelt: "EG 11 TVöD bzw. S 17 TVöD"
 beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "unbefristet"

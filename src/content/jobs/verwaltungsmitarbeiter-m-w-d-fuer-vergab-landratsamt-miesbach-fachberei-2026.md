@@ -4,6 +4,8 @@ organisation: "Landratsamt Miesbach – Fachbereich Z 2 Kreisfinanzen und Beteil
 orgtyp: "Landkreis"
 ort: "Miesbach"
 bundesland: "Bayern"
+strasse: "Rosenheimer Straße 1-3"
+plz: "83714"
 entgelt: "EG 11 TVöD VKA"
 beschaeftigung: "Vollzeit oder Teilzeit"
 befristung: "unbefristet"

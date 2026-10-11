@@ -4,6 +4,8 @@ organisation: "Stadtverwaltung Suhl – Eigenbetrieb Kommunalwirtschaftliche Die
 orgtyp: "Eigenbetrieb"
 ort: "Suhl"
 bundesland: "Thüringen"
+strasse: "Marktplatz 1"
+plz: "98527"
 entgelt: "EG 11 TVöD"
 beschaeftigung: "Vollzeit"
 befristung: "unbefristet"

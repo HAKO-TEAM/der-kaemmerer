@@ -4,6 +4,8 @@ organisation: "KommZB – Kommunaler Zweckverband zur Koordinierung und Beratung
 orgtyp: "Zweckverband"
 ort: "Mainz"
 bundesland: "Rheinland-Pfalz"
+strasse: "Hindenburgstraße 32"
+plz: "55118"
 entgelt: "EG 9c TVöD-VKA"
 beschaeftigung: "Teilzeit oder Vollzeit (50–100 %)"
 befristung: "unbefristet"

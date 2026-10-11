@@ -4,6 +4,8 @@ organisation: "Bezirksamt Steglitz-Zehlendorf von Berlin – Straßen- und Grün
 orgtyp: "Bezirksamt"
 ort: "Berlin"
 bundesland: "Berlin"
+strasse: "Kirchstraße 1/3"
+plz: "14163"
 entgelt: "A 13 S / EG 13 TV-L"
 beschaeftigung: "Vollzeit (Teilzeit möglich, sofern der Arbeitsplatz ganztägig besetzt ist)"
 befristung: "unbefristet"
