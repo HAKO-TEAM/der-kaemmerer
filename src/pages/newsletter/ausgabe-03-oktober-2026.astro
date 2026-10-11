@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Base
+  title="Newsletter Ausgabe 03 · Oktober 2026 — Haushalt 2027: Die Krise wird zum Normalfall"
+  description="Der Kämmerer, Ausgabe 03, Oktober 2026: Haushaltsentwürfe 2027, 214 Haushaltssperren, Wiederbesetzungssperre, Zinsausgaben, Grundsteuer 2027, Sondervermögen und neue Daten für jede Gemeinde."
+  ogType="article"
+  datum="2026-10-12"
+>
+<Header />
+
+<style>
+  .hero { background:linear-gradient(135deg,#1a2744 0%,#0f3460 60%,#1a3a5c 100%); padding:40px 0; }
+  .hero-inner { max-width:780px; margin:0 auto; padding:0 32px; }
+  .hero-back { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#6ee7b7; margin-bottom:12px; display:block; }
+  .hero-label { font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#64748b; margin-bottom:8px; }
+  .hero h1 { font-size:24px; font-weight:800; color:#fff; line-height:1.25; letter-spacing:-.02em; margin-bottom:10px; }
+  .hero-meta { font-size:11px; color:#64748b; }
+
+  .main { max-width:780px; margin:0 auto; padding:44px 32px 64px; }
+
+  /* KPI Band */
+  .kpi-band { background:#1a2744; border-radius:6px; padding:20px 24px; margin-bottom:32px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+  .kpi-item { text-align:center; padding:0 8px; border-right:1px solid #1e3a5f; }
+  .kpi-item:last-child { border-right:none; }
+  .kpi-val { font-size:20px; font-weight:800; color:#fff; line-height:1; }
+  .kpi-label { font-size:9px; color:#64748b; margin-top:4px; line-height:1.3; }
+
+  /* Artikel */
+  .nl-section { margin-bottom:36px; }
+  .nl-ressort { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px; }
+  .nl-section h2 { font-size:18px; font-weight:800; color:#1a2744; line-height:1.3; margin-bottom:10px; letter-spacing:-.01em; }
+  .nl-section p { font-size:14px; color:#374151; line-height:1.78; margin-bottom:12px; }
+  .nl-quote { background:#fff7ed; border-left:3px solid #c2410c; padding:12px 16px; margin:16px 0; border-radius:0 4px 4px 0; font-size:13px; color:#c2410c; font-style:italic; line-height:1.65; }
+  .nl-link { font-size:11px; font-weight:700; color:#3b82f6; letter-spacing:.04em; text-decoration:none; }
+  .nl-divider { border:none; border-top:1px solid #e2e8f0; margin:32px 0; }
+
+  /* Daten Rubrik */
+  .daten-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:20px 24px; margin-bottom:32px; }
+  .daten-box h3 { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#374151; margin-bottom:14px; }
+  .daten-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .daten-col h4 { font-size:11px; font-weight:700; color:#1a2744; margin-bottom:6px; }
+  .daten-col p { font-size:11px; color:#374151; line-height:1.65; margin:0; }
+
+  /* Stellen */
+  .jobs-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:20px 24px; margin-bottom:32px; }
+  .jobs-box h3 { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#374151; margin-bottom:14px; }
+  .job-row { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid #e2e8f0; text-decoration:none; }
+  .job-row:last-of-type { border-bottom:none; }
+  .job-title { font-size:13px; font-weight:700; color:#1a2744; line-height:1.4; }
+  .job-org { font-size:11px; color:#6b7280; margin-top:2px; }
+  .job-date { font-size:11px; color:#6b7280; white-space:nowrap; }
+  .job-flat { display:inline-block; font-size:9px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:#3b82f6; border-radius:3px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
+
+  /* ASCEND CTA */
+  .ascend-box { background:#1a2744; border-radius:6px; padding:28px 32px; margin-bottom:32px; }
+  .ascend-box h3 { font-size:18px; font-weight:800; color:#fff; margin-bottom:8px; }
+  .ascend-box p { font-size:13px; color:#93c5fd; line-height:1.7; margin-bottom:16px; }
+  .ascend-btn { display:inline-block; background:#3b82f6; color:#fff; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:10px 20px; border-radius:3px; text-decoration:none; }
+  .ascend-btn:hover { background:#0f3460; }
+
+  /* Navigation */
+  .nl-nav { display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-top:1px solid #e2e8f0; margin-top:8px; }
+  .nl-nav a { font-size:11px; font-weight:700; color:#3b82f6; text-decoration:none; letter-spacing:.04em; }
+
+  @media(max-width:768px) {
+    .hero-inner, .main { padding-left:16px; padding-right:16px; }
+    .hero h1 { font-size:20px; }
+    .kpi-band { grid-template-columns:repeat(2,1fr); gap:12px; }
+    .kpi-item { border-right:none; border-bottom:1px solid #1e3a5f; padding-bottom:12px; }
+    .kpi-item:nth-child(2n) { border-bottom:none; }
+    .daten-grid { grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="/newsletter" class="hero-back">← Newsletter-Archiv</a>
+    <div class="hero-label">Ausgabe 03 · Oktober 2026</div>
+    <h1>Haushalt 2027: Die Krise wird zum Normalfall</h1>
+    <div class="hero-meta">Der Kämmerer · 12. Oktober 2026 · 6 Beiträge · Daten für jede Gemeinde · Stellenmarkt</div>
+  </div>
+</div>
+
+<main class="main">
+
+  <div class="kpi-band">
+    <div class="kpi-item"><div class="kpi-val">20,1 Mrd. €</div><div class="kpi-label">Defizit der Kommunen<br>im 1. Halbjahr 2026</div></div>
+    <div class="kpi-item"><div class="kpi-val">214</div><div class="kpi-label">Kommunen mit belegter<br>Haushaltssperre</div></div>
+    <div class="kpi-item"><div class="kpi-val">+13,1 %</div><div class="kpi-label">Zinsausgaben<br>im 1. Halbjahr 2026</div></div>
+  </div>
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#c2410c;">Haushalt · Leitthema</div>
+    <h2>Haushalt 2027: Diese Städte schaffen den Ausgleich nicht mehr</h2>
+    <p>Köln plant 811 Mio. € Minus, Stuttgart 304 Mio. €, Düsseldorf 299 Mio. €. Die Entwürfe für 2027 zeigen, wie breit die Krise inzwischen reicht – auch in Städten, die lange als solide galten.</p>
+    <a href="/haushalt/haushalt-2027-staedte-defizite/" class="nl-link">Analyse lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#1e40af;">Haushalt</div>
+    <h2>Haushaltssperre 2026: die Liste mit Rechtsgrundlagen</h2>
+    <p>Was gesperrt wird, was weiterläuft und was Kämmereien jetzt regeln. Dazu das <a href="/haushaltssperren/">Verzeichnis aller 214 belegten Fälle</a> mit Karte und Quelle je Kommune.</p>
+    <a href="/haushalt/haushaltssperre-2026-stadte/" class="nl-link">Beitrag lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#065f46;">Praxis · Personal</div>
+    <h2>Wiederbesetzungssperre: was sie wirklich spart</h2>
+    <p>Karlsruhe plant 12 Mio. € aus der Stellenbesetzungssperre ein, Münster besetzt nur noch Unverzichtbares. Fälle, Ausnahmen und Praxisregeln für die Personalsteuerung.</p>
+    <a href="/praxis/wiederbesetzungssperre-2026-staedte-personal/" class="nl-link">Beitrag lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#7c2d12;">Ausgaben</div>
+    <h2>Zinsen: die neue Ausgabenfalle</h2>
+    <p>2,4 Mrd. € Zinsausgaben im ersten Halbjahr, fünfmal so schnell gestiegen wie die Gesamtausgaben. Welche Städte die Kassenkredite am stärksten spüren und welche Gegenmittel greifen.</p>
+    <a href="/ausgaben/zinsausgaben-kommunen-2026/" class="nl-link">Beitrag lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#065f46;">Einnahmen</div>
+    <h2>Grundsteuer 2027: die nächste Hebesatzwelle</h2>
+    <p>Mainz plant 600 statt 480 Punkte, Dresden 515 statt 400. Liste, Rechnung und was 100 Punkte im eigenen Haushalt bringen.</p>
+    <a href="/einnahmen/grundsteuer-hebesatz-erhoehungen-2027/" class="nl-link">Beitrag lesen →</a>
+  </div>
+
+  <hr class="nl-divider">
+
+  <div class="nl-section">
+    <div class="nl-ressort" style="color:#1e40af;">Haushalt</div>
+    <h2>Sondervermögen: was bei den Kommunen ankommt</h2>
+    <p>Rheinland-Pfalz gibt 72 % an seine Kommunen weiter, Thüringen 43 %. Der Ländervergleich für die Planung 2027.</p>
+    <a href="/haushalt/sondervermoegen-infrastruktur-kommunen-laenderquote/" class="nl-link">Beitrag lesen →</a>
+  </div>
+
+  <div class="daten-box">
+    <h3>Neu: Daten für jede Gemeinde</h3>
+    <div class="daten-grid">
+      <div class="daten-col"><h4><a href="/ranglisten/">Ranglisten</a></h4><p>Hebesätze und Schulden bundesweit und je Land.</p></div>
+      <div class="daten-col"><h4><a href="/kreise/">Landkreise</a></h4><p>Alle 294 Kreise mit ihren Gemeinden im Vergleich.</p></div>
+      <div class="daten-col"><h4><a href="/haushaltslage/">Haushaltslage je Land</a></h4><p>Kassenkredite, Landesprogramme, Ländervergleich.</p></div>
+      <div class="daten-col"><h4><a href="/haushaltslage-nrw/">Haushaltslage NRW</a></h4><p>8 von 396 Gemeinden mit echtem Ausgleich.</p></div>
+      <div class="daten-col"><h4><a href="/gehalt/">TVöD-Tabelle 2026</a></h4><p>Je Entgeltgruppe Stufen, Vollkosten und offene Stellen.</p></div>
+      <div class="daten-col"><h4><a href="/lexikon/">Lexikon Kommunalfinanzen</a></h4><p>44 Begriffe mit aktuellen Zahlen.</p></div>
+      <div class="daten-col"><h4><a href="/gemeinden/">Gemeindeprofile</a></h4><p>Jede der 10.747 Gemeinden mit Gewerbe- und Grundsteuer-Rechner.</p></div>
+    </div>
+  </div>
+
+  <div class="ascend-box">
+    <h3>Stellenmarkt</h3>
+    <p>4.989 offene Stellen kommunaler Arbeitgeber, täglich aktualisiert – von der Kämmerei bis zur Amtsleitung.</p>
+    <a href="/stellen/" class="ascend-btn">Zum Stellenmarkt →</a>
+  </div>
+
+  <div class="nl-nav">
+    <a href="/newsletter/ausgabe-02-oktober-2026">← Ausgabe 02</a>
+    <a href="/newsletter">Alle Ausgaben</a>
+  </div>
+
+</main>
+<Footer />
+</Base>
