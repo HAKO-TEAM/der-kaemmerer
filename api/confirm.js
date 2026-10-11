@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
   if (!email || !KEY) return res.redirect(302, '/danke/');
   if (![BRIEFING, DK].includes(LIST_ID) || sig !== signatur(email, LIST_ID, KEY)) {
-    return res.redirect(302, '/newsletter/?bestaetigung=ungueltig#anmelden');
+    return res.redirect(302, LIST_ID === DK ? '/dienst-karriere/?bestaetigung=ungueltig' : '/newsletter/?bestaetigung=ungueltig#anmelden');
   }
   try {
     const h = { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' };
