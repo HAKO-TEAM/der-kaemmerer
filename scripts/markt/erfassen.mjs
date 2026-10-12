@@ -204,7 +204,12 @@ const t0 = Date.now();
 const alle = [...await interamt(), ...await karriereNrw()];
 // Dubletten über Quellen hinweg (gleiche Behörde + gleicher Titel)
 const gesehen = new Set();
-const stellen = alle.filter((s) => { const k = norm(s.o) + '|' + norm(s.t); if (gesehen.has(k)) return false; gesehen.add(k); return true; })
+// Arbeitgeber, die keine Veröffentlichung auf derkaemmerer.de wünschen (src/data/anzeigen-ausschluss.txt, MK 12.10.2026)
+const AUSSCHLUSS_DATEI = new URL('../../src/data/anzeigen-ausschluss.txt', import.meta.url);
+const ausschluss = new Set((existsSync(AUSSCHLUSS_DATEI) ? readFileSync(AUSSCHLUSS_DATEI, 'utf8').split('\n') : [])
+  .map((z) => z.trim()).filter((z) => z && !z.startsWith('#')).map((z) => z.toLowerCase().replace(/\s+/g, ' ')));
+const stellen = alle.filter((s) => !ausschluss.has((s.o || '').trim().toLowerCase().replace(/\s+/g, ' ')))
+  .filter((s) => { const k = norm(s.o) + '|' + norm(s.t); if (gesehen.has(k)) return false; gesehen.add(k); return true; })
   .sort((a, b) => a.id.localeCompare(b.id));
 const wa = verlauf(stellen);
 
