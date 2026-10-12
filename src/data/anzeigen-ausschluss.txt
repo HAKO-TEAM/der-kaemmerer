@@ -4,3 +4,8 @@
 Stadtverwaltung Ingelheim am Rhein
 # 2026-10-12 Ilm-Kreis: „Bitte löschen Sie unsere Ausschreibung bei ihnen“
 Landkreis Ilm-Kreis
+# 2026-10-07 Main-Kinzig-Kreis: Herausnahme + Abmeldung (nachgetragen 12.10.2026)
+Main-Kinzig-Kreis
+Main-Kinzig-Kreis, Jugendamt
+# 2026-10-07 Stadt Neuenburg am Rhein: Herausnahme + Abmeldung (nachgetragen 12.10.2026)
+Stadt Neuenburg am Rhein
