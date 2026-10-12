@@ -1,0 +1,18 @@
+---
+// Ziel des Abmeldelinks im Job-Alert (api/jobalert-abmelden.js)
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+<Base title="Job-Alert abbestellt" noindex={true}>
+<Header />
+<div style="background:#f8fafc;padding:80px 0;text-align:center;">
+  <div style="max-width:620px;margin:0 auto;padding:0 32px;">
+    <h1 style="font-size:28px;font-weight:800;color:#1a2744;margin-bottom:12px;">Job-Alert abbestellt</h1>
+    <p style="font-size:15px;color:#374151;line-height:1.7;margin-bottom:24px;">Ihr Job-Alert ist beendet. Alle Stellen finden Sie weiterhin in der Stellenbörse, und einen neuen Job-Alert mit anderem Wunsch legen Sie jederzeit wieder an.</p>
+    <a href="/stellen/" style="display:inline-block;background:#1a2744;color:#fff;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 20px;border-radius:3px;text-decoration:none;">Zur Stellenbörse</a>
+    <a href="/stellen/job-alert/" style="display:inline-block;color:#1a2744;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 14px;text-decoration:none;">Neuer Job-Alert</a>
+  </div>
+</div>
+<Footer />
+</Base>

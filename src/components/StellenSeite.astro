@@ -3,6 +3,7 @@
 import Base from '../layouts/Base.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import JobAlert from './JobAlert.astro';
 import markt from '../data/markt/markt.json';
 import { ueberblick, niveauText } from '../lib/markt/benchmark.mjs';
 import { FELDER, LAENDER, type Stelle } from '../lib/stellen';
@@ -225,6 +226,9 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
         {seite < seiten && <a href={seitenUrl(seite + 1)} rel="next">Weiter →</a>}
       </nav>
     )}
+
+    <JobAlert land={laender.find((l) => l.slug === aktivLand)?.name || ''} feld={aktivFeld || ''}
+      titel={`Job-Alert${aktivFeld ? ': ' + (felder.find((f) => f.slug === aktivFeld)?.name || '') : ''}${aktivLand ? ' in ' + (laender.find((l) => l.slug === aktivLand)?.name || '') : ''} – neue Stellen per Mail`} />
 
     <div class="st-cta">
       <p><strong>Ihre Stelle noch nicht dabei?</strong><br>Mit der KommunalFlat sind alle Ihre Ausschreibungen sofort online – inklusive Personal-Cockpit und Arbeitgeberprofil.</p>

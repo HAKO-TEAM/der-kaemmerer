@@ -1,0 +1,79 @@
+---
+// Job-Alert: wöchentliche Mail mit neuen Stellen nach Bundesland, PLZ-Region und Berufsfeld (Double-Opt-in über Brevo,
+// Versand api/jobalert-versand.js). Vorbelegung je Seite über land/feld; mehrfach je Seite möglich (eigene id).
+import { BERUFSFELDER, ALLGEMEIN } from '../data/berufsfelder.mjs';
+interface Props { land?: string; feld?: string; titel?: string; id?: string; schmal?: boolean }
+const { land = '', feld = '', titel = 'Job-Alert: neue Stellen per Mail', id = 'ja', schmal = false } = Astro.props;
+const LAENDER = ['Baden-Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg', 'Hessen', 'Mecklenburg-Vorpommern',
+  'Niedersachsen', 'Nordrhein-Westfalen', 'Rheinland-Pfalz', 'Saarland', 'Sachsen', 'Sachsen-Anhalt', 'Schleswig-Holstein', 'Thüringen'];
+const felder = [...BERUFSFELDER, ALLGEMEIN];
+const aktiv = Boolean(process.env.BREVO_LIST_ID_DK || import.meta.env.BREVO_LIST_ID_DK);
+---
+{aktiv && (
+<section class:list={['ja', { schmal }]} data-ja={id}>
+  <div class="ja-kopf">
+    <h2>{titel}</h2>
+    <p>Jeden Montag die neuen Ausschreibungen von Kommunen, Kreisen und Zweckverbänden – passend zu Region und Berufsfeld. Kostenlos, mit einem Klick abbestellbar.</p>
+  </div>
+  <form class="ja-form">
+    <label>Bundesland
+      <select name="land">
+        <option value="">bundesweit</option>
+        {LAENDER.map((l) => <option value={l} selected={l === land}>{l}</option>)}
+      </select>
+    </label>
+    <label>PLZ-Region <small>(optional, erste zwei Ziffern)</small>
+      <input name="plz" inputmode="numeric" pattern="[0-9]{2}" maxlength="2" placeholder="z. B. 01" />
+    </label>
+    <fieldset><legend>Berufsfelder <small>(keine Auswahl = alle)</small></legend>
+      {felder.map((f) => <label class="ja-check"><input type="checkbox" name="felder" value={f.slug} checked={f.slug === feld} />{f.name}</label>)}
+    </fieldset>
+    <div class="ja-zeile">
+      <input type="email" name="email" required placeholder="E-Mail-Adresse" autocomplete="email" />
+      <button type="submit">Job-Alert anlegen</button>
+    </div>
+    <p class="ja-hin">Mit der Anmeldung speichern wir E-Mail-Adresse und Ihren Wunsch für den Versand (Einwilligung, jederzeit widerrufbar). <a href="/datenschutz/">Datenschutz</a></p>
+  </form>
+  <p class="ja-ok" hidden>Fast geschafft: Bitte bestätigen Sie den Job-Alert über den Link in der E-Mail, die wir Ihnen gerade geschickt haben.</p>
+  <p class="ja-fehler" role="alert" hidden>Die Anmeldung ist gerade fehlgeschlagen. Bitte erneut versuchen oder eine kurze Nachricht an redaktion@derkaemmerer.de senden.</p>
+</section>
+)}
+<script>
+document.querySelectorAll<HTMLElement>('section.ja').forEach((sek) => {
+  const f = sek.querySelector('form')!;
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = f.querySelector('button')!; btn.disabled = true;
+    const d = new FormData(f);
+    try {
+      const r = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: d.get('email'), liste: 'job-alert', land: d.get('land'), plz: d.get('plz'), felder: d.getAll('felder') }) });
+      if (!r.ok) throw new Error(String(r.status));
+      f.hidden = true; (sek.querySelector('.ja-fehler') as HTMLElement).hidden = true; (sek.querySelector('.ja-ok') as HTMLElement).hidden = false;
+      (window as any).va?.('event', { name: 'Job-Alert angelegt', data: { herkunft: location.pathname } });
+    } catch { btn.disabled = false; (sek.querySelector('.ja-fehler') as HTMLElement).hidden = false; }
+  });
+});
+</script>
+<style>
+.ja, .ja * { box-sizing:border-box; }
+.ja-form > label, .ja-zeile input { min-width:0; } .ja-form select, .ja-form input[name=plz] { width:100%; max-width:100%; }
+.ja { background:#eff6ff; border:1.5px solid #bfdbfe; border-radius:10px; padding:22px 24px; margin:28px 0; color:#0f172a; }
+.ja h2 { font-family:'Playfair Display',Georgia,serif; font-size:21px; margin:0 0 6px; color:#1a2744; }
+.ja-kopf p { margin:0 0 14px; font-size:14px; color:#374151; line-height:1.55; }
+.ja-form { display:grid; grid-template-columns:1fr 1fr; gap:12px 16px; }
+.ja-form > label { display:flex; flex-direction:column; gap:4px; font-size:13px; font-weight:600; color:#1a2744; }
+.ja-form small { font-weight:400; color:#64748b; }
+.ja-form select, .ja-form input[name=plz], .ja-zeile input { padding:9px 11px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; background:#fff; }
+.ja-form fieldset { grid-column:1 / -1; border:0; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:6px 14px; }
+.ja-form legend { font-size:13px; font-weight:600; color:#1a2744; margin-bottom:6px; }
+.ja-check { font-size:14px; display:flex; align-items:center; gap:6px; }
+.ja-zeile { grid-column:1 / -1; display:flex; gap:8px; flex-wrap:wrap; }
+.ja-zeile input { flex:1; min-width:200px; }
+.ja-zeile button { background:#1a2744; color:#fff; border:0; border-radius:6px; padding:10px 18px; font-weight:700; cursor:pointer; }
+.ja-zeile button:hover { background:#2563eb; }
+.ja-hin { grid-column:1 / -1; margin:0; font-size:12px; color:#64748b; } .ja-hin a { color:#2563eb; }
+.ja-ok { margin:0; font-weight:600; color:#166534; } .ja-fehler { margin:0; color:#b91c1c; }
+.ja.schmal .ja-form { grid-template-columns:1fr; } .ja.schmal .ja-form fieldset { flex-direction:column; }
+@media (max-width:640px) { .ja-form { grid-template-columns:1fr; } .ja { padding:18px 16px; } }
+</style>

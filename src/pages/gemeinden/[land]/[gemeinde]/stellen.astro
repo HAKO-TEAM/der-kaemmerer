@@ -13,6 +13,7 @@ import hsNw from '../../../../data/spiegel/haushaltsstatus_nw.json';
 import schulden from '../../../../data/spiegel/schulden.json';
 import { STUFEN, UEBERSCHULDUNG } from '../../../../lib/haushaltsstatus.mjs';
 import { kommunenMitSperre } from '../../../../lib/sperren-karte.mjs';
+import JobAlert from '../../../../components/JobAlert.astro';
 import { verzeichnis, gemeindeUrl, LAND_LANG, LAND_SLUG, imLand } from '../../../../lib/gemeinden.mjs';
 import { stellenJeGemeinde } from '../../../../lib/stellen-ort.mjs';
 import { km, niveauText, FELD_NAMEN } from '../../../../lib/markt/benchmark.mjs';
@@ -184,6 +185,8 @@ const org = { '@context': 'https://schema.org', '@type': 'GovernmentOrganization
         </div>
       </section>
     )}
+
+    <JobAlert land={landLang} titel={`Job-Alert: neue Stellen in ${landLang} per Mail`} />
 
     <section class="st-ab">
       <h2>{eigenOrg} als Arbeitgeber</h2>

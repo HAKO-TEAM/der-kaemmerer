@@ -82,7 +82,7 @@ for (const s of markt.stellen) if (!stellen.has(s.id)) stellen.set(s.id, { titel
 
 const ressort = (h) => (!h ? 'unbekannt' : h.startsWith('/dienst-karriere') ? 'Dienst & Karriere' : h.startsWith('/stellen') ? 'Stellenbörse'
   : h.startsWith('/gemeinden') ? 'Gemeindeseiten' : h.startsWith('/gehalt') ? 'TVöD-Tabelle' : h === '/' ? 'Startseite' : 'übrige Seiten');
-const idAusPfad = (p) => (p.match(/^\/stellen\/(?!seite\/|bundesland\/|berufsfeld\/)([a-z0-9-]+)\/?$/) || [])[1] || null;
+const idAusPfad = (p) => (p.match(/^\/stellen\/(?!seite\/|bundesland\/|berufsfeld\/|job-alert\b)([a-z0-9-]+)\/?$/) || [])[1] || null;
 
 const proStelle = new Map();
 const stelle = (id) => {

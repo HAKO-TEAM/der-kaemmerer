@@ -1,0 +1,21 @@
+---
+// Bestätigungsseite Job-Alert (Ziel von /api/confirm mit art=jobalert)
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+<Base title="Job-Alert bestätigt" noindex={true}>
+<Header />
+<div style="background:linear-gradient(135deg,#172840 0%,#1a2744 60%,#0f3460 100%);padding:80px 0;text-align:center;">
+  <div style="max-width:620px;margin:0 auto;padding:0 32px;">
+    <div style="font-size:48px;margin-bottom:16px;color:#fff;">✓</div>
+    <h1 style="font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;">Job-Alert bestätigt</h1>
+    <p style="font-size:15px;color:#cbd5e1;line-height:1.7;margin-bottom:24px;">
+      Ab dem nächsten Montag erhalten Sie die neuen Ausschreibungen zu Ihrem Wunsch per Mail – nur in Wochen mit passenden neuen Stellen. Abbestellen geht jederzeit mit einem Klick in jeder Mail.
+    </p>
+    <a href="/stellen/" style="display:inline-block;background:#93c5fd;color:#172840;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 20px;border-radius:3px;text-decoration:none;">Zu den Stellen</a>
+    <a href="/dienst-karriere/rechner/tvoed-netto/" style="display:inline-block;color:#cbd5e1;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:10px 14px;text-decoration:none;">TVöD-Nettorechner</a>
+  </div>
+</div>
+<Footer />
+</Base>

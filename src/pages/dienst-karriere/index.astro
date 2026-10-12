@@ -5,6 +5,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import DkKopf from '../../components/DkKopf.astro';
 import DkNewsletter from '../../components/DkNewsletter.astro';
+import JobAlert from '../../components/JobAlert.astro';
 import { RESSORT, BEREICHE, RECHNER } from '../../data/dienst-karriere.mjs';
 import { aktiveStellen } from '../../lib/stellen';
 import { dkArtikel } from '../../lib/dienst-karriere';
@@ -54,6 +55,7 @@ const fmt = (d: string) => new Date(d).toLocaleDateString('de-DE', { day: '2-dig
     </section>
   )}
 
+  <JobAlert />
   <DkNewsletter />
 </main>
 <Footer />

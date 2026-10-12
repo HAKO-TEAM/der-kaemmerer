@@ -1,0 +1,35 @@
+---
+// Job-Alert-Seite: Anmeldung zur wöchentlichen Stellen-Mail (auch Ziel von „Wunsch ändern“ in jeder Mail).
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import JobAlert from '../../../components/JobAlert.astro';
+import { aktiveStellen } from '../../../lib/stellen';
+const stellen = await aktiveStellen();
+const woche = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+const neu = stellen.filter((s) => String(s.data.datum) >= woche).length;
+const titel = 'Job-Alert öffentlicher Dienst: neue Stellen bei Kommunen per Mail';
+---
+<Base title={titel} description="Kostenloser Job-Alert für Stellen im öffentlichen Dienst: jeden Montag die neuen Ausschreibungen von Kommunen, Kreisen und Zweckverbänden – nach Bundesland, PLZ-Region und Berufsfeld." canonical="https://derkaemmerer.de/stellen/job-alert/">
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<div style="background:#172840;color:#fff;padding:40px 0 34px;border-bottom:3px solid #2563eb">
+  <div style="max-width:860px;margin:0 auto;padding:0 24px">
+    <div style="font-size:13px;color:#93c5fd"><a href="/stellen/" style="color:#93c5fd">Stellenbörse</a> › Job-Alert</div>
+    <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:34px;margin:10px 0 10px;line-height:1.2">Job-Alert: neue Stellen im öffentlichen Dienst per Mail</h1>
+    <p style="color:#cbd5e1;font-size:16px;line-height:1.6;margin:0">{stellen.length} laufende Ausschreibungen von Städten, Gemeinden, Kreisen und Zweckverbänden, {neu} davon neu in den letzten sieben Tagen. Der Job-Alert schickt Ihnen jeden Montag die neuen Stellen, die zu Ihrem Wunsch passen.</p>
+  </div>
+</div>
+<div style="max-width:860px;margin:0 auto;padding:0 24px 50px">
+  <JobAlert titel="Ihr Job-Alert" id="seite" />
+  <h2 style="font-family:'Playfair Display',Georgia,serif;color:#1a2744">So funktioniert es</h2>
+  <ul style="line-height:1.8;color:#374151">
+    <li>Bundesland, auf Wunsch eine PLZ-Region und Berufsfelder wählen – oder alles offen lassen für alle Stellen.</li>
+    <li>Anmeldung per Link in der Bestätigungsmail abschließen.</li>
+    <li>Jeden Montag kommen die neuen Ausschreibungen der Woche, mit Entgeltgruppe und Bewerbungsschluss – nur in Wochen mit passenden neuen Stellen.</li>
+    <li>Jede Mail enthält einen Link zum Abbestellen und zum Ändern des Wunsches.</li>
+  </ul>
+  <p style="color:#374151">Was eine Stelle netto bringt, zeigt der <a href="/dienst-karriere/rechner/tvoed-netto/" style="color:#2563eb">TVöD-Nettorechner</a>; alle Entgeltgruppen stehen in der <a href="/gehalt/" style="color:#2563eb">TVöD-Tabelle 2026</a>.</p>
+</div>
+<Footer />
+</Base>

@@ -114,7 +114,7 @@ const isoZeit = (d?: string) => (d ? `${d}T06:00:00+02:00` : undefined);
       if (!a) return;
       var herkunft = location.pathname;
       if (a.dataset.bewerbung) { window.va('event', { name: 'Zur Bewerbung', data: { stelle: a.dataset.bewerbung, herkunft: herkunft } }); return; }
-      var m = (a.getAttribute('href') || '').match(/^\/stellen\/(?!seite\/|bundesland\/|berufsfeld\/)([a-z0-9-]+)\/?$/);
+      var m = (a.getAttribute('href') || '').match(/^\/stellen\/(?!seite\/|bundesland\/|berufsfeld\/|job-alert\b)([a-z0-9-]+)\/?$/);
       if (m) window.va('event', { name: 'Stelle geöffnet', data: { stelle: m[1], herkunft: herkunft } });
     }, true);
   </script>

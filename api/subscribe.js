@@ -3,7 +3,8 @@ import { createHmac } from 'node:crypto';
 // Newsletter-Anmeldung (Double-Opt-in über Brevo).
 // Optional aus dem Lagebericht: Kommune, AGS und persönlicher Link werden als Kontaktmerkmale gespeichert,
 // damit der Monatsversand jedem Abonnenten seinen eigenen Lagebericht schicken kann.
-const ATTRIBUTE = ['KOMMUNE', 'AGS', 'LAGEBERICHT', 'QUELLE'];
+import { LAENDER, FELDER } from './_jobalert.js';
+const ATTRIBUTE = ['KOMMUNE', 'AGS', 'LAGEBERICHT', 'QUELLE', 'JOBALERT', 'JA_LAND', 'JA_PLZ', 'JA_FELDER'];
 let attributeAngelegt = false;
 
 export function signatur(email, list, key) {
@@ -36,12 +37,13 @@ async function kontaktSchreiben(KEY, email, attributes) {
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { email, lagebericht, kommune, ags, liste = 'kaemmerer' } = req.body || {};
+  const { email, lagebericht, kommune, ags, liste = 'kaemmerer', land, plz, felder } = req.body || {};
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ error: 'Ungültige E-Mail' });
 
   const KEY     = process.env.BREVO_API_KEY;
   // Listen: kaemmerer = Kämmerer-Briefing (Standard); dienst-karriere = Ressort-Newsletter (Phase 4.5, Env BREVO_LIST_ID_DK)
-  const LISTEN = { kaemmerer: process.env.BREVO_LIST_ID || '2', 'dienst-karriere': process.env.BREVO_LIST_ID_DK };
+  // job-alert = wöchentliche Stellen-Mail nach Wunsch; nur Merkmal JOBALERT=ja (keine Listenaufnahme), Prüfsumme über die DK-Liste
+  const LISTEN = { kaemmerer: process.env.BREVO_LIST_ID || '2', 'dienst-karriere': process.env.BREVO_LIST_ID_DK, 'job-alert': process.env.BREVO_LIST_ID_DK };
   if (!(liste in LISTEN)) return res.status(400).json({ error: 'Unbekannte Liste' });
   const LIST_ID = parseInt(LISTEN[liste] || '');
   const TPL_ID  = parseInt(process.env.BREVO_DOI_TEMPLATE || '1');
@@ -52,6 +54,12 @@ export default async function handler(req, res) {
 
   const token = /^[a-f0-9]{16}$/.test(lagebericht || '') ? lagebericht : null;
   const attributes = { QUELLE: token ? 'Lagebericht' : 'Website' };
+  if (liste === 'job-alert') {
+    // Wunsch erst mit der Bestätigung aktiv: JOBALERT steht bis dahin auf „offen“
+    Object.assign(attributes, { QUELLE: 'Job-Alert', JOBALERT: 'offen',
+      JA_LAND: LAENDER.includes(land) ? land : '', JA_PLZ: /^\d{2}/.test(plz || '') ? String(plz).slice(0, 2) : '',
+      JA_FELDER: (Array.isArray(felder) ? felder : []).filter((f) => f in FELDER).join(',') });
+  }
   if (token) {
     attributes.LAGEBERICHT = `https://derkaemmerer.de/spiegel/${token}/`;
     if (typeof kommune === 'string') attributes.KOMMUNE = kommune.slice(0, 120);
@@ -69,7 +77,7 @@ export default async function handler(req, res) {
       headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
       body: JSON.stringify({
         to: [{ email }], templateId: TPL_ID,
-        params: { CONFIRM_URL: `https://derkaemmerer.de/api/confirm?email=${encodeURIComponent(email)}&list=${LIST_ID}&sig=${sig}` },
+        params: { CONFIRM_URL: `https://derkaemmerer.de/api/confirm?email=${encodeURIComponent(email)}&list=${LIST_ID}&sig=${sig}${liste === 'job-alert' ? '&art=jobalert' : ''}` },
       }),
     });
     if (!r.ok) throw new Error('Bestätigungsmail nicht versendet: ' + r.status + ' ' + JSON.stringify(await r.json().catch(() => ({}))));

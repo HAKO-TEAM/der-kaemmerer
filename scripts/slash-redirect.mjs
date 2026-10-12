@@ -31,5 +31,7 @@ if (!config.routes.some((r) => r.src === regel.src)) {
   const i = config.routes.findIndex((r) => r.handle === 'filesystem');
   config.routes.splice(i < 0 ? 0 : i, 0, regel);
 }
+// Job-Alert: wöchentlicher Versand Montag 05:00 UTC (Vercel-Cron, auch hier eingetragen, weil die Build-Ausgabe vercel.json überdeckt)
+config.crons = [{ path: '/api/jobalert-versand', schedule: '0 5 * * 1' }];
 writeFileSync(datei, JSON.stringify(config, null, 2));
 console.log('slash-redirect: Weiterleitung auf Schrägstrich eingetragen');
