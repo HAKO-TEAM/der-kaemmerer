@@ -1,0 +1,77 @@
+{
+  "slug": "schweinfurt",
+  "name": "Stadt Schweinfurt",
+  "bundesland": "Bayern",
+  "einwohner": 54539,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Ralf Hofmann",
+  "token": "499d74bb43de079b",
+  "claim": "Ein Oberzentrum am Main mit über 1.200 Kolleginnen und Kollegen mitgestalten.",
+  "beschreibung": "Schweinfurt ist kreisfreie Stadt und Oberzentrum in Unterfranken, Industrie- und Hafenstadt am Main und Sitz des Landratsamts Schweinfurt. Die Stadt wurde 791 erstmals urkundlich erwähnt. Mit über 1.200 Mitarbeitenden verantwortet die Stadtverwaltung ein breites Spektrum von Recht und Ordnung, Soziales und Jugend über Umwelt- und Stadtentwicklung, Finanzen und Wirtschaftsförderung bis zu Bildung, Sport, Kunst und Kultur. Beschäftigte bringen hier ihre Ideen ein und gestalten das Zusammenleben in der Stadt aktiv mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "54.539",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "über 1.200",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "791",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisfreie Stadt, Oberzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "15",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Sicherer Arbeitsplatz im öffentlichen Dienst mit Standortgarantie und ein vielfältiges, abwechslungsreiches Aufgabengebiet."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung und leistungsorientierte Prämien."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Urlaubstage (ab 2027: 31) plus Heiligabend und Silvester als zusätzliche freie Tage."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Vollständig arbeitgeberfinanzierte Altersversorgung mit Aufstockungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobiles Arbeiten und Mobilität",
+      "beschreibung": "Mobiles Arbeiten sowie 50 % Fahrtkostenzuschuss für ÖPNV-Tickets."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Zuschüsse für Kurse an der städtischen VHS zur Förderung der mentalen und körperlichen Gesundheit."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal- und Organisationsamt",
+    "email": "birgit.seufert@schweinfurt.de",
+    "telefon": "09721 51-2762",
+    "bewerbungsportal": "https://www.schweinfurt.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Ersterwähnung 791, Oberzentrum, Stadtteile, Oberbürgermeister: de.wikipedia.org/wiki/Schweinfurt (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Schweinfurt, Sachgebietsleitung Verkehrswesen https://interamt.de/koop/app/stelle?id=1497376 (API api.interamt.de/query/stellenangebot/1497376) (abgerufen 12.10.2026); Mitarbeitendenzahl ebenda"
+  ]
+}

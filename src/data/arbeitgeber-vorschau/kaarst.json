@@ -1,0 +1,84 @@
+{
+  "slug": "kaarst",
+  "token": "a7c21a1750b17e35",
+  "name": "Stadt Kaarst",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 43350,
+  "beamteUndBeschaeftigte": "rund 600 Mitarbeitende",
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Christian Horn-Heinemann",
+  "claim": "Eine aufstrebende, familienfreundliche Stadt im Rhein-Kreis Neuss mitgestalten.",
+  "beschreibung": "Kaarst ist eine aufstrebende mittlere kreisangehörige Stadt im Rhein-Kreis Neuss mit attraktivem Bildungs- und Freizeitangebot; der Stadtteil Büttgen wurde bereits 793 erstmals erwähnt, das Stadtrecht folgte 1981. Rund 600 Mitarbeiterinnen und Mitarbeiter arbeiten täglich für eine lebenswerte und funktionierende Stadt. Die Büros sind modern ausgestattet und die Arbeitsprozesse weitgehend digitalisiert. Kurze Wege und ein Miteinander aus Respekt, Freundlichkeit und Vertrauen prägen die Verwaltung – gefeiert wird auch gemeinsam, an Karneval und zum Schützenfest.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "43.350",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "37,39 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "5",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung (Büttgen)",
+      "wert": "793",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1981",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "rund 600",
+      "icon": "🧑‍💼"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeiten sowie individuelle Arbeits- und Teilzeitmodelle in einer kinder- und familienfreundlichen Verwaltung."
+    },
+    {
+      "titel": "Modernes Arbeitsumfeld",
+      "beschreibung": "Modern ausgestattete Büros und weitgehend digitalisierte Arbeitsprozesse."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Selbstverständliche Fortbildungen, ein Mitarbeiterbindungskonzept und Karrierechancen nach der Ausbildung."
+    },
+    {
+      "titel": "Faire Bezahlung",
+      "beschreibung": "Transparente Bezahlung nach TVöD oder im Rahmen der Beamtenbesoldung und berufliche Sicherheit."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote für Sportkurse und gesundheitliche Beratung."
+    },
+    {
+      "titel": "Miteinander",
+      "beschreibung": "Kurze Wege, Teamarbeit und gemeinsames Feiern – an Karneval und zum Schützenfest gelten besondere Dienstzeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Kaarst · Personalwirtschaft",
+    "email": "personalwirtschaft@kaarst.de",
+    "telefon": "02131 987-511",
+    "bewerbungsportal": "https://www.kaarst.de/verwaltung-buergerservice-und-politik/verwaltung/stellenangebote/karriere-bei-der-stadt-kaarst"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Ersterwähnung Büttgen 793, Stadtrecht 1981, Bürgermeister: de.wikipedia.org/wiki/Kaarst (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Abteilungsleiter*in 50-600 Allgemeine Angelegenheiten Wohnen, Stadt Kaarst https://karriere.nrw/stellenausschreibung/924c5144-712b-4906-87ed-967cd66fe201 (API api.karriere.nrw/v1.0/combined-jobs/…) (abgerufen 12.10.2026)",
+    "Mitarbeitende und Benefits: Karriereseite https://www.kaarst.de/verwaltung-buergerservice-und-politik/verwaltung/stellenangebote/karriere-bei-der-stadt-kaarst (abgerufen 12.10.2026)"
+  ]
+}

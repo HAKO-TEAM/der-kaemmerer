@@ -1,0 +1,72 @@
+{
+  "slug": "neustadt-glewe",
+  "name": "Stadt Neustadt-Glewe",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 6686,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Steffen Klieme",
+  "token": "a7f7cba644dd82c1",
+  "claim": "Eine kompakte Stadtverwaltung mit kurzen Wegen und viel Verantwortung.",
+  "beschreibung": "Neustadt-Glewe liegt im Landkreis Ludwigslust-Parchim, gehört zur Metropolregion Hamburg und ist Grundzentrum für die umliegenden Orte. Die Stadt wurde 1248 als „Nova Civitas“ neu gegründet. Die hauptamtlich organisierte Stadtverwaltung ist zugleich geschäftsführende Gemeinde des Amtes Neustadt-Glewe und gliedert sich in drei Fachdienste sowie den Bereich Tourismus und Kultur. Rund 95 Beschäftigte gestalten hier Bürgerservice, Finanzen und Liegenschaften, Bauen und Umwelt bis hin zu Kita, Hort, Bauhof und Stadtforst.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "6.686",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "94,13 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtgründung als Nova Civitas",
+      "wert": "1248",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Grundzentrum, geschäftsführende Gemeinde des Amtes",
+      "icon": "📍"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "8",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Einstellung mit einer Wochenarbeitszeit von 39 Stunden und Vergütung nach TVöD einschließlich tariflicher Sonderzahlungen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Urlaub im Jahr."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bikeleasing für Beschäftigte."
+    },
+    {
+      "titel": "Weiterbildung und Team",
+      "beschreibung": "Qualifikations- und Weiterbildungsmöglichkeiten in einem aufgeschlossenen, engagierten und kompetenten Team."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Neustadt-Glewe · Der Bürgermeister",
+    "email": "s.maehden@neustadt-glewe.de",
+    "telefon": "038757 50023"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Grundzentrum, Stadtgründung 1248, Bürgermeister: de.wikipedia.org/wiki/Neustadt-Glewe (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Neustadt-Glewe, Leitung Kasse und Vollstreckung https://interamt.de/koop/app/stelle?id=1497611 (API api.interamt.de/query/stellenangebot/1497611) (abgerufen 12.10.2026); Organisation und Beschäftigtenzahl ebenda; Bürgermeister Steffen Klieme zeichnet die Ausschreibung"
+  ]
+}

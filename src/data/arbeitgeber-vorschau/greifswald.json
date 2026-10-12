@@ -1,0 +1,78 @@
+{
+  "slug": "greifswald",
+  "token": "34bcfd284c416b19",
+  "name": "Landkreis Vorpommern-Greifswald",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 225867,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Michael Sack",
+  "claim": "Karriere dort gestalten, wo andere ihre Auszeit genießen – an der Ostseeküste.",
+  "beschreibung": "Der Landkreis Vorpommern-Greifswald liegt direkt an der Ostseeküste und ist nach Fläche der drittgrößte Landkreis Deutschlands; zu ihm gehört die Insel Usedom. Kreisstadt ist die Hansestadt Greifswald, weitere Standorte sind unter anderem Pasewalk und Anklam. Weite Sandstrände, naturbelassene Landschaften und hohe Lebensqualität machen die Region zu einem attraktiven Arbeits- und Lebensort. Die Kreisverwaltung bietet anspruchsvolle Aufgaben in Steuerung, Controlling und Prüfung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "225.867",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "3.945,64 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "138",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2011",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisstadt",
+      "wert": "Hansestadt Greifswald",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit, mobiles Arbeiten bzw. Homeoffice und Teilzeit im Rahmen der dienstlichen Gegebenheiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub nach Tarifvertrag und bezahlte Freistellung am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Vermögenswirksame Leistungen und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Gutscheinsystem mit 50 Euro netto im Monat und 60 Euro im Geburtstagsmonat sowie eine jährliche Erholungsbeihilfe für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote im Rahmen eines betrieblichen Gesundheitsmanagements."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Vorpommern-Greifswald · Sachgebiet Personal",
+    "email": "Charlott.Gummelt@kreis-vg.de",
+    "telefon": "03834 8760-1532",
+    "bewerbungsportal": "https://bewerbung.kreis-vg.de/BWVOnlinePortal/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Gründung 2011, Kreisstadt, drittgrößter Landkreis, Landrat: de.wikipedia.org/wiki/Landkreis_Vorpommern-Greifswald (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Sachbearbeiter Entgeltverhandlungen (ausId=1005) und Sachbearbeiter Fachcontrolling und Entgeltverhandlungen (ausId=996), https://bewerbung.kreis-vg.de/BWVOnlinePortal/ausschreibungdetails?mdId=1&ausId=1005 (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landkreis Vorpommern-Greifswald, Prüfer (m/w/d) im Rechnungs- und Gemeindeprüfungsamt https://interamt.de/koop/app/stelle?id=1428892 (API api.interamt.de/query/stellenangebot/1428892) (abgerufen 12.10.2026)"
+  ]
+}

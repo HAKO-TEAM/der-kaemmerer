@@ -1,0 +1,84 @@
+{
+  "slug": "bad-saulgau",
+  "token": "919c68ad9539e29e",
+  "name": "Stadt Bad Saulgau",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 17824,
+  "beamteUndBeschaeftigte": "ca. 370 Mitarbeitende",
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Raphael Osmakowski-Miller",
+  "claim": "Die Finanzen einer nachhaltigen Kurstadt in Oberschwaben mitgestalten.",
+  "beschreibung": "Bad Saulgau liegt im Zentrum Oberschwabens, ist die größte Stadt im Landkreis Sigmaringen und Mittelzentrum im Regionalverband Bodensee-Oberschwaben; erstmals urkundlich erwähnt wurde der Ort im Jahr 819. Die Stadtverwaltung beschäftigt rund 370 Mitarbeitende und legt Wert auf ein faires Miteinander, Nachhaltigkeit und Umweltschutz. Das zeigt sich in Auszeichnungen wie „Landeshauptstadt der Biodiversität“, Global Nachhaltige Kommune, Fair Trade Town und Barrierefreie Gemeinde. Dazu kommen ein breites Freizeitangebot und eine gute Infrastruktur bei Kinderbetreuung und Schulen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "17.824",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "97,33 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "14",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "819",
+      "icon": "📜"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "ca. 370",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Auszeichnung",
+      "wert": "Landeshauptstadt der Biodiversität",
+      "icon": "🌿"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Verschiedene Möglichkeiten der flexiblen Arbeitszeitgestaltung zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Zusätzliche Altersvorsorge zur Vergütung nach TVöD bzw. Besoldung nach LBesGBW."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsförderung, organisiert von Mitarbeitenden für Mitarbeitende, und Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Dienstradleasing."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Gezielte, individuelle Weiterbildungen."
+    },
+    {
+      "titel": "Lebensqualität",
+      "beschreibung": "Breites Freizeitangebot in Sport, Kultur, Vereinen und Bildung sowie gute Kinderbetreuung und weiterführende Schulen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Bad Saulgau · Personal",
+    "email": "personal@bad-saulgau.de",
+    "telefon": "07581 207-150",
+    "bewerbungsportal": "https://www.mein-check-in.de/bad-saulgau"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Ersterwähnung 819, Mittelzentrum, Bürgermeister: de.wikipedia.org/wiki/Bad_Saulgau (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Bad Saulgau, Sachbearbeitung für die Finanzverwaltung (m/w/d) – Umsatzsteuer; Mitarbeitende und Auszeichnungen https://interamt.de/koop/app/stelle?id=1496104 (API api.interamt.de/query/stellenangebot/1496104) (abgerufen 12.10.2026)",
+    "Bewerberportal: https://www.mein-check-in.de/bad-saulgau/position-40349 (abgerufen 12.10.2026)"
+  ]
+}

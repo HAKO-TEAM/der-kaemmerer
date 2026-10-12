@@ -1,0 +1,77 @@
+{
+  "slug": "hennef",
+  "token": "96e1e6f8e397c684",
+  "name": "Stadt Hennef (Sieg)",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 48112,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Mario Dahm",
+  "claim": "100 Dörfer, 100 Möglichkeiten – eine wachsende Stadt im Raum Köln/Bonn führen.",
+  "beschreibung": "Hennef (Sieg) im Rhein-Sieg-Kreis ist mit hohem Wohn- und Freizeitwert zugleich Mittelpunkt eines ländlichen Raumes und Teil des Ballungsgebiets Köln/Bonn. Die heutige Stadt entstand 1969 bei der kommunalen Neugliederung und umfasst 89 Ortsteile; nach Fläche ist sie die zweitgrößte Kommune des Kreises. Die Stadtverwaltung richtet ihren Blick ganzheitlich auf Zentren und Dörfer und will das Leben in Hennef lebenswert, sicher und zukunftsfähig gestalten. Beschäftigte finden vielfältige Aufgabenbereiche und einen krisensicheren Arbeitsplatz.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "48.112",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "105,89 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "89",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Heutige Stadt seit",
+      "wert": "1969",
+      "icon": "📜"
+    },
+    {
+      "label": "Lage",
+      "wert": "Rhein-Sieg-Kreis, Raum Köln/Bonn",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Unter bestimmten Voraussetzungen ist mobiles Arbeiten möglich – für eine bessere Vereinbarkeit von Beruf und Privatleben."
+    },
+    {
+      "titel": "Gleitzeit",
+      "beschreibung": "Beginn, Ende und Pausen des Arbeitstages unter Einhaltung der Kernarbeitszeit selbst bestimmen."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Festes, individuell planbares Fortbildungsbudget für alle Beschäftigten sowie zentrale Fort- und Weiterbildungsangebote."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Bezuschusstes Fahrradleasing mit 36 Monaten Laufzeit."
+    },
+    {
+      "titel": "Deutschlandticket",
+      "beschreibung": "Vergünstigtes Deutschlandticket für Beschäftigte."
+    },
+    {
+      "titel": "EGYM Wellpass",
+      "beschreibung": "Landesweiter Zugang zu Fitness- und Yogastudios, Bädern, Kletterhallen und Onlinekursen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Hennef (Sieg) · Personal",
+    "email": "Karriere@hennef.de",
+    "bewerbungsportal": "https://www.hennef.de/karriere/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Neugliederung 1969, zweitgrößte Kommune des Kreises, Bürgermeister: de.wikipedia.org/wiki/Hennef_(Sieg) (abgerufen 12.10.2026)",
+    "Bürgermeister und Arbeitgeberbeschreibung: Stellenausschreibung Beigeordnete / Beigeordneter (w/m/d), Stadt Hennef (Sieg) https://karriere.nrw/stellenausschreibung/c717ddea-b5d2-406a-a3de-42079ec25b09 (API api.karriere.nrw/v1.0/combined-jobs/…) (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Karriereseite https://www.hennef.de/karriere/ (abgerufen 12.10.2026)"
+  ]
+}

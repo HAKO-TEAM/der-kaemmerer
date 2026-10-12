@@ -1,0 +1,76 @@
+{
+  "slug": "lohmen",
+  "name": "Gemeinde Lohmen",
+  "bundesland": "Sachsen",
+  "einwohner": 2987,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Silke Großmann",
+  "token": "0a07f98b80915996",
+  "claim": "Die Zukunft zweier Kommunen an der Bastei aktiv mitgestalten.",
+  "beschreibung": "Die Gemeinde Lohmen liegt in unmittelbarer Nähe zur Bastei in der Sächsischen Schweiz, rund 20 km von Dresden entfernt. Lohmen wurde 1292 erstmals urkundlich erwähnt und ist erfüllende Gemeinde der Verwaltungsgemeinschaft mit der Stadt Stadt Wehlen, die zusammen rund 5.000 Einwohner zählt. Die Verwaltung betreut damit zwei Kommunen mit eigenen Gremien. Beschäftigte gestalten hier mit innovativen Ideen die Zukunft beider Kommunen eigenverantwortlich mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.987",
+      "icon": "👥"
+    },
+    {
+      "label": "Verwaltungsgemeinschaft mit Stadt Wehlen",
+      "wert": "ca. 5.000 Einwohner",
+      "icon": "🤝"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1292",
+      "icon": "📜"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Entfernung nach Dresden",
+      "wert": "ca. 20 km",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Vielfältige Möglichkeiten, die Zukunft der Gemeinde Lohmen und der Stadt Stadt Wehlen aktiv mitzugestalten, in einem eigenverantwortlichen Tätigkeitsfeld."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeiten in einer 5-Tage-Woche sowie ortsunabhängiges mobiles Arbeiten gemäß Dienstvereinbarung."
+    },
+    {
+      "titel": "Urlaub und Sozialleistungen",
+      "beschreibung": "31 Tage Urlaub, arbeitsfrei am 24. und 31. Dezember, Jahressonderzahlung, betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Berufserfahrung zählt",
+      "beschreibung": "Anerkennung entsprechender Berufserfahrung bei einem Wechsel aus einem TVöD-Arbeitsverhältnis."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, Kostenzuschuss für Bildschirmbrillen und Fahrradleasing."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielseitige Fortbildungsmöglichkeiten zur fachlichen und persönlichen Entwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Lohmen · Bürgermeisterin",
+    "email": "buergermeister@lohmen-sachsen.de",
+    "telefon": "03501 581040"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Ersterwähnung 1292, Ortsteile, Bürgermeisterin: de.wikipedia.org/wiki/Lohmen_(Sachsen) (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Gemeinde Lohmen, Kämmerin/Kämmerer https://interamt.de/koop/app/stelle?id=1492563 (API api.interamt.de/query/stellenangebot/1492563) (abgerufen 12.10.2026); Verwaltungsgemeinschaft mit Stadt Wehlen (ca. 5.000 Einwohner), Lage ebenda"
+  ]
+}

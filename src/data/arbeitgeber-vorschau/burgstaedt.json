@@ -1,0 +1,71 @@
+{
+  "slug": "burgstaedt",
+  "name": "Stadtverwaltung Burgstädt",
+  "bundesland": "Sachsen",
+  "einwohner": 10333,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Lars Naumann",
+  "token": "d5d99316b3f422a5",
+  "claim": "Eine lebenswerte Kleinstadt zwischen Chemnitz und Muldental mitgestalten.",
+  "beschreibung": "Burgstädt ist eine lebenswerte Kleinstadt im Landkreis Mittelsachsen mit zentraler Lage zwischen Chemnitz und dem Muldental. Gut ausgebaute Infrastruktur, kurze Wege, ein aktives Gemeinwesen sowie vielfältige Bildungs- und Freizeitangebote prägen die Stadt. Die Stadtverwaltung Burgstädt führt die Verwaltungsgeschäfte der Verwaltungsgemeinschaft Burgstädt-Mühlau-Taura. Beschäftigte finden hier anspruchsvolle Aufgaben und einen Standort mit Perspektive für Beruf und Familie.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "10.333",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "25,88 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1378",
+      "icon": "📜"
+    },
+    {
+      "label": "Verwaltungsgemeinschaft",
+      "wert": "Burgstädt-Mühlau-Taura",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Attraktive Vergütung nach TVöD mit Jahressonderzahlung und Sachbezugskarte mit monatlicher Gutschrift."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Erholungsurlaub, zusätzlich sind Heiligabend und Silvester arbeitsfrei."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeitmodelle mit Gleitzeit und Homeoffice."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Zusatzversorgung im öffentlichen Dienst und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Umfangreiches Qualifizierungsangebot für die fachliche und persönliche Weiterentwicklung."
+    },
+    {
+      "titel": "Miteinander und Extras",
+      "beschreibung": "Teamevents, Fahrradleasing und kostenfreie Nutzung der Stadtbibliothek."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Burgstädt · Personal",
+    "email": "therese.vogel@stadt-burgstaedt.de",
+    "telefon": "03724 63119"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1378, Bürgermeister: de.wikipedia.org/wiki/Burgstädt (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadtverwaltung Burgstädt, Sachbearbeiter/-in Unternehmenssteuer https://interamt.de/koop/app/stelle?id=1495599 (API api.interamt.de/query/stellenangebot/1495599) (abgerufen 12.10.2026); Verwaltungsgemeinschaft Burgstädt-Mühlau-Taura ebenda"
+  ]
+}

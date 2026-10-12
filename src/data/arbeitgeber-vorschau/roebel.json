@@ -1,0 +1,77 @@
+{
+  "slug": "roebel",
+  "name": "Stadt Röbel/Müritz",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 4664,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Matthias Radtke",
+  "token": "324d08885be9071f",
+  "claim": "Verwaltung gestalten, wo andere Urlaub machen – an der Müritz.",
+  "beschreibung": "Röbel/Müritz liegt am Westufer der Müritz im Landkreis Mecklenburgische Seenplatte und ist Grundzentrum für seine Umgebung. Die Stadt wurde 1227 erstmals urkundlich erwähnt. Als geschäftsführende Gemeinde verantwortet Röbel/Müritz gemeinsam mit 18 amtsangehörigen Gemeinden eine moderne, bürgernahe Verwaltung im flächenmäßig größten Amtsgebiet Mecklenburg-Vorpommerns. Beschäftigte verbinden hier Tradition mit Innovation und gestalten die Zukunft einer lebendigen Urlaubsregion mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "4.664",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1227",
+      "icon": "📜"
+    },
+    {
+      "label": "Amtsangehörige Gemeinden",
+      "wert": "18",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Grundzentrum, geschäftsführende Gemeinde des Amtes",
+      "icon": "📍"
+    },
+    {
+      "label": "Fläche",
+      "wert": "30,68 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Ein sicherer, zukunftsorientierter Arbeitsplatz mit Vergütung und Sonderzahlungen nach TVöD (VKA)."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienorientierte Arbeitszeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, zusätzlich sind Heiligabend und Silvester arbeitsfrei."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge über die Zusatzversorgungskasse des öffentlichen Dienstes und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Weiterbildung und Ausstattung",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten und ein modern ausgestatteter Arbeitsplatz."
+    },
+    {
+      "titel": "Mobilität und Freizeit",
+      "beschreibung": "Jobradleasing und Angebote für die Nutzung der Müritz-Therme."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt Röbel/Müritz · Personal",
+    "email": "personal@amt-roebel-mueritz.de",
+    "telefon": "039931 80123",
+    "bewerbungsportal": "https://www.amt-roebel-mueritz.de/seite/306379/stellenausschreibungen.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1227, Grundzentrum, Bürgermeister: de.wikipedia.org/wiki/Röbel/Müritz (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Röbel/Müritz, Sachbearbeitung Haushaltsplanung, Haushaltsüberwachung und Jahresabschlüsse https://interamt.de/koop/app/stelle?id=1495333 (API api.interamt.de/query/stellenangebot/1495333) (abgerufen 12.10.2026); 18 amtsangehörige Gemeinden und Amtsgebiet ebenda; Bürgermeister Matthias Radtke zeichnet die Ausschreibung"
+  ]
+}

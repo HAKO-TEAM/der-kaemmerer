@@ -1,0 +1,79 @@
+{
+  "slug": "reinfeld",
+  "token": "4bd86f1888faae76",
+  "name": "IT-Verbund Stormarn",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 247394,
+  "beamteUndBeschaeftigte": "70 Mitarbeitende",
+  "buergermeistertitel": "Vorstand",
+  "buergermeister": "Dr. Daniel Jesche",
+  "claim": "Die IT von Kreis, Städten und Ämtern in Stormarn wirtschaftlich mitsteuern.",
+  "beschreibung": "Der IT-Verbund Stormarn ist der gemeinsame Full-Service-IT-Dienstleister für den Kreis Stormarn, die Städte Reinbek, Bad Oldesloe, Bargteheide und Reinfeld sowie die Ämter Bargteheide-Land und Bad Oldesloe-Land. Die 2013 gegründete Anstalt öffentlichen Rechts betreibt ein zentrales Rechenzentrum und betreut Hard- und Software sowie den technischen und konzeptionellen IT-Service ihrer Träger. Rund 70 Beschäftigte arbeiten am Standort Reinfeld in einer jungen, agilen Organisation, die stetig wächst. Im Team Finanzen entwickeln Controlling sowie Kosten- und Leistungsrechnung die wirtschaftliche Steuerung des Verbunds weiter.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Trägerkreis Stormarn (31.12.2025)",
+      "wert": "247.394",
+      "icon": "👥"
+    },
+    {
+      "label": "Gegründet als Anstalt öffentlichen Rechts",
+      "wert": "2013",
+      "icon": "📜"
+    },
+    {
+      "label": "Träger",
+      "wert": "Kreis, 4 Städte, 2 Ämter",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Mitarbeitende",
+      "wert": "rund 70",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Standort",
+      "wert": "Reinfeld (Holstein)",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeitmodell mit Möglichkeit zum Freizeitausgleich, 30 Tage Urlaub und zusätzlich Heiligabend und Silvester frei."
+    },
+    {
+      "titel": "Sicherheit und Vorsorge",
+      "beschreibung": "Unbefristetes Arbeitsverhältnis nach TVöD-VKA mit Altersvorsorge und den im öffentlichen Dienst üblichen Zusatzleistungen."
+    },
+    {
+      "titel": "Familie und Unterstützung",
+      "beschreibung": "Ergänzendes Betreuungsangebot für Familien und zusätzliche Unterstützungsangebote für herausfordernde Lebenssituationen."
+    },
+    {
+      "titel": "Moderne Arbeitsplätze",
+      "beschreibung": "Moderne, ergonomische Arbeitsplätze – auch für das Homeoffice."
+    },
+    {
+      "titel": "Weiterbildung und Gesundheit",
+      "beschreibung": "Weiterbildungen, teils mit Zertifikat, Trainings und Workshops sowie Betriebssport- und Fitnessangebote."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "hvv-ProfiTicket als Jobticket Premium bzw. NAH.SH-/Deutschland-Jobticket, kostenlose Parkplätze am Gebäude und gute Anbindung an ÖPNV und Autobahn; dazu Mitarbeitervorteile bei verschiedenen Händlern."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "IT-Verbund Stormarn · Frau Dogan (Verfahren und Tarif)",
+    "email": "bewerbung@itv-stormarn.de",
+    "telefon": "04531 160-3115",
+    "bewerbungsportal": "https://www.itv-stormarn.de/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl Kreis Stormarn (Trägerkreis): de.wikipedia.org/wiki/Kreis_Stormarn (abgerufen 12.10.2026)",
+    "Gründung 2013 (AöR), Träger, Vorstand, Mitarbeitende, Standort Reinfeld: https://www.itv-stormarn.de/ueber-uns/index.html (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Controller:in (m/w/d) Schwerpunkt Finanzen und KLR, Kennziffer ITV-111 https://www.itv-stormarn.de/stellenangebote/20261001.html (abgerufen 12.10.2026)"
+  ]
+}

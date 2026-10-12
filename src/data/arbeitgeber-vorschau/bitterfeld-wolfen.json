@@ -1,0 +1,77 @@
+{
+  "slug": "bitterfeld-wolfen",
+  "token": "b421b7cd9b71adae",
+  "name": "Landkreis Anhalt-Bitterfeld",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 151352,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Andy Grabner",
+  "claim": "Einen Landkreis zwischen Elbe, Mulde und Goitzsche verantwortlich mitgestalten.",
+  "beschreibung": "Der Landkreis Anhalt-Bitterfeld liegt im Südosten Sachsen-Anhalts an Elbe und Mulde, zwischen Dübener Heide und Fläming und im nördlichen Teil der Metropolregion Mitteldeutschland. Mit guter Anbindung nach Berlin und in den Raum Halle/Leipzig sowie Naturparks, dem Biosphärenreservat Mittelelbe und der Goitzsche-Seenlandschaft bietet er hohe Lebensqualität. Die Kreisverwaltung mit Hauptsitz in Köthen (Anhalt) und Nebenstandorten in Zerbst/Anhalt und Bitterfeld-Wolfen zählt zu den größten Arbeitgeberinnen der Region. Beschäftigte finden hier Vielseitigkeit, Verantwortung und Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "151.352",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.454,38 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2007",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisstadt",
+      "wert": "Köthen (Anhalt)",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Betriebliche Altersversorgung über den Kommunalen Versorgungsverband Sachsen-Anhalt (KVSA)."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitregelung und, je nach Aufgabe, mobiles Arbeiten im Rahmen der dienstlichen Belange."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Fortbildung und Einarbeitung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten sowie eine umfassende Einarbeitung."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Vielseitigkeit, Verantwortung und Gestaltungsspielraum im eigenen Aufgabenbereich."
+    },
+    {
+      "titel": "Familienfreundliche Region",
+      "beschreibung": "Kinder fahren im Landkreis mit der Schüler-Regio-Card kostenlos Bus."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Anhalt-Bitterfeld · Personal",
+    "email": "stellenausschreibung@anhalt-bitterfeld.de",
+    "bewerbungsportal": "https://www.anhalt-bitterfeld.de/de/stellenangebote1.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Gründung 2007, Kreisstadt, Landrat: de.wikipedia.org/wiki/Landkreis_Anhalt-Bitterfeld (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landkreis Anhalt-Bitterfeld, Sachbearbeitung straßengebundener ÖPNV/Finanzen (m/w/d) https://interamt.de/koop/app/stelle?id=1496462 (API api.interamt.de/query/stellenangebot/1496462) (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landkreis Anhalt-Bitterfeld, Juristischer Sachbearbeiter (m/w/d), gezeichnet Landrat Grabner https://interamt.de/koop/app/stelle?id=1498558 (API api.interamt.de/query/stellenangebot/1498558) (abgerufen 12.10.2026)"
+  ]
+}

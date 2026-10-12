@@ -1,0 +1,73 @@
+{
+  "slug": "suhl",
+  "name": "Stadtverwaltung Suhl",
+  "bundesland": "Thüringen",
+  "einwohner": 34685,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "André Knapp",
+  "token": "2e544eff736c9c48",
+  "claim": "Die größte Stadt Südthüringens am Rennsteig mitgestalten.",
+  "beschreibung": "Die kreisfreie Stadt Suhl liegt inmitten der Wintersport- und Ferienregion Südthüringen am Fuße des Thüringer Waldes mit dem Rennsteig und ist die größte Stadt der Region. Suhl ist Teil des funktionsteiligen Oberzentrums Südthüringen und über die Autobahnen 71 und 73 hervorragend erschlossen. Die regionale Wirtschaft prägen mittelständische Unternehmen sowie die Ferien- und Tourismusbranche. Die Stadtverwaltung bietet ein breites Aufgabenspektrum mit guter Vereinbarkeit von Familie und Beruf.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2024)",
+      "wert": "34.685",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "141,62 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste gesicherte urkundliche Erwähnung",
+      "wert": "1300",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisfreie Stadt, Teil des Oberzentrums Südthüringen",
+      "icon": "📍"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "Zentrum und 10 Ortsteile",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Gute Vereinbarkeit von Familie und Beruf durch flexible Arbeitszeiten mit Arbeitszeitkonto und Gleitzeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub im Jahr."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Attraktive Sozialleistungen des öffentlichen Dienstes, etwa Jahressonderzahlung, betriebliche Altersvorsorge und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Leasing eines Dienstfahrrades, auch zur privaten Nutzung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal- und Hauptamt",
+    "email": "bewerbung@stadtsuhl.de",
+    "telefon": "03681 742256",
+    "bewerbungsportal": "https://wirsvsu.pi-asp.de/bewerber-web/?company=01-FIRMA-ID&tenant=&lang=D"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (Stand 31.12.2024), Fläche, Ersterwähnung 1300, Oberzentrum Südthüringen, Ortsteile, Oberbürgermeister: de.wikipedia.org/wiki/Suhl (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadtverwaltung Suhl, Sachbearbeiter Umsatzsteuerangelegenheiten/Betriebe gewerblicher Art https://interamt.de/koop/app/stelle?id=1460360 (API api.interamt.de/query/stellenangebot/1460360) (abgerufen 12.10.2026); Lage und Wirtschaftsstruktur ebenda"
+  ]
+}

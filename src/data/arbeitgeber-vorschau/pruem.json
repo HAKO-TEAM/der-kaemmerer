@@ -1,0 +1,70 @@
+{
+  "slug": "pruem",
+  "name": "Verbandsgemeinde Prüm",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 21350,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Johannes Reuschen",
+  "token": "0fa38076c87fe1e5",
+  "claim": "Die größte Verbandsgemeinde in Rheinland-Pfalz in der Eifel mitgestalten.",
+  "beschreibung": "Die Verbandsgemeinde Prüm im Eifelkreis Bitburg-Prüm umfasst die Stadt Prüm und 43 weitere Ortsgemeinden. Mit rund 465 km² ist sie die größte Verbandsgemeinde in Rheinland-Pfalz und grenzt im Westen an Belgien und im Norden an Nordrhein-Westfalen. Verwaltungssitz ist die Stadt Prüm, eine Außenstelle befindet sich in Bleialf. Die Verwaltung bündelt ein breites Aufgabenspektrum von Bürgerdiensten über Schulen, Kitas, Volkshochschule, Bücherei und Museum bis zu Brandschutz und Standesamt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.350",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "465,58 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "44 (Stadt Prüm und 43 weitere)",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Besonderheit",
+      "wert": "Größte Verbandsgemeinde in Rheinland-Pfalz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung und ein sicherer Arbeitsplatz in der öffentlichen Verwaltung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Umfangreiche Angebote des Betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Ein abwechslungsreiches, interessantes Aufgabengebiet mit Eigenverantwortung."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Betriebliche Altersversorgung (Zusatzversorgung) sowie alle sonstigen Sozialleistungen des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Möglichkeit zum JobRad-Leasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Prüm",
+    "telefon": "06551 943107"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsgemeinden, größte Verbandsgemeinde in Rheinland-Pfalz, Außenstelle Bleialf, Bürgermeister: de.wikipedia.org/wiki/Verbandsgemeinde_Prüm (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Verbandsgemeinde Prüm, Fachbereichsleitung im Fachbereich 3 – Bürgerdienste https://interamt.de/koop/app/stelle?id=1487292 (API api.interamt.de/query/stellenangebot/1487292) (abgerufen 12.10.2026)"
+  ]
+}

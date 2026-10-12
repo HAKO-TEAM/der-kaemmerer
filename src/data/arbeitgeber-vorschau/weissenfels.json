@@ -1,0 +1,67 @@
+{
+  "slug": "weissenfels",
+  "name": "Stadt Weißenfels",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 37308,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Martin Papke",
+  "token": "cac10fc66c1e2183",
+  "claim": "In einer traditionsreichen Saalestadt strukturiert und modern verwalten.",
+  "beschreibung": "Weißenfels liegt an der Saale im Burgenlandkreis im Süden Sachsen-Anhalts und trägt seit 1185 das Stadtrecht. Das Stadtgebiet umfasst rund 113,6 km². Die Stadtverwaltung ist in Fachbereiche gegliedert und setzt auf klare Abläufe, digitale Zusammenarbeit und flexible Arbeitsmodelle. Beschäftigte übernehmen hier zentrale Aufgaben für die Bürgerinnen und Bürger der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "37.308",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "113,57 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1185",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Burgenlandkreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Vollzeitstellen mit 39 Wochenstunden und Vergütung nach TVöD."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung, leistungsorientierte Bezahlung, vermögenswirksame Leistungen und betriebliche Altersvorsorge über die KVSA."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Home-Office."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing für Beschäftigte."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten, zum Beispiel über SIKOSA-Lehrgänge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Zentrale Dienste · Abteilung Personal/Entgelt",
+    "email": "bewerbung@weissenfels.de",
+    "telefon": "03443 370-297"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtrecht 1185, Landkreis, Oberbürgermeister: de.wikipedia.org/wiki/Weißenfels (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Weißenfels, Sachbearbeiterin/Sachbearbeiter Haushalt (WSF 50/2026) https://interamt.de/koop/app/stelle?id=1493566 (API api.interamt.de/query/stellenangebot/1493566) (abgerufen 12.10.2026)"
+  ]
+}

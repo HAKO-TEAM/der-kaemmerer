@@ -1,0 +1,77 @@
+{
+  "slug": "ahrensfelde",
+  "name": "Gemeinde Ahrensfelde",
+  "bundesland": "Brandenburg",
+  "einwohner": 14464,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Wilfried Gehrke",
+  "token": "ce2993386dcd2e32",
+  "claim": "Eine wachsende Gemeinde direkt am Berliner Stadtrand mitgestalten.",
+  "beschreibung": "Ahrensfelde ist eine amtsfreie Gemeinde im Süden des Landkreises Barnim und liegt unmittelbar am nordöstlichen Berliner Stadtrand. Über die S-Bahn-Linie S7 ist die Gemeinde direkt an das Berliner Nahverkehrsnetz angebunden. Sie besteht aus den fünf Ortsteilen Ahrensfelde, Blumberg, Eiche, Lindenberg und Mehrow. Die Gemeindeverwaltung betreut neben Finanzen und Verwaltung auch einen eigenen Bauhof, Kindertagesstätten, Grundschule, Ortsteilzentren und Sportstätten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.464",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "57,94 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "5",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1375",
+      "icon": "📜"
+    },
+    {
+      "label": "Anbindung",
+      "wert": "S-Bahn S7 nach Berlin",
+      "icon": "🚆"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexibles Arbeitszeitmodell mit Kern- und Gleitzeit, Teilzeit grundsätzlich möglich."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Dienstvereinbarung zum mobilen Arbeiten mit der Möglichkeit von einem Tag pro Woche im Home Office."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage tariflicher Urlaub (31 Tage ab 2027), zusätzlich arbeitsfrei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Sozialleistungen nach TVöD inklusive zusätzlicher betrieblicher Altersversorgung, Jahressonderzahlung und Leistungsentgelt."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Umfassende Einarbeitung in das Aufgabengebiet und regelmäßige individuelle Fortbildungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachdienst I.1 – Innere Verwaltung",
+    "email": "bewerbung-ga@gemeinde-ahrensfelde.de",
+    "telefon": "030 936900103"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Ersterwähnung 1375, amtsfrei, Bürgermeister: de.wikipedia.org/wiki/Ahrensfelde (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Gemeinde Ahrensfelde, Sachbearbeiter/-in Finanzen https://interamt.de/koop/app/stelle?id=1493872 (API api.interamt.de/query/stellenangebot/1493872) (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Gemeinde Ahrensfelde, Fachdienstleiter/in Liegenschafts- und Gebäudemanagement https://interamt.de/koop/app/stelle?id=1499796 (API api.interamt.de/query/stellenangebot/1499796) (abgerufen 12.10.2026); Lage, S7 und Aufgaben ebenda"
+  ]
+}

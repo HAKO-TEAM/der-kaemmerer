@@ -1,0 +1,73 @@
+{
+  "slug": "quedlinburg",
+  "name": "Welterbestadt Quedlinburg",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 23069,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Frank Ruch",
+  "token": "122d967fa09d4699",
+  "claim": "In einer über 1000-jährigen Welterbestadt Verantwortung übernehmen.",
+  "beschreibung": "Quedlinburg am Nordrand des Harzes wurde 922 erstmals urkundlich erwähnt und erhielt 994 das Stadtrecht. Seit 1994 steht das architektonische Erbe der Stadt auf der UNESCO-Welterbeliste, Quedlinburg zählt zu den größten Flächendenkmalen Deutschlands. Als national und international bekannte touristische Destination ist die Stadt zugleich Forschungs- und Wirtschaftsstandort mit zahlreichen kommunalen Angeboten in Bildung, Freizeit und Kultur. Beschäftigte gestalten hier Arbeitsumfelder aktiv mit und erhalten Vielseitigkeit, Verantwortung und Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "23.069",
+      "icon": "👥"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "1994",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "922",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "994",
+      "icon": "🏰"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "7",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Ein Arbeitsumfeld, dessen weiteren Aufbau Beschäftigte aktiv mitgestalten, mit Vielseitigkeit, Verantwortung und Gestaltungsspielraum."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Verbeamtung nach dem Beamtenrecht des Landes Sachsen-Anhalt oder unbefristetes Arbeitsverhältnis nach TVöD-V VKA, je nach persönlichen Voraussetzungen."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeiten zur Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Attraktive Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Welterbestadt Quedlinburg · Personalwesen",
+    "email": "bewerbung@quedlinburg.de",
+    "telefon": "03946 905-564",
+    "bewerbungsportal": "https://quedlinburg.de/Rathaus/Karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Ersterwähnung 922, Stadtrecht 994, UNESCO-Welterbe 1994, Ortsteile, Oberbürgermeister: de.wikipedia.org/wiki/Quedlinburg (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Welterbestadt Quedlinburg, Sachgebietsleiter/in Stadtkasse und Vollstreckung https://interamt.de/koop/app/stelle?id=1491681 (API api.interamt.de/query/stellenangebot/1491681) (abgerufen 12.10.2026); Oberbürgermeister Frank Ruch zeichnet die Ausschreibung"
+  ]
+}

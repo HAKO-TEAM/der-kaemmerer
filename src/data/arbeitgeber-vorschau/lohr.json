@@ -1,0 +1,66 @@
+{
+  "slug": "lohr",
+  "name": "Verwaltungsgemeinschaft Lohr a. Main",
+  "bundesland": "Bayern",
+  "einwohner": 5072,
+  "token": "628b64b7485bfde4",
+  "claim": "Vier Gemeinden in Main-Spessart mit einer Verwaltung voranbringen.",
+  "beschreibung": "In der Verwaltungsgemeinschaft Lohr a. Main im unterfränkischen Landkreis Main-Spessart erledigen die vier Mitgliedsgemeinden Neuendorf, Neustadt a. Main, Rechtenbach und Steinfeld ihre Verwaltungsgeschäfte gemeinsam. Sitz der Verwaltung ist am Schloßplatz in Lohr a. Main. Die Arbeit verbindet die Betreuung mehrerer Gemeinderäte mit einem vielseitigen, eigenverantwortlichen Aufgabenfeld. Beschäftigte begleiten hier finanzwirtschaftliche und kommunalpolitische Entscheidungen direkt und nah an den Gremien.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.072",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "70,42 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Main-Spessart",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Verantwortung",
+      "beschreibung": "Eine vielseitige, interessante und verantwortungsvolle Tätigkeit mit einem hohen Maß an Eigenverantwortung."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende Arbeitszeit."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Kostenlose Parkmöglichkeiten bzw. Zuschuss zur Nutzung des ÖPNV sowie JobRad-Leasing."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Leistungsgerechte Vergütung nach Qualifikation und bisheriger Tätigkeit nach besoldungs- bzw. tarifrechtlichen Bestimmungen."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Übliche Sozialleistungen des öffentlichen Dienstes wie Zusatzversorgung, Leistungsentgelt und Jahressonderzahlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verwaltungsgemeinschaft Lohr a. Main · Personalstelle",
+    "email": "personal@vg-lohr.de",
+    "telefon": "09352 8730-16"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Sitz Schloßplatz 2: de.wikipedia.org/wiki/Verwaltungsgemeinschaft_Lohr_am_Main (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenanzeige Kämmerin/Kämmerer, Verwaltungsgemeinschaft Lohr a. Main https://www.vgem-lohr.de/wp-content/uploads/go-x/u/dc8b4696-7926-483b-8abc-2c9c4f81113f/2026-Stellenanzeige-kaemmerer.pdf (abgerufen 12.10.2026)",
+    "Gemeinschaftsvorsitz nicht belegt, daher weggelassen"
+  ]
+}

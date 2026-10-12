@@ -1,0 +1,75 @@
+{
+  "slug": "sottrum",
+  "token": "2fc4a9375fa6b468",
+  "name": "Samtgemeinde Sottrum",
+  "bundesland": "Niedersachsen",
+  "einwohner": 14691,
+  "claim": "Eine moderne Samtgemeinde zwischen Bremen und Rotenburg zukunftsfähig führen.",
+  "beschreibung": "Die Samtgemeinde Sottrum im Landkreis Rotenburg (Wümme) wurde 1969 gebildet und umfasst sieben Mitgliedsgemeinden mit knapp 15.000 Einwohnerinnen und Einwohnern. Als moderner, dienstleistungsorientierter Arbeitgeber sichert die Verwaltung die Lebensqualität ihrer Bürgerinnen und Bürger und gestaltet die Verwaltung zukunftsfähig. Flache Hierarchien, kurze Entscheidungswege und gegenseitige Wertschätzung prägen die Zusammenarbeit. Führungskräfte finden hier großen Gestaltungsspielraum – von der Digitalisierung bis zum Katastrophenschutz.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.691",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "173,51 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1969",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Rotenburg (Wümme)",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung, Jahressonderzahlung im November, leistungsorientierte Bezahlung und betriebliche Altersversorgung (VBL)."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible Arbeitszeitmodelle, mobiles Arbeiten und eine familienfreundliche Organisationskultur."
+    },
+    {
+      "titel": "Kurze Wege",
+      "beschreibung": "Flache Hierarchien, kurze Entscheidungswege, gegenseitige Wertschätzung und eine strukturierte Einarbeitung im Team."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, ab 2027 31 Tage; der 24.12. und 31.12. sind arbeitsfrei."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Fitnessangebote mit Hansefit und Jobradleasing."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Rabattportal für mehr als 800 Online-Shops und Filialen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Samtgemeinde Sottrum · Personal und Organisation",
+    "email": "bewerbung@sottrum.de",
+    "telefon": "04264 8320-27",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1489767"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Gründung 1969: de.wikipedia.org/wiki/Samtgemeinde_Sottrum (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Samtgemeinde Sottrum, Abteilungsleitung (m/w/d) Bürgerservice und Ordnung https://interamt.de/koop/app/stelle?id=1489767 (API api.interamt.de/query/stellenangebot/1489767) (abgerufen 12.10.2026)"
+  ]
+}

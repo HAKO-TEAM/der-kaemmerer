@@ -1,0 +1,79 @@
+{
+  "slug": "paehl",
+  "token": "db0e9f40691723d4",
+  "name": "Gemeinde Pähl",
+  "bundesland": "Bayern",
+  "einwohner": 2531,
+  "buergermeistertitel": "Erste Bürgermeisterin",
+  "buergermeister": "Teresa Grünbauer-Incir",
+  "claim": "Die Finanzen einer oberbayerischen Gemeinde am Ammersee eigenverantwortlich gestalten.",
+  "beschreibung": "Pähl ist eine Gemeinde mit rund 2.500 Einwohnerinnen und Einwohnern im Landkreis Weilheim-Schongau zwischen Ammersee und Starnberger See, erstmals erwähnt in der Zeit Herzog Tassilos III. Die Gemeindeverwaltung arbeitet mit flacher Hierarchie und kurzen Entscheidungswegen in einem kollegialen Team. Wer hier Verantwortung übernimmt, gestaltet Haushalt, Steuern, Förderwesen und Vergaben mit einem hohen Maß an Selbstständigkeit. Ab Herbst 2027 arbeitet die Verwaltung im neuen Rathaus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.531",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "32,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "12",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "Zeit Tassilos III. (8. Jh.)",
+      "icon": "📜"
+    },
+    {
+      "label": "Neues Rathaus",
+      "wert": "ab Herbst 2027",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Interessanter, sicherer und verantwortungsvoller Arbeitsplatz, Eingruppierung nach TVöD-VKA mit Arbeitsmarktzulage von 15 % der Stufe 2."
+    },
+    {
+      "titel": "Kurze Wege",
+      "beschreibung": "Sehr kollegiales Arbeitsumfeld mit flacher Hierarchie, kurzen Entscheidungswegen und hohem Maß an Selbstständigkeit."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende Arbeitszeit, teilweise mobiles Arbeiten bzw. Homeoffice und Teilzeit ab 30 Stunden möglich."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, ab 2027 31 Tage."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fachliche Fort- und Weiterbildungsmöglichkeiten sowie die üblichen Sozialleistungen des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Ab Herbst 2027 ein moderner Arbeitsplatz im neuen Rathaus."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Pähl · Personalverwaltung",
+    "email": "buergermeisterin@paehl.bayern.de",
+    "telefon": "08808 920416",
+    "bewerbungsportal": "https://www.gemeinde-paehl.de/stellenausschreibung-kaemmerin-kaemmerer-mwd"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindeteile, Ersterwähnung: de.wikipedia.org/wiki/Pähl (abgerufen 12.10.2026)",
+    "Erste Bürgermeisterin Teresa Grünbauer-Incir: Stellenausschreibung Gemeinde Pähl (Ansprechpartnerin), interamt 1496048 (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Gemeinde Pähl, Kämmerin / Kämmerer – Leitung Finanzverwaltung (m/w/d) https://interamt.de/koop/app/stelle?id=1496048 (API api.interamt.de/query/stellenangebot/1496048) (abgerufen 12.10.2026)",
+    "Stellenausschreibung Kämmerin / Kämmerer auf der Gemeindeseite: https://www.gemeinde-paehl.de/stellenausschreibung-kaemmerin-kaemmerer-mwd (abgerufen 12.10.2026)"
+  ]
+}

@@ -251,17 +251,23 @@ function formatDatum(s: string) {
             <span class="dos-contact-key">Ansprechperson</span>
             <span class="dos-contact-val">{d.kontakt.personal}</span>
           </div>
+          {d.kontakt.telefon && (
           <div class="dos-contact-row">
             <span class="dos-contact-key">Telefon</span>
             <span class="dos-contact-val"><a href={`tel:${d.kontakt.telefon.replace(/\s/g, '')}`}>{d.kontakt.telefon}</a></span>
           </div>
+          )}
+          {d.kontakt.email && (
           <div class="dos-contact-row">
             <span class="dos-contact-key">E-Mail</span>
             <span class="dos-contact-val dos-contact-mail"><a href={`mailto:${d.kontakt.email}`}>{d.kontakt.email}</a></span>
           </div>
+          )}
+          {d.kontakt.bewerbungsportal && (
           <a href={d.kontakt.bewerbungsportal} target="_blank" rel="noopener" class="dos-apply-btn">
             Zum Karriereportal →
           </a>
+          )}
         </div>
 
         <!-- Stadtdaten -->

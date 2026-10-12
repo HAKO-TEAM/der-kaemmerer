@@ -1,0 +1,78 @@
+{
+  "slug": "freudenstadt",
+  "token": "d39baf0f26b02993",
+  "name": "Landkreis Freudenstadt",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 121646,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Andreas Junt",
+  "claim": "Kommunalaufsicht und Finanzen im Nordschwarzwald mit Gestaltungsspielraum verantworten.",
+  "beschreibung": "Der Landkreis Freudenstadt liegt im Nordschwarzwald und umfasst 16 Städte und Gemeinden; Verwaltungssitz ist die Große Kreisstadt Freudenstadt, größte Stadt ist Horb am Neckar. Seinen heutigen Zuschnitt erhielt der Kreis mit der Kreisreform 1973. Das Landratsamt versteht sich als zukunftsorientiertes Dienstleistungsunternehmen mit vielen Entwicklungsmöglichkeiten. Beschäftigte arbeiten in aufgeschlossenen, motivierten Teams mit Eigenverantwortung und Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "121.646",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "870,41 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "16",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Heutiger Zuschnitt seit",
+      "wert": "1973",
+      "icon": "📜"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Große Kreisstadt Freudenstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Leistungsgerechte Bezahlung",
+      "beschreibung": "Bezahlung entsprechend der Qualifikation nach LBesGBW bzw. TVöD mit betrieblicher Altersversorgung (ZVK)."
+    },
+    {
+      "titel": "Familienfreundliche Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeitregelungen."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Umfangreiche Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsförderung."
+    },
+    {
+      "titel": "Moderne Ausstattung",
+      "beschreibung": "Arbeitsplatz mit aktueller technischer Ausstattung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Gute Erreichbarkeit mit öffentlichen Verkehrsmitteln, Jobticket und „Radelbonus“."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Freudenstadt · Haupt- und Personalverwaltung",
+    "email": "a.guenter@kreis-fds.de",
+    "telefon": "07441 920-1201",
+    "bewerbungsportal": "https://www.kreis-fds.de/aktuelles/karriere-und-ausbildung"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreisreform 1973, Verwaltungssitz, Landrat: de.wikipedia.org/wiki/Landkreis_Freudenstadt (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landratsamt Freudenstadt, Stabsstellenleitung Kommunalaufsicht und Rechnungsprüfung (w/m/d) https://interamt.de/koop/app/stelle?id=1496727 (API api.interamt.de/query/stellenangebot/1496727) (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Landratsamt Freudenstadt, Sachbearbeiter Kämmerei (w/m/d) https://interamt.de/koop/app/stelle?id=1499480 (API api.interamt.de/query/stellenangebot/1499480) (abgerufen 12.10.2026)"
+  ]
+}

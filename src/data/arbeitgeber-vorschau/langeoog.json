@@ -1,0 +1,66 @@
+{
+  "slug": "langeoog",
+  "token": "ff3eabf253b10eed",
+  "name": "Inselgemeinde Langeoog",
+  "bundesland": "Niedersachsen",
+  "einwohner": 1341,
+  "claim": "Dort arbeiten, wo andere Urlaub machen – Kommunalfinanzen auf der Insel.",
+  "beschreibung": "Langeoog ist mit knapp 20 km² die drittgrößte der Ostfriesischen Inseln und gehört zum Landkreis Wittmund. Die autofreie Insel ist Nordseeheilbad und wurde 1398 erstmals urkundlich erwähnt. Die Inselgemeinde verbindet ein vielseitiges Aufgabengebiet mit einem besonderen Arbeitsort am Meer. Beschäftigte können vom Festland pendeln oder ganz auf die Insel ziehen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "1.341",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "19,73 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1398",
+      "icon": "📜"
+    },
+    {
+      "label": "Besonderheit",
+      "wert": "Autofreie Insel, Nordseeheilbad",
+      "icon": "🏝️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeiten am Meer",
+      "beschreibung": "Ein abwechslungsreiches Aufgabengebiet auf einer Nordseeinsel – dort, wo andere Urlaub machen."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge zusätzlich zur Vergütung nach TVöD."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Mitgliedschaft bei Hansefit (Epassi) möglich."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Bike-Leasing im Rahmen der Entgeltumwandlung."
+    },
+    {
+      "titel": "Pendeln oder Umziehen",
+      "beschreibung": "Pendeleinsatz vom Festland möglich oder Beteiligung an den Umzugskosten auf die Insel."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Inselgemeinde Langeoog · Personal",
+    "email": "bewerbung@langeoog.de",
+    "telefon": "04972 693-148",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1494714"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung 1398, drittgrößte Ostfriesische Insel, autofrei, Nordseeheilbad: de.wikipedia.org/wiki/Langeoog (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Inselgemeinde Langeoog, Sachbearbeiter/in Kommunalfinanzen (m/w/d) https://interamt.de/koop/app/stelle?id=1494714 (API api.interamt.de/query/stellenangebot/1494714) (abgerufen 12.10.2026)"
+  ]
+}

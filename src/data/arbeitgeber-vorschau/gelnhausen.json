@@ -1,0 +1,77 @@
+{
+  "slug": "gelnhausen",
+  "token": "900fbaa0184b6bc5",
+  "name": "Stadt Gelnhausen",
+  "bundesland": "Hessen",
+  "einwohner": 23401,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Christian Litzinger",
+  "claim": "In der Barbarossastadt die städtischen Finanzen verlässlich mitsteuern.",
+  "beschreibung": "Gelnhausen ist die Kreisstadt des Main-Kinzig-Kreises im Südosten Hessens und wurde 1170 von Kaiser Friedrich I. Barbarossa gegründet, dessen Kaiserpfalz bis heute das Stadtbild prägt. Die Kreis- und Barbarossastadt bietet einen interessanten, abwechslungsreichen und sicheren Arbeitsplatz mit verlässlichen Arbeitsbedingungen. Als familienfreundliche Arbeitgeberin erleichtert die Stadt die Vereinbarkeit von Familie und Beruf. Ehrenamtliches Engagement der Beschäftigten ist ausdrücklich gern gesehen und wird gefördert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "23.401",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "45,15 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "6",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Stadtgründung",
+      "wert": "1170",
+      "icon": "📜"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt Main-Kinzig-Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Premium-Jobticket für das gesamte RMV-Gebiet sowie Jobrad-Leasing."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Moderne Arbeitszeitmodelle mit Gleitzeit; Überstunden werden in Freizeit ausgeglichen."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Zusatzversorgung (ZVK) und Möglichkeit der Entgeltumwandlung."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung und zusätzliches Leistungsentgelt nach den tariflichen Regelungen, 30 Tage Urlaub."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Bezuschussung von Präventionsmaßnahmen zum Erhalt der Gesundheit."
+    },
+    {
+      "titel": "Ehrenamt",
+      "beschreibung": "Ehrenamtliches Engagement der Beschäftigten ist gern gesehen und wird gefördert."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Gelnhausen · Personal",
+    "email": "bewerbung@gelnhausen.de",
+    "telefon": "06051 830-120",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1492553"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Stadtgründung 1170, Kreisstadt, Bürgermeister: de.wikipedia.org/wiki/Gelnhausen (abgerufen 12.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt Gelnhausen, Stellvertretende Kassenleitung (m/w/d) https://interamt.de/koop/app/stelle?id=1492553 (API api.interamt.de/query/stellenangebot/1492553) (abgerufen 12.10.2026)"
+  ]
+}
