@@ -12,7 +12,7 @@ bewerbungsschluss: "2026-07-15"
 bewerbungslink: "https://www.zfm-bonn.de/jobboerse/"
 schlagwoerter: ["Jugendamt","Jugendhilfe","Ilm-Kreis","Thueringen","Amtsleitung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-06-02"
 featured: false
 ---

@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-27"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1495697"
 schlagwoerter: ["Amtsleitung", "Liegenschaften", "Gebäudemanagement", "Investitionsplanung", "Vergabe"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-11"
 featured: false
 ---
