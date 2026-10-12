@@ -4,7 +4,7 @@ import { createHmac } from 'node:crypto';
 // Optional aus dem Lagebericht: Kommune, AGS und persönlicher Link werden als Kontaktmerkmale gespeichert,
 // damit der Monatsversand jedem Abonnenten seinen eigenen Lagebericht schicken kann.
 import { LAENDER, FELDER } from './_jobalert.js';
-const ATTRIBUTE = ['KOMMUNE', 'AGS', 'LAGEBERICHT', 'QUELLE', 'JOBALERT', 'JA_LAND', 'JA_PLZ', 'JA_FELDER'];
+const ATTRIBUTE = ['KOMMUNE', 'AGS', 'LAGEBERICHT', 'QUELLE', 'JOBALERT', 'JA_LAND', 'JA_PLZ', 'JA_FELDER', 'JA_WOCHE'];
 let attributeAngelegt = false;
 
 export function signatur(email, list, key) {

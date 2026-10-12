@@ -4,9 +4,10 @@ import { LAENDER, FELDER, abmeldeSig, wunsch, treffer } from './_jobalert.js';
 // bekommt die neuen Stellen der letzten 7 Tage, die zu seinem Wunsch passen (Bundesland, PLZ-Region, Berufsfelder).
 // Ohne neue Treffer geht keine Mail raus.
 //
-// Schutz: Versand an Abonnenten NUR, wenn die Umgebungsvariable JOBALERT_VERSAND=an gesetzt ist. Sonst geht ausschließlich
-// eine Vorschau (Zusammenfassung + erste Beispielmail) an die Chefredaktion.
-// Manuell: /api/jobalert-versand?key=<CRON_SECRET>[&test=<adresse>] – test schickt die Beispielmail an diese Adresse.
+// Schutz: Versand an Abonnenten NUR, wenn die Umgebungsvariable JOBALERT_VERSAND=an gesetzt ist; sonst nur eine Vorschau
+// an die Chefredaktion. Jeder Abonnent bekommt höchstens EINE Mail je Kalenderwoche (Merkmal JA_WOCHE) – ein mehrfacher
+// Aufruf des Endpunkts erzeugt also keine zusätzlichen Mails.
+// Manuell (nur mit CRON_SECRET): /api/jobalert-versand?key=<CRON_SECRET>&test=<adresse> – schickt die Beispielmail an diese Adresse.
 const SITE = 'https://derkaemmerer.de';
 const VORSCHAU_AN = 'chefredaktion@derkaemmerer.de';
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -47,6 +48,26 @@ function mail(email, w, liste, KEY) {
   return { subject: `${liste.length} neue ${liste.length === 1 ? 'Stelle' : 'Stellen'} im öffentlichen Dienst – ${wo}`, html, text, abmelden };
 }
 
+/** ISO-Kalenderwoche, z. B. 2026-W42 */
+function kalenderwoche(d) {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const tag = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - tag);
+  const j = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return `${t.getUTCFullYear()}-W${String(Math.ceil(((t - j) / 864e5 + 1) / 7)).padStart(2, '0')}`;
+}
+
+let wocheAngelegt = false;
+async function gemerkt(KEY, email, woche) {
+  const h = { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' };
+  if (!wocheAngelegt) {   // Merkmal einmalig anlegen (400 = existiert bereits); frisch angelegte Merkmale kennt Brevo erst nach kurzer Zeit
+    const r = await fetch('https://api.brevo.com/v3/contacts/attributes/normal/JA_WOCHE', { method: 'POST', headers: h, body: JSON.stringify({ type: 'text' }) }).catch(() => null);
+    if (r && r.ok) await new Promise((ok) => setTimeout(ok, 3000));
+    wocheAngelegt = true;
+  }
+  const r = await fetch(`https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`, { method: 'PUT', headers: h, body: JSON.stringify({ attributes: { JA_WOCHE: woche } }) });
+  if (!r.ok) throw new Error('Woche nicht gemerkt ' + r.status);
+}
+
 async function senden(KEY, an, m) {
   const r = await fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST', headers: { 'accept': 'application/json', 'api-key': KEY, 'content-type': 'application/json' },
@@ -65,7 +86,8 @@ export default async function handler(req, res) {
   if (!auth && !cron) return res.status(401).json({ error: 'nicht berechtigt' });
   if (!KEY || !LIST) return res.status(503).json({ error: 'nicht konfiguriert' });
 
-  const scharf = auth && process.env.JOBALERT_VERSAND === 'an' && !req.query.test;
+  const scharf = process.env.JOBALERT_VERSAND === 'an' && !req.query.test;
+  const woche = kalenderwoche(new Date());
   const seit = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
   try {
     const feed = await fetch(`${SITE}/stellen-feed.json`).then((r) => r.json());
@@ -77,13 +99,13 @@ export default async function handler(req, res) {
       if (!liste.length) { ohne++; continue; }
       const m = mail(c.email, w, liste, KEY);
       beispiel ||= { an: c.email, m };
-      if (!scharf) continue;
-      try { await senden(KEY, c.email, m); gesendet++; } catch (e) { fehler++; console.error(e.message); }
+      if (!scharf || (c.attributes || {}).JA_WOCHE === woche) continue;   // diese Woche schon versorgt
+      try { await senden(KEY, c.email, m); await gemerkt(KEY, c.email, woche); gesendet++; } catch (e) { fehler++; console.error(e.message); }
     }
     const bericht = `Job-Alert ${new Date().toISOString().slice(0, 10)}: ${abos.length} Abonnenten · ${scharf ? gesendet + ' gesendet' : 'VORSCHAU (JOBALERT_VERSAND ist nicht „an“)'} · ${ohne} ohne neue Treffer · ${fehler} Fehler · ${feed.stellen.filter((s) => s.datum >= seit).length} neue Stellen seit ${datum(seit)}`;
     // Bericht bzw. Vorschau an die Chefredaktion (mit Beispielmail)
     const an = (auth && req.query.test && /^[^\s@]+@[^\s@]+$/.test(req.query.test)) ? req.query.test : VORSCHAU_AN;
-    if (beispiel || !scharf) {
+    if ((beispiel || !scharf) && (gesendet > 0 || !scharf || req.query.test)) {   // Bericht nur bei echtem Versand oder Vorschau
       const m = beispiel ? beispiel.m : { subject: 'kein Treffer', html: '<p>Kein Abonnent mit neuen Treffern.</p>', text: 'Kein Abonnent mit neuen Treffern.', abmelden: SITE };
       await senden(KEY, an, { ...m, subject: `[${scharf ? 'Bericht' : 'Vorschau'}] ${m.subject}`,
         html: `<p style="font-family:Arial;font-size:13px;background:#fef3c7;padding:8px">${esc(bericht)}${beispiel ? ' · Beispiel für ' + esc(beispiel.an.replace(/^(.).*@/, '$1…@')) : ''}</p>` + m.html });
