@@ -9,6 +9,8 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ZIEL = Path(__file__).resolve().parent.parent / 'src/content/jobs'
+# Arbeitgeber, die keine Veröffentlichung wünschen (MK 12.10.2026): werden nie übernommen
+AUSSCHLUSS_DATEI = Path(__file__).resolve().parent.parent / 'src/data/anzeigen-ausschluss.txt'
 MIN_SCHLUSS = date.today() + timedelta(days=7)
 PFLICHT = ['title', 'organisation', 'ort', 'bundesland', 'bewerbungsschluss', 'bewerbungslink']
 
@@ -72,8 +74,12 @@ def main():
             links.add(m.group(1).rstrip('/'))
     neu, verworfen = [], []
     kontakte = []
+    norm = lambda s: re.sub(r'\s+', ' ', (s or '').strip().lower())
+    ausschluss = {norm(z) for z in (AUSSCHLUSS_DATEI.read_text().splitlines() if AUSSCHLUSS_DATEI.exists() else []) if z.strip() and not z.startswith('#')}
     for f in dateien:
         for j in json.load(open(f)):
+            if norm(j.get('organisation')) in ausschluss:
+                verworfen.append((j.get('organisation'), 'Arbeitgeber wünscht keine Veröffentlichung')); continue
             fehlt = [k for k in PFLICHT if not j.get(k)]
             if fehlt:
                 verworfen.append((j.get('organisation'), 'fehlt ' + ','.join(fehlt))); continue

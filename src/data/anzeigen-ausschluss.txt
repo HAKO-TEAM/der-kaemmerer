@@ -1,0 +1,6 @@
+# Arbeitgeber, die keine Veröffentlichung auf derkaemmerer.de wünschen (jobs_import.py übernimmt sie nicht).
+# Eine Organisation je Zeile, genau wie im Feld „organisation“; Kommentar mit # und Datum.
+# 2026-10-12 Ingelheim: „bitte nehmen Sie die o.g. Ausschreibung aus Ihrer Veröffentlichung“
+Stadtverwaltung Ingelheim am Rhein
+# 2026-10-12 Ilm-Kreis: „Bitte löschen Sie unsere Ausschreibung bei ihnen“
+Landkreis Ilm-Kreis

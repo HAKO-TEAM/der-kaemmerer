@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-18"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1495154"
 schlagwoerter: ["Gebäudemanagement", "Hochbau", "Abteilungsleitung", "CAFM", "Architektur"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-10"
 featured: false
 ---

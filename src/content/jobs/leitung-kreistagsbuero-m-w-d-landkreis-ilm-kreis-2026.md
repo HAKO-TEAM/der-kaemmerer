@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-27"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1498713"
 schlagwoerter: ["Kreistagsbüro", "Sitzungsdienst", "Gremienbetreuung", "Kreisrecht", "Budgetkontrolle"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-12"
 featured: false
 ---
