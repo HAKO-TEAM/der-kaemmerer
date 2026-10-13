@@ -392,5 +392,14 @@
     "betrag": 296.31,
     "abo": "ABO-2026-001",
     "monat": "2026-10"
+  },
+  {
+    "id": "DK-2026-1045",
+    "year": 2026,
+    "date": "2026-10-13",
+    "organisation": "TEST Gemeinde Musterhausen",
+    "email": "m.kosel@nurovia.de",
+    "betrag": 821.1,
+    "art": "einzel"
   }
 ]
