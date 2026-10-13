@@ -13,7 +13,7 @@ bewerbungslink: "m.kosel@nurovia.de"
 schlagwoerter: ["Kommunalverwaltung", "TVöD"]
 paket: "KommunalFlat"
 laufzeitBis: "2026-11-10"
-aktiv: false
+aktiv: true
 datum: "2026-10-13"
 featured: false
 ---
