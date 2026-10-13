@@ -47,5 +47,29 @@
         "datum": "2026-10-13"
       }
     ]
+  },
+  {
+    "id": "ABO-2026-003",
+    "produkt": "KommunalFlat",
+    "organisation": "TEST Gemeinde Musterhausen",
+    "abteilung": "",
+    "ansprechpartner": "Michael Kosel",
+    "strasse": "Teststraße 1",
+    "plz": "01067",
+    "ort": "Musterhausen",
+    "email": "m.kosel@nurovia.de",
+    "leitwegId": "",
+    "preis": 249,
+    "start": "2026-10",
+    "laufzeitMonate": 12,
+    "status": "aktiv",
+    "endeMonat": null,
+    "rechnungen": [
+      {
+        "monat": "2026-10",
+        "id": "DK-2026-1048",
+        "datum": "2026-10-13"
+      }
+    ]
   }
 ]
