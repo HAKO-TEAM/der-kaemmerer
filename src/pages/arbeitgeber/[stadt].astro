@@ -23,11 +23,11 @@ const alleJobs = await getCollection('jobs');
 const stadtJobs = alleJobs
   .filter(j =>
     j.data.aktiv &&
-    new Date(j.data.bewerbungsschluss) >= heute &&
+    new Date(j.data.bewerbungsschluss) >= heute && (!j.data.laufzeitBis || new Date(j.data.laufzeitBis) >= heute) &&
     j.data.ort.toLowerCase().includes(d.slug.toLowerCase())
   )
   .sort((a, b) => {
-    const rank: Record<string, number> = { KommunalFlat: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
+    const rank: Record<string, number> = { KommunalFlat: 0, Einzelanzeige: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
     return rank[a.data.paket] - rank[b.data.paket];
   });
 
@@ -93,7 +93,7 @@ function formatDatum(s: string) {
 .dos-job-badge.premium  { background: #dbeafe; color: #1d4ed8; }
 .dos-job-badge.exklusiv { background: #172840; color: #93c5fd; }
 .dos-job-badge.basis    { background: #f1f5f9; color: #6b7280; }
-.dos-job-badge.kommunalflat { background: #dbeafe; color: #1d4ed8; }
+.dos-job-badge.kommunalflat, .dos-job-badge.einzelanzeige { background: #dbeafe; color: #1d4ed8; }
 .dos-job-title { font-size: 13px; font-weight: 700; color: #172840; margin-bottom: 4px; line-height: 1.4; }
 .dos-job-meta { font-size: 11px; color: #6b7280; }
 .dos-no-jobs { font-size: 14px; color: #6b7280; text-align: center; padding: 24px 0; }

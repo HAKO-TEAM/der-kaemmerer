@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   // Nur freigeschaltete Anzeigen erhalten eine Seite (Entwürfe/Kundenbuchungen vor Freigabe bleiben unerreichbar)
   // Abgelaufene Stellen erhalten ebenfalls keine Seite – sie verschwinden mit dem nächsten Build aus Sitemap und Index
   const heute = new Date(); heute.setHours(0, 0, 0, 0);
-  const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute);
+  const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute && (!data.laufzeitBis || new Date(data.laufzeitBis) >= heute));
   return jobs.map(job => ({ params: { slug: job.id }, props: { job } }));
 }
 
@@ -96,7 +96,7 @@ const beschreibungHtml = `<p>${esc(d.organisation)} sucht ${esc(d.title)} in ${e
 .sj-back { font-size: 11px; font-weight: 700; color: #93c5fd; text-decoration: none; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; opacity: .7; transition: opacity .15s; }
 .sj-back:hover { opacity: 1; }
 .sj-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
-.sj-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.sj-badge.premium, .sj-badge.einzelanzeige  { background: #dbeafe; color: #1d4ed8; }
 .sj-badge.exklusiv { background: rgba(255,255,255,.15); color: #93c5fd; }
 .sj-org { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.55); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
 .sj-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 3.5vw, 38px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }

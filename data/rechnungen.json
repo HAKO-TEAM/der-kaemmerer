@@ -349,6 +349,8 @@
     "date": "2026-10-01",
     "organisation": "Stadt Bamberg",
     "email": "rechnung@stadt.bamberg.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "abo": "ABO-2026-001",
+    "monat": "2026-10"
   }
 ]

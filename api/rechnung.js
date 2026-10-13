@@ -132,9 +132,12 @@ const LIGHT = '#f8fafc';
 // A4: 595.28 x 841.89 pt
 const PW = 595.28;
 const PH = 841.89;
-const ML = 50;  // margin left
-const MR = 50;  // margin right
-const CW = PW - ML - MR; // content width = 495.28
+// DIN 5008 Form B: Text links 25 mm, rechts 20 mm; Anschriftfeld ab 45 mm (Vermerkzone 17,7 mm, Anschriftzone 62,7–90 mm),
+// Informationsblock ab 50 mm / 125 mm von links, Betreff ab ca. 98,5 mm, Falzmarken 105/210 mm, Lochmarke 148,5 mm
+const MM = 72 / 25.4;
+const ML = 25 * MM;  // margin left
+const MR = 20 * MM;  // margin right
+const CW = PW - ML - MR;
 
 function eur(amount) {
   return amount.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' EUR';
@@ -155,6 +158,21 @@ function formatDate(d = new Date()) {
   return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
+const MONATE = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+/** Abo-Monat 'JJJJ-MM' → { von, bis, name } */
+export function aboMonat(monat) {
+  const [j, m] = monat.split('-').map(Number);
+  return { von: new Date(Date.UTC(j, m - 1, 1)), bis: new Date(Date.UTC(j, m, 0)), name: `${MONATE[m - 1]} ${j}` };
+}
+const datumUTC = (d) => `${String(d.getUTCDate()).padStart(2, '0')}.${String(d.getUTCMonth() + 1).padStart(2, '0')}.${d.getUTCFullYear()}`;
+/** Kennzeichnung für Abo-Rechnungen (data.abo = { id, monat, vertragsmonat, laufzeit }) */
+function aboText(abo) {
+  if (!abo) return null;
+  const z = aboMonat(abo.monat);
+  const vm = abo.vertragsmonat <= abo.laufzeit ? `Vertragsmonat ${abo.vertragsmonat} von ${abo.laufzeit}` : `Vertragsmonat ${abo.vertragsmonat} (monatlich kündbar)`;
+  return { zeitraum: `${datumUTC(z.von)} – ${datumUTC(z.bis)}`, monat: z.name, vm };
+}
+
 function addDays(d, n) {
   const r = new Date(d); r.setDate(r.getDate() + n); return r;
 }
@@ -164,16 +182,18 @@ function txt(doc, text, x, y, opts = {}) {
   doc.text(text, x, y, { lineBreak: false, ...opts });
 }
 
-function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
+export function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
   // vorlage: 'kaemmerer' = Der Kämmerer-Branding | 'hako' = HAKO neutral
   // positionen: [{ beschreibung, menge, einheit, einzelpreis }]
   // Falls nicht übergeben → KommunalFlat-Standard
   if (!positionen || positionen.length === 0) {
+    const a = aboText(data.abo);
     positionen = [{
-      beschreibung: 'KommunalFlat – Stellenboerse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier',
+      beschreibung: (data.abo?.leistung || 'KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier')
+        + (a ? `\nLeistungszeitraum ${a.zeitraum}` : ''),
       menge: 1,
       einheit: '1 Monat',
-      einzelpreis: 249,
+      einzelpreis: data.abo?.preis ?? 249,
     }];
   }
 
@@ -226,26 +246,42 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     txt(doc, 'RECHNUNG', ML, 22, { align: 'right', width: CW, lineBreak: false });
 
     // ── RECHNUNGSINFOS (rechts) — DIN 5008: ab 80pt ──────────────────────────
-    const infoX = 340;
+    const abo   = aboText(data.abo);
+    const infoX = 125 * MM;
     const infoW = PW - infoX - MR;
-    doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
-    txt(doc, `Rechnungsnr.: ${invoiceId}`,         infoX, 82,  { width: infoW, align: 'right' });
-    txt(doc, `Datum: ${formatDate(heute)}`,         infoX, 96,  { width: infoW, align: 'right' });
-    txt(doc, `Leistungsdatum: ${formatDate(heute)}`,infoX, 110, { width: infoW, align: 'right' });
-    txt(doc, `Zahlungsziel: ${formatDate(frist)}`,  infoX, 124, { width: infoW, align: 'right' });
+    const info  = [
+      ['Rechnungsnr.', invoiceId],
+      ['Rechnungsdatum', formatDate(heute)],
+      abo ? ['Leistungszeitraum', abo.zeitraum] : data.zeitraum ? ['Leistungszeitraum', data.zeitraum] : ['Leistungsdatum', formatDate(heute)],
+      ['Zahlungsziel', formatDate(frist)],
+      ...(abo ? [['Abo-Nr.', data.abo.id], ['Vertragsmonat', abo.vm.replace('Vertragsmonat ', '')]] : []),
+    ];
+    info.forEach(([k, v], i) => {
+      const y = 50 * MM + i * 13;
+      doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
+      txt(doc, k + ':', infoX, y, { width: 78 });
+      doc.font('Helvetica-Bold').fillColor(NAVY);
+      txt(doc, v, infoX + 80, y, { width: infoW - 80, align: 'right' });
+    });
+
+    // ── FALZ- UND LOCHMARKEN (DIN 5008) ──────────────────────────────────────
+    doc.strokeColor('#9ca3af').lineWidth(0.5);
+    doc.moveTo(0, 105 * MM).lineTo(5 * MM, 105 * MM).stroke();
+    doc.moveTo(0, 210 * MM).lineTo(5 * MM, 210 * MM).stroke();
+    doc.moveTo(0, 148.5 * MM).lineTo(7 * MM, 148.5 * MM).stroke();
 
     // ── ABSENDER-RÜCKSENDEZEILE — DIN 5008: 45mm = 127pt vom oberen Rand ─────
     // Unterstrichen / abgetrennt für Kuvertfenster
-    doc.moveTo(ML, 125).lineTo(ML + 185, 125).strokeColor('#d1d5db').lineWidth(0.5).stroke();
     doc.font('Helvetica').fontSize(6.5).fillColor(GRAY);
-    txt(doc, `HAKO Beteiligungsgesellschaft mbH  ·  Hertha-Lindner-Str. 10-12  ·  01067 Dresden`, ML, 128, { width: 185 });
+    txt(doc, 'HAKO GmbH · Hertha-Lindner-Str. 10-12 · 01067 Dresden', ML, 58 * MM, { width: 80 * MM });
+    doc.moveTo(ML, 58 * MM + 9).lineTo(ML + 80 * MM, 58 * MM + 9).strokeColor('#d1d5db').lineWidth(0.5).stroke();
 
     // ── RECHNUNGSADRESSE — DIN 5008: ab 50mm = 142pt ─────────────────────────
     doc.font('Helvetica-Bold').fontSize(10).fillColor(NAVY);
-    txt(doc, data.organisation, ML, 145);
+    txt(doc, data.organisation, ML, 62.7 * MM);
 
     doc.font('Helvetica').fontSize(9).fillColor('#374151');
-    let addrY = 160;
+    let addrY = 62.7 * MM + 15;
     if (data.abteilung)      { txt(doc, data.abteilung,      ML, addrY); addrY += 13; }
     if (data.ansprechpartner){ txt(doc, data.ansprechpartner,ML, addrY); addrY += 13; }
     txt(doc, data.strasse,             ML, addrY); addrY += 13;
@@ -256,7 +292,7 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     }
 
     // ── TRENNLINIE — nach DIN 5008 Adressfeld (max 95mm = 269pt) ─────────────
-    const lineY = 272;
+    const lineY = 95 * MM;
     doc.moveTo(ML, lineY).lineTo(PW - MR, lineY).strokeColor(BLUE).lineWidth(1.5).stroke();
 
     // ── BETREFF ───────────────────────────────────────────────────────────────
@@ -266,9 +302,9 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
       doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
       txt(doc, data.betreff || 'Leistungsrechnung', ML, lineY + 30);
     } else {
-      txt(doc, 'Rechnung KommunalFlat – Stellenboerse derkaemmerer.de', ML, lineY + 14);
+      txt(doc, abo ? `Rechnung KommunalFlat – Abonnement ${data.abo.id}` : data.art === 'einzel' ? 'Rechnung Einzelanzeige – Stellenbörse derkaemmerer.de' : 'Rechnung KommunalFlat – Stellenbörse derkaemmerer.de', ML, lineY + 14);
       doc.font('Helvetica').fontSize(8.5).fillColor(GRAY);
-      txt(doc, 'Flatrate-Abonnement  |  12-Monatsvertrag', ML, lineY + 30);
+      txt(doc, abo ? `Monatliche Abo-Rechnung ${abo.monat}  |  Leistungszeitraum ${abo.zeitraum}  |  ${abo.vm}` : data.art === 'einzel' ? `Einmalige Stellenanzeige  |  Laufzeit ${data.zeitraum}` : 'Flatrate-Abonnement  |  12-Monatsvertrag', ML, lineY + 30);
     }
 
     // ── TABELLE ───────────────────────────────────────────────────────────────
@@ -276,10 +312,10 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     const tH  = 20;
     // Spalten: Pos | Beschreibung | Menge | Einzelpreis | Betrag
     const c0 = ML,      w0 = 28;
-    const c1 = c0+w0,   w1 = 240;
-    const c2 = c1+w1,   w2 = 65;
+    const c1 = c0+w0,   w1 = 234;
+    const c2 = c1+w1,   w2 = 55;
     const c3 = c2+w2,   w3 = 75;
-    const c4 = c3+w3,   w4 = PW - MR - (c3+w3);
+    const c4 = c3+w3,   w4 = PW - MR - (c3+w3) - 6;
 
     // Header-Zeile
     doc.rect(ML, tY, CW, tH).fill(NAVY);
@@ -294,14 +330,18 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     let curY = tY + tH + 6;
     positionen.forEach((p, i) => {
       const lines = p.beschreibung.split('\n');
-      const rowH  = 20 + (lines.length - 1) * 13 + 10;
+      // Unterzeilen umbrechen lassen und ihre Höhe vorab messen, damit nichts überlappt
+      doc.font('Helvetica').fontSize(7.5);
+      const hoehen = lines.slice(1).map((l) => doc.heightOfString(l, { width: w1 - 6 }));
+      const rowH  = 30 + hoehen.reduce((a, b) => a + b + 2, 0);
       doc.rect(ML, curY - 4, CW, rowH).fill(i % 2 === 0 ? LIGHT : '#ffffff');
       doc.font('Helvetica-Bold').fontSize(9).fillColor(NAVY);
       txt(doc, String(i + 1), c0 + 4, curY);
       txt(doc, lines[0], c1, curY, { width: w1 });
       if (lines.length > 1) {
         doc.font('Helvetica').fontSize(7.5).fillColor(GRAY);
-        lines.slice(1).forEach((l, li) => txt(doc, l, c1, curY + 13 + li * 12, { width: w1 }));
+        let uy = curY + 13;
+        lines.slice(1).forEach((l, li) => { doc.text(l, c1, uy, { width: w1 - 6, lineBreak: true }); uy += hoehen[li] + 2; });
       }
       doc.font('Helvetica').fontSize(9).fillColor(NAVY);
       txt(doc, p.einheit || String(p.menge), c2, curY + 4, { width: w2, align: 'right' });
@@ -363,8 +403,10 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
       : `${skontoPct}% Skonto bei Zahlung bis ${formatDate(skontoFrist)}. ` +
         `Danach fällig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
         `Bitte überweisen Sie unter Angabe des Verwendungszwecks. ` +
-        `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats, ` +
-        `danach monatlich zum Monatsende mit 1 Monat Kündigungsfrist.`;
+        (data.art === 'einzel'
+          ? `Einmalige Leistung: Veröffentlichung der Stellenanzeige für höchstens 60 Tage, längstens bis zum Bewerbungsschluss.`
+          : `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats, ` +
+            `danach monatlich zum Monatsende mit 1 Monat Kündigungsfrist.`);
     doc.text(vertragsBed, ML, vY + 12, { width: CW, lineBreak: true });
 
     // ── FOOTER (absolut auf Seite 1 — KEIN doc.text davor der umbricht) ───────
@@ -373,11 +415,11 @@ function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
     doc.font('Helvetica').fontSize(7).fillColor('#94a3b8');
     txt(doc,
       `HAKO Beteiligungsgesellschaft mbH  |  Hertha-Lindner-Str. 10-12, D-01067 Dresden  |  HRB 29317, AG Dresden  |  GF: Pierre Haustein & Michael G. Kosel`,
-      ML, fY + 7, { width: CW, align: 'center' }
+      15 * MM, fY + 7, { width: PW - 30 * MM, align: 'center' }
     );
     txt(doc,
       `derkaemmerer.de  |  anzeigen@derkaemmerer.de  |  Steuernr. ${process.env.FIRMA_STEUERNR ?? ''}  |  Gem. §14 UStG`,
-      ML, fY + 20, { width: CW, align: 'center' }
+      15 * MM, fY + 20, { width: PW - 30 * MM, align: 'center' }
     );
 
     // Sicherstellen: nur 1 Seite
@@ -413,7 +455,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag, vorlage = 'k
     from:    absender,
     to:      [data.email],
     cc:      ['anzeigen@derkaemmerer.de'],
-    subject: `Ihre Rechnung ${invoiceId}`,
+    subject: data.abo ? `Ihre Rechnung ${invoiceId} – KommunalFlat ${aboText(data.abo).monat} (Abo ${data.abo.id})` : `Ihre Rechnung ${invoiceId}`,
     attachments: [{ filename, content: pdfB64 }],
     html: `
 <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
@@ -423,7 +465,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag, vorlage = 'k
   </div>
   <div style="padding:24px">
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
-    <p style="color:#374151">anbei erhalten Sie Ihre Rechnung als PDF.</p>
+    <p style="color:#374151">${data.abo ? `anbei erhalten Sie die monatliche Rechnung zu Ihrem KommunalFlat-Abonnement ${data.abo.id} für ${aboText(data.abo).monat} (Leistungszeitraum ${aboText(data.abo).zeitraum}, ${aboText(data.abo).vm}) als PDF.` : 'anbei erhalten Sie Ihre Rechnung als PDF.'}</p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0">
       <tr style="background:#f8fafc">
         <td style="padding:10px;color:#6b7280">Rechnungsnummer</td>
@@ -446,7 +488,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag, vorlage = 'k
         <td style="padding:10px;color:#172840">${invoiceId} · ${data.organisation}</td>
       </tr>
     </table>
-    <p style="color:#374151">${hinweis}<br>Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
+    <p style="color:#374151">${data.abo?.folgerechnung ? 'Ihre KommunalFlat läuft unverändert weiter.' : hinweis}<br>Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
     <p style="color:#374151;margin-top:24px">Mit freundlichen Grüßen<br><strong>${grusszeile}</strong></p>
   </div>
   <div style="background:#f8fafc;padding:16px;text-align:center;font-size:11px;color:#9ca3af;border-top:1px solid #e2e8f0">
@@ -467,7 +509,7 @@ export async function createInvoice(data, positionen, vorlage = 'kaemmerer') {
   console.log(`[RE] Nächste Nummer: ${id}`);
   const pdf = await buildPDF(data, id, positionen, vorlage);
   console.log(`[RE] PDF generiert (${pdf.length} bytes)`);
-  const netto = (positionen || []).reduce((s, p) => s + p.einzelpreis * p.menge, 0) || 249;
+  const netto = (positionen || []).reduce((s, p) => s + p.einzelpreis * p.menge, 0) || data.abo?.preis || 249;
   const mwst  = data.mwstSatz ?? 19;
   const brutto = Math.round(netto * (1 + mwst / 100) * 100) / 100;
   try {
@@ -484,6 +526,8 @@ export async function createInvoice(data, positionen, vorlage = 'kaemmerer') {
     organisation: data.organisation,
     email: data.email,
     betrag: brutto,
+    ...(data.abo ? { abo: data.abo.id, monat: data.abo.monat } : {}),
+    ...(data.art ? { art: data.art } : {}),
   });
   return id;
 }

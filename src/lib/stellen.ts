@@ -22,9 +22,9 @@ function fristText(tage: number, schluss: string) {
 /** Alle laufenden Stellen, KommunalFlat zuerst, dann neueste. Mit vorberechneten Anzeigewerten. */
 export async function aktiveStellen() {
   const h = heute();
-  const rank: Record<string, number> = { KommunalFlat: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
+  const rank: Record<string, number> = { KommunalFlat: 0, Einzelanzeige: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
   const roh = (await getCollection('jobs'))
-    .filter((j) => j.data.aktiv && new Date(j.data.bewerbungsschluss) >= h)
+    .filter((j) => j.data.aktiv && new Date(j.data.bewerbungsschluss) >= h && (!j.data.laufzeitBis || new Date(j.data.laufzeitBis) >= h))
     .sort((a, b) => (rank[a.data.paket] - rank[b.data.paket]) || (new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime()));
   return roh.map((job) => {
     const tage = tageDiff(job.data.bewerbungsschluss);

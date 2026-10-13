@@ -45,7 +45,8 @@ export const collections = {
       bewerbungsschluss: z.string(),
       bewerbungslink:    z.string(),
       schlagwoerter:     z.array(z.string()).optional(),
-      paket:             z.enum(['Basis', 'Premium', 'Exklusiv', 'KommunalFlat']).default('Basis'),
+      paket:             z.enum(['Basis', 'Premium', 'Exklusiv', 'KommunalFlat', 'Einzelanzeige']).default('Basis'),
+      laufzeitBis:       z.string().optional(),   // Einzelanzeige: online bis höchstens 60 Tage nach Buchung
       aktiv:             z.boolean().default(true),
       datum:             z.string(),
       featured:          z.boolean().default(false),

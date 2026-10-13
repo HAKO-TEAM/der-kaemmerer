@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import { randomBytes } from 'node:crypto';
 import { createInvoice } from './rechnung.js';
+import { abosAendern, abosLesen, naechsteAboId, monatVon } from './_abo.js';
 
 function makeSlug(title, org) {
   const clean = s => s
@@ -8,6 +9,18 @@ function makeSlug(title, org) {
     .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   return `${clean(title)}-${clean(org)}-${new Date().getFullYear()}`;
+}
+
+// Einzelanzeige: 690 € netto, einmalig, online höchstens 60 Tage (MK 13.10.2026)
+export const EINZEL_PREIS = 690;
+export const EINZEL_TAGE = 60;
+const istEinzel = (d) => /^Einzelanzeige/i.test(d.paket || '');
+const isoTag = (d) => d.toISOString().slice(0, 10);
+const deTag = (iso) => iso.split('-').reverse().join('.');
+function einzelBis(d) {
+  const bis = new Date(); bis.setDate(bis.getDate() + EINZEL_TAGE);
+  const frist = d.bewerbungsschluss && /^\d{4}-\d{2}-\d{2}$/.test(d.bewerbungsschluss) ? d.bewerbungsschluss : null;
+  return frist && frist < isoTag(bis) ? frist : isoTag(bis);
 }
 
 function buildMarkdown(d) {
@@ -26,8 +39,8 @@ startdatum: "${d.startdatum || 'zum nächstmöglichen Zeitpunkt'}"
 bewerbungsschluss: "${d.bewerbungsschluss}"
 bewerbungslink: "${d.bewerbungslink || ''}"
 schlagwoerter: [${tags || '"Kommunalverwaltung", "TVöD"'}]
-paket: "KommunalFlat"
-aktiv: true
+paket: "${istEinzel(d) ? 'Einzelanzeige' : 'KommunalFlat'}"
+${istEinzel(d) ? `laufzeitBis: "${einzelBis(d)}"\n` : ''}aktiv: true
 datum: "${new Date().toISOString().split('T')[0]}"
 featured: false
 ---
@@ -110,6 +123,7 @@ export function passtZuFlat(records, d, heute = new Date()) {
   const domains = mails.map(domainOf).filter(x => x && !FREEMAIL.includes(x));
   return records.find(r => {
     if (!r.date || new Date(r.date) < grenze) return false;
+    if (r.art === 'einzel') return false;   // Einzelanzeige ist keine Flat
     const rMail = (r.email || '').toLowerCase().trim();
     return (org && normOrg(r.organisation) === org)
         || mails.includes(rMail)
@@ -129,6 +143,7 @@ async function findeBestehendeFlat(d) {
 }
 
 async function sendEmail(d, slug, flat = null, token = null) {
+  const einzel = istEinzel(d);
   const anzeigeUrl = `https://derkaemmerer.de/stellen/${slug}/`;
   const cockpitUrl = token ? `https://personal.derkaemmerer.de/${token}/` : null;
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -169,17 +184,17 @@ async function sendEmail(d, slug, flat = null, token = null) {
     to: [kundeEmail],
     subject: flat
       ? `Ihre weitere Stellenanzeige ist eingegangen – ${d.behoerde}`
-      : `Buchungsbestätigung KommunalFlat – ${d.behoerde}`,
+      : einzel ? `Buchungsbestätigung Einzelanzeige – ${d.behoerde}` : `Buchungsbestätigung KommunalFlat – ${d.behoerde}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
   <div style="background:#172840;padding:24px;color:#fff">
     <h1 style="margin:0;font-size:20px">Ihre Buchung ist eingegangen</h1>
-    <p style="margin:8px 0 0;color:#94a3b8;font-size:14px">KommunalFlat – Stellenbörse derkaemmerer.de</p>
+    <p style="margin:8px 0 0;color:#94a3b8;font-size:14px">${einzel && !flat ? 'Einzelanzeige' : 'KommunalFlat'} – Stellenbörse derkaemmerer.de</p>
   </div>
   <div style="padding:24px">
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
-    <p style="color:#374151">${flat ? 'vielen Dank für Ihre weitere Ausschreibung.' : 'vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de – herzlich willkommen als Partner.'} Ihre Anzeige ist ab sofort freigeschaltet und in wenigen Minuten online:<br><a href="${anzeigeUrl}" style="color:#2563eb">${anzeigeUrl}</a></p>
+    <p style="color:#374151">${flat ? 'vielen Dank für Ihre weitere Ausschreibung.' : einzel ? 'vielen Dank für Ihre Buchung einer <strong>Einzelanzeige</strong> auf derkaemmerer.de.' : 'vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de – herzlich willkommen als Partner.'} Ihre Anzeige ist ab sofort freigeschaltet und in wenigen Minuten online:<br><a href="${anzeigeUrl}" style="color:#2563eb">${anzeigeUrl}</a></p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0;background:#f8fafc;border:1px solid #e2e8f0">
-      <tr><td style="padding:10px 12px;color:#6b7280;width:160px">Paket</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${d.paket || 'KommunalFlat – 249 €/Monat'}</td></tr>
+      <tr><td style="padding:10px 12px;color:#6b7280;width:160px">Paket</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${flat ? 'KommunalFlat (bestehend)' : einzel ? `Einzelanzeige – ${EINZEL_PREIS} € zzgl. MwSt., online bis ${deTag(einzelBis(d))}` : (d.paket || 'KommunalFlat – 249 €/Monat')}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Organisation</td><td style="padding:10px 12px;color:#172840">${d.behoerde}</td></tr>
       <tr><td style="padding:10px 12px;color:#6b7280">Erster Stellentitel</td><td style="padding:10px 12px;color:#172840">${d.stellentitel}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Ansprechpartner</td><td style="padding:10px 12px;color:#172840">${d.kontaktname}</td></tr>
@@ -191,6 +206,9 @@ async function sendEmail(d, slug, flat = null, token = null) {
       <p style="margin:10px 0 0;color:#6b7280;font-size:12px">Persönlicher Zugang – bitte nur innerhalb Ihrer Verwaltung weitergeben.</p></div>` : ''}
     ${flat
       ? `<p style="color:#374151">Diese Anzeige ist in Ihrer bestehenden <strong>KommunalFlat</strong> enthalten – es entstehen keine weiteren Kosten.</p>`
+      : einzel
+      ? `<p style="color:#374151">Ihre Anzeige steht ganz oben in der Stellenbörse und bleibt bis ${deTag(einzelBis(d))} online. Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail.</p>
+    <p style="color:#374151">Sie schreiben regelmäßig aus? Mit der <strong>KommunalFlat</strong> (249 € im Monat) veröffentlichen Sie alle Ausschreibungen ohne Stückpreis: <a href="https://derkaemmerer.de/anzeige-aufgeben" style="color:#2563eb">derkaemmerer.de/anzeige-aufgeben</a></p>`
       : `<p style="color:#374151"><strong>So geht es weiter:</strong></p>
     <ul style="color:#374151;padding-left:20px;line-height:1.6">
       <li>Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail.</li>
@@ -225,7 +243,7 @@ export default async function handler(req, res) {
     catch (e) { console.error('Flat-Prüfung fehlgeschlagen:', e.message); }
 
     let token = null;
-    try { token = await cockpitZugang(d); }
+    if (!istEinzel(d) || flat) try { token = await cockpitZugang(d); }
     catch (e) { console.error('Cockpit-Zugang fehlgeschlagen:', e.message); }
 
     if (process.env.RESEND_API_KEY) await sendEmail(d, slug, flat, token);
@@ -234,9 +252,10 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, slug, flat: flat.id });
     }
 
-    // Rechnung direkt erstellen und an Kunden senden
+    // Rechnung direkt erstellen und an Kunden senden – als erste Rechnung eines KommunalFlat-Abos (Vertragsmonat 1);
+    // die Folgerechnungen schreibt der Monatslauf am 1. jedes Monats (api/abo-rechnungen.js).
     try {
-      await createInvoice({
+      const kunde = {
         organisation:    d.behoerde,
         abteilung:       d.abteilung || '',
         ansprechpartner: d.kontaktname,
@@ -247,6 +266,23 @@ export default async function handler(req, res) {
         telefon:         d.kontakttel || '',
         leitwegId:       d.leitwegid || '',
         stellentitel:    d.stellentitel,
+      };
+      if (istEinzel(d)) {
+        const bis = einzelBis(d);
+        await createInvoice({ ...kunde, art: 'einzel', zeitraum: `${deTag(isoTag(new Date()))} – ${deTag(bis)}` }, [{
+          beschreibung: `Einzelanzeige – Stellenbörse derkaemmerer.de\n„${d.stellentitel}“\nPlatzierung oben  |  online bis ${deTag(bis)} (höchstens ${EINZEL_TAGE} Tage)`,
+          menge: 1, einheit: '1 Anzeige', einzelpreis: EINZEL_PREIS,
+        }]);
+        return res.status(200).json({ ok: true, slug, paket: 'Einzelanzeige' });
+      }
+      const monat = monatVon();
+      const aboId = naechsteAboId((await abosLesen()).abos);
+      const reId = await createInvoice({ ...kunde, abo: { id: aboId, monat, vertragsmonat: 1, laufzeit: 12, preis: 249 } });
+      await abosAendern(`Abo ${aboId}: ${d.behoerde} (KommunalFlat)`, (liste) => {
+        liste.push({ id: aboId, produkt: 'KommunalFlat', organisation: kunde.organisation, abteilung: kunde.abteilung,
+          ansprechpartner: kunde.ansprechpartner, strasse: kunde.strasse, plz: kunde.plz, ort: kunde.ort, email: kunde.email,
+          leitwegId: kunde.leitwegId, preis: 249, start: monat, laufzeitMonate: 12, status: 'aktiv', endeMonat: null,
+          rechnungen: [{ monat, id: reId, datum: new Date().toISOString().slice(0, 10) }] });
       });
     } catch (e) {
       console.error('Rechnung-Fehler:', e.message);

@@ -10,7 +10,7 @@ import { getCollection } from 'astro:content';
 const u = ueberblick(markt.stellen);
 const pz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
 const heute = new Date(); heute.setHours(0, 0, 0, 0);
-const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute);
+const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute && (!data.laufzeitBis || new Date(data.laufzeitBis) >= heute));
 const profile = Object.values(import.meta.glob('../data/arbeitgeber/*.json', { eager: true, import: 'default' })) as any[];
 ---
 <Base title="Arbeitgeberservice für Kommunen – Stellen, Personal-Cockpit, Arbeitgeberprofil"

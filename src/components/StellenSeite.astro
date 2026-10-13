@@ -63,7 +63,7 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
   display: block; text-decoration: none; color: inherit;
 }
 .st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(26,39,68,.1); border-color: #bfdbfe; }
-.st-card.premium { border-left: 4px solid #3b82f6; }
+.st-card.premium, .st-card.einzelanzeige { border-left: 4px solid #3b82f6; }
 .st-card.exklusiv { border-left: 4px solid #1a2744; background: linear-gradient(to right, #f8faff 0%, #fff 60%); }
 
 .st-card-inner { padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
@@ -73,7 +73,7 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
   font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
   padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
 }
-.st-card-badge.premium  { background: #dbeafe; color: #1d4ed8; }
+.st-card-badge.premium, .st-card-badge.einzelanzeige  { background: #dbeafe; color: #1d4ed8; }
 .st-card-badge.exklusiv { background: #1a2744; color: #93c5fd; }
 
 .st-card-org { font-size: 12px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }

@@ -328,7 +328,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
             <!-- Badge -->
             <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.25);border:1px solid rgba(37,99,235,0.5);padding:5px 14px;border-radius:20px;margin-bottom:28px">
               <span style="width:6px;height:6px;background:#60a5fa;border-radius:50%;display:inline-block"></span>
-              <span style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#93c5fd">Das einzige Angebot — KommunalFlat</span>
+              <span style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#93c5fd">Empfohlen — KommunalFlat</span>
             </div>
 
             <!-- Preis + Features Grid -->
@@ -386,8 +386,28 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
           </div>
         </div>
 
+        <!-- Auswahl: KommunalFlat oder Einzelanzeige -->
+        <div class="f-paket-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px">
+          <label class="f-paket-card selected" data-paket="KommunalFlat – 249 €/Monat">
+            <input type="radio" name="paketwahl" value="KommunalFlat – 249 €/Monat" checked>
+            <div class="f-paket-check">✓</div>
+            <div class="f-paket-name">Abonnement</div>
+            <div class="f-paket-title">KommunalFlat</div>
+            <div class="f-paket-price">249 € <small>/ Monat zzgl. MwSt.</small></div>
+            <div class="f-paket-days">Alle Ausschreibungen ohne Stückpreis · 12-Monatsvertrag · monatliche Rechnung</div>
+          </label>
+          <label class="f-paket-card" data-paket="Einzelanzeige – 690 € einmalig">
+            <input type="radio" name="paketwahl" value="Einzelanzeige – 690 € einmalig">
+            <div class="f-paket-check">✓</div>
+            <div class="f-paket-name">Einmalig</div>
+            <div class="f-paket-title">Einzelanzeige</div>
+            <div class="f-paket-price">690 € <small>einmalig zzgl. MwSt.</small></div>
+            <div class="f-paket-days">Eine Ausschreibung · ganz oben platziert · bis zu 60 Tage online</div>
+          </label>
+        </div>
+
         <p style="font-size:12px;color:#6b7280;margin-top:12px;line-height:1.6">
-          Nach Absenden Ihrer Anfrage erhalten Sie innerhalb von 1 Werktag den Vertrag per E-Mail.
+          Nach dem Absenden ist Ihre Anzeige sofort freigeschaltet. Buchungsbestätigung und Rechnung erhalten Sie direkt per E-Mail.
         </p>
 
         <style>
@@ -704,7 +724,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
         <div class="f-summary-title">📋 Ihre Buchungsübersicht</div>
         <div class="f-summary-row"><span>Paket</span><span id="sum-paket">KommunalFlat – 249 €/Monat</span></div>
         <div class="f-summary-row" id="sum-addon-row" style="display:none"><span>Zusatzleistungen (einmalig)</span><span id="sum-addons">—</span></div>
-        <div class="f-summary-row total"><span>Monatlicher Grundbetrag (netto)</span><span id="sum-total">249 €/Monat</span></div>
+        <div class="f-summary-row total"><span id="sum-total-label">Monatlicher Grundbetrag (netto)</span><span id="sum-total">249 €/Monat</span></div>
         <div style="font-size:11px;color:#065f46;margin-top:8px">zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel</div>
       </div>
 
@@ -742,6 +762,7 @@ document.addEventListener('DOMContentLoaded', () => updateSummary());
 // ── Preise ──────────────────────────────────────────────
 const paketPreise: Record<string, number> = {
   'KommunalFlat – 249 €/Monat': 249,
+  'Einzelanzeige – 690 € einmalig': 690,
 };
 const addonPreise: Record<string, number> = {
   addon_portraet:   0,
@@ -769,7 +790,10 @@ function updateSummary() {
   if (sumAddons)   sumAddons.textContent   = addonLabels.join(', ') || '—';
 
   const total = base + addonTotal;
-  if (sumTotal) sumTotal.textContent = `${base.toLocaleString('de-DE')} €/Monat${addonTotal > 0 ? ` + ${addonTotal.toLocaleString('de-DE')} € einmalig` : ''}`;
+  const einzel = selectedPaket.startsWith('Einzelanzeige');
+  const sumLabel = document.getElementById('sum-total-label');
+  if (sumLabel) sumLabel.textContent = einzel ? 'Einmaliger Betrag (netto)' : 'Monatlicher Grundbetrag (netto)';
+  if (sumTotal) sumTotal.textContent = `${base.toLocaleString('de-DE')} €${einzel ? ' einmalig' : '/Monat'}${addonTotal > 0 ? ` + ${addonTotal.toLocaleString('de-DE')} € einmalig` : ''}`;
 }
 
 // ── Paket auswählen ─────────────────────────────────────
@@ -777,6 +801,8 @@ function selectPaket(value: string, card: HTMLElement) {
   document.querySelectorAll('.f-paket-card').forEach(c => c.classList.remove('selected'));
   card.classList.add('selected');
   selectedPaket = value;
+  const hidden = document.getElementById('paketInput') as HTMLInputElement | null;
+  if (hidden) hidden.value = value;
   // Radio-Input explizit setzen (nötig bei programmatischer Auswahl)
   const radio = card.querySelector<HTMLInputElement>('input[type="radio"]');
   if (radio) radio.checked = true;

@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "crons": [
-    { "path": "/api/jobalert-versand", "schedule": "0 5 * * 1" }
+    { "path": "/api/jobalert-versand", "schedule": "0 5 * * 1" },
+    { "path": "/api/abo-rechnungen", "schedule": "0 5 1 * *" }
   ]
 }

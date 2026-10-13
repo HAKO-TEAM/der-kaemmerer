@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ABO-2026-001",
+    "produkt": "KommunalFlat",
+    "organisation": "Stadt Bamberg",
+    "abteilung": "",
+    "ansprechpartner": "Anna-Maria Lieberth",
+    "strasse": "Schönleinsplatz 1",
+    "plz": "96047",
+    "ort": "Bamberg",
+    "email": "rechnung@stadt.bamberg.de",
+    "leitwegId": "",
+    "preis": 249,
+    "leistung": "KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen | Stadt-Dossier | Newsletter + LinkedIn",
+    "start": "2026-10",
+    "laufzeitMonate": 12,
+    "status": "aktiv",
+    "endeMonat": null,
+    "rechnungen": [
+      { "monat": "2026-10", "id": "DK-2026-1044", "datum": "2026-10-01" }
+    ]
+  }
+]
