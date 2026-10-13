@@ -193,7 +193,7 @@ export function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
   if (!positionen || positionen.length === 0) {
     const a = aboText(data.abo);
     positionen = [{
-      beschreibung: (data.abo?.leistung || 'KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Stadt-Dossier')
+      beschreibung: (data.abo?.leistung || 'KommunalFlat – Stellenbörse derkaemmerer.de\nUnlimitierte Stellenanzeigen  |  Arbeitgeberprofil')
         + (a ? `\nLeistungszeitraum ${a.zeitraum}` : ''),
       menge: 1,
       einheit: '1 Monat',
