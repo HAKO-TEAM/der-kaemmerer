@@ -128,6 +128,7 @@ export function passtZuFlat(records, d, heute = new Date()) {
   return records.find(r => {
     if (!r.date || new Date(r.date) < grenze) return false;
     if (r.art === 'einzel') return false;   // Einzelanzeige ist keine Flat
+    if (r.test) return false;               // Testbuchungen zählen nicht
     const rMail = (r.email || '').toLowerCase().trim();
     return (org && normOrg(r.organisation) === org)
         || mails.includes(rMail)

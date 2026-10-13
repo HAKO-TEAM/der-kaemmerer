@@ -5,7 +5,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Musterstadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1002",
@@ -13,7 +14,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1003",
@@ -21,7 +23,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1004",
@@ -29,7 +32,8 @@
     "date": "2026-06-02",
     "organisation": "TEST",
     "email": "test@test.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1005",
@@ -37,7 +41,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1006",
@@ -45,7 +50,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1007",
@@ -53,7 +59,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1008",
@@ -61,7 +68,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1009",
@@ -69,7 +77,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Musterstadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1010",
@@ -77,7 +86,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1011",
@@ -85,7 +95,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1012",
@@ -93,7 +104,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Musterstadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1013",
@@ -101,7 +113,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Musterstadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1014",
@@ -109,7 +122,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Teststadt",
     "email": "anzeigen@derkaemmerer.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1015",
@@ -133,7 +147,8 @@
     "date": "2026-06-02",
     "organisation": "Geschlossenes Amt",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1018",
@@ -141,7 +156,8 @@
     "date": "2026-06-02",
     "organisation": "Chaos III",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1019",
@@ -149,7 +165,8 @@
     "date": "2026-06-02",
     "organisation": "Underground",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1020",
@@ -157,7 +174,8 @@
     "date": "2026-06-02",
     "organisation": "Chaos Abteilung",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1021",
@@ -165,7 +183,8 @@
     "date": "2026-06-02",
     "organisation": "Chaos III",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1022",
@@ -173,7 +192,8 @@
     "date": "2026-06-02",
     "organisation": "Stadtverwaltung Chemnitz",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1023",
@@ -181,7 +201,8 @@
     "date": "2026-06-02",
     "organisation": "CIA",
     "email": "m.kosel@nurovia.de",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1024",
@@ -197,7 +218,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1026",
@@ -205,7 +227,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1027",
@@ -213,7 +236,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1028",
@@ -221,7 +245,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1029",
@@ -229,7 +254,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1030",
@@ -237,7 +263,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1031",
@@ -245,7 +272,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1032",
@@ -253,7 +281,8 @@
     "date": "2026-06-05",
     "organisation": "Stadt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1033",
@@ -261,7 +290,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 25000
+    "betrag": 25000,
+    "test": true
   },
   {
     "id": "DK-2026-1034",
@@ -269,7 +299,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 26750
+    "betrag": 26750,
+    "test": true
   },
   {
     "id": "DK-2026-1035",
@@ -277,7 +308,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1036",
@@ -285,7 +317,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 25000
+    "betrag": 25000,
+    "test": true
   },
   {
     "id": "DK-2026-1037",
@@ -293,7 +326,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1038",
@@ -301,7 +335,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1039",
@@ -309,7 +344,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1040",
@@ -317,7 +353,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1041",
@@ -325,7 +362,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1042",
@@ -333,7 +371,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 296.31
+    "betrag": 296.31,
+    "test": true
   },
   {
     "id": "DK-2026-1043",
@@ -341,7 +380,8 @@
     "date": "2026-06-05",
     "organisation": "Staddt X",
     "email": "pmo@hako.team",
-    "betrag": 29750
+    "betrag": 29750,
+    "test": true
   },
   {
     "id": "DK-2026-1044",
