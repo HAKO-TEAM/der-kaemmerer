@@ -446,7 +446,7 @@ async function sendInvoiceEmail(data, invoiceId, pdfBuffer, betrag, vorlage = 'k
     : 'Das Team von Der Kämmerer';
   const hinweis = isHako
     ? 'Bitte überweisen Sie den Rechnungsbetrag unter Angabe der Rechnungsnummer als Verwendungszweck.'
-    : 'Ihr Zugang zur Stellenbörse wird nach Zahlungseingang freigeschaltet.';
+    : 'Ihre Anzeige ist bereits freigeschaltet – den Betrag überweisen Sie bitte innerhalb des Zahlungsziels.';
   const footer = isHako
     ? 'HAKO Beteiligungsgesellschaft mbH · hako.team · anzeigen@derkaemmerer.de'
     : 'derkaemmerer.de · anzeigen@derkaemmerer.de';
