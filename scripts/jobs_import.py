@@ -105,7 +105,7 @@ def main():
             if j.get('kontakt_email') and (j.get('paket') or 'Basis') != 'KommunalFlat':  # Kunden bekommen keine Angebotsmails
                 kontakte.append({'slug': s, 'title': j['title'], 'org': j['organisation'], 'ort': j['ort'],
                                  'kontakt_name': j.get('kontakt_name', ''), 'anrede': j.get('kontakt_anrede', ''),
-                                 'email': j['kontakt_email'], 'frist': schluss.isoformat()})
+                                 'email': j['kontakt_email'], 'frist': schluss.isoformat(), 'orgtyp': j.get('orgtyp', '')})
     print(f'neu: {len(neu)}  verworfen: {len(verworfen)}  mit Ansprechperson: {len(kontakte)}')
     if kontakte and not dry:
         ziel = Path(f'/tmp/derkaemmerer_stellen_kontakte_{date.today().isoformat()}.json')

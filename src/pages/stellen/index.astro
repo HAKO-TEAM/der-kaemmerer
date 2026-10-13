@@ -6,9 +6,9 @@ const alle = await aktiveStellen();
 const seiten = Math.max(1, Math.ceil(alle.length / JE_SEITE));
 ---
 <StellenSeite
-  seoTitel="Stellenbörse: Stellenangebote im öffentlichen Dienst der Kommunen"
-  beschreibung={`${alle.length} aktuelle Stellen kommunaler Arbeitgeber – Kämmerei, Verwaltung, Technik, IT und Führung, nach Bundesland und Berufsfeld, jede mit Entgelt- und Marktvergleich.`}
-  label="derkaemmerer.de · Stellenbörse" titel="Ihre nächste Aufgabe<br>in der Kommune."
-  untertitel="Aktuelle Stellen aus Kämmerei, Verwaltung und Führung – jede mit Entgelt- und Marktvergleich."
+  seoTitel="Stellenbörse: Stellenangebote der Kommunen und kommunalen Unternehmen"
+  beschreibung={`${alle.length} aktuelle Stellen von Kommunen und kommunalen Unternehmen – Kämmerei, Verwaltung, Controlling, Technik, IT und Führung, nach Bundesland und Berufsfeld, jede mit Entgelt- und Marktvergleich.`}
+  label="derkaemmerer.de · Stellenbörse" titel="Ihre nächste Aufgabe<br>in Kommunen und kommunalen Unternehmen."
+  untertitel="Aktuelle Stellen aus Kämmerei, Verwaltung, Stadtwerken und kommunalen Unternehmen – jede mit Entgelt- und Marktvergleich."
   alle={alle} liste={alle.slice(0, JE_SEITE)} gesamt={alle.length} seite={1} seiten={seiten} marktZahlen={true}
 />
