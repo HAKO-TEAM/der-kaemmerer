@@ -3,7 +3,7 @@ export const prerender = true;
 
 const RESSORT_NAME: Record<string, string> = {
   haushalt: 'Haushalt & Finanzen', einnahmen: 'Einnahmen', ausgaben: 'Ausgaben', praxis: 'Best Practice',
-  recht: 'Recht & Vergabe', analyse: 'Analyse & Meinung', sozialkosten: 'Sozialkosten', 'dienst-karriere': 'Dienst & Karriere',
+  recht: 'Recht & Vergabe', analyse: 'Analyse & Meinung', sozialkosten: 'Sozialkosten', konzern: 'Konzern Kommune', 'dienst-karriere': 'Dienst & Karriere',
 };
 
 export async function GET() {

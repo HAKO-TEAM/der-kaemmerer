@@ -18,8 +18,9 @@ const praxis    = await getCollection('praxis');
 const recht     = await getCollection('recht');
 const analyse      = await getCollection('analyse');
 const sozialkosten = await getCollection('sozialkosten');
+const konzern = await getCollection('konzern');
 
-const alle = [...haushalt,...einnahmen,...ausgaben,...praxis,...recht,...analyse,...sozialkosten]
+const alle = [...haushalt,...einnahmen,...ausgaben,...praxis,...recht,...analyse,...sozialkosten,...konzern]
   .sort((a,b) => new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime());
 
 // Daten & Verzeichnisse: sichtbar auf der Startseite verlinkt (interne Verlinkung der Datenseiten)
@@ -54,11 +55,11 @@ const rotationPool = rotationQuelle.map(a => ({
 
 const catColor: Record<string,string> = {
   haushalt:'#c2410c', einnahmen:'#3b82f6', ausgaben:'#1e40af',
-  praxis:'#92400e', recht:'#6b21a8', analyse:'#374151', sozialkosten:'#be123c'
+  praxis:'#92400e', recht:'#6b21a8', analyse:'#374151', sozialkosten:'#be123c', konzern:'#0f766e'
 };
 const catLabel: Record<string,string> = {
   haushalt:'Haushalt', einnahmen:'Einnahmen', ausgaben:'Ausgaben steuern',
-  praxis:'Best Practice', recht:'Recht & Vergabe', analyse:'Analyse', sozialkosten:'Sozialkosten'
+  praxis:'Best Practice', recht:'Recht & Vergabe', analyse:'Analyse', sozialkosten:'Sozialkosten', konzern:'Konzern Kommune'
 };
 ---
 <Base title="Der Kämmerer – Das Briefing für kommunale Entscheider">
@@ -254,13 +255,14 @@ const catLabel: Record<string,string> = {
   <!-- Ressort-Sektionen -->
   {[
     {key:'sozialkosten', artikel:sozialkosten},
+    {key:'konzern',      artikel:konzern},
     {key:'haushalt',     artikel:haushalt},
     {key:'einnahmen',    artikel:einnahmen},
     {key:'ausgaben',     artikel:ausgaben},
     {key:'analyse',      artikel:analyse},
     {key:'praxis',       artikel:praxis},
     {key:'recht',        artikel:recht},
-  ].map(({key, artikel}) => {
+  ].filter(({artikel}) => artikel.length).map(({key, artikel}) => {
     const sorted = [...artikel].sort((a,b) => new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime());
     return (
     <div style="margin-bottom:48px;">

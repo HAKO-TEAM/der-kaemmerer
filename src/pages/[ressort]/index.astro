@@ -13,6 +13,7 @@ export async function getStaticPaths() {
     { params:{ressort:'recht'},     props:{label:'Recht & Vergabe',       sub:'Aktuelle Rechtsprechung und Vergabepraxis',          color:'#6b21a8'} },
     { params:{ressort:'analyse'},      props:{label:'Analyse & Meinung',     sub:'Einordnung und Kommentar',                                  color:'#374151'} },
     { params:{ressort:'sozialkosten'}, props:{label:'Sozialkosten',          sub:'HzE · Grundsicherung · Asyl · Wohnungslosigkeit — der größte Haushaltshebel', color:'#be123c'} },
+    { params:{ressort:'konzern'},      props:{label:'Konzern Kommune',       sub:'Stadtwerke · Wohnungsgesellschaften · Verkehr — Beteiligungen und ihr Gewicht im Haushalt', color:'#0f766e'} },
   ];
 }
 
@@ -26,6 +27,7 @@ const allPraxis    = await getCollection('praxis');
 const allRecht     = await getCollection('recht');
 const allAnalyse      = await getCollection('analyse');
 const allSozialkosten = await getCollection('sozialkosten');
+const allKonzern      = await getCollection('konzern');
 
 const map: Record<string, any[]> = {
   haushalt:     allHaushalt,
@@ -35,6 +37,7 @@ const map: Record<string, any[]> = {
   recht:        allRecht,
   analyse:      allAnalyse,
   sozialkosten: allSozialkosten,
+  konzern:      allKonzern,
 };
 
 const entries = (map[ressort] || []).sort((a: any, b: any) =>

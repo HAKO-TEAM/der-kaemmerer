@@ -1,7 +1,7 @@
 // Alle redaktionellen Artikel für RSS-Feed und Google-News-Sitemap, neueste zuerst.
 import { getCollection } from 'astro:content';
 
-export const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten'] as const;
+export const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten', 'konzern'] as const;
 export const SITE = 'https://derkaemmerer.de';
 
 export async function alleArtikel() {

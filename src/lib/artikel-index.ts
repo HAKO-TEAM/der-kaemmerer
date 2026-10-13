@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import { genannteGemeinden } from './gemeinde-links.mjs';
 
-const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten'] as const;
+const RESSORTS = ['haushalt', 'einnahmen', 'ausgaben', 'praxis', 'recht', 'analyse', 'sozialkosten', 'konzern'] as const;
 export type ArtikelKurz = { titel: string; url: string; datum: string; ressort: string };
 let cache: Promise<{ jeAgs: Map<string, ArtikelKurz[]>; neueste: ArtikelKurz[] }> | null = null;
 

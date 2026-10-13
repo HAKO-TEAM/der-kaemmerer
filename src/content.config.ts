@@ -25,6 +25,7 @@ export const collections = {
   recht:        defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/recht' }),        schema: artikel }),
   analyse:      defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/analyse' }),      schema: artikel }),
   sozialkosten: defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/sozialkosten' }), schema: artikel }),
+  konzern:      defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/konzern' }),      schema: artikel }),   // Konzern Kommune (MK 13.10.2026)
   dienstKarriere: defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/dienst-karriere' }), schema: artikel }),
 
   // ── Stellenbörse ────────────────────────────────────────
