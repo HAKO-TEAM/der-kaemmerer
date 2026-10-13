@@ -81,6 +81,10 @@ const GH_HEADERS = () => ({
 const GH_BASE = () =>
   `https://api.github.com/repos/${process.env.GITHUB_OWNER ?? 'HAKO-TEAM'}/${process.env.GITHUB_REPO ?? 'der-kaemmerer'}/contents`;
 
+// Bereits vergebene Nummern, deren Datensätze gelöscht wurden (Testläufe bis DK-2026-1050, 13.10.2026) –
+// so wird keine Rechnungsnummer ein zweites Mal vergeben.
+const BELEGT_BIS = { 2026: 1050 };
+
 async function nextInvoiceNumber() {
   const path = 'data/rechnungen.json';
   const url  = `${GH_BASE()}/${path}`;
@@ -100,7 +104,7 @@ async function nextInvoiceNumber() {
     .reduce((max, r) => {
       const n = parseInt((r.id ?? '').split('-')[2]) || 0;
       return Math.max(max, n);
-    }, 1000);  // Startwert 1000 → erste Rechnung = 1001
+    }, BELEGT_BIS[year] ?? 1000);  // Startwert 1000 → erste Rechnung = 1001
   const num = (maxNum + 1).toString().padStart(4, '0');
   const id  = `DK-${year}-${num}`;
   return { id, records, sha, path };
