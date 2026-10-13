@@ -21,6 +21,8 @@ import { STUFEN, UEBERSCHULDUNG } from '../../../lib/haushaltsstatus.mjs';
 import { artikelIndex } from '../../../lib/artikel-index';
 import { kreisVonAgs } from '../../../lib/kreise.mjs';
 import { stellenJeGemeinde } from '../../../lib/stellen-ort.mjs';
+import { unternehmenInGemeinde } from '../../../lib/unternehmen.mjs';
+import { aktiveStellen } from '../../../lib/stellen';
 
 const { pfad, ags: agsVon } = verzeichnis(gemeinden as any[]);
 const p = `${Astro.params.land}/${Astro.params.gemeinde}`;
@@ -53,7 +55,10 @@ const hs = g.land === 'NW' ? (hsNw as any).gemeinden[g.ags] : null;
 const hsStufe = hs ? (STUFEN as any)[hs.s] : null;
 const hsAkt = hs ? ((hsNw as any).aktualisierungen || {})[g.ags] || null : null;
 const hsGleich = hs ? Object.values((hsNw as any).gemeinden).filter((x: any) => x.s === hs.s).length : 0;
-const stellenHier = (stellenJeGemeinde((markt as any).stellen, gemeinden as any[]).get(g.ags) || []).length;
+const marktHier = stellenJeGemeinde((markt as any).stellen, gemeinden as any[]).get(g.ags) || [];
+const stellenHier = marktHier.length;
+// Kommunale Unternehmen der Gemeinde (Stadtwerke, Wohnen, Verkehr/Entsorgung) – MK 13.10.2026
+const unternehmenHier = unternehmenInGemeinde(marktHier, await aktiveStellen(), g);
 const kreisInfo: any = kreisVonAgs(gemeinden as any[]).get(g.kreis_ags) || null;
 const meineProgramme = (programme as any[]).filter((pr) => pr.gemeinden.some((x: any) => x.url === gemeindeUrl(p)));
 const ai = await artikelIndex(gemeinden as any[]);
@@ -191,6 +196,16 @@ if (g.lat && g.lon) gebiet.geo = { '@type': 'GeoCoordinates', latitude: g.lat, l
         </div>
       </div>
     </section>
+
+    {unternehmenHier.length > 0 && (
+    <section class="gm-ab">
+      <h2>Kommunale Unternehmen in {g.name}</h2>
+      <p class="gm-unter">Stadtwerke, Versorger, Wohnungs- und Verkehrsgesellschaften und weitere kommunale Betriebe mit aktuell offenen Stellen.</p>
+      <div class="gm-karte">
+        {unternehmenHier.slice(0, 12).map((u) => <div class="gm-zeile"><span>{u.eigene.length ? <a href={`/stellen/${u.eigene[0].slug}/`}>{u.name}</a> : u.name}<br><small style="font-weight:400">{u.sparte}</small></span><small>{u.n} {u.n === 1 ? 'Stelle' : 'Stellen'}</small></div>)}
+        <p class="gm-hin"><a href={`${gemeindeUrl(p)}stellen/`}>Alle Stellen in {g.name}</a> · <a href="/kommunale-unternehmen/">Kommunale Unternehmen bundesweit</a></p>
+      </div>
+    </section>)}
 
     {meineProgramme.length > 0 && (
     <section class="gm-ab">

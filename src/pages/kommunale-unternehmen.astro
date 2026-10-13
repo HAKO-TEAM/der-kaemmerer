@@ -6,11 +6,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import markt from '../data/markt/markt.json';
 import { aktiveStellen } from '../lib/stellen';
-import { istUnternehmen, sparte, SPARTEN } from '../lib/unternehmen.mjs';
+import { istUnternehmen, sparte, SPARTEN, schluessel } from '../lib/unternehmen.mjs';
 
 const LAND = { BW: 'Baden-Württemberg', BY: 'Bayern', BE: 'Berlin', BB: 'Brandenburg', HB: 'Bremen', HH: 'Hamburg', HE: 'Hessen', MV: 'Mecklenburg-Vorpommern',
   NI: 'Niedersachsen', NW: 'Nordrhein-Westfalen', RP: 'Rheinland-Pfalz', SL: 'Saarland', SN: 'Sachsen', ST: 'Sachsen-Anhalt', SH: 'Schleswig-Holstein', TH: 'Thüringen' };
-const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+const norm = schluessel;
 
 // Unternehmen aus der Marktbeobachtung
 const firmen = new Map();

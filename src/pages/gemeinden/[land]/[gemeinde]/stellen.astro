@@ -7,6 +7,7 @@ import Base from '../../../../layouts/Base.astro';
 import Header from '../../../../components/Header.astro';
 import Footer from '../../../../components/Footer.astro';
 import markt from '../../../../data/markt/markt.json';
+import { istUnternehmen, sparte } from '../../../../lib/unternehmen.mjs';
 import gemeinden from '../../../../data/spiegel/gemeinden.json';
 import sperren from '../../../../data/haushaltslage/sperren.json';
 import hsNw from '../../../../data/spiegel/haushaltsstatus_nw.json';
@@ -94,6 +95,7 @@ const org = { '@context': 'https://schema.org', '@type': 'GovernmentOrganization
 .st-fakten span { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.04em; }
 .st-fakten b { font-size:17px; } .st-fakten small { font-size:12.5px; color:#475569; line-height:1.45; } .st-fakten a { color:#2563eb; }
 .st-eigen { font-style:normal; font-size:11px; font-weight:600; background:#dbeafe; color:#1e40af; border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:middle; }
+.st-eigen.st-ku { background:#ecfdf5; color:#065f46; }
 .st-cta.st-cta-ag { grid-template-columns:1fr; margin:28px 0 0; }
 .st-kopf { background:#172840; color:#fff; padding:34px 0 30px; border-bottom:3px solid #2563eb; }
 .st-pfad { font-size:13px; color:rgba(255,255,255,.6); } .st-pfad a { color:#93c5fd; text-decoration:none; }
@@ -139,10 +141,10 @@ const org = { '@context': 'https://schema.org', '@type': 'GovernmentOrganization
     {n > 0 && (
       <section class="st-ab">
         <h2>Offene Stellen in {g.name} nach Arbeitgeber</h2>
-        <p class="st-unter">Stand {datum((markt as any).kopf.stand?.slice?.(0, 10))} · neueste Ausschreibungen zuerst. Die Bewerbung läuft direkt beim Arbeitgeber.</p>
+        <p class="st-unter">Stand {datum((markt as any).kopf.stand?.slice?.(0, 10))} · neueste Ausschreibungen zuerst. Die Bewerbung läuft direkt beim Arbeitgeber.{gruppen.some(([o]) => !istEigen(o) && istUnternehmen(o)) && <> Dazu gehören auch die kommunalen Unternehmen der Stadt – <a href="/kommunale-unternehmen/">alle kommunalen Unternehmen im Überblick</a>.</>}</p>
         {gruppen.map(([org, liste]) => (
           <div class="st-ag">
-            <h3>{org} <small>· {liste.length} {liste.length === 1 ? 'Stelle' : 'Stellen'}</small>{istEigen(org) && <em class="st-eigen">Arbeitgeber {g.name}</em>}</h3>
+            <h3>{org} <small>· {liste.length} {liste.length === 1 ? 'Stelle' : 'Stellen'}</small>{istEigen(org) && <em class="st-eigen">Arbeitgeber {g.name}</em>}{!istEigen(org) && istUnternehmen(org) && <em class="st-eigen st-ku">Kommunales Unternehmen · {sparte(org).name}</em>}</h3>
             {liste.map((s) => (
               <div class="st-z">
                 <a href={s.u} target="_blank" rel="noopener nofollow" data-bewerbung={s.id}>{s.t}<span class="f">{(FELD_NAMEN as any)[s.f] || 'Verwaltung'}{s.ort && s.ort !== g.name ? ` · ${s.ort}` : ''}</span></a>
