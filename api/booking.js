@@ -17,8 +17,11 @@ export const EINZEL_TAGE = 60;
 const istEinzel = (d) => /^Einzelanzeige/i.test(d.paket || '');
 const isoTag = (d) => d.toISOString().slice(0, 10);
 const deTag = (iso) => iso.split('-').reverse().join('.');
+// Laufzeit der Anzeige: KommunalFlat wählbar 30/60/90 Tage (Standard 60), Einzelanzeige fest 60 Tage;
+// längstens bis zum Bewerbungsschluss
+const laufzeitTage = (d) => istEinzel(d) ? EINZEL_TAGE : ([30, 60, 90].includes(Number(d.laufzeit)) ? Number(d.laufzeit) : 60);
 function einzelBis(d) {
-  const bis = new Date(); bis.setDate(bis.getDate() + EINZEL_TAGE);
+  const bis = new Date(); bis.setDate(bis.getDate() + laufzeitTage(d));
   const frist = d.bewerbungsschluss && /^\d{4}-\d{2}-\d{2}$/.test(d.bewerbungsschluss) ? d.bewerbungsschluss : null;
   return frist && frist < isoTag(bis) ? frist : isoTag(bis);
 }
@@ -40,7 +43,8 @@ bewerbungsschluss: "${d.bewerbungsschluss}"
 bewerbungslink: "${d.bewerbungslink || ''}"
 schlagwoerter: [${tags || '"Kommunalverwaltung", "TVöD"'}]
 paket: "${istEinzel(d) ? 'Einzelanzeige' : 'KommunalFlat'}"
-${istEinzel(d) ? `laufzeitBis: "${einzelBis(d)}"\n` : ''}aktiv: true
+laufzeitBis: "${einzelBis(d)}"
+aktiv: true
 datum: "${new Date().toISOString().split('T')[0]}"
 featured: false
 ---
@@ -231,6 +235,7 @@ export default async function handler(req, res) {
 
   try {
     const d = req.body;
+    if (/^Einzelanzeige/i.test(d?.paket || '')) { delete d.addon_portraet; delete d.addon_beratung; }   // Zusatzleistungen nur mit der Flat
     if (!d.stellentitel || !d.behoerde || !d.kontaktemail) {
       return res.status(400).json({ error: 'Pflichtfelder fehlen' });
     }

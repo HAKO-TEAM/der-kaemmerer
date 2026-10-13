@@ -88,6 +88,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 .f-main { padding: 48px 0 80px; background: var(--f-warm); }
 
 /* ── ABSCHNITTE ── */
+.f-section[hidden] { display: none !important; }
 .f-section {
   background: var(--f-white);
   border: 1px solid var(--f-border);
@@ -526,6 +527,17 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
           </div>
 
           <div class="f-field">
+            <label class="f-label" for="laufzeit">Laufzeit der Anzeige
+              <span class="hint" id="laufzeitHinweis">längstens bis zum Bewerbungsschluss</span>
+            </label>
+            <select class="f-select" id="laufzeit" name="laufzeit">
+              <option value="30">30 Tage</option>
+              <option value="60" selected>60 Tage</option>
+              <option value="90">90 Tage</option>
+            </select>
+          </div>
+
+          <div class="f-field">
             <label class="f-label" for="bewerbungslink">Bewerbungslink oder -E-Mail <span class="req">*</span>
               <span class="hint">URL oder E-Mail-Adresse</span>
             </label>
@@ -672,8 +684,8 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
         </div>
       </div>
 
-      <!-- ══ ADD-ONS ══ -->
-      <div class="f-section">
+      <!-- ══ ADD-ONS (nur KommunalFlat; bei der Einzelanzeige ausgeblendet) ══ -->
+      <div class="f-section" id="sectionAddons">
         <div class="f-section-head">
           <div class="f-section-icon">⭐</div>
           <div>
@@ -725,7 +737,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
         <div class="f-summary-row"><span>Paket</span><span id="sum-paket">KommunalFlat – 249 €/Monat</span></div>
         <div class="f-summary-row" id="sum-addon-row" style="display:none"><span>Zusatzleistungen (einmalig)</span><span id="sum-addons">—</span></div>
         <div class="f-summary-row total"><span id="sum-total-label">Monatlicher Grundbetrag (netto)</span><span id="sum-total">249 €/Monat</span></div>
-        <div style="font-size:11px;color:#065f46;margin-top:8px">zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel</div>
+        <div style="font-size:11px;color:#065f46;margin-top:8px" id="sum-hinweis">zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel</div>
       </div>
 
       <!-- Formspree Steuerung -->
@@ -793,6 +805,10 @@ function updateSummary() {
   const einzel = selectedPaket.startsWith('Einzelanzeige');
   const sumLabel = document.getElementById('sum-total-label');
   if (sumLabel) sumLabel.textContent = einzel ? 'Einmaliger Betrag (netto)' : 'Monatlicher Grundbetrag (netto)';
+  const sumHinweis = document.getElementById('sum-hinweis');
+  if (sumHinweis) sumHinweis.textContent = einzel
+    ? 'zzgl. 19 % MwSt. · Einmalige Rechnung · bis zu 60 Tage online · 14 Tage Zahlungsziel'
+    : 'zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel';
   if (sumTotal) sumTotal.textContent = `${base.toLocaleString('de-DE')} €${einzel ? ' einmalig' : '/Monat'}${addonTotal > 0 ? ` + ${addonTotal.toLocaleString('de-DE')} € einmalig` : ''}`;
 }
 
@@ -803,6 +819,19 @@ function selectPaket(value: string, card: HTMLElement) {
   selectedPaket = value;
   const hidden = document.getElementById('paketInput') as HTMLInputElement | null;
   if (hidden) hidden.value = value;
+  // Zusatzleistungen gibt es nur mit der KommunalFlat
+  const einzel = value.startsWith('Einzelanzeige');
+  const addons = document.getElementById('sectionAddons');
+  if (addons) addons.hidden = einzel;
+  if (einzel) document.querySelectorAll<HTMLInputElement>('.addon-check').forEach((cb) => { cb.checked = false; });
+  // Laufzeit: KommunalFlat wählbar (30/60/90 Tage), Einzelanzeige fest 60 Tage
+  const lz = document.getElementById('laufzeit') as HTMLSelectElement | null;
+  if (lz) {
+    if (einzel) lz.value = '60';
+    [...lz.options].forEach((o) => { o.disabled = einzel && o.value !== '60'; });
+    const h = document.getElementById('laufzeitHinweis');
+    if (h) h.textContent = einzel ? 'Einzelanzeige: 60 Tage, längstens bis zum Bewerbungsschluss' : 'längstens bis zum Bewerbungsschluss';
+  }
   // Radio-Input explizit setzen (nötig bei programmatischer Auswahl)
   const radio = card.querySelector<HTMLInputElement>('input[type="radio"]');
   if (radio) radio.checked = true;
