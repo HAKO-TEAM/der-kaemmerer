@@ -13,7 +13,7 @@ bewerbungslink: "m.kosel@nurovia.de"
 schlagwoerter: ["Kommunalverwaltung", "TVöD"]
 paket: "Einzelanzeige"
 laufzeitBis: "2026-11-10"
-aktiv: true
+aktiv: false
 datum: "2026-10-13"
 featured: false
 ---

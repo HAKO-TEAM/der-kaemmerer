@@ -38,8 +38,8 @@
     "preis": 249,
     "start": "2026-10",
     "laufzeitMonate": 12,
-    "status": "aktiv",
-    "endeMonat": null,
+    "status": "test",
+    "endeMonat": "2026-10",
     "rechnungen": [
       {
         "monat": "2026-10",
