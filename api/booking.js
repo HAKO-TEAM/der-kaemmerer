@@ -20,11 +20,20 @@ const deTag = (iso) => iso.split('-').reverse().join('.');
 // Laufzeit der Anzeige: KommunalFlat wählbar 30/60/90 Tage (Standard 60), Einzelanzeige fest 60 Tage;
 // längstens bis zum Bewerbungsschluss
 const laufzeitTage = (d) => istEinzel(d) ? EINZEL_TAGE : ([30, 60, 90].includes(Number(d.laufzeit)) ? Number(d.laufzeit) : 60);
+// Ende der gebuchten Laufzeit (Buchungstag = Tag 1): genau die gebuchten Tage, unabhängig vom Bewerbungsschluss.
 function einzelBis(d) {
-  const bis = new Date(); bis.setDate(bis.getDate() + laufzeitTage(d));
-  const frist = d.bewerbungsschluss && /^\d{4}-\d{2}-\d{2}$/.test(d.bewerbungsschluss) ? d.bewerbungsschluss : null;
-  return frist && frist < isoTag(bis) ? frist : isoTag(bis);
+  const bis = new Date(); bis.setDate(bis.getDate() + laufzeitTage(d) - 1);
+  return isoTag(bis);
 }
+/** Bewerbungsschluss, falls er vor dem Laufzeitende liegt (dann blendet die Stellenbörse die Anzeige mit Fristende aus) */
+function fristFrueher(d) {
+  const frist = d.bewerbungsschluss && /^\d{4}-\d{2}-\d{2}$/.test(d.bewerbungsschluss) ? d.bewerbungsschluss : null;
+  return frist && frist < einzelBis(d) ? frist : null;
+}
+const laufzeitText = (d) => `${laufzeitTage(d)} Tage · ${deTag(isoTag(new Date()))} – ${deTag(einzelBis(d))}`;
+const fristHinweis = (d) => fristFrueher(d)
+  ? `<p style="color:#374151;font-size:13px;background:#fef9c3;padding:10px 12px">Ihr Bewerbungsschluss (${deTag(fristFrueher(d))}) liegt vor dem Ende der gebuchten Laufzeit. Mit Fristende blenden wir die Anzeige aus der Stellenbörse aus. Verlängern Sie die Frist, teilen Sie uns das einfach an <a href="mailto:anzeigen@derkaemmerer.de">anzeigen@derkaemmerer.de</a> mit – die Anzeige bleibt dann bis ${deTag(einzelBis(d))} online.</p>`
+  : '';
 
 function buildMarkdown(d) {
   const slug = makeSlug(d.stellentitel || 'stelle', d.behoerde || 'kommune');
@@ -199,7 +208,8 @@ async function sendEmail(d, slug, flat = null, token = null) {
     <p style="color:#374151">Sehr geehrte Damen und Herren,</p>
     <p style="color:#374151">${flat ? 'vielen Dank für Ihre weitere Ausschreibung.' : einzel ? 'vielen Dank für Ihre Buchung einer <strong>Einzelanzeige</strong> auf derkaemmerer.de.' : 'vielen Dank für Ihre Buchung der <strong>KommunalFlat</strong> auf derkaemmerer.de – herzlich willkommen als Partner.'} Ihre Anzeige ist ab sofort freigeschaltet und in wenigen Minuten online:<br><a href="${anzeigeUrl}" style="color:#2563eb">${anzeigeUrl}</a></p>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:24px 0;background:#f8fafc;border:1px solid #e2e8f0">
-      <tr><td style="padding:10px 12px;color:#6b7280;width:160px">Paket</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${flat ? 'KommunalFlat (bestehend)' : einzel ? `Einzelanzeige – ${EINZEL_PREIS} € zzgl. MwSt., online bis ${deTag(einzelBis(d))}` : (d.paket || 'KommunalFlat – 249 €/Monat')}</td></tr>
+      <tr><td style="padding:10px 12px;color:#6b7280;width:160px">Paket</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${flat ? 'KommunalFlat (bestehend)' : einzel ? `Einzelanzeige – ${EINZEL_PREIS} € zzgl. MwSt.` : (d.paket || 'KommunalFlat – 249 €/Monat')}</td></tr>
+      <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Laufzeit der Anzeige</td><td style="padding:10px 12px;font-weight:bold;color:#172840">${laufzeitText(d)}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Organisation</td><td style="padding:10px 12px;color:#172840">${d.behoerde}</td></tr>
       <tr><td style="padding:10px 12px;color:#6b7280">Erster Stellentitel</td><td style="padding:10px 12px;color:#172840">${d.stellentitel}</td></tr>
       <tr style="background:#fff"><td style="padding:10px 12px;color:#6b7280">Ansprechpartner</td><td style="padding:10px 12px;color:#172840">${d.kontaktname}</td></tr>
@@ -212,7 +222,7 @@ async function sendEmail(d, slug, flat = null, token = null) {
     ${flat
       ? `<p style="color:#374151">Diese Anzeige ist in Ihrer bestehenden <strong>KommunalFlat</strong> enthalten – es entstehen keine weiteren Kosten.</p>`
       : einzel
-      ? `<p style="color:#374151">Ihre Anzeige steht ganz oben in der Stellenbörse und bleibt bis ${deTag(einzelBis(d))} online. Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail.</p>
+      ? `<p style="color:#374151">Ihre Anzeige steht ganz oben in der Stellenbörse und bleibt ${laufzeitTage(d)} Tage bis ${deTag(einzelBis(d))} online. Die <strong>Rechnung</strong> erhalten Sie in einer separaten E-Mail.</p>
     <p style="color:#374151">Sie schreiben regelmäßig aus? Mit der <strong>KommunalFlat</strong> (249 € im Monat) veröffentlichen Sie alle Ausschreibungen ohne Stückpreis: <a href="https://derkaemmerer.de/anzeige-aufgeben" style="color:#2563eb">derkaemmerer.de/anzeige-aufgeben</a></p>`
       : `<p style="color:#374151"><strong>So geht es weiter:</strong></p>
     <ul style="color:#374151;padding-left:20px;line-height:1.6">
@@ -220,6 +230,7 @@ async function sendEmail(d, slug, flat = null, token = null) {
       <li>Ihr <strong>Arbeitgeberprofil</strong> auf derkaemmerer.de legen wir in den nächsten 24 Stunden an.</li>
       <li>Ihre <strong>weiteren Ausschreibungen</strong>, die Sie auf interamt.de veröffentlichen, übernehmen wir automatisch als KommunalFlat-Anzeigen. Alle anderen senden Sie uns einfach über <a href="https://derkaemmerer.de/anzeige-aufgeben" style="color:#2563eb">derkaemmerer.de/anzeige-aufgeben</a> – sie sind sofort online.</li>
     </ul>`}
+    ${fristHinweis(d)}
     <p style="color:#374151">Bei Fragen stehen wir Ihnen gerne zur Verfügung.</p>
     <p style="color:#374151">Mit freundlichen Grüßen<br><strong>Das Team von Der Kämmerer</strong><br>
     <a href="mailto:anzeigen@derkaemmerer.de" style="color:#2563eb">anzeigen@derkaemmerer.de</a></p>
@@ -276,7 +287,7 @@ export default async function handler(req, res) {
       if (istEinzel(d)) {
         const bis = einzelBis(d);
         await createInvoice({ ...kunde, art: 'einzel', zeitraum: `${deTag(isoTag(new Date()))} – ${deTag(bis)}` }, [{
-          beschreibung: `Einzelanzeige – Stellenbörse derkaemmerer.de\n„${d.stellentitel}“\nPlatzierung oben  |  online bis ${deTag(bis)} (höchstens ${EINZEL_TAGE} Tage)`,
+          beschreibung: `Einzelanzeige – Stellenbörse derkaemmerer.de\n„${d.stellentitel}“\nPlatzierung oben  |  Laufzeit ${EINZEL_TAGE} Tage: ${deTag(isoTag(new Date()))} – ${deTag(bis)}`,
           menge: 1, einheit: '1 Anzeige', einzelpreis: EINZEL_PREIS,
         }]);
         return res.status(200).json({ ok: true, slug, paket: 'Einzelanzeige' });

@@ -404,7 +404,7 @@ export function buildPDF(data, invoiceId, positionen, vorlage = 'kaemmerer') {
         `Danach fällig netto innerhalb von ${tage} Tagen bis ${formatDate(frist)}. ` +
         `Bitte überweisen Sie unter Angabe des Verwendungszwecks. ` +
         (data.art === 'einzel'
-          ? `Einmalige Leistung: Veröffentlichung der Stellenanzeige für höchstens 60 Tage, längstens bis zum Bewerbungsschluss.`
+          ? `Einmalige Leistung: Veröffentlichung der Stellenanzeige für 60 Tage ab Buchung.`
           : `12-Monatsvertrag, erstmalig kündbar zum Ablauf des 12. Monats, ` +
             `danach monatlich zum Monatsende mit 1 Monat Kündigungsfrist.`);
     doc.text(vertragsBed, ML, vY + 12, { width: CW, lineBreak: true });

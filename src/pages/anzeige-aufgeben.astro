@@ -403,7 +403,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
             <div class="f-paket-name">Einmalig</div>
             <div class="f-paket-title">Einzelanzeige</div>
             <div class="f-paket-price">690 € <small>einmalig zzgl. MwSt.</small></div>
-            <div class="f-paket-days">Eine Ausschreibung · ganz oben platziert · bis zu 60 Tage online</div>
+            <div class="f-paket-days">Eine Ausschreibung · ganz oben platziert · 60 Tage online</div>
           </label>
         </div>
 
@@ -528,7 +528,7 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
 
           <div class="f-field">
             <label class="f-label" for="laufzeit">Laufzeit der Anzeige
-              <span class="hint" id="laufzeitHinweis">längstens bis zum Bewerbungsschluss</span>
+              <span class="hint" id="laufzeitHinweis">ab heute; endet die Bewerbungsfrist früher, blenden wir die Anzeige mit Fristende aus</span>
             </label>
             <select class="f-select" id="laufzeit" name="laufzeit">
               <option value="30">30 Tage</option>
@@ -807,7 +807,7 @@ function updateSummary() {
   if (sumLabel) sumLabel.textContent = einzel ? 'Einmaliger Betrag (netto)' : 'Monatlicher Grundbetrag (netto)';
   const sumHinweis = document.getElementById('sum-hinweis');
   if (sumHinweis) sumHinweis.textContent = einzel
-    ? 'zzgl. 19 % MwSt. · Einmalige Rechnung · bis zu 60 Tage online · 14 Tage Zahlungsziel'
+    ? 'zzgl. 19 % MwSt. · Einmalige Rechnung · 60 Tage online · 14 Tage Zahlungsziel'
     : 'zzgl. 19 % MwSt. · Jahresgesamtbetrag: 2.988 € netto · Monatliche Rechnung · 14 Tage Zahlungsziel';
   if (sumTotal) sumTotal.textContent = `${base.toLocaleString('de-DE')} €${einzel ? ' einmalig' : '/Monat'}${addonTotal > 0 ? ` + ${addonTotal.toLocaleString('de-DE')} € einmalig` : ''}`;
 }
@@ -830,7 +830,7 @@ function selectPaket(value: string, card: HTMLElement) {
     if (einzel) lz.value = '60';
     [...lz.options].forEach((o) => { o.disabled = einzel && o.value !== '60'; });
     const h = document.getElementById('laufzeitHinweis');
-    if (h) h.textContent = einzel ? 'Einzelanzeige: 60 Tage, längstens bis zum Bewerbungsschluss' : 'längstens bis zum Bewerbungsschluss';
+    if (h) h.textContent = einzel ? 'Einzelanzeige: 60 Tage ab heute' : 'ab heute; endet die Bewerbungsfrist früher, blenden wir die Anzeige mit Fristende aus';
   }
   // Radio-Input explizit setzen (nötig bei programmatischer Auswahl)
   const radio = card.querySelector<HTMLInputElement>('input[type="radio"]');
