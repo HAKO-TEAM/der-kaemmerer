@@ -2,6 +2,7 @@
 title: "Direktvergabe und Inhouse-Vergabe im Busverkehr 2026: Was VO 1370/2007 und das neue EuGH-Urteil verlangen"
 beschreibung: "Zehn Jahre Laufzeit, 80-Prozent-Grenze, Betriebsrisiko: Wie Kommunen Busverkehr direkt an eigene Verkehrsunternehmen vergeben – Chancen und Pflichten."
 ressort: konzern
+cluster: verkehr
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

@@ -2,6 +2,7 @@
 title: "Konzessionsvergabe nach § 46 EnWG: Strom- und Gasnetze rekommunalisieren – Verfahren, Kosten, Erfahrungen 2026"
 beschreibung: "Sieben Jahre bis zum Vertrag in Lörrach, 2,06 Mrd. Euro für Berlins Stromnetz: Was Kommunen bei der Konzessionsvergabe nach § 46 EnWG erwartet."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

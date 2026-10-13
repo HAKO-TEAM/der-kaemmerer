@@ -2,6 +2,7 @@
 title: "Gewinnabführung der Stadtwerke 2027: Wie viel Ausschüttung der Haushalt realistisch einplanen kann"
 beschreibung: "92 % der Stadtwerke können ihre Investitionen kaum aus eigenen Mitteln tragen. Was das für die Gewinnabführung im Haushalt 2027 bedeutet."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

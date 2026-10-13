@@ -2,6 +2,7 @@
 title: "Aufsichtsrat im kommunalen Unternehmen 2026: Weisungsrecht, Verschwiegenheit und Haftung für Ratsmitglieder"
 beschreibung: "29.501 neue Mandate in Niedersachsen: Was entsandte Ratsmitglieder über Weisungen, § 394 AktG, Haftung und Freistellung durch die Gemeinde wissen müssen."
 ressort: konzern
+cluster: steuerung
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

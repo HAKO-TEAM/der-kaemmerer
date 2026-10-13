@@ -2,6 +2,7 @@
 title: "Bäder als Dauerverlustgeschäft 2026: § 8 Abs. 7 KStG, Spartenrechnung und der neue Bädererlass"
 beschreibung: "Aalen plant für seine Bäder 2027 einen Fehlbetrag von 7,43 Mio. Euro. Was § 8 Abs. 7 KStG, Spartenrechnung und Bädererlass für Kommunen bedeuten."
 ressort: konzern
+cluster: steuern
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

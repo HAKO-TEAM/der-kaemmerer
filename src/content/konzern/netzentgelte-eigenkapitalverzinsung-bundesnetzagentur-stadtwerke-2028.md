@@ -2,6 +2,7 @@
 title: "Netzentgelte und Eigenkapitalverzinsung 2028: Was der WACC der Bundesnetzagentur für Stadtwerke und Gewinnabführung bedeutet"
 beschreibung: "3,76 % WACC für Gasnetze ab 2028, Festlegung bis Jahresende: Wie die neue Anreizregulierung Netzergebnisse und Abführungen an die Kommune verändert."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

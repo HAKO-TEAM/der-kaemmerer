@@ -2,6 +2,7 @@
 title: "§ 2b UStG ab 2027: Was Beistandsleistungen, interkommunale Zusammenarbeit, Eigenbetriebe und GmbHs jetzt beachten müssen"
 beschreibung: "Am 31.12.2026 endet die Übergangsfrist für § 2b UStG. Was für Beistandsleistungen, Personalgestellung, Eigenbetriebe und kommunale GmbHs gilt."
 ressort: konzern
+cluster: steuern
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

@@ -2,6 +2,7 @@
 title: "Wasserversorgung 2027: Wie Zweckverbände Klimaanpassung und Versorgungssicherheit finanzieren"
 beschreibung: "4,6 Mrd. Euro bis 2046 allein am Bodensee: Warum Trockensommer die Investitionen der Wasserversorger treiben und wie Entgelte und Umlagen sie tragen."
 ressort: konzern
+cluster: entsorgung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

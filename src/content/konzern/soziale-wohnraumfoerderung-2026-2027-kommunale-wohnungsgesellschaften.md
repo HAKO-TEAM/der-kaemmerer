@@ -2,6 +2,7 @@
 title: "Soziale Wohnraumförderung 2026/2027: Wie kommunale Wohnungsgesellschaften Bundes- und Landesmittel nutzen"
 beschreibung: "5 Mrd. Euro Bundesmittel für 2027: Wie die soziale Wohnraumförderung funktioniert und was kommunale Gesellschaften und Kämmereien daraus machen."
 ressort: konzern
+cluster: wohnen
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

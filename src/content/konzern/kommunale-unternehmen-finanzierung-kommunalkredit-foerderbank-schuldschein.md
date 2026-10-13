@@ -2,6 +2,7 @@
 title: "Wie kommunale Unternehmen sich 2026 finanzieren: Kommunalkredit, Förderbank, Schuldschein und Bürgschaft im Vergleich"
 beschreibung: "346 Mrd. Euro Finanzierungslücke bei Netzen und Wärme: Konzernkredit, KfW, Landesförderbanken, Schuldschein und Bürgschaft im Vergleich für Kämmereien."
 ressort: konzern
+cluster: finanzierung
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

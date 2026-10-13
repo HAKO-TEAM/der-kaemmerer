@@ -2,6 +2,7 @@
 title: "Fernwärmeausbau finanzieren 2027: BEW-Förderung, Eigenanteil und die Rolle der Kommune als Gesellschafter"
 beschreibung: "Rund 1,87 Mrd. Euro BEW-Mittel im Haushaltsentwurf 2027, 40 % Förderquote: Wer den Rest des Fernwärmeausbaus trägt und was das für den Haushalt heißt."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

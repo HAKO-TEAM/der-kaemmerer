@@ -2,6 +2,7 @@
 title: "Mieten, Bindungen, Klimaziele: Wo kommunale Wohnungsgesellschaften 2027 an ihre Eigenkapitalgrenze stoßen"
 beschreibung: "Instandhaltungspreise +55 % seit 2019, Bestandsmieten +12,6 %: Was Belegungsbindung, Modernisierung und Eigenkapital für Kommunen bedeuten."
 ressort: konzern
+cluster: wohnen
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

@@ -44,6 +44,23 @@ const entries = (map[ressort] || []).sort((a: any, b: any) =>
   new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime()
 );
 
+// Konzern Kommune: nach Branchen und Querschnittsthemen gegliedert (MK 13.10.2026)
+const KONZERN_GRUPPEN = [
+  { key: 'energie',      label: 'Stadtwerke & Energie',       art: 'Branche' },
+  { key: 'wohnen',       label: 'Wohnungsgesellschaften',     art: 'Branche' },
+  { key: 'verkehr',      label: 'Verkehr & ÖPNV',             art: 'Branche' },
+  { key: 'entsorgung',   label: 'Entsorgung & Wasser',        art: 'Branche' },
+  { key: 'steuern',      label: 'Steuern',                    art: 'Querschnitt' },
+  { key: 'finanzierung', label: 'Finanzierung & Risiko',      art: 'Querschnitt' },
+  { key: 'steuerung',    label: 'Beteiligungssteuerung',      art: 'Querschnitt' },
+  { key: 'personal',     label: 'Personal & Vergütung',       art: 'Querschnitt' },
+];
+const gruppen = ressort === 'konzern'
+  ? [...KONZERN_GRUPPEN.map((g) => ({ ...g, artikel: entries.filter((a: any) => a.data.cluster === g.key) })),
+     { key: 'weitere', label: 'Weitere Beiträge', art: '', artikel: entries.filter((a: any) => !KONZERN_GRUPPEN.some((g) => g.key === a.data.cluster)) }]
+      .filter((g) => g.artikel.length)
+  : [{ key: 'alle', label: '', art: '', artikel: entries }];
+
 function getSlug(entry: any) {
   return (entry.id as string).split('/').pop()!.replace('.md','');
 }
@@ -54,6 +71,16 @@ function getSlug(entry: any) {
   .res-hero-inner{max-width:1200px;margin:0 auto;padding:0 32px}
   .res-main{max-width:1200px;margin:0 auto;padding:36px 32px}
   .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .res-sprung{display:grid;gap:8px;margin:0 0 28px}
+  .res-sprung div{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .res-sprung span{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#64748b;min-width:92px}
+  .res-sprung a{font-size:13px;color:#1a2744;text-decoration:none;border:1px solid #cbd5e1;border-radius:20px;padding:5px 12px;background:#fff}
+  .res-sprung a:hover{border-color:#0f766e;color:#0f766e}
+  .res-sprung a i{font-style:normal;color:#0f766e;font-weight:700;margin-left:3px}
+  .res-gruppe{margin-bottom:36px;scroll-margin-top:80px}
+  .res-gruppe-titel{font-size:20px;font-weight:800;color:#1a2744;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+  .res-gruppe-titel small{display:block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0f766e;margin-bottom:2px}
+  .res-gruppe-titel em{font-style:normal;font-size:13px;color:#64748b;font-weight:600;margin-left:6px}
   @media(max-width:1024px){.res-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:768px){
     .res-hero-inner,.res-main{padding:0 16px}
@@ -74,8 +101,19 @@ function getSlug(entry: any) {
   ) : (
     <>
       <div style="font-size:12px;color:#6b7280;margin-bottom:20px;">{entries.length} Artikel in diesem Ressort</div>
+      {gruppen.length > 1 && (
+        <nav class="res-sprung">
+          {['Branche', 'Querschnitt'].map((art) => gruppen.some((g) => g.art === art) && (
+            <div><span>{art === 'Branche' ? 'Branchen' : 'Querschnitt'}</span>
+              {gruppen.filter((g) => g.art === art).map((g) => <a href={`#${g.key}`}>{g.label} <i>{g.artikel.length}</i></a>)}</div>
+          ))}
+        </nav>
+      )}
+      {gruppen.map((g) => (
+      <section id={g.key} class="res-gruppe">
+      {g.label && <h2 class="res-gruppe-titel"><small>{g.art}</small>{g.label} <em>{g.artikel.length}</em></h2>}
       <div class="res-grid">
-        {entries.map((a: any) => (
+        {g.artikel.map((a: any) => (
           <div style={`background:#fff;border:1px solid #e2e8f0;border-top:3px solid ${color};border-radius:4px;padding:18px;`}>
             {a.data.tag && (
               <span style="display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #93c5fd;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 6px;border-radius:2px;margin-bottom:10px;">
@@ -93,6 +131,8 @@ function getSlug(entry: any) {
           </div>
         ))}
       </div>
+      </section>
+      ))}
     </>
   )}
 </main>

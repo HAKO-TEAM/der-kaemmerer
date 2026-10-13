@@ -2,6 +2,7 @@
 title: "Eigenkapital für Stadtwerke bis 2035: Kapitalzuführung, Gesellschafterdarlehen, Bürgerbeteiligung und Fonds im Vergleich"
 beschreibung: "40 Mrd. Euro neues Eigenkapital brauchen Energieversorger bis 2035. Welche Instrumente Kommunen haben – und was sie den Haushalt kosten."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

@@ -2,6 +2,7 @@
 title: "Deutschlandticket 2027: Was 66,80 Euro und die Finanzierung bis 2030 für Aufgabenträger und Kommunen bedeuten"
 beschreibung: "Ab Januar 2027 kostet das Deutschlandticket 66,80 Euro, Bund und Länder zahlen fest je 1,5 Mrd. Euro. Was der Preisindex für kommunale Haushalte heißt."
 ressort: konzern
+cluster: verkehr
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

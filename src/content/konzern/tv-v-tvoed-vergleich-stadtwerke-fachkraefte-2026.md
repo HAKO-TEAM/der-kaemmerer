@@ -2,6 +2,7 @@
 title: "TV-V und TVöD im Vergleich 2026: Wie Stadtwerke mit dem Tarif um Fachkräfte werben"
 beschreibung: "TV-V-Tabelle seit Juni 2026 um 1,25 % erhöht, TVöD seit Mai um 2,8 %: Was der Tarifvergleich für Stadtwerke, Personalkosten und Haushalt 2027 bedeutet."
 ressort: konzern
+cluster: personal
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

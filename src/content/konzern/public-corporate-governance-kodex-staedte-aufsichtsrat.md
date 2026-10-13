@@ -2,6 +2,7 @@
 title: "Public Corporate Governance Kodex: Was Städte 2026 regeln – und was das für Aufsichtsräte bedeutet"
 beschreibung: "Fünf Mandate als Obergrenze, Selbstbehalt bei der D&O-Versicherung, jährliche Entsprechenserklärung: was kommunale PCGKs von Aufsichtsräten erwarten."
 ressort: konzern
+cluster: steuerung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

@@ -2,6 +2,7 @@
 title: "Abwassergebühren 2027: Kanalnetz, vierte Reinigungsstufe und die offene Frage der Herstellerverantwortung"
 beschreibung: "Knapp 9 Mrd. Euro kostet die vierte Reinigungsstufe bis 2045. Wer sie zahlt, ist nach dem EuGH-Schlussantrag offen. Was das für Abwassergebühren heißt."
 ressort: konzern
+cluster: entsorgung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

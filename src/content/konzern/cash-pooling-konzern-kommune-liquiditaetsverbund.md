@@ -2,6 +2,7 @@
 title: "Cash-Pooling im Konzern Kommune 2026: Was ein Liquiditätsverbund mit Stadtwerken und Eigenbetrieben leisten kann"
 beschreibung: "Zinsausgaben der Kommunen +13,1 % im ersten Halbjahr 2026: Wie ein Liquiditätsverbund Kreditkosten senkt – und welche Grenzen Kommunal- und GmbH-Recht setzen."
 ressort: konzern
+cluster: finanzierung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

@@ -2,6 +2,7 @@
 title: "Steuerlicher Querverbund 2026: Wie § 4 Abs. 6 KStG funktioniert – und was sinkende Energiegewinne bedeuten"
 beschreibung: "Querverbund nach § 4 Abs. 6 KStG: Voraussetzungen, Kettenzusammenfassung, Beihilferecht – und warum er nur trägt, solange die Energiesparte Gewinne macht."
 ressort: konzern
+cluster: steuern
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

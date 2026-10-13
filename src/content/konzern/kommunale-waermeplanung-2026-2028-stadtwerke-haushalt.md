@@ -2,6 +2,7 @@
 title: "Kommunale Wärmeplanung 2026/2028: Was die Wärmepläne für Stadtwerke und Haushalt bedeuten"
 beschreibung: "75 von 80 Großstädten haben ihren Wärmeplan, 2028 folgen alle übrigen Kommunen. Was die Pläne für Gasnetz, Fernwärme und Haushalt bedeuten."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

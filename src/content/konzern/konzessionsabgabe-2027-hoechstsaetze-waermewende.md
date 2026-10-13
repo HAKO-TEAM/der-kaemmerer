@@ -2,6 +2,7 @@
 title: "Konzessionsabgabe 2027: Höchstsätze, Einnahmeentwicklung und was die Wärmewende verschiebt"
 beschreibung: "Bis 2,39 Cent je kWh Strom, oft nur 0,03 Cent bei Gas: Warum die Wärmewende die Konzessionsabgabe 2027 eher stärkt als schwächt."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

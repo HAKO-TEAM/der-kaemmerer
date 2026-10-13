@@ -2,6 +2,7 @@
 title: "Bürgschaft und Patronatserklärung 2026: Wie Kommunen ihre Unternehmen absichern – Genehmigung, Avalprovision, Haushaltsrisiko"
 beschreibung: "Bis zu 80 % Ausfallbürgschaft, marktübliche Avalprovision, Genehmigung: Was Kämmereien bei Bürgschaften für kommunale Unternehmen 2026 beachten."
 ressort: konzern
+cluster: finanzierung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

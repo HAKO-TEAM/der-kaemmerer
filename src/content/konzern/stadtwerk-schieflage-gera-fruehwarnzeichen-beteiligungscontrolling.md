@@ -2,6 +2,7 @@
 title: "Wenn ein Stadtwerk in Schieflage gerät: Was der Fall Gera 2014 und spätere Krisen über Frühwarnzeichen lehren"
 beschreibung: "Zwölf Jahre nach der Insolvenz der Stadtwerke Gera erhalten die Gläubiger 65,4 Mio. Euro. Welche Frühwarnzeichen Beteiligungscontrolling erkennen kann."
 ressort: konzern
+cluster: steuerung
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

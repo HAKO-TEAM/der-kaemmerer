@@ -2,6 +2,7 @@
 title: "So wird der ÖPNV finanziert: Regionalisierungsmittel, Dienstleistungsauftrag, Ausgleich und Querverbund 2026"
 beschreibung: "Rund 26 Mrd. Euro öffentliche Mittel pro Jahr: Wie Fahrgeld, Regionalisierungsmittel, Ausgleichsleistungen und Verlustausgleich im ÖPNV zusammenwirken."
 ressort: konzern
+cluster: verkehr
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

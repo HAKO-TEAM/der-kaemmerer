@@ -2,6 +2,7 @@
 title: "Gesamtabschluss der Kommune 2026: Pflichten nach Ländern, Rückstände und Nutzen für die Steuerung"
 beschreibung: "NRW verlangt ihn binnen neun Monaten, Baden-Württemberg hat ihn ersetzt: Was der kommunale Gesamtabschluss 2026 leistet und wo er stockt."
 ressort: konzern
+cluster: steuerung
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

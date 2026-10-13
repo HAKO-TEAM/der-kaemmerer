@@ -2,6 +2,7 @@
 title: "TV-N 2026: Fahrpersonalmangel, Tarifabschlüsse und was sie für den ÖPNV-Verlustausgleich bedeuten"
 beschreibung: "Rund 25.000 Busfahrkräfte fehlen, die TV-N-Runden 2026 verkürzen die Arbeitszeit: Was das für Angebot, Personalbedarf und Verlustausgleich heißt."
 ressort: konzern
+cluster: personal
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

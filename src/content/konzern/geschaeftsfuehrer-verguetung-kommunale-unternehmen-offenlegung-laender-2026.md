@@ -2,6 +2,7 @@
 title: "Geschäftsführer-Vergütung kommunaler Unternehmen 2026: Offenlegungspflichten der Länder im Überblick"
 beschreibung: "Nur 19,6 % der kommunalen Top-Manager legen ihre Vergütung personenbezogen offen. Welche Länder was verlangen – und was Gesellschafter tun können."
 ressort: konzern
+cluster: personal
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

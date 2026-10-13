@@ -2,6 +2,7 @@
 title: "Konzern Kommune: Warum Stadtwerke, Wohnungsgesellschaften und Verkehrsbetriebe über den Haushalt 2027 mitentscheiden"
 beschreibung: "535 Mrd. Euro Investitionsbedarf bis 2045: Was Gewinnabführung, Querverbund und Eigenkapital der Stadtwerke für den Haushalt 2027 bedeuten."
 ressort: konzern
+cluster: energie
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

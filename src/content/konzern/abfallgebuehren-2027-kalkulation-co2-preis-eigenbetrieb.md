@@ -2,6 +2,7 @@
 title: "Abfallgebühren 2027: CO₂-Preis, Tarifkosten und Umsatzsteuer – was die Kalkulation jetzt bestimmt"
 beschreibung: "Kassel plant 31 % mehr, Dresden 4,3 %: Welche Kostentreiber die Abfallgebühren 2027 prägen und was Eigenbetrieb oder GmbH für die Kalkulation bedeuten."
 ressort: konzern
+cluster: entsorgung
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion

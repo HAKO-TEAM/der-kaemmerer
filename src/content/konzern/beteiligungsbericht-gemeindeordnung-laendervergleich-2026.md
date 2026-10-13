@@ -2,6 +2,7 @@
 title: "Beteiligungsbericht 2026: Was die Gemeindeordnungen der Länder verlangen – und wie er zum Steuerungsinstrument wird"
 beschreibung: "Fünf Länder, fünf Regelwerke: Von der 5-Prozent-Schwelle in Bayern bis zum Plan-Ist-Vergleich in Sachsen – der Beteiligungsbericht im Vergleich."
 ressort: konzern
+cluster: steuerung
 datum: "2026-10-13"
 minuten: 7
 autor: Redaktion

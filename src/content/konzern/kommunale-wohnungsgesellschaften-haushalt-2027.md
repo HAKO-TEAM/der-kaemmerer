@@ -2,6 +2,7 @@
 title: "Kommunale Wohnungsgesellschaften 2027: Was sie für den Haushalt leisten – und was sie kosten"
 beschreibung: "2,7 Mio. Mietwohnungen in kommunaler Hand: Wie Ausschüttung, Kapitalzuführung, Mietenstopp und Bürgschaft den Haushalt 2027 berühren."
 ressort: konzern
+cluster: wohnen
 datum: "2026-10-13"
 minuten: 6
 autor: Redaktion
