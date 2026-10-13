@@ -1,0 +1,62 @@
+{
+  "slug": "stadt-haldensleben",
+  "name": "Stadt Haldensleben",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 19170,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Bernhard Hieber",
+  "token": "220faa5373b53a49",
+  "claim": "Die Kreisstadt mit tausendjähriger Geschichte verantwortungsvoll mitgestalten.",
+  "beschreibung": "Haldensleben ist Kreisstadt des Landkreises Börde in Sachsen-Anhalt und wurde 966 in einer Urkunde Kaiser Ottos I. erstmals erwähnt. Die Altstadt besitzt eine nahezu vollständig erhaltene Stadtmauer von rund 2,1 Kilometern Länge, vor dem klassizistischen Rathaus steht der Haldensleber Roland. Die Stadtverwaltung bietet abwechslungsreiche und verantwortungsvolle Aufgaben, vom Ordnungswesen bis zur Feuerwehr.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "19.170",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "966",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "156,21 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt Landkreis Börde",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Verantwortungsvolle Aufgaben",
+      "beschreibung": "Abwechslungsreiche und verantwortungsvolle Tätigkeit."
+    },
+    {
+      "titel": "Tarif und Sozialleistungen",
+      "beschreibung": "Arbeitsverhältnis nach TVöD-VKA einschließlich der üblichen Sozialleistungen im öffentlichen Dienst."
+    },
+    {
+      "titel": "Leistungsprämie",
+      "beschreibung": "Leistungsabhängige Prämie im Sinne des § 18 TVöD am Jahresende."
+    },
+    {
+      "titel": "Fahrradleasing",
+      "beschreibung": "Fahrradleasing im Rahmen einer Entgeltumwandlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abteilung Verwaltungs-, Personalservice und Informationstechnologie",
+    "email": "personalservice@haldensleben.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Kreisstadt, Bürgermeister, Stadtmauer, Roland: de.wikipedia.org/wiki/Haldensleben (abgerufen 13.10.2026)",
+    "Bürgermeister, Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Rechts- und Ordnungsangelegenheiten, https://interamt.de/koop/app/stelle?id=1496442 (API api.interamt.de/query/stellenangebot/1496442) (abgerufen 13.10.2026)"
+  ]
+}

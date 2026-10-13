@@ -1,0 +1,67 @@
+{
+  "slug": "tharandt",
+  "name": "Stadt Tharandt",
+  "bundesland": "Sachsen",
+  "einwohner": 5101,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Silvio Ziesemer",
+  "token": "c0e1f566dfd8af29",
+  "claim": "Als Kämmerin oder Kämmerer die Finanzen einer traditionsreichen Forststadt eigenverantwortlich führen.",
+  "beschreibung": "Tharandt liegt im Landkreis Sächsische Schweiz-Osterzgebirge südwestlich von Dresden und wird 1216 erstmals indirekt urkundlich erwähnt. Seit Heinrich Cotta 1811 seine Forstlehranstalt hierher brachte, ist die Stadt eng mit der Forstwissenschaft verbunden; die TU Dresden unterhält hier heute die Fachrichtung Forstwissenschaften. Als erfüllende Gemeinde der Verwaltungsgemeinschaft Tharandt nimmt die Stadtverwaltung auch Aufgaben für Dorfhain wahr. Das Amt für Finanzen verantwortet Haushalt, Jahresabschlüsse, Beteiligungsberichte, Kassenaufsicht und Kreditverwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "5.101",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1216",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "71,23 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Verwaltungsgemeinschaft",
+      "wert": "erfüllende Gemeinde für Dorfhain",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Unbefristet und vielseitig",
+      "beschreibung": "Anspruchsvolle, abwechslungsreiche Tätigkeit in unbefristeter Vollzeit mit tarifgerechter Vergütung nach TVöD."
+    },
+    {
+      "titel": "Familienfreundliche Kommune",
+      "beschreibung": "Attraktive Arbeitsbedingungen in einer familienfreundlichen Kommune mit der Möglichkeit zur Arbeit im Homeoffice."
+    },
+    {
+      "titel": "Urlaub und Sonderzahlungen",
+      "beschreibung": "30 Tage bezahlter Jahresurlaub, Jahressonderzahlungen und leistungsbezogenes Entgelt."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Steuerfreie Sachbezüge über Edenred und Fahrradleasing (JobRad) über Entgeltumwandlung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten für die fachliche Weiterentwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Tharandt · Personalamt",
+    "email": "personal@tharandt.de",
+    "telefon": "035203 395-0"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Forstwissenschaften, Bürgermeister: de.wikipedia.org/wiki/Tharandt (abgerufen 13.10.2026)",
+    "Verwaltungsgemeinschaft, Aufgaben Amt für Finanzen, Benefits und Kontakt: Stellenausschreibung Amtsleiter/in Finanzen, https://interamt.de/koop/app/stelle?id=1208096 (API api.interamt.de/query/stellenangebot/1208096) (abgerufen 13.10.2026)"
+  ]
+}

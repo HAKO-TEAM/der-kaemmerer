@@ -1,0 +1,67 @@
+{
+  "slug": "probstzella",
+  "name": "Verwaltungsgemeinschaft Schiefergebirge",
+  "bundesland": "Thüringen",
+  "einwohner": 5973,
+  "buergermeistertitel": "Gemeinschaftsvorsitzende",
+  "buergermeister": "Yvonne Mützel",
+  "token": "b9b2ab07eb2116c9",
+  "claim": "Die Finanzen von drei Gemeinden im Thüringer Schiefergebirge in einer Hand führen.",
+  "beschreibung": "Die Verwaltungsgemeinschaft Schiefergebirge mit Sitz in Probstzella im Landkreis Saalfeld-Rudolstadt betreut die Gemeinden Gräfenthal, Lehesten und Probstzella. Sie ging 1994 aus der Verwaltungsgemeinschaft Probstzella/Loquitzgrund hervor. Die Leitung der Finanzverwaltung verantwortet Haushaltspläne, Jahresrechnungen, Vermögens- und Schuldenverwaltung sowie das Fördermittelcontrolling für alle Mitgliedsgemeinden – ein vielseitiges Aufgabenfeld mit kurzen Wegen und echtem Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2024)",
+      "wert": "5.973",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "Gräfenthal, Lehesten, Probstzella",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "146,7 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1994",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Stelle",
+      "beschreibung": "Unbefristete Vollzeitstelle mit 39 Wochenstunden und Vergütung nach TVöD unter Berücksichtigung von Qualifikation und Berufserfahrung."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Moderner, familienfreundlicher Arbeitsplatz mit Gleitzeitregelung."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Betriebliche Altersvorsorge über die Zusatzversorgungskasse, Jahressonderzahlung und alternatives Entgeltanreizsystem."
+    },
+    {
+      "titel": "Ankommen leicht gemacht",
+      "beschreibung": "Unterstützung bei der Suche nach Kinderbetreuung und Hilfe bei der Wohnungssuche."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielseitiges Angebot an Fortbildungsmaßnahmen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinschaftsvorsitzende Yvonne Mützel",
+    "email": "personal@vg-schiefergebirge.de",
+    "telefon": "036735 461-110"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Mitgliedsgemeinden, Sitz, Gründung: de.wikipedia.org/wiki/Verwaltungsgemeinschaft_Schiefergebirge (abgerufen 13.10.2026)",
+    "Gemeinschaftsvorsitzende, Benefits und Kontakt: Stellenausschreibung Leiter Finanzverwaltung/Kämmerei, https://interamt.de/koop/app/stelle?id=1493926 (API api.interamt.de/query/stellenangebot/1493926) (abgerufen 13.10.2026)"
+  ]
+}

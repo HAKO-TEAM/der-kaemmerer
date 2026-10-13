@@ -1,0 +1,65 @@
+{
+  "slug": "altena",
+  "name": "Stadt Altena (Westf.)",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 16403,
+  "token": "b38617f252e14475",
+  "claim": "In einer schlanken Burgstadt-Verwaltung mit kurzen Wegen Verantwortung übernehmen.",
+  "beschreibung": "Altena ist eine mittlere kreisangehörige Stadt im Märkischen Kreis und liegt im Sauerland an der Grenze zum Ruhrgebiet. Über der Stadt steht die Burg Altena, auf der Richard Schirrmann 1914 die weltweit erste ständige Jugendherberge einrichtete. Die Stadtverwaltung versteht sich mit rund 180 Mitarbeitenden als moderne und schlanke Verwaltung mit kurzen Entscheidungswegen. Wer hier arbeitet, hat einen sicheren Arbeitsplatz und ein breites Aufgabenfeld in einem überschaubaren Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "16.403",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "44,42 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "rund 180",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Erste ständige Jugendherberge",
+      "wert": "1914 auf Burg Altena",
+      "icon": "🏰"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Abwechslungsreiche Aufgaben",
+      "beschreibung": "Abwechslungsreiche und verantwortungsvolle Tätigkeit in einem motivierten Team."
+    },
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Anstellung im öffentlichen Dienst."
+    },
+    {
+      "titel": "Tarif und Leistungsbezahlung",
+      "beschreibung": "Tarifliche Anstellung nach TVöD mit leistungsorientierter Bezahlung und den üblichen Sozialleistungen."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Fachliche und persönliche Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abteilung 1 Personal · Frau Jäker",
+    "email": "bewerbung@altena.de",
+    "telefon": "02352 209-212"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kreis, Burg Altena/Jugendherberge: de.wikipedia.org/wiki/Altena (abgerufen 13.10.2026)",
+    "Mitarbeitende, Verwaltungsprofil, Benefits und Kontakt: Stellenausschreibung Technische/r Prüfer/in Rechnungsprüfungsamt, https://interamt.de/koop/app/stelle?id=1482412 (API api.interamt.de/query/stellenangebot/1482412) (abgerufen 13.10.2026)"
+  ]
+}

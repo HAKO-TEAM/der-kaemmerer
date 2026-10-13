@@ -1,0 +1,69 @@
+{
+  "slug": "huerth",
+  "name": "Stadt Hürth",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 61732,
+  "token": "0f91140573384866",
+  "claim": "Die Verwaltung einer wachsenden Stadt direkt an Köln strategisch mitprägen.",
+  "beschreibung": "Hürth grenzt südwestlich unmittelbar an Köln und liegt am Nordost-Hang der Ville im Rhein-Erft-Kreis. Die Stadt ist aus dem Braunkohleabbau hervorgegangen, trägt seit 1978 den Titel Stadt und ist heute unter anderem Standort des Chemieparks Knapsack und eines Medienviertels in Efferen. Die Stadtverwaltung beschäftigt rund 850 Mitarbeitende. Führungsaufgaben werden hier in enger Abstimmung mit dem Verwaltungsvorstand wahrgenommen und gestalten die langfristige Handlungsfähigkeit der Verwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "61.732",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1978",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "51,22 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Rhein-Erft-Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Beschäftigung",
+      "beschreibung": "Stabile Beschäftigung im öffentlichen Dienst mit fairer Bezahlung, vermögenswirksamen Leistungen und betrieblicher Altersvorsorge bzw. Pension."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobiles Arbeiten an bis zu zwei Tagen pro Woche und flexible Arbeitszeitgestaltung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Möglichkeiten zur fachlichen Fort- und Weiterbildung."
+    },
+    {
+      "titel": "Sport und Gesundheit",
+      "beschreibung": "Sportangebote und Gesundheitsvorsorge für die Beschäftigten."
+    },
+    {
+      "titel": "Gute Erreichbarkeit",
+      "beschreibung": "Gute Anbindung an den ÖPNV sowie kostenlose Parkmöglichkeiten."
+    },
+    {
+      "titel": "Vorteilsangebote",
+      "beschreibung": "Vergünstigtes Einkaufen über corporate benefits und Einkaufsmöglichkeit bei Selgros."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Fragen zur Stelle: Beigeordneter und Kämmerer Marco Dederichs",
+    "email": "mdederichs@huerth.de",
+    "telefon": "02233 53-106"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Fläche, Stadtrechte, Kreis, Lage, Wirtschaft: https://de.wikipedia.org/wiki/Hürth (abgerufen 13.10.2026)",
+    "Beschäftigtenzahl, Benefits und Kontakt: Stellenausschreibung Leitung des Personalamtes, https://interamt.de/koop/app/stelle?id=1498644 (API api.interamt.de/query/stellenangebot/1498644) (abgerufen 13.10.2026)"
+  ]
+}

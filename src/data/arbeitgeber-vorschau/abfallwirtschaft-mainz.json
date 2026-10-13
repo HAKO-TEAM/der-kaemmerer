@@ -1,0 +1,73 @@
+{
+  "slug": "abfallwirtschaft-mainz",
+  "token": "34508b2da6ddf055",
+  "name": "Kommunale Abfallwirtschaft Mainz und Mainz-Bingen AöR",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 440000,
+  "beamteUndBeschaeftigte": "mehr als 450 Mitarbeitende",
+  "buergermeistertitel": "Vorstand",
+  "buergermeister": "Bernhard Eck und Olaf Backhaus",
+  "claim": "Die Finanzen eines großen kommunalen Entsorgers in Rheinhessen mitsteuern.",
+  "beschreibung": "Die Kommunale Abfallwirtschaft Mainz und Mainz-Bingen (KAW) ist die gemeinsame Anstalt des öffentlichen Rechts der Stadt Mainz und des Landkreises Mainz-Bingen. Mit mehr als 450 Mitarbeitenden zählt sie zu den größten kommunalen Abfallwirtschaftsunternehmen in Rheinland-Pfalz und betreut rund 440.000 Bürgerinnen und Bürger. Sie organisiert die Abfallsammlung, betreibt Entsorgungszentren und Wertstoffhöfe und übernimmt im Shared Service die Gebührenveranlagung für Straßenreinigung und Winterdienst der Stadt Mainz. Im Finanzwesen warten Gebührenkalkulation, Forderungsmanagement und Jahresabschluss nach HGB.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner im Einzugsgebiet",
+      "wert": "rund 440.000",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende",
+      "wert": "mehr als 450",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Träger",
+      "wert": "Stadt Mainz und Landkreis Mainz-Bingen",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Sitz",
+      "wert": "Mainz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Krisensicherer Arbeitsplatz mit Systemrelevanz und Standortsicherheit im Stadtgebiet Mainz."
+    },
+    {
+      "titel": "Tarif und Vorsorge",
+      "beschreibung": "Tarifvertragliche Regelungen nach TVöD, betriebliche Altersvorsorge und Kommunalrentenoption."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeitmodelle innerhalb der Rahmenarbeitszeit und Home-Office, je nach Stelle."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Eine große Bandbreite an fachlichen und persönlichen Fort- und Weiterbildungen."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Vergünstigte Firmenfitness, Fahrradleasing und Jobticket."
+    },
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Eigenverantwortliches Arbeiten in einem engagierten Team, das Erfahrungswissen schätzt und offen für neue Wege ist."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "KAW · Personalstelle",
+    "email": "personal@kaw-mainz-bingen.de",
+    "telefon": "06131 12140-104",
+    "bewerbungsportal": "https://www.kaw-mainz-bingen.de/de-de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Aufgaben und Vorstand: https://mainz.de/vv/oe/kommunale-abfallwirtschaft-mainz-und-mainz-bingen-aoer-neu/Kommunale-Abfallwirtschaft-Mainz-und-Mainz-Bingen-AoeR (abgerufen 13.10.2026)",
+    "Träger, Mitarbeitende, Einzugsgebiet, Benefits und Kontakt: Stellenausschreibungen Sachgebietsleitung Gebührenerhebung (https://interamt.de/koop/app/stelle?id=1482217) und Teamleitung Forderungsmanagement (https://interamt.de/koop/app/stelle?id=1489660), API api.interamt.de/query/stellenangebot/<id> (abgerufen 13.10.2026)"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "erndtebrueck",
+  "name": "Gemeinde Erndtebrück",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 6804,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Henning Gronau",
+  "token": "9fac11c020917705",
+  "claim": "Die Finanzen einer serviceorientierten Gemeinde im Rothaargebirge mitgestalten.",
+  "beschreibung": "Erndtebrück liegt im Südteil des Rothaargebirges an der oberen Eder im Kreis Siegen-Wittgenstein und wird 1256 erstmals erwähnt. Die Gemeinde versteht sich als moderne, serviceorientierte und zukunftsgerichtete Verwaltung. Mit der Hachenberg-Kaserne ist Erndtebrück zudem ein Standort der Luftwaffe. Im Fachbereich Finanzen sind Haushaltsplanung, Jahresabschluss, Geschäftsbuchführung und Finanzstatistik eng verzahnt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "6.804",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "1256",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "70,98 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Siegen-Wittgenstein",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsvertrag",
+      "beschreibung": "Unbefristeter Arbeitsvertrag mit Vergütung nach TVöD-VKA bis EG 9c bzw. A 10 LBesG NRW."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit sowie die Möglichkeit mobilen Arbeitens."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Fort- und Weiterbildungsangebote."
+    },
+    {
+      "titel": "Verantwortung",
+      "beschreibung": "Vielseitiger und verantwortungsvoller Aufgaben- und Funktionsbereich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeindeverwaltung Erndtebrück · Frau Völkel-Durchardt",
+    "email": "s.schlabach@erndtebrueck.de",
+    "telefon": "02753 605-150"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Lage, Bundeswehrstandort, Bürgermeister: de.wikipedia.org/wiki/Erndtebrück (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Fachbereich Finanzen, https://interamt.de/koop/app/stelle?id=1499651 (API api.interamt.de/query/stellenangebot/1499651) (abgerufen 13.10.2026)"
+  ]
+}

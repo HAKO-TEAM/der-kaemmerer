@@ -1,0 +1,68 @@
+{
+  "slug": "rehlingen-siersburg",
+  "token": "a4325cf6eaaae3ed",
+  "name": "Gemeinde Rehlingen-Siersburg",
+  "bundesland": "Saarland",
+  "einwohner": 14889,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Joshua Pawlak",
+  "claim": "Das Anlagevermögen einer lebendigen Saargemeinde sauber bilanzieren und mitplanen.",
+  "beschreibung": "Rehlingen-Siersburg liegt im Landkreis Saarlouis im Saarland: Rehlingen an der Saar, Siersburg an der Nied. Die Gemeinde besteht aus zehn Ortsteilen und erhielt 2008 den Titel „Ort der Vielfalt“. Im Fachbereich Gemeindliches Finanzwesen arbeiten Gemeindekasse, Steuern sowie Kämmerei und Controlling zusammen. Das kompakte Team der Kämmerei verantwortet Anlagenbuchhaltung, Jahresabschluss und investive Haushaltsplanung und bietet einen vielseitigen Einblick in die kommunalen Finanzen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.889",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "61,24 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Saarlouis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, Leistungsentgelt, vermögenswirksamen Leistungen und zusätzlicher betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Arbeitsplatzsicherheit",
+      "beschreibung": "Sicherer Arbeitsplatz und eine vertrauensvolle, wertschätzende Zusammenarbeit."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Teilnahme an Fort- und Weiterbildungsveranstaltungen."
+    },
+    {
+      "titel": "Teamgeist",
+      "beschreibung": "Zahlreiche Betriebsveranstaltungen und Teammaßnahmen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "E-Auto als Poolfahrzeug, Jobbike, Parkplätze im direkten Umfeld und unmittelbare Bahnanbindung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Rehlingen-Siersburg · Abteilung Personal",
+    "email": "personal@rehlingen-siersburg.de",
+    "telefon": "06835 508-307",
+    "bewerbungsportal": "https://www.rehlingen-siersburg.de/rathaus/stellenausschreibung"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Landkreis, Lage, Bürgermeister, Ort der Vielfalt: de.wikipedia.org/wiki/Rehlingen-Siersburg (abgerufen 13.10.2026)",
+    "Fachbereich, Benefits und Kontakt: Stellenausschreibung Kämmerei und Controlling, https://interamt.de/koop/app/stelle?id=1494595 (API api.interamt.de/query/stellenangebot/1494595) (abgerufen 13.10.2026)"
+  ]
+}

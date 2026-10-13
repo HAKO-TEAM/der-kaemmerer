@@ -1,0 +1,67 @@
+{
+  "slug": "pinneberg",
+  "name": "Stadt Pinneberg",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 44941,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Thomas Voerste",
+  "token": "b8bea5036510b825",
+  "claim": "In der Kreisstadt im Grünen vor Hamburg für rund 45.000 Menschen arbeiten.",
+  "beschreibung": "Pinneberg ist die Kreisstadt des gleichnamigen Kreises in Holstein und liegt nordwestlich von Hamburg in der Metropolregion. Der Ort wird 1351 erstmals urkundlich erwähnt und war über Jahrhunderte Zentrum der gleichnamigen Grafschaft. Nach eigener Angabe kümmern sich in der Stadtverwaltung rund 470 Mitarbeitende um die Anliegen der Einwohnerinnen und Einwohner; Toleranz, Respekt und Vielfalt sind ausdrücklich Teil des Selbstverständnisses. Der Fachdienst Finanzen verantwortet unter anderem die kommunalen Steuern von der Grundsteuer bis zur Hundesteuer.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "44.941",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1351",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "21,54 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt in der Metropolregion Hamburg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sonderzahlung und Prämie",
+      "beschreibung": "Jahressonderzahlung, zusätzliche jährliche Prämie und betriebliche Altersvorsorge mit Option auf Entgeltumwandlung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrtkostenzuschuss zum HVV-Jobticket bzw. Deutschlandticket oder NAH.SH-Jobticket, alternativ Zuschuss für privat gekaufte oder geleaste Fahrräder."
+    },
+    {
+      "titel": "Flexibel und familienfreundlich",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten mit der Möglichkeit, mobil zu arbeiten, und 30 Tage Urlaub."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit vielfältigen Angeboten und Firmenfitness mit EGYM Wellpass."
+    },
+    {
+      "titel": "Weiterbildung und Zusammenhalt",
+      "beschreibung": "Umfassende Fort- und Weiterbildungsmöglichkeiten sowie gemeinschaftliche Aktivitäten im Kollegium."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachdienst Personal und Organisation",
+    "email": "bewerbung@pinneberg.de",
+    "telefon": "04101 211-1209"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Kreisstadt, Bürgermeister: de.wikipedia.org/wiki/Pinneberg (abgerufen 13.10.2026)",
+    "Beschäftigtenzahl (Selbstauskunft), Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Steuern, Fachdienst Finanzen, https://interamt.de/koop/app/stelle?id=1493502 (API api.interamt.de/query/stellenangebot/1493502) (abgerufen 13.10.2026)"
+  ]
+}

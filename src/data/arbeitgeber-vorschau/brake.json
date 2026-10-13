@@ -1,0 +1,71 @@
+{
+  "slug": "brake",
+  "name": "Landkreis Wesermarsch",
+  "bundesland": "Niedersachsen",
+  "einwohner": 88852,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Stephan Siefken",
+  "token": "e0ac857173a86fdf",
+  "claim": "Die Finanzen eines Landkreises an der Unterweser verlässlich mitsteuern.",
+  "beschreibung": "Der Landkreis Wesermarsch liegt im Nordwesten Niedersachsens westlich der Weser zwischen Bremen und der Wesermündung; Sitz der Kreisverwaltung ist Brake (Unterweser). Die Marschlandschaft wird von Deichen geschützt, Seehäfen in Nordenham, Brake, Elsfleth und Lemwerder prägen den Kreis. Neun Gemeinden gehören dazu. Im Fachdienst Finanzen begleitet die Kämmerei Haushaltsplanung, Haushaltsvollzug und Jahresabschluss – eine Aufgabe mit direktem Draht zu allen Fachdiensten des Hauses.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "88.852",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "824,76 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Brake (Unterweser)",
+      "icon": "📍"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "9",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Unbefristete Teilzeit",
+      "beschreibung": "Unbefristete Beschäftigung in Teilzeit mit bis zu 30 Wochenstunden nach TVöD-VKA bzw. NBesG."
+    },
+    {
+      "titel": "Leistungen des TVöD",
+      "beschreibung": "Jahressonderzahlung, leistungsorientierte Bezahlung, Zusatzversorgung (VBL), vermögenswirksame Leistungen und 30 Tage Urlaub."
+    },
+    {
+      "titel": "Telearbeit und mobiles Arbeiten",
+      "beschreibung": "Möglichkeit der Telearbeit und des mobilen Arbeitens, soweit dienstlich vereinbar."
+    },
+    {
+      "titel": "Gesundheit und Sport",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, Firmenfitness (EGYM Wellpass) und Betriebssportgemeinschaft."
+    },
+    {
+      "titel": "Kinderbetreuung am Kreishaus",
+      "beschreibung": "Betreuung für Kinder von 8 Wochen bis 3 Jahren in der Großtagespflegestelle „Weserhafen“ auf dem Kreishausgelände."
+    },
+    {
+      "titel": "Weitere Vorteile",
+      "beschreibung": "Corporate Benefits, Fahrradleasing, Fort- und Weiterbildung sowie ein Betriebsrestaurant."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Zentrale Dienste, Personal und Organisation",
+    "email": "bewerbungen@wesermarsch.de",
+    "telefon": "04401 927-536"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Fläche, Kreissitz, Gemeinden, Lage, Häfen, Landrat: https://de.wikipedia.org/wiki/Landkreis_Wesermarsch (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter*in im Bereich Kämmerei, https://karriere.wesermarsch.de/stellenangebote/sachbearbeiterin-im-bereich-kaemmerei/ (abgerufen 13.10.2026)"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "wedemark",
+  "token": "b3511980675aa105",
+  "name": "Gemeinde Wedemark",
+  "bundesland": "Niedersachsen",
+  "einwohner": 29647,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Helge Zychlinski",
+  "claim": "Finanzsteuerung modern gestalten – in einer starken Gemeinde vor den Toren Hannovers.",
+  "beschreibung": "Die Wedemark ist eine Flächengemeinde in der Region Hannover mit 17 Ortsteilen; Verwaltungssitz ist Mellendorf. Mit dem Audiotechnikhersteller Sennheiser, der hier rund 1.200 Menschen beschäftigt, ist die Gemeinde ein bekannter Wirtschaftsstandort. S- und Regionalbahn verbinden den Ort direkt mit Hannover und dem Heidekreis, Schulen, Kitas und ärztliche Versorgung sind vor Ort. Im Team Finanzen und Steuern wird das Berichtswesen gezielt ausgebaut – mit viel Gestaltungsspielraum für ein modernes Finanzcontrolling.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "29.647",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "174,27 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "17",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Mellendorf",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Perspektive",
+      "beschreibung": "Unbefristete Einstellung mit gezielter Einarbeitung durch Kolleginnen und Kollegen."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Sonderzuwendung im November, leistungsorientierte Bezahlung (LOB) und betriebliche Altersvorsorge (VBL)."
+    },
+    {
+      "titel": "Urlaub und Flexibilität",
+      "beschreibung": "30 Tage Urlaub bei einer 5-Tage-Woche, flexible Arbeitszeiten, anteilige Telearbeit und vielfältige Möglichkeiten zur Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Familie",
+      "beschreibung": "Fluxx-Notfallbetreuung für Kinder und unterstützungsbedürftige Angehörige."
+    },
+    {
+      "titel": "Gesundheit und Vorteile",
+      "beschreibung": "Aktive Gesundheitsförderung und Mitgliedschaft bei Corporate Benefits."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket und Jobrad, Auszeichnung als fahrradfreundliche Arbeitgeberin, S- und Regionalbahn direkt im Ort."
+    },
+    {
+      "titel": "Fortbildung und Führungskultur",
+      "beschreibung": "Gezielte Fort- und Weiterbildungsangebote und eine gezielt entwickelte Führungskultur."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Wedemark · Team Personal",
+    "email": "stefanie.keil@wedemark.de",
+    "telefon": "05130 581-222",
+    "bewerbungsportal": "https://www.wedemark.de/bewerbung/beschreibung-918000536-20051.html?naviID=0&anstellungsart_id=-1"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Verwaltungssitz, Bürgermeister, Sennheiser: de.wikipedia.org/wiki/Wedemark (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Finanzcontrolling, https://interamt.de/koop/app/stelle?id=1498636 (API api.interamt.de/query/stellenangebot/1498636) (abgerufen 13.10.2026)"
+  ]
+}

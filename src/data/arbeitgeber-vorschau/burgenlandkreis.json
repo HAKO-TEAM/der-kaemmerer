@@ -1,0 +1,72 @@
+{
+  "slug": "burgenlandkreis",
+  "name": "Burgenlandkreis",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 171535,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Götz Ulrich",
+  "token": "9e3fa16c87f44325",
+  "claim": "Eine moderne Kreisverwaltung zwischen Saale, Unstrut und Strukturwandel mitgestalten.",
+  "beschreibung": "Der Burgenlandkreis liegt im Süden Sachsen-Anhalts und im Zentrum Mitteldeutschlands, Kreissitz ist Naumburg (Saale). Geprägt wird er von der Kulturlandschaft an Saale, Unstrut und Elster, vom Naumburger Dom als UNESCO-Welterbe und vom Weinbaugebiet Saale-Unstrut. Der Strukturwandel nach dem Braunkohleausstieg bestimmt die kommenden Jahre. Die Kreisverwaltung beschreibt sich als modern, bürgerorientiert und familienfreundlich und beschäftigt rund 1.100 Mitarbeiterinnen und Mitarbeiter.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "171.535",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.414 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "33",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Mitarbeitende Kreisverwaltung",
+      "wert": "rund 1.100",
+      "icon": "🧑‍💼"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und Home-Office im Rahmen der dienstlichen Möglichkeiten."
+    },
+    {
+      "titel": "Urlaub und Freistellung",
+      "beschreibung": "30 Tage Erholungsurlaub zuzüglich zwei Regenerationstage pro Jahr sowie bezahlte Freistellung am 24.12. und 31.12."
+    },
+    {
+      "titel": "Tarif und Sonderzahlung",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Guthabenkarte und Fahrradleasing",
+      "beschreibung": "Alternatives Entgeltanreizsystem in Form einer Guthabenkarte zur freien privaten Verfügung sowie Fahrradleasing."
+    },
+    {
+      "titel": "Weiterbildung und Gesundheit",
+      "beschreibung": "Kontinuierliche Weiterbildungen und betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Förderung der Vereinbarkeit von Beruf und Familie."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Peter Hoekstra",
+    "email": "personalamt@blk.de",
+    "telefon": "03445 731350",
+    "bewerbungsportal": "https://www.burgenlandkreis.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz, Landrat, Naumburger Dom, Weinbaugebiet: de.wikipedia.org/wiki/Burgenlandkreis (abgerufen 13.10.2026)",
+    "Mitarbeitende, Verwaltungsprofil, Strukturwandel, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter Wirtschaftliche Jugendhilfe / Haushalt, https://interamt.de/koop/app/stelle?id=1499324 (API api.interamt.de/query/stellenangebot/1499324) (abgerufen 13.10.2026)"
+  ]
+}

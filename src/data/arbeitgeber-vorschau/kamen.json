@@ -1,0 +1,69 @@
+{
+  "slug": "kamen",
+  "name": "Stadt Kamen",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 42139,
+  "token": "4ffc6040ba86f515",
+  "claim": "In der Hansestadt am Kamener Kreuz serviceorientiert Verantwortung übernehmen.",
+  "beschreibung": "Kamen liegt am östlichen Rand des Ruhrgebiets zwischen Sauer- und Münsterland und ist der geografische Mittelpunkt des Kreises Unna. Die alte Hansestadt grenzt an das Kamener Kreuz, an dem sich die A 1 und die A 2 kreuzen; Wahrzeichen ist der Schiefe Turm der Pauluskirche. Mit rund 540 Beschäftigten erbringt die Stadtverwaltung ihre Dienstleistungen serviceorientiert für die Bürgerinnen und Bürger. Die Stadtkasse bietet eigenverantwortliche Aufgaben in einem kollegialen Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "42.139",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "40,95 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Unna",
+      "icon": "📍"
+    },
+    {
+      "label": "Verkehrslage",
+      "wert": "Kamener Kreuz (A 1/A 2)",
+      "icon": "🛣️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Möglichkeiten zur flexiblen Arbeitszeitgestaltung einschließlich mobilen Arbeitens."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Interne und externe Fortbildungs- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Urlaub und Betriebsrente",
+      "beschreibung": "30 Urlaubstage nach TVöD und eine weitgehend von der Stadt finanzierte Zusatzversorgung bei der VBL."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket, Förderung der Fahrrad-Mobilität durch Leasing- und Darlehensangebote, kostenfreie Parkplätze und gute ÖPNV-Anbindung."
+    },
+    {
+      "titel": "Corporate Benefits",
+      "beschreibung": "Sonderkonditionen bei ausgewählten Herstellern und Marken."
+    },
+    {
+      "titel": "Kollegiales Team",
+      "beschreibung": "Sinnhafte Tätigkeit mit hoher Eigenverantwortung in einem starken, motivierten Team."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Kamen · Personal",
+    "email": "Jan.Striewski@stadt-kamen.de",
+    "telefon": "02307 148-2404"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Fläche, Kreis, Lage, Kamener Kreuz, Wahrzeichen: https://de.wikipedia.org/wiki/Kamen (abgerufen 13.10.2026)",
+    "Lagebeschreibung, Beschäftigtenzahl, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter*in Stadtkasse, https://interamt.de/koop/app/stelle?id=1496036 (API api.interamt.de/query/stellenangebot/1496036) (abgerufen 13.10.2026)"
+  ]
+}

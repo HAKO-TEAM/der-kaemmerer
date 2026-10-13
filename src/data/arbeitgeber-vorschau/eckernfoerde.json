@@ -1,0 +1,73 @@
+{
+  "slug": "eckernfoerde",
+  "name": "Stadt Eckernförde",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 21599,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Iris Ploog",
+  "token": "1d4fff12f3b0bd20",
+  "claim": "Kommunale Finanzen und Beteiligungen in einer Hafenstadt an der Ostsee gestalten.",
+  "beschreibung": "Eckernförde liegt am Ende der Eckernförder Bucht an der westlichen Ostsee, etwa auf halbem Weg zwischen Kiel und Schleswig. Der Ortsname ist seit 1197 überliefert, als Stadt ist Eckernförde seit 1302 urkundlich belegt; das Seebad wurde 1831 im heutigen Stadtteil Borby gegründet. Die Stadt hält unter anderem die Stadtwerke Eckernförde GmbH und die Eckernförde Touristik & Marketing GmbH zu 100 Prozent. In der Kämmerei verbinden sich Finanzbuchhaltung, Beteiligungssteuerung und Gremienarbeit zu einem vielseitigen Aufgabenfeld.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.599",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "1197",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "21,58 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Rendsburg-Eckernförde",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten zwischen 6.00 und 20.00 Uhr sowie Möglichkeiten zur Flexarbeit im Homeoffice."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub (ab 2027: 31 Tage), Heiligabend und Silvester frei."
+    },
+    {
+      "titel": "Leistungen des öffentlichen Dienstes",
+      "beschreibung": "Jährliche Sonderzuwendung, leistungsorientierte Bezahlung, VBL-Zusatzversorgung, betriebliche Altersvorsorge über Kommunalversicherer und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing über JobRad mit Arbeitgeberzuschuss oder Jobticket mit Arbeitgeberzuschuss und Zuschuss von NAH.SH."
+    },
+    {
+      "titel": "Fitness und Vorteile",
+      "beschreibung": "Firmenfitness (epassi) mit Arbeitgeberzuschuss und Mitarbeitervorteile über Corporate Benefits."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Einarbeitung durch erfahrene Kolleginnen und Kollegen, Fortbildungsmöglichkeiten und persönliche Entwicklungschancen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Eckernförde · Personalabteilung",
+    "email": "personalabteilung@stadt-eckernfoerde.de",
+    "telefon": "04351 710-0"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Fläche, Ersterwähnung, Kreis, Lage, Seebad, Bürgermeisterin: https://de.wikipedia.org/wiki/Eckernförde (abgerufen 13.10.2026)",
+    "Beteiligungen, Benefits und Kontakt: Stellenausschreibung Beteiligungsmanagement, https://www.eckernfoerde.de/media/custom/3457_2322_1.PDF (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Finanzbuchhaltung, https://www.eckernfoerde.de/media/custom/3457_2316_1.PDF (abgerufen 13.10.2026)",
+    "Telefonzentrale: https://www.eckernfoerde.de/Die-Stadt/Verwaltung/Stellen-und-Ausbildungsangebot/Karriere/Stellenausschreibung-Beteiligungsmanagement.php (abgerufen 13.10.2026)"
+  ]
+}

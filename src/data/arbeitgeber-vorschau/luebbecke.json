@@ -1,0 +1,62 @@
+{
+  "slug": "luebbecke",
+  "name": "Stadt Lübbecke",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 26807,
+  "token": "beef7dcc2870e2f4",
+  "claim": "Grundsolide Finanzen und rechtssicheres Verwaltungshandeln am Wiehengebirge mitverantworten.",
+  "beschreibung": "Lübbecke ist eine mittlere kreisangehörige Stadt im Kreis Minden-Lübbecke in Ostwestfalen-Lippe, wirtschaftlich stark und mit lebendiger Stadtgesellschaft. Die 775 erstmals erwähnte Stadt mit Stadtrechten seit 1279 liegt am Nordhang des Wiehengebirges; im Nordosten erstreckt sich das Große Torfmoor. Die Stadtverwaltung versteht sich als Dienstleisterin für Bürgerschaft und Unternehmen und arbeitet mit moderner Technik an grundsoliden Finanzen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "26.807",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "775",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1279",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "65,04 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristeter, krisen- und zukunftssicherer Arbeitsplatz in kollegialem Umfeld mit Bezahlung nach TVöD."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Arbeitgeberfinanzierte Zusatzversorgung, Jahressonderzahlung und leistungsorientierte Bezahlung."
+    },
+    {
+      "titel": "Zeit und Vereinbarkeit",
+      "beschreibung": "39-Stunden-Woche, 30 Tage Urlaub plus Heiligabend und Silvester frei, Gleitzeit und Homeoffice."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Vielfältiges Fortbildungsangebot, moderne ergonomische Arbeitsplätze und kostenfreie Beschäftigtenparkplätze."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalleitung · Frau Ahlert-Hoffmeister",
+    "email": "h.ahlert-hoffmeister@luebbecke.de",
+    "telefon": "05741 276-138",
+    "bewerbungsportal": "https://www.luebbecke.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Stadtrechte, Wiehengebirge, Großes Torfmoor: de.wikipedia.org/wiki/Lübbecke (abgerufen 13.10.2026)",
+    "Stadtprofil, Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Recht & Beiträge, https://interamt.de/koop/app/stelle?id=1497484 (API api.interamt.de/query/stellenangebot/1497484) (abgerufen 13.10.2026)"
+  ]
+}

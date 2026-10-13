@@ -1,0 +1,61 @@
+{
+  "slug": "saalfeld",
+  "name": "Stadt Saalfeld/Saale",
+  "bundesland": "Thüringen",
+  "einwohner": 29086,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dr. Steffen Kania",
+  "token": "7cb8211abf96a9a8",
+  "claim": "Die Zukunft der Feengrotten- und Kurstadt im Saaletal in verantwortlicher Position gestalten.",
+  "beschreibung": "Saalfeld/Saale liegt im Saaletal am Rand des Thüringer Schiefergebirges und ist Kreisstadt des Landkreises Saalfeld-Rudolstadt. Mit einer Ersterwähnung im Jahr 899 zählt sie zu den ältesten Städten Thüringens und trägt den Beinamen „Steinerne Chronik Thüringens“. Bekannt ist die Stadt für die Feengrotten, sie ist staatlich anerkannter Kurort und ein bedeutender Eisenbahnknoten. Gemeinsam mit Rudolstadt und Bad Blankenburg bildet Saalfeld ein Mittelzentrum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2024)",
+      "wert": "29.086",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "899",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "145,56 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt und Kurort",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsverantwortung",
+      "beschreibung": "Leitung eines eigenen Dezernats mit Stadtplanung, Hoch- und Tiefbau, Liegenschaften und Kurortverwaltung."
+    },
+    {
+      "titel": "Wahlbeamtenverhältnis",
+      "beschreibung": "Beamtenverhältnis auf Zeit für sechs Jahre mit Besoldung nach A 16 ThürBesG."
+    },
+    {
+      "titel": "Dienstaufwandsentschädigung",
+      "beschreibung": "Zusätzlich zur Besoldung wird eine Dienstaufwandsentschädigung gewährt."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal- und Organisationsabteilung",
+    "email": "rebecca.sonntag@stadt-saalfeld.de",
+    "telefon": "03671 598-237",
+    "bewerbungsportal": "https://www.saalfeld.de/stadt_verwaltung/rathaus/stellenausschreibung/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Kreisstadt, Kurort, Feengrotten, Mittelzentrum: de.wikipedia.org/wiki/Saalfeld/Saale (abgerufen 13.10.2026)",
+    "Bürgermeister: Begrüßung des Bürgermeisters, https://www.saalfeld.de/stadt_verwaltung/stadtinfo/grusswort-buergermeister (abgerufen 13.10.2026)",
+    "Beiname, Benefits und Kontakt: Stellenausschreibung Erster Beigeordneter, https://interamt.de/koop/app/stelle?id=1490549 (API api.interamt.de/query/stellenangebot/1490549) (abgerufen 13.10.2026)"
+  ]
+}

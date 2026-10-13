@@ -1,0 +1,68 @@
+{
+  "slug": "wuelfrath",
+  "name": "Stadt Wülfrath",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 20704,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Sebastian Schorn",
+  "token": "0d50fc5a8de987ac",
+  "claim": "Den Haushalt einer grünen Stadt zwischen Düsseldorf, Essen und Wuppertal mitgestalten.",
+  "beschreibung": "Wülfrath liegt im Kreis Mettmann im Städtedreieck Düsseldorf, Essen und Wuppertal und verbindet die Nähe zu den Ballungsräumen mit viel Grün. Der Ort wird gegen Ende des 11. Jahrhunderts erstmals schriftlich erwähnt; prägend ist bis heute die Kalkindustrie mit dem Werk Flandersbach. Die Stadtverwaltung setzt auf flache Hierarchien, schnelle Entscheidungswege und ein kollegiales Miteinander. In der Kämmerei laufen Haushaltsplanung, Bewirtschaftung, Finanzausgleich und örtliche Steuern zusammen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "20.704",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste schriftliche Erwähnung",
+      "wert": "Ende 11. Jahrhundert",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "32,27 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Mettmann",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Perspektive",
+      "beschreibung": "Unbefristete Beschäftigung mit Vergütung nach TVöD VKA bzw. Besoldung nach LBesG NRW."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Jahressonderzuwendung, Leistungszulage, betriebliche Altersvorsorge und betriebliche Krankenzusatzversicherung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobbike-Leasing, Zuschuss zum Deutschlandticket und kostenfreier Parkplatz."
+    },
+    {
+      "titel": "Führungskultur",
+      "beschreibung": "Offene, teamorientierte Führung mit flachen Hierarchien und schnellen Entscheidungswegen."
+    },
+    {
+      "titel": "Lage",
+      "beschreibung": "Nähe zu Düsseldorf, Essen und Wuppertal bei gleichzeitigem Arbeiten im Grünen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kämmerei und Steueramt · Leitung (Frau Klingbeil)",
+    "email": "c.sulewski@stadt.wuelfrath.de",
+    "telefon": "02058 18-239",
+    "bewerbungsportal": "https://stellenangebote.wuelfrath.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Kreis, Kalkindustrie, Bürgermeister: de.wikipedia.org/wiki/Wülfrath (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Mitarbeiter*in Kämmerei, https://interamt.de/koop/app/stelle?id=1464404 (API api.interamt.de/query/stellenangebot/1464404) (abgerufen 13.10.2026)"
+  ]
+}

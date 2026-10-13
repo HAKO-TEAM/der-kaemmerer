@@ -1,0 +1,69 @@
+{
+  "slug": "remscheid",
+  "name": "Stadt Remscheid",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 113333,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Sven Wolf",
+  "token": "c2e5203a6ed48f52",
+  "claim": "Die Verwaltung einer bergischen Großstadt modern und digital mitgestalten.",
+  "beschreibung": "Remscheid ist eine kreisfreie Großstadt im Bergischen Land und seit 1929 über der 100.000-Einwohner-Marke. Die Stadt ist eng mit ihrer Metall- und Werkzeugindustrie verbunden. In der Stadtverwaltung arbeiten nach eigener Angabe rund 2.500 Mitarbeitende in allen Aufgabenbereichen einer Kommunalverwaltung. Die Kämmerei verantwortet neben Haushalt und Liquidität auch die internen Steuerangelegenheiten und das Beteiligungsmanagement, die Stabstelle Digitalisierung treibt E-Government und Smart City gemeinsam mit den Fachdiensten voran.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "113.333",
+      "icon": "👥"
+    },
+    {
+      "label": "Großstadt seit",
+      "wert": "1929",
+      "icon": "🏙️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "74,52 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte Stadtverwaltung",
+      "wert": "rund 2.500",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitgeber",
+      "beschreibung": "Eine starke und sichere Arbeitgeberin mit Bezahlung nach TVöD, Jahressonderzahlung und leistungsorientierter Bezahlung."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Attraktive betriebliche Altersversorgung über die Rheinische Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Flexibles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und -formen, kombinierbar mit mobilem Arbeiten; Stellen grundsätzlich auch in Teilzeit."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Unterstützung der Weiterbildung, einschließlich der Möglichkeit zur Übernahme von Weiterbildungskosten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Aktives betriebliches Gesundheitsmanagement mit dem Unterstützungsprogramm EAP (Employee Assistance Program)."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Remscheid · Ansprechpartner laut Ausschreibung: Sebastian Silzer",
+    "email": "sebastian.silzer@remscheid.de",
+    "telefon": "02191 16-3087",
+    "bewerbungsportal": "https://www.mein-check-in.de/remscheid"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Großstadt seit 1929, Oberbürgermeister (Stichwahl 28.09.2025): de.wikipedia.org/wiki/Remscheid (abgerufen 13.10.2026)",
+    "Kämmerei, Benefits, Bewerbungsportal und Kontakt: Stellenausschreibung Sachbearbeitung interne Steuerangelegenheiten, https://interamt.de/koop/app/stelle?id=1494037 (API api.interamt.de/query/stellenangebot/1494037) (abgerufen 13.10.2026)",
+    "Beschäftigtenzahl (Selbstauskunft), Digitalisierung, Benefits: Stellenausschreibung SB Formularmanagement, https://interamt.de/koop/app/stelle?id=1497417 (API api.interamt.de/query/stellenangebot/1497417) (abgerufen 13.10.2026)"
+  ]
+}

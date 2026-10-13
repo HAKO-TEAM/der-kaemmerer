@@ -1,0 +1,62 @@
+{
+  "slug": "wurzen",
+  "name": "Große Kreisstadt Wurzen",
+  "bundesland": "Sachsen",
+  "einwohner": 16159,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Marcel Buchta",
+  "token": "9eaeafdd4703c3ca",
+  "claim": "Die Finanzen einer traditionsreichen Domstadt zwischen Leipzig und Dresden verlässlich steuern.",
+  "beschreibung": "Wurzen liegt am östlichen Hochufer der Mulde im Landkreis Leipzig und ist als Mittelzentrum im ländlichen Raum Wirtschafts-, Kultur-, Bildungs- und Dienstleistungszentrum für die umliegenden Gemeinden. Die 961 erstmals urkundlich erwähnte Stadt mit ihrem Dom ist Geburtsort von Joachim Ringelnatz. Verkehrsgünstig zwischen Leipzig und Dresden gelegen, bietet Wurzen ein angenehmes Wohn- und Arbeitsumfeld. Im Fachdienst Finanzen verbinden sich Hauptbuchhaltung, Jahresabschluss und kommunales Steuerrecht.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "16.159",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "961",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "69 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Status",
+      "wert": "Große Kreisstadt",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "30 Tage Jahresurlaub (ab 2027: 31 Tage) sowie bezahlte Freistellung am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Sonderzahlungen nach TVöD, betriebliche Altersversorgung bei der ZVK Sachsen und Zuschuss zu vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Gleitende Arbeitszeiten, mobiles Arbeiten und Teilzeit grundsätzlich möglich."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Umfangreiche Fortbildungsmöglichkeiten und ganzheitliche Unterstützungsangebote für Berufs- und Privatleben."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Wurzen · Fachbereich Interner Service",
+    "email": "bewerbung@wurzen.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Status, Dom, Ringelnatz, Oberbürgermeister: de.wikipedia.org/wiki/Wurzen (abgerufen 13.10.2026)",
+    "Mittelzentrum, Benefits und Kontakt: Stellenausschreibung SB Hauptbuchhaltung, https://interamt.de/koop/app/stelle?id=1497023 (API api.interamt.de/query/stellenangebot/1497023) (abgerufen 13.10.2026)"
+  ]
+}

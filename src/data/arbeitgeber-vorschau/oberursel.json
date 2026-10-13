@@ -1,0 +1,68 @@
+{
+  "slug": "oberursel",
+  "name": "Stadt Oberursel (Taunus)",
+  "bundesland": "Hessen",
+  "einwohner": 46757,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Antje Runge",
+  "token": "0f66d67b48161f1b",
+  "claim": "Die Finanzsteuerung einer lebendigen Taunusstadt vor den Toren Frankfurts strategisch prägen.",
+  "beschreibung": "Oberursel (Taunus) liegt im Hochtaunuskreis am Fuß des Taunus und gehört mit rund 46.800 Einwohnern zu den größeren Städten im Rhein-Main-Gebiet. Die erste urkundliche Erwähnung als „Ursella“ stammt aus dem Jahr 791. Der Geschäftsbereich Finanzen bündelt Kämmerei, Stadtkasse/Steuern und Controlling und übernimmt gemeinsam mit der Verwaltungsleitung eine zentrale strategische Steuerungsfunktion – von der mittelfristigen Finanzplanung über das Beteiligungsmanagement bis zur Digitalisierung der Finanzprozesse.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "46.757",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "791",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "45,34 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Hochtaunuskreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Premium-Jobticket",
+      "beschreibung": "Kostenloses Premium-Jobticket für das gesamte RMV-Gebiet und gute Anbindung an den öffentlichen Nahverkehr."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung für eine gute Vereinbarkeit von Beruf, Familie und Privatleben sowie Home-Office nach Dienstvereinbarung."
+    },
+    {
+      "titel": "Altersvorsorge und Leistungsentgelt",
+      "beschreibung": "Zusätzliche betriebliche Altersvorsorge, Jahressonderzahlung und jährliches Leistungsentgelt."
+    },
+    {
+      "titel": "Gesundheit und Unterstützung",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und betriebliche Sozialarbeit."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fortbildungsmöglichkeiten für die fachliche und persönliche Weiterentwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Oberursel (Taunus) · Ansprechpartner laut Ausschreibung: Paulo Ferreira",
+    "email": "paulo.ferreira@oberursel.de",
+    "telefon": "06171 502-170",
+    "bewerbungsportal": "https://www.oberursel.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Landkreis, Bürgermeisterin (Amtszeit 2021–2027): de.wikipedia.org/wiki/Oberursel_(Taunus) (abgerufen 13.10.2026)",
+    "Aufgaben Geschäftsbereich Finanzen, Benefits und Kontakt: Stellenausschreibung Geschäftsbereichsleitung Finanzen, https://interamt.de/koop/app/stelle?id=1496084 (API api.interamt.de/query/stellenangebot/1496084) (abgerufen 13.10.2026)"
+  ]
+}

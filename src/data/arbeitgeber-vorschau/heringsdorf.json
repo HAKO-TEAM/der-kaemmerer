@@ -1,0 +1,68 @@
+{
+  "slug": "heringsdorf",
+  "name": "Eigenbetrieb Kaiserbäder Insel Usedom",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 7274,
+  "buergermeistertitel": "Kurdirektor",
+  "buergermeister": "Thomas Heilmann",
+  "token": "a5d135ae56addcaf",
+  "claim": "Die Zahlen hinter den drei Kaiserbädern an der Ostsee steuern – mit Meerblick.",
+  "beschreibung": "Der Eigenbetrieb Kaiserbäder Insel Usedom gehört zur Gemeinde Ostseebad Heringsdorf, in der sich die Seebäder Ahlbeck, Heringsdorf und Bansin 2005 zusammengeschlossen haben. Mit knapp 60 Mitarbeitenden richtet der Betrieb jährlich rund 2.000 Veranstaltungen aus, bewirtschaftet Strand und Promenade und betreibt die Touristinformationen, die Villa Irmgard und das Hans Werner Richter-Haus. Die rund zwölf Kilometer lange Promenade verbindet die drei Orte bis nach Świnoujście, die Seebrücke Heringsdorf zählt zu den längsten Deutschlands. Im Rechnungswesen eines Eigenbetriebs gestalten Fachkräfte Wirtschaftsplan, Liquiditätssteuerung und Controlling unmittelbar mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Gemeinde (31.12.2025)",
+      "wert": "7.274",
+      "icon": "👥"
+    },
+    {
+      "label": "Veranstaltungen pro Jahr",
+      "wert": "rund 2.000",
+      "icon": "🎭"
+    },
+    {
+      "label": "Mitarbeitende Eigenbetrieb",
+      "wert": "knapp 60",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Strandpromenade",
+      "wert": "rund 12 km",
+      "icon": "🌊"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Position mit Gestaltungsspielraum und sorgfältiger Einarbeitung."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Flexible Arbeitszeiten im Rahmen der dienstlichen Erfordernisse."
+    },
+    {
+      "titel": "Tarif und Altersversorgung",
+      "beschreibung": "Vergütung nach TVöD-VKA mit Jahressonderzahlung, Leistungsentgelt und betrieblicher Altersversorgung über die Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Erholungsurlaub ab 2027 sowie Freistellung am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Vorteile",
+      "beschreibung": "Mitarbeitendenrabatte über ein Vorteilsportal sowie Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalabteilung · Kathrin Uecker",
+    "email": "kathrin.uecker@kaiserbaeder-auf-usedom.de",
+    "telefon": "038378 24411",
+    "bewerbungsportal": "https://www.kaiserbaeder-auf-usedom.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Zusammenschluss 2005, Promenade, Seebrücke: de.wikipedia.org/wiki/Heringsdorf (abgerufen 13.10.2026)",
+    "Mitarbeitende, Veranstaltungen, Einrichtungen, Kurdirektor, Benefits und Kontakt: Stellenausschreibung Mitarbeiter Finanzen, Schwerpunkt Controlling, https://interamt.de/koop/app/stelle?id=1499017 (API api.interamt.de/query/stellenangebot/1499017) (abgerufen 13.10.2026)"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "stadtentwaesserung-hildesheim",
+  "token": "b659f2008be6dc4f",
+  "name": "Stadtentwässerung Hildesheim AöR",
+  "bundesland": "Niedersachsen",
+  "einwohner": 98207,
+  "beamteUndBeschaeftigte": "rund 90 Beschäftigte",
+  "claim": "Die Abwasserinfrastruktur einer Welterbestadt verlässlich erhalten und weiterentwickeln.",
+  "beschreibung": "Die Stadtentwässerung Hildesheim (SEHi) ist als Anstalt öffentlichen Rechts für die Abwasserentsorgung der Stadt Hildesheim zuständig. Sie hält die Abwasserkanäle instand, betreibt die Kläranlage und behandelt den Klärschlamm – damit verschmutztes Wasser gereinigt in den natürlichen Kreislauf zurückkehrt. Das Entwässerungsnetz der Stadt umfasst rund 670 Kilometer. Rund 90 Beschäftigte aus Ingenieurwesen, Technik, Labor, Verwaltung und Ausbildung arbeiten hier von der TV-Kanalinspektion über die Leitwarte bis zum Labor eng zusammen und gestalten eine zentrale Aufgabe des Umweltschutzes.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Stadt Hildesheim (31.12.2025)",
+      "wert": "98.207",
+      "icon": "👥"
+    },
+    {
+      "label": "Entwässerungsnetz",
+      "wert": "rund 670 km",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte",
+      "wert": "rund 90",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Rechtsform",
+      "wert": "Anstalt öffentlichen Rechts",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Konjunkturunabhängiger, unbefristeter Arbeitsplatz mit tarifgerechter Bezahlung nach TVöD-VKA."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Jahressonderzahlung, jährliches Leistungsentgelt, betriebliche Altersvorsorge (VBL) und vermögenswirksame Leistungen."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobiles Arbeiten im Rahmen der dienstlichen Möglichkeiten und Vereinbarkeit von Beruf und Privatleben."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit Firmenfitness sowie eine betriebliche Krankenversicherung."
+    },
+    {
+      "titel": "Kantine und Benefits",
+      "beschreibung": "Mittagessen in der eigenen Kantine und Corporate Benefits."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrrad-Leasing, Lademöglichkeit für private E-Pkw und E-Bikes sowie Parkplätze direkt vor der Tür."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtentwässerung Hildesheim AöR · Personal",
+    "email": "bewerbung@sehi-hildesheim.de",
+    "telefon": "05121 7458-801",
+    "bewerbungsportal": "https://www.sehi-hildesheim.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl Stadt Hildesheim: de.wikipedia.org/wiki/Hildesheim (abgerufen 13.10.2026)",
+    "Netzlänge rund 670 km: EU-Bekanntmachung 517966-2023, https://ted.europa.eu/en/notice/517966-2023/pdf (abgerufen 13.10.2026)",
+    "Aufgaben, Beschäftigte, Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Bau und Betrieb Kanalnetz, https://interamt.de/koop/app/stelle?id=1493415 (API api.interamt.de/query/stellenangebot/1493415) (abgerufen 13.10.2026)"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "plauen",
+  "name": "Landratsamt Vogtlandkreis",
+  "bundesland": "Sachsen",
+  "einwohner": 216387,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Thomas Hennig",
+  "token": "70e1047d50f598ec",
+  "claim": "Verwaltung im südlichsten Landkreis Sachsens digital und bürgernah neu gestalten.",
+  "beschreibung": "Der Vogtlandkreis ist der südlichste Landkreis des Freistaats Sachsen und grenzt an Thüringen, Bayern und Tschechien. Seit 1996 besteht der Kreis, 2008 wurde die Stadt Plauen eingegliedert, die heute Sitz der Kreisverwaltung ist. 37 Gemeinden gehören zum Kreis. Das Landratsamt richtet sich nach eigener Aussage auf eine digitale, effiziente und bürgernahe Verwaltung aus und bietet Führungs- und Fachaufgaben mit Gestaltungsspielraum – von der Kommunalaufsicht bis zur Abfallwirtschaft.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "216.387",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.412,46 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Plauen",
+      "icon": "📍"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "37",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende, flexibel gestaltbare Arbeitszeit und die Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub bei einer 5-Tage-Woche, Heiligabend und Silvester arbeitsfrei."
+    },
+    {
+      "titel": "Tarif und Vorsorge",
+      "beschreibung": "Umfangreiche tarifliche Leistungen nach TVöD zuzüglich außertariflicher Leistungen sowie betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Zuschuss für gesundheitsfördernde Maßnahmen und betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Berufliche Weiterentwicklungsmöglichkeiten sowie individuelle Aus- und Weiterbildung."
+    },
+    {
+      "titel": "Mobilität und Rabatte",
+      "beschreibung": "Zentrale Innenstadtlage in Plauen, Jobticket der Straßenbahn Plauen GmbH und Mitarbeiterrabatte über Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Vogtlandkreis · Bewerbungen",
+    "email": "bewerbung@vogtlandkreis.de",
+    "telefon": "03741 300-1790"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Fläche, Kreissitz, Gründung, Gemeinden, Lage, Landrat: https://de.wikipedia.org/wiki/Vogtlandkreis (abgerufen 13.10.2026)",
+    "Benefits, Kontakt, Landrat: Stellenausschreibung Leiter Kommunalaufsichtsamt, https://interamt.de/koop/app/stelle?id=1497586 (API api.interamt.de/query/stellenangebot/1497586) (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leiter Amt für Abfallwirtschaft, https://interamt.de/koop/app/stelle?id=1497234 (API api.interamt.de/query/stellenangebot/1497234) (abgerufen 13.10.2026)"
+  ]
+}

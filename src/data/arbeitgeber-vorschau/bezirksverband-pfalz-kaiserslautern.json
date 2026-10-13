@@ -1,0 +1,68 @@
+{
+  "slug": "bezirksverband-pfalz-kaiserslautern",
+  "token": "c4823adba5fd5f46",
+  "name": "Bezirksverband Pfalz",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 1400000,
+  "buergermeistertitel": "Bezirkstagsvorsitzender",
+  "buergermeister": "Hans-Ulrich Ihlenfeld",
+  "claim": "Kultur, Bildung und Gesundheit für die ganze Pfalz wirtschaftlich begleiten.",
+  "beschreibung": "Der Bezirksverband Pfalz ist der höhere Kommunalverband der Pfalz mit Sitz in Kaiserslautern. Er umfasst acht kreisfreie Städte und acht Landkreise mit rund 1,4 Millionen Einwohnern. Seine Wurzeln reichen bis zum 1816 eingerichteten Landrath der Pfalz zurück, der heutige Bezirkstag konstituierte sich 1950. Der Verband trägt zwölf eigene Einrichtungen – darunter Pfalzbibliothek, Pfalztheater, Museum Pfalzgalerie Kaiserslautern und Pfalzklinikum – und hält Beteiligungen etwa am Hambacher Schloss. Das Rechnungsprüfungsamt begleitet diese Vielfalt von Einrichtungen, Stiftungen, Eigenbetrieben und Beteiligungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner im Verbandsgebiet",
+      "wert": "rund 1,4 Mio.",
+      "icon": "👥"
+    },
+    {
+      "label": "Gebiet",
+      "wert": "8 kreisfreie Städte, 8 Landkreise",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Eigene Einrichtungen",
+      "wert": "12",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Bezirkstag konstituiert",
+      "wert": "1950",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Teilzeit mit Altersvorsorge",
+      "beschreibung": "Arbeitsverhältnis nach TVöD mit betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten sowie die Möglichkeit von Telearbeit und Home-Office."
+    },
+    {
+      "titel": "Mitgestaltung",
+      "beschreibung": "Möglichkeit zur Mitgestaltung und Weiterentwicklung der Prozesse in einem modern ausgestatteten Arbeitsumfeld."
+    },
+    {
+      "titel": "Job-Ticket",
+      "beschreibung": "Job-Ticket für den Verkehrsverbund Rhein-Neckar (VRN)."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Bezirksverband Pfalz · Personal",
+    "email": "m.lang@bv-pfalz.de",
+    "telefon": "0631 3647-143",
+    "bewerbungsportal": "https://www.bv-pfalz.de/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Gebiet, Einwohner, Geschichte, Einrichtungen, Bezirkstagsvorsitzender (seit 2024): de.wikipedia.org/wiki/Bezirksverband_Pfalz (abgerufen 13.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Prüfer*in Rechnungsprüfungsamt, https://interamt.de/koop/app/stelle?id=1493051 (API api.interamt.de/query/stellenangebot/1493051) (abgerufen 13.10.2026)"
+  ]
+}

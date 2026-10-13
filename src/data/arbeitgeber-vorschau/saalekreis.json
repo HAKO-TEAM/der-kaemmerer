@@ -1,0 +1,63 @@
+{
+  "slug": "saalekreis",
+  "name": "Landkreis Saalekreis",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 181327,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Sven Czekalla",
+  "token": "0ef880108e6ceffc",
+  "claim": "Vielfältige Aufgaben in einem Landkreis rund um Halle (Saale) übernehmen.",
+  "beschreibung": "Der Saalekreis entstand 2007 aus dem Saalkreis und dem Landkreis Merseburg-Querfurt und schließt sich wie ein Ring um die kreisfreie Stadt Halle (Saale). Kreissitz ist Merseburg. Tradition und Industrie liegen hier dicht beieinander: Mit Leuna und Buna gehört der Kreis zu den großen Chemiestandorten, der Geiseltalsee steht für den Wandel früherer Tagebauflächen. Die Kreisverwaltung bietet ein breites Spektrum an Aufgaben von der Vergabestelle bis zum Ausländeramt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "181.327",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.434,01 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "20",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2007",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Berufserfahrung zählt",
+      "beschreibung": "Anerkennung einschlägiger Berufserfahrung bei der Stufenzuordnung im Rahmen des TVöD-VKA."
+    },
+    {
+      "titel": "Wechsel aus dem öffentlichen Dienst",
+      "beschreibung": "Für Tarifbeschäftigte aus dem öffentlichen Dienst ist eine Abordnung zur Erprobung möglich."
+    },
+    {
+      "titel": "Tarifliche Vergütung",
+      "beschreibung": "Vergütung nach TVöD-VKA mit transparent ausgewiesenem Bruttogrundgehalt."
+    },
+    {
+      "titel": "Vielseitige Aufgaben",
+      "beschreibung": "Vielfältige Tätigkeitsfelder in einer Kreisverwaltung mit breitem Aufgabenspektrum."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt",
+    "telefon": "03461 40-2123",
+    "bewerbungsportal": "https://saalekreis.onlyfy.jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Gründung, Kreissitz, Landrat (Stichwahl 28.06.2026), Leuna/Buna, Geiseltalsee: de.wikipedia.org/wiki/Saalekreis (abgerufen 13.10.2026)",
+    "Kreisprofil, Benefits und Kontakt: Stellenausschreibungen Fachkoordination Asyl/Staatsangehörigkeiten, https://interamt.de/koop/app/stelle?id=1499820 (API api.interamt.de/query/stellenangebot/1499820), und Sachbearbeiter Vergabe, https://interamt.de/koop/app/stelle?id=1494206 (API api.interamt.de/query/stellenangebot/1494206) (abgerufen 13.10.2026)"
+  ]
+}
