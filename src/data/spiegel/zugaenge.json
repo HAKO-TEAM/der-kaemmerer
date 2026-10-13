@@ -1490,12 +1490,14 @@
  {
   "token": "205dba4b2482eb3e",
   "ags": "03155010",
-  "kommune": "Nörten-Hardenberg"
+  "kommune": "Nörten-Hardenberg",
+  "seit": "2026-10-14"
  },
  {
   "token": "1728f1efa03ea7d5",
   "ags": "09777129",
-  "kommune": "Füssen"
+  "kommune": "Füssen",
+  "seit": "2026-10-14"
  },
  {
   "token": "054911be5306547f",
@@ -1510,7 +1512,8 @@
  {
   "token": "bf7a85d99780c4df",
   "ags": "09371113",
-  "kommune": "Auerbach i.d.OPf."
+  "kommune": "Auerbach i.d.OPf.",
+  "seit": "2026-10-14"
  },
  {
   "token": "3438ca51e0d7f716",
@@ -1520,7 +1523,8 @@
  {
   "token": "93e5eaf68b3cf93e",
   "ags": "08317153",
-  "kommune": "Rheinau"
+  "kommune": "Rheinau",
+  "seit": "2026-10-14"
  },
  {
   "token": "be8f314605a3b8eb",
@@ -1530,12 +1534,14 @@
  {
   "token": "4b46053e67c5b3ff",
   "ags": "08118079",
-  "kommune": "Bietigheim-Bissingen"
+  "kommune": "Bietigheim-Bissingen",
+  "seit": "2026-10-14"
  },
  {
   "token": "0d850be28ec6fa39",
   "ags": "09473151",
-  "kommune": "Neustadt b.Coburg"
+  "kommune": "Neustadt b.Coburg",
+  "seit": "2026-10-14"
  },
  {
   "token": "f275a4325e11de84",
@@ -1545,22 +1551,26 @@
  {
   "token": "0efe7f565a2140fc",
   "ags": "08115021",
-  "kommune": "Herrenberg"
+  "kommune": "Herrenberg",
+  "seit": "2026-10-14"
  },
  {
   "token": "dfa5490ba0c55aa8",
   "ags": "09774143",
-  "kommune": "Ichenhausen"
+  "kommune": "Ichenhausen",
+  "seit": "2026-10-14"
  },
  {
   "token": "4f76a99b0e9519fd",
   "ags": "05562036",
-  "kommune": "Waltrop"
+  "kommune": "Waltrop",
+  "seit": "2026-10-14"
  },
  {
   "token": "f3624e7cee2082b8",
   "ags": "05382028",
-  "kommune": "Lohmar"
+  "kommune": "Lohmar",
+  "seit": "2026-10-14"
  },
  {
   "token": "18033940c51e4de5",
@@ -1570,26 +1580,31 @@
  {
   "token": "e1a9dc8223ccb02c",
   "ags": "05378028",
-  "kommune": "Rösrath"
+  "kommune": "Rösrath",
+  "seit": "2026-10-14"
  },
  {
   "token": "c24d0b97c5c5c94a",
   "ags": "06532006",
-  "kommune": "Dillenburg"
+  "kommune": "Dillenburg",
+  "seit": "2026-10-14"
  },
  {
   "token": "a7d54b37e117bb5e",
   "ags": "09772202",
-  "kommune": "Stadtbergen"
+  "kommune": "Stadtbergen",
+  "seit": "2026-10-14"
  },
  {
   "token": "ed0abb1fe6a4bee8",
   "ags": "08315070",
-  "kommune": "Löffingen"
+  "kommune": "Löffingen",
+  "seit": "2026-10-14"
  },
  {
   "token": "a905d165483375ac",
   "ags": "08215007",
-  "kommune": "Bretten"
+  "kommune": "Bretten",
+  "seit": "2026-10-14"
  }
 ]

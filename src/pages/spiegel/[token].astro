@@ -10,6 +10,7 @@ import gemeinden from '../../data/spiegel/gemeinden.json';
 import hebesaetze from '../../data/spiegel/hebesaetze.json';
 import schulden from '../../data/spiegel/schulden.json';
 import zugaenge from '../../data/spiegel/zugaenge.json';
+import haushaltsstatus from '../../data/spiegel/haushaltsstatus_nw.json';
 import { spiegel, kalenderwoche } from '../../lib/spiegel.mjs';
 import { niveauText } from '../../lib/markt/merkmale.mjs';
 import { kennwerte, vormonat, differenz, mitVorzeichen, datumKurz } from '../../lib/spiegel-stand.mjs';
@@ -17,9 +18,12 @@ import { kennwerte, vormonat, differenz, mitVorzeichen, datumKurz } from '../../
 const token = Astro.params.token || '';
 const z = (zugaenge as any[]).find((x) => x.token === token);
 if (!z) return Astro.redirect('/kaemmerer-cockpit/', 302);
-const s = spiegel(z.ags, { gemeinden, markt, sperren, hebesaetze, schulden });
+const s = spiegel(z.ags, { gemeinden, markt, sperren, hebesaetze, schulden, haushaltsstatus });
 if (!s) return Astro.redirect('/', 302);
-const { gemeinde: g, personal: p, haushalt: h, finanzen: f } = s;
+const { gemeinde: g, personal: p, haushalt: h, finanzen: f, konzern: kz, ausschreibungen: au, status: hs } = s;
+// Ausbau 13.10.2026 (MK): Konzern, Ausschreibungsvergleich, NRW-Haushaltsstatus – für neue Zugänge (Feld „seit“) sofort, für den Bestand ab 01.11.2026
+const ausbau = Boolean((z as any).seit) || Date.now() >= Date.parse('2026-11-01T00:00:00+01:00');
+const eur = (x: number) => x.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
 const kw = kalenderwoche();
 const heute = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
 const pz = (x: number | null) => (x == null ? '–' : Math.round(x * 100) + ' %');
@@ -113,8 +117,63 @@ const pfeil = (w: number | null, v: number | null) => (w == null || v == null ? 
           {p.leistungen.map((x) => <div class="sp-zeile"><span>{x.name}</span><small>{pz(x.anteil)}</small></div>)}
         </div>
       </div>
-      {p.eigene.length > 0 && <p class="sp-hin">Ihre eigenen aktiven Ausschreibungen ({p.eigene.length}) vergleichen wir im <a href="/arbeitgeberservice/#personal-cockpit">Personal-Cockpit</a> einzeln mit dem Markt.</p>}
+      {!ausbau && p.eigene.length > 0 && <p class="sp-hin">Ihre eigenen aktiven Ausschreibungen ({p.eigene.length}) vergleichen wir im <a href="/arbeitgeberservice/#personal-cockpit">Personal-Cockpit</a> einzeln mit dem Markt.</p>}
     </section>
+
+    {ausbau && au.anzahl > 0 && (
+    <section class="sp-abschnitt">
+      <h2>Ihre Ausschreibungen im Vergleich</h2>
+      <p class="sp-unter">{au.anzahl} aktive Ausschreibung{au.anzahl === 1 ? '' : 'en'} von {g.name} – gegenübergestellt mit den Stellen anderer kommunaler Arbeitgeber im Umkreis von 50 km.</p>
+      <div class="sp-zwei">
+        <div class="sp-karte"><h3>Entgelt im Vergleich zum gleichen Aufgabenfeld</h3>
+          {au.stellen.map((x) => <div class="sp-zeile"><a href={x.u} target="_blank" rel="noopener">{x.t}<br><small style="font-weight:400">{x.feld}</small></a><small>{niveauText(x.n)}{x.umfeld != null ? ` · Umfeld ${niveauText(x.umfeld)} ${x.n != null && x.umfeld - x.n >= 0.5 ? '▼' : x.n != null && x.n - x.umfeld >= 0.5 ? '▲' : '●'}` : ''}</small></div>)}
+          <p class="sp-hin">Umfeld = Median der Stellen desselben Aufgabenfelds im Umkreis (ab drei Vergleichsstellen). ▲ höher · ● gleichauf · ▼ niedriger eingruppiert.</p>
+        </div>
+        <div class="sp-karte"><h3>Was das Umfeld bietet – und was Ihre Ausschreibungen nennen</h3>
+          {au.leistungen.map((x) => <div class="sp-zeile"><span>{x.name}</span><small>Umfeld {pz(x.umfeld)} · bei Ihnen {x.eigene} von {au.anzahl}</small></div>)}
+          <p class="sp-hin">Gezählt wird, was im Ausschreibungstext ausdrücklich steht. Bewerber vergleichen genau diese Angaben. Jede Ausschreibung einzeln gegen den Markt: <a href="/arbeitgeberservice/#personal-cockpit">Personal-Cockpit</a>.</p>
+        </div>
+      </div>
+    </section>
+    )}
+
+    {ausbau && kz.stellen >= 3 && (
+    <section class="sp-abschnitt">
+      <h2>Konzern Kommune: Wer noch um Ihr Personal wirbt</h2>
+      <p class="sp-unter">Kommunale Unternehmen im Umkreis von 50 km – Stadtwerke, Versorger, Wohnungsgesellschaften, Verkehrs- und Entsorgungsbetriebe – mit {kz.stellen} offenen Stellen{kz.finanz ? `, davon ${kz.finanz} im Finanzwesen` : ''}.</p>
+      <div class="sp-zwei">
+        <div class="sp-karte"><h3>Kommunale Unternehmen mit offenen Stellen</h3>
+          {kz.liste.map((x) => <div class="sp-zeile"><span><b>{x.o}</b>{x.hier ? ' · Ihr Konzern' : ''}<br><small style="font-weight:400">{x.sparte}</small></span><small>{x.n} {x.n === 1 ? 'Stelle' : 'Stellen'} · {x.km} km</small></div>)}
+          <p class="sp-hin">Übersicht aller kommunalen Unternehmen als Arbeitgeber: <a href="/kommunale-unternehmen/">Kommunale Unternehmen</a></p>
+        </div>
+        <div class="sp-karte"><h3>Der Tarifabstand beim Einstieg</h3>
+          <div class="sp-kpis" style="grid-template-columns:1fr 1fr">
+            <div><b>{eur(kz.tarif.tvv)}</b><span>Stadtwerk (TV-V), {kz.tarif.eg} Stufe {kz.tarif.stufe}</span></div>
+            <div><b>{eur(kz.tarif.tvoed)}</b><span>Verwaltung (TVöD-VKA), {kz.tarif.eg} Stufe {kz.tarif.stufe}</span></div>
+          </div>
+          <p style="font-size:15px;line-height:1.55;margin:14px 0 0">Beim Berufseinstieg zahlt ein Stadtwerk nach TV-V in {kz.tarif.eg} rund <b>{kz.tarif.prozent} Prozent mehr</b> als die Verwaltung nach TVöD. Wer Nachwuchs für Kämmerei und Controlling sucht, konkurriert damit auch mit den eigenen Beteiligungen.</p>
+          <p class="sp-hin">Monatsbrutto 2026. Gleich nummerierte Entgeltgruppen stehen in beiden Tarifen für unterschiedliche Tätigkeiten. Herleitung: <a href={kz.tarif.url}>TV-V und TVöD im Vergleich</a></p>
+        </div>
+      </div>
+    </section>
+    )}
+
+    {ausbau && hs && (
+    <section class="sp-abschnitt">
+      <h2>Haushaltsstatus nach amtlicher Einstufung</h2>
+      <p class="sp-unter">Haushaltsstatus der Kommunen in Nordrhein-Westfalen, Stand {new Date(hs.stand).toLocaleDateString('de-DE')}.</p>
+      <div class="sp-kpis">
+        <div><b style={`color:${hs.farbe}`}>{hs.kurz}</b><span>{g.name}: {hs.lang}</span></div>
+        <div><b>{hs.nachbarn.ausgeglichen} von {hs.nachbarn.gesamt}</b><span>{hs.nachbarn.label} mit echtem Haushaltsausgleich</span></div>
+        <div><b>{hs.nachbarn.hsk} von {hs.nachbarn.gesamt}</b><span>{hs.nachbarn.label} in der Haushaltssicherung</span></div>
+        <div><b>{hs.land.ausgeglichen} von {hs.land.gesamt}</b><span>NRW-Kommunen mit echtem Haushaltsausgleich</span></div>
+      </div>
+      <div class="sp-karte" style="margin-top:20px"><h3>Einstufung der {hs.nachbarn.label}</h3>
+        {hs.nachbarn.liste.map((x) => <div class="sp-zeile"><span>{x.selbst ? <b>{x.name}</b> : x.name}</span><small><span style={`display:inline-block;width:9px;height:9px;border-radius:50%;background:${x.farbe};margin-right:6px`}></span>{x.kurz}</small></div>)}
+        <p class="sp-hin">{hs.text}{hs.ueberschuldung ? ` Zusätzlich vermerkt: ${hs.ueberschuldung}.` : ''} Quelle: {hs.quelle}. Gesamtübersicht: <a href="/haushaltslage-nrw/">Haushaltslage NRW</a></p>
+      </div>
+    </section>
+    )}
 
     <section class="sp-abschnitt">
       <h2>Haushaltslage im Umfeld</h2>

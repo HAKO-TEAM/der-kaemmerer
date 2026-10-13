@@ -4,6 +4,12 @@
 
 import { km } from './markt/benchmark.mjs';
 import { FELD_NAMEN, LEISTUNGEN, niveauText } from './markt/merkmale.mjs';
+import { istUnternehmen, sparte } from './unternehmen.mjs';
+import { STUFEN, UEBERSCHULDUNG } from './haushaltsstatus.mjs';
+
+// Tarifabstand Stadtwerk/Verwaltung: TV-V vs. TVöD-VKA, EG 12 Stufe 1, Monatsbrutto 2026
+// (geprüft im Beitrag /konzern/tv-v-tvoed-vergleich-stadtwerke-fachkraefte-2026/)
+export const TARIFABSTAND = { eg: 'EG 12', stufe: 1, tvv: 5594.19, tvoed: 4415.70, prozent: 27, url: '/konzern/tv-v-tvoed-vergleich-stadtwerke-fachkraefte-2026/' };
 
 const median = (a) => { const s = a.filter((x) => x != null && !isNaN(x)).sort((x, y) => x - y); if (!s.length) return null; const m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
 const anteil = (a, f) => (a.length ? a.filter(f).length / a.length : null);
@@ -21,7 +27,7 @@ export function kalenderwoche(d = new Date()) {
   return Math.ceil(((t - new Date(Date.UTC(t.getUTCFullYear(), 0, 1))) / 864e5 + 1) / 7);
 }
 
-export function spiegel(ags, { gemeinden, markt, sperren, hebesaetze = {}, schulden = {} }) {
+export function spiegel(ags, { gemeinden, markt, sperren, hebesaetze = {}, schulden = {}, haushaltsstatus = null }) {
   const g = gemeinden.find((x) => x.ags === ags);
   if (!g) return null;
   const ort = { la: g.lat, lo: g.lon };
@@ -48,6 +54,48 @@ export function spiegel(ags, { gemeinden, markt, sperren, hebesaetze = {}, schul
     eigene: eigene.map((s) => ({ t: s.t, n: s.n, u: s.u, frist: s.s })),
     wiederausschreibungen: andere.filter((s) => s.wa).length,
   };
+
+  // ── Konzern Kommune: kommunale Unternehmen, die im Umkreis Personal suchen (MK 13.10.2026)
+  const firmen = new Map();
+  for (const s of umkreis) {
+    if (!istUnternehmen(s.o) || (/^(stadt|gemeinde|landkreis|kreis|markt)\b/i.test(s.o) && !/gmbh|a\s?ö\s?r|\bag\b|eigenbetrieb|zweckverband/i.test(s.o))) continue;
+    const f = firmen.get(s.o) || { o: s.o, sparte: sparte(s.o).name, n: 0, finanz: 0, km: Math.round(km(ort, s)) };
+    f.n++; if (istFinanz(s.f)) f.finanz++; f.km = Math.min(f.km, Math.round(km(ort, s)));
+    firmen.set(s.o, f);
+  }
+  const firmenListe = [...firmen.values()].map((f) => ({ ...f, hier: f.km <= 15 && norm(f.o).includes(norm(g.name)) }))
+    .sort((a, b) => (b.hier - a.hier) || (b.n - a.n) || (a.km - b.km));
+  const konzern = { unternehmen: firmenListe.length, stellen: firmenListe.reduce((a, f) => a + f.n, 0),
+    finanz: firmenListe.reduce((a, f) => a + f.finanz, 0), eigeneTochter: firmenListe.filter((f) => f.hier), liste: firmenListe.slice(0, 8), tarif: TARIFABSTAND };
+
+  // ── Eigene Ausschreibungen im Vergleich mit dem Umfeld (gleiches Funktionsfeld, Arbeitgeberleistungen)
+  const vergleichEigene = eigene.map((s) => {
+    const gleich = s.f === 'sonstiges' ? [] : andere.filter((x) => x.f === s.f && x.n != null);
+    return { t: s.t, u: s.u, feld: FELD_NAMEN[s.f] || s.f, n: s.n, umfeld: gleich.length >= 3 ? median(gleich.map((x) => x.n)) : null, vergleich: gleich.length };
+  });
+  const leistungsVergleich = LEISTUNGEN.map(([k, name]) => ({ name,
+    umfeld: anteil(andere, (s) => s.k & LBIT[k]), eigene: eigene.filter((s) => s.k & LBIT[k]).length }))
+    .filter((x) => x.umfeld != null && x.umfeld >= 0.25).sort((a, b) => b.umfeld - a.umfeld).slice(0, 6);
+  const ausschreibungen = { anzahl: eigene.length, stellen: vergleichEigene.slice(0, 10), leistungen: leistungsVergleich,
+    homeofficeEigene: eigene.filter((s) => s.h).length };
+
+  // ── NRW: amtlicher Haushaltsstatus (MHKBD NRW, Stand des Datensatzes)
+  let status = null;
+  const hsd = haushaltsstatus?.gemeinden || {};
+  if (g.land === 'NW' && hsd[ags]) {
+    const nw = gemeinden.filter((x) => x.land === 'NW' && hsd[x.ags]);
+    const kreisfreiNW = /kreisfrei/i.test(g.typ || '');
+    const nachbarn = nw.filter((x) => (kreisfreiNW ? /kreisfrei/i.test(x.typ || '') : x.kreis_ags && x.kreis_ags === g.kreis_ags));
+    const zaehle = (liste) => Object.fromEntries(Object.keys(STUFEN).map((k) => [k, liste.filter((x) => hsd[x.ags].s === Number(k)).length]));
+    const eig = hsd[ags];
+    status = { stufe: eig.s, ...STUFEN[eig.s], ueberschuldung: UEBERSCHULDUNG[eig.u] || null,
+      land: { gesamt: nw.length, ausgeglichen: nw.filter((x) => hsd[x.ags].s === 1).length, hsk: nw.filter((x) => hsd[x.ags].s >= 5).length, je: zaehle(nw) },
+      nachbarn: { label: kreisfreiNW ? 'kreisfreien Städte in NRW' : `Kommunen ${/kreis/i.test(g.kreis || '') ? `im ${g.kreis}` : `im Kreis ${g.kreis}`}`, gesamt: nachbarn.length,
+        ausgeglichen: nachbarn.filter((x) => hsd[x.ags].s === 1).length, hsk: nachbarn.filter((x) => hsd[x.ags].s >= 5).length,
+        liste: nachbarn.map((x) => ({ name: x.name, einwohner: x.einwohner, s: hsd[x.ags].s, kurz: STUFEN[hsd[x.ags].s].kurz, farbe: STUFEN[hsd[x.ags].s].farbe, selbst: x.ags === ags }))
+          .sort((a, b) => b.einwohner - a.einwohner).slice(0, 16) },
+      stand: haushaltsstatus.stand, quelle: haushaltsstatus.quelle };
+  }
 
   // ── Haushaltslage im Umfeld (belegte Haushaltssperren, Stand der Redaktion)
   const mitOrt = sperren.faelle.map((f) => {
@@ -92,5 +140,5 @@ export function spiegel(ags, { gemeinden, markt, sperren, hebesaetze = {}, schul
   const gb = finanzen.grundsteuerB;
   if (gb.wert != null && gb.kreis != null) saetze.push(`Der Hebesatz der Grundsteuer B liegt mit ${gb.wert} % ${gb.wert > gb.kreis + 5 ? 'über' : gb.wert < gb.kreis - 5 ? 'unter' : 'auf Höhe'} dem Median ${kreisfrei ? 'der kreisfreien Städte im Land' : 'Ihres Kreises'} (${Math.round(gb.kreis)} %, ${gb.jahr}).`);
 
-  return { gemeinde: { ...g, landLang: LAND_LANG[g.land] || g.land }, personal, haushalt, finanzen, saetze };
+  return { gemeinde: { ...g, landLang: LAND_LANG[g.land] || g.land }, personal, haushalt, finanzen, saetze, konzern, ausschreibungen, status };
 }
