@@ -4,5 +4,14 @@
     "org": "Stadt Bamberg",
     "kommunalflat": true,
     "seit": "2026-10-06"
+  },
+  {
+    "token": "b40f8db927de0d54",
+    "org": "TEST Gemeinde Musterhausen",
+    "kommunalflat": true,
+    "seit": "2026-10-13",
+    "email": "m.kosel@nurovia.de",
+    "ort": "Musterhausen",
+    "bundesland": "Sachsen"
   }
 ]
