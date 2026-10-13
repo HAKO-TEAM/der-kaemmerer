@@ -13,7 +13,18 @@ const nav = [
   { href: '/stellen/', label: 'Stellenbörse' },
   { href: '/arbeitgeberservice/', label: 'Für Arbeitgeber' },
 ];
+// Desktop: links die Ressorts (seltenere unter „Mehr“), rechts abgesetzt Daten und Stellen-Service (MK 13.10.2026)
+const ressorts = [
+  { href: '/haushalt/', label: 'Haushalt' }, { href: '/einnahmen/', label: 'Einnahmen' }, { href: '/ausgaben/', label: 'Ausgaben' },
+  { href: '/sozialkosten/', label: 'Sozialkosten' }, { href: '/konzern/', label: 'Konzern Kommune' }, { href: '/recht/', label: 'Recht & Vergabe' },
+];
+const mehr = [ { href: '/analyse/', label: 'Analyse' }, { href: '/praxis/', label: 'Best Practice' } ];
+const service = [
+  { href: '/daten/', label: 'Daten' }, { href: '/dienst-karriere/', label: 'Karriere' },
+  { href: '/stellen/', label: 'Stellen' }, { href: '/arbeitgeberservice/', label: 'Für Arbeitgeber' },
+];
 const currentPath = Astro.url.pathname;
+const aktiv = (h: string) => currentPath.startsWith(h) ? 'active' : '';
 
 // Aktuelles Tagesdatum für die Anzeige oben rechts (Build-Zeit; wird clientseitig auf "heute" aktualisiert)
 const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
@@ -44,9 +55,17 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
   .btn:hover{background:#1a2744;border-color:#1a2744}
 
   /* ── Desktop Nav ── */
-  nav{display:flex;gap:0;justify-content:space-between}
+  nav{display:flex;gap:16px;justify-content:space-between;align-items:stretch}
+  .nav-gruppe{display:flex;align-items:stretch}
+  .nav-service{border-left:1px solid #e2e8f0;padding-left:10px}
+  .nav-service a{color:#1d4ed8}
+  .nav-mehr{position:relative;font-size:11px;font-weight:600;text-transform:uppercase;color:#374151;padding:9px 6px 7px;border-bottom:2.5px solid transparent;cursor:pointer;white-space:nowrap}
+  .nav-mehr.active,.nav-mehr:hover{color:#3b82f6}
+  .nav-mehr-liste{display:none;position:absolute;top:100%;left:0;z-index:50;background:#fff;border:1px solid #e2e8f0;border-radius:6px;box-shadow:0 10px 24px -12px rgba(15,23,42,.25);padding:6px 0;min-width:170px}
+  .nav-mehr:hover .nav-mehr-liste,.nav-mehr:focus-within .nav-mehr-liste{display:block}
+  .nav-mehr-liste a{display:block;padding:8px 14px;border-bottom:0}
   nav a,.topbar a,.mobile-menu a{text-decoration:none}
-  nav a{font-size:11px;font-weight:600;letter-spacing:.01em;text-transform:uppercase;color:#374151;padding:9px 6px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
+  nav a{font-size:11.5px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#374151;padding:9px 8px 7px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s}
   nav a:hover,nav a.active{color:#3b82f6;border-color:#3b82f6}
 
   /* ── Hamburger Button (nur Mobile) ── */
@@ -143,9 +162,16 @@ const aktuellesDatum = new Intl.DateTimeFormat('de-DE', { day: 'numeric', month:
 
     <!-- Desktop Nav -->
     <nav>
-      {nav.map(n => (
-        <a href={n.href} class={currentPath.startsWith(n.href) ? 'active' : ''}>{n.label}</a>
-      ))}
+      <div class="nav-gruppe">
+        {ressorts.map(n => <a href={n.href} class={aktiv(n.href)}>{n.label}</a>)}
+        <div class={`nav-mehr ${mehr.some(n => aktiv(n.href)) ? 'active' : ''}`} tabindex="0">
+          <span>Mehr ▾</span>
+          <div class="nav-mehr-liste">{mehr.map(n => <a href={n.href} class={aktiv(n.href)}>{n.label}</a>)}</div>
+        </div>
+      </div>
+      <div class="nav-gruppe nav-service">
+        {service.map(n => <a href={n.href} class={aktiv(n.href)}>{n.label}</a>)}
+      </div>
     </nav>
 
     <!-- Mobile Menu -->
