@@ -1,0 +1,109 @@
+---
+// Kommunale Unternehmen als Arbeitgeber (MK 13.10.2026: „sie sollen sich dort auch wiederfinden“).
+// Datenbasis: Marktbeobachtung (markt.json, alle aktiven kommunalen Stellen) und die Anzeigen auf derkaemmerer.de.
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import markt from '../data/markt/markt.json';
+import { aktiveStellen } from '../lib/stellen';
+import { istUnternehmen, sparte, SPARTEN } from '../lib/unternehmen.mjs';
+
+const LAND = { BW: 'Baden-Württemberg', BY: 'Bayern', BE: 'Berlin', BB: 'Brandenburg', HB: 'Bremen', HH: 'Hamburg', HE: 'Hessen', MV: 'Mecklenburg-Vorpommern',
+  NI: 'Niedersachsen', NW: 'Nordrhein-Westfalen', RP: 'Rheinland-Pfalz', SL: 'Saarland', SN: 'Sachsen', ST: 'Sachsen-Anhalt', SH: 'Schleswig-Holstein', TH: 'Thüringen' };
+const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+// Unternehmen aus der Marktbeobachtung
+const firmen = new Map();
+for (const s of (markt as any).stellen) {
+  if (!istUnternehmen(s.o)) continue;
+  const k = norm(s.o);
+  const f = firmen.get(k) || { name: s.o, ort: s.ort, land: LAND[s.l] || '', markt: 0, eigene: [], sparte: sparte(s.o) };
+  f.markt++; firmen.set(k, f);
+}
+// Anzeigen auf derkaemmerer.de
+const eigene = (await aktiveStellen()).filter((j) => istUnternehmen(j.data.organisation, j.data.orgtyp));
+for (const j of eigene) {
+  const k = norm(j.data.organisation);
+  const f = firmen.get(k) || { name: j.data.organisation, ort: j.data.ort, land: j.data.bundesland, markt: 0, eigene: [], sparte: sparte(j.data.organisation, j.data.orgtyp) };
+  f.eigene.push({ slug: j.id, titel: j.data.title }); firmen.set(k, f);
+}
+const liste = [...firmen.values()].sort((a, b) => (b.eigene.length - a.eigene.length) || (b.markt - a.markt) || a.name.localeCompare(b.name, 'de'));
+const jeSparte = SPARTEN.map((s) => ({ ...s, firmen: liste.filter((f) => f.sparte.slug === s.slug) })).filter((s) => s.firmen.length);
+const stellenGesamt = liste.reduce((a, f) => a + Math.max(f.markt, f.eigene.length), 0);
+const z = (n) => n.toLocaleString('de-DE');
+---
+<Base title="Kommunale Unternehmen als Arbeitgeber – Stadtwerke, Wohnungsgesellschaften, Verkehr"
+  description={`${z(liste.length)} kommunale Unternehmen mit ${z(stellenGesamt)} offenen Stellen: Stadtwerke und Versorger, Wohnungsgesellschaften, Verkehrsbetriebe und Entsorger – Stellen in Controlling, Finanzen, Personal und Leitung.`}>
+<Header />
+<main class="ku">
+  <section class="ku-hero"><div class="ku-wrap">
+    <p class="ku-kicker">Daten &amp; Verzeichnisse · Stellenbörse</p>
+    <h1>Kommunale Unternehmen als Arbeitgeber</h1>
+    <p class="ku-lead">Stadtwerke und Versorger, Wohnungsgesellschaften, Verkehrsbetriebe und Entsorger: Unternehmen in kommunaler Hand suchen Fach- und Führungskräfte für Controlling, Rechnungswesen, Einkauf, Personal und Geschäftsführung. Hier finden Sie, wer gerade ausschreibt.</p>
+    <div class="ku-zahlen">
+      <div><b>{z(liste.length)}</b><span>kommunale Unternehmen mit offenen Stellen</span></div>
+      <div><b>{z(stellenGesamt)}</b><span>offene Stellen in der Marktbeobachtung</span></div>
+      <div><b>{z(eigene.length)}</b><span>Anzeigen direkt auf derkaemmerer.de</span></div>
+    </div>
+    <nav class="ku-sprung">{jeSparte.map((s) => <a href={`#${s.slug}`}>{s.name} <i>{s.firmen.length}</i></a>)}</nav>
+  </div></section>
+
+  <div class="ku-wrap ku-body">
+    {jeSparte.map((s) => (
+      <section id={s.slug} class="ku-sparte">
+        <h2>{s.name} <small>{s.firmen.length} Unternehmen</small></h2>
+        <div class="ku-raster">
+          {s.firmen.map((f) => (
+            <article class="ku-karte">
+              <strong>{f.name}</strong>
+              <span class="ku-ort">{[f.ort, f.land].filter(Boolean).join(' · ')}</span>
+              <span class="ku-n">{z(Math.max(f.markt, f.eigene.length))} {Math.max(f.markt, f.eigene.length) === 1 ? 'offene Stelle' : 'offene Stellen'}</span>
+              {f.eigene.length > 0 && <ul>{f.eigene.slice(0, 3).map((e) => <li><a href={`/stellen/${e.slug}/`}>{e.titel}</a></li>)}</ul>}
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <aside class="ku-cta">
+      <div>
+        <h2>Sie sind ein kommunales Unternehmen?</h2>
+        <p>Veröffentlichen Sie Ihre Ausschreibungen dort, wo kommunale Fach- und Führungskräfte lesen: mit der KommunalFlat für alle Stellen oder als Einzelanzeige für 690 € – sofort online und in der Google-Jobsuche.</p>
+      </div>
+      <div class="ku-cta-btn"><a class="prim" href="/anzeige-aufgeben/">Anzeige aufgeben</a><a href="/arbeitgeberservice/">Arbeitgeberservice</a></div>
+    </aside>
+    <p class="ku-quelle">Quelle: Marktbeobachtung derkaemmerer.de (interamt.de, karriere.nrw), Stand {String((markt as any).kopf?.stand || '').slice(0, 10).split('-').reverse().join('.')}; Sparkassen und Kliniken sind nicht enthalten. Täglich aktualisiert.</p>
+  </div>
+</main>
+<Footer />
+</Base>
+
+<style>
+.ku { background:#f1f5f9; color:#0f172a; }
+.ku-wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+.ku-hero { background:#172840; color:#fff; padding:48px 0 36px; border-bottom:3px solid #2563eb; }
+.ku-kicker { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#60a5fa; margin:0 0 10px; }
+.ku-hero h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(28px,4vw,42px); margin:0 0 12px; line-height:1.15; }
+.ku-lead { color:rgba(255,255,255,.75); max-width:720px; line-height:1.65; margin:0 0 24px; }
+.ku-zahlen { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px; }
+.ku-zahlen div { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:8px; padding:12px 14px; }
+.ku-zahlen b { display:block; font-size:26px; color:#93c5fd; } .ku-zahlen span { font-size:12px; color:rgba(255,255,255,.65); }
+.ku-sprung { display:flex; flex-wrap:wrap; gap:8px; }
+.ku-sprung a { color:#fff; text-decoration:none; font-size:13px; border:1px solid rgba(255,255,255,.25); border-radius:20px; padding:5px 12px; }
+.ku-sprung a i { font-style:normal; color:#93c5fd; margin-left:4px; }
+.ku-body { padding:36px 24px 56px; }
+.ku-sparte { margin-bottom:36px; scroll-margin-top:80px; }
+.ku-sparte h2 { font-size:22px; color:#1a2744; margin:0 0 14px; } .ku-sparte h2 small { font-size:13px; color:#64748b; font-weight:500; margin-left:6px; }
+.ku-raster { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.ku-karte { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:4px; min-width:0; }
+.ku-karte strong { font-size:14.5px; color:#1a2744; line-height:1.35; overflow-wrap:anywhere; }
+.ku-ort { font-size:12px; color:#64748b; } .ku-n { font-size:13px; font-weight:700; color:#2563eb; }
+.ku-karte ul { margin:6px 0 0; padding-left:16px; font-size:12.5px; } .ku-karte a { color:#1d4ed8; }
+.ku-cta { display:flex; gap:24px; align-items:center; justify-content:space-between; background:#172840; color:#fff; border-radius:12px; padding:24px 28px; margin:16px 0 18px; flex-wrap:wrap; }
+.ku-cta h2 { margin:0 0 6px; font-size:20px; } .ku-cta p { margin:0; color:rgba(255,255,255,.75); max-width:620px; line-height:1.6; font-size:14px; }
+.ku-cta-btn { display:flex; gap:10px; flex-wrap:wrap; }
+.ku-cta-btn a { color:#fff; text-decoration:none; font-weight:700; font-size:14px; padding:10px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.35); }
+.ku-cta-btn a.prim { background:#2563eb; border-color:#2563eb; }
+.ku-quelle { font-size:12px; color:#64748b; }
+@media (max-width:640px) { .ku-zahlen { grid-template-columns:1fr; } .ku-hero { padding:32px 0 28px; } .ku-wrap { padding:0 16px; } .ku-body { padding:28px 16px 44px; } }
+</style>
