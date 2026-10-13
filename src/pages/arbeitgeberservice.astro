@@ -1,5 +1,5 @@
 ---
-// Arbeitgeberservice – alles für Kommunen als Arbeitgeber an einem Ort.
+// Arbeitgeberservice – alles für Kommunen und kommunale Unternehmen als Arbeitgeber an einem Ort.
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -13,7 +13,7 @@ const heute = new Date(); heute.setHours(0, 0, 0, 0);
 const jobs = await getCollection('jobs', ({ data }) => data.aktiv && new Date(data.bewerbungsschluss) >= heute && (!data.laufzeitBis || new Date(data.laufzeitBis) >= heute));
 const profile = Object.values(import.meta.glob('../data/arbeitgeber/*.json', { eager: true, import: 'default' })) as any[];
 ---
-<Base title="Arbeitgeberservice für Kommunen – Stellen, Personal-Cockpit, Arbeitgeberprofil"
+<Base title="Arbeitgeberservice für Kommunen und kommunale Unternehmen – Stellen, Personal-Cockpit, Arbeitgeberprofil"
   description={`Arbeitgeberservice von Der Kämmerer: KommunalFlat, Personal-Cockpit mit Marktvergleich gegen ${u.anzahl.toLocaleString('de-DE')} kommunale Stellen und eigenes Arbeitgeberprofil.`}>
 <Header />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@ const profile = Object.values(import.meta.glob('../data/arbeitgeber/*.json', { e
 <div class="as">
   <section class="as-hero"><div class="as-w">
     <div class="as-k">Arbeitgeberservice · Der Kämmerer</div>
-    <h1>Für Kommunen, die Fachkräfte gewinnen wollen.</h1>
+    <h1>Für Kommunen und kommunale Unternehmen, die Fachkräfte gewinnen wollen.</h1>
     <p>Stellen veröffentlichen, gegen den gesamten kommunalen Stellenmarkt vergleichen und als Arbeitgeber sichtbar werden – alles aus einer Hand, werbefrei im redaktionellen Umfeld für kommunale Fach- und Führungskräfte.</p>
     <div class="as-zahlen">
       <div><b>{jobs.length.toLocaleString('de-DE')}</b><span>Stellen in unserer Stellenbörse</span></div>
@@ -86,13 +86,13 @@ const profile = Object.values(import.meta.glob('../data/arbeitgeber/*.json', { e
       <article class="as-karte">
         <span class="as-nr">Stelle aufgeben</span>
         <h2>In Minuten online.</h2>
-        <p>Ausschreibung über das Formular einreichen – mit der KommunalFlat ist sie sofort freigeschaltet und am selben Tag in der Stellenbörse und in der Google-Jobsuche.</p>
+        <p>Ausschreibung über das Formular einreichen – mit der KommunalFlat oder als Einzelanzeige für 690 € ist sie sofort freigeschaltet und am selben Tag in der Stellenbörse und in der Google-Jobsuche.</p>
         <a class="as-btn navy" href="/anzeige-aufgeben/">Anzeige aufgeben</a>
       </article>
 
       <article class="as-karte">
         <span class="as-nr">Arbeitgeberprofile</span>
-        <h2>Ihre Kommune als Arbeitgeber.</h2>
+        <h2>Ihr Haus als Arbeitgeber.</h2>
         <p>Ein eigenes Profil mit Kennzahlen, Leistungen und allen offenen Stellen – verlinkt aus jeder Ihrer Anzeigen.</p>
         <div class="as-profile">{profile.map((p) => <a href={`/arbeitgeber/${p.slug}/`}>{p.name}</a>)}</div>
         <a class="as-btn navy" href="/arbeitgeber/">Alle Arbeitgeberprofile</a>
