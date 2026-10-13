@@ -439,23 +439,35 @@ const FORMSPREE_ID = 'mdajrkjk'; // Fallback falls API nicht verfügbar
           </div>
 
           <div class="f-field">
-            <label class="f-label" for="behoerde">Behörde / Organisation <span class="req">*</span></label>
+            <label class="f-label" for="behoerde">Behörde / Unternehmen <span class="req">*</span></label>
             <input class="f-input" id="behoerde" name="behoerde" type="text"
-              placeholder="z.B. Landkreis Musterstadt" required>
+              placeholder="z.B. Landkreis Musterstadt oder Stadtwerke Musterstadt GmbH" required>
           </div>
 
           <div class="f-field">
             <label class="f-label" for="orgtyp">Organisationstyp <span class="req">*</span></label>
             <select class="f-select" id="orgtyp" name="orgtyp" required>
               <option value="">Bitte wählen …</option>
-              <option>Landkreis</option>
-              <option>Kreisfreie Stadt</option>
-              <option>Große Kreisstadt</option>
-              <option>Stadt / Gemeinde</option>
-              <option>Amt / Verbandsgemeinde</option>
-              <option>Zweckverband</option>
-              <option>Wohlfahrtsverband</option>
-              <option>Sonstiger öffentlicher Träger</option>
+              <optgroup label="Kommunalverwaltung">
+                <option>Landkreis</option>
+                <option>Kreisfreie Stadt</option>
+                <option>Große Kreisstadt</option>
+                <option>Stadt / Gemeinde</option>
+                <option>Amt / Verbandsgemeinde</option>
+                <option>Zweckverband</option>
+              </optgroup>
+              <optgroup label="Kommunale Unternehmen">
+                <option>Stadtwerke / Versorger</option>
+                <option>Kommunale Wohnungsgesellschaft</option>
+                <option>Verkehrsbetrieb</option>
+                <option>Entsorgung / Kommunalbetrieb</option>
+                <option>Eigenbetrieb / Anstalt öffentlichen Rechts</option>
+                <option>Sonstiges kommunales Unternehmen</option>
+              </optgroup>
+              <optgroup label="Weitere">
+                <option>Wohlfahrtsverband</option>
+                <option>Sonstiger öffentlicher Träger</option>
+              </optgroup>
             </select>
           </div>
 
