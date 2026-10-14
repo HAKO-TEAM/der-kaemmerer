@@ -1900,5 +1900,65 @@
   "ags": "06611000",
   "kommune": "Kassel",
   "seit": "2026-10-14"
+ },
+ {
+  "token": "45739250beca2432",
+  "ags": "05162024",
+  "kommune": "Neuss",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "ff93f80ef775a0f7",
+  "ags": "05315000",
+  "kommune": "Köln",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "07f3a458c4dc6d7e",
+  "ags": "05314000",
+  "kommune": "Bonn",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "b3f131d019b0e263",
+  "ags": "05774032",
+  "kommune": "Paderborn",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "9f40f46ca31e01ee",
+  "ags": "09362000",
+  "kommune": "Regensburg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "bca27232a7da4c6f",
+  "ags": "08326074",
+  "kommune": "Villingen-Schwenningen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "c7c19d16e1756b59",
+  "ags": "03241002",
+  "kommune": "Barsinghausen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "8c2eb0c8c96e47c3",
+  "ags": "05566040",
+  "kommune": "Lengerich",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "981c99844b870130",
+  "ags": "14522060",
+  "kommune": "Burgstädt",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "7557bc717bd1bdb1",
+  "ags": "08225109",
+  "kommune": "Walldürn",
+  "seit": "2026-10-14"
  }
 ]
