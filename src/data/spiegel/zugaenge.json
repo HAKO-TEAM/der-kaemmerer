@@ -1606,5 +1606,299 @@
   "ags": "08215007",
   "kommune": "Bretten",
   "seit": "2026-10-14"
+ },
+ {
+  "token": "50d4e2cf00dd4216",
+  "ags": "16066092",
+  "kommune": "Zella-Mehlis",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "b56010e85c25bb7e",
+  "ags": "14729140",
+  "kommune": "Frohburg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "2f3b6d51622e0f6b",
+  "ags": "01059120",
+  "kommune": "Harrislee",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "88ebe5de51954a10",
+  "ags": "14628260",
+  "kommune": "Neustadt in Sachsen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "1eb12adef46b6cc6",
+  "ags": "07338017",
+  "kommune": "Limburgerhof",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "52947d889bed4bf5",
+  "ags": "14521710",
+  "kommune": "Zwönitz",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "7211b9517a0e0e6a",
+  "ags": "01061029",
+  "kommune": "Glückstadt",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "32180f6c996a5710",
+  "ags": "14521590",
+  "kommune": "Stollberg/Erzgeb.",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "a03306dba41d9f19",
+  "ags": "14628050",
+  "kommune": "Bannewitz",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "34203a7a58f8318b",
+  "ags": "01055028",
+  "kommune": "Malente",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "86d688cb0182d55f",
+  "ags": "07131090",
+  "kommune": "Grafschaft",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "6d9aceed823ede3b",
+  "ags": "14626085",
+  "kommune": "Ebersbach-Neugersdorf",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "42c2e6e6ec1085e4",
+  "ags": "07231502",
+  "kommune": "Morbach",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "8216e71d1621e050",
+  "ags": "14523300",
+  "kommune": "Oelsnitz/Vogtl.",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "c7c7aee96a27497f",
+  "ags": "16062066",
+  "kommune": "Bleicherode",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "6664ce4ff070d676",
+  "ags": "14729070",
+  "kommune": "Brandis",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "2d21488dd6a33bc5",
+  "ags": "14524320",
+  "kommune": "Wilkau-Haßlau",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "2676a717c390c55f",
+  "ags": "01062082",
+  "kommune": "Trittau",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "08f2b9f249c56a41",
+  "ags": "01062053",
+  "kommune": "Oststeinbek",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "f376e120b5a5f1b1",
+  "ags": "01059045",
+  "kommune": "Kappeln",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "47e741cd72c42beb",
+  "ags": "14626370",
+  "kommune": "Niesky",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "90a4538366e51fd3",
+  "ags": "14729300",
+  "kommune": "Naunhof",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "c0655b63aebb005d",
+  "ags": "14521355",
+  "kommune": "Lauter-Bernsbach",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "97294bee1bbc9dc9",
+  "ags": "14729010",
+  "kommune": "Bad Lausick",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "df77c0a88c15b4bb",
+  "ags": "05554052",
+  "kommune": "Schöppingen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "206dbe444447dbb2",
+  "ags": "05566052",
+  "kommune": "Metelen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "fc3d40fd12260274",
+  "ags": "05154048",
+  "kommune": "Rheurdt",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "e75a869c888089f5",
+  "ags": "05962044",
+  "kommune": "Nachrodt-Wiblingwerde",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "3b62df61dcbcfc63",
+  "ags": "05570012",
+  "kommune": "Beelen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "1c718e11446a4f6c",
+  "ags": "05762024",
+  "kommune": "Marienmünster",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "78269a26618ad18f",
+  "ags": "05366012",
+  "kommune": "Dahlem",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "6a7fe582d0815fce",
+  "ags": "05958020",
+  "kommune": "Hallenberg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "83cc651d934585bf",
+  "ags": "09162000",
+  "kommune": "München",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "d37d25e7ad750874",
+  "ags": "14713000",
+  "kommune": "Leipzig",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "da7fc76b789633a0",
+  "ags": "08111000",
+  "kommune": "Stuttgart",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "83c9e3e5f2c79fd2",
+  "ags": "14612000",
+  "kommune": "Dresden",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "0daccbfe8bcbfff7",
+  "ags": "03241001",
+  "kommune": "Hannover",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "1892b51f30cd67a9",
+  "ags": "05112000",
+  "kommune": "Duisburg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "170e2d27f1c0d2aa",
+  "ags": "09761000",
+  "kommune": "Augsburg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "ea1c4fd05982b6f9",
+  "ags": "06414000",
+  "kommune": "Wiesbaden",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "90d9ba476411f9a6",
+  "ags": "05513000",
+  "kommune": "Gelsenkirchen",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "fbbe36223314cadb",
+  "ags": "03101000",
+  "kommune": "Braunschweig",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "928214f166ad6ec5",
+  "ags": "15003000",
+  "kommune": "Magdeburg",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "484a4349aadbf335",
+  "ags": "08311000",
+  "kommune": "Freiburg im Breisgau",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "6ba3567b1ff00f15",
+  "ags": "15002000",
+  "kommune": "Halle (Saale)",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "a190e66ef3e01dcb",
+  "ags": "07315000",
+  "kommune": "Mainz",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "a8054ff194b5580b",
+  "ags": "16051000",
+  "kommune": "Erfurt",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "d152316a38b7bdd3",
+  "ags": "01003000",
+  "kommune": "Lübeck",
+  "seit": "2026-10-14"
+ },
+ {
+  "token": "ff3e66f929870e31",
+  "ags": "06611000",
+  "kommune": "Kassel",
+  "seit": "2026-10-14"
  }
 ]
