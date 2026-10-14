@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-23"
 bewerbungslink: "https://www.ksg-hannover.de/die-ksg/karriere-ausbildung/stellenangebote/assistenz-der-geschaeftsfuehrung"
 schlagwoerter: ["Stabsstelle", "Geschäftsführung", "Unternehmensentwicklung", "Gremienarbeit", "Wohnungswirtschaft"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-14"
 featured: false
 ---

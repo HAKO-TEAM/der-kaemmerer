@@ -9,3 +9,5 @@ Main-Kinzig-Kreis
 Main-Kinzig-Kreis, Jugendamt
 # 2026-10-07 Stadt Neuenburg am Rhein: Herausnahme + Abmeldung (nachgetragen 12.10.2026)
 Stadt Neuenburg am Rhein
+# 2026-10-14 KSG Hannover GmbH: Herausnahme (Antwort personal@ksg-hannover.de: ausreichend Bewerbungen)
+KSG Hannover GmbH
