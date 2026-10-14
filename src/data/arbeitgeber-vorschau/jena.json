@@ -1,0 +1,68 @@
+{
+  "slug": "jena",
+  "name": "Stadt Jena",
+  "bundesland": "Thüringen",
+  "einwohner": 109353,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Thomas Nitzsche",
+  "token": "ade720a312403fbb",
+  "claim": "In der Lichtstadt Jena moderne und vernetzte Dienstleistungen für eine wachsende Stadt gestalten.",
+  "beschreibung": "Jena ist kreisfreie Universitätsstadt in Thüringen und Teil der Metropolregion Mitteldeutschland. Die Stadt ist Sitz der 1558 gegründeten Friedrich-Schiller-Universität und ein Zentrum der deutschen Optik- und Feinmechanikindustrie. Mit rund 2.000 Mitarbeitenden gehört die Stadtverwaltung zu den größten Arbeitgeberinnen der Region und investiert in Gesundheit, Zufriedenheit und Entwicklung ihrer Beschäftigten. Die Aufgaben reichen von Personal und Digitalisierung über Recht bis zu Umweltschutz und Gleichstellung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "109.353",
+      "icon": "👥"
+    },
+    {
+      "label": "Universität gegründet",
+      "wert": "1558",
+      "icon": "🎓"
+    },
+    {
+      "label": "Fläche",
+      "wert": "115 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte Stadtverwaltung (lt. Stellenausschreibung)",
+      "wert": "rund 2.000",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Vergütung nach TVöD mit regelmäßigen Tariferhöhungen, Sonderzahlungen wie Weihnachtsgeld und Leistungsprämie sowie betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten und Arbeitsmodelle, je nach Stelle mit Homeoffice; 30 Tage Urlaub, ab 2027 31 Tage."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Vergünstigtes VMT-Jobticket, CityCard oder teilweise Übernahme der Kindergartengebühren sowie Fahrradleasing."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Strukturierte Einarbeitung und Weiterbildungsmöglichkeiten, die fachlich und persönlich stärken."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Jena · Fachdienst Personal",
+    "email": "bewerbungen@jena.de",
+    "telefon": "03641 49-2016",
+    "bewerbungsportal": "https://jobs.jena.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Universität, Optikindustrie, Status, Oberbürgermeister: de.wikipedia.org/wiki/Jena (abgerufen 14.10.2026)",
+    "Beschäftigtenzahl, Benefits und Kontakt: Stellenausschreibungen Gleichstellungsbeauftragte https://interamt.de/koop/app/stelle?id=1497641 (API api.interamt.de/query/stellenangebot/1497641), Sachbearbeiter Digitalisierung & HR-Anwendungsbetreuung https://interamt.de/koop/app/stelle?id=1500400 (API api.interamt.de/query/stellenangebot/1500400), Sachbearbeiter Gewässerschutz/Abwasser https://interamt.de/koop/app/stelle?id=1495597 (API api.interamt.de/query/stellenangebot/1495597), Volljurist Dienst- und Verwaltungsrecht https://interamt.de/koop/app/stelle?id=1499127 (API api.interamt.de/query/stellenangebot/1499127) (abgerufen 14.10.2026)"
+  ]
+}

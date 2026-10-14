@@ -1,0 +1,65 @@
+{
+  "slug": "freiberg",
+  "name": "Universitätsstadt Freiberg",
+  "bundesland": "Sachsen",
+  "einwohner": 41205,
+  "token": "1818616251451e8b",
+  "claim": "Eine historische Silberstadt und Universitätsstadt im Herzen Sachsens zukunftsfähig weiterbauen.",
+  "beschreibung": "Freiberg ist Große Kreisstadt und Bergstadt in der Mitte Sachsens zwischen Dresden und Chemnitz und Verwaltungssitz des Landkreises Mittelsachsen. Die um 1162/1170 entstandene Stadt ist eng mit dem Bergbau verbunden; ihr denkmalgeschützter Stadtkern gehört seit 2019 zum UNESCO-Welterbe Montanregion Erzgebirge. Mit der 1765 gegründeten TU Bergakademie ist Freiberg Universitätsstadt. Die Stadtverwaltung bietet eine kollegiale Arbeitsatmosphäre und unterstützt neue Beschäftigte gemeinsam mit der städtischen Wohnungsgesellschaft bei der Wohnungssuche.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "41.205",
+      "icon": "👥"
+    },
+    {
+      "label": "UNESCO-Welterbe seit",
+      "wert": "2019",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "48 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Bergakademie gegründet",
+      "wert": "1765",
+      "icon": "🎓"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und Arbeitszeit",
+      "beschreibung": "31 Urlaubstage bei einer 5-Tage-Woche, gleitende Arbeitszeit und gute Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Vergütung nach TVöD-VKA mit Jahressonderzahlung und jährlichem Leistungsentgelt, betriebliche Altersvorsorge und alle Sozialleistungen des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit Angeboten zur Gesundheitsförderung und Möglichkeit des Fahrradleasings."
+    },
+    {
+      "titel": "Ankommen in Freiberg",
+      "beschreibung": "Unterstützung bei der Wohnungssuche gemeinsam mit der Städtischen Wohnungsgesellschaft."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten in einer kollegialen Arbeitsatmosphäre."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Freiberg · Hauptamt, Sachgebiet Personalwesen",
+    "email": "bewerbungen@freiberg.de",
+    "telefon": "03731 273-145"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Status, Entstehung, UNESCO-Welterbe, Bergakademie: de.wikipedia.org/wiki/Freiberg (abgerufen 14.10.2026)",
+    "Universitätsstadt, Benefits und Kontakt: Stellenausschreibung Bauingenieur Straßenbauplanung und Freianlagenbau https://interamt.de/koop/app/stelle?id=1498629 (API api.interamt.de/query/stellenangebot/1498629) (abgerufen 14.10.2026)"
+  ]
+}

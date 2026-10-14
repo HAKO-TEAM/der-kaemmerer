@@ -1,0 +1,70 @@
+{
+  "slug": "zweckverband-bode-wipper-stassfurt",
+  "name": "Wasser- und Abwasserzweckverband Bode-Wipper",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 48000,
+  "buergermeistertitel": "Verbandsgeschäftsführer",
+  "buergermeister": "Andreas Beyer",
+  "token": "7056de16a3e6a771",
+  "claim": "Trinkwasser und Abwasser für mehr als 48.000 Menschen im Salzlandkreis zukunftssicher machen.",
+  "beschreibung": "Der Wasser- und Abwasserzweckverband Bode-Wipper mit Sitz in Staßfurt versorgt im Salzlandkreis mehr als 48.000 Einwohnerinnen und Einwohner mit Trinkwasser und entsorgt das Abwasser aus Haushalten und Gewerbe. Mitglieder sind die Städte Staßfurt, Hecklingen und Aschersleben (für einzelne Ortsteile) sowie die Verbandsgemeinden Egelner Mulde, Saale-Wipper und Westliche Börde. Der Verband stellt sich den Anforderungen von Energiemarkt und europäischer Kommunalabwasserrichtlinie mit einer klaren Netz- und Investitionsstrategie – von der Re-Investition ins Trinkwassernetz bis zur energetischen Sanierung von Pumpwerken und Kläranlagen.",
+  "kennzahlen": [
+    {
+      "label": "Versorgte Einwohner (lt. Ausschreibung 2026)",
+      "wert": "über 48.000",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitglieder (Stand 31.12.2024)",
+      "wert": "6",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Sitz",
+      "wert": "Staßfurt",
+      "icon": "📍"
+    },
+    {
+      "label": "Aufgaben",
+      "wert": "Trinkwasser und Abwasser",
+      "icon": "💧"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "30 Tage Urlaub sowie freie Tage zu Heiligabend und Neujahr."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Eingruppierung nach dem Tarifvertrag für Versorgungsbetriebe (TV-V) mit 13 Monatsgehältern, betrieblicher Altersvorsorge und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Flexibilität",
+      "beschreibung": "Nach der Einarbeitung ist im Rahmen der betrieblichen Praxis auch Home-Office möglich."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliche Gesundheitsförderung und Bikeleasing."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Kollegiale Einarbeitung sowie Fort- und Weiterbildung nach individuellem Bedarf."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgeschäftsführer Andreas Beyer",
+    "email": "bewerbung@bode-wipper.de",
+    "telefon": "03925 925714",
+    "bewerbungsportal": "https://www.bode-wipper.de/aktuelles/stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Versorgte Einwohner, Aufgaben, Benefits und Kontakt: Stellenausschreibung Leiter Fachbereich Technik, https://interamt.de/koop/app/stelle?id=1493790 (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Technischer Leiter Wasser/Abwasser, https://interamt.de/koop/app/stelle?id=1443058 (abgerufen 14.10.2026)",
+    "Verbandsgeschäftsführer: https://www.bode-wipper.de/ (abgerufen 14.10.2026)",
+    "Mitglieder (Stand 31.12.2024): https://www.bode-wipper.de/verband/mitgliedsgemeinden/ (abgerufen 14.10.2026)"
+  ]
+}

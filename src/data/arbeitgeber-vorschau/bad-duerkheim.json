@@ -1,0 +1,69 @@
+{
+  "slug": "bad-duerkheim",
+  "name": "Stadt Bad Dürkheim",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 19002,
+  "beamteUndBeschaeftigte": "mehr als 500 Mitarbeitende",
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Natalie Bauernschmitt",
+  "token": "688aba677af8805e",
+  "claim": "Stadt gestalten statt verwalten – in der Kur- und Kreisstadt am Rand des Pfälzerwalds.",
+  "beschreibung": "Bad Dürkheim ist Kur- und Kreisstadt in der Metropolregion Rhein-Neckar am Rand des Pfälzerwalds und als Mittelzentrum ausgewiesen. Überregional bekannt ist die Stadt durch den Dürkheimer Wurstmarkt und das Dürkheimer Riesenfass. Die Stadtverwaltung versteht sich als moderner, bürgernaher Dienstleister mit mehr als 500 Mitarbeitenden. In der Kämmerei reicht die Arbeit von Geschäfts- und Anlagenbuchhaltung über den Jahresabschluss bis zu Steuern und Abgaben einschließlich der Grundsteuerreform.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "19.002",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "102,6 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Mitarbeitende",
+      "wert": "mehr als 500",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Status",
+      "wert": "Kur- und Kreisstadt",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt, arbeitgeberfinanzierte betriebliche Altersversorgung und vermögenswirksame Leistungen nach TVöD."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeiten im täglichen Arbeitszeitrahmen und Home-Office nach Absprache."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket (Deutschland-Ticket), Fahrradleasing und kostenlose Parkmöglichkeiten in unmittelbarer Nähe."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Vielfältige Fort- und Weiterbildungsmöglichkeiten sowie Gestaltungsspielraum im engagierten Team."
+    },
+    {
+      "titel": "Gesundheit und Vorsorge",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Möglichkeit der Entgeltumwandlung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Bad Dürkheim · Bewerbungen",
+    "email": "bewerbungen@bad-duerkheim.de",
+    "telefon": "06322 935-1301",
+    "bewerbungsportal": "https://www.bad-duerkheim.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kur- und Kreisstadt, Mittelzentrum, Wurstmarkt, Riesenfass, Bürgermeisterin: de.wikipedia.org/wiki/Bad_Dürkheim (abgerufen 14.10.2026)",
+    "Mitarbeitende, Aufgaben Kämmerei, Benefits und Kontakt: Stellenausschreibungen Sachbearbeitung Buchhaltung und Jahresabschluss https://interamt.de/koop/app/stelle?id=1499862 (API api.interamt.de/query/stellenangebot/1499862) sowie Sachbearbeitung Steuern/Abgaben und Finanzbuchhaltung https://interamt.de/koop/app/stelle?id=1499863 (API api.interamt.de/query/stellenangebot/1499863) (abgerufen 14.10.2026)"
+  ]
+}

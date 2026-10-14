@@ -1,0 +1,65 @@
+{
+  "slug": "schwielowsee",
+  "name": "Gemeinde Schwielowsee",
+  "bundesland": "Brandenburg",
+  "einwohner": 10741,
+  "token": "c83c3d95926cb7ff",
+  "claim": "Arbeiten, wo andere Urlaub machen – und die Entwicklung einer wachsenden Gemeinde am See gestalten.",
+  "beschreibung": "Die Gemeinde Schwielowsee im Landkreis Potsdam-Mittelmark entstand 2002 aus Caputh, Ferch und Geltow und ist staatlich anerkannter Erholungsort. Zwischen Wäldern, Wiesen und Seen gelegen, sind Potsdam und Berlin in wenigen Minuten erreichbar. Das Einsteinhaus in Caputh und die Fischerkirche in Ferch prägen das kulturelle Profil. Die Verwaltung steuert die städtebauliche Entwicklung einer wachsenden, infrastrukturell gut ausgebauten Gemeinde.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "10.741",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinde gebildet",
+      "wert": "2002",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "58 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Status",
+      "wert": "Staatlich anerkannter Erholungsort",
+      "icon": "🌊"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Zusatzleistungen",
+      "beschreibung": "Vergütung nach TVöD-VKA mit Jahressonderzahlung, Leistungsentgelt und betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Freie Tage",
+      "beschreibung": "Möglichkeit, einen Teil der Jahressonderzahlung in freie Tage umzuwandeln."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeiten und die Möglichkeit zum Homeoffice."
+    },
+    {
+      "titel": "Moderne Verwaltung",
+      "beschreibung": "Digitale Prozesse zur Arbeitserleichterung in einem engagierten, fachlich starken Team."
+    },
+    {
+      "titel": "Weiterentwicklung und Team",
+      "beschreibung": "Regelmäßige Fort- und Weiterbildung sowie teambildende Aktionen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeindeverwaltung Schwielowsee · Personalabteilung",
+    "email": "bewerbung@schwielowsee.de",
+    "telefon": "033209 769733"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeindebildung, Ortsteile, Erholungsort, Einsteinhaus, Fischerkirche: de.wikipedia.org/wiki/Schwielowsee_(Gemeinde) (abgerufen 14.10.2026)",
+    "Lage, Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Bauen und Planen, https://interamt.de/koop/app/stelle?id=1494192 (abgerufen 14.10.2026)"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "chemnitz",
+  "name": "Stadt Chemnitz",
+  "bundesland": "Sachsen",
+  "einwohner": 247252,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Sven Schulze",
+  "token": "7f1d51133c05a9a6",
+  "claim": "Die Zukunft der Kulturhauptstadt Europas 2025 in einer modernen Großstadtverwaltung mitgestalten.",
+  "beschreibung": "Chemnitz ist kreisfreie Stadt und drittgrößte Stadt im Freistaat Sachsen. Die 1143 erstmals urkundlich erwähnte Stadt wurde mit der Industrialisierung zu einem bedeutenden Wirtschaftsstandort und war 2025 Kulturhauptstadt Europas. Die Stadtverwaltung arbeitet in vielfältigen Themenfeldern – vom Bauordnungsamt über das Amt für Gesundheit und Prävention bis zur Stadtbibliothek – und setzt auf moderne Arbeitsbedingungen. Wer hier einsteigt, findet eine Stadt zum Entdecken mit bezahlbarem Wohnraum und guten Kitas und Schulen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "247.252",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1143",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "221 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kulturhauptstadt Europas",
+      "wert": "2025",
+      "icon": "🎭"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und Arbeitszeit",
+      "beschreibung": "30 Tage Erholungsurlaub, Arbeitszeitkonto mit Gleitzeit und Möglichkeiten zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelte, vermögenswirksame Leistungen und betriebliche Altersvorsorge bei der ZVK."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Deutschlandticket und Möglichkeit zum Jobrad-Leasing."
+    },
+    {
+      "titel": "Entwicklung und Vernetzung",
+      "beschreibung": "Persönliche Entwicklungs- und Weiterbildungsmöglichkeiten sowie interne Vernetzung über eine Mitarbeiter-App."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Ein zuverlässiger und familienfreundlicher Arbeitgeber in einer Stadt mit bezahlbarem Wohnraum und ausgezeichneten Kitas und Schulen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Chemnitz · Personalrecruiting",
+    "bewerbungsportal": "https://karriere.chemnitz.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Kulturhauptstadt, Status, Oberbürgermeister: de.wikipedia.org/wiki/Chemnitz (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Jurist Öffentliches Baurecht https://interamt.de/koop/app/stelle?id=1492362 (API api.interamt.de/query/stellenangebot/1492362), Fachärztin/Facharzt Amt für Gesundheit und Prävention https://interamt.de/koop/app/stelle?id=1498462 (API api.interamt.de/query/stellenangebot/1498462), Koordinator:in Bibliotheksprojekte https://interamt.de/koop/app/stelle?id=1490372 (API api.interamt.de/query/stellenangebot/1490372) (abgerufen 14.10.2026)"
+  ]
+}

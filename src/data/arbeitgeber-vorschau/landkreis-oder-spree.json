@@ -1,0 +1,68 @@
+{
+  "slug": "landkreis-oder-spree",
+  "name": "Landkreis Oder-Spree",
+  "bundesland": "Brandenburg",
+  "einwohner": 179142,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Frank Steffen",
+  "token": "3cf15d17778647bf",
+  "claim": "Zwischen Berlin und Oder einen Landkreis mit 37 Gemeinden rechtssicher mitgestalten.",
+  "beschreibung": "Der Landkreis Oder-Spree erstreckt sich im Osten Brandenburgs von der Berliner Stadtgrenze bis zur polnischen Grenze. Er entstand am 6. Dezember 1993 und umfasst heute 37 Gemeinden; größte Stadt ist Fürstenwalde/Spree, die Kreisverwaltung hat ihren Sitz in Beeskow. Die Kreisverwaltung pflegt eine Behördenkultur, in der Mitgestaltung ausdrücklich gewünscht ist, und bietet neuen Mitarbeitenden eine begleitete Einarbeitung mit Patinnen und Paten sowie moderne technische Ausstattung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "179.142",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.256,75 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "37",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1993",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Gute Einarbeitung und Begleitung durch eine Patin oder einen Paten."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Vereinbarkeit von Pflege, Familie und Beruf durch flexible Arbeitszeitmodelle, Teilzeit und mobile Arbeit im Rahmen einer Dienstvereinbarung."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Jahressonderzahlung, betriebliche Altersvorsorge, vermögenswirksame Leistungen sowie freie Tage am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Bike-Leasing und monatlich aufgeladene Sachbezugskarte für tariflich Beschäftigte, betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Umfangreiches Fortbildungsangebot, berufliche Entwicklungsmöglichkeiten und modernste technische Ausstattung inklusive Videokonferenz."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Oder-Spree · Personalamt",
+    "email": "personalamt@landkreis-oder-spree.de",
+    "telefon": "03366 35-1161",
+    "bewerbungsportal": "https://landkreis-oder-spree.de/Service-Aktuelles/Aktuelles/Stellen-Praktika"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Gründung 1993, Lage, Landrat: de.wikipedia.org/wiki/Landkreis_Oder-Spree (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Rechtliche Bauaufsicht, https://interamt.de/koop/app/stelle?id=1450322 (API api.interamt.de/query/stellenangebot/1450322) (abgerufen 14.10.2026)"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "wandlitz",
+  "name": "Gemeinde Wandlitz",
+  "bundesland": "Brandenburg",
+  "einwohner": 24633,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Oliver Borchert",
+  "token": "a1c8aa9e7f0fa7ea",
+  "claim": "Die Infrastruktur einer wachsenden Seengemeinde vor den Toren Berlins mitgestalten.",
+  "beschreibung": "Wandlitz liegt im Landkreis Barnim direkt an der Berliner Stadtgrenze und verbindet neun Ortsteile, die sich 2003 zu einer Gemeinde zusammengeschlossen haben. Wandlitzer See, Liepnitzsee und Rahmersee prägen eine Landschaft mit hoher Lebensqualität. Die Gemeindeverwaltung gestaltet die infrastrukturelle Entwicklung dieses attraktiven Wohn- und Erholungsraums aktiv mit – von der Straßenverwaltung bis zur geordneten städtebaulichen Entwicklung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "24.633",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1242",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "163 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "9",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "30 Tage Tarifurlaub, 24.12. und 31.12. zusätzlich arbeitsfrei sowie die Möglichkeit, die Jahressonderzahlung in bis zu drei zusätzliche Urlaubstage umzuwandeln."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Familienfreundliche Rahmenarbeitszeit von 06:00 bis 21:00 Uhr, flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Vergütung nach TVöD-VKA mit Jahressonderzahlung, vermögenswirksamen Leistungen und betrieblicher Altersvorsorge über die Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Mobilität und Benefits",
+      "beschreibung": "Fahrrad-Leasing, kostenfreie Mitarbeiterparkplätze und weitere Mitarbeiter-Benefits."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Individuelle Förderung durch gezielte interne und externe Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Wandlitz · Hauptamt",
+    "email": "bewerbung@wandlitz.de",
+    "telefon": "033397 360-620"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Ortsteile, Seen, Bürgermeister: de.wikipedia.org/wiki/Wandlitz (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Straßenverwaltung, https://interamt.de/koop/app/stelle?id=1493177 (abgerufen 14.10.2026)"
+  ]
+}

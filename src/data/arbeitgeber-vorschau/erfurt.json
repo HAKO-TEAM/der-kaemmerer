@@ -1,0 +1,69 @@
+{
+  "slug": "erfurt",
+  "name": "Landeshauptstadt Erfurt",
+  "bundesland": "Thüringen",
+  "einwohner": 217159,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Andreas Horn",
+  "token": "515d5801e0b81b53",
+  "claim": "In der Landeshauptstadt Thüringens Steuereinnahmen sichern und Zukunftsprojekte voranbringen.",
+  "beschreibung": "Erfurt ist seit 1991 Landeshauptstadt des Freistaats Thüringen und wurde 742 im Zusammenhang mit der Gründung des Bistums durch Bonifatius erstmals erwähnt. Dom, Severikirche und Krämerbrücke prägen die Altstadt, die Universität zählt zu den ältesten Deutschlands. Die Stadtverwaltung bietet ein breites Aufgabenspektrum: Die Stadtkämmerei verantwortet Planung, Jahresabschluss und die Sicherung der eigenen Steuereinnahmen, der Thüringer Zoopark Erfurt mit mehr als 140 Tierarten auf 63 Hektar wird seit 2025 umfassend modernisiert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "217.159",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "742",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "269,91 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landeshauptstadt seit",
+      "wert": "1991",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Sichere und wirtschaftsunabhängige Arbeitsplätze mit umfassenden tariflichen bzw. beamten- und besoldungsrechtlichen Leistungen und regelmäßigen Tariferhöhungen."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexibles Arbeitszeitmodell mit Gleitzeit und der Möglichkeit des Freizeitausgleichs."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Gesundheitsfördernde und -erhaltende Maßnahmen im Rahmen des betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Bedarfsgerechte fachliche und persönliche Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Perspektive für Beamte",
+      "beschreibung": "Beförderungsdienstposten mit Aufstiegsmöglichkeit nach Bewährung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Erfurt · Personal- und Organisationsamt",
+    "email": "personalwirtschaft@erfurt.de",
+    "telefon": "0361 655-1446",
+    "bewerbungsportal": "https://www.erfurt.de/ef155597"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Landeshauptstadt, Dom, Krämerbrücke, Universität, Oberbürgermeister: https://de.wikipedia.org/wiki/Erfurt (abgerufen 14.10.2026)",
+    "Stadtkämmerei, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter Zweitwohnungssteuer, https://interamt.de/koop/app/stelle?id=1501136 (abgerufen 14.10.2026)",
+    "Thüringer Zoopark, Benefits und Bewerbungsportal: Stellenausschreibung Abteilungsleiter Bau, Technik und Freiflächenunterhaltung, https://interamt.de/koop/app/stelle?id=1498717 (abgerufen 14.10.2026)"
+  ]
+}

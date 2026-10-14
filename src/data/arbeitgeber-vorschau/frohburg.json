@@ -1,0 +1,67 @@
+{
+  "slug": "frohburg",
+  "name": "Stadt Frohburg",
+  "bundesland": "Sachsen",
+  "einwohner": 11975,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Karsten Richter",
+  "token": "f481573603bdb88b",
+  "claim": "Eine lebendige Kleinstadt mit 33 Ortsteilen zwischen Leipzig und Chemnitz aktiv gestalten.",
+  "beschreibung": "Frohburg liegt im Landkreis Leipzig zwischen Leipzig und Chemnitz, rund 35 Kilometer südlich von Leipzig an der Grenze zu Thüringen. Ihren Ursprung hat die Stadt im Schloss Frohburg, das heute das Stadtmuseum beherbergt; als Stadt ist Frohburg seit 1233 belegt. Mit 33 Ortsteilen auf rund 145 Quadratkilometern bietet die Stadtverwaltung vielfältige Aufgaben in Planung, Hoch- und Tiefbau, Fördermittelmanagement und Gremienarbeit – mit kurzen Wegen und echter Gestaltungsverantwortung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "11.975",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "33",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "145,3 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Als Stadt belegt seit",
+      "wert": "1233",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Zusatzleistungen",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, betrieblicher Altersvorsorge bei der ZVK Sachsen und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Mitarbeiter-Benefits",
+      "beschreibung": "Monatlicher steuer- und sozialversicherungsfreier Wertgutschein über 50 Euro, Geburtstagsgutschein über 60 Euro und Fahrradleasing."
+    },
+    {
+      "titel": "Urlaub und Arbeitszeit",
+      "beschreibung": "31 Tage Jahresurlaub, freie Tage am 24. und 31. Dezember sowie flexible Arbeitszeit ohne Kernarbeitszeit."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Mobiles Arbeiten möglich und gute Vereinbarkeit von Beruf und Familie."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Bezahlte Fort- und Weiterbildung, kostenfreie Parkplätze und moderne, ergonomische Büroausstattung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Frohburg · Personalamt",
+    "email": "bewerbungen@frohburg.de",
+    "telefon": "034348 805-54"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Stadtrecht 1233, Schloss Frohburg, Lage, Bürgermeister: https://de.wikipedia.org/wiki/Frohburg (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachbereichsleitung Planen und Bauen, https://interamt.de/koop/app/stelle?id=1496833 (abgerufen 14.10.2026)"
+  ]
+}

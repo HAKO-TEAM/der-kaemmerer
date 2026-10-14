@@ -1,0 +1,68 @@
+{
+  "slug": "bruchsal",
+  "name": "Große Kreisstadt Bruchsal",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 47578,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Sven Weigt",
+  "token": "6de10f4e434a5214",
+  "claim": "Örtliche Prüfung mit Gewicht: Verantwortung für mehrere Städte am Rand des Kraichgaus übernehmen.",
+  "beschreibung": "Bruchsal liegt am westlichen Rand des Kraichgaus, rund 20 Kilometer nördlich von Karlsruhe, und ist die bevölkerungsreichste Stadt des Landkreises Karlsruhe. Als Mittelzentrum versorgt die Barockstadt die umliegenden Gemeinden; seit 1956 ist sie Große Kreisstadt. Interkommunale Zusammenarbeit wird hier gelebt: Seit 2014 betreiben Bruchsal und Waghäusel ein gemeinsames Rechnungsprüfungsamt, seit 2023 ergänzt um die technische Prüfung für Stutensee. Das Prüfspektrum reicht von Jahresabschlüssen über Vergabeverfahren bis zur Betätigungsprüfung bei Beteiligungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "47.578",
+      "icon": "👥"
+    },
+    {
+      "label": "Große Kreisstadt seit",
+      "wert": "1956",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "93 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub",
+      "beschreibung": "Bis zu 30,5 Tage Urlaub im Jahr."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschüsse zum ÖPNV sowie Fahrradleasing."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Fort- und Weiterbildungen sowie moderne Ausstattung am Arbeitsplatz."
+    },
+    {
+      "titel": "Flexibilität",
+      "beschreibung": "Vollzeitstellen können je nach Stelle auch im Jobsharing mit Teilzeitbeschäftigten besetzt werden."
+    },
+    {
+      "titel": "Mitarbeiterbenefits",
+      "beschreibung": "Weitere Mitarbeiterbenefits und eine abwechslungsreiche Arbeit für das Gemeinwohl."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Bruchsal · Personal- und Organisationsamt",
+    "email": "poa@bruchsal.de",
+    "telefon": "07251 79-234",
+    "bewerbungsportal": "https://www.bruchsal.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Große Kreisstadt, Mittelzentrum, Lage, Bürgermeister: de.wikipedia.org/wiki/Bruchsal (abgerufen 14.10.2026)",
+    "Kooperation Rechnungsprüfungsamt, Benefits und Kontakt: Stellenausschreibung Leitung Rechnungsprüfungsamt, https://interamt.de/koop/app/stelle?id=1487419 (API api.interamt.de/query/stellenangebot/1487419) (abgerufen 14.10.2026)"
+  ]
+}

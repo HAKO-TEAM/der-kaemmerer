@@ -1,0 +1,65 @@
+{
+  "slug": "bezirksamt-marzahn-hellersdorf",
+  "name": "Bezirksamt Marzahn-Hellersdorf von Berlin",
+  "bundesland": "Berlin",
+  "einwohner": 285222,
+  "token": "1e7108df64f7bcf1",
+  "claim": "Direkt für die Menschen eines vielfältigen Berliner Bezirks arbeiten.",
+  "beschreibung": "Marzahn-Hellersdorf entstand 2001 aus den Bezirken Marzahn und Hellersdorf und umfasst die Ortsteile Marzahn, Biesdorf, Kaulsdorf, Mahlsdorf und Hellersdorf. Moderne Wohnviertel, grüne Parks wie die Gärten der Welt, Schloss Biesdorf und mit Berlin eastside das größte zusammenhängende Gewerbegebiet der Stadt prägen den Bezirk. Das Bezirksamt sorgt in Verwaltung, Planung und Sozialem dafür, dass der Bezirk lebenswert bleibt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "285.222",
+      "icon": "👥"
+    },
+    {
+      "label": "Bezirk gebildet",
+      "wert": "2001",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "61,8 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "5",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familienfreundlicher Arbeitgeber",
+      "beschreibung": "Zertifiziert mit dem Gütesiegel familienfreundlicher Arbeitgeber; nach Möglichkeit darf der Hund mit ins Büro."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Teilzeit, Gleitzeit, Homeoffice, mobiles Arbeiten oder Sabbatical."
+    },
+    {
+      "titel": "Finanzielle Anreize",
+      "beschreibung": "Hauptstadtzulage von bis zu 150 € monatlich, alternativ ein VBB-Firmenticket."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildung, unter anderem über die Verwaltungsakademie."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Modernes Gesundheitsmanagement mit präventiven Angeboten für alle Lebenslagen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Bezirksamt Marzahn-Hellersdorf · Straßen- und Grünflächenamt",
+    "email": "SGA-ID_Personal@ba-mh.berlin.de",
+    "bewerbungsportal": "https://www.berlin.de/ba-marzahn-hellersdorf/karriere/bewerbungsverfahren/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Bezirksbildung, Ortsteile, Gärten der Welt, Schloss Biesdorf, Berlin eastside: de.wikipedia.org/wiki/Bezirk_Marzahn-Hellersdorf (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Hauptsachbearbeitung Koordination, Gremien- und Öffentlichkeitsarbeit, https://interamt.de/koop/app/stelle?id=1496074 (abgerufen 14.10.2026)"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "stadtwerke-bad-homburg",
+  "name": "Stadtwerke Bad Homburg v. d. Höhe",
+  "bundesland": "Hessen",
+  "einwohner": 56938,
+  "token": "3d6ee4d89e9461ac",
+  "claim": "Energie, Wasser und Freizeit für eine Kurstadt im Taunus wirtschaftlich steuern.",
+  "beschreibung": "Die Stadtwerke Bad Homburg v. d. Höhe sind Eigenbetrieb der Stadt und versorgen die Region mit Erdgas, Wärme und Trinkwasser; dazu kommen Photovoltaik und Elektromobilität. Mit dem Seedammbad betreiben sie zudem ein Freizeitbad mit bis zu 400.000 Besuchen im Jahr. Bad Homburg ist Kreisstadt des Hochtaunuskreises in der Metropolregion Frankfurt/Rhein-Main. Im Controlling verbinden sich Wirtschaftsplan, Liquiditätsplanung, Beteiligungsberichte und Abschlüsse mit Fragen der Regulierung und des Assetmanagements.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Bad Homburg (31.12.2025)",
+      "wert": "56.938",
+      "icon": "👥"
+    },
+    {
+      "label": "Sparten",
+      "wert": "Erdgas, Wärme, Trinkwasser",
+      "icon": "⚡"
+    },
+    {
+      "label": "Seedammbad",
+      "wert": "bis zu 400.000 Besuche/Jahr",
+      "icon": "🏊"
+    },
+    {
+      "label": "Rechtsform",
+      "wert": "Eigenbetrieb der Stadt",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Gehalt nach dem Tarifvertrag Versorgungsbetriebe (TV-V) inklusive Sonderzahlung und vermögenswirksamer Leistung."
+    },
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "Gleitzeit für eine ausgewogene Balance zwischen Beruf und Privatleben."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "RMV-JobTicket, JobRad und vergünstigte Tank-Konditionen."
+    },
+    {
+      "titel": "Absicherung",
+      "beschreibung": "Betriebliche Altersversorgung und Gruppenunfallversicherung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "EGYM Wellpass, kostenfreier Eintritt im Seedammbad, Mitarbeiteraktionen und Gesundheitstage."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Vertrauensbasierte Teamführung sowie persönliche Entwicklungs- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtwerke Bad Homburg v. d. Höhe · Personalmanagement",
+    "email": "sw.bewerbung@bad-homburg.de",
+    "telefon": "06172 4013-508",
+    "bewerbungsportal": "https://www.stadtwerke-bad-homburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Kreisstadt, Metropolregion: de.wikipedia.org/wiki/Bad_Homburg_vor_der_Höhe (abgerufen 14.10.2026)",
+    "Eigenbetrieb, Sparten, Seedammbad, Benefits und Kontakt: Stellenausschreibung Controller*in, https://interamt.de/koop/app/stelle?id=1466625 (API api.interamt.de/query/stellenangebot/1466625) (abgerufen 14.10.2026)"
+  ]
+}

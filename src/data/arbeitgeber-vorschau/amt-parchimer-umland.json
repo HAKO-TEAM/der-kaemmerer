@@ -1,0 +1,61 @@
+{
+  "slug": "amt-parchimer-umland",
+  "name": "Amt Parchimer Umland",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 7962,
+  "token": "14fe31f54a80a7da",
+  "claim": "Zehn Gemeinden im ländlichen Raum gemeinsam voranbringen – aus einer familienfreundlichen Amtsverwaltung.",
+  "beschreibung": "Das Amt Parchimer Umland im Landkreis Ludwigslust-Parchim führt mit Dienstsitz in Parchim die Geschäfte für zehn amtsangehörige Gemeinden: Domsühl, Groß Godems, Karrenzin, Lewitzrand, Obere Warnow, Rom, Stolpe, Spornitz, Ziegendorf und Zölkow. Die zertifizierte familienfreundliche Amtsverwaltung verantwortet unter anderem Hoch- und Tiefbau, Gebäudemanagement, Bauleitplanung und Liegenschaften und gestaltet so die Entwicklung eines weitläufigen ländlichen Raums.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.962",
+      "icon": "👥"
+    },
+    {
+      "label": "Amtsangehörige Gemeinden",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "355 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Amt gebildet",
+      "wert": "2004",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familienfreundlichkeit",
+      "beschreibung": "Zertifizierte familienfreundliche Amtsverwaltung mit flexiblen Arbeitszeitmodellen."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Möglichkeit von Homeoffice und Telearbeit."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Vergütung nach TVöD mit individueller Prüfung der Anrechnung vorheriger Berufserfahrung bei der Stufenzuordnung."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Umfangreiche Weiterbildungsmöglichkeiten in einem vielseitigen, verantwortungsvollen Aufgabengebiet."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt Parchimer Umland · Personal",
+    "email": "tausch@amtpu.de",
+    "telefon": "03871 421315"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Bildungsjahr: de.wikipedia.org/wiki/Amt_Parchimer_Umland (abgerufen 14.10.2026)",
+    "Amtsangehörige Gemeinden, Familienfreundlichkeit, Benefits und Kontakt: Stellenausschreibung Amtsleitung für Bauen und Gemeindeentwicklung, https://interamt.de/koop/app/stelle?id=1498952 (abgerufen 14.10.2026)"
+  ]
+}

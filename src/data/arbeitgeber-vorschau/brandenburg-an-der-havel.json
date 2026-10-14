@@ -1,0 +1,66 @@
+{
+  "slug": "brandenburg-an-der-havel",
+  "name": "Stadt Brandenburg an der Havel",
+  "bundesland": "Brandenburg",
+  "einwohner": 73945,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Daniel Keip",
+  "token": "92a565fe25b3be68",
+  "claim": "Die Wiege der Mark als Oberzentrum an der Havel solide finanzieren und weiterbauen.",
+  "beschreibung": "Brandenburg an der Havel ist kreisfreie Stadt und eines der vier Oberzentren des Landes Brandenburg. Die 948 erstmals urkundlich erwähnte Stadt gab dem Land seinen Namen und gilt als Wiege der Mark; der Dom auf der Dominsel prägt bis heute ihr Bild. Seit 2014 trägt Brandenburg den Titel Universitätsstadt. Die Stadtverwaltung bündelt ein breites Aufgabenspektrum – vom Tiefbauamt mit Straßen- und Brückenbau bis zum Eigenbetrieb Zentrales Gebäude- und Liegenschaftsmanagement mit eigenem Rechnungswesen, Wirtschaftsplan und Controlling.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "73.945",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "948",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "229,72 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisfreie Stadt · Oberzentrum",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Perspektive",
+      "beschreibung": "Unbefristete Vollzeitstellen mit Vergütung nach TVöD-VKA und 39-Stunden-Woche."
+    },
+    {
+      "titel": "Fachkräftezulage",
+      "beschreibung": "Für ausgewählte technische Führungsstellen eine Fachkräftezulage von 500 Euro monatlich, befristet auf fünf Jahre."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Führungsaufgaben mit Fach- und Finanzverantwortung, etwa für Fördermittel, Budgetcontrolling und Kennzahlen."
+    },
+    {
+      "titel": "Einfache Bewerbung",
+      "beschreibung": "Elektronische Bewerbung bequem über das Onlinebewerberportal der Stadt."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Brandenburg an der Havel · Personalverwaltung",
+    "email": "personalverwaltung@stadt-brandenburg.de",
+    "telefon": "03381 58-1113",
+    "bewerbungsportal": "https://www.stadt-brandenburg.de/bewerbungsformular/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Status, Oberzentrum, Dom, Wiege der Mark, Universitätsstadt, Oberbürgermeister: https://de.wikipedia.org/wiki/Brandenburg_an_der_Havel (abgerufen 14.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Teamleiter/-in Straßen- und Brückenbau, https://interamt.de/koop/app/stelle?id=1498785 (abgerufen 14.10.2026)",
+    "Eigenbetrieb GLM, Benefits und Kontakt: Stellenausschreibung Teamleiter/-in Finanzen/Controlling, https://interamt.de/koop/app/stelle?id=1492884 (abgerufen 14.10.2026)",
+    "Personalverwaltung: https://www.stadt-brandenburg.de/karriere (abgerufen 14.10.2026)"
+  ]
+}

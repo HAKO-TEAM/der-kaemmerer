@@ -1,0 +1,59 @@
+{
+  "slug": "aken-elbe",
+  "name": "Stadt Aken (Elbe)",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 7050,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Jan-Hendrik Bahn",
+  "token": "0c17b049fa215547",
+  "claim": "Klimaschutz und Stadtentwicklung in einer traditionsreichen Schifffahrtsstadt an der Elbe voranbringen.",
+  "beschreibung": "Aken (Elbe) liegt rund acht Kilometer westlich von Dessau-Roßlau im Landkreis Anhalt-Bitterfeld, eingebettet in das UNESCO-Biosphärenreservat Mittelelbe. Die geschichtsträchtige Schifffahrtsstadt stellt sich aktiv dem Klimawandel und setzt ein integriertes Klimaschutzkonzept mit dem Ziel der Treibhausgasneutralität um. In der überschaubaren Stadtverwaltung arbeiten Beschäftigte in einem engagierten Team an abwechslungsreichen und verantwortungsvollen Aufgaben.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.050",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "60 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Biosphärenreservat Mittelelbe",
+      "icon": "🌿"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Sozialleistungen",
+      "beschreibung": "Leistungsgerechte Vergütung nach TVöD mit betrieblicher Altersvorsorge, vermögenswirksamen Leistungen, Jahressonderzahlung und alternativem Entgeltanreizsystem."
+    },
+    {
+      "titel": "Arbeitszeit und Team",
+      "beschreibung": "Flexible Arbeitszeiten und eine freundliche Atmosphäre in einem engagierten Team."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Regelmäßige Möglichkeiten zur fachlichen und persönlichen Weiterentwicklung."
+    },
+    {
+      "titel": "Verantwortung",
+      "beschreibung": "Ein abwechslungsreicher und verantwortungsvoller Arbeitsplatz im öffentlichen Dienst."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Aken (Elbe) · Personal / Organisation",
+    "email": "p.niehoff@aken.de",
+    "telefon": "034909 80480",
+    "bewerbungsportal": "https://www.aken.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung (Kategorie Ersterwähnung 1219), Lage, Landkreis: de.wikipedia.org/wiki/Aken_(Elbe) (abgerufen 14.10.2026)",
+    "Biosphärenreservat, Klimaschutzkonzept, Bürgermeister, Benefits und Kontakt: Stellenausschreibung Klimaschutzmanager https://interamt.de/koop/app/stelle?id=1497283 (API api.interamt.de/query/stellenangebot/1497283) (abgerufen 14.10.2026)"
+  ]
+}

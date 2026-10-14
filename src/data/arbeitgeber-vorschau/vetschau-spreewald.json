@@ -1,0 +1,63 @@
+{
+  "slug": "vetschau-spreewald",
+  "name": "Stadt Vetschau/Spreewald",
+  "bundesland": "Brandenburg",
+  "einwohner": 7533,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Chris Mielchen",
+  "token": "8fca6c40da782ec0",
+  "claim": "Die Zukunft einer Kleinstadt am Rande des Spreewaldes aktiv entwickeln.",
+  "beschreibung": "Vetschau/Spreewald liegt im Süden Brandenburgs im Landkreis Oberspreewald-Lausitz; die nördlichen Ortsteile gehören zum Biosphärenreservat Spreewald. Die 1302 erstmals erwähnte Stadt ist bekannt für ihre Wendisch-Deutsche Doppelkirche. Mit ihrem aktualisierten Integrierten Stadtentwicklungskonzept arbeitet die Stadt gemeinsam mit Politik, Wohnungsunternehmen und regionaler Wirtschaft kontinuierlich an zukunftsorientierten Veränderungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.533",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1302",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "111 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Biosphärenreservat Spreewald",
+      "icon": "🌿"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Perspektive",
+      "beschreibung": "Unbefristete Beschäftigung mit beruflicher Perspektive für Leitungsfunktionen."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Vergütung nach TVöD mit den üblichen Leistungen des öffentlichen Dienstes einschließlich Jahressonderzahlung."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeiten, teilweise Homeoffice und bei geeigneter Bewerbungslage Teilzeit."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Fortbildung und Vernetzung im Rahmen des Aufgabenbereichs."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Vetschau/Spreewald · Sachgebiet Personal",
+    "email": "personal@vetschau.com",
+    "telefon": "035433 777-67"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Doppelkirche, Biosphärenreservat, Bürgermeister: de.wikipedia.org/wiki/Vetschau/Spreewald (abgerufen 14.10.2026)",
+    "INSEK, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Stadtentwicklung, https://interamt.de/koop/app/stelle?id=1494441 (abgerufen 14.10.2026)"
+  ]
+}

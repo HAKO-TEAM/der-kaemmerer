@@ -1,0 +1,68 @@
+{
+  "slug": "durmersheim",
+  "name": "Gemeinde Durmersheim",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 11747,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Klaus Eckert",
+  "token": "4450e53ef6612e00",
+  "claim": "Kommunale Finanzen vor den Toren Karlsruhes breit und verantwortungsvoll gestalten.",
+  "beschreibung": "Durmersheim liegt rund zwölf Kilometer südwestlich von Karlsruhe im Landkreis Rastatt; zur Gemeinde gehört auch der Ortsteil Würmersheim. Das Rechnungsamt deckt ein breites Spektrum ab: Wirtschaftspläne der Eigenbetriebe, Haushaltspläne der Gemeinde und des Gemeindeverwaltungsverbandes, doppische Jahresabschlüsse, Gebührenkalkulationen sowie Beteiligungs- und Darlehensverwaltung. Wer hier Verantwortung übernimmt, arbeitet nah an allen Steuerungsfragen einer lebendigen Gemeinde.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "11.747",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "26 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Rastatt",
+      "icon": "📍"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "Durmersheim und Würmersheim",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Krankenversicherung und bezuschusste EGYM-Wellpass-Mitgliedschaft."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Möglichkeit zum Home-Office und Kinderbetreuungsplatz in den gemeindlichen Einrichtungen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing über JobRad."
+    },
+    {
+      "titel": "Verpflegung und Rabatte",
+      "beschreibung": "Bezuschusstes Mittagsmenü in der Mensa des Schulzentrums und Rabattprogramm Corporate Benefits."
+    },
+    {
+      "titel": "Weiterqualifikation",
+      "beschreibung": "Fachliche und persönliche Weiterqualifikation, abgestimmt auf die eigenen Vorstellungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Durmersheim · Personalamt",
+    "email": "personalamt@durmersheim.de",
+    "telefon": "07245 920-104",
+    "bewerbungsportal": "https://durmersheim.ris-portal.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Lage, Ortsteil Würmersheim, Bürgermeister: de.wikipedia.org/wiki/Durmersheim (abgerufen 14.10.2026)",
+    "Aufgaben Rechnungsamt, Benefits und Kontakt: Stellenausschreibung Stv. Rechnungsamtsleitung / Kämmerer, https://interamt.de/koop/app/stelle?id=1499704 (API api.interamt.de/query/stellenangebot/1499704) (abgerufen 14.10.2026)"
+  ]
+}

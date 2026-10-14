@@ -1,0 +1,73 @@
+{
+  "slug": "wuerzburg",
+  "name": "Stadt Würzburg",
+  "bundesland": "Bayern",
+  "einwohner": 133753,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Martin Heilig",
+  "token": "f7392d46770a3309",
+  "claim": "Die Finanzen eines Oberzentrums am Main prüfen und digital weiterdenken.",
+  "beschreibung": "Würzburg ist kreisfreie Großstadt am Main, Sitz der Regierung von Unterfranken und wichtiger Universitäts- und Schulstandort. Als zweitgrößte Stadt Frankens und Oberzentrum der Planungsregion Würzburg prägt sie den Wirtschaftsraum Mainfranken. Die 704 erstmals urkundlich erwähnte Stadt verbindet eine lange Geschichte mit modernen Aufgaben: Das Rechnungsprüfungsamt verantwortet örtliche Prüfungen, das Gutachten zur Jahresrechnung und Schwerpunktprüfungen im IT- und Digitalisierungsbereich.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "133.753",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "704",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "87,6 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Oberzentrum",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Stabilität und finanzielle Sicherheit im öffentlichen Dienst, Sonderzahlungen und Zuschuss zur betrieblichen Altersvorsorge."
+    },
+    {
+      "titel": "Flexibles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeitmodelle und mobiles Arbeiten."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Unterstützung bei der partnerschaftlichen Vereinbarkeit von Familie und Beruf sowie betriebliche Kinderbetreuung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket."
+    },
+    {
+      "titel": "Gesundheit und Rabatte",
+      "beschreibung": "Breites Angebot zur betrieblichen Gesundheitsförderung und exklusive Personalrabatte über Kooperationen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiches Fortbildungsangebot für die persönliche Weiterentwicklung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Würzburg · Personal / Recruiting",
+    "email": "recruiting@stadt.wuerzburg.de",
+    "telefon": "0931 37-2226",
+    "bewerbungsportal": "https://karriere.wuerzburg.de/stellenangebote"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Oberzentrum, Oberbürgermeister: de.wikipedia.org/wiki/Würzburg (abgerufen 14.10.2026)",
+    "Aufgaben Rechnungsprüfungsamt, Kontakt: Stellenausschreibung Verwaltungs- bzw. IT-Prüfer/in, https://interamt.de/koop/app/stelle?id=1494694 (API api.interamt.de/query/stellenangebot/1494694) und https://www.mein-check-in.de/wuerzburg/position-537361 (abgerufen 14.10.2026)",
+    "Benefits: Karriereseite https://karriere.wuerzburg.de/ (abgerufen 14.10.2026)"
+  ]
+}

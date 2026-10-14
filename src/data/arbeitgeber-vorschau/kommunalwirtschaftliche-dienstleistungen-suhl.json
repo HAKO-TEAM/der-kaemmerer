@@ -1,0 +1,59 @@
+{
+  "slug": "kommunalwirtschaftliche-dienstleistungen-suhl",
+  "name": "Eigenbetrieb Kommunalwirtschaftliche Dienstleistungen Suhl",
+  "bundesland": "Thüringen",
+  "einwohner": 33976,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "André Knapp",
+  "token": "d521dde3c8fa334b",
+  "claim": "Straßen und kommunale Infrastruktur der Stadt am Thüringer Wald in Schuss halten.",
+  "beschreibung": "Der Eigenbetrieb Kommunalwirtschaftliche Dienstleistungen Suhl ist Teil der Stadtverwaltung Suhl und verantwortet unter anderem die Straßenverwaltung der Stadt – von der Planung und Ausschreibung über die Bauausführung bis zur Abrechnung von Straßeninstandsetzungen und den Sondernutzungen. Suhl liegt am Südhang des Thüringer Waldes im Tal von Lauter und Hasel und ist seit 1967 kreisfrei. Die lange Tradition der Jagdwaffenherstellung gab der Stadt den Beinamen Waffenstadt, auch der Fahrzeughersteller Simson ist eng mit Suhl verbunden.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Stadt Suhl (31.12.2025)",
+      "wert": "33.976",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreisfrei seit",
+      "wert": "1967",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "141,62 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Thüringer Wald",
+      "icon": "🌲"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sichere Stelle",
+      "beschreibung": "Unbefristete Vollzeitstelle mit 39 Wochenstunden und Vergütung nach TVöD einschließlich Jahressonderzahlung."
+    },
+    {
+      "titel": "Zulage",
+      "beschreibung": "Für die ausgeschriebene Führungsstelle zusätzlich eine monatliche Zulage von 750 Euro."
+    },
+    {
+      "titel": "Verantwortung",
+      "beschreibung": "Leitungsaufgaben mit eigener Abteilung und Vorstellung der Straßenbaumaßnahmen in den Ausschüssen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Suhl · Personal- und Hauptamt",
+    "email": "bewerbung@stadtsuhl.de",
+    "telefon": "03681 742256"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kreisfreiheit, Lage, Waffenstadt, Simson, Oberbürgermeister: https://de.wikipedia.org/wiki/Suhl (abgerufen 14.10.2026)",
+    "Aufgaben, Benefits und Kontakt: Stellenausschreibung Abteilungsleiter Straßenverwaltung, https://interamt.de/koop/app/stelle?id=1494369 (abgerufen 14.10.2026)"
+  ]
+}

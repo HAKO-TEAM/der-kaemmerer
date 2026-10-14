@@ -1,0 +1,67 @@
+{
+  "slug": "fuerstenwalde-spree",
+  "name": "Stadt Fürstenwalde/Spree",
+  "bundesland": "Brandenburg",
+  "einwohner": 31981,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Matthias Rudolph",
+  "token": "43d49809718d3cdc",
+  "claim": "In der Domstadt an der Spree Verwaltung und kommunale Betriebe verantwortlich mitgestalten.",
+  "beschreibung": "Fürstenwalde/Spree ist die bevölkerungsreichste Stadt im Landkreis Oder-Spree und als Mittelzentrum ein wichtiger Verwaltungs- und Wirtschaftsstandort im Osten Brandenburgs. Die 1272 erstmals urkundlich erwähnte Stadt liegt rund 50 Kilometer östlich von Berlin an der Bahnstrecke Berlin–Frankfurt (Oder) und der A 12. Wahrzeichen ist der Dom St. Marien, dem die Stadt ihren Namenszusatz „Domstadt“ verdankt. Zur Stadt gehört mit dem Stadtforst ein kommunaler Eigenbetrieb, der rund 4.670 Hektar Wald bewirtschaftet.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "31.981",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1272",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "70,68 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtforst",
+      "wert": "ca. 4.670 ha",
+      "icon": "🌲"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und freie Tage",
+      "beschreibung": "31 Tage Urlaub sowie freie Tage am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Sicherheit und Zusatzleistungen",
+      "beschreibung": "Unbefristete Arbeitsplätze im öffentlichen Dienst mit vermögenswirksamen Leistungen und betrieblicher Zusatzversorgung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des Gesundheitsmanagements, unter anderem JobRad."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Umfangreiches Fortbildungsangebot für die persönliche und berufliche Weiterentwicklung."
+    },
+    {
+      "titel": "Ankommen",
+      "beschreibung": "Aktive Unterstützung bei der Wohnraumsuche."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Fürstenwalde/Spree · Amt Z2 – Personalwesen",
+    "email": "bewerbungen@fuerstenwalde-spree.de",
+    "telefon": "03361 557-186"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Mittelzentrum, Lage, Dom St. Marien/Domstadt, Bürgermeister: de.wikipedia.org/wiki/Fürstenwalde/Spree (abgerufen 14.10.2026)",
+    "Stadtforst, Benefits und Kontakt: Stellenausschreibung Werkleitung im Stadtforst, https://interamt.de/koop/app/stelle?id=1498308 (API api.interamt.de/query/stellenangebot/1498308) (abgerufen 14.10.2026)"
+  ]
+}

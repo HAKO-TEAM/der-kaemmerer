@@ -1,0 +1,67 @@
+{
+  "slug": "landkreis-saale-holzland-kreis",
+  "name": "Landkreis Saale-Holzland-Kreis",
+  "bundesland": "Thüringen",
+  "einwohner": 82163,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Johann Waschnewski",
+  "token": "8792598c8c07f090",
+  "claim": "Infrastruktur und Entwicklung eines Thüringer Landkreises rund um Saale und Holzland verantwortlich mitgestalten.",
+  "beschreibung": "Der Saale-Holzland-Kreis liegt im Osten Thüringens zwischen Jena und Gera und entstand mit der Kreisreform 1994. Verwaltungssitz ist Eisenberg, wo das Landratsamt seinen Sitz im Schloss hat. Die Kreisverwaltung verantwortet unter anderem Planung, Bau und Unterhaltung der kreiseigenen Straßen und Brücken und wirkt an der Kreisentwicklung mit. Beschäftigte finden hier abwechslungsreiche Aufgaben mit qualifizierten Aufstiegsmöglichkeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "82.163",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "815 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gebildet",
+      "wert": "1994",
+      "icon": "📜"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Eisenberg",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und Bildung",
+      "beschreibung": "30 Tage Erholungsurlaub sowie die Möglichkeit, fünf Tage Bildungsurlaub im Jahr nach dem ThürBfG zu nutzen."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Bezahlung nach TVöD mit tariflicher Jahressonderzahlung, betriebliche Altersvorsorge und vermögenswirksame Leistungen; wahlweise Sachbezug in Form der City-Card."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung, individuelle Teilzeitmodelle und Möglichkeit der mobilen Arbeit."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheits- und Eingliederungsmanagement sowie arbeitsmedizinische Vorsorgeangebote."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Aus- und Weiterbildungsangebote mit qualifizierten Aufstiegsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Saale-Holzland-Kreis · Personal und Organisation",
+    "email": "bewerbung@lrashk.de",
+    "bewerbungsportal": "https://karriere.lrashk.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kreisreform 1994, Verwaltungssitz, Landrat: de.wikipedia.org/wiki/Saale-Holzland-Kreis (abgerufen 14.10.2026)",
+    "Aufgaben, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/-in technisches Gebäudemanagement/Tiefbau https://interamt.de/koop/app/stelle?id=1498414 (API api.interamt.de/query/stellenangebot/1498414) (abgerufen 14.10.2026)"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "verbandsgemeinde-bad-ems-nassau",
+  "name": "Verbandsgemeinde Bad Ems-Nassau",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 28933,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Uwe Bruchhäuser",
+  "token": "4621636dc5f7117b",
+  "claim": "Verwaltung für 28 Gemeinden an der Lahn mit Gestaltungsspielraum steuern.",
+  "beschreibung": "Die Verbandsgemeinde Bad Ems-Nassau entstand am 1. Januar 2019 aus den Verbandsgemeinden Bad Ems und Nassau und umfasst die Städte Bad Ems und Nassau sowie 26 Ortsgemeinden. Das Verwaltungsgebiet liegt im Naturpark Nassau im Rhein-Lahn-Kreis. Sitz der Verwaltung ist Bad Ems, ein Mittelzentrum und Teil des UNESCO-Welterbes Bedeutende Kurstädte Europas; Nassau ist Grundzentrum. Die Verbandsgemeindeverwaltung arbeitet mit flachen Hierarchien und bietet Führungskräften großen Gestaltungs- und Entscheidungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "28.933",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "154,78 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Ortsgemeinden",
+      "wert": "28",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "2019",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Herausgehobene Führungspositionen mit großem Gestaltungs- und Entscheidungsspielraum."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Flache Hierarchien und flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Anspruchsvolle Tätigkeiten mit vielfältigen Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Die im öffentlichen Dienst üblichen Sozialleistungen; Beamtenverhältnis bei Vorliegen der laufbahnrechtlichen Voraussetzungen möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Bad Ems-Nassau · Personalabteilung",
+    "email": "bewerbung@vgben.de",
+    "telefon": "02603 793-146"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gründung 2019, Zahl der Gemeinden, Bürgermeister: de.wikipedia.org/wiki/Verbandsgemeinde_Bad_Ems-Nassau (abgerufen 14.10.2026)",
+    "UNESCO-Welterbe Bedeutende Kurstädte Europas: de.wikipedia.org/wiki/Bad_Ems (abgerufen 14.10.2026)",
+    "Naturpark Nassau, Mittel-/Grundzentrum, Benefits und Kontakt: Stellenausschreibung Büroleitung, https://interamt.de/koop/app/stelle?id=1499006 (API api.interamt.de/query/stellenangebot/1499006) (abgerufen 14.10.2026)"
+  ]
+}

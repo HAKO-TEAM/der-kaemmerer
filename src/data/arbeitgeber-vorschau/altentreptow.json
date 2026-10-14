@@ -1,0 +1,67 @@
+{
+  "slug": "altentreptow",
+  "name": "Stadt Altentreptow",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 4903,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Claudia Ellgoth",
+  "token": "bce7d3ebb748c5b3",
+  "claim": "Als geschäftsführende Stadt eines Amtes mit 19 Gemeinden Verwaltung an der Tollense gestalten.",
+  "beschreibung": "Altentreptow liegt an der Tollense im Landkreis Mecklenburgische Seenplatte, rund 15 Kilometer nördlich von Neubrandenburg und zentral zwischen Neubrandenburg, Greifswald und Waren (Müritz). Die Stadt erhielt 1245 das Stadtrecht. Als geschäftsführende Gemeinde des Amtes Treptower Tollensewinkel erledigt die Stadtverwaltung die Verwaltungsaufgaben für 19 amtsangehörige Gemeinden und verbindet so vielfältige Aufgaben mit den kurzen Wegen einer Kleinstadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "4.903",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1245",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "53,08 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Amtsgemeinden",
+      "wert": "19",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub",
+      "beschreibung": "31 Tage Erholungsurlaub bei einer Fünf-Tage-Woche."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Jahressonderzahlung nach TVöD, leistungsorientierte Bezahlung, betriebliche Altersvorsorge und Fahrrad-Leasing."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeitregelung und Home-Office nach der Probezeit."
+    },
+    {
+      "titel": "Ausstattung",
+      "beschreibung": "Moderne Arbeitsplätze mit zwei Monitoren, höhenverstellbarem Tisch und Laptop sowie Dienstwagen für Dienstfahrten."
+    },
+    {
+      "titel": "Ankommen",
+      "beschreibung": "Unterstützung bei der Suche nach Wohnraum mit Hinweisen zu Angeboten und Ansprechpartnern vor Ort."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Altentreptow · Fachgebiet Zentrale Verwaltung",
+    "telefon": "03961 2551-120",
+    "bewerbungsportal": "https://www.altentreptow.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtrecht 1245, Lage, Bürgermeisterin: de.wikipedia.org/wiki/Altentreptow (abgerufen 14.10.2026)",
+    "Amt Treptower Tollensewinkel (19 Gemeinden), Lage, Benefits und Kontakt: Stellenausschreibung Fachgebietsleitung Ordnungsrecht und Wahlen, https://interamt.de/koop/app/stelle?id=1489760 (API api.interamt.de/query/stellenangebot/1489760) (abgerufen 14.10.2026)"
+  ]
+}

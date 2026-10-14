@@ -1,0 +1,67 @@
+{
+  "slug": "neckarsteinach",
+  "name": "Stadt Neckarsteinach",
+  "bundesland": "Hessen",
+  "einwohner": 3782,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Lutz Spitzner",
+  "token": "a073f1c40b4d9d6c",
+  "claim": "Eine kleine Verwaltung mit kurzen Wegen in der Vierburgenstadt am Neckar aktiv weiterentwickeln.",
+  "beschreibung": "Neckarsteinach liegt im romantischen Neckartal, rund 15 Kilometer östlich von Heidelberg, und ist die südlichste Stadt Hessens. Die Vierburgenstadt im Landkreis Bergstraße ist gut an den Nahverkehr und die Metropolregion Rhein-Neckar angebunden und bietet ihren Bürgerinnen und Bürgern eine hohe Lebensqualität. Die Stadtverwaltung versteht sich als moderner, bürgernaher Dienstleister. In einer Verwaltung dieser Größe arbeiten die Fachbereiche eng zusammen, Entscheidungswege sind kurz und Führungskräfte gestalten die Modernisierung der Verwaltung unmittelbar mit dem Bürgermeister.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "3.782",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "17,24 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Beiname",
+      "wert": "Vierburgenstadt",
+      "icon": "🏰"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Führungsaufgaben mit kurzen Entscheidungswegen und der Möglichkeit, die Verwaltung aktiv weiterzuentwickeln."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeiten im Gleitzeitmodell sowie mobiles Arbeiten im Rahmen der dienstlichen Möglichkeiten."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Tarifliche Vergütung nach TVöD mit betrieblicher Altersvorsorge, Entgeltumwandlung und Job-Rad."
+    },
+    {
+      "titel": "Weiterentwicklung",
+      "beschreibung": "Fortbildungsangebote und ein offenes, kollegiales Team mit wertschätzender Zusammenarbeit auf Augenhöhe."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Parkplätze in unmittelbarer Nähe sowie sehr gute Anbindung an S-Bahn und ÖPNV."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Neckarsteinach · Hauptamt",
+    "email": "hauptamt@neckarsteinach.de",
+    "telefon": "06229 9200-10"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtteile, Vierburgenstadt, südlichste Stadt Hessens, Lage, Bürgermeister: de.wikipedia.org/wiki/Neckarsteinach (abgerufen 14.10.2026)",
+    "Lage im Neckartal, Metropolregion Rhein-Neckar, Selbstverständnis der Verwaltung, Benefits und Kontakt: Stellenausschreibung Leitung Fachbereich Haupt- und Personalverwaltung, https://interamt.de/koop/app/stelle?id=1495751 (API api.interamt.de/query/stellenangebot/1495751) (abgerufen 14.10.2026)"
+  ]
+}
