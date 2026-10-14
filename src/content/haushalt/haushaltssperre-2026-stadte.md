@@ -2,7 +2,7 @@
 title: "Haushaltssperre 2026: Welche Städte betroffen sind – Liste, Rechtsgrundlagen, Folgen"
 beschreibung: "36 belegte Haushaltssperren 2025/2026 von Dortmund bis Dresden, dazu acht Landkreise: was gesperrt wird, was weiterläuft und was Kämmereien jetzt tun."
 ressort: haushalt
-datum: "2026-10-10"
+datum: "2026-10-14"
 minuten: 11
 autor: Redaktion
 featured: true
@@ -78,6 +78,7 @@ Aufgenommen sind nur Fälle, die eine Haushaltssperre, Ausgabensperre oder haush
 | Bad Sooden-Allendorf | HE | Oktober 2026 bis Jahresende | Personalkosten 105.000 € über Plan | [24] |
 | Aschaffenburg | BY | gemeldet 06.10.2026; alle Ausgaben auf dem Prüfstand | rund 16 Mio. € weniger Gewerbesteuer, Defizit rund 13,4 Mio. € | [46] |
 | Pöttmes | BY | Oktober 2026, vom Bürgermeister im Marktgemeinderat bekanntgegeben | angespannte Haushaltslage | [47] |
+| Büdingen | HE | 13.10.2026, Magistrat nach § 107 HGO, sofort wirksam, befristet bis 31.12.2026 | Hochrechnung: Ergebnis rund 1,0 bis 1,5 Mio. € schlechter als geplant | [48] |
 
 ### Landkreise 2026
 
@@ -220,3 +221,4 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 45. [Eisernes Sparen ab sofort: Unnas Kämmerer verhängt Haushaltssperre](https://rundblick-unna.de/2026/09/09/eisernes-sparen-ab-sofort-unnas-kaemmerer-verhaengt-haushaltssperre/) – Rundblick Unna – 09.09.2026
 46. [Haushaltssperre in Aschaffenburg: Stadt fehlen Millionen](https://www.primavera24.de/aktuelles/news/haushaltssperre-in-aschaffenburg-stadt-fehlen-millionen) – Radio Primavera – 06.10.2026
 47. [Haushaltssperre in Pöttmes: Bürgermeister zieht bei den Finanzen die Notbremse](https://www.augsburger-allgemeine.de/aichach/haushaltssperre-in-poettmes-buergermeister-zieht-bei-den-finanzen-die-notbremse-115467169) – Augsburger Allgemeine – 09.10.2026
+48. [Stadt Büdingen verhängt Haushaltssperre für das laufende Haushaltsjahr](https://wetterau.news/wetteraukreis/b%C3%BCdingen/328-b%C3%BCdingen/34713-stadt-b%C3%BCdingen-verh%C3%A4ngt-haushaltssperre-f%C3%BCr-das-laufende-haushaltsjahr.html) – Vorsprung Wetterau (Pressemitteilung der Stadt Büdingen) – 13.10.2026

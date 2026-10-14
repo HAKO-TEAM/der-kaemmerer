@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-09",
+ "stand": "2026-10-14",
  "faelle": [
   {
    "kommune": "Dresden",
@@ -2819,6 +2819,18 @@
    "ebene": "gemeinde",
    "anzeige": "Langgöns",
    "anlass": "sinkende Gewerbesteuer und fehlende Kapitalverzinsung"
+  },
+  {
+   "kommune": "Büdingen",
+   "land": "HE",
+   "art": "13.10.2026, Magistrat nach § 107 HGO, sofort wirksam, zunächst befristet bis 31.12.2026; keine neuen, nicht zwingend nötigen Ausgaben, Ausnahmen u. a. gesetzliche und vertragliche Verpflichtungen sowie Gefahrenabwehr",
+   "anlass": "Hochrechnung: Ergebnis 2026 rund 1,0 bis 1,5 Mio. € schlechter als geplant",
+   "quellen": [
+    "https://wetterau.news/wetteraukreis/b%C3%BCdingen/328-b%C3%BCdingen/34713-stadt-b%C3%BCdingen-verh%C3%A4ngt-haushaltssperre-f%C3%BCr-das-laufende-haushaltsjahr.html"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Büdingen"
   }
  ]
 }
