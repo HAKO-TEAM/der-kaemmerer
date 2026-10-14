@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-23"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1500230"
 schlagwoerter: ["Stadtkasse", "Zahlungsverkehr", "Liquidität", "Vollstreckung", "Forderungsmanagement"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-09"
 featured: false
 ---

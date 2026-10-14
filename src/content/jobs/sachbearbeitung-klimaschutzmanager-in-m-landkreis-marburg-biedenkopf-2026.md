@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-26"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1495304"
 schlagwoerter: ["Klimaschutz", "Klimaschutzmanagement", "Fördermittel", "Erneuerbare Energien", "Kreisentwicklung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-14"
 featured: false
 ---

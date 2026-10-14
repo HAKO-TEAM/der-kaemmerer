@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-30"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1501090"
 schlagwoerter: ["Umsatzsteuer", "§ 2b UStG", "Tax Compliance", "Finanzen", "Steuerrecht"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-13"
 featured: false
 ---

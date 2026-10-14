@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-31"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1500721"
 schlagwoerter: ["Fachdienstleitung", "Stadtplanung", "Liegenschaften", "Städtebauförderung", "IGA 2027"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-12"
 featured: false
 ---

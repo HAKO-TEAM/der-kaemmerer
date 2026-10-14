@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-15"
 bewerbungslink: "https://www.karriere.bremen.de/detail.php?id=34456&idj=129074"
 schlagwoerter: ["Rechnungsprüfung", "Amtsleitung", "Haushaltsrechnung", "Doppik-Umstellung", "Prüfungswesen"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-01"
 featured: false
 ---

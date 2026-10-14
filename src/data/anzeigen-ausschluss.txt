@@ -11,3 +11,20 @@ Main-Kinzig-Kreis, Jugendamt
 Stadt Neuenburg am Rhein
 # 2026-10-14 KSG Hannover GmbH: Herausnahme (Antwort personal@ksg-hannover.de: ausreichend Bewerbungen)
 KSG Hannover GmbH
+# 2026-10-14 Landkreis Rottweil: Abmeldung → Herausnahme (MK: konsequent)
+Landkreis Rottweil
+# 2026-10-12 Stadt Bremerhaven: keine weiteren Mails → Herausnahme (MK 14.10.: konsequent)
+Magistrat der Stadt Bremerhaven
+Stadt Bremerhaven
+# 2026-10-08 Stadt Rheinberg: Absage → Herausnahme (MK 14.10.: konsequent)
+Stadt Rheinberg
+# 2026-10-12 Stadt Datteln: Absage → Herausnahme (MK 14.10.: konsequent)
+Stadt Datteln
+# 2026-10-09 Stadt Bad Schwalbach: Absage → Herausnahme (MK 14.10.: konsequent)
+Stadt Bad Schwalbach
+# 2026-10-13 Stadt Zell im Wiesental: Abmeldung → Herausnahme (MK 14.10.: konsequent)
+Stadt Zell im Wiesental
+# 2026-10-14 VG Dannstadt-Schauernheim: Abmeldung → Herausnahme (MK 14.10.: konsequent)
+Verbandsgemeinde Dannstadt-Schauernheim
+# 2026-10-14 Landkreis Marburg-Biedenkopf: Abmeldung → Herausnahme (MK 14.10.: konsequent)
+Landkreis Marburg-Biedenkopf

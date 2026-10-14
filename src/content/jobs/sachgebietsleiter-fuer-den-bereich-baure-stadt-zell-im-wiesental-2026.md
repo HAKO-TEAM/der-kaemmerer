@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-11-01"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1475284"
 schlagwoerter: ["Sachgebietsleitung", "Baurecht", "Vergabe", "Fördermittel", "Gebäudemanagement"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-13"
 featured: false
 ---

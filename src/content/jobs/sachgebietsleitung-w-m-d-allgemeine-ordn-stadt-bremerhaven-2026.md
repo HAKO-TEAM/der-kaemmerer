@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-23"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1498000"
 schlagwoerter: ["Ordnungsamt", "Sachgebietsleitung", "Waffenrecht", "Gefahrenabwehr", "Führung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-07"
 featured: false
 ---

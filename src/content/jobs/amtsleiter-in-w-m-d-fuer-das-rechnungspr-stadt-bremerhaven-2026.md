@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-15"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1494093"
 schlagwoerter: ["Rechnungsprüfung", "Amtsleitung", "Führung", "Haushaltsrechnung", "Doppik-Umstellung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-07"
 featured: false
 ---

@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-25"
 bewerbungslink: "https://karriere.nrw/stellenausschreibung/6cf30f31-2bb6-47d2-b071-9c253de689cc"
 schlagwoerter: ["Fachbereichsleitung", "Ordnung", "Bevölkerungsschutz", "Budgetplanung", "Führung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-01"
 featured: false
 ---

@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-26"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1498744"
 schlagwoerter: ["Jobcenter", "SGB II", "Teamleitung", "Widerspruch", "Sozialgericht"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-10"
 featured: false
 ---
