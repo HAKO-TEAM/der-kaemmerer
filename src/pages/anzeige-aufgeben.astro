@@ -881,15 +881,16 @@ updateSummary();
 // ── URL-Parameter: Paket vorauswählen ───────────────────
 const paketParam = new URLSearchParams(window.location.search).get('paket');
 if (paketParam) {
-  const map: Record<string, [string, string]> = {
-    basis:    ['card-basis',    'Basis – 290 €'],
-    premium:  ['card-premium',  'Premium – 490 €'],
-    exklusiv: ['card-exklusiv', 'Exklusiv – 990 €'],
+  const map: Record<string, string> = {
+    flat:   'KommunalFlat – 249 €/Monat',
+    einzel: 'Einzelanzeige – 690 € einmalig',
   };
-  const entry = map[paketParam.toLowerCase()];
-  if (entry) {
-    const card = document.getElementById(entry[0]);
-    if (card) selectPaket(entry[1], card);
+  const wert = map[paketParam.toLowerCase()];
+  const card = wert ? document.querySelector<HTMLElement>(`.f-paket-card[data-paket="${wert}"]`) : null;
+  if (wert && card) {
+    selectPaket(wert, card);
+    const radio = card.querySelector<HTMLInputElement>('input[type=radio]');
+    if (radio) radio.checked = true;
   }
 }
 

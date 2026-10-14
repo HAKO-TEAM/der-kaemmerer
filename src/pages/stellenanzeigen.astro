@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 <Base
-  title="Stellenanzeigen schalten – KommunalFlat"
+  title="Stellenanzeigen schalten – KommunalFlat oder Einzelanzeige"
   description="Stellenanzeigen für Kommunen und kommunale Unternehmen: KommunalFlat mit unlimitierten Anzeigen für 249 € im Monat inklusive Arbeitgeberprofil – oder eine Einzelanzeige für 690 €."
 >
 <Header />
@@ -99,6 +99,27 @@ import Footer from '../components/Footer.astro';
   transition: background 0.2s;
 }
 .btn-hero:hover { background: var(--blue2); }
+
+/* Zwei Angebote */
+.angebote { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: left; margin: 0 auto 18px; max-width: 760px; }
+.angebot { border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); padding: 28px 28px 26px; display: flex; flex-direction: column; position: relative; }
+.angebot.top { border-color: #60a5fa; background: rgba(37,99,235,0.14); }
+.angebot-badge { position: absolute; top: -11px; left: 28px; background: var(--blue); color: white; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; }
+.angebot-name { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #93c5fd; margin-bottom: 6px; }
+.angebot-titel { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: white; margin-bottom: 14px; }
+.angebot .price-row { justify-content: flex-start; }
+.angebot .price-num { font-size: 52px; }
+.angebot-zusatz { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+.angebot ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+.angebot li { font-size: 14px; color: rgba(255,255,255,0.8); padding: 6px 0 6px 22px; position: relative; line-height: 1.5; border-top: 1px solid rgba(255,255,255,0.08); }
+.angebot li::before { content: '✓'; position: absolute; left: 0; color: #93c5fd; }
+.angebot .btn-hero { display: block; text-align: center; padding: 15px 20px; }
+.angebot .btn-hero.hell { background: transparent; border: 1px solid rgba(255,255,255,0.5); }
+.angebot .btn-hero.hell:hover { background: rgba(255,255,255,0.1); }
+.angebote-hinweis { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.cta-wege { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.btn-final.hell { background: transparent; border: 1px solid currentColor; }
+@media (max-width: 640px) { .hero { padding: 64px 16px 56px; } .angebot { padding: 24px 20px; } }
 
 /* ── DOSSIER ── */
 .dossier {
@@ -293,29 +314,53 @@ import Footer from '../components/Footer.astro';
 <div class="hero" id="buchen">
   <div class="hero-inner">
     <div class="hero-kicker">Stellenbörse</div>
-    <h1>Alle Stellen.<br><em>Unlimitiert.</em><br>Ihr Arbeitgeberprofil inklusive.</h1>
+    <h1>Ihre Stellen.<br><em>Ganz oben.</em><br>Als Flat oder einzeln.</h1>
     <p class="hero-sub">
-      Für Kommunen und kommunale Unternehmen: eine monatliche Pauschale für alle Ausschreibungen – und wir kümmern uns um alles.
-      Sie besetzen nur gelegentlich eine Stelle? Dann gibt es die <a href="/anzeige-aufgeben/" style="color:inherit;text-decoration:underline">Einzelanzeige für 690 €</a>.
+      Für Kommunen und kommunale Unternehmen: Wer regelmäßig ausschreibt, nimmt die KommunalFlat mit allen Ausschreibungen und eigenem Arbeitgeberprofil.
+      Wer gelegentlich eine Stelle besetzt, bucht die Einzelanzeige.
     </p>
 
-    <div class="price-block">
-      <div class="price-row">
-        <span class="price-eur">€</span>
-        <span class="price-num">249</span>
-        <span class="price-period">/Monat</span>
+    <div class="angebote">
+      <div class="angebot top" id="flat">
+        <div class="angebot-badge">Für alle Ausschreibungen</div>
+        <div class="angebot-name">Abonnement</div>
+        <div class="angebot-titel">KommunalFlat</div>
+        <div class="price-row">
+          <span class="price-eur">€</span>
+          <span class="price-num">249</span>
+          <span class="price-period">/Monat</span>
+        </div>
+        <div class="angebot-zusatz">zzgl. MwSt. · monatliche Rechnung</div>
+        <ul>
+          <li>Alle Ausschreibungen ohne Stückpreis</li>
+          <li>Ganz oben, als Partner gekennzeichnet</li>
+          <li>Eigenes Arbeitgeberprofil inklusive</li>
+          <li>Jede Stelle, die Sie uns senden, am selben Tag online</li>
+          <li>12-Monatsvertrag, danach monatlich kündbar</li>
+        </ul>
+        <a href="mailto:anzeigen@derkaemmerer.de?subject=KommunalFlat%20buchen" class="btn-hero">KommunalFlat buchen →</a>
       </div>
-      <div class="price-incl">✓ Unlimitierte Stellenanzeigen &nbsp;·&nbsp; ✓ Arbeitgeberprofil inklusive</div>
+      <div class="angebot" id="einzelanzeige">
+        <div class="angebot-name">Einmalig</div>
+        <div class="angebot-titel">Einzelanzeige</div>
+        <div class="price-row">
+          <span class="price-eur">€</span>
+          <span class="price-num">690</span>
+          <span class="price-period">einmalig</span>
+        </div>
+        <div class="angebot-zusatz">zzgl. MwSt. · einmalige Rechnung, 14 Tage Zahlungsziel</div>
+        <ul>
+          <li>Eine Ausschreibung</li>
+          <li>Ganz oben platziert</li>
+          <li>60 Tage online</li>
+          <li>Nach der Buchung sofort freigeschaltet</li>
+          <li>Auch in der Google-Jobsuche</li>
+        </ul>
+        <a href="/anzeige-aufgeben/?paket=einzel" class="btn-hero hell">Einzelanzeige buchen →</a>
+      </div>
     </div>
 
-    <div class="price-note">
-      12-Monatsvertrag · Erstmalig kündbar zum Ablauf des 12. Monats<br>
-      Danach monatlich kündbar zum Monatsende · Keine Mindestanzeigenanzahl
-    </div>
-
-    <a href="mailto:anzeigen@derkaemmerer.de?subject=KommunalFlat%20buchen" class="btn-hero">
-      Jetzt KommunalFlat buchen →
-    </a>
+    <p class="angebote-hinweis">Beide Angebote lassen sich als Direktauftrag vergeben. Ab fünf Ausschreibungen im Jahr ist die KommunalFlat die günstigere Wahl.</p>
   </div>
 </div>
 
@@ -391,22 +436,23 @@ import Footer from '../components/Footer.astro';
   <div class="wrap">
     <div class="sec-kicker">So kommen Stellen auf Der Kämmerer</div>
     <h2 class="sec-title">Redaktionell ausgewählt – oder ganz oben als Partner.</h2>
-    <p class="sec-sub">Unsere Redaktion nimmt relevante kommunale Ausschreibungen kostenfrei auf. Mit der KommunalFlat machen Sie daraus Ihren festen Auftritt.</p>
+    <p class="sec-sub">Unsere Redaktion nimmt relevante kommunale Ausschreibungen kostenfrei auf. Mit der Einzelanzeige steht eine Stelle ganz oben, mit der KommunalFlat jede – samt Ihrem festen Auftritt als Arbeitgeber.</p>
     <div style="overflow-x:auto;margin-top:24px">
       <table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid #e2e8f0">
         <thead>
           <tr style="background:#f8fafc;text-align:left">
             <th style="padding:12px 16px;border-bottom:1px solid #e2e8f0"></th>
             <th style="padding:12px 16px;border-bottom:1px solid #e2e8f0;color:#1a2744">Redaktionell ausgewählt<br><span style="font-weight:400;color:#6b7280;font-size:12px">kostenfrei</span></th>
+            <th style="padding:12px 16px;border-bottom:1px solid #e2e8f0;color:#1a2744">Einzelanzeige<br><span style="font-weight:400;color:#6b7280;font-size:12px">690 € einmalig</span></th>
             <th style="padding:12px 16px;border-bottom:1px solid #e2e8f0;color:#1a2744;background:#eff6ff">KommunalFlat<br><span style="font-weight:400;color:#3b82f6;font-size:12px">249 € / Monat</span></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Aufnahme</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">durch unsere Redaktion</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">jede Stelle, die Sie uns senden – am selben Tag online</td></tr>
-          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Platzierung</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">in der Stellenbörse nach Datum</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">ganz oben, als Partner gekennzeichnet</td></tr>
-          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Arbeitgeberprofil</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">–</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">eigene Seite „Ihre Stadt als Arbeitgeber“</td></tr>
-          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Google-Jobsuche</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">✓</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">✓</td></tr>
-          <tr><td style="padding:10px 16px;color:#6b7280">Vergabe</td><td style="padding:10px 16px">–</td><td style="padding:10px 16px;background:#f8fbff">Direktauftrag unterhalb der Ausschreibungsschwelle</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Aufnahme</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">durch unsere Redaktion</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">Ihre Ausschreibung, nach der Buchung sofort online</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">jede Stelle, die Sie uns senden – am selben Tag online</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Platzierung</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">in der Stellenbörse nach Datum</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">ganz oben, 60 Tage</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">ganz oben, als Partner gekennzeichnet</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Arbeitgeberprofil</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">–</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">–</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">eigene Seite „Ihre Stadt als Arbeitgeber“</td></tr>
+          <tr><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;color:#6b7280">Google-Jobsuche</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">✓</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9">✓</td><td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;background:#f8fbff">✓</td></tr>
+          <tr><td style="padding:10px 16px;color:#6b7280">Vergabe</td><td style="padding:10px 16px">–</td><td style="padding:10px 16px">Direktauftrag</td><td style="padding:10px 16px;background:#f8fbff">Direktauftrag unterhalb der Ausschreibungsschwelle</td></tr>
         </tbody>
       </table>
     </div>
@@ -558,14 +604,19 @@ import Footer from '../components/Footer.astro';
 
 <!-- CTA FINAL -->
 <div class="cta-final">
-  <h2>Bereit für<br><em>Ihre KommunalFlat?</em></h2>
-  <p>Eine E-Mail genügt. Wir melden uns innerhalb von 1 Werktag mit Vertrag, Fragebogen und allem was Sie brauchen.</p>
-  <a href="mailto:anzeigen@derkaemmerer.de?subject=KommunalFlat%20249%20Euro%20buchen" class="btn-final">
-    Jetzt buchen – anzeigen@derkaemmerer.de
-  </a>
+  <h2>Bereit für<br><em>Ihre nächste Stelle?</em></h2>
+  <p>KommunalFlat: Eine E-Mail genügt, wir melden uns innerhalb von 1 Werktag mit Vertrag, Fragebogen und allem, was Sie brauchen. Einzelanzeige: direkt online buchen, sofort freigeschaltet.</p>
+  <div class="cta-wege">
+    <a href="mailto:anzeigen@derkaemmerer.de?subject=KommunalFlat%20249%20Euro%20buchen" class="btn-final">
+      KommunalFlat buchen – 249 € / Monat
+    </a>
+    <a href="/anzeige-aufgeben/?paket=einzel" class="btn-final hell">
+      Einzelanzeige buchen – 690 € einmalig
+    </a>
+  </div>
   <div class="cta-note">
-    249 € / Monat zzgl. MwSt. · 12-Monatsvertrag · Erstmalig kündbar nach 12 Monaten<br>
-    Danach monatlich kündbar · Arbeitgeberprofil inklusive · Keine Mindestanzeigenanzahl
+    KommunalFlat: 249 € / Monat zzgl. MwSt. · 12-Monatsvertrag, danach monatlich kündbar · Arbeitgeberprofil inklusive<br>
+    Einzelanzeige: 690 € einmalig zzgl. MwSt. · eine Ausschreibung · 60 Tage online
   </div>
 </div>
 
