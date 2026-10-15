@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-11-03"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1501495"
 schlagwoerter: ["Grundsatzangelegenheiten", "Datenschutz", "Immobilienverwaltung", "Investitionsplanung", "Jugendamt"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-15"
 featured: false
 ---
