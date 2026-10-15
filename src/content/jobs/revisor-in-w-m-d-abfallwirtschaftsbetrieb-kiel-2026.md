@@ -17,6 +17,7 @@ paket: "Basis"
 aktiv: true
 datum: "2026-10-14"
 featured: false
+oben: true
 ---
 
 Der Abfallwirtschaftsbetrieb Kiel, kommunales Entsorgungsunternehmen der Landeshauptstadt, besetzt eine Planstelle Revisor*in im Bereich der Werkleitung mit 19,5 Wochenstunden. Die Stelle prüft Organisationseinheiten, Kassen und Belege und wirkt am Jahresabschluss mit.

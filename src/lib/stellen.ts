@@ -25,7 +25,7 @@ export async function aktiveStellen() {
   const rank: Record<string, number> = { KommunalFlat: 0, Einzelanzeige: 0, Exklusiv: 1, Premium: 2, Basis: 3 };
   const roh = (await getCollection('jobs'))
     .filter((j) => j.data.aktiv && new Date(j.data.bewerbungsschluss) >= h && (!j.data.laufzeitBis || new Date(j.data.laufzeitBis) >= h))
-    .sort((a, b) => (rank[a.data.paket] - rank[b.data.paket]) || (new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime()));
+    .sort((a, b) => ((a.data.oben ? 0 : rank[a.data.paket]) - (b.data.oben ? 0 : rank[b.data.paket])) || (new Date(b.data.datum).getTime() - new Date(a.data.datum).getTime()));
   return roh.map((job) => {
     const tage = tageDiff(job.data.bewerbungsschluss);
     const pk = job.data.paket.toLowerCase();

@@ -51,6 +51,7 @@ export const collections = {
       aktiv:             z.boolean().default(true),
       datum:             z.string(),
       featured:          z.boolean().default(false),
+      oben:              z.boolean().default(false),   // redaktionelle Hervorhebung ohne Paket (kostenfrei, z. B. Kulanz nach Absprache)
       logo:              z.string().optional(),
     }),
   }),
