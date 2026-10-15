@@ -1960,5 +1960,299 @@
   "ags": "08225109",
   "kommune": "Walldürn",
   "seit": "2026-10-14"
+ },
+ {
+  "token": "02d95d125b129c54",
+  "ags": "05124000",
+  "kommune": "Wuppertal",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "27a4f8b92b88d009",
+  "ags": "05119000",
+  "kommune": "Oberhausen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "35a87a7d35bccc03",
+  "ags": "05512000",
+  "kommune": "Bottrop",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "0b0c5506b15742a4",
+  "ags": "05378004",
+  "kommune": "Bergisch Gladbach",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "70e9c5284153cfbc",
+  "ags": "05970040",
+  "kommune": "Siegen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "d56516d3278a1cdf",
+  "ags": "05170024",
+  "kommune": "Moers",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "d5d391108d227d9a",
+  "ags": "05962024",
+  "kommune": "Iserlohn",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "824dcaaac312da17",
+  "ags": "05166032",
+  "kommune": "Viersen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "4022c3d8756827ac",
+  "ags": "05382068",
+  "kommune": "Troisdorf",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "25ef0f642966db07",
+  "ags": "03355022",
+  "kommune": "Lüneburg",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "eac82916214dddcb",
+  "ags": "05758012",
+  "kommune": "Herford",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "6ea14c2cb30d65ed",
+  "ags": "05170008",
+  "kommune": "Dinslaken",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "b95de072866e1a6a",
+  "ags": "08435016",
+  "kommune": "Friedrichshafen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "8504b04888a0368f",
+  "ags": "13071107",
+  "kommune": "Neubrandenburg",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "717c65947b422c1c",
+  "ags": "08119079",
+  "kommune": "Waiblingen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "7692c92df83c244e",
+  "ags": "05382056",
+  "kommune": "Sankt Augustin",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "88ca5dfc82d0cc2d",
+  "ags": "05954016",
+  "kommune": "Hattingen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "254232ea3cfc6743",
+  "ags": "05962040",
+  "kommune": "Menden (Sauerland)",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "aeaaf85e589291eb",
+  "ags": "05374012",
+  "kommune": "Gummersbach",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "418227d8c455d360",
+  "ags": "08317065",
+  "kommune": "Lahr/Schwarzwald",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "1ceea741e00cce1d",
+  "ags": "08115003",
+  "kommune": "Böblingen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "d2d043d1093e8e65",
+  "ags": "03157006",
+  "kommune": "Peine",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "77754303e878b8be",
+  "ags": "12065256",
+  "kommune": "Oranienburg",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "d59ac2770c29639e",
+  "ags": "08115028",
+  "kommune": "Leonberg",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "85d6d1ffe1027a27",
+  "ags": "05334004",
+  "kommune": "Alsdorf",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "b4ec2ed742ea2213",
+  "ags": "05334016",
+  "kommune": "Herzogenrath",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "4d3cbd870deaa1bf",
+  "ags": "08335075",
+  "kommune": "Singen (Hohentwiel)",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "86cdc99dced53d29",
+  "ags": "05754028",
+  "kommune": "Rheda-Wiedenbrück",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "b20a4f1eb83d61ae",
+  "ags": "05382012",
+  "kommune": "Bornheim",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "59adb1514683ad7c",
+  "ags": "05558016",
+  "kommune": "Dülmen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "5e49733f6e95d4b6",
+  "ags": "08116077",
+  "kommune": "Filderstadt",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "9f53c5b2a8347ef3",
+  "ags": "16067029",
+  "kommune": "Gotha",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "dfc31be16a3b2523",
+  "ags": "03353031",
+  "kommune": "Seevetal",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "bda39191dbeecafe",
+  "ags": "05158004",
+  "kommune": "Erkrath",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "aec6ac0d94f79b87",
+  "ags": "05162016",
+  "kommune": "Kaarst",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "59fbd955af44d657",
+  "ags": "05554012",
+  "kommune": "Borken",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "513dd45e28225403",
+  "ags": "13074087",
+  "kommune": "Wismar",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "a6e4821a613bd6eb",
+  "ags": "05978020",
+  "kommune": "Kamen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "59874a8cc1cd4efb",
+  "ags": "03353005",
+  "kommune": "Buchholz in der Nordheide",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "eb2301b71fdac4d8",
+  "ags": "08119067",
+  "kommune": "Schorndorf",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "f9de1078933ae371",
+  "ags": "08116078",
+  "kommune": "Leinfelden-Echterdingen",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "4f36b0a8b660365d",
+  "ags": "09373147",
+  "kommune": "Neumarkt i.d.OPf.",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "d4d1980e62b3032a",
+  "ags": "09179123",
+  "kommune": "Germering",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "2b3b35826fc76759",
+  "ags": "03241021",
+  "kommune": "Wunstorf",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "73ef676dda1c4106",
+  "ags": "05758024",
+  "kommune": "Löhne",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "9179b77e918fe81f",
+  "ags": "05382024",
+  "kommune": "Königswinter",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "dc908340f5436ab8",
+  "ags": "05554004",
+  "kommune": "Ahaus",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "843ecc4dc5e1a293",
+  "ags": "05766044",
+  "kommune": "Lemgo",
+  "seit": "2026-10-15"
+ },
+ {
+  "token": "015650d276dd994f",
+  "ags": "08116080",
+  "kommune": "Ostfildern",
+  "seit": "2026-10-15"
  }
 ]
