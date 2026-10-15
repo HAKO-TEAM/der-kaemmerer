@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-11-18"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1501851"
 schlagwoerter: ["Büro des Landrats", "Pressesprecher", "Kommunikation", "Leitung", "Landkreis"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-15"
 featured: false
 ---
