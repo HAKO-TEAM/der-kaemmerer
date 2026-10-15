@@ -1,0 +1,72 @@
+{
+  "slug": "landkreis-prignitz",
+  "name": "Landkreis Prignitz",
+  "bundesland": "Brandenburg",
+  "einwohner": 74942,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Christian Müller",
+  "claim": "Verantwortung in einer Kreisverwaltung im Nordwesten Brandenburgs übernehmen.",
+  "beschreibung": "Der Landkreis Prignitz liegt im äußersten Nordwesten Brandenburgs, Verwaltungssitz ist Perleberg. Mit 26 Gemeinden, darunter sieben Städte, und der geringsten Besiedlungsdichte des Landes ist die Kreisverwaltung für ein weitläufiges Gebiet zuständig. Das Aufgabenspektrum reicht von Kreisentwicklung und Breitbandausbau bis zum Immobilienmanagement der kreiseigenen Gebäude. Stellen in der Kreisverwaltung bieten Gestaltungsspielraum in einer Region mit bezahlbarem Wohnraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "74.942",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "2.138,53 km²",
+      "icon": "📍"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "26, davon 7 Städte",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Perleberg",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeitregelung, Gleitzeit und Teilzeitoptionen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "Bis zu 31 Urlaubstage; Heiligabend und Silvester sind arbeitsfrei."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Leistungsorientierte Bezahlung, Jahressonderzahlung und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing, Jobticket sowie nahegelegene und kostenfreie Parkplätze."
+    },
+    {
+      "titel": "Einarbeitung und Weiterbildung",
+      "beschreibung": "Strukturierte Einarbeitung und vielfältige Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Region",
+      "beschreibung": "Eine Region zum Entdecken mit bezahlbarem Wohnraum und ausgezeichneten Kitas und Schulen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachbereich Personal · Recruiting (Frau Krebs)",
+    "email": "bewerbung@lkprignitz.de",
+    "telefon": "03876 713-232",
+    "bewerbungsportal": "https://www.landkreis-prignitz.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Gemeinden, Landrat: de.wikipedia.org/wiki/Landkreis_Prignitz (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Landkreis Prignitz, interamt.de Stellenangebote 1494927, 1495702 und 1500521 (abgerufen 15.10.2026)"
+  ],
+  "token": "3e72702b46507fd9"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "lehrte",
+  "name": "Stadt Lehrte",
+  "bundesland": "Niedersachsen",
+  "einwohner": 44140,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Frank Prüße",
+  "claim": "Den Haushalt einer Eisenbahnerstadt vor den Toren Hannovers mitgestalten.",
+  "beschreibung": "Lehrte liegt in der Region Hannover, östlich der Landeshauptstadt, und ist als Bahnknotenpunkt eine typische Eisenbahnerstadt. Die Stadt gliedert sich in neun Ortschaften. Im Fachdienst Finanzen und Liegenschaften reicht das Aufgabenfeld von der Aufstellung und Bewirtschaftung des Haushalts über Finanzausgleich und Prognosen bis zu Förderprogrammen und der Betreuung des Haushalts- und Wirtschaftsausschusses.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "44.140",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortschaften",
+      "wert": "9",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Entfernung nach Hannover (Luftlinie)",
+      "wert": "16 km",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Homeoffice, Telearbeit und Gleitzeit."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "Bis zu 30 Tage Urlaub."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt und Zusatzversorgung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Vergünstigtes Deutschlandticket, Fahrradleasing und kostenfreie Parkplätze."
+    },
+    {
+      "titel": "Gesundheit und Familie",
+      "beschreibung": "Gesundheitsangebote, Fortbildung und Ferienbetreuung für Kinder."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Sarah Stecker",
+    "email": "bewerbung@lehrte.de",
+    "bewerbungsportal": "https://www.lehrte.de/portal/seiten/stellenangebote-900000195-23200.html"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Bürgermeister, Ortschaften, Lage: de.wikipedia.org/wiki/Lehrte (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Grundsatzsachbearbeitung Finanzen, Stadt Lehrte, interamt.de (Stelle 1499885, abgerufen 15.10.2026)"
+  ],
+  "token": "1a5079e72cdc7826"
+}

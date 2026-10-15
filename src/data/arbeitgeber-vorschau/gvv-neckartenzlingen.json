@@ -1,0 +1,62 @@
+{
+  "slug": "gvv-neckartenzlingen",
+  "name": "Gemeindeverwaltungsverband Neckartenzlingen",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 18912,
+  "claim": "Die Finanzen von sechs Gemeinden im Landkreis Esslingen leiten.",
+  "beschreibung": "Der Gemeindeverwaltungsverband Neckartenzlingen wurde am 1. Januar 1972 von Altdorf, Altenriet, Neckartenzlingen und Schlaitdorf gegründet; 1976 kamen Bempflingen und Neckartailfingen hinzu. Verbandsvorsitzende ist die Bürgermeisterin der Gemeinde Neckartenzlingen, Sitz ist Neckartenzlingen. Die Verbandskämmerei umfasst Kämmerei, Kasse, Steuern und IT mit elf Mitarbeitenden und schließt die kaufmännische Leitung des Eigenbetriebs Wasserversorgung ein.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Verband (31.12.2025)",
+      "wert": "18.912",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitgliedsgemeinden",
+      "wert": "6",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verband seit",
+      "wert": "1972",
+      "icon": "📜"
+    },
+    {
+      "label": "Mitarbeitende der Kämmerei",
+      "wert": "11",
+      "icon": "🧮"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Leitungsposition",
+      "beschreibung": "Vielseitige Leitungsposition mit eingespieltem Team und zukunftsorientierter Verwaltungsspitze."
+    },
+    {
+      "titel": "Besoldung",
+      "beschreibung": "Besoldung bis A 14 bei Vorliegen der beamtenrechtlichen Voraussetzungen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsangebote."
+    },
+    {
+      "titel": "Kennenlernen",
+      "beschreibung": "Kennenlernen von Arbeitsplatz und Team vorab möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Petra Geyer",
+    "email": "p.geyer@neckartenzlingen.de",
+    "telefon": "07127 1801-11",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1499749"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Mitgliedsgemeinden, Gründung: de.wikipedia.org/wiki/Gemeindeverwaltungsverband_Neckartenzlingen (abgerufen 15.10.2026)",
+    "Beschreibung Kämmerei, Benefits und Kontakt: Stellenausschreibung Leiter/in Verbandskämmerei, interamt.de (Stelle 1499749, abgerufen 15.10.2026)"
+  ],
+  "token": "bc13fbf360ca6bb3"
+}

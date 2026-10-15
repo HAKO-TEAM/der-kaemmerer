@@ -1,0 +1,64 @@
+{
+  "slug": "markt-schwaben",
+  "name": "Markt Schwaben",
+  "bundesland": "Bayern",
+  "einwohner": 13765,
+  "buergermeistertitel": "Erste Bürgermeisterin",
+  "buergermeister": "Walentina Dahms",
+  "claim": "Die Finanzen einer lebendigen Marktgemeinde im Münchner Osten leiten.",
+  "beschreibung": "Markt Schwaben liegt an der nördlichen Grenze des oberbayerischen Landkreises Ebersberg im Münchner Osten. Die Marktgemeinde bietet nach eigener Darstellung durch Lage und Infrastruktur gute Bedingungen für Unternehmen, Vereine und Familien. Die Abteilung Finanzen umfasst Kämmerei, Kasse und Gebäudemanagement; das Aufgabenspektrum reicht von den kameralen Haushalten von Gemeinde und Schulverband bis zur Vermögens- und Schuldenverwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "13.765",
+      "icon": "👥"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Ebersberg",
+      "icon": "📍"
+    },
+    {
+      "label": "Anbindung",
+      "wert": "S2 und A 94",
+      "icon": "🚆"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Großraumzulage",
+      "beschreibung": "Großraumzulage München von 135 Euro monatlich (TVöD)."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Moderne Gleitzeitregelungen und flexible Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge und Sozialleistungen des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielseitige Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Anbindung",
+      "beschreibung": "Gute Verkehrsanbindung über S2, Regionalbahnen und A 94."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Erste Bürgermeisterin Walentina Dahms",
+    "email": "personal@markt-schwaben.de",
+    "telefon": "08121 418-120",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1330056"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner: de.wikipedia.org/wiki/Markt_Schwaben (abgerufen 15.10.2026)",
+    "Bürgermeisterin, Lage: de.wikipedia.org/wiki/Markt_Schwaben (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits, Kontakt: Stellenausschreibung Kämmerin/Kämmerer, Markt Schwaben, interamt.de (abgerufen 15.10.2026)"
+  ],
+  "token": "7fd72e573c70e1fd"
+}

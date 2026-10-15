@@ -1,0 +1,68 @@
+{
+  "slug": "gengenbach",
+  "name": "Stadt Gengenbach",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 11135,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Sven Müller",
+  "claim": "Ein Beteiligungsmanagement in der ehemaligen Reichsstadt im Kinzigtal mit aufbauen.",
+  "beschreibung": "Gengenbach ist eine ehemalige Reichsstadt im vorderen Kinzigtal im Schwarzwald, etwa zehn Kilometer südöstlich von Offenburg im Ortenaukreis. Die Stadt besteht aus der Kernstadt und den Stadtteilen Reichenbach, Schwaibach und Bermersbach und besitzt eine historische Altstadt mit vielen Fachwerkhäusern. In der Finanzverwaltung entsteht ein gesamtstädtisches Beteiligungsmanagement; hinzu kommen Gebührenkalkulation, Zuschusswesen und die Digitalisierung der Abteilung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "11.135",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "4",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Reichsstadt seit",
+      "wert": "1366",
+      "icon": "📜"
+    },
+    {
+      "label": "Städtepartnerschaft mit Obernai seit",
+      "wert": "1958",
+      "icon": "🤝"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stelle, Verbeamtung bis A 10 möglich."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Bikeleasing mit Arbeitgeberzuschuss und Firmenfitness (EGYM Wellpass)."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Christina Vetrano",
+    "email": "vetrano-christina@stadt-gengenbach.de",
+    "telefon": "07803 930-124",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1500403"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Bürgermeister, Stadtteile, Geschichte: de.wikipedia.org/wiki/Gengenbach (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Mitarbeiter Beteiligungswesen & Finanzcontrolling, Stadt Gengenbach, interamt.de (Stelle 1500403, abgerufen 15.10.2026)"
+  ],
+  "token": "d7026cb4e956bd55"
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "landkreis-oberhavel",
+  "name": "Landkreis Oberhavel",
+  "bundesland": "Brandenburg",
+  "einwohner": 217858,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Alexander Tönnies",
+  "claim": "Schulen im Norden von Berlin bauen, sanieren und weiterentwickeln.",
+  "beschreibung": "Der Landkreis Oberhavel liegt im Norden Brandenburgs und reicht von der Landesgrenze zu Mecklenburg-Vorpommern bis an die Berliner Stadtgrenze. Verwaltungssitz ist Oranienburg. Die Kreisverwaltung zählt mit mehr als 1.400 Beschäftigten zu den größten kommunalen Arbeitgebern der Region. Der Fachbereich Schulbau und -bewirtschaftung unterhält, saniert und baut kreiseigene Schulgebäude.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "217.858",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.808,18 km²",
+      "icon": "📍"
+    },
+    {
+      "label": "Beschäftigte der Kreisverwaltung",
+      "wert": "mehr als 1.400",
+      "icon": "💼"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Oranienburg",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten, Möglichkeit des mobilen Arbeitens und Aufgabenwahrnehmung in Teilzeit."
+    },
+    {
+      "titel": "Onboarding",
+      "beschreibung": "Einführungsveranstaltung und persönliche Betreuung während der Einarbeitungszeit."
+    },
+    {
+      "titel": "Betriebsklima",
+      "beschreibung": "Teamtage und Mitarbeiterevents."
+    },
+    {
+      "titel": "Gesundheit und Weiterbildung",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und vielfältige Angebote zur Vertiefung von Fach- und Methodenkompetenzen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Gute ÖPNV-Anbindung, vergünstigtes Monatsticket (Jobticket) und Mitarbeiterparkplätze."
+    },
+    {
+      "titel": "Absicherung",
+      "beschreibung": "Arbeitsverhältnis im öffentlichen Dienst mit betrieblicher Altersvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Oberhavel · Personal (Frau Miersch)",
+    "email": "bewerbung@oberhavel.de",
+    "telefon": "03301 601-1733",
+    "bewerbungsportal": "https://www.oberhavel.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landrat, Verwaltungssitz: de.wikipedia.org/wiki/Landkreis_Oberhavel (abgerufen 15.10.2026)",
+    "Beschäftigtenzahl, Benefits und Kontakt: Stellenausschreibung Bauingenieur/in Schulbau, Landkreis Oberhavel, interamt.de Stellenangebot 1496456 (abgerufen 15.10.2026)"
+  ],
+  "token": "621e84edbd53c073"
+}

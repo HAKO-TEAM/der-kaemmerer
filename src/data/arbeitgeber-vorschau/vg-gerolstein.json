@@ -1,0 +1,68 @@
+{
+  "slug": "vg-gerolstein",
+  "name": "Verbandsgemeinde Gerolstein",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 30367,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Hans Peter Böffgen",
+  "claim": "Die Wasserversorgung einer Verbandsgemeinde in der Vulkaneifel leiten.",
+  "beschreibung": "Die Verbandsgemeinde Gerolstein im Landkreis Vulkaneifel entstand am 1. Januar 2019 durch die Fusion von Gerolstein, Hillesheim und Obere Kyll. Zu ihr gehören 36 Ortsgemeinden sowie die Städte Gerolstein und Hillesheim; Verwaltungssitz ist Gerolstein. Die Verbandsgemeindewerke betreiben als Eigenbetrieb Wasserversorgung und Abwasserbeseitigung mit rund 45 Beschäftigten; die Werkleitung verantwortet Wirtschafts- und Investitionsplanung, Gebühren, Jahresabschluss und Personalführung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "30.367",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "38",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verbandsgemeinde seit",
+      "wert": "2019",
+      "icon": "📜"
+    },
+    {
+      "label": "Beschäftigte der Werke",
+      "wert": "rund 45",
+      "icon": "💧"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und Homeoffice."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt, Zusatzversorgung und betriebliche Krankenversicherung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Gesundheitsmanagement."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "JobRad-Leasing."
+    },
+    {
+      "titel": "Führungsaufgabe",
+      "beschreibung": "Verantwortungsvolle Führungsaufgabe in der Daseinsvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Arno Fasen",
+    "email": "arno.fasen@gerolstein.de",
+    "telefon": "06591 13-1024",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1495005"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Bürgermeister, Gemeinden, Gründung: de.wikipedia.org/wiki/Verbandsgemeinde_Gerolstein (abgerufen 15.10.2026)",
+    "Beschreibung Werke, Benefits und Kontakt: Stellenausschreibung Werkleitung Verbandsgemeindewerke, interamt.de (Stelle 1495005, abgerufen 15.10.2026)"
+  ],
+  "token": "5ebf9566e5466a1d"
+}

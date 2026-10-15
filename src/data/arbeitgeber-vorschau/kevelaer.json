@@ -1,0 +1,65 @@
+{
+  "slug": "kevelaer",
+  "name": "Wallfahrtsstadt Kevelaer",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 28215,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dominik Pichler",
+  "claim": "Die Finanzen einer Wallfahrtsstadt am Niederrhein steuern und gestalten.",
+  "beschreibung": "Kevelaer liegt am unteren linken Niederrhein im Kreis Kleve und ist einer der wichtigsten Marienwallfahrtsorte Deutschlands. Die Stadtverwaltung versteht sich als modernes und bürgernahes Dienstleistungsunternehmen mit familienfreundlicher Infrastruktur und breitem Kultur- und Freizeitangebot. Die Lage nahe dem Wirtschaftszentrum Rhein-Ruhr und den Niederlanden verbindet Mittelstadt-Atmosphäre mit guter Erreichbarkeit. Wer hier Verantwortung übernimmt, gestaltet die Entwicklung einer Stadt mit besonderem Profil mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "28.215",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Kleve",
+      "icon": "📍"
+    },
+    {
+      "label": "Staatlich anerkannter Kurort seit",
+      "wert": "2024",
+      "icon": "🌿"
+    },
+    {
+      "label": "Beschäftigte im Fachbereich Finanzen und Gebäudeservice",
+      "wert": "knapp 40",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Führungsposition mit großem Gestaltungsspielraum."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit und tageweise mobile Arbeit."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsangebote."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Christian Verfers",
+    "email": "christian.verfers@kevelaer.de",
+    "telefon": "02832 122-305",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1499052"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner: de.wikipedia.org/wiki/Kevelaer (abgerufen 15.10.2026)",
+    "Bürgermeister, Kurort-Status, Kreis: de.wikipedia.org/wiki/Kevelaer (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits, Kontakt: Stellenausschreibung Kämmerin/Kämmerer, Wallfahrtsstadt Kevelaer, interamt.de (abgerufen 15.10.2026)"
+  ],
+  "token": "5a5d33f1d0501b3c"
+}

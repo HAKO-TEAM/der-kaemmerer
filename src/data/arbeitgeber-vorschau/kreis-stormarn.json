@@ -1,0 +1,68 @@
+{
+  "slug": "kreis-stormarn",
+  "name": "Kreis Stormarn",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 247394,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Henning Görtz",
+  "token": "171b61cb3ba0f6eb",
+  "claim": "Eine Kreisverwaltung zwischen Hamburg und Lübeck mit flexiblen Arbeitsmodellen mitgestalten.",
+  "beschreibung": "Der Kreis Stormarn mit Kreissitz Bad Oldesloe umfasst 55 Gemeinden im Südosten Schleswig-Holsteins. Das Rechnungs- und Gemeindeprüfungsamt prüft die Kreisverwaltung sowie die Städte, Ämter und Gemeinden im Kreis; im Fachdienst Zentraler Service und Organisation werden Digitalisierungsprojekte koordiniert, unter anderem rund um das Dokumentenmanagementsystem enaio und die E-Akte.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "247.394",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "766,24 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "55",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreis seit",
+      "wert": "1867",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten, Homeoffice und mobiles Arbeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "hvv-ProfiTicket bzw. Deutschland-Jobticket sowie Fahrradleasing."
+    },
+    {
+      "titel": "Unbefristet",
+      "beschreibung": "Unbefristete Stellen in Voll- oder Teilzeit."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Zusatzversorgung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Betriebssport."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Stormarn · Dirk Neumann",
+    "email": "d.neumann@kreis-stormarn.de",
+    "telefon": "04531 160-1296",
+    "bewerbungsportal": "https://www.kreis-stormarn.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Landrat, Gründung: de.wikipedia.org/wiki/Kreis_Stormarn (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Prüferin bzw. Prüfer Rechnungs- und Gemeindeprüfungsamt, https://interamt.de/koop/app/stelle?id=1499896, und Digitalisierungsberater/in, https://interamt.de/koop/app/stelle?id=1497789 (API api.interamt.de/query/stellenangebot/1499896) (abgerufen 15.10.2026)"
+  ]
+}

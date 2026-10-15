@@ -1,0 +1,68 @@
+{
+  "slug": "quierschied",
+  "name": "Gemeinde Quierschied",
+  "bundesland": "Saarland",
+  "einwohner": 12757,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Lutz Maurer",
+  "token": "f8e878cfa4100a00",
+  "claim": "Die Digitalisierung einer saarländischen Gemeinde strategisch gestalten.",
+  "beschreibung": "Quierschied liegt im Regionalverband Saarbrücken und besteht seit 1974 aus den drei Ortsteilen Quierschied, Fischbach-Camphausen und Göttelborn. Die Gemeindeverwaltung sucht eine Fachkraft, die die Digitalisierung der Verwaltung strategisch gestaltet, unter anderem gesetzlich geforderte Vorhaben nach dem Onlinezugangsgesetz; perspektivisch ist eine Leitungsfunktion im IT-Bereich vorgesehen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "12.757",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "20,21 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "3",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gemeinde seit",
+      "wert": "1974",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "Unbefristetes Arbeitsverhältnis in Vollzeit (39 Stunden) im familienfreundlichen öffentlichen Dienst."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Abwechslungsreiche Tätigkeit mit hohem Maß an Selbständigkeit und Verantwortung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfassendes Angebot an Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Sozialleistungen",
+      "beschreibung": "Vermögenswirksame Leistungen und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement inklusive Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Antje Dörr",
+    "email": "personalamt@quierschied.de",
+    "telefon": "06897 961-112",
+    "bewerbungsportal": "https://www.quierschied.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Bürgermeister: de.wikipedia.org/wiki/Quierschied (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Referent IT-Digitalisierung und Prozessmanagement, https://interamt.de/koop/app/stelle?id=1498053 (abgerufen 15.10.2026)"
+  ]
+}

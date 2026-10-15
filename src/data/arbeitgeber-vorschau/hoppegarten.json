@@ -1,0 +1,68 @@
+{
+  "slug": "hoppegarten",
+  "name": "Gemeinde Hoppegarten",
+  "bundesland": "Brandenburg",
+  "einwohner": 18085,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Sven Siebert",
+  "claim": "Soziales und Kitas in einer wachsenden Gemeinde am Berliner Stadtrand mitgestalten.",
+  "beschreibung": "Hoppegarten ist eine amtsfreie Gemeinde im Landkreis Märkisch-Oderland und grenzt unmittelbar an den Berliner Bezirk Marzahn-Hellersdorf. Die Gemeinde gliedert sich in die drei Ortsteile Dahlwitz-Hoppegarten, Hönow und Münchehofe und trägt amtlich den Beinamen Rennbahngemeinde. In der Gemeindeverwaltung verbinden sich kurze Wege mit einem breiten Aufgabenfeld, das von der Verwaltung der kommunalen Kindertagesstätten über Schule und Jugend bis zur Begleitung des Seniorenbeirats reicht.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.085",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "31,98 km²",
+      "icon": "📍"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "3",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Märkisch-Oderland",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Unbefristete Einstellung",
+      "beschreibung": "Zukunftssicherer Arbeitsplatz durch unbefristete Einstellung."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Vergütung nach TVöD mit Jahressonderzahlung, leistungsorientierter Bezahlung und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Ausstattung",
+      "beschreibung": "Moderne Arbeitsräume und aktuelle Hard- und Software."
+    },
+    {
+      "titel": "Weiterbildung und Gesundheit",
+      "beschreibung": "Bedarfsorientierte Weiterbildungsmöglichkeiten und Gesundheitstage."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Hoppegarten · Fachbereich III",
+    "email": "Bewerbungen@gemeinde-hoppegarten.de",
+    "telefon": "",
+    "bewerbungsportal": "https://www.gemeinde-hoppegarten.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Ortsteile, Bürgermeister: de.wikipedia.org/wiki/Hoppegarten (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Soziales und Kita, Gemeinde Hoppegarten, interamt.de Stellenangebot 1496637 (abgerufen 15.10.2026)"
+  ],
+  "token": "3dc2337043115304"
+}

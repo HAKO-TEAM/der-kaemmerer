@@ -1,0 +1,67 @@
+{
+  "slug": "flensburg",
+  "name": "Stadt Flensburg",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 95568,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Fabian Geyer",
+  "token": "ed4bf7b5f9d07bc2",
+  "claim": "In der nördlichsten kreisfreien Stadt Deutschlands Verantwortung übernehmen.",
+  "beschreibung": "Flensburg liegt am inneren Ende der Flensburger Förde an der deutsch-dänischen Grenze und ist die nördlichste kreisfreie Stadt Deutschlands. Mit der Europa-Universität Flensburg und der Hochschule Flensburg zählt die Stadt rund 9.000 Studierende. Die Berufsfeuerwehr der Stadt sucht aktuell eine Sachgebietsleitung für Werkstätten und Beschaffung, die zugleich den Einsatzführungsdienst (A-Dienst) übernimmt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "95.568",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "56,73 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Studierende (2025)",
+      "wert": "rund 9.000",
+      "icon": "🎓"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisfreie Stadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Fortbildung und Gesundheit",
+      "beschreibung": "Fort- und Weiterbildungsangebote sowie betriebliches Gesundheitsmanagement."
+    },
+    {
+      "titel": "Firmenfitness",
+      "beschreibung": "Firmenfitness mit EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "NAH.SH-Jobticket oder Fahrradleasing."
+    },
+    {
+      "titel": "Standort",
+      "beschreibung": "Arbeitsplatz in direkter Innenstadtlage mit guter Verkehrsanbindung."
+    },
+    {
+      "titel": "Aufgabengebiet",
+      "beschreibung": "Vielseitiges und abwechslungsreiches Aufgabengebiet."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Zentrale Dienste/Personal",
+    "email": "personalabteilung@flensburg.de",
+    "bewerbungsportal": "https://www.flensburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Oberbürgermeister, Hochschulen: de.wikipedia.org/wiki/Flensburg (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Werkstätten und Beschaffung, https://interamt.de/koop/app/stelle?id=1500317 (abgerufen 15.10.2026)"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "sylt",
+  "name": "Gemeinde Sylt",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 14106,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Tina Haltermann",
+  "token": "1c336b910cc28138",
+  "claim": "Verwaltung im Inselzentrum der Nordseeinsel Sylt mitgestalten.",
+  "beschreibung": "Die Gemeinde Sylt entstand am 1. Januar 2009 aus dem Zusammenschluss von Westerland, Sylt-Ost und Rantum. Sie liegt im Kreis Nordfriesland, umfasst etwa 60 Prozent der Inselfläche und 70 Prozent der Inselbevölkerung und besteht aus sieben Ortsteilen, darunter das Nordseeheilbad Westerland. Die Verwaltung führt im Fachbereich Umwelt und Bauen auch die Bauverwaltung, deren Leitung aktuell ausgeschrieben ist.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.106",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "57,31 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gemeinde seit",
+      "wert": "2009",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Inselzulage",
+      "beschreibung": "Zahlung einer monatlichen Inselzulage."
+    },
+    {
+      "titel": "Wohnungssuche",
+      "beschreibung": "Unterstützung bei der Wohnungssuche auf der Insel Sylt."
+    },
+    {
+      "titel": "Altersversorgung und Prämien",
+      "beschreibung": "Betriebliche Altersversorgung (VBL), Leistungsprämien und Jahressonderzuwendung nach Tarifvertrag."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitzeit für die Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit Sonderkonditionen für Fitnessstudio oder Sylter Welle sowie Job-Rad-Leasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal und Organisation · Hans-Peter Tüchsen",
+    "email": "personal@gemeinde-sylt.de",
+    "telefon": "04651 851-233",
+    "bewerbungsportal": "https://www.gemeinde-sylt.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsteile, Bürgermeisterin: de.wikipedia.org/wiki/Sylt_(Gemeinde) (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachdienstleitung Bauverwaltung, https://interamt.de/koop/app/stelle?id=1500397 (abgerufen 15.10.2026)"
+  ]
+}

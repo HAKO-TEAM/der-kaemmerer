@@ -1,0 +1,60 @@
+{
+  "slug": "duesseldorf",
+  "name": "Landeshauptstadt Düsseldorf",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 619444,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Stephan Keller",
+  "token": "3421cb2e17afc643",
+  "claim": "Die Landeshauptstadt am Rhein mit Verantwortung für Stadtentwässerung und Infrastruktur mitgestalten.",
+  "beschreibung": "Düsseldorf ist die Landeshauptstadt Nordrhein-Westfalens und gliedert sich in zehn Stadtbezirke mit 50 Stadtteilen. Der Stadtentwässerungsbetrieb ist ein großer Eigenbetrieb der Stadt mit rund 500 Beschäftigten. Er liefert seiner technischen Betriebsleitung Planungs-, Controlling- und Steuerungsinformationen und begleitet strategische Projekte in Zusammenarbeit mit Politik, Verwaltung und Verbänden.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "619.444",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "217,41 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Stadtbezirke",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Stadtteile",
+      "wert": "50",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Tarif und Unbefristung",
+      "beschreibung": "Unbefristete Anstellung nach TVöD."
+    },
+    {
+      "titel": "Teilzeit",
+      "beschreibung": "Teilzeit grundsätzlich möglich."
+    },
+    {
+      "titel": "Großer Eigenbetrieb",
+      "beschreibung": "Der Stadtentwässerungsbetrieb beschäftigt rund 500 Menschen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Bewerbenden-Büro · Personalwirtschaft",
+    "email": "personalwirtschaft@duesseldorf.de",
+    "telefon": "0211 89-99900",
+    "bewerbungsportal": "https://karriere.duesseldorf.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtbezirke, Oberbürgermeister: de.wikipedia.org/wiki/Düsseldorf (abgerufen 15.10.2026)",
+    "Beschreibung Betrieb, Benefits und Kontakt: Stellenausschreibung Steuerungsunterstützung der technischen Betriebsleitung, https://interamt.de/koop/app/stelle?id=1497645 (API api.interamt.de/query/stellenangebot/1497645) (abgerufen 15.10.2026)"
+  ]
+}

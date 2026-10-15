@@ -1,0 +1,70 @@
+{
+  "slug": "schleswig",
+  "name": "Stadt Schleswig",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 25567,
+  "token": "e2f8a36d208d1b75",
+  "claim": "Die Kreisstadt an der Schlei mit Verantwortung für den eigenen Gebäudebestand mitgestalten.",
+  "beschreibung": "Schleswig ist Kreisstadt des Kreises Schleswig-Flensburg und liegt an der Schlei zwischen Nord- und Ostsee. Als Mittelzentrum mit großem Einzugsbereich bietet die Stadt ein breites kulturelles Angebot, darunter Schloss Gottorf, sowie alle weiterführenden Schulen. Die Stadtverwaltung entwickelt ihr Gebäudemanagement von der klassischen Hochbauabteilung zu einem modernen Facility-Management weiter; anstehend sind unter anderem Neubauten im Rahmen der Innenstadtsanierung und energetische Sanierungen städtischer Liegenschaften.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "25.567",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "24,3 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Kreisstadt und Mittelzentrum",
+      "icon": "📍"
+    },
+    {
+      "label": "Beschäftigte im Fachdienst Gebäudemanagement",
+      "wert": "21 (zzgl. ca. 75 im Hausmeister- und Raumpflege-Pool)",
+      "icon": "🧑‍💼"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende Arbeitszeit mit familienfreundlichen Arbeitszeiten."
+    },
+    {
+      "titel": "Homeoffice",
+      "beschreibung": "Möglichkeit zur Nutzung von Homeoffice."
+    },
+    {
+      "titel": "Einarbeitung",
+      "beschreibung": "Gründliche Einarbeitung in das neue Aufgabengebiet."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Möglichkeiten zur persönlichen und fachlichen Fortbildung."
+    },
+    {
+      "titel": "Arbeits- und Gesundheitsschutz",
+      "beschreibung": "Diverse Angebote im Arbeits- und Gesundheitsschutz."
+    },
+    {
+      "titel": "Beschäftigungsform",
+      "beschreibung": "Unbefristete Beschäftigung im Beamten- oder Tarifbeschäftigtenverhältnis, Teilung der Stelle auf zwei Teilzeitkräfte grundsätzlich möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Falko Thede",
+    "email": "personal@schleswig.de",
+    "telefon": "04621 81-4111",
+    "bewerbungsportal": "https://www.schleswig.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Kreisstadt: de.wikipedia.org/wiki/Schleswig (abgerufen 15.10.2026)",
+    "Verwaltungsprofil, Benefits, Kontakt: Stellenausschreibung Leitung Fachdienst Gebäudemanagement, https://interamt.de/koop/app/stelle?id=1497292 (abgerufen 15.10.2026)"
+  ]
+}

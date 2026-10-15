@@ -1,0 +1,68 @@
+{
+  "slug": "st-ingbert",
+  "name": "Mittelstadt St. Ingbert",
+  "bundesland": "Saarland",
+  "einwohner": 35209,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Ulli Meyer",
+  "token": "da14d375803d0dad",
+  "claim": "Eine Biosphärenstadt im Herzen des Saarlandes mitgestalten.",
+  "beschreibung": "Die Biosphärenstadt St. Ingbert liegt im Saarpfalz-Kreis im Herzen des Saarlandes. Als ehemalige Industriestadt hat sie sich nach eigener Darstellung zu einem modernen Wirtschafts-, Bildungs- und Kulturstandort entwickelt. Die Stadtverwaltung versteht sich mit rund 500 Beschäftigten als zukunftsorientierter Arbeitgeber und bürgernaher Dienstleister; ausgeschrieben ist die Leitung der Abteilung Ordnungsaufgaben im Geschäftsbereich Bürgerservice und Ordnung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "35.209",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "49,95 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "rund 500",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Saarpfalz-Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung im Rahmen der Gleitzeitvereinbarung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Jahresurlaub, zusätzlich frei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Altersversorgung",
+      "beschreibung": "Vermögenswirksame Leistungen und zusätzliche Altersversorgung (ZVK)."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing (Jobrad) und Jobticket mit Arbeitgeberzuschuss."
+    },
+    {
+      "titel": "Frauenförderplan",
+      "beschreibung": "Die Stadt verfügt über einen Frauenförderplan."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Tatjana Klich",
+    "email": "personal@st-ingbert.de",
+    "telefon": "06894 13-237",
+    "bewerbungsportal": "https://www.interamt.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Oberbürgermeister, Landkreis: de.wikipedia.org/wiki/St._Ingbert (abgerufen 15.10.2026)",
+    "Verwaltungsprofil, Beschäftigte, Benefits und Kontakt: Stellenausschreibung Abteilungsleitung Ordnungsaufgaben, https://interamt.de/koop/app/stelle?id=1482219 (abgerufen 15.10.2026)"
+  ]
+}

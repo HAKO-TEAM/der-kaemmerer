@@ -1,0 +1,63 @@
+{
+  "slug": "kreis-ploen",
+  "name": "Kreis Plön",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 130318,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Björn Demmin",
+  "token": "bf14e9f63e42bb3b",
+  "claim": "Die Kommunalaufsicht für 85 Gemeinden in der Holsteinischen Schweiz mitgestalten.",
+  "beschreibung": "Der Kreis Plön mit Kreissitz Plön umfasst 85 Gemeinden in Schleswig-Holstein. Die Kommunalaufsicht prüft gemeindliche Haushalte und berät zur wirtschaftlichen Betätigung und zu Beteiligungen der Gemeinden.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "130.318",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.083,57 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "85",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreis seit",
+      "wert": "1867",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten, hybrides Arbeiten und Kindernotfallbetreuung."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Leistungsentgelt, VBL und Jahressonderzahlung."
+    },
+    {
+      "titel": "Zuschüsse und Vorteile",
+      "beschreibung": "Corporate Benefits, epassi, Zuschuss zu Fahrrad und Jobticket."
+    },
+    {
+      "titel": "Vor Ort",
+      "beschreibung": "Kantine und gute ÖPNV-Anbindung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Plön · Jeanette Schneider-Koopmann",
+    "email": "jeanette.schneider-koopmann@kreis-ploen.de",
+    "bewerbungsportal": "http://www.kreis-ploen.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Landrat, Gründung: de.wikipedia.org/wiki/Kreis_Plön (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung in der Kommunalaufsichtsbehörde, https://interamt.de/koop/app/stelle?id=1499167 (API api.interamt.de/query/stellenangebot/1499167) (abgerufen 15.10.2026)"
+  ]
+}

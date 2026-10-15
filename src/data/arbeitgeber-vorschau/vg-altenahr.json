@@ -1,0 +1,63 @@
+{
+  "slug": "vg-altenahr",
+  "name": "Verbandsgemeinde Altenahr",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 10396,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dominik Gieler",
+  "claim": "Haushaltsverantwortung im Wiederaufbau an der Ahr übernehmen.",
+  "beschreibung": "Die Verbandsgemeinde Altenahr umfasst den mittleren Teil des Kreises Ahrweiler und besteht aus zwölf Ortsgemeinden. Sie entstand 1968 im Zuge der rheinland-pfälzischen Gebietsreform aus dem früheren Amt Altenahr; Verwaltungssitz ist Altenahr. Im Juli 2021 wurde das Gebiet vom Hochwasser schwer getroffen. In der Finanzabteilung stehen Haushaltsplanung für Verbandsgemeinde und Ortsgemeinden sowie deren Beratung im Mittelpunkt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "10.396",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "12",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verbandsgemeinde seit",
+      "wert": "1968",
+      "icon": "📜"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Ahrweiler",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Stelle mit TVöD-Sozialleistungen."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Familienfreundliche, flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Einarbeitung und Fortbildung",
+      "beschreibung": "Strukturierte Einarbeitung sowie Fort- und Weiterbildung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Sabine Löhndorf",
+    "email": "personalamt@altenahr.de",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1498774"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner, Bürgermeister, Ortsgemeinden, Gründung: de.wikipedia.org/wiki/Verbandsgemeinde_Altenahr (abgerufen 15.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Finanzabteilung, Verbandsgemeinde Altenahr, interamt.de (Stelle 1498774, abgerufen 15.10.2026)"
+  ],
+  "token": "e6c80feacac82c47"
+}

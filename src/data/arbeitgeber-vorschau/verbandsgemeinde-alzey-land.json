@@ -1,0 +1,68 @@
+{
+  "slug": "verbandsgemeinde-alzey-land",
+  "name": "Verbandsgemeinde Alzey-Land",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 25029,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Steffen Unger",
+  "token": "4db293aefa6c049b",
+  "claim": "Eine Verbandsgemeinde mit 24 Ortsgemeinden in Rheinhessen personalrechtlich mitgestalten.",
+  "beschreibung": "Die Verbandsgemeinde Alzey-Land im Landkreis Alzey-Worms besteht seit 1972 und umfasst 24 Ortsgemeinden; Verwaltungssitz ist die Weinrufstraße 38 in Alzey. Die Personalabteilung betreut die Beschäftigten der Verwaltung, Schulen und Kitas.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "25.029",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "173,87 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "24",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verbandsgemeinde seit",
+      "wert": "1972",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Mobiles Arbeiten und flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge und Sozialleistungen."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiches Fortbildungsprogramm."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Kostenfreie Parkplätze, Jobticket und JobRad."
+    },
+    {
+      "titel": "Team",
+      "beschreibung": "Corporate Benefits und Team-Events."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachgebiet Personal · Sara Oehl",
+    "email": "oehl.sara@alzey-land.de",
+    "telefon": "06731 409-152",
+    "bewerbungsportal": "http://alzey-land.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsgemeinden, Bürgermeister, Gründung: de.wikipedia.org/wiki/Verbandsgemeinde_Alzey-Land (abgerufen 15.10.2026)",
+    "Beschreibung Personalabteilung, Benefits und Kontakt: Stellenausschreibung Sachbearbeitung im Sachgebiet Personal, https://interamt.de/koop/app/stelle?id=1495134 (API api.interamt.de/query/stellenangebot/1495134) (abgerufen 15.10.2026)"
+  ]
+}

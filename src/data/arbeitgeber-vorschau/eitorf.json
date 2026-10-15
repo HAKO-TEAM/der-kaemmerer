@@ -1,0 +1,63 @@
+{
+  "slug": "eitorf",
+  "name": "Gemeinde Eitorf",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 19011,
+  "claim": "Das Sozialamt einer Gemeinde im Siegtal mitgestalten und leiten.",
+  "beschreibung": "Eitorf ist eine Gemeinde und ein Mittelzentrum im östlichen, rechtsrheinischen Rhein-Sieg-Kreis im Süden Nordrhein-Westfalens. Das Amt für Senioren und Soziales entscheidet über Sozialhilfe, Grundsicherung und weitere Leistungen und arbeitet dabei mit freien Trägern und Wohlfahrtsverbänden zusammen. Die stellvertretende Amtsleitung wirkt an Haushaltsplanung, Budgetsteuerung und der Weiterentwicklung von Digitalisierung und Prozessen mit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "19.011",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Rhein-Sieg-Kreis",
+      "icon": "📍"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Urlaubstage",
+      "wert": "30",
+      "icon": "🌴"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Unbefristeter Arbeitsplatz mit betrieblicher Zusatzversorgung und regelmäßigen Tariferhöhungen."
+    },
+    {
+      "titel": "Persönliche Entwicklung",
+      "beschreibung": "Gezielte Fort- und Weiterbildungen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Urlaubstage."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Jahressonderzahlung und monatliche Sachprämie."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt",
+    "email": "personalamt@eitorf.de",
+    "telefon": "02243 89-149",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1470462"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner: de.wikipedia.org/wiki/Eitorf (abgerufen 15.10.2026)",
+    "Lage, Funktion: de.wikipedia.org/wiki/Eitorf (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits, Kontakt: Stellenausschreibung Sachbearbeiter*in und stellvertretende Amtsleitung, Gemeinde Eitorf, interamt.de (abgerufen 15.10.2026)"
+  ],
+  "token": "e9bd2e8e841c8aad"
+}

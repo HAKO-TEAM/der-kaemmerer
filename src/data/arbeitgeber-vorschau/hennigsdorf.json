@@ -1,0 +1,68 @@
+{
+  "slug": "hennigsdorf",
+  "name": "Stadt Hennigsdorf",
+  "bundesland": "Brandenburg",
+  "einwohner": 26602,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Thomas Günther",
+  "claim": "Städtische Bauprojekte am nordwestlichen Rand Berlins steuern.",
+  "beschreibung": "Hennigsdorf ist eine amtsfreie Mittelstadt im Landkreis Oberhavel, unmittelbar am nordwestlichen Rand der Bundeshauptstadt. Die Stadt gilt als wichtiger Wohn- und Wirtschaftsstandort im Land Brandenburg und ist per S-Bahn an Berlin angebunden. Die Verwaltung sitzt zentral im Rathaus am Rathausplatz. Im Fachdienst Gebäudemanagement werden Neubau-, Sanierungs- und Instandhaltungsprojekte für städtische Einrichtungen gesteuert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "26.602",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "31,47 km²",
+      "icon": "📍"
+    },
+    {
+      "label": "Funktion",
+      "wert": "Mittelzentrum",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Oberhavel",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobiles und flexibles Arbeiten",
+      "beschreibung": "Bis zu 100 Tage im Kalenderjahr mobil und ortsunabhängig sowie eine Gleitzeitregelung."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Erholungsurlaub im Jahr bei einer 5-Tage-Woche."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Sehr gute Fortbildungsmöglichkeiten nach persönlichen Bedürfnissen und Talenten."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Transparente Gehaltsstruktur nach TVöD mit Jahressonderzahlung."
+    },
+    {
+      "titel": "Zentrale Lage",
+      "beschreibung": "Rathaus im Herzen der Stadt mit sehr guter Anbindung an die S-Bahn."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Hennigsdorf (Frau Flötert)",
+    "email": "bewerbung@hennigsdorf.de",
+    "telefon": "03302 877191",
+    "bewerbungsportal": "https://www.hennigsdorf.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Bürgermeister: de.wikipedia.org/wiki/Hennigsdorf (abgerufen 15.10.2026)",
+    "Mittelzentrum, S-Bahn-Anbindung, Benefits und Kontakt: Stellenausschreibung Techniker/in Bauwesen, Stadt Hennigsdorf, interamt.de Stellenangebot 1498091 (abgerufen 15.10.2026)"
+  ],
+  "token": "9d9e0b5d406217ca"
+}

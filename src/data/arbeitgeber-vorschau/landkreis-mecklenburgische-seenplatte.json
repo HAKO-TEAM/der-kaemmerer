@@ -1,0 +1,72 @@
+{
+  "slug": "landkreis-mecklenburgische-seenplatte",
+  "name": "Landkreis Mecklenburgische Seenplatte",
+  "bundesland": "Mecklenburg-Vorpommern",
+  "einwohner": 245998,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Thomas Müller",
+  "claim": "Recht und Verwaltung im flächengrößten Landkreis Deutschlands mitgestalten.",
+  "beschreibung": "Der Landkreis Mecklenburgische Seenplatte ist flächenmäßig der größte Landkreis Deutschlands. Kreisstadt und Oberzentrum ist Neubrandenburg; Teile der Verwaltung befinden sich als Außenstellen in Demmin, Neustrelitz und Waren (Müritz). Die Region ist touristisch geprägt, mit zahlreichen Seen, darunter der Müritz als größtem Binnensee Deutschlands. Berlin, Hamburg und die Ostseeküste sind gut zu erreichen. Das Rechts- und Kommunalaufsichtsamt berät die Kreisverwaltung und führt Rechtsstreitigkeiten vor allen Gerichten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "245.998",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "5.495,59 km²",
+      "icon": "📍"
+    },
+    {
+      "label": "Kreisstadt",
+      "wert": "Neubrandenburg",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Größe",
+      "wert": "Flächengrößter Landkreis Deutschlands",
+      "icon": "🌍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Mobiles Arbeiten nach erfolgreicher Probezeit im Rahmen der Dienstvereinbarung."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Tarifvertraglich abgesicherte Bedingungen mit Jahressonderzahlung, alternativem Entgeltanreizsystem und zusätzlicher betrieblicher Altersvorsorge."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Arbeitstage Erholungsurlaub in der 5-Tage-Woche."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Gleitzeitregeln, Teilzeitangebote und regelmäßige Arbeitszeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Modernes Dienstfahrrad-Leasing."
+    },
+    {
+      "titel": "Weiterbildung und Gesundheit",
+      "beschreibung": "Vielfältige Fortbildungsmöglichkeiten und betriebliches Gesundheitsmanagement mit Sport- und Gesundheitsangeboten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Mecklenburgische Seenplatte (Frau Skalat)",
+    "email": "bewerbung@lk-seenplatte.de",
+    "telefon": "0395 57087 2114",
+    "bewerbungsportal": "http://www.lk-mecklenburgische-seenplatte.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landrat, Kreisstadt: de.wikipedia.org/wiki/Landkreis_Mecklenburgische_Seenplatte (abgerufen 15.10.2026)",
+    "Region, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter juristische Angelegenheiten, interamt.de Stellenangebot 1498245 (abgerufen 15.10.2026)"
+  ],
+  "token": "ce499c01dfdc8ca2"
+}

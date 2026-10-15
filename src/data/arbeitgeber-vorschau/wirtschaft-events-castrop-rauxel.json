@@ -1,0 +1,61 @@
+{
+  "slug": "wirtschaft-events-castrop-rauxel",
+  "name": "Wirtschaft & Events Castrop-Rauxel GmbH",
+  "bundesland": "Nordrhein-Westfalen",
+  "claim": "Die kaufmännische Basis für Wirtschaftsförderung, Stadtmarketing und Events in der Europastadt im Grünen legen.",
+  "beschreibung": "Die Wirtschaft & Events Castrop-Rauxel GmbH ist die neue kommunale Gesellschaft für Wirtschaftsförderung, Stadtmarketing und Veranstaltungsmanagement in Castrop-Rauxel. Als Tochtergesellschaft der Stadt bündelt sie diese Aufgaben, um die Stadt als Wirtschafts-, Veranstaltungs- und Lebensstandort weiterzuentwickeln. Die kaufmännische Steuerung ist als Stabsstelle der Geschäftsführung angesiedelt und schafft die wirtschaftliche und organisatorische Grundlage der Gesellschaft.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner der Stadt Castrop-Rauxel (31.12.2025)",
+      "wert": "72.353",
+      "icon": "👥"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Recklinghausen",
+      "icon": "📍"
+    },
+    {
+      "label": "Aufgaben",
+      "wert": "Wirtschaftsförderung, Stadtmarketing, Events",
+      "icon": "🎪"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Unbefristeter Arbeitsplatz in einer kommunalen Gesellschaft."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitmodelle und die Möglichkeit zur mobilen Arbeit."
+    },
+    {
+      "titel": "Arbeitsumfeld",
+      "beschreibung": "Kurze Entscheidungswege, flache Hierarchien und ein kollegiales Team."
+    },
+    {
+      "titel": "Altersvorsorge und Gesundheit",
+      "beschreibung": "Betriebliche Altersvorsorge und Angebote zur betrieblichen Gesundheitsförderung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Ann-Kristin Krakau",
+    "email": "ann-kristin.krakau@castrop-rauxel.de",
+    "telefon": "02305 106-2306",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1491857"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner: de.wikipedia.org/wiki/Castrop-Rauxel (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits, Kontakt: Stellenausschreibung Kaufmännische Steuerung, Wirtschaft & Events Castrop-Rauxel GmbH, interamt.de (abgerufen 15.10.2026)"
+  ],
+  "token": "10f11f38ca144c9c",
+  "einwohner": 72353
+}

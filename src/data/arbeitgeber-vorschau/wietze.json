@@ -1,0 +1,58 @@
+{
+  "slug": "wietze",
+  "name": "Gemeinde Wietze",
+  "bundesland": "Niedersachsen",
+  "einwohner": 7363,
+  "claim": "Finanzen und Personal einer Heidegemeinde im Landkreis Celle verantworten.",
+  "beschreibung": "Wietze liegt im Landkreis Celle in den südlichsten Ausläufern der Lüneburger Heide. Die Gemeinde ist durch ihre Erdölgeschichte geprägt und beherbergt das Deutsche Erdölmuseum. Der Fachbereich Finanzen und Personal bündelt Kämmerei, Steuerverwaltung, Gemeindekasse, Friedhofsverwaltung, Personalverwaltung sowie das Hallen- und Freibad. Wer ihn leitet, verbindet Haushaltssteuerung mit Personalverantwortung in einer überschaubaren Verwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.363",
+      "icon": "👥"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Celle",
+      "icon": "📍"
+    },
+    {
+      "label": "Deutsches Erdölmuseum",
+      "wert": "vor Ort",
+      "icon": "🛢️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familienfreundlicher Arbeitgeber",
+      "beschreibung": "Die Gemeinde bezeichnet sich als familienfreundlicher Arbeitgeber."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Gleitende Arbeitszeiten und die Möglichkeit zum Home-Office."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote der betrieblichen Gesundheitsförderung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Möglichkeit zur Teilnahme am Dienstradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Susanne Heincke (Bewerbungsverfahren)",
+    "email": "bewerbungen@wietze.de",
+    "telefon": "05146 507-59",
+    "bewerbungsportal": "https://www.wietze.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohner: de.wikipedia.org/wiki/Wietze (abgerufen 15.10.2026)",
+    "Lage, Erdölmuseum: de.wikipedia.org/wiki/Wietze (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits, Kontakt: Stellenausschreibung Fachbereichsleitung Finanzen und Personal, Gemeinde Wietze, interamt.de (abgerufen 15.10.2026)"
+  ],
+  "token": "51eef1caa72cf2a5"
+}

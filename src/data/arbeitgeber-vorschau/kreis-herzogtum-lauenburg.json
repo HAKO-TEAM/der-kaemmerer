@@ -1,0 +1,60 @@
+{
+  "slug": "kreis-herzogtum-lauenburg",
+  "name": "Kreis Herzogtum Lauenburg",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 206492,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Christoph Mager",
+  "token": "0c143f7e79b291ff",
+  "claim": "Einen künftigen Fachbereich Ordnung und Gesundheit mit rund 160 Planstellen führen.",
+  "beschreibung": "Der Kreis Herzogtum Lauenburg mit Kreissitz Ratzeburg umfasst 132 Gemeinden im Süden Schleswig-Holsteins. Die Kreisverwaltung besetzt die Leitung des künftigen Fachbereichs Ordnung und Gesundheit mit rund 160 Planstellen und den Fachdiensten Ordnung, Straßenverkehr, Gesundheit sowie Veterinärwesen und Lebensmittelüberwachung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "206.492",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.263,06 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "132",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Ratzeburg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Führungsposition mit großem Entscheidungsspielraum."
+    },
+    {
+      "titel": "Stellvertretung",
+      "beschreibung": "Mögliche Übertragung der Stellvertretung des Landrats als untere Landesbehörde."
+    },
+    {
+      "titel": "Teilzeit",
+      "beschreibung": "Teilzeitmodelle möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Herzogtum Lauenburg · William Mazur",
+    "email": "w.mazur@Kreis-RZ.de",
+    "telefon": "04541 801-0465",
+    "bewerbungsportal": "https://www.kreis-rz.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz, Landrat: de.wikipedia.org/wiki/Kreis_Herzogtum_Lauenburg (abgerufen 15.10.2026)",
+    "Beschreibung, Benefits und Kontakt: Stellenausschreibung Leitung des Fachbereiches Ordnung und Gesundheit, https://interamt.de/koop/app/stelle?id=1500159 (API api.interamt.de/query/stellenangebot/1500159) (abgerufen 15.10.2026)"
+  ]
+}
