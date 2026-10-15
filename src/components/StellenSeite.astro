@@ -55,6 +55,9 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
 .st-suche button { padding: 10px 18px; border: 0; border-radius: 6px; background: #1d4ed8; color: #fff; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
 .st-suche .st-suche-reset { font-size: 13px; font-weight: 500; color: #1d4ed8; background: none; border: 0; border-radius: 0; cursor: pointer; padding: 0; text-decoration: underline; }
 .st-suche-info { font-size: 13px; color: #374151; margin-left: auto; }
+:global(.st-sucht) #stNav, :global(.st-sucht) #stIntro, :global(.st-sucht) #stCtaOben { display: none; }
+:global(.st-sucht) .st-main { padding-top: 20px; }
+#stCount { scroll-margin-top: 90px; }
 @media (max-width: 760px) { .st-suche form { grid-template-columns: 1fr 1fr; } .st-suche form > div:first-child { grid-column: 1 / -1; } .st-suche button { grid-column: 1 / -1; } }
 
 /* FILTER */
@@ -203,7 +206,7 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
 </div>
 
 <!-- NAVIGATION: Bundesland und Berufsfeld -->
-<div class="st-filter">
+<div class="st-filter" id="stNav">
   <div class="st-container st-nav">
     <div class="st-chips"><span class="st-filter-label">Bundesland:</span>
       <a href="/stellen/" class={!aktivLand && !aktivFeld ? 'an' : ''}>Alle<small>{alle.length}</small></a>
@@ -218,9 +221,9 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
 <!-- LISTE -->
 <div class="st-main">
   <div class="st-container">
-    {einleitung && <p class="st-intro">{einleitung}</p>}
+    {einleitung && <p class="st-intro" id="stIntro">{einleitung}</p>}
 
-    <div class="st-cta">
+    <div class="st-cta" id="stCtaOben">
       <div>
         <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b82f6;margin-bottom:6px">Für Arbeitgeber</p>
         <p><strong>Sie möchten eine Stelle ausschreiben?</strong><br>Stellen veröffentlichen, mit dem Personal-Cockpit gegen den Markt vergleichen, als Arbeitgeber sichtbar werden – im Arbeitgeberservice.</p>
@@ -287,6 +290,10 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
   const $ = (id) => document.getElementById(id);
   const liste = $('jobList'), zaehler = $('stCount'), seiten = $('stSeiten'), info = $('stInfo'), reset = $('stReset');
   const ursprung = liste.innerHTML, ursprungZahl = zaehler ? zaehler.textContent : '';
+  // Astro-Scoping: nachgeladene Karten brauchen dieselbe Stil-Kennung wie die serverseitig gerenderten
+  const cid = [...liste.attributes].map((a) => a.name).find((n) => n.startsWith('data-astro-cid'));
+  const cidKlasse = [...liste.classList].find((c) => c.startsWith('astro-'));
+  const stempeln = () => liste.querySelectorAll('*').forEach((e) => { if (cid) e.setAttribute(cid, ''); if (cidKlasse) e.classList.add(cidKlasse); });
   let index = null, timer = null;
   const norm = (t) => (t || '').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[*:\/()·,.-]+/g, ' ');
   const esc = (t) => String(t || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -305,7 +312,8 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
   async function laden() { if (!index) index = await (await fetch('/stellen/suche.json')).json(); return index; }
   async function suchen() {
     const w = werte();
-    if (!aktiv(w)) { liste.innerHTML = ursprung; if (zaehler) zaehler.textContent = ursprungZahl; if (seiten) seiten.hidden = false; info.textContent = ''; reset.hidden = true; url({ ...w, land: '', feld: '' }); return; }
+    document.body.classList.toggle('st-sucht', !!aktiv(w));
+    if (!aktiv(w)) { liste.innerHTML = ursprung; if (zaehler) zaehler.textContent = ursprungZahl; if (seiten) seiten.style.display = ''; info.textContent = ''; reset.hidden = true; url({ ...w, land: '', feld: '' }); return; }
     const daten = await laden();
     const woerter = norm(w.q).split(/\s+/).filter(Boolean);
     const treffer = daten.filter((s) => {
@@ -320,12 +328,13 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
     });
     liste.innerHTML = treffer.length ? treffer.slice(0, 200).map(karte).join('') :
       '<div class="st-empty"><h3>Keine passende Stelle gefunden</h3><p>Probieren Sie einen allgemeineren Begriff oder entfernen Sie einen Filter. Neue Anzeigen erscheinen täglich.</p></div>';
+    stempeln();
     if (zaehler) zaehler.textContent = treffer.length + (treffer.length === 1 ? ' Treffer' : ' Treffer') + (treffer.length > 200 ? ' · die ersten 200 angezeigt' : '');
-    if (seiten) seiten.hidden = true;
+    if (seiten) seiten.style.display = 'none';
     info.textContent = treffer.length + ' von ' + daten.length + ' Stellen';
     reset.hidden = false; url(w);
   }
-  f.addEventListener('submit', (e) => { e.preventDefault(); suchen(); });
+  f.addEventListener('submit', async (e) => { e.preventDefault(); await suchen(); if (zaehler) zaehler.scrollIntoView({ behavior: 'smooth', block: 'start' }); $('stQ').blur(); });
   f.addEventListener('change', suchen);
   $('stUnbef').addEventListener('change', suchen); $('stTz').addEventListener('change', suchen);
   $('stQ').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(suchen, 250); });
