@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-14",
+ "stand": "2026-10-15",
  "faelle": [
   {
    "kommune": "Dresden",
@@ -2831,6 +2831,19 @@
    "artikel": "/haushalt/haushaltssperre-2026-stadte/",
    "ebene": "gemeinde",
    "anzeige": "Büdingen"
+  },
+  {
+   "kommune": "Günzburg",
+   "land": "BY",
+   "art": "15.10.2026, Landrat Hans Reichhart, ab sofort; dazu Personalabbau",
+   "anlass": "aktuelle und bevorstehende Millionen-Belastungen, insbesondere durch die Bezirksumlage",
+   "quellen": [
+    "https://www.augsburger-allgemeine.de/guenzburg/landkreis-guenzburg-verhaengt-ab-sofort-haushaltssperre-115503357"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "kreis",
+   "anzeige": "Landkreis Günzburg",
+   "kreisname": "Günzburg"
   }
  ]
 }
