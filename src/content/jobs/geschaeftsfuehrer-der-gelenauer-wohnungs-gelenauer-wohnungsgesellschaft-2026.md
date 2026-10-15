@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-26"
 bewerbungslink: "https://www.gelenau.de/images/Rathaus/Stellenangebot/Stellenausschreibung_Gesch%C3%A4ftsf%C3%BChrer.pdf"
 schlagwoerter: ["Geschäftsführung", "Wohnungswirtschaft", "Tourismus", "Unternehmensstrategie", "Budgetverantwortung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-14"
 featured: false
 ---

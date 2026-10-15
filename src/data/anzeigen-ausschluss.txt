@@ -35,3 +35,5 @@ Abfallwirtschaftsbetrieb Kiel
 # 2026-10-15 Landkreis Goslar: Herausnahme + Löschung der Kontaktdaten gewünscht (Servicebereich Personal)
 Landkreis Goslar
 Landkreis Traunstein | 15.10.2026 | Entfernung erbeten (Personal, keine Veröffentlichung ohne Abstimmung)
+# 2026-10-15 Gelenauer Wohnungsgesellschaft mbH: Abmeldung → Herausnahme (MK 14.10.: konsequent)
+Gelenauer Wohnungsgesellschaft mbH
