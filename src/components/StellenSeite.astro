@@ -44,6 +44,19 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
 .st-hero-stat .n { font-size: 28px; font-weight: 700; color: #93c5fd; font-family: 'Playfair Display', serif; display: block; }
 .st-hero-stat .l { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.4); }
 
+/* SUCHE (MK 15.10.2026) */
+.st-suche { background: #f1f5f9; border-bottom: 1px solid #e2e8f0; padding: 18px 0; }
+.st-suche form { display: grid; grid-template-columns: minmax(220px, 2.4fr) 1fr 1fr 0.9fr auto; gap: 10px; align-items: end; }
+.st-suche label { display: block; font-size: 11px; font-weight: 700; color: #6b7280; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
+.st-suche input[type=search], .st-suche select { width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 14px; font-family: inherit; background: #fff; color: #1a2744; }
+.st-suche input[type=search]:focus, .st-suche select:focus { outline: none; border-color: #3b82f6; }
+.st-suche-opt { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 13px; color: #374151; align-items: center; }
+.st-suche-opt label { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; font-weight: 500; text-transform: none; letter-spacing: 0; color: #374151; margin: 0; cursor: pointer; }
+.st-suche button { padding: 10px 18px; border: 0; border-radius: 6px; background: #1d4ed8; color: #fff; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+.st-suche .st-suche-reset { font-size: 13px; font-weight: 500; color: #1d4ed8; background: none; border: 0; border-radius: 0; cursor: pointer; padding: 0; text-decoration: underline; }
+.st-suche-info { font-size: 13px; color: #374151; margin-left: auto; }
+@media (max-width: 760px) { .st-suche form { grid-template-columns: 1fr 1fr; } .st-suche form > div:first-child { grid-column: 1 / -1; } .st-suche button { grid-column: 1 / -1; } }
+
 /* FILTER */
 .st-filter { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 16px 0; position: sticky; top: 0; z-index: 40; }
 .st-filter-inner { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
@@ -158,6 +171,37 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
   </div>
 </div>
 
+<!-- SUCHE über alle laufenden Stellen (Index /stellen/suche.json) -->
+<div class="st-suche">
+  <div class="st-container">
+    <form id="stSuche" role="search" action="/stellen/" method="get">
+      <div>
+        <label for="stQ">Suchbegriff</label>
+        <input type="search" id="stQ" name="q" placeholder="z. B. Kämmerer, Controlling, Stadtwerke, Köln" autocomplete="off">
+      </div>
+      <div>
+        <label for="stLand">Bundesland</label>
+        <select id="stLand" name="land"><option value="">Alle Länder</option>{laender.map((l) => <option value={l.slug} selected={aktivLand === l.slug}>{l.name}</option>)}</select>
+      </div>
+      <div>
+        <label for="stFeld">Berufsfeld</label>
+        <select id="stFeld" name="feld"><option value="">Alle Berufsfelder</option>{felder.map((f) => <option value={f.slug} selected={aktivFeld === f.slug}>{f.name}</option>)}</select>
+      </div>
+      <div>
+        <label for="stEg">Entgelt ab</label>
+        <select id="stEg" name="eg"><option value="">beliebig</option>{[8, 9, 10, 11, 12, 13, 14, 15].map((n) => <option value={n}>EG/A {n}</option>)}</select>
+      </div>
+      <button type="submit">Suchen</button>
+    </form>
+    <div class="st-suche-opt">
+      <label><input type="checkbox" id="stUnbef" name="unbefristet"> nur unbefristet</label>
+      <label><input type="checkbox" id="stTz" name="teilzeit"> Teilzeit möglich</label>
+      <button type="button" class="st-suche-reset" id="stReset" hidden>Suche zurücksetzen</button>
+      <span class="st-suche-info" id="stInfo" aria-live="polite"></span>
+    </div>
+  </div>
+</div>
+
 <!-- NAVIGATION: Bundesland und Berufsfeld -->
 <div class="st-filter">
   <div class="st-container st-nav">
@@ -184,7 +228,7 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
       <a href="/arbeitgeberservice/" class="st-cta-btn">Zum Arbeitgeberservice →</a>
     </div>
 
-    <div class="st-count">{gesamt} {gesamt === 1 ? 'Stelle' : 'Stellen'}{seiten > 1 ? ` · Seite ${seite} von ${seiten}` : ''}</div>
+    <div class="st-count" id="stCount">{gesamt} {gesamt === 1 ? 'Stelle' : 'Stellen'}{seiten > 1 ? ` · Seite ${seite} von ${seiten}` : ''}</div>
 
     <div id="jobList">
       {liste.length === 0 ? (
@@ -220,7 +264,7 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
     </div>
 
     {seiten > 1 && (
-      <nav class="st-seiten" aria-label="Seiten">
+      <nav class="st-seiten" id="stSeiten" aria-label="Seiten">
         {seite > 1 && <a href={seitenUrl(seite - 1)} rel="prev">← Zurück</a>}
         {Array.from({ length: seiten }, (_, i) => i + 1).map((n) => n === seite ? <span class="an">{n}</span> : <a href={seitenUrl(n)}>{n}</a>)}
         {seite < seiten && <a href={seitenUrl(seite + 1)} rel="next">Weiter →</a>}
@@ -236,6 +280,64 @@ const seitenUrl = (n: number) => (n === 1 ? basis : `${basis}seite/${n}/`);
     </div>
   </div>
 </div>
+
+<script is:inline>
+(() => {
+  const f = document.getElementById('stSuche'); if (!f) return;
+  const $ = (id) => document.getElementById(id);
+  const liste = $('jobList'), zaehler = $('stCount'), seiten = $('stSeiten'), info = $('stInfo'), reset = $('stReset');
+  const ursprung = liste.innerHTML, ursprungZahl = zaehler ? zaehler.textContent : '';
+  let index = null, timer = null;
+  const norm = (t) => (t || '').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[*:\/()·,.-]+/g, ' ');
+  const esc = (t) => String(t || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const eg = (e) => { const m = /(?:\b(?:EG|E|A|TV[ -]?L?|TV[oö]D)\s*)(\d{1,2})\b/i.exec(e || ''); return m ? +m[1] : null; };
+  const frist = (d) => { const t = Math.ceil((new Date(d) - Date.now()) / 864e5); if (t <= 0) return ['Heute!', 1]; if (t === 1) return ['Noch 1 Tag', 1]; if (t < 8) return ['Noch ' + t + ' Tage', 1]; return ['bis ' + new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }), 0]; };
+  const karte = (s) => { const [ft, dr] = frist(s.fr); return '<a class="st-card' + (s.p !== 'basis' ? ' ' + s.p : '') + '" href="/stellen/' + s.id + '/"><div class="st-card-inner"><div>' +
+    (s.p !== 'basis' ? '<div class="st-card-badge ' + s.p + '">' + esc(s.pk) + '</div>' : '') +
+    '<div class="st-card-org">' + esc(s.o) + (s.ot ? ' · ' + esc(s.ot) : '') + '</div><div class="st-card-title">' + esc(s.t) + '</div>' +
+    '<div class="st-card-meta"><span class="st-card-meta-item">' + esc(s.ort) + ', ' + esc(s.land) + '</span><span class="st-card-meta-item">' + esc(s.b) + '</span><span class="st-card-meta-item">' + esc(s.e) + '</span><span class="st-card-meta-item">' + esc(s.bf) + '</span></div>' +
+    (s.sw && s.sw.length ? '<div class="st-tags">' + s.sw.slice(0, 4).map((t) => '<span class="st-tag">' + esc(t) + '</span>').join('') + '</div>' : '') +
+    '</div><div class="st-card-right"><div class="st-card-deadline' + (dr ? ' urgent' : '') + '">' + ft + '</div><span class="st-card-btn">Zur Stelle →</span></div></div></a>'; };
+  const werte = () => ({ q: $('stQ').value.trim(), land: $('stLand').value, feld: $('stFeld').value, eg: $('stEg').value, unbef: $('stUnbef').checked, tz: $('stTz').checked });
+  const vorbelegt = { land: $('stLand').value, feld: $('stFeld').value };
+  const aktiv = (w) => w.q || w.eg || w.unbef || w.tz || w.land !== vorbelegt.land || w.feld !== vorbelegt.feld;
+  const url = (w) => { const p = new URLSearchParams(); if (w.q) p.set('q', w.q); if (w.land) p.set('land', w.land); if (w.feld) p.set('feld', w.feld); if (w.eg) p.set('eg', w.eg); if (w.unbef) p.set('unbefristet', '1'); if (w.tz) p.set('teilzeit', '1'); const s = p.toString(); history.replaceState(null, '', location.pathname + (s ? '?' + s : '')); };
+  async function laden() { if (!index) index = await (await fetch('/stellen/suche.json')).json(); return index; }
+  async function suchen() {
+    const w = werte();
+    if (!aktiv(w)) { liste.innerHTML = ursprung; if (zaehler) zaehler.textContent = ursprungZahl; if (seiten) seiten.hidden = false; info.textContent = ''; reset.hidden = true; url({ ...w, land: '', feld: '' }); return; }
+    const daten = await laden();
+    const woerter = norm(w.q).split(/\s+/).filter(Boolean);
+    const treffer = daten.filter((s) => {
+      if (w.land && s.ls !== w.land) return false;
+      if (w.feld && s.f !== w.feld) return false;
+      if (w.eg) { const n = eg(s.e); if (n === null || n < +w.eg) return false; }
+      if (w.unbef && !/unbefristet/i.test(s.bf)) return false;
+      if (w.tz && !/teilzeit/i.test(s.b)) return false;
+      if (!woerter.length) return true;
+      const heu = norm([s.t, s.o, s.ot, s.ort, s.plz, s.land, s.e, (s.sw || []).join(' ')].join(' '));
+      return woerter.every((x) => heu.includes(x));
+    });
+    liste.innerHTML = treffer.length ? treffer.slice(0, 200).map(karte).join('') :
+      '<div class="st-empty"><h3>Keine passende Stelle gefunden</h3><p>Probieren Sie einen allgemeineren Begriff oder entfernen Sie einen Filter. Neue Anzeigen erscheinen täglich.</p></div>';
+    if (zaehler) zaehler.textContent = treffer.length + (treffer.length === 1 ? ' Treffer' : ' Treffer') + (treffer.length > 200 ? ' · die ersten 200 angezeigt' : '');
+    if (seiten) seiten.hidden = true;
+    info.textContent = treffer.length + ' von ' + daten.length + ' Stellen';
+    reset.hidden = false; url(w);
+  }
+  f.addEventListener('submit', (e) => { e.preventDefault(); suchen(); });
+  f.addEventListener('change', suchen);
+  $('stUnbef').addEventListener('change', suchen); $('stTz').addEventListener('change', suchen);
+  $('stQ').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(suchen, 250); });
+  reset.addEventListener('click', () => { $('stQ').value = ''; $('stEg').value = ''; $('stUnbef').checked = false; $('stTz').checked = false; $('stLand').value = vorbelegt.land; $('stFeld').value = vorbelegt.feld; suchen(); });
+  const p = new URLSearchParams(location.search);
+  if ([...p.keys()].length) {
+    if (p.get('q')) $('stQ').value = p.get('q'); if (p.get('land')) $('stLand').value = p.get('land'); if (p.get('feld')) $('stFeld').value = p.get('feld');
+    if (p.get('eg')) $('stEg').value = p.get('eg'); $('stUnbef').checked = p.has('unbefristet'); $('stTz').checked = p.has('teilzeit');
+    suchen();
+  }
+})();
+</script>
 
 <Footer />
 </Base>
