@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-11-08"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1499183"
 schlagwoerter: ["Untere Wasserbehörde", "Gewässerschutz", "Hochwasserschutz", "Wasserrecht", "Umwelt"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-14"
 featured: false
 ---

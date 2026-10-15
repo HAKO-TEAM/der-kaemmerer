@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-25"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1498987"
 schlagwoerter: ["Bußgeldstelle", "Ordnungswidrigkeiten", "Ordnungswesen", "Fachgruppenleitung", "Führung"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-11"
 featured: false
 ---

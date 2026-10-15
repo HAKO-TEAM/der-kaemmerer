@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-23"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1496950"
 schlagwoerter: ["Personal", "Organisation", "Eigenbetrieb", "Wirtschaftsplan", "Betriebsausschuss"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-14"
 featured: false
 ---
