@@ -19,7 +19,7 @@ const haeufig = Object.entries(jeEg).sort((a, b) => b[1] - a[1]).slice(0, 3).map
 
 const titel = `TVöD-Tabelle 2026 (VKA): Gehaltsatlas mit Entgelttabelle und offenen Stellen`;
 const beschreibung = `Entgelttabelle TVöD VKA ab ${ab} (+2,8 %) für alle Entgeltgruppen E 1 bis E 15 und Stufen 1 bis 6 – Monat und Jahr, Jahressonderzahlung ${jsz} %. Mit ${laufend.length.toLocaleString('de-DE')} offenen kommunalen Stellen je Entgeltgruppe.`;
-const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Entgelttabelle TVöD VKA 2026 mit Stellenmarkt je Entgeltgruppe',
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Entgelttabelle TVöD VKA 2026 mit Stellenmarkt je Entgeltgruppe', license: 'https://www.govdata.de/dl-de/by-2-0',
   description: beschreibung, url: 'https://derkaemmerer.de/gehalt/', temporalCoverage: `${TARIF.gueltig_ab}/${TARIF.gueltig_bis}`,
   creator: { '@type': 'Organization', name: 'Der Kämmerer', url: 'https://derkaemmerer.de/' }, isAccessibleForFree: true };
 ---

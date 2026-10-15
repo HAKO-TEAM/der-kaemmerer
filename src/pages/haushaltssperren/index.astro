@@ -21,7 +21,7 @@ const anzahlKreise = kommunen.filter((k) => k.ebene === 'kreis').length;
 const KLEIN = new Set(['BE', 'HB', 'HH']);   // Stadtstaaten: auf der Karte als beschriftete Marke
 const VERSATZ: Record<string, [number, number]> = { BB: [6, 26], NI: [0, 10], SH: [0, -6] };   // Zahl neben Stadtstaaten/Inseln setzen
 const pos = (l: string) => ({ x: flaechen[l].x + 3 + (VERSATZ[l]?.[0] || 0), y: flaechen[l].y + 3 + (VERSATZ[l]?.[1] || 0) });
-const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltssperren deutscher Kommunen seit 2025',
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltssperren deutscher Kommunen seit 2025', license: 'https://www.govdata.de/dl-de/by-2-0',
   description: `Von der Redaktion Der Kämmerer belegte Haushaltssperren in ${kommunen.length} Kommunen, jeweils mit Quelle. Stand ${stand}.`,
   url: 'https://derkaemmerer.de/haushaltssperren/', creator: { '@type': 'Organization', name: 'Der Kämmerer' }, dateModified: (sperren as any).stand,
   spatialCoverage: 'Deutschland', isAccessibleForFree: true };

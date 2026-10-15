@@ -7,7 +7,7 @@ export const URHEBER = { '@type': 'NewsMediaOrganization', '@id': 'https://derka
 
 /** Dataset-Objekt; nur übergebene Felder werden gesetzt. */
 export function datensatz({ name, description, url, raum, zeitraum, quelle, lizenz, geaendert }) {
-  const d = { '@context': 'https://schema.org', '@type': 'Dataset', name, description, url, creator: URHEBER, isAccessibleForFree: true, inLanguage: 'de-DE' };
+  const d = { '@context': 'https://schema.org', '@type': 'Dataset', name, description, url, creator: URHEBER, isAccessibleForFree: true, inLanguage: 'de-DE', license: 'https://www.govdata.de/dl-de/by-2-0' };
   if (raum) d.spatialCoverage = { '@type': 'Place', name: raum };
   if (zeitraum) d.temporalCoverage = zeitraum;
   if (quelle) d.isBasedOn = quelle;

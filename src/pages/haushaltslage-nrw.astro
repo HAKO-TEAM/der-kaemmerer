@@ -28,7 +28,7 @@ const ausgeglichen = a.zeilen.filter((x: any) => x.s === 1);
 const sperrenNw = kommunen.filter((k) => k.land === 'NW').length;
 const zitat = 'Quelle: Der Kämmerer (derkaemmerer.de/haushaltslage-nrw) auf Grundlage des Haushaltsstatus der Kommunen in NRW, Ministerium für Heimat, Kommunales, Bau und Digitalisierung NRW, Stand 31.12.2025';
 const suche = a.zeilen.map((x: any) => [x.name, x.s, x.u, x.url]);
-const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltslage der Gemeinden in Nordrhein-Westfalen',
+const ld = { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Haushaltslage der Gemeinden in Nordrhein-Westfalen', license: 'https://www.govdata.de/dl-de/by-2-0',
   description: `Amtlicher Haushaltsstatus aller ${a.gesamt} Gemeinden in NRW zum 31.12.2025: ${z[1]} mit ausgeglichenem Haushalt, ${a.ueberschuldet.length} überschuldet, ${hsk.length} in der Haushaltssicherung.`,
   url: 'https://derkaemmerer.de/haushaltslage-nrw/', creator: { '@type': 'Organization', name: 'Der Kämmerer' }, spatialCoverage: 'Nordrhein-Westfalen',
   temporalCoverage: '2025-12-31', isAccessibleForFree: true, isBasedOn: 'https://data.gov.de/suche/daten/haushaltsstatus-der-kommunen-in-nrw' };
