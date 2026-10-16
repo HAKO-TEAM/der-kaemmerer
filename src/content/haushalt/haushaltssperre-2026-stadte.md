@@ -2,7 +2,7 @@
 title: "Haushaltssperre 2026: Welche Städte betroffen sind – Liste, Rechtsgrundlagen, Folgen"
 beschreibung: "36 belegte Haushaltssperren 2025/2026 von Dortmund bis Dresden, dazu acht Landkreise: was gesperrt wird, was weiterläuft und was Kämmereien jetzt tun."
 ressort: haushalt
-datum: "2026-10-14"
+datum: "2026-10-16"
 minuten: 11
 autor: Redaktion
 featured: true
@@ -72,6 +72,7 @@ Aufgenommen sind nur Fälle, die eine Haushaltssperre, Ausgabensperre oder haush
 | Bergkamen | NRW | 22.09.2026, bis auf Weiteres | Mehraufwand im Sozial- und Pflegebereich | [14] |
 | Nidderau | HE | 23.09.2026, Magistrat; dazu Einstellungsstopp | verschärfte Finanzlage | [22] |
 | Augsburg | BY | September 2026 bis Jahresende | Soziales, Bau, Personal, Jugendhilfe | [5] |
+| Staßfurt | ST | Bericht 26.09.2026; Sperre des Bürgermeisters bleibt trotz Freigabe des Haushalts bestehen | Haushalt 2026 nur unter Auflagen genehmigt | [49] |
 | Dortmund | NRW | 01.10.2026, viertes Quartal | Defizitprognose rund 206 statt 54,9 Mio. €, Gewerbesteuer rund 116 Mio. € unter Plan | [6][7] |
 | Potsdam | BB | 01.10.2026, viertes Quartal; 5 % der Sach- und Dienstleistungen | Defizit 2024 von 45,55 Mio. €, liquide Mittel Mitte September rund 32,7 Mio. € | [8][9] |
 | Grevenbroich | NRW | Anfang Oktober 2026; Teilsperre bereits seit Ende Juli | Defizit 2026 knapp 11 statt 3,9 Mio. € | [16] |
@@ -222,3 +223,4 @@ Die folgenden Punkte sind redaktionelle Empfehlungen, abgeleitet aus den dokumen
 46. [Haushaltssperre in Aschaffenburg: Stadt fehlen Millionen](https://www.primavera24.de/aktuelles/news/haushaltssperre-in-aschaffenburg-stadt-fehlen-millionen) – Radio Primavera – 06.10.2026
 47. [Haushaltssperre in Pöttmes: Bürgermeister zieht bei den Finanzen die Notbremse](https://www.augsburger-allgemeine.de/aichach/haushaltssperre-in-poettmes-buergermeister-zieht-bei-den-finanzen-die-notbremse-115467169) – Augsburger Allgemeine – 09.10.2026
 48. [Stadt Büdingen verhängt Haushaltssperre für das laufende Haushaltsjahr](https://wetterau.news/wetteraukreis/b%C3%BCdingen/328-b%C3%BCdingen/34713-stadt-b%C3%BCdingen-verh%C3%A4ngt-haushaltssperre-f%C3%BCr-das-laufende-haushaltsjahr.html) – Vorsprung Wetterau (Pressemitteilung der Stadt Büdingen) – 13.10.2026
+49. [Haushaltssperre in Staßfurt: Bürgermeister Zok gibt grünes Licht für Haushalt](https://www.volksstimme.de/lokal/stassfurt/haushaltssperre-in-stassfurt-burgermeister-zok-gibt-grunes-licht-fur-haushalt-4326978) – Volksstimme – 26.09.2026

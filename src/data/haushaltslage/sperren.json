@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-15",
+ "stand": "2026-10-16",
  "faelle": [
   {
    "kommune": "Dresden",
@@ -2844,6 +2844,18 @@
    "ebene": "kreis",
    "anzeige": "Landkreis Günzburg",
    "kreisname": "Günzburg"
+  },
+  {
+   "kommune": "Staßfurt",
+   "land": "ST",
+   "art": "Haushaltssperre durch Bürgermeister René Zok, laut Bericht vom 26.09.2026 trotz Freigabe des Haushalts 2026 weiter in Kraft",
+   "anlass": "Haushalt 2026 nur unter Auflagen genehmigt, weiterer Konsolidierungsbedarf",
+   "quellen": [
+    "https://www.volksstimme.de/lokal/stassfurt/haushaltssperre-in-stassfurt-burgermeister-zok-gibt-grunes-licht-fur-haushalt-4326978"
+   ],
+   "artikel": "/haushalt/haushaltssperre-2026-stadte/",
+   "ebene": "gemeinde",
+   "anzeige": "Staßfurt"
   }
  ]
 }
