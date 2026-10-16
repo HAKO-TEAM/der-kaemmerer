@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-10-25"
 bewerbungslink: "https://interamt.de/koop/app/stelle?id=1498126"
 schlagwoerter: ["Haushalt", "Finanzmanagement", "Jahresabschluss", "NKF", "proDoppik"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-05"
 featured: false
 ---

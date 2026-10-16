@@ -37,3 +37,7 @@ Landkreis Goslar
 Landkreis Traunstein | 15.10.2026 | Entfernung erbeten (Personal, keine Veröffentlichung ohne Abstimmung)
 # 2026-10-15 Gelenauer Wohnungsgesellschaft mbH: Abmeldung → Herausnahme (MK 14.10.: konsequent)
 Gelenauer Wohnungsgesellschaft mbH
+# 2026-10-16 GWW Wiesbadener Wohnbaugesellschaft mbH: Abmeldung, Entfernung der Anzeige erbeten (Personalreferentin)
+GWW Wiesbadener Wohnbaugesellschaft mbH
+# 2026-10-16 Stadt Grevenbroich: Freundliche Absage, keine weiteren Anfragen (Personalservice) → Herausnahme (MK 14.10.: konsequent)
+Stadt Grevenbroich

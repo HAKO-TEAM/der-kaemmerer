@@ -14,7 +14,7 @@ bewerbungsschluss: "2026-11-29"
 bewerbungslink: "https://www.gww-wiesbaden.de/karriere-mobile/karriere-mobile-submenu/bilanzbuchhalter-m-w-d-rechnungswesen-als-sap-key-user-993"
 schlagwoerter: ["Bilanzbuchhaltung", "Rechnungswesen", "Jahresabschluss HGB", "SAP", "Wohnungswirtschaft"]
 paket: "Basis"
-aktiv: true
+aktiv: false
 datum: "2026-10-15"
 featured: false
 ---
