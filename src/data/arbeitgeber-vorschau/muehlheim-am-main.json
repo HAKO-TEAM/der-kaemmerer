@@ -1,0 +1,63 @@
+{
+  "slug": "muehlheim-am-main",
+  "name": "Stadt Mühlheim am Main",
+  "bundesland": "Hessen",
+  "einwohner": 29213,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Alexander Krey",
+  "token": "e512c902e4450135",
+  "claim": "Verwaltung gestalten in einer lebendigen Stadt am Main zwischen Offenbach und Hanau.",
+  "beschreibung": "Mühlheim am Main liegt am südwestlichen Mainufer im Landkreis Offenbach, verkehrsgünstig zwischen Offenbach am Main und Hanau im Rhein-Main-Gebiet. Die Stadt gliedert sich in drei Stadtteile und trägt seit 1939 Stadtrechte. Mühlheim zeichnet sich durch ein reges Vereinsleben, vielfältige Freizeit- und Bildungsangebote, aktives bürgerschaftliches Engagement und Naherholungsgebiete in der Umgebung aus. In der Stadtverwaltung erwarten Führungskräfte eingespielte Teams und anspruchsvolle Aufgaben mit Gestaltungsspielraum.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "29.213",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrechte",
+      "wert": "seit 1939",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "20,67 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Offenbach",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Leitungsfunktion mit Perspektive",
+      "beschreibung": "Anspruchsvolle Führungsaufgaben in einem eingespielten Team mit Entwicklung bis Entgeltgruppe 15 TVöD."
+    },
+    {
+      "titel": "Stellenteilung möglich",
+      "beschreibung": "Vollzeitstellen können grundsätzlich auch geteilt werden."
+    },
+    {
+      "titel": "Lage im Rhein-Main-Gebiet",
+      "beschreibung": "Verkehrsgünstiger Arbeitsort zwischen Offenbach und Hanau mit Naherholungsgebieten in der Nähe."
+    },
+    {
+      "titel": "Lebendige Stadtgesellschaft",
+      "beschreibung": "Reges Vereinsleben, vielfältige Freizeit- und Bildungsangebote und aktives bürgerschaftliches Engagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Magistrat der Stadt Mühlheim am Main · Fachbereich I, Personalwesen (Andrea Rinn-Herbert)",
+    "email": "personalwesen@stadt-muehlheim.de",
+    "telefon": "06108 601-138"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landkreis, Stadtspitze und Geschichte: https://de.wikipedia.org/wiki/Mühlheim_am_Main (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Fachbereich I – Allgemeine Dienste, https://interamt.de/koop/app/stelle?id=1498841 (API api.interamt.de/query/stellenangebot/1498841) (abgerufen 16.10.2026)"
+  ]
+}

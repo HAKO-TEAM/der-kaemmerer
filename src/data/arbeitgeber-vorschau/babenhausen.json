@@ -1,0 +1,63 @@
+{
+  "slug": "babenhausen",
+  "name": "Stadt Babenhausen",
+  "bundesland": "Hessen",
+  "einwohner": 17778,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Dominik Stadler",
+  "token": "f5940b4033218839",
+  "claim": "Die Finanzen einer traditionsreichen Stadt im Rhein-Main-Gebiet mitgestalten.",
+  "beschreibung": "Babenhausen liegt im südhessischen Landkreis Darmstadt-Dieburg, rund 34 Kilometer südöstlich von Frankfurt am Main, an der Gersprenz. Die Stadt zählt zu den waldreichsten Gemeinden Südhessens und gliedert sich in sechs Stadtteile. Schriftlich erwähnt wird Babenhausen erstmals 1236, die Stadtrechte verlieh König Adolf von Nassau im Jahr 1295. Die Stadtverwaltung bietet ein kollegiales Arbeitsumfeld mit vielseitigen Aufgaben und Gestaltungsspielraum, etwa im Fachbereich Finanzen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "17.778",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste schriftliche Erwähnung",
+      "wert": "1236",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte",
+      "wert": "1295",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "66,85 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristetes Arbeitsverhältnis nach TVöD mit Jahressonderzahlung, leistungsorientierter Prämie und Stufenmitnahme bei direktem Wechsel."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten, Vereinbarkeit von Beruf und Familie und teilweise Home-Office."
+    },
+    {
+      "titel": "Mehr freie Tage",
+      "beschreibung": "30 Tage Urlaub plus ein individueller Freistellungstag, dazu der 24.12. und 31.12. frei."
+    },
+    {
+      "titel": "Vorsorge und Extras",
+      "beschreibung": "Attraktive Betriebsrente, Arbeitgeberzuschuss zur Entgeltumwandlung, Bike-Leasing sowie Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Babenhausen · Personalabteilung, Lea Gröger",
+    "email": "lea.groeger@babenhausen.de",
+    "telefon": "06073 602-89"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landkreis, Stadtspitze und Geschichte: https://de.wikipedia.org/wiki/Babenhausen_(Hessen) (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung stellv. Leitung Fachbereich Finanzen, https://interamt.de/koop/app/stelle?id=1500111 (API api.interamt.de/query/stellenangebot/1500111) (abgerufen 16.10.2026)"
+  ]
+}

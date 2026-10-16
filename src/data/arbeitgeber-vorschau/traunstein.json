@@ -1,0 +1,73 @@
+{
+  "slug": "traunstein",
+  "name": "Stadt Traunstein",
+  "bundesland": "Bayern",
+  "einwohner": 20977,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dr. Christian Hümmer",
+  "token": "18649bef5ac3e3a7",
+  "claim": "Im Hauptort des Chiemgaus Verantwortung mit direktem Bezug zum Stadtalltag übernehmen.",
+  "beschreibung": "Traunstein ist Große Kreisstadt, Hochschulstadt und Hauptort des Chiemgaus, rund zehn Kilometer östlich des Chiemsees gelegen. Die Stadt wird 1245 erstmals urkundlich erwähnt und ist Sitz des gleichnamigen Landkreises. Die Stadtverwaltung bietet dauerhafte Aufgaben mit Verantwortung im Herzen der Stadt, eine fundierte Einarbeitung und gezielte Fortbildung. Partnerschaften mit Gap, Wesseling, Pinerolo und Haywards Heath prägen das offene Profil der Stadt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "20.977",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1245",
+      "icon": "📜"
+    },
+    {
+      "label": "Status",
+      "wert": "Große Kreisstadt",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "48,57 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Einarbeitung und Entwicklung",
+      "beschreibung": "Fundierte Einarbeitung sowie individuell abgestimmte Schulungen und Fortbildungen."
+    },
+    {
+      "titel": "Gleitzeit und Teilzeit",
+      "beschreibung": "Arbeitszeit- und Gleitzeitregelungen für die Vereinbarkeit von Beruf, Familie und Freizeit."
+    },
+    {
+      "titel": "Zusätzliche Absicherung",
+      "beschreibung": "Tarifliche Sonderzahlungen und arbeitgeberfinanzierte betriebliche Altersversorgung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Nutzung von EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrradleasing und vergünstigte Parkmöglichkeiten in Rathausnähe."
+    },
+    {
+      "titel": "Dauerhafte Perspektive",
+      "beschreibung": "Unbefristete Arbeitsverträge für Tarifbeschäftigte mit Entwicklungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachgebiet Personal und Organisation",
+    "email": "personal@stadt-traunstein.de",
+    "telefon": "0861 65-261",
+    "bewerbungsportal": "https://www.traunstein.de/stadt-buerger/aktuelles/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Status, Partnerstädte: https://de.wikipedia.org/wiki/Traunstein (abgerufen 16.10.2026)",
+    "Oberbürgermeister: https://www.traunstein.de/stadt-buerger/stadtpolitik/oberbuergermeister/ (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Bauaufsicht 3. QE, https://interamt.de/koop/app/stelle?id=1499093 (API api.interamt.de/query/stellenangebot/1499093) (abgerufen 16.10.2026)"
+  ]
+}

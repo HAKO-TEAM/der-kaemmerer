@@ -1,0 +1,71 @@
+{
+  "slug": "erding",
+  "name": "Landratsamt Erding",
+  "bundesland": "Bayern",
+  "einwohner": 140456,
+  "token": "41d2f7bfc56dbb9c",
+  "claim": "Einen wachsenden Landkreis vor den Toren Münchens als moderne Dienstleistungsbehörde mitgestalten.",
+  "beschreibung": "Der Landkreis Erding liegt im Nordosten Oberbayerns, rund 30 Kilometer nordöstlich von München, zwischen Erdinger Moos und Erdinger Holzland. Seit der Eröffnung des Flughafens München im Erdinger Moos 1992 ist der Kreis stark gewachsen und zieht neue Betriebe an. Er umfasst 26 Gemeinden, Sitz des Landratsamtes ist die Große Kreisstadt Erding. Das Landratsamt versteht sich als moderne Dienstleistungsbehörde mit sicheren und verantwortungsvollen Arbeitsplätzen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner Landkreis (31.12.2025)",
+      "wert": "140.456",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "26",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Flughafen München eröffnet",
+      "wert": "1992",
+      "icon": "✈️"
+    },
+    {
+      "label": "Regierungsbezirk",
+      "wert": "Oberbayern",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung im Rahmen der Servicezeiten und anteilige Mobilarbeit."
+    },
+    {
+      "titel": "Sachbezug",
+      "beschreibung": "Steuerfreier monatlicher Sachbezug in Höhe von 50 Euro."
+    },
+    {
+      "titel": "Leistungsprämien",
+      "beschreibung": "Leistungsbezogenes Prämiensystem."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Jährliches Fort- und Weiterbildungsangebot."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Angebote zur Gesundheitsförderung und Fahrradleasing."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Z1 – Personal",
+    "email": "bewerbung@lra-ed.de",
+    "telefon": "08122 58-1017",
+    "bewerbungsportal": "https://landkreis-erding.helixjobs.com/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, Gemeinden, Flughafen München 1992: https://de.wikipedia.org/wiki/Landkreis_Erding (abgerufen 16.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleiter Kfz-Zulassungsbehörde, https://interamt.de/koop/app/stelle?id=1499298 (API api.interamt.de/query/stellenangebot/1499298) (abgerufen 16.10.2026)"
+  ]
+}

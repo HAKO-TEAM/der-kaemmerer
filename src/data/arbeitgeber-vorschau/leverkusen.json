@@ -1,0 +1,72 @@
+{
+  "slug": "leverkusen",
+  "name": "Stadt Leverkusen",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 168299,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Stefan Hebbel",
+  "token": "3bd90ab0cdb69c36",
+  "claim": "In einer Großstadt am Rhein Verantwortung übernehmen, die groß denkt und familiär bleibt.",
+  "beschreibung": "Leverkusen ist eine kreisfreie Großstadt im Süden Nordrhein-Westfalens, unmittelbar nordöstlich von Köln, wo die Wupper in den Rhein mündet. Die Stadt wurde 1930 gegründet und erhielt 1975 durch den Zusammenschluss mit Opladen und weiteren Orten ihre heutige Gestalt. Bekannt ist sie als Standort des Chemparks und durch Bayer 04 Leverkusen. Die Stadtverwaltung versteht sich als nahbar und tatkräftig und bietet Raum, Verantwortung zu übernehmen und mitzuwachsen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "168.299",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtgründung",
+      "wert": "1930",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtbezirke",
+      "wert": "3",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Status",
+      "wert": "Kreisfreie Großstadt",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Vielzahl an Arbeitszeitmodellen, Überstundenausgleich, 30 Tage Urlaub sowie Heiligabend, Silvester und Rosenmontag arbeitsfrei; aufgabenorientiertes Arbeiten im Homeoffice."
+    },
+    {
+      "titel": "Wohnraum",
+      "beschreibung": "Unterstützung bei der Wohnraumvermittlung im Stadtgebiet Leverkusen."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Interne und externe Fort- und Weiterbildung einschließlich Bildungsurlaub."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Vielfältiges Angebot der Betrieblichen Gesundheitsförderung."
+    },
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Transparente Bezahlung nach Tarif, garantierte Jahressonderzahlung, vermögenswirksame Leistungen und zusätzliche Betriebsrente für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Rabatte",
+      "beschreibung": "Vergünstigtes Deutschlandticket als Jobticket für Tarifbeschäftigte und Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Personal und Organisation · Team Recruiting",
+    "telefon": "0214 406-11146",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1493474"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Oberbürgermeister (seit 2025), Stadtgründung 1930, Zusammenschluss 1975, Stadtbezirke, Lage: https://de.wikipedia.org/wiki/Leverkusen (abgerufen 16.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-NW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-NW (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Personalrecht und Projekte, https://interamt.de/koop/app/stelle?id=1493474 (API api.interamt.de/query/stellenangebot/1493474) (abgerufen 16.10.2026)"
+  ]
+}

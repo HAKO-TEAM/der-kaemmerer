@@ -1,0 +1,67 @@
+{
+  "slug": "kulmbach",
+  "name": "Landkreis Kulmbach",
+  "bundesland": "Bayern",
+  "einwohner": 70997,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Jonas Gleich",
+  "token": "1c775a20abdc6ad3",
+  "claim": "Haushalt und Liegenschaften eines Landkreises im Herzen Oberfrankens mitgestalten.",
+  "beschreibung": "Der Landkreis Kulmbach liegt in der Mitte Oberfrankens und gehört zur Metropolregion Nürnberg. Zwischen Frankenwald, Fichtelgebirge und Fränkischer Schweiz vereinigen sich hier Weißer und Roter Main zum Main. Mit 22 Gemeinden und einer starken Lebensmittelwirtschaft zählt der Kreis zu den wichtigsten Lebensmittelstandorten Bayerns. Das Landratsamt in Kulmbach versteht sich als moderne, dienstleistungsorientierte Verwaltung mit abwechslungsreichen und verantwortungsvollen Aufgaben.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "70.997",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "658,32 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreisangehörige Gemeinden",
+      "wert": "22",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Oberfranken · Metropolregion Nürnberg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherer Arbeitsplatz",
+      "beschreibung": "Unbefristete Beschäftigung in einer modernen, dienstleistungsorientierten Verwaltung."
+    },
+    {
+      "titel": "Zusätzliche Leistungen",
+      "beschreibung": "Jahressonderzahlung und Leistungsentgelt nach TVöD."
+    },
+    {
+      "titel": "Altersvorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge über die Zusatzversorgung des öffentlichen Dienstes."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Behördliches Gesundheitsmanagement mit i-gb Card und Dienstrad-Leasing."
+    },
+    {
+      "titel": "Parken und Kantine",
+      "beschreibung": "Kostenlose Mitarbeiterparkplätze und eine Kantine im Haus."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Kulmbach · Personalverwaltung",
+    "email": "karriere@landkreis-kulmbach.de",
+    "telefon": "09221 707-146"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Lage, Landrat (seit 2026): de.wikipedia.org/wiki/Landkreis_Kulmbach (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/in Kreiskämmerei, https://interamt.de/koop/app/stelle?id=1500864 (API api.interamt.de/query/stellenangebot/1500864) (abgerufen 16.10.2026)"
+  ]
+}

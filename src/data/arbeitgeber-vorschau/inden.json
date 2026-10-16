@@ -1,0 +1,62 @@
+{
+  "slug": "inden",
+  "name": "Gemeinde Inden",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 7572,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Stefan Pfennings",
+  "token": "5523683b6ed2353f",
+  "claim": "Eine Gemeinde im Kreis Düren in einem kleinen Team mit großer Eigenverantwortung mitgestalten.",
+  "beschreibung": "Inden liegt im Kreis Düren am Übergang von der Zülpicher zur Jülicher Börde und gliedert sich in sieben Ortsteile. Die Gemeinde ist vom Braunkohletagebau Inden geprägt, mit Inden/Altdorf ist ein neues Ortszentrum entstanden. Für die Folgelandschaft des Tagebaus liegt dem Gemeinderat seit 2006 ein Konzept für einen Freizeitsee vor. In der kleinen Verwaltung arbeiten die Beschäftigten in kleinen Teams mit hoher Eigenverantwortung und abwechslungsreichen Aufgaben.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.572",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "35,92 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Kreis",
+      "wert": "Düren",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Eigenverantwortung",
+      "beschreibung": "Sehr interessantes und abwechslungsreiches Arbeitsfeld mit hohem Maß an Eigenverantwortung in einem kleinen Team."
+    },
+    {
+      "titel": "Faire Eingruppierung",
+      "beschreibung": "Eingruppierung nach individueller Qualifikation und Erfahrung nach TVöD/VKA bzw. Beamtenrecht."
+    },
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitgestaltung."
+    },
+    {
+      "titel": "Vorsorge und Weiterbildung",
+      "beschreibung": "Attraktive betriebliche Altersvorsorge und umfassende Möglichkeiten der Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Inden · Personal (Desiree Fusari)",
+    "email": "personal@inden.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landkreis, Stadtspitze und Geschichte: https://de.wikipedia.org/wiki/Inden_(Rheinland) (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachbereichsleitung Bauen und Liegenschaften, https://interamt.de/koop/app/stelle?id=1499115 (API api.interamt.de/query/stellenangebot/1499115) (abgerufen 16.10.2026)"
+  ]
+}

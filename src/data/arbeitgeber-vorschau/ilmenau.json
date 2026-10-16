@@ -1,0 +1,64 @@
+{
+  "slug": "ilmenau",
+  "name": "Stadt Ilmenau",
+  "bundesland": "Thüringen",
+  "einwohner": 38695,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Dr. Daniel Schultheiß",
+  "token": "4eca5d799ee4efad",
+  "claim": "Die Goethe- und Universitätsstadt im Thüringer Wald gestalten und weiterentwickeln.",
+  "beschreibung": "Ilmenau liegt im Tal der Ilm am nordöstlichen Rand des Thüringer Waldes, etwa 33 Kilometer südsüdwestlich von Erfurt. Die Goethe- und Universitätsstadt ist die größte Stadt im Ilm-Kreis, Sitz der Technischen Universität und besitzt als große kreisangehörige Stadt einen besonderen Status in Thüringen. Erstmals urkundlich erwähnt wurde Ilmenau 1273. Die Stadtverwaltung verbindet eine historische Altstadt und reizvolle Natur mit Forschung, Kultur und Sport und bietet ihren Beschäftigten moderne Arbeitsplätze in einem wertschätzenden Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "38.695",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1273",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "198,69 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "Kernstadt und 16 Ortsteile",
+      "icon": "🏘️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sachbezug und Geburtstagsbonus",
+      "beschreibung": "Monatlich 50 Euro steuerfreier Sachbezugsgutschein, im Geburtstagsmonat zusätzlich 60 Euro."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge, vermögenswirksame Leistungen und Krankengeldzuschuss nach einem Jahr Beschäftigung."
+    },
+    {
+      "titel": "Planbare Arbeitszeit",
+      "beschreibung": "5-Tage-Woche mit Rahmenarbeitszeit 9 bis 15 Uhr und Dienstende freitags um 13 Uhr laut Dienstvereinbarung."
+    },
+    {
+      "titel": "Urlaub und Gesundheit",
+      "beschreibung": "30 Urlaubstage (ab 2027: 31), 24.12. und 31.12. frei, Hansefit-Firmenfitness und Fahrradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Ilmenau · Personal (Undine Rohkohl)",
+    "email": "personal@ilmenau.de",
+    "bewerbungsportal": "https://jobs.ilmenau.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landkreis, Stadtspitze und Geschichte: https://de.wikipedia.org/wiki/Ilmenau (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Amtsleitung Bau und Verkehr, https://interamt.de/koop/app/stelle?id=1500034 (API api.interamt.de/query/stellenangebot/1500034) (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter Tiefbau, https://interamt.de/koop/app/stelle?id=1495478 (API api.interamt.de/query/stellenangebot/1495478) (abgerufen 16.10.2026)"
+  ]
+}

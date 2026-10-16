@@ -1,0 +1,64 @@
+{
+  "slug": "heidenheim-an-der-brenz",
+  "name": "Stadt Heidenheim an der Brenz",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 50612,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Michael Salomo",
+  "token": "e2c985439b1cb118",
+  "claim": "In der Großen Kreisstadt und Hochschulstadt an der Brenz Verwaltung und Betriebe zukunftsfest weiterentwickeln.",
+  "beschreibung": "Heidenheim an der Brenz liegt im Osten Baden-Württembergs an der Grenze zu Bayern, zwischen Aalen und Ulm. Die Stadt ist Kreisstadt und größte Stadt des Landkreises Heidenheim, Mittelzentrum für den gesamten Landkreis und seit 1956 Große Kreisstadt. Die Stadtverwaltung entwickelt ihre Organisation aktiv weiter, etwa im Geschäftsbereich IuK und Organisation, der mit vier neuen Teams für die Zukunft ausgerichtet wird. Mit den Städtischen Betrieben verantwortet die Stadt zudem eigene Werkstätten, Straßen- und Gebäudeinstandhaltung sowie einen Ausbildungsbetrieb.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "50.612",
+      "icon": "👥"
+    },
+    {
+      "label": "Große Kreisstadt",
+      "wert": "seit 1956",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "107,09 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Heidenheim (Kreisstadt)",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Betriebliche Altersvorsorge",
+      "beschreibung": "Zusätzliche betriebliche Altersvorsorge und leistungsorientierte Bezahlung nach TVöD."
+    },
+    {
+      "titel": "Flexible Arbeitszeiten",
+      "beschreibung": "Gleitende und flexible Arbeitszeitregelungen zur Vereinbarkeit von Familie, Beruf und Pflege."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket und zum Jobrad."
+    },
+    {
+      "titel": "Fortbildung und Gesundheit",
+      "beschreibung": "Umfassendes Fortbildungsangebot zur persönlichen und fachlichen Weiterentwicklung sowie Gesundheitsmanagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadtverwaltung Heidenheim · Personal, Ulrike Wimme",
+    "email": "ulrike.wimme@heidenheim.de",
+    "bewerbungsportal": "https://www.heidenheim.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl (31.12.2025), Fläche, Landkreis, Stadtspitze und Geschichte: https://de.wikipedia.org/wiki/Heidenheim_an_der_Brenz (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Geschäftsbereich Werkstätten, Straßen- und Gebäudeinstandhaltung, https://interamt.de/koop/app/stelle?id=1480555 (API api.interamt.de/query/stellenangebot/1480555) (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Teamleitung IT-Betrieb, https://interamt.de/koop/app/stelle?id=1500550 (API api.interamt.de/query/stellenangebot/1500550) (abgerufen 16.10.2026)"
+  ]
+}

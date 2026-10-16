@@ -1,0 +1,64 @@
+{
+  "slug": "itzehoe",
+  "name": "Kreis Steinburg",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 132217,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Claudius Teske",
+  "token": "f4fc2b6a8fa07fb9",
+  "claim": "Kinderschutz und Jugendhilfe für 111 Gemeinden in der Metropolregion Hamburg gestalten.",
+  "beschreibung": "Der Kreis Steinburg mit Verwaltungssitz in Itzehoe gehört zur Metropolregion Hamburg und umfasst 111 Gemeinden in Schleswig-Holstein. Im Amt für Jugend, Familie und Sport arbeitet seit 2017 ein eigenes Kinderschutzteam nach einem standardisierten Verfahren. Die Kreisverwaltung bietet flexible Arbeitszeiten, alternierende Telearbeit und betriebliche Gesundheitsförderung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "132.217",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.055,7 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "111",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verwaltungssitz",
+      "wert": "Itzehoe",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und alternierende Telearbeit."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsförderung mit EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss für Fahrrad, E-Bike oder ÖPNV-Ticket."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Steinburg · Tanja Otto",
+    "email": "otto@steinburg.de",
+    "telefon": "04821 69597",
+    "bewerbungsportal": "https://www.steinburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Metropolregion, Landrat: de.wikipedia.org/wiki/Kreis_Steinburg (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Kinderschutzteam (m/w/d), https://interamt.de/koop/app/stelle?id=1495567 (API api.interamt.de/query/stellenangebot/1495567) (abgerufen 16.10.2026)"
+  ]
+}

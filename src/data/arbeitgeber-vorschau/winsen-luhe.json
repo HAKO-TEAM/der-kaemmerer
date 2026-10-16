@@ -1,0 +1,62 @@
+{
+  "slug": "winsen-luhe",
+  "name": "Landkreis Harburg",
+  "bundesland": "Niedersachsen",
+  "einwohner": 265727,
+  "token": "c86810cef068d65a",
+  "claim": "Kommunale Infrastruktur für 42 Gemeinden in der Metropolregion Hamburg mitgestalten.",
+  "beschreibung": "Der Landkreis Harburg mit Kreissitz in Winsen (Luhe) liegt im Norden Niedersachsens und gehört zur Metropolregion Hamburg. Er entstand 1932 aus den Kreisen Harburg und Winsen und umfasst heute 42 Gemeinden zwischen Elbe und Lüneburger Heide. Die Kreisverwaltung verbindet Fachaufgaben wie die Abwasserbeseitigung mit modernen Arbeitsformen, darunter mobiles Arbeiten und flexible Arbeitszeiten.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "265.727",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.248,44 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "42",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis seit",
+      "wert": "1932",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und mobiles Arbeiten."
+    },
+    {
+      "titel": "Zusätzliche freie Tage",
+      "beschreibung": "Bis zu vier zusätzliche Regenerations- bzw. Umwandlungstage."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Mobilität und Gesundheit",
+      "beschreibung": "HVV-JobTicket, Fahrradleasing, Gesundheitsmanagement und Hansefit."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Harburg · Rebecca Riedel",
+    "email": "r.riedel@lkharburg.de",
+    "telefon": "04171 693-1077",
+    "bewerbungsportal": "https://www.landkreis-harburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Entstehung 1932: de.wikipedia.org/wiki/Landkreis_Harburg (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiterin / Sachbearbeiter Beitragsrecht und Vertragsmanagement (m/w/d), https://interamt.de/koop/app/stelle?id=1498183 (API api.interamt.de/query/stellenangebot/1498183) (abgerufen 16.10.2026)"
+  ]
+}

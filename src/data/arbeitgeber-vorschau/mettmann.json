@@ -1,0 +1,64 @@
+{
+  "slug": "mettmann",
+  "name": "Kreis Mettmann",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 489147,
+  "buergermeistertitel": "Landrätin",
+  "buergermeister": "Bettina Warnecke",
+  "token": "0a17d73bac9470e7",
+  "claim": "Liegenschaften und Verwaltung im dichtest besiedelten Landkreis Deutschlands steuern.",
+  "beschreibung": "Der Kreis Mettmann liegt zwischen Düsseldorf, Köln, dem Ruhrgebiet und dem Bergischen Städtedreieck und umfasst zehn Städte. Nach Einwohnern ist er der achtgrößte Kreis Deutschlands, seine Bevölkerungsdichte ist die höchste aller Landkreise. Die zentrale Lage macht ihn zu einem starken Wirtschaftsstandort und zugleich zu einem beliebten Naherholungsgebiet. Die Kreisverwaltung bietet lebensphasenorientierte Arbeitszeitmodelle und ein Kita-Vorbelegungsrecht.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "489.147",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "407,21 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte",
+      "wert": "10",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Bevölkerungsdichte",
+      "wert": "1.201 je km²",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "30 Urlaubstage und lebensphasenorientierte Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Familie",
+      "beschreibung": "Vorbelegungsrecht in einer Kita in Mettmann."
+    },
+    {
+      "titel": "Mobilität und Vorteile",
+      "beschreibung": "Fahrradleasing, kostenfreies Parken und Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Mettmann · Christin Peters",
+    "email": "Christin.Peters@kreis-mettmann.de",
+    "telefon": "02104 99-2705",
+    "bewerbungsportal": "https://karriere-kreis-mettmann.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Städte, Dichte, Lage, Landrätin: de.wikipedia.org/wiki/Kreis_Mettmann (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung (m/w/d) für den Bereich infrastrukturelles Gebäudemanagement, https://interamt.de/koop/app/stelle?id=1500108 (API api.interamt.de/query/stellenangebot/1500108) (abgerufen 16.10.2026)"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "wildeshausen",
+  "name": "Landkreis Oldenburg",
+  "bundesland": "Niedersachsen",
+  "einwohner": 132176,
+  "token": "00b8c86525d6a678",
+  "claim": "Jugendhilfe und Familienleistungen im westlichen Niedersachsen verantwortlich gestalten.",
+  "beschreibung": "Der Landkreis Oldenburg mit Kreissitz in Wildeshausen liegt im westlichen Niedersachsen und umfasst 15 Gemeinden. Das Jugendamt bündelt Sozialen Dienst, Förderung und Prävention, Wirtschaftliche Jugendhilfe sowie ein Sozialzentrum und entwickelt seine Organisation laufend weiter. Beschäftigte profitieren von Homeoffice, flexiblen Arbeitszeiten und einer betriebseigenen Kinderkrippe.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "132.176",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "1.064,84 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "15",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Wildeshausen",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Freie Tage",
+      "beschreibung": "30 Urlaubstage, zusätzlich frei am 24.12. und 31.12."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Homeoffice und flexible Arbeitszeiten."
+    },
+    {
+      "titel": "Familie",
+      "beschreibung": "Betriebseigene Kinderkrippe."
+    },
+    {
+      "titel": "Vergütung und Extras",
+      "beschreibung": "Jahressonderzahlung, Leistungsprämie, Zusatzversorgung, Kantine, Firmenfitness und Zuschuss zum Deutschlandticket."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landkreis Oldenburg · Elke Neubauer",
+    "email": "elke.neubauer@oldenburg-kreis.de",
+    "telefon": "04431 85-295",
+    "bewerbungsportal": "https://www.oldenburg-kreis.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gemeinden, Kreissitz: de.wikipedia.org/wiki/Landkreis_Oldenburg (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung des Jugendamtes (m/w/d), https://interamt.de/koop/app/stelle?id=1499644 (API api.interamt.de/query/stellenangebot/1499644) (abgerufen 16.10.2026)"
+  ]
+}

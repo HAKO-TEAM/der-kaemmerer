@@ -1,0 +1,72 @@
+{
+  "slug": "gauting",
+  "name": "Gemeinde Gauting",
+  "bundesland": "Bayern",
+  "einwohner": 21684,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Maximilian Platzer",
+  "token": "f791ba7a32806cc1",
+  "claim": "Die Finanzen einer lebendigen Würmtal-Gemeinde vor den Toren Münchens mitverantworten.",
+  "beschreibung": "Gauting liegt im oberbayerischen Landkreis Starnberg südwestlich von München an der Würm. Schon in römischer Zeit kreuzten sich hier zwei Fernstraßen, an deren Knotenpunkt eine Siedlung entstand. Heute verbindet die Gemeinde die Nähe zur Landeshauptstadt mit dem Würmtal, dem Forstenrieder Park und dem Weg zum Starnberger See. Die Verwaltung setzt auf langfristige Zusammenarbeit, Teamgeist auf Augenhöhe und eine familienbewusste Personalpolitik.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "21.684",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "55,5 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Würmtal · Landkreis Starnberg",
+      "icon": "📍"
+    },
+    {
+      "label": "Qualitätssiegel",
+      "wert": "Familienpakt Bayern",
+      "icon": "👪"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sonderzahlungen",
+      "beschreibung": "Jahressonderzahlung, jährliche Leistungsprämie und Großraumzulage München."
+    },
+    {
+      "titel": "Zukunftssicherheit",
+      "beschreibung": "Altersvorsorge bei der Zusatzversorgungskasse der bayerischen Gemeinden, Entgeltumwandlung und Zuschuss zu vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Regelmäßiges und flexibles mobiles Arbeiten im Rahmen der betrieblichen Erfordernisse."
+    },
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten; die Gemeinde trägt das Qualitätssiegel Familienpakt Bayern."
+    },
+    {
+      "titel": "Weiterbildung",
+      "beschreibung": "Umfassende Einarbeitung sowie Fortbildungen und Schulungen für das nötige Fachwissen."
+    },
+    {
+      "titel": "Urlaub",
+      "beschreibung": "30 Tage Urlaub, dazu arbeitsfrei an Heiligabend und Silvester."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Gauting · Personalmanagement",
+    "email": "bewerbung@gauting.de",
+    "telefon": "089 89337-186",
+    "bewerbungsportal": "https://transfer.gauting.de/secuform/portal/online-bewerbung"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Lage, Römerzeit, Erster Bürgermeister (Stichwahl 2026): de.wikipedia.org/wiki/Gauting (abgerufen 16.10.2026)",
+    "Benefits, Familienpakt Bayern und Kontakt: Stellenausschreibung Steueramt Gewerbesteuer, https://interamt.de/koop/app/stelle?id=1500596 (API api.interamt.de/query/stellenangebot/1500596) (abgerufen 16.10.2026)"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "sandberg",
+  "name": "Gemeinde Sandberg",
+  "bundesland": "Bayern",
+  "einwohner": 2291,
+  "buergermeistertitel": "Erste Bürgermeisterin",
+  "buergermeister": "Sonja Reubelt",
+  "token": "c5e0160c04256e55",
+  "claim": "Eine kleine, modern ausgestattete Rhöngemeinde mit Perspektive auf die Geschäftsleitung führen.",
+  "beschreibung": "Sandberg liegt im unterfränkischen Landkreis Rhön-Grabfeld mitten im Biosphärenreservat Rhön, am Fuß des Kreuzbergs. Der Ort entstand 1691 als Rodungssiedlung, 1972 kamen Langenleiten, Schmalwasser und Waldberg hinzu. Die Gemeindeverwaltung ist klein und modern ausgestattet, die Aufgaben reichen von Zuwendungs- und Kreditwesen über Bauleitplanung bis zum Sitzungsdienst für den Gemeinderat. Wer hier einsteigt, arbeitet eigenverantwortlich, bringt eigene Ideen ein und kann die Leitung der Verwaltung übernehmen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.291",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsgründung (Rodung)",
+      "wert": "1691",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "28,02 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Biosphärenreservat Rhön",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Perspektive Geschäftsleitung",
+      "beschreibung": "Bei entsprechender Eignung Übernahme der Verwaltungsleitung als Geschäftsleiter/in (A 13), bei passender Qualifikation auch sofort."
+    },
+    {
+      "titel": "Eigenverantwortliches Arbeiten",
+      "beschreibung": "Vielseitige, anspruchsvolle Tätigkeit mit Raum für selbstständiges Handeln und eigene Ideen."
+    },
+    {
+      "titel": "Moderne kleine Verwaltung",
+      "beschreibung": "Kurze Wege in einer kleinen, modern ausgestatteten Gemeindeverwaltung."
+    },
+    {
+      "titel": "Einstieg für Absolventen",
+      "beschreibung": "Geeignet als erste Einsatzstelle in einer Kommune, Fortbildung zum Kommunalrecht ausdrücklich erwünscht."
+    },
+    {
+      "titel": "Leistungsgerechte Bezahlung",
+      "beschreibung": "Besoldung nach BayBesG (A 9 bis A 13) bzw. Vergütung nach TVöD (E 9b bis E 12), unbefristet in Vollzeit."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Gemeinde Sandberg · Erste Bürgermeisterin",
+    "email": "buergermeister@sandberg-rhoen.de",
+    "telefon": "09701 9100"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ortsgründung, Eingemeindungen: https://de.wikipedia.org/wiki/Sandberg_(Unterfranken) (abgerufen 16.10.2026)",
+    "Erste Bürgermeisterin, Telefon: https://www.sandberg-rhoen.de/ (abgerufen 16.10.2026)",
+    "Lage, Benefits und Kontakt: Stellenausschreibung 3. QE/Geschäftsleitung, https://interamt.de/koop/app/stelle?id=1498236 (API api.interamt.de/query/stellenangebot/1498236) (abgerufen 16.10.2026)"
+  ]
+}

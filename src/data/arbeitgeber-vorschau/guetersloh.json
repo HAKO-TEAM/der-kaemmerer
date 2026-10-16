@@ -1,0 +1,65 @@
+{
+  "slug": "guetersloh",
+  "name": "Kreis Gütersloh",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 362443,
+  "buergermeistertitel": "Landrätin",
+  "buergermeister": "Ina Laukötter",
+  "token": "2a850ddfc6471785",
+  "claim": "Ordnung und Integration im größten Kreis Ostwestfalen-Lippes mitgestalten.",
+  "beschreibung": "Der Kreis Gütersloh mit Kreissitz in Gütersloh liegt im Nordosten Nordrhein-Westfalens und ist nach Einwohnern der größte Kreis im Regierungsbezirk Detmold. Zu ihm gehören 13 Städte und Gemeinden in Ostwestfalen-Lippe. Die Kreisverwaltung bietet sichere Arbeitsplätze, flexible Arbeitszeiten und gezielte Weiterbildung und legt Wert auf die Vereinbarkeit von Familie, Pflege und Beruf.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "362.443",
+      "icon": "👥"
+    },
+    {
+      "label": "Fläche",
+      "wert": "969,21 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Städte und Gemeinden",
+      "wert": "13",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Regierungsbezirk",
+      "wert": "Detmold",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit",
+      "beschreibung": "Sichere, unbefristete Arbeitsplätze, auch in Teilzeit."
+    },
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und Vereinbarkeit von Familie, Pflege und Beruf."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Schulungs-, Weiterbildungs- und Karriereangebote."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreis Gütersloh · Bewerbermanagement, Bernd Elkmann",
+    "email": "bewerbermanagement@kreis-guetersloh.de",
+    "telefon": "05241 85-1133",
+    "bewerbungsportal": "https://www.kreis-guetersloh.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Gliederung, Regierungsbezirk, Landrätin: de.wikipedia.org/wiki/Kreis_Gütersloh (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung Sachgebiet Humanitärer Aufenthalt und Einbürgerung, https://interamt.de/koop/app/stelle?id=1500287 (API api.interamt.de/query/stellenangebot/1500287) (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Qualifizierte Sachbearbeitung Asyl / Rückkehrmanagement, https://interamt.de/koop/app/stelle?id=1499532 (API api.interamt.de/query/stellenangebot/1499532) (abgerufen 16.10.2026)"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "trier-saarburg",
+  "name": "Kreisverwaltung Trier-Saarburg",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 148645,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Stefan Metzdorf",
+  "token": "0ee9b74428a78043",
+  "claim": "Einen wachsenden Landkreis zwischen Mosel, Saar und Luxemburg mitgestalten.",
+  "beschreibung": "Der Landkreis Trier-Saarburg erstreckt sich vom Bitburger Land über die Mosel bis in den westlichen Hunsrück und grenzt an Luxemburg und das Saarland. Er entstand 1969 aus den Kreisen Trier und Saarburg; Sitz der Kreisverwaltung ist die kreisfreie Stadt Trier. Der Kreis wächst als Wirtschaftsstandort durch die Nähe zu Luxemburg und den Ausbau von Bildungs- und Kulturstätten. Rund 700 Mitarbeitende kümmern sich in der Kreisverwaltung um die Anliegen der Bürgerinnen und Bürger.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "148.645",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende Kreisverwaltung",
+      "wert": "rund 700",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Kreisangehörige Gemeinden",
+      "wert": "104",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Gründung",
+      "wert": "1969",
+      "icon": "📜"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit und Vergütung",
+      "beschreibung": "Unbefristete Stellen nach TVöD (VKA) mit Jahressonderzahlung und Leistungsentgelt."
+    },
+    {
+      "titel": "Strukturierte Einarbeitung",
+      "beschreibung": "Einarbeitung in eine verantwortungsvolle, vielseitige Tätigkeit in einem eingespielten Team."
+    },
+    {
+      "titel": "Familie, Beruf und Freizeit",
+      "beschreibung": "Gleitende Arbeitszeit und flexible Arbeitszeitmodelle."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Betriebliches Gesundheitsmanagement, Dienstradleasing und bezuschusstes Jobticket."
+    },
+    {
+      "titel": "Fortbildung und Vorsorge",
+      "beschreibung": "Individuelle Fort- und Weiterbildung sowie eine zusätzliche betriebliche Altersvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Trier-Saarburg · Personalamt",
+    "email": "personalamt@trier-saarburg.de",
+    "telefon": "0651 715-495"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Gemeinden, Gründung 1969, Lage, Landrat (seit 01.01.2022, Amtszeit acht Jahre): de.wikipedia.org/wiki/Landkreis_Trier-Saarburg (abgerufen 16.10.2026)",
+    "Mitarbeitende, Benefits und Kontakt: Stellenausschreibungen Zentrale Vergabestelle, https://interamt.de/koop/app/stelle?id=1492957, und Sitzungsdienst, https://interamt.de/koop/app/stelle?id=1499184 (API api.interamt.de/query/stellenangebot/…) (abgerufen 16.10.2026)"
+  ]
+}

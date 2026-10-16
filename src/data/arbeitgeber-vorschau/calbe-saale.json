@@ -1,0 +1,64 @@
+{
+  "slug": "calbe-saale",
+  "name": "Stadt Calbe (Saale)",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 7933,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Sven Hause",
+  "token": "32ecf0f96c6bbdf7",
+  "claim": "Die Finanzsteuerung einer traditionsreichen Saalestadt aktiv weiterentwickeln.",
+  "beschreibung": "Calbe (Saale) liegt im Salzlandkreis am linken Ufer der Saale, nahe dem geographischen Mittelpunkt Sachsen-Anhalts. Die Stadt wird 936 in einer Urkunde Ottos I. erstmals erwähnt, ihr Wahrzeichen ist der Roland auf dem Marktplatz. Von 1816 bis 1950 war Calbe Kreisstadt, seit 1990 ist Burgdorf in der Region Hannover Partnerstadt. In der Stadtverwaltung gestalten Beschäftigte die Finanzsteuerung mit, von der Gebührenkalkulation bis zur Kosten- und Leistungsrechnung für die gesamte Verwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "7.933",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "936",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "56,69 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Partnerstadt seit 1990",
+      "wert": "Burgdorf (Region Hannover)",
+      "icon": "🤝"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltende Finanzaufgabe",
+      "beschreibung": "Abwechslungsreiches Aufgabenfeld mit Verantwortung für Kalkulationen, Kosten- und Leistungsrechnung, Kennzahlen und Controlling."
+    },
+    {
+      "titel": "Tarifliche Vergütung",
+      "beschreibung": "Leistungsgerechte Vergütung nach TVöD bis Entgeltgruppe 9b, abhängig von Qualifikation und persönlichen Voraussetzungen."
+    },
+    {
+      "titel": "Vollzeit",
+      "beschreibung": "Vollzeitstelle mit 39 Wochenstunden am Arbeitsort Calbe (Saale)."
+    },
+    {
+      "titel": "Chancengleichheit",
+      "beschreibung": "Gleichbehandlung aller Geschlechter ist der Stadt ein wichtiges Anliegen, schwerbehinderte Bewerbende werden bei gleicher Eignung bevorzugt."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Calbe (Saale) · Bürgermeister",
+    "email": "bewerbung@calbe.de",
+    "telefon": "039291 56-416",
+    "bewerbungsportal": "https://www.calbe.de/aktuelles/stellenausschreibungen"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Ersterwähnung, Roland, Kreisstadt, Partnerstadt: https://de.wikipedia.org/wiki/Calbe_(Saale) (abgerufen 16.10.2026)",
+    "Bürgermeister, Benefits und Kontakt: Stellenausschreibung Sachbearbeiter/-in Finanzen, https://interamt.de/koop/app/stelle?id=1499305 (API api.interamt.de/query/stellenangebot/1499305) (abgerufen 16.10.2026)"
+  ]
+}

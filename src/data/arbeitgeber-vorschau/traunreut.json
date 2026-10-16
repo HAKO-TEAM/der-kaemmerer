@@ -1,0 +1,70 @@
+{
+  "slug": "traunreut",
+  "name": "Stadt Traunreut",
+  "bundesland": "Bayern",
+  "einwohner": 20381,
+  "token": "53a0402abb647c00",
+  "claim": "Eine junge Stadt im Herzen des Chiemgaus mit Gestaltungsspielraum weiterentwickeln.",
+  "beschreibung": "Traunreut im Landkreis Traunstein ist eine der jüngsten Städte Bayerns: Nach 1945 bauten Heimatvertriebene auf dem Gelände einer früheren Munitionsanstalt einen neuen Ort auf, 1949 siedelten sich Siemens und Heidenhain an, 1960 folgte die Stadterhebung. Heute ist Traunreut ein Industrie- und Wohnstandort mitten im Chiemgau. Die Stadtverwaltung bietet vielseitige, verantwortungsvolle Aufgaben in überschaubaren Teams und baut ihre Arbeitgebermarke gezielt aus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "20.381",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadterhebung",
+      "wert": "1960",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "45,06 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Chiemgau · Landkreis Traunstein",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Sicherheit und Perspektive",
+      "beschreibung": "Krisensicherer, unbefristeter Arbeitsplatz im öffentlichen Dienst mitten im Chiemgau."
+    },
+    {
+      "titel": "Attraktive Vergütung",
+      "beschreibung": "TVöD-VKA mit Jahressonderzahlung und leistungsorientierter Bezahlung, Zusatzversorgung und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Echte Flexibilität",
+      "beschreibung": "Großzügige Gleit- und Arbeitszeitregelungen, je nach Stelle mit mobilem Arbeiten."
+    },
+    {
+      "titel": "Gesundheit und Mobilität",
+      "beschreibung": "Gesundheitsmanagement mit EGYM Wellpass, vergünstigtes JobRad-Leasing und kostenfreie Parkplätze am Arbeitsplatz."
+    },
+    {
+      "titel": "Moderner Arbeitsplatz",
+      "beschreibung": "Ergonomisch ausgestattete Arbeitsplätze auf aktuellem technischen Stand."
+    },
+    {
+      "titel": "Wachsen und Entwickeln",
+      "beschreibung": "Strukturierte Einarbeitung im Team und individuell abgestimmte Fort- und Weiterbildung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Stadt Traunreut · SG 102 Personalamt",
+    "email": "personalamt@traunreut.de",
+    "telefon": "08669 857-348",
+    "bewerbungsportal": "https://www.mein-check-in.de/traunreut"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Einwohnerzahl, Fläche, Stadtgeschichte (Muna, Siemens/Heidenhain 1949, Stadterhebung 1960): de.wikipedia.org/wiki/Traunreut (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibungen Amtsleitung Haupt- und Rechtsamt, https://interamt.de/koop/app/stelle?id=1500566, und Leitung Bauhof, https://interamt.de/koop/app/stelle?id=1500484 (API api.interamt.de/query/stellenangebot/…) (abgerufen 16.10.2026)"
+  ]
+}

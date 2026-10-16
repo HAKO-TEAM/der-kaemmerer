@@ -1,0 +1,69 @@
+{
+  "slug": "torgau",
+  "name": "Landkreis Nordsachsen",
+  "bundesland": "Sachsen",
+  "einwohner": 198639,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Kai Emanuel",
+  "token": "cb8b9d7f3ca2ff73",
+  "claim": "Soziale und gesundheitliche Versorgung für rund 200.000 Menschen zwischen Leipzig und Elbe gestalten.",
+  "beschreibung": "Der Landkreis Nordsachsen entstand 2008 aus den Kreisen Torgau-Oschatz und Delitzsch und erstreckt sich vom Leipziger Raum bis an die Elbe. Mit rund 2.020 Quadratkilometern ist er flächenmäßig der viertgrößte Landkreis Sachsens. Sitz des Landratsamtes ist Schloss Hartenfels in der ehemaligen Residenzstadt Torgau, weitere Verwaltungsstandorte liegen in Delitzsch, Eilenburg und Oschatz. Die Kreisverwaltung setzt auf vereinfachte Abläufe, digitale Weiterentwicklung und eine wertschätzende Führungskultur.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "198.639",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "30",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "rund 2.020 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Landratsamt",
+      "wert": "Schloss Hartenfels, Torgau",
+      "icon": "🏰"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexible Arbeitszeit",
+      "beschreibung": "Eigenverantwortliche Arbeitszeitgestaltung mit der Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Angebote des Betrieblichen Gesundheitsmanagements."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobticket für den Weg zur Arbeit."
+    },
+    {
+      "titel": "Zusatzleistungen",
+      "beschreibung": "Sachbezugskarte und betriebliche Altersversorgung."
+    },
+    {
+      "titel": "Gestaltungsraum",
+      "beschreibung": "Verantwortung in einer Kreisverwaltung mit mehreren Standorten und breitem Aufgabenspektrum."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalberatung bbvl mbH im Auftrag des Landkreises · Ina Winter",
+    "email": "stelleninfo@bbvl.de",
+    "telefon": "0341 21374-30",
+    "bewerbungsportal": "https://bbvl.de/externe-stellen"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Landrat, Gründung 2008, Gemeinden, Fläche, Sitz Schloss Hartenfels: https://de.wikipedia.org/wiki/Landkreis_Nordsachsen (abgerufen 16.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-SN, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-SN (abgerufen 16.10.2026)",
+    "Standorte, Benefits und Kontakt: Stellenausschreibung Dezernent/in Soziales und Gesundheit, https://interamt.de/koop/app/stelle?id=1500167 (API api.interamt.de/query/stellenangebot/1500167) (abgerufen 16.10.2026)"
+  ]
+}

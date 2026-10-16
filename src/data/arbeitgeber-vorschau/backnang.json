@@ -1,0 +1,69 @@
+{
+  "slug": "backnang",
+  "name": "Stadt Backnang",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 38615,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Maximilian Friedrich",
+  "token": "21f35c23a07faf7d",
+  "claim": "Eine traditionsreiche Große Kreisstadt in der Region Stuttgart mitgestalten.",
+  "beschreibung": "Backnang liegt rund 30 Kilometer nordöstlich von Stuttgart an der Murr und ist Mittelzentrum im Rems-Murr-Kreis. Die erste gesicherte urkundliche Erwähnung als Stadt stammt von 1245; als frühere Gerberstadt ist Backnang bis heute bekannt. Seit 1956 ist Backnang Große Kreisstadt und bildet mit acht Nachbargemeinden eine vereinbarte Verwaltungsgemeinschaft. Die Stadtverwaltung bietet vielseitige Aufgaben in motivierten Teams mit gutem Betriebsklima.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "38.615",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste gesicherte Erwähnung als Stadt",
+      "wert": "1245",
+      "icon": "📜"
+    },
+    {
+      "label": "Große Kreisstadt seit",
+      "wert": "1956",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Verwaltungsgemeinschaft",
+      "wert": "mit acht Nachbargemeinden",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Mobilität",
+      "beschreibung": "50 Prozent ÖPNV-Zuschuss oder VVS-Job- bzw. Deutschlandticket, Zuschuss für einen Pkw-Stellplatz und Jobrad-Leasing."
+    },
+    {
+      "titel": "Backnanger Job-Kärtle",
+      "beschreibung": "Monatlicher Arbeitgeberzuschuss von 12,50 Euro."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fachbezogene Aus- und Fortbildungen."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Sport- und gesundheitsfördernde Angebote."
+    },
+    {
+      "titel": "Stadtbücherei",
+      "beschreibung": "Kostenfreie Ausleihe und Nutzung der digitalen Angebote der Stadtbücherei."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalstelle · Julian Volz",
+    "email": "personalstelle@backnang.de",
+    "telefon": "07191 894-422",
+    "bewerbungsportal": "https://www.backnang.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Oberbürgermeister (seit 2021), Lage, Erwähnung 1245, Große Kreisstadt 1956, Verwaltungsgemeinschaft, Gerberstadt: https://de.wikipedia.org/wiki/Backnang (abgerufen 16.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BW (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung der Straßenverkehrsbehörde, https://interamt.de/koop/app/stelle?id=1496559 (API api.interamt.de/query/stellenangebot/1496559) (abgerufen 16.10.2026)"
+  ]
+}

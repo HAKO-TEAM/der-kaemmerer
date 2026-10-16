@@ -1,0 +1,68 @@
+{
+  "slug": "burg",
+  "name": "Landkreis Jerichower Land",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 88356,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Steffen Burchhardt",
+  "token": "be922ac618770ec9",
+  "claim": "Eine moderne Kreisverwaltung zwischen Elbe, Fläming und Magdeburg mitgestalten.",
+  "beschreibung": "Der Landkreis Jerichower Land liegt im Nordosten Sachsen-Anhalts, östlich der Landeshauptstadt Magdeburg. Elbe, Elbe-Havel-Kanal und Mittellandkanal prägen die Landschaft, im Süden reicht der Kreis bis in den Fläming. In seiner heutigen Form besteht er seit der Kreisreform 2007 und umfasst acht Gemeinden; Sitz der Kreisverwaltung ist Burg. Die Verwaltung beschreibt sich als modern und bietet abwechslungsreiche Aufgaben von der Digitalisierung über die IT bis zur Beteiligungsverwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "88.356",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "8",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Heutiger Zuschnitt seit",
+      "wert": "2007",
+      "icon": "📜"
+    },
+    {
+      "label": "Kreisstadt",
+      "wert": "Burg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Familie und Beruf",
+      "beschreibung": "Zeitflexibles Arbeiten im Rahmen der dienstlichen Anforderungen mit flexiblem Auf- und Abbau von Mehrstunden."
+    },
+    {
+      "titel": "Tarif und Sicherheit",
+      "beschreibung": "Bezahlung nach TVöD-VKA mit Jahressonderzahlung, leistungsorientierter Bezahlung, vermögenswirksamen Leistungen und betrieblicher Altersversorgung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "30 Tage Urlaub",
+      "beschreibung": "30 Urlaubstage pro Jahr."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Maßnahmen des Betrieblichen Gesundheitsmanagements und Vergünstigungen in der Burger Schwimmhalle."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Breites Angebot an Fortbildungen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Kreisverwaltung Jerichower Land · Robert Döbberthin",
+    "email": "bewerbungen@lkjl.de",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1500374"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Landrat, Gemeinden, Kreisreform 2007, Lage: https://de.wikipedia.org/wiki/Landkreis_Jerichower_Land (abgerufen 16.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-ST, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-ST (abgerufen 16.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter Datenschutz/Wahlen, https://interamt.de/koop/app/stelle?id=1500374 (API api.interamt.de/query/stellenangebot/1500374) (abgerufen 16.10.2026)"
+  ]
+}
