@@ -2476,5 +2476,299 @@
   "ags": "08315102",
   "kommune": "Schluchsee",
   "seit": "2026-10-15"
+ },
+ {
+  "token": "b596a76c98307f01",
+  "ags": "05334000",
+  "kommune": "Städteregion Aachen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "c445554eaf71fe70",
+  "ags": "05566000",
+  "kommune": "Steinfurt",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "fdc26f0c7a1c50cd",
+  "ags": "05166000",
+  "kommune": "Viersen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "afa4f5792fefb0e5",
+  "ags": "05970000",
+  "kommune": "Siegen-Wittgenstein",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "06e89caec44e230f",
+  "ags": "05966000",
+  "kommune": "Olpe",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "bcbdcd3626b58a3c",
+  "ags": "05754008",
+  "kommune": "Gütersloh",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "df3ae5b75757d990",
+  "ags": "05554008",
+  "kommune": "Bocholt",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "0c9bc269e93d002a",
+  "ags": "05154036",
+  "kommune": "Kleve",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "e4cf982d9b5a816b",
+  "ags": "05362012",
+  "kommune": "Brühl",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "48bf4e6d334e06a4",
+  "ags": "05170020",
+  "kommune": "Kamp-Lintfort",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "fdfec2e2fe72191a",
+  "ags": "05358024",
+  "kommune": "Jülich",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "8bd198fa812b26ba",
+  "ags": "05154012",
+  "kommune": "Geldern",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "28dbe7f7f4153b72",
+  "ags": "05954008",
+  "kommune": "Ennepetal",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "74a0c01ad1443ef1",
+  "ags": "05378016",
+  "kommune": "Leichlingen (Rheinland)",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "a007fb9d9f143279",
+  "ags": "05954024",
+  "kommune": "Schwelm",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "6ea87c2ed1f409b3",
+  "ags": "05754044",
+  "kommune": "Verl",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "474bdd630f4d197f",
+  "ags": "05362004",
+  "kommune": "Bedburg",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "1408ef6b766a6d64",
+  "ags": "05382032",
+  "kommune": "Meckenheim",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "da01d42f4041a09b",
+  "ags": "05374052",
+  "kommune": "Wipperfürth",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "ab36f8eb0471d231",
+  "ags": "05362016",
+  "kommune": "Elsdorf",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "16a014d3cfcf7b8d",
+  "ags": "05758016",
+  "kommune": "Hiddenhausen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "58247d29b1ab108e",
+  "ags": "05758036",
+  "kommune": "Vlotho",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "ec469c31500ce043",
+  "ags": "05978016",
+  "kommune": "Holzwickede",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "bf49fe9ce52d1305",
+  "ags": "05374032",
+  "kommune": "Nümbrecht",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "836e66b8f31d2299",
+  "ags": "05766056",
+  "kommune": "Oerlinghausen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "0be44f7e5df98a13",
+  "ags": "05166008",
+  "kommune": "Grefrath",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "b35c68acc9d518f4",
+  "ags": "05382036",
+  "kommune": "Much",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "4e07b807603b6a1e",
+  "ags": "05758032",
+  "kommune": "Spenge",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "3632976ebc0aa5a2",
+  "ags": "05170036",
+  "kommune": "Schermbeck",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "c17bf6ccb2574148",
+  "ags": "05334020",
+  "kommune": "Monschau",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "5bbae88204eeb237",
+  "ags": "05954004",
+  "kommune": "Breckerfeld",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "75b31f99a59e1e0a",
+  "ags": "05762012",
+  "kommune": "Borgentreich",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "80a3d05edd72c7e5",
+  "ags": "05766060",
+  "kommune": "Schieder-Schwalenberg",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "d43ebd07cf8cf81f",
+  "ags": "05358020",
+  "kommune": "Inden",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "996cd9cd64671c31",
+  "ags": "05766024",
+  "kommune": "Dörentrup",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "b058a64d9c1c9604",
+  "ags": "05362000",
+  "kommune": "Rhein-Erft-Kreis",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "44a28132ce21fd8b",
+  "ags": "05162000",
+  "kommune": "Rhein-Kreis Neuss",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "7a15f4be82b706b5",
+  "ags": "05915000",
+  "kommune": "Hamm",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "ab35d6e381004142",
+  "ags": "05978040",
+  "kommune": "Werne",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "e59387decac83a40",
+  "ags": "05154032",
+  "kommune": "Kevelaer",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "70016b47434ee5a8",
+  "ags": "05382048",
+  "kommune": "Rheinbach",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "3669b26ebe68dc11",
+  "ags": "05378024",
+  "kommune": "Overath",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "d20d3872d33b1bfe",
+  "ags": "05170052",
+  "kommune": "Xanten",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "89488f86c41a8a16",
+  "ags": "05166004",
+  "kommune": "Brüggen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "7204f7ba5505f5c4",
+  "ags": "05166020",
+  "kommune": "Niederkrüchten",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "57636850265a37cc",
+  "ags": "05374016",
+  "kommune": "Hückeswagen",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "07170e5e4d9f4ac1",
+  "ags": "05566048",
+  "kommune": "Lotte",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "78e967726f11b7c2",
+  "ags": "05370008",
+  "kommune": "Gangelt",
+  "seit": "2026-10-16"
+ },
+ {
+  "token": "71453a2b4ea801b3",
+  "ags": "05374028",
+  "kommune": "Morsbach",
+  "seit": "2026-10-16"
  }
 ]
