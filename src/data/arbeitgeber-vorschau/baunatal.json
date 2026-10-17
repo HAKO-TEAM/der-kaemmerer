@@ -1,0 +1,71 @@
+{
+  "slug": "baunatal",
+  "name": "Magistrat der Stadt Baunatal",
+  "bundesland": "Hessen",
+  "einwohner": 27768,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Henry Richter",
+  "token": "a7a2f74d1975864b",
+  "claim": "Eine familienfreundliche Sportstadt und starken Industriestandort in Nordhessen mitgestalten.",
+  "beschreibung": "Baunatal ist eine Mittelstadt im Landkreis Kassel und übernimmt als Mittelzentrum in Nordhessen zahlreiche infrastrukturelle Aufgaben. Die Stadt entstand ab 1964 aus dem Zusammenschluss mehrerer Gemeinden in Folge der Ansiedlung des Volkswagenwerks und erhielt 1966 die Stadtrechte. Sie versteht sich als familienfreundliche Sportstadt mit optimaler Verkehrsanbindung. Die Stadtverwaltung beschäftigt über 600 Mitarbeiterinnen und Mitarbeiter und ist als familienfreundlicher Arbeitgeber zertifiziert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "27.768",
+      "icon": "👥"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1966",
+      "icon": "📜"
+    },
+    {
+      "label": "Beschäftigte der Stadtverwaltung",
+      "wert": "über 600",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Kassel",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Tarifgerechte Bezahlung nach TVöD inklusive Sonderzuwendung, betrieblicher Altersvorsorge und vermögenswirksamen Leistungen."
+    },
+    {
+      "titel": "Familienfreundlich",
+      "beschreibung": "Flexible, familienfreundlich gestaltbare Arbeitszeiten, zertifiziert mit dem Gütesiegel Familienfreundlicher Arbeitgeber."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliche Gesundheitsförderung, Betriebssport und Lebenslagencoaching."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Arbeitgeberzuschuss zum Deutschland-Ticket und E-Bike-Leasing."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten in einer guten Teamstruktur."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Produktbereich Personal · Marion Mihr",
+    "email": "Marion.Mihr@stadt-baunatal.de",
+    "telefon": "0561 4992-234",
+    "bewerbungsportal": "https://www.baunatal.de/de/aktuelles/stellenausschreibungen/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister (seit 17.09.2024), Lage, Entstehung 1964, Stadtrechte 1966, Volkswagenwerk: https://de.wikipedia.org/wiki/Baunatal (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-HE, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-HE (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Personal (m/w/d) (über 600 Beschäftigte), https://interamt.de/koop/app/stelle?id=1497787 (API api.interamt.de/query/stellenangebot/1497787) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung für die Zentrale Vergabestelle (m/w/d), https://interamt.de/koop/app/stelle?id=1495568 (API api.interamt.de/query/stellenangebot/1495568) (abgerufen 17.10.2026)",
+    "Stellenausschreibungen: https://www.baunatal.de/de/aktuelles/stellenausschreibungen/ (abgerufen 17.10.2026)"
+  ]
+}

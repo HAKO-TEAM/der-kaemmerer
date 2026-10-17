@@ -1,0 +1,70 @@
+{
+  "slug": "siegburg",
+  "name": "Kreisstadt Siegburg",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 42204,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Stefan Rosemann",
+  "token": "cefd142c560d2b8d",
+  "claim": "Zwischen Köln und Bonn die Kreisstadt am Michaelsberg weiterentwickeln.",
+  "beschreibung": "Siegburg ist Kreisstadt und Verwaltungssitz des Rhein-Sieg-Kreises und liegt zentral zwischen Köln, Bonn, dem Siebengebirge und dem Bergischen Land. Wahrzeichen ist der Michaelsberg mit der 1064 gegründeten Benediktinerabtei; das Stadtrecht erhielt Siegburg noch vor 1182. Der ICE-Halt Siegburg/Bonn macht die Stadt gut erreichbar; die Verwaltung arbeitet in einem vollständig sanierten Rathaus mit hochwertiger Ausstattung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "42.204",
+      "icon": "👥"
+    },
+    {
+      "label": "Gründung der Abtei Michaelsberg",
+      "wert": "1064",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht",
+      "wert": "vor 1182",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Anbindung",
+      "wert": "ICE-Halt Siegburg/Bonn",
+      "icon": "🚆"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitsplatz",
+      "beschreibung": "Vollständig saniertes Rathaus mit hochwertiger Büro- und IT-Ausstattung."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Jahressonderzahlung, leistungsorientierte Bezahlung und arbeitgeberfinanzierte Altersvorsorge."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible, familienfreundliche Arbeitszeiten und anteiliges mobiles Arbeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Dienst-E-Autos im Car-Sharing auch zur privaten Nutzung, Dienst-E-Bikes, Fahrradleasing und kostengünstiges Deutschland-Jobticket."
+    },
+    {
+      "titel": "Gesundheit und Weiterbildung",
+      "beschreibung": "Betriebliches Gesundheitsmanagement sowie gute Fort- und Weiterbildungsmöglichkeiten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Amt für Personalentwicklung und -verwaltung · Wolfgang Juckel",
+    "email": "bewerbungen@siegburg.de",
+    "telefon": "02241 102-1270",
+    "bewerbungsportal": "https://www.siegburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, Kreisstadt, Michaelsberg/Abtei 1064, Stadtrecht vor 1182: https://de.wikipedia.org/wiki/Siegburg (abgerufen 17.10.2026)",
+    "Bürgermeister: https://www.siegburg.de/ (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-NW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-NW (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Verkehrsplaner/in / Mobilitätsmanager/in, https://interamt.de/koop/app/stelle?id=1494183 (API api.interamt.de/query/stellenangebot/1494183) (abgerufen 17.10.2026)"
+  ]
+}

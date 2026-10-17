@@ -1,0 +1,74 @@
+{
+  "slug": "miesbach",
+  "name": "Landkreis Miesbach",
+  "bundesland": "Bayern",
+  "einwohner": 96924,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Jens Zangenfeind",
+  "token": "832efca1799cfacd",
+  "claim": "Den Landkreis zwischen Tegernsee, Schliersee und Mangfallgebirge mitgestalten.",
+  "beschreibung": "Der Landkreis Miesbach liegt im Süden Oberbayerns und bildet zusammen mit drei Nachbarlandkreisen das Bayerische Oberland. Zu den 17 Gemeinden des Kreises gehören bekannte Ziele wie Tegernsee und Schliersee; die Landschaft zwischen Voralpenland und Mangfallgebirge prägt die Region. Das Landratsamt in Miesbach verwaltet und entwickelt den Landkreis als Wirtschaftsstandort und Lebensraum weiter. Der Fachbereich Kreisfinanzen und Beteiligungen steuert Haushaltsplanung, Rechnungs- und Berichtswesen sowie das Beteiligungsmanagement. Als Mitglied im Familienpakt Bayern setzt das Landratsamt auf gute Rahmenbedingungen für Beruf und Familie.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "96.924",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden im Landkreis",
+      "wert": "17",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Region",
+      "wert": "Bayerisches Oberland",
+      "icon": "⛰️"
+    },
+    {
+      "label": "Kreissitz",
+      "wert": "Miesbach",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Zeit und Familie",
+      "beschreibung": "Flexible Arbeitszeiten und Arbeitszeitmodelle, Mobilarbeit je nach Tätigkeit, 30 Tage Urlaub plus freie Tage am 24.12. und 31.12. sowie Kinderferienbetreuung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Kostenlose Parkplätze, verkehrsgünstige Lage, Fahrradleasing und Zuschuss zum Deutschlandticket Job."
+    },
+    {
+      "titel": "Vorsorge und Rabatte",
+      "beschreibung": "Betriebliche Altersvorsorge und Mitarbeiterrabatte für viele Einkaufs- und Freizeitmöglichkeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Regelmäßige und individuelle Fortbildungen sowie bezahlte Weiterbildungen."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Moderne Gesundheitsmaßnahmen, Betriebsarzt und Work-Life-Plattform."
+    },
+    {
+      "titel": "Miteinander",
+      "beschreibung": "Offener und vertrauensvoller Umgang, Mitarbeiterevents und gemeinsame Ausflüge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Z 1 Personal · Sebastian Roth",
+    "email": "sebastian.roth@lra-mb.bayern.de",
+    "telefon": "08025 704-8125",
+    "bewerbungsportal": "https://www.landkreis-miesbach.de/B%C3%BCrgerservice-Informationen-Karriere/Karriere/Aktuelle-Stellenangebote/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Landrat (seit 2026), Lage, Bayerisches Oberland, 17 Gemeinden, Tegernsee/Schliersee/Mangfallgebirge: https://de.wikipedia.org/wiki/Landkreis_Miesbach (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Bayerisches Landesamt für Statistik): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Verwaltungsmitarbeiter (m/w/d) für Vergaberecht, https://interamt.de/koop/app/stelle?id=1496195 (API api.interamt.de/query/stellenangebot/1496195) (abgerufen 17.10.2026)",
+    "Karriereseite: https://www.landkreis-miesbach.de/B%C3%BCrgerservice-Informationen-Karriere/Karriere/ (abgerufen 17.10.2026)"
+  ]
+}

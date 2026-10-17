@@ -1,0 +1,69 @@
+{
+  "slug": "ebersbach-an-der-fils",
+  "name": "Stadt Ebersbach an der Fils",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 15550,
+  "buergermeistertitel": "Bürgermeisterin",
+  "buergermeister": "Manuela Raichle",
+  "token": "ae5ff50193a9e750",
+  "claim": "Zwischen Schurwald und Schwäbischer Alb eine zukunftsorientierte Stadtverwaltung mitgestalten.",
+  "beschreibung": "Ebersbach an der Fils ist die westlichste Stadt im Landkreis Göppingen und erstreckt sich vom Schurwald bis ins Vorland der Schwäbischen Alb. Der Ort wird 1170 erstmals in der Ursperger Chronik erwähnt; zur Stadt gehören sieben Teilgemeinden. Die Stadtverwaltung legt Wert auf ein kollegiales Miteinander, bietet Raum für eigene Akzente und einen modern ausgestatteten Arbeitsplatz im denkmalgeschützten Rathaus.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "15.550",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Erwähnung",
+      "wert": "1170",
+      "icon": "📜"
+    },
+    {
+      "label": "Teilgemeinden",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Göppingen",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Leistungsentgelt (LOB), Jahressonderzahlung und betriebliche Zusatzversorgung (ZVK-Betriebsrente)."
+    },
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "Flexible und familienfreundliche Arbeitszeiten im Gleitzeitmodell."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Persönliche und fachliche Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Arbeitsplatz",
+      "beschreibung": "Modern ausgestatteter Arbeitsplatz in einem denkmalgeschützten Gebäude mit optimaler Verkehrsanbindung."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Mit 70 Prozent bezuschusstes Jobticket für den ÖPNV und Dienstradleasing."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Abteilung Personal und Service · Frau Banholzer",
+    "email": "banholzer@stadt.ebersbach.de",
+    "telefon": "07163 161-2210",
+    "bewerbungsportal": "https://www.ebersbach.de/jobs"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeisterin, Lage, Ersterwähnung 1170, Teilgemeinden: https://de.wikipedia.org/wiki/Ebersbach_an_der_Fils (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BW (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Personalsachbearbeiter, https://interamt.de/koop/app/stelle?id=1500057 (API api.interamt.de/query/stellenangebot/1500057) (abgerufen 17.10.2026)"
+  ]
+}

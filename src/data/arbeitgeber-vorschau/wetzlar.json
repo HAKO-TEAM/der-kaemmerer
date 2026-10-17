@@ -1,0 +1,69 @@
+{
+  "slug": "wetzlar",
+  "name": "Stadt Wetzlar",
+  "bundesland": "Hessen",
+  "einwohner": 54865,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Manfred Wagner",
+  "token": "5a917366a019046b",
+  "claim": "Lebensqualität in der Optikstadt an der Lahn mitgestalten.",
+  "beschreibung": "Wetzlar ist Kreisstadt des Lahn-Dill-Kreises und eine der hessischen Städte mit Sonderstatus, die zusätzliche Aufgaben des Landkreises übernehmen. Die frühere Reichsstadt war von 1689 bis 1806 letzter Sitz des Reichskammergerichts; heute prägen optische, feinmechanische und elektrotechnische Industrie die Wirtschaft des Oberzentrums. Rund 1.000 Mitarbeitende der Stadtverwaltung sind erste Anlaufstelle für alle Anliegen zum Wohnen, Arbeiten und Leben in Wetzlar.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "54.865",
+      "icon": "👥"
+    },
+    {
+      "label": "Mitarbeitende der Stadtverwaltung",
+      "wert": "rund 1.000",
+      "icon": "🧑‍💼"
+    },
+    {
+      "label": "Sitz des Reichskammergerichts",
+      "wert": "1689–1806",
+      "icon": "⚖️"
+    },
+    {
+      "label": "Status",
+      "wert": "Sonderstatusstadt und Kreisstadt",
+      "icon": "🏛️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibilität",
+      "beschreibung": "Flexible Arbeitszeiten und vielseitige Möglichkeiten zur Vereinbarkeit von Familie und Beruf."
+    },
+    {
+      "titel": "Personalentwicklung",
+      "beschreibung": "Umfangreiche Möglichkeiten der Personalentwicklung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Förderung der Gesundheitsvorsorge inklusive EGYM Wellpass."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Gute Erreichbarkeit und kostenfreies Jobticket."
+    },
+    {
+      "titel": "Vorsorge und Wohnen",
+      "beschreibung": "Attraktive betriebliche Altersvorsorge und Unterstützung bei der Wohnungssuche."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Yhasmin Schäfer",
+    "email": "Yhasmin.Schaefer@wetzlar.de",
+    "telefon": "06441 991130",
+    "bewerbungsportal": "https://www.wetzlar.de/rathaus/aktuelles/stellenangebote/arbeitgebermarke/Stellenangebote.php"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Kreisstadt, Sonderstatus, Reichskammergericht 1689–1806, Wirtschaft, Oberbürgermeister (seit 2015): https://de.wikipedia.org/wiki/Wetzlar (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Hessisches Statistisches Landesamt): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-HE, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-HE (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeitung Debitorenbuchhaltung (m/w/d), https://interamt.de/koop/app/stelle?id=1497965 (API api.interamt.de/query/stellenangebot/1497965) (abgerufen 17.10.2026)"
+  ]
+}

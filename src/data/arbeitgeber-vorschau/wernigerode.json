@@ -1,0 +1,73 @@
+{
+  "slug": "wernigerode",
+  "name": "Stadt Wernigerode",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 31835,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Tobias Kascha",
+  "token": "18af67701a1ee008",
+  "claim": "Eine historische Fachwerkstadt am Harz mit Zukunft gestalten.",
+  "beschreibung": "Wernigerode ist eine Mittelstadt und staatlich anerkannter Erholungsort im Landkreis Harz. Die Stadt wurde 1121 erstmals urkundlich erwähnt und erhielt 1229 das Stadtrecht. Bekannt ist sie für ihr Rathaus am Marktplatz und das Schloss Wernigerode, heute ein Museum für Kunst- und Kulturgeschichte des 19. Jahrhunderts. Die Stadtverwaltung bietet abwechslungsreiche Aufgaben im öffentlichen Dienst mit familienfreundlichen Arbeitsbedingungen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "31.835",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1121",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1229",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Harz",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub",
+      "beschreibung": "Tariflicher Urlaubsanspruch von 31 Arbeitstagen."
+    },
+    {
+      "titel": "Vergütung",
+      "beschreibung": "Bezahlung nach TVöD zuzüglich Sonderzahlungen wie Leistungsentgelt und Jahressonderzahlung."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Familienfreundliche Arbeitsbedingungen mit Gleitzeitregelungen und Telearbeit."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobrad-Leasing."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Vielfältige Fortbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit und Vorsorge",
+      "beschreibung": "Betriebliche Gesundheitsförderung und betriebliche Altersversorgung über die Versorgungskasse Sachsen-Anhalt (KVSA)."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Sachgebiet Personal · Frau Tauche",
+    "email": "bewerbung@wernigerode.de",
+    "telefon": "03943 654-120",
+    "bewerbungsportal": "https://www.wernigerode.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Oberbürgermeister (gewählt 2022), Lage, Erwähnung 1121, Stadtrecht 1229, Rathaus, Schloss: https://de.wikipedia.org/wiki/Wernigerode (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-ST, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-ST (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Tiefbau und Gewässerunterhaltung (m/w/d), https://interamt.de/koop/app/stelle?id=1498943 (API api.interamt.de/query/stellenangebot/1498943) (abgerufen 17.10.2026)"
+  ]
+}

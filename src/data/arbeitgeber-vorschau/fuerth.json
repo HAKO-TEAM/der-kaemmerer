@@ -1,0 +1,69 @@
+{
+  "slug": "fuerth",
+  "name": "Stadt Fürth",
+  "bundesland": "Bayern",
+  "einwohner": 131344,
+  "buergermeistertitel": "Oberbürgermeister",
+  "buergermeister": "Thomas Jung",
+  "token": "ff6fb1481c96d668",
+  "claim": "In der Kleeblattstadt Fürth Grundlagen für Stadtentwicklung und Infrastruktur schaffen.",
+  "beschreibung": "Fürth ist eine kreisfreie Großstadt in Mittelfranken und nach Nürnberg und Würzburg die drittgrößte Stadt Frankens. Die Ansiedlung wird 1007 erstmals in einer Urkunde König Heinrichs II. genannt; das Kleeblatt im Stadtwappen gab der Stadt ihren Beinamen. Die Stadtverwaltung bekennt sich im Kodex gute Arbeit zu zukunftsfähiger, menschenwürdiger Arbeit und ist Mitglied der Charta der Vielfalt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "131.344",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Nennung",
+      "wert": "1007",
+      "icon": "📜"
+    },
+    {
+      "label": "Fläche",
+      "wert": "63,36 km²",
+      "icon": "🗺️"
+    },
+    {
+      "label": "Rang in Franken",
+      "wert": "drittgrößte Stadt",
+      "icon": "📊"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Bezahlung nach TVöD mit regelmäßigen Tariferhöhungen, Jahressonderzahlung und betrieblicher Altersversorgung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Umfangreiche Fortbildungsmöglichkeiten für die fachliche und persönliche Weiterentwicklung."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeitmodelle und die Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Arbeitgeberzuschuss zum preisgünstigen Jobticket oder zum Kauf eines E-Bikes."
+    },
+    {
+      "titel": "Arbeitskultur",
+      "beschreibung": "Mitglied der Charta der Vielfalt und Selbstverpflichtung im Kodex gute Arbeit."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Organisatorische Fragen · Karin Tarasconi",
+    "email": "karin.tarasconi@fuerth.de",
+    "telefon": "0911 974-3305",
+    "bewerbungsportal": "https://www.fuerth.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Oberbürgermeister (bestätigt 08.03.2026), Lage, Rang in Franken, Fläche, Ersterwähnung 1007, Kleeblatt: https://de.wikipedia.org/wiki/F%C3%BCrth und https://de.wikipedia.org/wiki/Thomas_Jung_(Politiker,_1961) (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung für die Bauvermessung, https://interamt.de/koop/app/stelle?id=1500998 (API api.interamt.de/query/stellenangebot/1500998) (abgerufen 17.10.2026)"
+  ]
+}

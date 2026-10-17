@@ -1,0 +1,73 @@
+{
+  "slug": "sonthofen",
+  "name": "Landkreis Oberallgäu",
+  "bundesland": "Bayern",
+  "einwohner": 155421,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Christian Wilhelm",
+  "token": "2812e9bc8c43155a",
+  "claim": "Im südlichsten Landkreis Deutschlands die Zukunft der Region Oberallgäu mitgestalten.",
+  "beschreibung": "Der Landkreis Oberallgäu ist der südlichste Landkreis Deutschlands und gehört zum bayerischen Regierungsbezirk Schwaben; Sitz der Kreisverwaltung ist Sonthofen. Er entstand am 1. Juli 1972 aus dem Landkreis Sonthofen und dem größten Teil des Landkreises Kempten (Allgäu) und umfasst heute 28 Gemeinden. Das Landratsamt am Oberallgäuer Platz bietet verantwortungsvolle Aufgaben, flexible Arbeitszeiten und mobiles Arbeiten in einer Region zwischen Voralpenland und Allgäuer Alpen.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "155.421",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "28",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis seit",
+      "wert": "1972",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Lage",
+      "wert": "südlichster Landkreis Deutschlands",
+      "icon": "🏔️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitszeit und Urlaub",
+      "beschreibung": "Flexible Arbeitszeitregelung mit Arbeitszeitausgleich, Mobilarbeit und 30 Tage Urlaub bei einer 5-Tage-Woche."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Zusätzliche Jahressonderzahlung, Leistungsprämie und betriebliche Altersvorsorge."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Individuelle Fort- und Weiterbildungsangebote, die über das Landratsamt finanziert werden können."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit Fitness- und Gesundheitskursen."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobrad-Angebot und verkehrsgünstige Lage des Landratsamts."
+    },
+    {
+      "titel": "Rund um den Arbeitsplatz",
+      "beschreibung": "Gemeinschaftsraum, Brotzeitverkauf, Mitarbeiterrabatte im Landkreis und Pflegezeit für Angehörige im Bedarfsfall."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Landratsamt Oberallgäu · Sandra Keilhauer",
+    "email": "sandra.keilhauer@lra-oa.bayern.de",
+    "telefon": "08321 612-1638",
+    "bewerbungsportal": "https://www.oberallgaeu.org/stellenausschreibungen"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Landrat (seit 1. Mai 2026), Lage, Kreissitz, Gründung 1972, Gemeinden: https://de.wikipedia.org/wiki/Landkreis_Oberallg%C3%A4u (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung der Gruppe Hochbau und Gebäudeunterhalt, https://interamt.de/koop/app/stelle?id=1497908 (API api.interamt.de/query/stellenangebot/1497908) (abgerufen 17.10.2026)"
+  ]
+}

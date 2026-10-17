@@ -1,0 +1,76 @@
+{
+  "slug": "ludwigsburg",
+  "name": "Landratsamt Ludwigsburg",
+  "bundesland": "Baden-Württemberg",
+  "einwohner": 534454,
+  "buergermeistertitel": "Landrat",
+  "buergermeister": "Dietmar Allgaier",
+  "token": "a5722218d3784e2b",
+  "claim": "Für einen der einwohnerstärksten Landkreise Deutschlands Großes bewegen.",
+  "beschreibung": "Der Landkreis Ludwigsburg liegt größtenteils im Neckarbecken in der Region Stuttgart; Sitz ist die ehemalige württembergische Residenzstadt Ludwigsburg. Mit 39 Gemeinden, darunter 18 Städte, zählt er zu den einwohnerstärksten Landkreisen Deutschlands. Das Landratsamt kümmert sich um Familien, Bildung, Soziales, Infrastruktur und Umwelt und bietet Einsteigern wie erfahrenen Fachkräften vielfältige Aufgaben in motivierten Teams.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "534.454",
+      "icon": "👥"
+    },
+    {
+      "label": "Gemeinden",
+      "wert": "39, davon 18 Städte",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Landkreis in heutiger Form seit",
+      "wert": "1973",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Rang nach Einwohnerzahl",
+      "wert": "siebthöchster Landkreis Deutschlands",
+      "icon": "📊"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeitmodelle und, abhängig vom Arbeitsplatz, die Möglichkeit zu mobiler Arbeit."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge und Jahressonderzahlung."
+    },
+    {
+      "titel": "Fort- und Weiterbildung",
+      "beschreibung": "Vielseitige interne und externe Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement und Betriebssportangebote."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Fahrtkostenzuschuss von 75 Prozent für das Deutschland-Ticket und Fahrradleasing."
+    },
+    {
+      "titel": "Familie und Alltag",
+      "beschreibung": "Betriebskindertagesstätte, Kantine und Kiosk am Dienstort Ludwigsburg sowie Corporate Benefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich Personal · Marina Kaesler",
+    "email": "Marina.Kaesler@landkreis-ludwigsburg.de",
+    "telefon": "07141 144-42951",
+    "bewerbungsportal": "https://www.landkreis-ludwigsburg.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Landrat, Lage, Kreissitz, Kreisreform 1973, 39 Gemeinden/18 Städte, Rang nach Einwohnerzahl: https://de.wikipedia.org/wiki/Landkreis_Ludwigsburg (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BW (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung des Sachgebietes 3 Kfz-Zulassung Service, https://interamt.de/koop/app/stelle?id=1495930 (API api.interamt.de/query/stellenangebot/1495930) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung der Stabsstelle Verwaltungsmodernisierung, https://interamt.de/koop/app/stelle?id=1501541 (API api.interamt.de/query/stellenangebot/1501541) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachbearbeiter wirtschaftliche Jugendhilfe, https://interamt.de/koop/app/stelle?id=1498491 (API api.interamt.de/query/stellenangebot/1498491) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Mitarbeiter Sozialplanung, https://interamt.de/koop/app/stelle?id=1501643 (API api.interamt.de/query/stellenangebot/1501643) (abgerufen 17.10.2026)"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "rengsdorf",
+  "name": "Verbandsgemeindeverwaltung Rengsdorf-Waldbreitbach",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 26664,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Pierre Fischer",
+  "token": "33e7c19c468c1d36",
+  "claim": "Für 20 Ortsgemeinden zwischen Westerwald und Wiedtal Verwaltung gestalten.",
+  "beschreibung": "Die Verbandsgemeinde Rengsdorf-Waldbreitbach im Landkreis Neuwied entstand zum 1. Januar 2018 aus dem freiwilligen Zusammenschluss der Verbandsgemeinden Rengsdorf und Waldbreitbach. Sie umfasst 20 eigenständige Ortsgemeinden; Verwaltungssitz ist Rengsdorf, in Waldbreitbach gibt es eine Verwaltungsstelle. Die Verwaltung bietet abwechslungsreiche Tätigkeiten mit flexiblen Arbeitszeiten in einem engagierten Team.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "26.664",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "20",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verbandsgemeinde seit",
+      "wert": "2018",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Neuwied",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitszeit",
+      "beschreibung": "Flexible Arbeitszeiten und, je nach Stelle, die Möglichkeit der mobilen Arbeit."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Zusätzliche Altersversorgung für Tarifbeschäftigte."
+    },
+    {
+      "titel": "Mitarbeiterrabatte",
+      "beschreibung": "Rabatte über das Portal Corporate Benefits."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Jobrad-Leasing-Angebot."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalbüro · Personalleiterin Kim Kurz",
+    "email": "personalamt@vg-rw.de",
+    "telefon": "02634 61-101",
+    "bewerbungsportal": "https://www.rengsdorf-waldbreitbach.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister (seit 1. Januar 2026), Entstehung 2018, Ortsgemeinden, Verwaltungssitz: https://de.wikipedia.org/wiki/Verbandsgemeinde_Rengsdorf-Waldbreitbach (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-RP, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-RP (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Mitarbeiter für die VG-Kasse/Zahlungsabwicklung, https://interamt.de/koop/app/stelle?id=1496910 (API api.interamt.de/query/stellenangebot/1496910) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stellvertretende Leitung des Bauamts, https://interamt.de/koop/app/stelle?id=1501358 (API api.interamt.de/query/stellenangebot/1501358) (abgerufen 17.10.2026)"
+  ]
+}

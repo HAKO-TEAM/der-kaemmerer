@@ -1,0 +1,69 @@
+{
+  "slug": "blankenburg-harz",
+  "name": "Stadt Blankenburg (Harz)",
+  "bundesland": "Sachsen-Anhalt",
+  "einwohner": 18765,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Heiko Breithaupt",
+  "token": "b549fa6a251ee5ab",
+  "claim": "Die Blütenstadt am Nordrand des Harzes aktiv mitgestalten.",
+  "beschreibung": "Blankenburg (Harz) liegt am Nordrand des Harzes zwischen Quedlinburg, Halberstadt und Wernigerode und ist staatlich anerkannter Erholungsort. Die Burg Blankenburg wird 1123 erstmals urkundlich erwähnt; die Stadt mit ihren sieben Ortsteilen ist als Blütenstadt bekannt. Rund 270 Mitarbeitende engagieren sich in der Stadtverwaltung für die Bürgerinnen und Bürger – bei einer familienfreundlichen Arbeitgeberin, die Vereinbarkeit und persönliche Entwicklung fördert.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "18.765",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung der Burg",
+      "wert": "1123",
+      "icon": "📜"
+    },
+    {
+      "label": "Ortsteile",
+      "wert": "7",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Mitarbeitende Stadtverwaltung",
+      "wert": "rund 270",
+      "icon": "🧑‍💼"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitszeit und Urlaub",
+      "beschreibung": "Flexible Arbeitszeitgestaltung mit Telearbeit, 30 Tage Erholungsurlaub (ab 2027: 31 Tage) sowie frei am 24. und 31. Dezember."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Tarifgerechte Vergütung mit Jahressonderzahlung und betrieblicher Zusatzversorgung."
+    },
+    {
+      "titel": "Einarbeitung und Weiterbildung",
+      "beschreibung": "Strukturierte Einarbeitung und bedarfsorientierte Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Präventions- und Gesundheitskurse, aktive Mittagspausen und ergonomische Arbeitsplatzausstattung."
+    },
+    {
+      "titel": "Extras",
+      "beschreibung": "Fahrradleasing, Freistunden zum Geburtstag und Corporate Benefits mit Mitarbeiterrabatten."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Jenny Hildebrand",
+    "email": "personal@blankenburg.de",
+    "telefon": "03944 943-219",
+    "bewerbungsportal": "https://www.blankenburg.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister, Lage, Erholungsort, Erwähnung der Burg 1123, Ortsteile: https://de.wikipedia.org/wiki/Blankenburg_(Harz) (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-ST, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-ST (abgerufen 17.10.2026)",
+    "Mitarbeitende, Blütenstadt, Benefits und Kontakt: Stellenausschreibung Teamleitung Bauhof, https://interamt.de/koop/app/stelle?id=1500816 (API api.interamt.de/query/stellenangebot/1500816) (abgerufen 17.10.2026)"
+  ]
+}

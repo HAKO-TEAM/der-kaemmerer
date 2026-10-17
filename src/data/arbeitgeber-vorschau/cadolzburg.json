@@ -1,0 +1,74 @@
+{
+  "slug": "cadolzburg",
+  "name": "Markt Cadolzburg",
+  "bundesland": "Bayern",
+  "einwohner": 11203,
+  "buergermeistertitel": "Erste Bürgermeisterin",
+  "buergermeister": "Sarah Höfler",
+  "token": "1b8ce30c7d84ce59",
+  "claim": "Im Team Sporch die Zukunft einer lebendigen Marktgemeinde gestalten.",
+  "beschreibung": "Cadolzburg ist ein Markt im Landkreis Fürth in Mittelfranken, etwa acht Kilometer westlich von Fürth. Namensgebend und zentral gelegen ist die Burg, mit der der Ort 1157 erstmals urkundlich erwähnt wurde; im fränkischen Dialekt heißt Cadolzburg „Sporch“. Die Marktgemeinde mit 16 Gemeindeteilen versteht sich als moderne und bürgernahe Verwaltung mit flachen Hierarchien und Raum für Ideen. Die Personalabteilung betreut neben dem Markt auch mehrere Zweckverbände.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "11.203",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1157",
+      "icon": "📜"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "16",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Lage",
+      "wert": "8 km westlich von Fürth",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Urlaub und Zeit",
+      "beschreibung": "31 Tage Urlaub, Heiligabend und Silvester frei, Zeitgutschrift am Faschingsdienstag und am Geburtstag, flexible Arbeitszeiten und Telearbeit."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Zuschuss zum Jobticket, Jobrad-Leasing und kostenlose Parkplätze."
+    },
+    {
+      "titel": "Gesundheit und Extras",
+      "beschreibung": "Gesundheitsmanagement, Mitarbeitergutscheine und -rabatte, Wasser und frisches Obst."
+    },
+    {
+      "titel": "Gemeinschaft",
+      "beschreibung": "Gemeinschaftsevents und Kindermitbringtag am Buß- und Bettag."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Umfangreiche Fort- und Weiterbildung, flache Hierarchien sowie Raum für Ideen und Kreativität."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung, Leistungsentgelt und betriebliche Zusatzversorgung nach TVöD."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Fachbereich I Zentrale Dienste, Personal & Organisation · Andreas Hertrich",
+    "email": "andreas.hertrich@cadolzburg.de",
+    "telefon": "09103 509-35",
+    "bewerbungsportal": "https://karriere.cadolzburg.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, Ersterwähnung 1157, Gemeindeteile, Dialektname, Erste Bürgermeisterin (seit 2024): https://de.wikipedia.org/wiki/Cadolzburg (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Bayerisches Landesamt für Statistik): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Personalsachbearbeiter/in (m/w/d) mit Schwerpunkt Entgeltabrechnung, https://interamt.de/koop/app/stelle?id=1497601 (API api.interamt.de/query/stellenangebot/1497601) (abgerufen 17.10.2026)",
+    "Ausschreibung im Karriereportal: https://karriere.cadolzburg.de/jobposting/336ac4b84b888c314ae31054e20cc586cafc4c910 (abgerufen 17.10.2026)"
+  ]
+}

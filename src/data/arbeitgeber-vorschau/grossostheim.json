@@ -1,0 +1,69 @@
+{
+  "slug": "grossostheim",
+  "name": "Markt Großostheim",
+  "bundesland": "Bayern",
+  "einwohner": 15762,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Ralf Herbst",
+  "token": "f31564e453ff8d56",
+  "claim": "Einen traditionsreichen Markt am Bayerischen Untermain mitgestalten.",
+  "beschreibung": "Großostheim ist ein Markt im unterfränkischen Landkreis Aschaffenburg am nordöstlichen Rand des Odenwalds in der Region Bayerischer Untermain. Erstmals erwähnt wird der Ort in einer Urkunde des Klosters Fulda aus den Jahren 780 bis 799. Die Gemeinde gliedert sich in vier Gemeindeteile. Aktuelle Vorhaben reichen von der Bauleitplanung über Gewerbegebietserweiterungen bis zu Städtebauförderung und einem Windpark-Projekt.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "15.762",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "780–799",
+      "icon": "📜"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "4",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Aschaffenburg",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltung",
+      "beschreibung": "Vielfältige Gestaltungsmöglichkeiten und Projekte mit eigenverantwortlichen Aufgabenfeldern."
+    },
+    {
+      "titel": "Mobiles Arbeiten",
+      "beschreibung": "Moderner Arbeitsplatz mit der Möglichkeit zum mobilen Arbeiten."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildung mit Kostenübernahme."
+    },
+    {
+      "titel": "Mobilität und Gesundheit",
+      "beschreibung": "Bike-Leasing und Gesundheitsangebote (i-gb Karte)."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Altersvorsorge."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalamt · Christian Hörber",
+    "email": "personalamt@grossostheim.de",
+    "telefon": "06026 50045120",
+    "bewerbungsportal": "https://www.grossostheim.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Erster Bürgermeister (gewählt 23.02.2025), Lage, Ersterwähnung 780–799, vier Gemeindeteile: https://de.wikipedia.org/wiki/Großostheim (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachbereichsleiter/in (m/w/d) Planen und Bauen, Umwelt, https://interamt.de/koop/app/stelle?id=1491578 (API api.interamt.de/query/stellenangebot/1491578) (abgerufen 17.10.2026)"
+  ]
+}

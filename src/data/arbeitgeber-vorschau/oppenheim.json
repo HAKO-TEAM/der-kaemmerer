@@ -1,0 +1,61 @@
+{
+  "slug": "oppenheim",
+  "name": "Verbandsgemeinde Rhein-Selz",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 40773,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Martin Groth",
+  "token": "5270d10ab72b579b",
+  "claim": "Eine bürgernahe Verwaltung in Rheinhessen neu denken.",
+  "beschreibung": "Die Verbandsgemeinde Rhein-Selz im Landkreis Mainz-Bingen umfasst die Städte Nierstein und Oppenheim sowie 18 weitere Ortsgemeinden; Verwaltungssitz ist Oppenheim. Sie entstand 2014 aus den Verbandsgemeinden Guntersblum und Nierstein-Oppenheim und ist die zweiteinwohnerstärkste Verbandsgemeinde in Rheinland-Pfalz. Die Verwaltung mit mehr als 200 Mitarbeitenden befindet sich in einem Transformationsprozess mit modernem Führungsverständnis und dem Leitbild einer bürgernahen, dienstleistungsorientierten Verwaltung.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "40.773",
+      "icon": "👥"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "20, davon 2 Städte",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Verbandsgemeinde seit",
+      "wert": "2014",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Mitarbeitende Verwaltung",
+      "wert": "mehr als 200",
+      "icon": "🧑‍💼"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Aktive Mitwirkung an Veränderungs- und Digitalisierungsprozessen beim Aufbau einer modernen Verwaltung."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Vielfältige Entwicklungsmöglichkeiten und Förderung der persönlichen und fachlichen Weiterentwicklung."
+    },
+    {
+      "titel": "Work-Life-Balance",
+      "beschreibung": "Großer Wert auf eine gute Work-Life-Balance in einer zeitgemäßen, modernen Arbeitsumgebung."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Claudia Schaad",
+    "email": "bewerbung@vg-rhein-selz.de",
+    "telefon": "06133 4901-224",
+    "bewerbungsportal": "https://www.vg-rhein-selz.de"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister, Ortsgemeinden, Verwaltungssitz, Bildung 2014, Rang in Rheinland-Pfalz: https://de.wikipedia.org/wiki/Verbandsgemeinde_Rhein-Selz (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-RP, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-RP (abgerufen 17.10.2026)",
+    "Mitarbeitende, Transformationsprozess, Benefits und Kontakt: Stellenausschreibung Stellvertretende Fachbereichsleitung Bürgerdienste, https://interamt.de/koop/app/stelle?id=1501404 (API api.interamt.de/query/stellenangebot/1501404) (abgerufen 17.10.2026)"
+  ]
+}

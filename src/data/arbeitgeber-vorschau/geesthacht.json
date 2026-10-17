@@ -1,0 +1,74 @@
+{
+  "slug": "geesthacht",
+  "name": "Stadt Geesthacht",
+  "bundesland": "Schleswig-Holstein",
+  "einwohner": 33955,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Olaf Schulze",
+  "token": "bb1f3bdf1c6a5b11",
+  "claim": "Die größte Stadt im Kreis Herzogtum Lauenburg an der Elbe mitgestalten.",
+  "beschreibung": "Geesthacht liegt in der Metropolregion Hamburg direkt am nördlichen Elbufer und ist die größte Stadt im Kreis Herzogtum Lauenburg. Der Ort wurde 1216 erstmals urkundlich erwähnt und erhielt 1924 das Stadtrecht; mit dem Helmholtz-Zentrum hereon ist Geesthacht zudem Forschungsstandort. Die Stadt bietet alle allgemeinbildenden Schulen, vielfältige Kinderbetreuung sowie ein breites Sport- und Kulturangebot. Die Mitarbeitenden der Stadtverwaltung haben sich ein gemeinsames Leitbild gegeben, das auf Respekt, Verlässlichkeit, Offenheit und Verantwortungsbewusstsein beruht.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "33.955",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1216",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrecht seit",
+      "wert": "1924",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Lage",
+      "wert": "Metropolregion Hamburg, an der Elbe",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibles Arbeiten",
+      "beschreibung": "Flexible Arbeitszeiten und Homeoffice, sofern mit den dienstlichen Belangen vereinbar."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Deutschlandticket für 29,85 Euro, Mobilitätszuschuss, Fahrradkauf und -leasing sowie Elektroautos und Fahrräder für dienstliche Wege."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Qualifizierte Fortbildungen und Weiterentwicklungsmöglichkeiten als Bestandteil der Personalentwicklung."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Innerbetriebliche Angebote zur Gesundheitsförderung."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Jahressonderzahlung, Sonderzahlung nach § 18a TVöD und betriebliche Zusatzversorgung."
+    },
+    {
+      "titel": "Mitarbeitendenbenefits",
+      "beschreibung": "Modernes, innovatives Arbeitsumfeld mit zusätzlichen Mitarbeitendenbenefits."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Petra Mohr",
+    "email": "bewerbung@geesthacht.de",
+    "telefon": "04152 13-372",
+    "bewerbungsportal": "https://interamt.de/koop/app/stelle?id=1494530"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, größte Stadt im Kreis, Ersterwähnung 1216, Stadtrecht 1924, Forschungsstandort, Bürgermeister (seit 2016): https://de.wikipedia.org/wiki/Geesthacht (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Statistikamt Nord): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-SH, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-SH (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Teamleitung Interner Service (m/w/d), https://interamt.de/koop/app/stelle?id=1498641 (API api.interamt.de/query/stellenangebot/1498641) (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachdienstleitung Bauordnung (m/w/d), https://interamt.de/koop/app/stelle?id=1494530 (API api.interamt.de/query/stellenangebot/1494530) (abgerufen 17.10.2026)"
+  ]
+}

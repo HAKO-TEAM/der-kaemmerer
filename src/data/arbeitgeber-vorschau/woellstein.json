@@ -1,0 +1,69 @@
+{
+  "slug": "woellstein",
+  "name": "Verbandsgemeinde Wöllstein",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 11973,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Johannes Brüchert",
+  "token": "0320115ba681297d",
+  "claim": "Eine rheinhessische Verbandsgemeinde mit acht Ortsgemeinden zukunftsfest gestalten.",
+  "beschreibung": "Die Verbandsgemeinde Wöllstein liegt in Rheinhessen im Landkreis Alzey-Worms, etwa zwischen Bad Kreuznach und Alzey an der A 61. Sie entstand 1972 im Zuge der rheinland-pfälzischen Verwaltungsreform und umfasst acht eigenständige Ortsgemeinden. Seit Mai 2025 arbeitet die Verwaltung wieder im kernsanierten, denkmalgeschützten Verwaltungsgebäude in Wöllstein. Zu ihren Aufgaben gehören unter anderem das Gebäudemanagement, das Freizeit- und Erlebnisbad Wöllstein sowie Energiemanagement und Klimaschutz.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "11.973",
+      "icon": "👥"
+    },
+    {
+      "label": "Gegründet",
+      "wert": "1972",
+      "icon": "📜"
+    },
+    {
+      "label": "Ortsgemeinden",
+      "wert": "8",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Landkreis",
+      "wert": "Alzey-Worms",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Verantwortungsvolle Aufgaben mit Raum, Bereiche von Beginn an aufzubauen und weiterzuentwickeln."
+    },
+    {
+      "titel": "Perspektive",
+      "beschreibung": "Langfristige berufliche Perspektive in einer modernen Kommunalverwaltung mit kollegialem Team."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Tarifliche bzw. beamtenrechtliche Vergütung inklusive Jahressonderzahlung, Leistungsentgelt und Zusatzversorgung (ZVK)."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Persönliche und fachliche Fort- und Weiterbildung."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Flexible Arbeitszeiten und zeitweise Arbeit im Homeoffice."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personalverwaltung · Annette Faßbinder",
+    "email": "bewerbungen@vg-woellstein.org",
+    "telefon": "06703 302-217",
+    "bewerbungsportal": "https://www.woellstein.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister (seit 01.01.2026), Lage, Gründung 1972, acht Ortsgemeinden, Verwaltungssitz: https://de.wikipedia.org/wiki/Verbandsgemeinde_Wöllstein (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-RP, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-RP (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Sachgebietsleitung Liegenschaften (m/w/d), https://interamt.de/koop/app/stelle?id=1498792 (API api.interamt.de/query/stellenangebot/1498792) (abgerufen 17.10.2026)"
+  ]
+}

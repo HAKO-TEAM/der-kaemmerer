@@ -1,0 +1,65 @@
+{
+  "slug": "montabaur",
+  "name": "Stadt Montabaur",
+  "bundesland": "Rheinland-Pfalz",
+  "einwohner": 14937,
+  "buergermeistertitel": "Stadtbürgermeisterin",
+  "buergermeister": "Melanie Leicher",
+  "token": "1fb9c61052911194",
+  "claim": "Die Kreisstadt des Westerwaldkreises mit Kultur und Bildung bereichern.",
+  "beschreibung": "Montabaur ist Kreisstadt des Westerwaldkreises, Mittelzentrum und Verwaltungssitz der Verbandsgemeinde Montabaur. Die Geschichte reicht bis 959 zurück, als das heutige Schloss erstmals urkundlich erwähnt wurde; 1291 erhielt Montabaur die Stadtrechte. Überregional bekannt sind das Schloss, das Outlet-Center und der ICE-Bahnhof an der Schnellfahrstrecke Köln–Rhein/Main. Die Stadtbibliothek im Zentrum ist mit rund 35.000 Besuchen im Jahr ein gern besuchter Ort.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "14.937",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung (Kastell Humbach)",
+      "wert": "959",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1291",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Bahnanbindung",
+      "wert": "ICE-Bahnhof Köln–Rhein/Main",
+      "icon": "🚄"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Zusatzversorgung",
+      "beschreibung": "Anschluss an eine betriebliche Zusatzversorgungskasse."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Betriebliches Gesundheitsmanagement mit breitem Angebot, unter anderem EGYM, JobRad und Vergünstigungen bei der VHS."
+    },
+    {
+      "titel": "Gestaltungsspielraum",
+      "beschreibung": "Vielfältige Gestaltungsmöglichkeiten, eigenverantwortliches Arbeiten und eine sinnstiftende Tätigkeit mit gesellschaftlichem Mehrwert."
+    },
+    {
+      "titel": "Teilzeit",
+      "beschreibung": "Stellenbesetzung auch in Teilzeit möglich."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Verbandsgemeindeverwaltung Montabaur, Personal und Organisation · Ann-Cathrin Berchem",
+    "email": "aberchem@montabaur.de",
+    "telefon": "02602 126-362",
+    "bewerbungsportal": "https://www.vg-montabaur.de/aktuelles/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Kreisstadt, Mittelzentrum, Ersterwähnung 959, Stadtrechte 1291, ICE-Bahnhof, Stadtbürgermeisterin (seit 2024): https://de.wikipedia.org/wiki/Montabaur (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Statistisches Landesamt Rheinland-Pfalz): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-RP, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-RP (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Leitung der Stadtbibliothek (m/w/d), https://interamt.de/koop/app/stelle?id=1500242 (API api.interamt.de/query/stellenangebot/1500242) (abgerufen 17.10.2026)"
+  ]
+}

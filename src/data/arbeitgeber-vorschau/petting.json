@@ -1,0 +1,67 @@
+{
+  "slug": "petting",
+  "name": "Gemeinde Petting",
+  "bundesland": "Bayern",
+  "einwohner": 2232,
+  "buergermeistertitel": "Erster Bürgermeister",
+  "buergermeister": "Karl Lanzinger",
+  "token": "32dafa0a24472309",
+  "claim": "Am Südufer des Waginger Sees im Rupertiwinkel die Gemeinde mitgestalten.",
+  "beschreibung": "Petting liegt im oberbayerischen Landkreis Traunstein direkt am Südufer des Waginger Sees, rund 20 Kilometer vor Salzburg im Herzen des Rupertiwinkels. Die Gemeinde umfasst 71 Gemeindeteile und wurde 1048 erstmals urkundlich als „Pettinga“ erwähnt. Die familienfreundliche Gemeinde arbeitet bürgernah, verantwortungsvoll und lösungsorientiert in einem kleinen, engagierten Verwaltungsteam.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "2.232",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1048",
+      "icon": "📜"
+    },
+    {
+      "label": "Gemeindeteile",
+      "wert": "71",
+      "icon": "🏘️"
+    },
+    {
+      "label": "Fläche",
+      "wert": "29,92 km²",
+      "icon": "🗺️"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Teamgröße",
+      "beschreibung": "Vielseitige und verantwortungsvolle Tätigkeit in einem kleinen, engagierten Verwaltungsteam."
+    },
+    {
+      "titel": "Tarifliche Leistungen",
+      "beschreibung": "Vergütung nach TVöD-VKA mit Jahressonderzahlung, leistungsorientierter Bezahlung und betrieblicher Zusatzversorgung."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Vereinbarkeit",
+      "beschreibung": "Kollegiales Arbeitsumfeld und Unterstützung bei der Vereinbarkeit von Familie, Beruf und persönlichen Lebenslagen."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Daniel Hübner",
+    "email": "daniel.huebner@gemeinde-petting.de",
+    "telefon": "08686 8099-12",
+    "bewerbungsportal": "https://www.gemeinde-petting.de/gemeinde/karriere/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, Gemeindeteile, Ersterwähnung 1048: https://de.wikipedia.org/wiki/Petting_(Gemeinde) (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Stand 31.12.2025, Bayerisches Landesamt für Statistik): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-BY, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-BY (abgerufen 17.10.2026)",
+    "Bürgermeister: https://www.gemeinde-petting.de/politik/buergermeister/ (abgerufen 17.10.2026)",
+    "Fläche, Lage: https://www.gemeinde-petting.de/gemeinde/zahlen-daten-und-fakten/ (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Mitarbeiter/in Kämmerei/Kasse (m/w/d), https://interamt.de/koop/app/stelle?id=1501285 (API api.interamt.de/query/stellenangebot/1501285) (abgerufen 17.10.2026)"
+  ]
+}

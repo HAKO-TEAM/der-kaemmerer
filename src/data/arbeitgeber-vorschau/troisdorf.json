@@ -1,0 +1,73 @@
+{
+  "slug": "troisdorf",
+  "name": "Stadt Troisdorf",
+  "bundesland": "Nordrhein-Westfalen",
+  "einwohner": 75742,
+  "buergermeistertitel": "Bürgermeister",
+  "buergermeister": "Alexander Biber",
+  "token": "d90676433416878e",
+  "claim": "Die größte Stadt des Rhein-Sieg-Kreises zwischen Köln und Bonn mitgestalten.",
+  "beschreibung": "Troisdorf ist die bevölkerungsreichste Stadt im Rhein-Sieg-Kreis und liegt rechtsrheinisch zwischen Köln und Bonn. Erstmals erwähnt wird Troisdorf 1064 als Truhtesdorf; die Ortsteile Eschmar und Sieglar sind bereits 832 genannt. Seit 1952 besitzt Troisdorf Stadtrechte. Die Stadt bietet Perspektiven als Wirtschaftsstandort und Bildungsregion mit hohem Freizeitwert und setzt als Arbeitgeberin besonders auf Familienfreundlichkeit.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "75.742",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste urkundliche Erwähnung",
+      "wert": "1064",
+      "icon": "📜"
+    },
+    {
+      "label": "Stadtrechte seit",
+      "wert": "1952",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Lage",
+      "wert": "zwischen Köln und Bonn, Rhein-Sieg-Kreis",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Flexibel arbeiten",
+      "beschreibung": "Flexible Arbeitszeitgestaltung und Homeoffice."
+    },
+    {
+      "titel": "Entwicklung",
+      "beschreibung": "Karriere-, Fort- und Weiterbildungsmöglichkeiten."
+    },
+    {
+      "titel": "Familie",
+      "beschreibung": "Zugang zu Kinderbetreuungsangeboten."
+    },
+    {
+      "titel": "Mobilität",
+      "beschreibung": "Günstiges Jobticket für alle Mitarbeitenden und Jobrad."
+    },
+    {
+      "titel": "Vorsorge",
+      "beschreibung": "Betriebliche Altersversorgung mit Zusatzversorgung sowie Zuschuss zur privaten Altersvorsorge im Projekt Extra Rente."
+    },
+    {
+      "titel": "Gesundheit",
+      "beschreibung": "Zertifiziertes und mehrfach prämiertes Gesundheitsmanagement."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Frau Schuld",
+    "email": "SchuldM@troisdorf.de",
+    "telefon": "02241 900-628",
+    "bewerbungsportal": "https://www.troisdorf.de/karriere"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Bürgermeister (wiedergewählt 28.09.2025), Lage, Erwähnung 1064/832, Stadtrechte 1952: https://de.wikipedia.org/wiki/Troisdorf (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-NW, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-NW (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Stadt-, Raum- und Umweltplaner/in (m/w/d), https://interamt.de/koop/app/stelle?id=1495783 (API api.interamt.de/query/stellenangebot/1495783) (abgerufen 17.10.2026)"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "hohenhameln",
+  "name": "Gemeinde Hohenhameln",
+  "bundesland": "Niedersachsen",
+  "einwohner": 9411,
+  "token": "d9f18cc692f3644c",
+  "claim": "Eine lebendige Gemeinde mit elf Ortschaften im Landkreis Peine mitgestalten.",
+  "beschreibung": "Hohenhameln ist eine Einheitsgemeinde im Landkreis Peine in Niedersachsen. Sie entstand 1974 im Zuge der niedersächsischen Gebietsreform aus elf zuvor selbstständigen Gemeinden; der Hauptort wird um 1280 als Hamelen genannt. Die Verwaltung verantwortet ein breites Aufgabenspektrum von Bürgerbüro und Standesamt über Kindertagesstätten, Grundschulen und Jugendpflege bis zu Feuerwehr, Hallenbad und Dorfgemeinschaftshäusern.",
+  "kennzahlen": [
+    {
+      "label": "Einwohner (31.12.2025)",
+      "wert": "9.411",
+      "icon": "👥"
+    },
+    {
+      "label": "Erste Nennung als Hamelen",
+      "wert": "um 1280",
+      "icon": "📜"
+    },
+    {
+      "label": "Einheitsgemeinde seit",
+      "wert": "1974",
+      "icon": "🏛️"
+    },
+    {
+      "label": "Ortschaften",
+      "wert": "11",
+      "icon": "📍"
+    }
+  ],
+  "benefits": [
+    {
+      "titel": "Arbeitsklima",
+      "beschreibung": "Angenehme Arbeitsatmosphäre, kollegiales Miteinander sowie Austausch in Dienstbesprechungen und Führungsrunden."
+    },
+    {
+      "titel": "Fortbildung",
+      "beschreibung": "Bedarfsgerechte Fortbildungen."
+    },
+    {
+      "titel": "Vergütung und Vorsorge",
+      "beschreibung": "Leistungsorientierte Bezahlung und zusätzliche betriebliche Altersvorsorge (VBL)."
+    },
+    {
+      "titel": "Firmenfitness",
+      "beschreibung": "Firmenfitness im Hansefit-Verbund (jetzt Epassi)."
+    }
+  ],
+  "testimonials": [],
+  "kontakt": {
+    "personal": "Personal · Pia-Marie Rogge",
+    "email": "bewerbung@hohenhameln.de",
+    "telefon": "05128 401-52",
+    "bewerbungsportal": "https://www.hohenhameln.de/"
+  },
+  "kommunalflat": true,
+  "partner_seit": "2026",
+  "quellen": [
+    "Lage, Ortschaften, Nennung um 1280, Gebietsreform 1974: https://de.wikipedia.org/wiki/Hohenhameln (abgerufen 17.10.2026)",
+    "Einwohnerzahl (Fortschreibung Zensus 2022, Stand 31.12.2025): Wikipedia-Vorlage Metadaten Einwohnerzahl DE-NI, https://de.wikipedia.org/wiki/Vorlage:Metadaten_Einwohnerzahl_DE-NI (abgerufen 17.10.2026)",
+    "Benefits und Kontakt: Stellenausschreibung Fachbereichsleitung Familie, Soziales und Ordnung (m/w/d), https://interamt.de/koop/app/stelle?id=1496644 (API api.interamt.de/query/stellenangebot/1496644) (abgerufen 17.10.2026)"
+  ]
+}
