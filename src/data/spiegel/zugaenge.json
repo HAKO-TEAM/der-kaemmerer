@@ -3148,5 +3148,23 @@
   "ags": "05113000",
   "kommune": "Essen",
   "seit": "2026-10-17"
+ },
+ {
+  "token": "dd2d7566d0599d86",
+  "ags": "03155002",
+  "kommune": "Bodenfelde",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "c4fc174f83b1f126",
+  "ags": "14625310",
+  "kommune": "Lauta",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "9fae42a3e3b18885",
+  "ags": "08115029",
+  "kommune": "Magstadt",
+  "seit": "2026-10-17"
  }
 ]
