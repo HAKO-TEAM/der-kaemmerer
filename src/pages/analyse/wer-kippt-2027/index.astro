@@ -1,0 +1,166 @@
+---
+// Interaktive Analyse „Wer kippt 2027?" – Kommune eintippen, sofort Kassenkredit-/Schulden-/Hebesatz-Lage
+// im Vergleich (Platz im Land, bundesweites Perzentil) plus automatischer, faktenbasierter Kommentar.
+// Alle Werte amtlich (Kommunalstatistik; Haushaltsstatus NRW: MHKBD NRW / Open.NRW).
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import gemeinden from '../../../data/spiegel/gemeinden.json';
+import hebesaetze from '../../../data/spiegel/hebesaetze.json';
+import schulden from '../../../data/spiegel/schulden.json';
+import hsNw from '../../../data/spiegel/haushaltsstatus_nw.json';
+import { STUFEN } from '../../../lib/haushaltsstatus.mjs';
+import { verzeichnis, gemeindeUrl, LAND_LANG } from '../../../lib/gemeinden.mjs';
+
+const alle = gemeinden as any[];
+const { pfad } = verzeichnis(alle);
+const H = (hsNw as any).gemeinden || {};
+const S = schulden as any; const HE = hebesaetze as any;
+
+const kommunen = alle.map((g) => {
+  const s = S[g.ags] || {}; const he = HE[g.ags] || {}; const st = H[g.ags]?.s ?? null;
+  return {
+    a: g.ags, n: g.name, l: g.land, ew: g.einwohner || 0,
+    kk: s.kassenkredite_je_ew ?? null, sch: s.schulden_je_ew ?? null,
+    gb: he.grundsteuer_b ?? null, st,
+    u: gemeindeUrl(pfad[g.ags]) || null,
+  };
+}).filter((k) => k.kk !== null);
+
+// Kopf-Kennzahlen (bundesweit, Einwohner-gewichtet)
+const tew = kommunen.reduce((s, k) => s + k.ew, 0);
+const ewGe = (t: number) => kommunen.filter((k) => (k.kk ?? 0) >= t).reduce((s, k) => s + k.ew, 0);
+const STATS = {
+  n: kommunen.length, tew,
+  ge1000_e: ewGe(1000), ge500_e: ewGe(500),
+  nrwEcht: Object.values(H).filter((x: any) => x.s === 1).length,
+  nrwN: Object.keys(H).length,
+};
+const STUFENTXT = Object.fromEntries(Object.entries(STUFEN).map(([k, v]: any) => [k, v.kurz]));
+const mio = (x: number) => (x / 1e6).toFixed(1).replace('.', ',');
+---
+<Base title="Wer kippt 2027? – Kassenkredite, Schulden und Haushaltslage Ihrer Kommune"
+  description="Geben Sie Ihre Kommune ein und sehen Sie sofort: Kassenkredite je Einwohner, Schulden, Grundsteuer B – Platz im Bundesland und bundesweite Einordnung. Amtliche Daten, eigene Auswertung von Der Kämmerer.">
+<Header />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style is:global>
+.wk{color:#0f172a} .wk-w{max-width:900px;margin:0 auto;padding:0 24px}
+.wk-kopf{background:#172840;color:#fff;padding:44px 0 36px;border-bottom:3px solid #b91c1c}
+.wk-k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fca5a5}
+.wk-kopf h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,4.4vw,46px);line-height:1.08;margin:10px 0 10px;max-width:20ch}
+.wk-kopf p{color:rgba(255,255,255,.76);font-size:16px;max-width:60ch;line-height:1.55;margin:0 0 20px}
+.wk-kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.wk-kpi div{background:rgba(255,255,255,.08);border-radius:8px;padding:9px 13px}
+.wk-kpi b{font-size:19px;display:block} .wk-kpi span{font-size:11px;color:rgba(255,255,255,.7)}
+.wk-suche{position:relative;max-width:520px;margin-top:22px}
+.wk-suche input{width:100%;box-sizing:border-box;padding:15px 16px;font:inherit;font-size:17px;border-radius:8px;border:0}
+.wk-t{position:absolute;left:0;right:0;top:100%;margin-top:6px;background:#fff;border-radius:8px;box-shadow:0 20px 40px -10px rgba(0,0,0,.45);overflow:hidden;z-index:5}
+.wk-t button{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;padding:10px 14px;color:#0f172a;border:0;background:#fff;border-bottom:1px solid #f1f5f9;font:inherit;font-size:15px;cursor:pointer}
+.wk-t button:hover,.wk-t button.akt{background:#fef2f2} .wk-t small{color:#64748b}
+.wk-erg{margin:30px 0 10px;min-height:40px}
+.karte{border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px -14px rgba(0,0,0,.25)}
+.karte-k{padding:16px 20px;color:#fff} .karte-k h2{font-family:'Playfair Display',Georgia,serif;font-size:24px;margin:0} .karte-k .ort{font-size:13px;opacity:.85;margin-top:2px}
+.komm{font-size:16px;line-height:1.5;padding:16px 20px;background:#fff;border-bottom:1px solid #eef2f7}
+.komm b{color:#0f172a}
+.werte{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#eef2f7}
+.werte div{background:#fff;padding:14px 16px} .werte .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums} .werte .l{font-size:11px;color:#64748b;margin-top:2px}
+.rang{padding:14px 20px;background:#f8fafc;font-size:14px;color:#334155} .rang b{color:#0f172a}
+.cta{padding:16px 20px;background:#172840;color:#fff;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.cta a{color:#fff;font-weight:700;white-space:nowrap}
+.hint{color:#64748b;font-size:13px;margin-top:14px}
+.karte-k.rot{background:#b91c1c} .karte-k.amber{background:#b45309} .karte-k.gelb{background:#a16207} .karte-k.gruen{background:#15803d}
+.wk-quelle{font-size:12px;color:#64748b;margin:26px 0 60px;line-height:1.6}
+@media(max-width:700px){.werte{grid-template-columns:1fr 1fr}}
+</style>
+
+<div class="wk">
+  <section class="wk-kopf"><div class="wk-w">
+    <div class="wk-k">Der Kämmerer · Analyse</div>
+    <h1>Wer kippt 2027?</h1>
+    <p>Die meisten Gemeinden haben kaum Kassenkredite – trotzdem leben Millionen in Kommunen am Kassenkredit-Tropf. Geben Sie Ihre Kommune ein und sehen Sie sofort, wo sie steht.</p>
+    <div class="wk-kpi">
+      <div><b>{mio(STATS.ge1000_e)} Mio</b><span>Menschen in Kommunen ≥ 1.000 €/EW Kassenkredite</span></div>
+      <div><b>{mio(STATS.ge500_e)} Mio</b><span>bereits ≥ 500 €/EW</span></div>
+      <div><b>{STATS.nrwEcht} von {STATS.nrwN}</b><span>Gemeinden in NRW echt ausgeglichen</span></div>
+    </div>
+    <div class="wk-suche">
+      <input id="wk-q" type="search" placeholder="Kommune eingeben, z. B. Oberhausen" autocomplete="off" aria-label="Kommune suchen">
+      <div class="wk-t" id="wk-t" hidden></div>
+    </div>
+  </div></section>
+
+  <div class="wk-w">
+    <div class="wk-erg" id="wk-erg"></div>
+    <p class="wk-quelle">Datenbasis: amtliche Kommunalstatistik (Kassenkredite, Schulden, Grundsteuer B, Einwohner je Gemeinde); Haushaltsstatus nur in Nordrhein-Westfalen amtlich geführt (MHKBD NRW, Open.NRW, Stand 31.12.2025). „Keine Kassenkredite" heißt nicht „ausgeglichen" – der Kassenkredit ist das Endstadium, der Frühindikator ist der Rücklagenverzehr. Mehrere Länder (u. a. Hessen mit der „Hessenkasse" 2018) haben kommunale Kassenkredite per Landesprogramm übernommen; niedrige Werte dort sind teils Landes-Entschuldung, nicht Haushaltsdisziplin. Eigene Auswertung Der Kämmerer, werbefrei. Amtliche Einzelwerte, keine Wertung der handelnden Personen.</p>
+  </div>
+</div>
+
+<script define:vars={{ INDEX: kommunen, LANGL: LAND_LANG, STUFENTXT }}>
+  const q = document.getElementById('wk-q'), tbox = document.getElementById('wk-t'), erg = document.getElementById('wk-erg');
+  const norm = (s) => (s || '').toLowerCase().replace(/[äöü]/g, (c) => ({ä:'a',ö:'o',ü:'u'}[c])).replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,' ').trim();
+  const de = (x) => x == null ? '–' : Math.round(x).toLocaleString('de-DE');
+  let sel = -1, treffer = [];
+  function suche(v){
+    const nv = norm(v); if(nv.length < 2){ tbox.hidden = true; return; }
+    treffer = INDEX.filter((k)=>norm(k.n).includes(nv)).sort((a,b)=>{
+      const as=norm(a.n).startsWith(nv), bs=norm(b.n).startsWith(nv);
+      return as!==bs ? (bs?1:-1) : (b.ew-a.ew);
+    }).slice(0,8);
+    if(!treffer.length){ tbox.hidden=true; return; }
+    tbox.innerHTML = treffer.map((k,i)=>`<button data-i="${i}"><span>${k.n}</span><small>${LANGL[k.l]||k.l} · ${de(k.ew)} EW</small></button>`).join('');
+    tbox.hidden = false; sel = -1;
+  }
+  function rang(k, feld, land){
+    const pool = INDEX.filter((x)=>x.l===land && x[feld]!=null).map((x)=>x[feld]).sort((a,b)=>b-a);
+    const platz = pool.findIndex((x)=>x<=k[feld])+1;
+    return { platz, von: pool.length };
+  }
+  function perzentil(k){
+    const pool = INDEX.map((x)=>x.kk).filter((x)=>x!=null).sort((a,b)=>a-b);
+    const unter = pool.filter((x)=>x < (k.kk||0)).length;
+    return Math.round(unter/pool.length*100);
+  }
+  function kommentar(k){
+    const r = rang(k,'kk',k.l), land = LANGL[k.l]||k.l, pz = perzentil(k);
+    const st = k.st!=null ? (STUFENTXT[k.st]||'') : '';
+    const nrwNote = (k.l==='NW' && st) ? ` Amtlicher Haushaltsstatus: <b>${st}</b>.` : '';
+    if((k.kk||0) >= 1000) return { farbe:'rot', badge:'Kippkurs',
+      text:`<b>${k.n}</b> fährt den laufenden Betrieb längst auf Kassenkredit: <b>${de(k.kk)} €/EW</b> – Platz <b>${r.platz} von ${r.von}</b> in ${land} und mehr als ${Math.min(99,pz)} % aller Kommunen bundesweit. Das ist das Endstadium vor der Haushaltssicherung.${nrwNote}` };
+    if((k.kk||0) >= 500) return { farbe:'amber', badge:'Erhöhtes Risiko',
+      text:`<b>${k.n}</b> hat mit <b>${de(k.kk)} €/EW</b> Kassenkrediten bereits ein erhöhtes Risiko – Platz ${r.platz} von ${r.von} in ${land}. Die Richtung entscheidet, ob es 2027 in die Sicherung kippt.${nrwNote}` };
+    if((k.kk||0) >= 50) return { farbe:'gelb', badge:'Beobachten',
+      text:`<b>${k.n}</b> liegt mit <b>${de(k.kk)} €/EW</b> Kassenkrediten noch moderat, aber nicht mehr bei null. Entscheidend ist der Trend – und der Rücklagenverzehr dahinter.${nrwNote}` };
+    return { farbe:'gruen', badge:'Kassenseite stabil',
+      text:`<b>${k.n}</b> fährt praktisch ohne Kassenkredite (<b>${de(k.kk)} €/EW</b>). Aber Vorsicht: keine Kassenkredite heißt nicht ausgeglichen – der Frühindikator ist der Rücklagenverzehr, nicht der Dispo.${nrwNote}` };
+  }
+  function zeige(k){
+    tbox.hidden = true; q.value = k.n;
+    const c = kommentar(k), land = LANGL[k.l]||k.l;
+    erg.innerHTML = `<div class="karte">
+      <div class="karte-k ${c.farbe}"><h2>${k.n}</h2><div class="ort">${land} · ${de(k.ew)} Einwohner · <b>${c.badge}</b></div></div>
+      <div class="komm">${c.text}</div>
+      <div class="werte">
+        <div><div class="v">${de(k.kk)} €</div><div class="l">Kassenkredite je Einwohner</div></div>
+        <div><div class="v">${de(k.sch)} €</div><div class="l">Schulden je Einwohner</div></div>
+        <div><div class="v">${de(k.gb)}</div><div class="l">Grundsteuer B (Hebesatz)</div></div>
+      </div>
+      ${k.u ? `<div class="cta"><span>Vollständiges Profil: Hebesätze, Personalmarkt und Haushaltssperren im Umfeld.</span><a href="${k.u}">Zum Kommunalprofil →</a></div>` : ''}
+    </div>
+    <p class="hint">Alle Werte amtlich. Einordnung automatisch aus Kassenkrediten je Einwohner; „Platz" = Rang innerhalb des Bundeslandes (Platz 1 = höchster Wert).</p>`;
+    erg.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+  q.addEventListener('input', ()=>suche(q.value));
+  q.addEventListener('keydown',(e)=>{
+    if(tbox.hidden) return;
+    const btns=[...tbox.querySelectorAll('button')];
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel=Math.min(sel+1,btns.length-1); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); sel=Math.max(sel-1,0); }
+    else if(e.key==='Enter'){ e.preventDefault(); if(treffer[Math.max(sel,0)]) zeige(treffer[Math.max(sel,0)]); return; }
+    else return;
+    btns.forEach((b,i)=>b.classList.toggle('akt',i===sel));
+  });
+  tbox.addEventListener('click',(e)=>{ const b=e.target.closest('button'); if(b) zeige(treffer[+b.dataset.i]); });
+  document.addEventListener('click',(e)=>{ if(!e.target.closest('.wk-suche')) tbox.hidden=true; });
+</script>
+<Footer />
+</Base>
