@@ -2854,5 +2854,299 @@
   "ags": "01055001",
   "kommune": "Ahrensbök",
   "seit": "2026-10-16"
+ },
+ {
+  "token": "41d9a780b773e320",
+  "ags": "08317057",
+  "kommune": "Kehl",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "060d5cbbe603f807",
+  "ags": "05158024",
+  "kommune": "Mettmann",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "607ed5e7d7e938ea",
+  "ags": "12061260",
+  "kommune": "Königs Wusterhausen",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "e0800213bd532261",
+  "ags": "08215017",
+  "kommune": "Ettlingen",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "285a19bc93442000",
+  "ags": "10044115",
+  "kommune": "Saarlouis",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "3be9c3fa09210c03",
+  "ags": "03454035",
+  "kommune": "Meppen",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "80d5c9f0c545153f",
+  "ags": "03454041",
+  "kommune": "Papenburg",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "2b7a1ca1eced27a2",
+  "ags": "08127014",
+  "kommune": "Crailsheim",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "1f41757127b43576",
+  "ags": "05170044",
+  "kommune": "Voerde (Niederrhein)",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "4566f34e73d4be1a",
+  "ags": "09271119",
+  "kommune": "Deggendorf",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "a02afca79c84af33",
+  "ags": "05766040",
+  "kommune": "Lage",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "cf8e646924af8550",
+  "ags": "08336069",
+  "kommune": "Rheinfelden (Baden)",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "5441ac60b0db2e89",
+  "ags": "05962016",
+  "kommune": "Hemer",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "b2019c822484099e",
+  "ags": "06431020",
+  "kommune": "Viernheim",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "27d05c449c6568aa",
+  "ags": "08426021",
+  "kommune": "Biberach an der Riß",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "07da25455a18d160",
+  "ags": "05378032",
+  "kommune": "Wermelskirchen",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "7ca57d4e1fab9740",
+  "ags": "08118046",
+  "kommune": "Kornwestheim",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "968f33e53721c1ac",
+  "ags": "03251037",
+  "kommune": "Stuhr",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "328da7f85183ab42",
+  "ags": "01053032",
+  "kommune": "Geesthacht",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "0a07606816ab9a0f",
+  "ags": "03460009",
+  "kommune": "Vechta",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "10b42bb5fb5b34fb",
+  "ags": "03361001",
+  "kommune": "Achim",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "1af104420e4da8e2",
+  "ags": "03256022",
+  "kommune": "Nienburg (Weser)",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "7201416796adf968",
+  "ags": "08336091",
+  "kommune": "Weil am Rhein",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "2b90374d0a0e7fa5",
+  "ags": "05774020",
+  "kommune": "Delbrück",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "b24fac89b204e8af",
+  "ags": "12068320",
+  "kommune": "Neuruppin",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "6465be14ccd70442",
+  "ags": "08335063",
+  "kommune": "Radolfzell am Bodensee",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "664e62eac786f570",
+  "ags": "03458005",
+  "kommune": "Ganderkesee",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "9c0f5acccd8f0ae8",
+  "ags": "03459019",
+  "kommune": "Georgsmarienhütte",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "4cba0f801e05aa1e",
+  "ags": "03241003",
+  "kommune": "Burgdorf",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "17a04816bcc4b400",
+  "ags": "03251047",
+  "kommune": "Weyhe",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "ab4d10faed7f7227",
+  "ags": "03358024",
+  "kommune": "Walsrode",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "cd0e73913bc225c1",
+  "ags": "06632002",
+  "kommune": "Bad Hersfeld",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "0619fe043fd13624",
+  "ags": "06440008",
+  "kommune": "Friedberg (Hessen)",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "f32b602f2fd1c306",
+  "ags": "01058135",
+  "kommune": "Rendsburg",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "2a8c69e2c53aaef9",
+  "ags": "08119085",
+  "kommune": "Winnenden",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "d4bac7ee83d132d0",
+  "ags": "09376161",
+  "kommune": "Schwandorf",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "9677a99728288f8f",
+  "ags": "03241019",
+  "kommune": "Wedemark",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "ecfdd050c366dabc",
+  "ags": "03155013",
+  "kommune": "Einbeck",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "ffabc042e0313f68",
+  "ags": "05166028",
+  "kommune": "Tönisvorst",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "d07b1529631aa581",
+  "ags": "13072043",
+  "kommune": "Güstrow",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "1f96d6cd2cdb4676",
+  "ags": "03241017",
+  "kommune": "Springe",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "1f74a761d3d551de",
+  "ags": "05370012",
+  "kommune": "Geilenkirchen",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "7fe92996b379d9c1",
+  "ags": "08216007",
+  "kommune": "Bühl",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "225428efda9e3326",
+  "ags": "03460006",
+  "kommune": "Lohne (Oldenburg)",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "ea23fee15837d1d8",
+  "ags": "08226098",
+  "kommune": "Wiesloch",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "610f78df19cd060e",
+  "ags": "05762020",
+  "kommune": "Höxter",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "204fdd74efbf9a2f",
+  "ags": "12069616",
+  "kommune": "Teltow",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "cacd10b23e347a0b",
+  "ags": "05913000",
+  "kommune": "Dortmund",
+  "seit": "2026-10-17"
+ },
+ {
+  "token": "903566dd85605433",
+  "ags": "05113000",
+  "kommune": "Essen",
+  "seit": "2026-10-17"
  }
 ]
